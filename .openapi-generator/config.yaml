@@ -2,7 +2,7 @@ generatorName: go
 
 gitHost: github.com
 gitUserId: greatman
-gitRepoId: go-netbox/v4
+gitRepoId: netbox-go/v4
 
 packageName: netbox
 

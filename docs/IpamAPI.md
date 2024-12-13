@@ -196,7 +196,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -260,7 +260,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -326,7 +326,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -392,7 +392,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -458,7 +458,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -527,7 +527,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -715,7 +715,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -787,7 +787,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -857,7 +857,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -929,7 +929,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1001,7 +1001,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1071,7 +1071,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1135,7 +1135,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1201,7 +1201,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1267,7 +1267,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1333,7 +1333,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1402,7 +1402,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1644,7 +1644,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1716,7 +1716,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1786,7 +1786,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1858,7 +1858,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1922,7 +1922,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -1988,7 +1988,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2054,7 +2054,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2120,7 +2120,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2189,7 +2189,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2389,7 +2389,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2461,7 +2461,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2531,7 +2531,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2603,7 +2603,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2667,7 +2667,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2733,7 +2733,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2799,7 +2799,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2865,7 +2865,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -2934,7 +2934,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3096,7 +3096,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3168,7 +3168,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3238,7 +3238,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3310,7 +3310,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3374,7 +3374,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3440,7 +3440,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3506,7 +3506,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3572,7 +3572,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3641,7 +3641,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3891,7 +3891,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -3963,7 +3963,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4033,7 +4033,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4105,7 +4105,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4169,7 +4169,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4235,7 +4235,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4301,7 +4301,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4367,7 +4367,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4436,7 +4436,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4746,7 +4746,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4818,7 +4818,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4888,7 +4888,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -4960,7 +4960,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5032,7 +5032,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5102,7 +5102,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5166,7 +5166,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5232,7 +5232,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5298,7 +5298,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5364,7 +5364,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5433,7 +5433,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5659,7 +5659,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5731,7 +5731,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5801,7 +5801,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5873,7 +5873,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -5945,7 +5945,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6015,7 +6015,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6087,7 +6087,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6157,7 +6157,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6221,7 +6221,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6287,7 +6287,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6353,7 +6353,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6419,7 +6419,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6488,7 +6488,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6808,7 +6808,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6880,7 +6880,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -6950,7 +6950,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7022,7 +7022,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7086,7 +7086,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7152,7 +7152,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7218,7 +7218,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7284,7 +7284,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7353,7 +7353,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7545,7 +7545,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7617,7 +7617,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7687,7 +7687,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7759,7 +7759,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7823,7 +7823,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7889,7 +7889,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -7955,7 +7955,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8021,7 +8021,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8090,7 +8090,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8294,7 +8294,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8366,7 +8366,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8436,7 +8436,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8508,7 +8508,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8572,7 +8572,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8638,7 +8638,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8704,7 +8704,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8770,7 +8770,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -8839,7 +8839,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9055,7 +9055,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9127,7 +9127,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9197,7 +9197,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9269,7 +9269,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9333,7 +9333,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9399,7 +9399,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9465,7 +9465,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9531,7 +9531,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9600,7 +9600,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9772,7 +9772,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9844,7 +9844,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9914,7 +9914,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -9986,7 +9986,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10050,7 +10050,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10116,7 +10116,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10182,7 +10182,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10248,7 +10248,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10317,7 +10317,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10513,7 +10513,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10585,7 +10585,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10655,7 +10655,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10727,7 +10727,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10799,7 +10799,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10869,7 +10869,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10933,7 +10933,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -10999,7 +10999,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11065,7 +11065,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11131,7 +11131,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11200,7 +11200,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11424,7 +11424,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11496,7 +11496,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11566,7 +11566,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11638,7 +11638,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11702,7 +11702,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11768,7 +11768,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11834,7 +11834,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11900,7 +11900,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -11969,7 +11969,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12137,7 +12137,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12209,7 +12209,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12279,7 +12279,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12351,7 +12351,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12415,7 +12415,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12481,7 +12481,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12547,7 +12547,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12613,7 +12613,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12682,7 +12682,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12864,7 +12864,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -12936,7 +12936,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13006,7 +13006,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13078,7 +13078,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13142,7 +13142,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13208,7 +13208,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13274,7 +13274,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13340,7 +13340,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13409,7 +13409,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13727,7 +13727,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13799,7 +13799,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13869,7 +13869,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -13941,7 +13941,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14005,7 +14005,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14071,7 +14071,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14137,7 +14137,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14203,7 +14203,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14272,7 +14272,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14496,7 +14496,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14568,7 +14568,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
@@ -14638,7 +14638,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/greatman/netbox-go/v1"
+	openapiclient "github.com/greatman/netbox-go/v4"
 )
 
 func main() {
