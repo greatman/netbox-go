@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DeviceType** | Pointer to [**BriefDeviceTypeRequest**](BriefDeviceTypeRequest.md) |  | [optional] 
-**Parent** | Pointer to **NullableInt32** |  | [optional] 
+**Parent** | Pointer to **NullableInt64** |  | [optional] 
 **Name** | Pointer to **string** | {module} is accepted as a substitution for the module bay position when attached to a module type. | [optional] 
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Role** | Pointer to [**NullableBriefInventoryItemRoleRequest**](BriefInventoryItemRoleRequest.md) |  | [optional] 
@@ -61,20 +61,20 @@ HasDeviceType returns a boolean if a field has been set.
 
 ### GetParent
 
-`func (o *PatchedInventoryItemTemplateRequest) GetParent() int32`
+`func (o *PatchedInventoryItemTemplateRequest) GetParent() int64`
 
 GetParent returns the Parent field if non-nil, zero value otherwise.
 
 ### GetParentOk
 
-`func (o *PatchedInventoryItemTemplateRequest) GetParentOk() (*int32, bool)`
+`func (o *PatchedInventoryItemTemplateRequest) GetParentOk() (*int64, bool)`
 
 GetParentOk returns a tuple with the Parent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParent
 
-`func (o *PatchedInventoryItemTemplateRequest) SetParent(v int32)`
+`func (o *PatchedInventoryItemTemplateRequest) SetParent(v int64)`
 
 SetParent sets Parent field to given value.
 

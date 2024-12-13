@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **Tenant** | Pointer to [**NullableBriefTenant**](BriefTenant.md) |  | [optional] 
 **InstallDate** | Pointer to **NullableString** |  | [optional] 
 **TerminationDate** | Pointer to **NullableString** |  | [optional] 
-**CommitRate** | Pointer to **NullableInt32** | Committed rate | [optional] 
+**CommitRate** | Pointer to **NullableInt64** | Committed rate | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Distance** | Pointer to **NullableFloat64** |  | [optional] 
 **DistanceUnit** | Pointer to [**NullableCircuitDistanceUnit**](CircuitDistanceUnit.md) |  | [optional] 
@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 
 ### NewCircuit
 
-`func NewCircuit(id int32, url string, displayUrl string, display string, cid string, provider BriefProvider, type_ BriefCircuitType, terminationA NullableCircuitCircuitTermination, terminationZ NullableCircuitCircuitTermination, created NullableTime, lastUpdated NullableTime, ) *Circuit`
+`func NewCircuit(id int64, url string, displayUrl string, display string, cid string, provider BriefProvider, type_ BriefCircuitType, terminationA NullableCircuitCircuitTermination, terminationZ NullableCircuitCircuitTermination, created NullableTime, lastUpdated NullableTime, ) *Circuit`
 
 NewCircuit instantiates a new Circuit object
 This constructor will assign default values to properties that have it defined,
@@ -50,20 +50,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Circuit) GetId() int32`
+`func (o *Circuit) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Circuit) GetIdOk() (*int32, bool)`
+`func (o *Circuit) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Circuit) SetId(v int32)`
+`func (o *Circuit) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -355,20 +355,20 @@ HasTerminationDate returns a boolean if a field has been set.
 UnsetTerminationDate ensures that no value is present for TerminationDate, not even an explicit nil
 ### GetCommitRate
 
-`func (o *Circuit) GetCommitRate() int32`
+`func (o *Circuit) GetCommitRate() int64`
 
 GetCommitRate returns the CommitRate field if non-nil, zero value otherwise.
 
 ### GetCommitRateOk
 
-`func (o *Circuit) GetCommitRateOk() (*int32, bool)`
+`func (o *Circuit) GetCommitRateOk() (*int64, bool)`
 
 GetCommitRateOk returns a tuple with the CommitRate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCommitRate
 
-`func (o *Circuit) SetCommitRate(v int32)`
+`func (o *Circuit) SetCommitRate(v int64)`
 
 SetCommitRate sets CommitRate field to given value.
 

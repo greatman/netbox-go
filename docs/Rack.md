@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -20,16 +20,16 @@ Name | Type | Description | Notes
 **RackType** | Pointer to [**NullableBriefRackType**](BriefRackType.md) |  | [optional] 
 **FormFactor** | Pointer to [**NullableRackFormFactor**](RackFormFactor.md) |  | [optional] 
 **Width** | Pointer to [**RackWidth**](RackWidth.md) |  | [optional] 
-**UHeight** | Pointer to **int32** | Height in rack units | [optional] 
-**StartingUnit** | Pointer to **int32** | Starting unit for rack | [optional] 
+**UHeight** | Pointer to **int64** | Height in rack units | [optional] 
+**StartingUnit** | Pointer to **int64** | Starting unit for rack | [optional] 
 **Weight** | Pointer to **NullableFloat64** |  | [optional] 
-**MaxWeight** | Pointer to **NullableInt32** | Maximum load capacity for the rack | [optional] 
+**MaxWeight** | Pointer to **NullableInt64** | Maximum load capacity for the rack | [optional] 
 **WeightUnit** | Pointer to [**NullableDeviceTypeWeightUnit**](DeviceTypeWeightUnit.md) |  | [optional] 
 **DescUnits** | Pointer to **bool** | Units are numbered top-to-bottom | [optional] 
-**OuterWidth** | Pointer to **NullableInt32** | Outer dimension of rack (width) | [optional] 
-**OuterDepth** | Pointer to **NullableInt32** | Outer dimension of rack (depth) | [optional] 
+**OuterWidth** | Pointer to **NullableInt64** | Outer dimension of rack (width) | [optional] 
+**OuterDepth** | Pointer to **NullableInt64** | Outer dimension of rack (depth) | [optional] 
 **OuterUnit** | Pointer to [**NullableRackOuterUnit**](RackOuterUnit.md) |  | [optional] 
-**MountingDepth** | Pointer to **NullableInt32** | Maximum depth of a mounted device, in millimeters. For four-post racks, this is the distance between the front and rear rails. | [optional] 
+**MountingDepth** | Pointer to **NullableInt64** | Maximum depth of a mounted device, in millimeters. For four-post racks, this is the distance between the front and rear rails. | [optional] 
 **Airflow** | Pointer to [**RackAirflow**](RackAirflow.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
@@ -44,7 +44,7 @@ Name | Type | Description | Notes
 
 ### NewRack
 
-`func NewRack(id int32, url string, displayUrl string, display string, name string, site BriefSite, created NullableTime, lastUpdated NullableTime, deviceCount int64, powerfeedCount int64, ) *Rack`
+`func NewRack(id int64, url string, displayUrl string, display string, name string, site BriefSite, created NullableTime, lastUpdated NullableTime, deviceCount int64, powerfeedCount int64, ) *Rack`
 
 NewRack instantiates a new Rack object
 This constructor will assign default values to properties that have it defined,
@@ -61,20 +61,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Rack) GetId() int32`
+`func (o *Rack) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Rack) GetIdOk() (*int32, bool)`
+`func (o *Rack) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Rack) SetId(v int32)`
+`func (o *Rack) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -501,20 +501,20 @@ HasWidth returns a boolean if a field has been set.
 
 ### GetUHeight
 
-`func (o *Rack) GetUHeight() int32`
+`func (o *Rack) GetUHeight() int64`
 
 GetUHeight returns the UHeight field if non-nil, zero value otherwise.
 
 ### GetUHeightOk
 
-`func (o *Rack) GetUHeightOk() (*int32, bool)`
+`func (o *Rack) GetUHeightOk() (*int64, bool)`
 
 GetUHeightOk returns a tuple with the UHeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUHeight
 
-`func (o *Rack) SetUHeight(v int32)`
+`func (o *Rack) SetUHeight(v int64)`
 
 SetUHeight sets UHeight field to given value.
 
@@ -526,20 +526,20 @@ HasUHeight returns a boolean if a field has been set.
 
 ### GetStartingUnit
 
-`func (o *Rack) GetStartingUnit() int32`
+`func (o *Rack) GetStartingUnit() int64`
 
 GetStartingUnit returns the StartingUnit field if non-nil, zero value otherwise.
 
 ### GetStartingUnitOk
 
-`func (o *Rack) GetStartingUnitOk() (*int32, bool)`
+`func (o *Rack) GetStartingUnitOk() (*int64, bool)`
 
 GetStartingUnitOk returns a tuple with the StartingUnit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStartingUnit
 
-`func (o *Rack) SetStartingUnit(v int32)`
+`func (o *Rack) SetStartingUnit(v int64)`
 
 SetStartingUnit sets StartingUnit field to given value.
 
@@ -586,20 +586,20 @@ HasWeight returns a boolean if a field has been set.
 UnsetWeight ensures that no value is present for Weight, not even an explicit nil
 ### GetMaxWeight
 
-`func (o *Rack) GetMaxWeight() int32`
+`func (o *Rack) GetMaxWeight() int64`
 
 GetMaxWeight returns the MaxWeight field if non-nil, zero value otherwise.
 
 ### GetMaxWeightOk
 
-`func (o *Rack) GetMaxWeightOk() (*int32, bool)`
+`func (o *Rack) GetMaxWeightOk() (*int64, bool)`
 
 GetMaxWeightOk returns a tuple with the MaxWeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaxWeight
 
-`func (o *Rack) SetMaxWeight(v int32)`
+`func (o *Rack) SetMaxWeight(v int64)`
 
 SetMaxWeight sets MaxWeight field to given value.
 
@@ -681,20 +681,20 @@ HasDescUnits returns a boolean if a field has been set.
 
 ### GetOuterWidth
 
-`func (o *Rack) GetOuterWidth() int32`
+`func (o *Rack) GetOuterWidth() int64`
 
 GetOuterWidth returns the OuterWidth field if non-nil, zero value otherwise.
 
 ### GetOuterWidthOk
 
-`func (o *Rack) GetOuterWidthOk() (*int32, bool)`
+`func (o *Rack) GetOuterWidthOk() (*int64, bool)`
 
 GetOuterWidthOk returns a tuple with the OuterWidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOuterWidth
 
-`func (o *Rack) SetOuterWidth(v int32)`
+`func (o *Rack) SetOuterWidth(v int64)`
 
 SetOuterWidth sets OuterWidth field to given value.
 
@@ -716,20 +716,20 @@ HasOuterWidth returns a boolean if a field has been set.
 UnsetOuterWidth ensures that no value is present for OuterWidth, not even an explicit nil
 ### GetOuterDepth
 
-`func (o *Rack) GetOuterDepth() int32`
+`func (o *Rack) GetOuterDepth() int64`
 
 GetOuterDepth returns the OuterDepth field if non-nil, zero value otherwise.
 
 ### GetOuterDepthOk
 
-`func (o *Rack) GetOuterDepthOk() (*int32, bool)`
+`func (o *Rack) GetOuterDepthOk() (*int64, bool)`
 
 GetOuterDepthOk returns a tuple with the OuterDepth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOuterDepth
 
-`func (o *Rack) SetOuterDepth(v int32)`
+`func (o *Rack) SetOuterDepth(v int64)`
 
 SetOuterDepth sets OuterDepth field to given value.
 
@@ -786,20 +786,20 @@ HasOuterUnit returns a boolean if a field has been set.
 UnsetOuterUnit ensures that no value is present for OuterUnit, not even an explicit nil
 ### GetMountingDepth
 
-`func (o *Rack) GetMountingDepth() int32`
+`func (o *Rack) GetMountingDepth() int64`
 
 GetMountingDepth returns the MountingDepth field if non-nil, zero value otherwise.
 
 ### GetMountingDepthOk
 
-`func (o *Rack) GetMountingDepthOk() (*int32, bool)`
+`func (o *Rack) GetMountingDepthOk() (*int64, bool)`
 
 GetMountingDepthOk returns a tuple with the MountingDepth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMountingDepth
 
-`func (o *Rack) SetMountingDepth(v int32)`
+`func (o *Rack) SetMountingDepth(v int64)`
 
 SetMountingDepth sets MountingDepth field to given value.
 

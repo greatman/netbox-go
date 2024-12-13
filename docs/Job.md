@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **Status** | [**BriefJobStatus**](BriefJobStatus.md) |  | 
 **Created** | **time.Time** |  | [readonly] 
 **Scheduled** | Pointer to **NullableTime** |  | [optional] 
-**Interval** | Pointer to **NullableInt32** | Recurrence interval (in minutes) | [optional] 
+**Interval** | Pointer to **NullableInt64** | Recurrence interval (in minutes) | [optional] 
 **Started** | Pointer to **NullableTime** |  | [optional] 
 **Completed** | Pointer to **NullableTime** |  | [optional] 
 **User** | [**BriefUser**](BriefUser.md) |  | [readonly] 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 
 ### NewJob
 
-`func NewJob(id int32, url string, displayUrl string, display string, objectType string, name string, status BriefJobStatus, created time.Time, user BriefUser, error_ string, jobId string, ) *Job`
+`func NewJob(id int64, url string, displayUrl string, display string, objectType string, name string, status BriefJobStatus, created time.Time, user BriefUser, error_ string, jobId string, ) *Job`
 
 NewJob instantiates a new Job object
 This constructor will assign default values to properties that have it defined,
@@ -43,20 +43,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Job) GetId() int32`
+`func (o *Job) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Job) GetIdOk() (*int32, bool)`
+`func (o *Job) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Job) SetId(v int32)`
+`func (o *Job) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -273,20 +273,20 @@ HasScheduled returns a boolean if a field has been set.
 UnsetScheduled ensures that no value is present for Scheduled, not even an explicit nil
 ### GetInterval
 
-`func (o *Job) GetInterval() int32`
+`func (o *Job) GetInterval() int64`
 
 GetInterval returns the Interval field if non-nil, zero value otherwise.
 
 ### GetIntervalOk
 
-`func (o *Job) GetIntervalOk() (*int32, bool)`
+`func (o *Job) GetIntervalOk() (*int64, bool)`
 
 GetIntervalOk returns a tuple with the Interval field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterval
 
-`func (o *Job) SetInterval(v int32)`
+`func (o *Job) SetInterval(v int64)`
 
 SetInterval sets Interval field to given value.
 

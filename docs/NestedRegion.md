@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
-**Depth** | **int32** |  | [readonly] 
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewNestedRegion
 
-`func NewNestedRegion(id int32, url string, displayUrl string, display string, name string, slug string, depth int32, ) *NestedRegion`
+`func NewNestedRegion(id int64, url string, displayUrl string, display string, name string, slug string, depth int64, ) *NestedRegion`
 
 NewNestedRegion instantiates a new NestedRegion object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedRegion) GetId() int32`
+`func (o *NestedRegion) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedRegion) GetIdOk() (*int32, bool)`
+`func (o *NestedRegion) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedRegion) SetId(v int32)`
+`func (o *NestedRegion) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -153,20 +153,20 @@ SetSlug sets Slug field to given value.
 
 ### GetDepth
 
-`func (o *NestedRegion) GetDepth() int32`
+`func (o *NestedRegion) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *NestedRegion) GetDepthOk() (*int32, bool)`
+`func (o *NestedRegion) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *NestedRegion) SetDepth(v int32)`
+`func (o *NestedRegion) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

@@ -20,14 +20,14 @@ var _ MappedNullable = &BriefContactGroup{}
 
 // BriefContactGroup Extends PrimaryModelSerializer to include MPTT support.
 type BriefContactGroup struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
 	Slug                 string  `json:"slug" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	Description          *string `json:"description,omitempty"`
-	ContactCount         int32   `json:"contact_count"`
-	Depth                int32   `json:"_depth"`
+	ContactCount         int64   `json:"contact_count"`
+	Depth                int64   `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -37,7 +37,7 @@ type _BriefContactGroup BriefContactGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefContactGroup(id int32, url string, display string, name string, slug string, contactCount int32, depth int32) *BriefContactGroup {
+func NewBriefContactGroup(id int64, url string, display string, name string, slug string, contactCount int64, depth int64) *BriefContactGroup {
 	this := BriefContactGroup{}
 	this.Id = id
 	this.Url = url
@@ -58,9 +58,9 @@ func NewBriefContactGroupWithDefaults() *BriefContactGroup {
 }
 
 // GetId returns the Id field value
-func (o *BriefContactGroup) GetId() int32 {
+func (o *BriefContactGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -69,7 +69,7 @@ func (o *BriefContactGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefContactGroup) GetIdOk() (*int32, bool) {
+func (o *BriefContactGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -77,7 +77,7 @@ func (o *BriefContactGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefContactGroup) SetId(v int32) {
+func (o *BriefContactGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -210,9 +210,9 @@ func (o *BriefContactGroup) SetDescription(v string) {
 }
 
 // GetContactCount returns the ContactCount field value
-func (o *BriefContactGroup) GetContactCount() int32 {
+func (o *BriefContactGroup) GetContactCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -221,7 +221,7 @@ func (o *BriefContactGroup) GetContactCount() int32 {
 
 // GetContactCountOk returns a tuple with the ContactCount field value
 // and a boolean to check if the value has been set.
-func (o *BriefContactGroup) GetContactCountOk() (*int32, bool) {
+func (o *BriefContactGroup) GetContactCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -229,14 +229,14 @@ func (o *BriefContactGroup) GetContactCountOk() (*int32, bool) {
 }
 
 // SetContactCount sets field value
-func (o *BriefContactGroup) SetContactCount(v int32) {
+func (o *BriefContactGroup) SetContactCount(v int64) {
 	o.ContactCount = v
 }
 
 // GetDepth returns the Depth field value
-func (o *BriefContactGroup) GetDepth() int32 {
+func (o *BriefContactGroup) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -245,7 +245,7 @@ func (o *BriefContactGroup) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *BriefContactGroup) GetDepthOk() (*int32, bool) {
+func (o *BriefContactGroup) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -253,7 +253,7 @@ func (o *BriefContactGroup) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *BriefContactGroup) SetDepth(v int32) {
+func (o *BriefContactGroup) SetDepth(v int64) {
 	o.Depth = v
 }
 

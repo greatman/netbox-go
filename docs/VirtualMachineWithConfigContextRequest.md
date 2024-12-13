@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **PrimaryIp4** | Pointer to [**NullableBriefIPAddressRequest**](BriefIPAddressRequest.md) |  | [optional] 
 **PrimaryIp6** | Pointer to [**NullableBriefIPAddressRequest**](BriefIPAddressRequest.md) |  | [optional] 
 **Vcpus** | Pointer to **NullableFloat64** |  | [optional] 
-**Memory** | Pointer to **NullableInt32** |  | [optional] 
-**Disk** | Pointer to **NullableInt32** |  | [optional] 
+**Memory** | Pointer to **NullableInt64** |  | [optional] 
+**Disk** | Pointer to **NullableInt64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **ConfigTemplate** | Pointer to [**NullableBriefConfigTemplateRequest**](BriefConfigTemplateRequest.md) |  | [optional] 
@@ -431,20 +431,20 @@ HasVcpus returns a boolean if a field has been set.
 UnsetVcpus ensures that no value is present for Vcpus, not even an explicit nil
 ### GetMemory
 
-`func (o *VirtualMachineWithConfigContextRequest) GetMemory() int32`
+`func (o *VirtualMachineWithConfigContextRequest) GetMemory() int64`
 
 GetMemory returns the Memory field if non-nil, zero value otherwise.
 
 ### GetMemoryOk
 
-`func (o *VirtualMachineWithConfigContextRequest) GetMemoryOk() (*int32, bool)`
+`func (o *VirtualMachineWithConfigContextRequest) GetMemoryOk() (*int64, bool)`
 
 GetMemoryOk returns a tuple with the Memory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemory
 
-`func (o *VirtualMachineWithConfigContextRequest) SetMemory(v int32)`
+`func (o *VirtualMachineWithConfigContextRequest) SetMemory(v int64)`
 
 SetMemory sets Memory field to given value.
 
@@ -466,20 +466,20 @@ HasMemory returns a boolean if a field has been set.
 UnsetMemory ensures that no value is present for Memory, not even an explicit nil
 ### GetDisk
 
-`func (o *VirtualMachineWithConfigContextRequest) GetDisk() int32`
+`func (o *VirtualMachineWithConfigContextRequest) GetDisk() int64`
 
 GetDisk returns the Disk field if non-nil, zero value otherwise.
 
 ### GetDiskOk
 
-`func (o *VirtualMachineWithConfigContextRequest) GetDiskOk() (*int32, bool)`
+`func (o *VirtualMachineWithConfigContextRequest) GetDiskOk() (*int64, bool)`
 
 GetDiskOk returns a tuple with the Disk field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDisk
 
-`func (o *VirtualMachineWithConfigContextRequest) SetDisk(v int32)`
+`func (o *VirtualMachineWithConfigContextRequest) SetDisk(v int64)`
 
 SetDisk sets Disk field to given value.
 

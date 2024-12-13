@@ -21,7 +21,7 @@ var _ MappedNullable = &PowerFeed{}
 
 // PowerFeed Adds support for custom fields and tags.
 type PowerFeed struct {
-	Id         int32             `json:"id"`
+	Id         int64             `json:"id"`
 	Url        string            `json:"url"`
 	DisplayUrl string            `json:"display_url"`
 	Display    string            `json:"display"`
@@ -32,10 +32,10 @@ type PowerFeed struct {
 	Type       *PowerFeedType    `json:"type,omitempty"`
 	Supply     *PowerFeedSupply  `json:"supply,omitempty"`
 	Phase      *PowerFeedPhase   `json:"phase,omitempty"`
-	Voltage    *int32            `json:"voltage,omitempty"`
-	Amperage   *int32            `json:"amperage,omitempty"`
+	Voltage    *int64            `json:"voltage,omitempty"`
+	Amperage   *int64            `json:"amperage,omitempty"`
 	// Maximum permissible draw (percentage)
-	MaxUtilization *int32 `json:"max_utilization,omitempty"`
+	MaxUtilization *int64 `json:"max_utilization,omitempty"`
 	// Treat as if a cable is connected
 	MarkConnected *bool              `json:"mark_connected,omitempty"`
 	Cable         NullableBriefCable `json:"cable"`
@@ -63,7 +63,7 @@ type _PowerFeed PowerFeed
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPowerFeed(id int32, url string, displayUrl string, display string, powerPanel BriefPowerPanel, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool) *PowerFeed {
+func NewPowerFeed(id int64, url string, displayUrl string, display string, powerPanel BriefPowerPanel, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool) *PowerFeed {
 	this := PowerFeed{}
 	this.Id = id
 	this.Url = url
@@ -93,9 +93,9 @@ func NewPowerFeedWithDefaults() *PowerFeed {
 }
 
 // GetId returns the Id field value
-func (o *PowerFeed) GetId() int32 {
+func (o *PowerFeed) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -104,7 +104,7 @@ func (o *PowerFeed) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PowerFeed) GetIdOk() (*int32, bool) {
+func (o *PowerFeed) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -112,7 +112,7 @@ func (o *PowerFeed) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *PowerFeed) SetId(v int32) {
+func (o *PowerFeed) SetId(v int64) {
 	o.Id = v
 }
 
@@ -408,9 +408,9 @@ func (o *PowerFeed) SetPhase(v PowerFeedPhase) {
 }
 
 // GetVoltage returns the Voltage field value if set, zero value otherwise.
-func (o *PowerFeed) GetVoltage() int32 {
+func (o *PowerFeed) GetVoltage() int64 {
 	if o == nil || IsNil(o.Voltage) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Voltage
@@ -418,7 +418,7 @@ func (o *PowerFeed) GetVoltage() int32 {
 
 // GetVoltageOk returns a tuple with the Voltage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerFeed) GetVoltageOk() (*int32, bool) {
+func (o *PowerFeed) GetVoltageOk() (*int64, bool) {
 	if o == nil || IsNil(o.Voltage) {
 		return nil, false
 	}
@@ -434,15 +434,15 @@ func (o *PowerFeed) HasVoltage() bool {
 	return false
 }
 
-// SetVoltage gets a reference to the given int32 and assigns it to the Voltage field.
-func (o *PowerFeed) SetVoltage(v int32) {
+// SetVoltage gets a reference to the given int64 and assigns it to the Voltage field.
+func (o *PowerFeed) SetVoltage(v int64) {
 	o.Voltage = &v
 }
 
 // GetAmperage returns the Amperage field value if set, zero value otherwise.
-func (o *PowerFeed) GetAmperage() int32 {
+func (o *PowerFeed) GetAmperage() int64 {
 	if o == nil || IsNil(o.Amperage) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Amperage
@@ -450,7 +450,7 @@ func (o *PowerFeed) GetAmperage() int32 {
 
 // GetAmperageOk returns a tuple with the Amperage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerFeed) GetAmperageOk() (*int32, bool) {
+func (o *PowerFeed) GetAmperageOk() (*int64, bool) {
 	if o == nil || IsNil(o.Amperage) {
 		return nil, false
 	}
@@ -466,15 +466,15 @@ func (o *PowerFeed) HasAmperage() bool {
 	return false
 }
 
-// SetAmperage gets a reference to the given int32 and assigns it to the Amperage field.
-func (o *PowerFeed) SetAmperage(v int32) {
+// SetAmperage gets a reference to the given int64 and assigns it to the Amperage field.
+func (o *PowerFeed) SetAmperage(v int64) {
 	o.Amperage = &v
 }
 
 // GetMaxUtilization returns the MaxUtilization field value if set, zero value otherwise.
-func (o *PowerFeed) GetMaxUtilization() int32 {
+func (o *PowerFeed) GetMaxUtilization() int64 {
 	if o == nil || IsNil(o.MaxUtilization) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MaxUtilization
@@ -482,7 +482,7 @@ func (o *PowerFeed) GetMaxUtilization() int32 {
 
 // GetMaxUtilizationOk returns a tuple with the MaxUtilization field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PowerFeed) GetMaxUtilizationOk() (*int32, bool) {
+func (o *PowerFeed) GetMaxUtilizationOk() (*int64, bool) {
 	if o == nil || IsNil(o.MaxUtilization) {
 		return nil, false
 	}
@@ -498,8 +498,8 @@ func (o *PowerFeed) HasMaxUtilization() bool {
 	return false
 }
 
-// SetMaxUtilization gets a reference to the given int32 and assigns it to the MaxUtilization field.
-func (o *PowerFeed) SetMaxUtilization(v int32) {
+// SetMaxUtilization gets a reference to the given int64 and assigns it to the MaxUtilization field.
+func (o *PowerFeed) SetMaxUtilization(v int64) {
 	o.MaxUtilization = &v
 }
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedEventRuleList{}
 
 // PaginatedEventRuleList struct for PaginatedEventRuleList
 type PaginatedEventRuleList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []EventRule    `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedEventRuleList PaginatedEventRuleList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedEventRuleList(count int32, results []EventRule) *PaginatedEventRuleList {
+func NewPaginatedEventRuleList(count int64, results []EventRule) *PaginatedEventRuleList {
 	this := PaginatedEventRuleList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedEventRuleListWithDefaults() *PaginatedEventRuleList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedEventRuleList) GetCount() int32 {
+func (o *PaginatedEventRuleList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedEventRuleList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedEventRuleList) GetCountOk() (*int32, bool) {
+func (o *PaginatedEventRuleList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedEventRuleList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedEventRuleList) SetCount(v int32) {
+func (o *PaginatedEventRuleList) SetCount(v int64) {
 	o.Count = v
 }
 

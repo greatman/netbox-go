@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -16,14 +16,14 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**ContactCount** | **int32** |  | [readonly] [default to 0]
-**Depth** | **int32** |  | [readonly] 
+**ContactCount** | **int64** |  | [readonly] [default to 0]
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewContactGroup
 
-`func NewContactGroup(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, contactCount int32, depth int32, ) *ContactGroup`
+`func NewContactGroup(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, contactCount int64, depth int64, ) *ContactGroup`
 
 NewContactGroup instantiates a new ContactGroup object
 This constructor will assign default values to properties that have it defined,
@@ -40,20 +40,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ContactGroup) GetId() int32`
+`func (o *ContactGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ContactGroup) GetIdOk() (*int32, bool)`
+`func (o *ContactGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ContactGroup) SetId(v int32)`
+`func (o *ContactGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -330,40 +330,40 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetContactCount
 
-`func (o *ContactGroup) GetContactCount() int32`
+`func (o *ContactGroup) GetContactCount() int64`
 
 GetContactCount returns the ContactCount field if non-nil, zero value otherwise.
 
 ### GetContactCountOk
 
-`func (o *ContactGroup) GetContactCountOk() (*int32, bool)`
+`func (o *ContactGroup) GetContactCountOk() (*int64, bool)`
 
 GetContactCountOk returns a tuple with the ContactCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetContactCount
 
-`func (o *ContactGroup) SetContactCount(v int32)`
+`func (o *ContactGroup) SetContactCount(v int64)`
 
 SetContactCount sets ContactCount field to given value.
 
 
 ### GetDepth
 
-`func (o *ContactGroup) GetDepth() int32`
+`func (o *ContactGroup) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *ContactGroup) GetDepthOk() (*int32, bool)`
+`func (o *ContactGroup) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *ContactGroup) SetDepth(v int32)`
+`func (o *ContactGroup) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

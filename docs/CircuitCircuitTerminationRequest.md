@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TerminationType** | Pointer to **NullableString** |  | [optional] 
-**TerminationId** | Pointer to **NullableInt32** |  | [optional] 
-**PortSpeed** | Pointer to **NullableInt32** | Physical circuit speed | [optional] 
-**UpstreamSpeed** | Pointer to **NullableInt32** | Upstream speed, if different from port speed | [optional] 
+**TerminationId** | Pointer to **NullableInt64** |  | [optional] 
+**PortSpeed** | Pointer to **NullableInt64** | Physical circuit speed | [optional] 
+**UpstreamSpeed** | Pointer to **NullableInt64** | Upstream speed, if different from port speed | [optional] 
 **XconnectId** | Pointer to **string** | ID of the local cross-connect | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 
@@ -67,20 +67,20 @@ HasTerminationType returns a boolean if a field has been set.
 UnsetTerminationType ensures that no value is present for TerminationType, not even an explicit nil
 ### GetTerminationId
 
-`func (o *CircuitCircuitTerminationRequest) GetTerminationId() int32`
+`func (o *CircuitCircuitTerminationRequest) GetTerminationId() int64`
 
 GetTerminationId returns the TerminationId field if non-nil, zero value otherwise.
 
 ### GetTerminationIdOk
 
-`func (o *CircuitCircuitTerminationRequest) GetTerminationIdOk() (*int32, bool)`
+`func (o *CircuitCircuitTerminationRequest) GetTerminationIdOk() (*int64, bool)`
 
 GetTerminationIdOk returns a tuple with the TerminationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTerminationId
 
-`func (o *CircuitCircuitTerminationRequest) SetTerminationId(v int32)`
+`func (o *CircuitCircuitTerminationRequest) SetTerminationId(v int64)`
 
 SetTerminationId sets TerminationId field to given value.
 
@@ -102,20 +102,20 @@ HasTerminationId returns a boolean if a field has been set.
 UnsetTerminationId ensures that no value is present for TerminationId, not even an explicit nil
 ### GetPortSpeed
 
-`func (o *CircuitCircuitTerminationRequest) GetPortSpeed() int32`
+`func (o *CircuitCircuitTerminationRequest) GetPortSpeed() int64`
 
 GetPortSpeed returns the PortSpeed field if non-nil, zero value otherwise.
 
 ### GetPortSpeedOk
 
-`func (o *CircuitCircuitTerminationRequest) GetPortSpeedOk() (*int32, bool)`
+`func (o *CircuitCircuitTerminationRequest) GetPortSpeedOk() (*int64, bool)`
 
 GetPortSpeedOk returns a tuple with the PortSpeed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPortSpeed
 
-`func (o *CircuitCircuitTerminationRequest) SetPortSpeed(v int32)`
+`func (o *CircuitCircuitTerminationRequest) SetPortSpeed(v int64)`
 
 SetPortSpeed sets PortSpeed field to given value.
 
@@ -137,20 +137,20 @@ HasPortSpeed returns a boolean if a field has been set.
 UnsetPortSpeed ensures that no value is present for PortSpeed, not even an explicit nil
 ### GetUpstreamSpeed
 
-`func (o *CircuitCircuitTerminationRequest) GetUpstreamSpeed() int32`
+`func (o *CircuitCircuitTerminationRequest) GetUpstreamSpeed() int64`
 
 GetUpstreamSpeed returns the UpstreamSpeed field if non-nil, zero value otherwise.
 
 ### GetUpstreamSpeedOk
 
-`func (o *CircuitCircuitTerminationRequest) GetUpstreamSpeedOk() (*int32, bool)`
+`func (o *CircuitCircuitTerminationRequest) GetUpstreamSpeedOk() (*int64, bool)`
 
 GetUpstreamSpeedOk returns a tuple with the UpstreamSpeed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpstreamSpeed
 
-`func (o *CircuitCircuitTerminationRequest) SetUpstreamSpeed(v int32)`
+`func (o *CircuitCircuitTerminationRequest) SetUpstreamSpeed(v int64)`
 
 SetUpstreamSpeed sets UpstreamSpeed field to given value.
 

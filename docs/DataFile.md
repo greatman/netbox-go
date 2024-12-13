@@ -4,21 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Source** | [**BriefDataSource**](BriefDataSource.md) |  | [readonly] 
 **Path** | **string** | File path relative to the data source&#39;s root | [readonly] 
 **LastUpdated** | **time.Time** |  | [readonly] 
-**Size** | **int32** |  | [readonly] 
+**Size** | **int64** |  | [readonly] 
 **Hash** | **string** | SHA256 hash of the file data | [readonly] 
 
 ## Methods
 
 ### NewDataFile
 
-`func NewDataFile(id int32, url string, displayUrl string, display string, source BriefDataSource, path string, lastUpdated time.Time, size int32, hash string, ) *DataFile`
+`func NewDataFile(id int64, url string, displayUrl string, display string, source BriefDataSource, path string, lastUpdated time.Time, size int64, hash string, ) *DataFile`
 
 NewDataFile instantiates a new DataFile object
 This constructor will assign default values to properties that have it defined,
@@ -35,20 +35,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *DataFile) GetId() int32`
+`func (o *DataFile) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *DataFile) GetIdOk() (*int32, bool)`
+`func (o *DataFile) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *DataFile) SetId(v int32)`
+`func (o *DataFile) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -175,20 +175,20 @@ SetLastUpdated sets LastUpdated field to given value.
 
 ### GetSize
 
-`func (o *DataFile) GetSize() int32`
+`func (o *DataFile) GetSize() int64`
 
 GetSize returns the Size field if non-nil, zero value otherwise.
 
 ### GetSizeOk
 
-`func (o *DataFile) GetSizeOk() (*int32, bool)`
+`func (o *DataFile) GetSizeOk() (*int64, bool)`
 
 GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSize
 
-`func (o *DataFile) SetSize(v int32)`
+`func (o *DataFile) SetSize(v int64)`
 
 SetSize sets Size field to given value.
 

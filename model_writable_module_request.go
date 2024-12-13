@@ -21,7 +21,7 @@ var _ MappedNullable = &WritableModuleRequest{}
 // WritableModuleRequest Adds support for custom fields and tags.
 type WritableModuleRequest struct {
 	Device     BriefDeviceRequest        `json:"device"`
-	ModuleBay  int32                     `json:"module_bay"`
+	ModuleBay  int64                     `json:"module_bay"`
 	ModuleType BriefModuleTypeRequest    `json:"module_type"`
 	Status     *InventoryItemStatusValue `json:"status,omitempty"`
 	Serial     *string                   `json:"serial,omitempty"`
@@ -40,7 +40,7 @@ type _WritableModuleRequest WritableModuleRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWritableModuleRequest(device BriefDeviceRequest, moduleBay int32, moduleType BriefModuleTypeRequest) *WritableModuleRequest {
+func NewWritableModuleRequest(device BriefDeviceRequest, moduleBay int64, moduleType BriefModuleTypeRequest) *WritableModuleRequest {
 	this := WritableModuleRequest{}
 	this.Device = device
 	this.ModuleBay = moduleBay
@@ -81,9 +81,9 @@ func (o *WritableModuleRequest) SetDevice(v BriefDeviceRequest) {
 }
 
 // GetModuleBay returns the ModuleBay field value
-func (o *WritableModuleRequest) GetModuleBay() int32 {
+func (o *WritableModuleRequest) GetModuleBay() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -92,7 +92,7 @@ func (o *WritableModuleRequest) GetModuleBay() int32 {
 
 // GetModuleBayOk returns a tuple with the ModuleBay field value
 // and a boolean to check if the value has been set.
-func (o *WritableModuleRequest) GetModuleBayOk() (*int32, bool) {
+func (o *WritableModuleRequest) GetModuleBayOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -100,7 +100,7 @@ func (o *WritableModuleRequest) GetModuleBayOk() (*int32, bool) {
 }
 
 // SetModuleBay sets field value
-func (o *WritableModuleRequest) SetModuleBay(v int32) {
+func (o *WritableModuleRequest) SetModuleBay(v int64) {
 	o.ModuleBay = v
 }
 

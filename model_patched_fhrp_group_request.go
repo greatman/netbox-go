@@ -21,7 +21,7 @@ var _ MappedNullable = &PatchedFHRPGroupRequest{}
 type PatchedFHRPGroupRequest struct {
 	Name                 *string                    `json:"name,omitempty"`
 	Protocol             *BriefFHRPGroupProtocol    `json:"protocol,omitempty"`
-	GroupId              *int32                     `json:"group_id,omitempty"`
+	GroupId              *int64                     `json:"group_id,omitempty"`
 	AuthType             NullableAuthenticationType `json:"auth_type,omitempty"`
 	AuthKey              *string                    `json:"auth_key,omitempty"`
 	Description          *string                    `json:"description,omitempty"`
@@ -115,9 +115,9 @@ func (o *PatchedFHRPGroupRequest) SetProtocol(v BriefFHRPGroupProtocol) {
 }
 
 // GetGroupId returns the GroupId field value if set, zero value otherwise.
-func (o *PatchedFHRPGroupRequest) GetGroupId() int32 {
+func (o *PatchedFHRPGroupRequest) GetGroupId() int64 {
 	if o == nil || IsNil(o.GroupId) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.GroupId
@@ -125,7 +125,7 @@ func (o *PatchedFHRPGroupRequest) GetGroupId() int32 {
 
 // GetGroupIdOk returns a tuple with the GroupId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedFHRPGroupRequest) GetGroupIdOk() (*int32, bool) {
+func (o *PatchedFHRPGroupRequest) GetGroupIdOk() (*int64, bool) {
 	if o == nil || IsNil(o.GroupId) {
 		return nil, false
 	}
@@ -141,8 +141,8 @@ func (o *PatchedFHRPGroupRequest) HasGroupId() bool {
 	return false
 }
 
-// SetGroupId gets a reference to the given int32 and assigns it to the GroupId field.
-func (o *PatchedFHRPGroupRequest) SetGroupId(v int32) {
+// SetGroupId gets a reference to the given int64 and assigns it to the GroupId field.
+func (o *PatchedFHRPGroupRequest) SetGroupId(v int64) {
 	o.GroupId = &v
 }
 

@@ -21,14 +21,14 @@ var _ MappedNullable = &FHRPGroupAssignment{}
 
 // FHRPGroupAssignment Adds support for custom fields and tags.
 type FHRPGroupAssignment struct {
-	Id                   int32          `json:"id"`
+	Id                   int64          `json:"id"`
 	Url                  string         `json:"url"`
 	Display              string         `json:"display"`
 	Group                BriefFHRPGroup `json:"group"`
 	InterfaceType        string         `json:"interface_type"`
 	InterfaceId          int64          `json:"interface_id"`
 	Interface            interface{}    `json:"interface"`
-	Priority             int32          `json:"priority"`
+	Priority             int64          `json:"priority"`
 	Created              NullableTime   `json:"created"`
 	LastUpdated          NullableTime   `json:"last_updated"`
 	AdditionalProperties map[string]interface{}
@@ -40,7 +40,7 @@ type _FHRPGroupAssignment FHRPGroupAssignment
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFHRPGroupAssignment(id int32, url string, display string, group BriefFHRPGroup, interfaceType string, interfaceId int64, interface_ interface{}, priority int32, created NullableTime, lastUpdated NullableTime) *FHRPGroupAssignment {
+func NewFHRPGroupAssignment(id int64, url string, display string, group BriefFHRPGroup, interfaceType string, interfaceId int64, interface_ interface{}, priority int64, created NullableTime, lastUpdated NullableTime) *FHRPGroupAssignment {
 	this := FHRPGroupAssignment{}
 	this.Id = id
 	this.Url = url
@@ -64,9 +64,9 @@ func NewFHRPGroupAssignmentWithDefaults() *FHRPGroupAssignment {
 }
 
 // GetId returns the Id field value
-func (o *FHRPGroupAssignment) GetId() int32 {
+func (o *FHRPGroupAssignment) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -75,7 +75,7 @@ func (o *FHRPGroupAssignment) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *FHRPGroupAssignment) GetIdOk() (*int32, bool) {
+func (o *FHRPGroupAssignment) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -83,7 +83,7 @@ func (o *FHRPGroupAssignment) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *FHRPGroupAssignment) SetId(v int32) {
+func (o *FHRPGroupAssignment) SetId(v int64) {
 	o.Id = v
 }
 
@@ -234,9 +234,9 @@ func (o *FHRPGroupAssignment) SetInterface(v interface{}) {
 }
 
 // GetPriority returns the Priority field value
-func (o *FHRPGroupAssignment) GetPriority() int32 {
+func (o *FHRPGroupAssignment) GetPriority() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -245,7 +245,7 @@ func (o *FHRPGroupAssignment) GetPriority() int32 {
 
 // GetPriorityOk returns a tuple with the Priority field value
 // and a boolean to check if the value has been set.
-func (o *FHRPGroupAssignment) GetPriorityOk() (*int32, bool) {
+func (o *FHRPGroupAssignment) GetPriorityOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -253,7 +253,7 @@ func (o *FHRPGroupAssignment) GetPriorityOk() (*int32, bool) {
 }
 
 // SetPriority sets field value
-func (o *FHRPGroupAssignment) SetPriority(v int32) {
+func (o *FHRPGroupAssignment) SetPriority(v int64) {
 	o.Priority = v
 }
 

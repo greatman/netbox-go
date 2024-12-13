@@ -21,7 +21,7 @@ var _ MappedNullable = &ProviderNetwork{}
 
 // ProviderNetwork Adds support for custom fields and tags.
 type ProviderNetwork struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
@@ -43,7 +43,7 @@ type _ProviderNetwork ProviderNetwork
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewProviderNetwork(id int32, url string, displayUrl string, display string, provider BriefProvider, name string, created NullableTime, lastUpdated NullableTime) *ProviderNetwork {
+func NewProviderNetwork(id int64, url string, displayUrl string, display string, provider BriefProvider, name string, created NullableTime, lastUpdated NullableTime) *ProviderNetwork {
 	this := ProviderNetwork{}
 	this.Id = id
 	this.Url = url
@@ -65,9 +65,9 @@ func NewProviderNetworkWithDefaults() *ProviderNetwork {
 }
 
 // GetId returns the Id field value
-func (o *ProviderNetwork) GetId() int32 {
+func (o *ProviderNetwork) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -76,7 +76,7 @@ func (o *ProviderNetwork) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ProviderNetwork) GetIdOk() (*int32, bool) {
+func (o *ProviderNetwork) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -84,7 +84,7 @@ func (o *ProviderNetwork) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ProviderNetwork) SetId(v int32) {
+func (o *ProviderNetwork) SetId(v int64) {
 	o.Id = v
 }
 

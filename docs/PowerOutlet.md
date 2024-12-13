@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 
 ### NewPowerOutlet
 
-`func NewPowerOutlet(id int32, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool, ) *PowerOutlet`
+`func NewPowerOutlet(id int64, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool, ) *PowerOutlet`
 
 NewPowerOutlet instantiates a new PowerOutlet object
 This constructor will assign default values to properties that have it defined,
@@ -52,20 +52,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PowerOutlet) GetId() int32`
+`func (o *PowerOutlet) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PowerOutlet) GetIdOk() (*int32, bool)`
+`func (o *PowerOutlet) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PowerOutlet) SetId(v int32)`
+`func (o *PowerOutlet) SetId(v int64)`
 
 SetId sets Id field to given value.
 

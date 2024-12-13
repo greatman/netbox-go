@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**Permissions** | Pointer to **[]int32** |  | [optional] 
+**Permissions** | Pointer to **[]int64** |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetPermissions
 
-`func (o *PatchedGroupRequest) GetPermissions() []int32`
+`func (o *PatchedGroupRequest) GetPermissions() []int64`
 
 GetPermissions returns the Permissions field if non-nil, zero value otherwise.
 
 ### GetPermissionsOk
 
-`func (o *PatchedGroupRequest) GetPermissionsOk() (*[]int32, bool)`
+`func (o *PatchedGroupRequest) GetPermissionsOk() (*[]int64, bool)`
 
 GetPermissionsOk returns a tuple with the Permissions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPermissions
 
-`func (o *PatchedGroupRequest) SetPermissions(v []int32)`
+`func (o *PatchedGroupRequest) SetPermissions(v []int64)`
 
 SetPermissions sets Permissions field to given value.
 

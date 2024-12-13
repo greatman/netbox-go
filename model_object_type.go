@@ -20,7 +20,7 @@ var _ MappedNullable = &ObjectType{}
 
 // ObjectType struct for ObjectType
 type ObjectType struct {
-	Id                   int32  `json:"id"`
+	Id                   int64  `json:"id"`
 	Url                  string `json:"url"`
 	Display              string `json:"display"`
 	AppLabel             string `json:"app_label"`
@@ -34,7 +34,7 @@ type _ObjectType ObjectType
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewObjectType(id int32, url string, display string, appLabel string, model string) *ObjectType {
+func NewObjectType(id int64, url string, display string, appLabel string, model string) *ObjectType {
 	this := ObjectType{}
 	this.Id = id
 	this.Url = url
@@ -53,9 +53,9 @@ func NewObjectTypeWithDefaults() *ObjectType {
 }
 
 // GetId returns the Id field value
-func (o *ObjectType) GetId() int32 {
+func (o *ObjectType) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -64,7 +64,7 @@ func (o *ObjectType) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ObjectType) GetIdOk() (*int32, bool) {
+func (o *ObjectType) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -72,7 +72,7 @@ func (o *ObjectType) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ObjectType) SetId(v int32) {
+func (o *ObjectType) SetId(v int64) {
 	o.Id = v
 }
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | **int32** |  | 
+**Count** | **int64** |  | 
 **Next** | Pointer to **NullableString** |  | [optional] 
 **Previous** | Pointer to **NullableString** |  | [optional] 
 **Results** | [**[]ConsolePort**](ConsolePort.md) |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewPaginatedConsolePortList
 
-`func NewPaginatedConsolePortList(count int32, results []ConsolePort, ) *PaginatedConsolePortList`
+`func NewPaginatedConsolePortList(count int64, results []ConsolePort, ) *PaginatedConsolePortList`
 
 NewPaginatedConsolePortList instantiates a new PaginatedConsolePortList object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCount
 
-`func (o *PaginatedConsolePortList) GetCount() int32`
+`func (o *PaginatedConsolePortList) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *PaginatedConsolePortList) GetCountOk() (*int32, bool)`
+`func (o *PaginatedConsolePortList) GetCountOk() (*int64, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *PaginatedConsolePortList) SetCount(v int32)`
+`func (o *PaginatedConsolePortList) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Name** | Pointer to **string** |  | [optional] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Protocol** | [**BriefFHRPGroupProtocol**](BriefFHRPGroupProtocol.md) |  | 
-**GroupId** | **int32** |  | 
+**GroupId** | **int64** |  | 
 **AuthType** | Pointer to [**NullableAuthenticationType**](AuthenticationType.md) |  | [optional] 
 **AuthKey** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 ### NewFHRPGroup
 
-`func NewFHRPGroup(id int32, url string, displayUrl string, display string, protocol BriefFHRPGroupProtocol, groupId int32, created NullableTime, lastUpdated NullableTime, ipAddresses []BriefIPAddress, ) *FHRPGroup`
+`func NewFHRPGroup(id int64, url string, displayUrl string, display string, protocol BriefFHRPGroupProtocol, groupId int64, created NullableTime, lastUpdated NullableTime, ipAddresses []BriefIPAddress, ) *FHRPGroup`
 
 NewFHRPGroup instantiates a new FHRPGroup object
 This constructor will assign default values to properties that have it defined,
@@ -42,20 +42,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *FHRPGroup) GetId() int32`
+`func (o *FHRPGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *FHRPGroup) GetIdOk() (*int32, bool)`
+`func (o *FHRPGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *FHRPGroup) SetId(v int32)`
+`func (o *FHRPGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -167,20 +167,20 @@ SetProtocol sets Protocol field to given value.
 
 ### GetGroupId
 
-`func (o *FHRPGroup) GetGroupId() int32`
+`func (o *FHRPGroup) GetGroupId() int64`
 
 GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
 ### GetGroupIdOk
 
-`func (o *FHRPGroup) GetGroupIdOk() (*int32, bool)`
+`func (o *FHRPGroup) GetGroupIdOk() (*int64, bool)`
 
 GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroupId
 
-`func (o *FHRPGroup) SetGroupId(v int32)`
+`func (o *FHRPGroup) SetGroupId(v int64)`
 
 SetGroupId sets GroupId field to given value.
 

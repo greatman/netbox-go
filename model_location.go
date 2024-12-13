@@ -21,7 +21,7 @@ var _ MappedNullable = &Location{}
 
 // Location Extends PrimaryModelSerializer to include MPTT support.
 type Location struct {
-	Id         int32                  `json:"id"`
+	Id         int64                  `json:"id"`
 	Url        string                 `json:"url"`
 	DisplayUrl string                 `json:"display_url"`
 	Display    string                 `json:"display"`
@@ -38,10 +38,10 @@ type Location struct {
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
 	Created              NullableTime           `json:"created"`
 	LastUpdated          NullableTime           `json:"last_updated"`
-	RackCount            int32                  `json:"rack_count"`
-	DeviceCount          int32                  `json:"device_count"`
+	RackCount            int64                  `json:"rack_count"`
+	DeviceCount          int64                  `json:"device_count"`
 	PrefixCount          int64                  `json:"prefix_count"`
-	Depth                int32                  `json:"_depth"`
+	Depth                int64                  `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -51,7 +51,7 @@ type _Location Location
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewLocation(id int32, url string, displayUrl string, display string, name string, slug string, site BriefSite, created NullableTime, lastUpdated NullableTime, rackCount int32, deviceCount int32, prefixCount int64, depth int32) *Location {
+func NewLocation(id int64, url string, displayUrl string, display string, name string, slug string, site BriefSite, created NullableTime, lastUpdated NullableTime, rackCount int64, deviceCount int64, prefixCount int64, depth int64) *Location {
 	this := Location{}
 	this.Id = id
 	this.Url = url
@@ -78,9 +78,9 @@ func NewLocationWithDefaults() *Location {
 }
 
 // GetId returns the Id field value
-func (o *Location) GetId() int32 {
+func (o *Location) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -89,7 +89,7 @@ func (o *Location) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Location) GetIdOk() (*int32, bool) {
+func (o *Location) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -97,7 +97,7 @@ func (o *Location) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Location) SetId(v int32) {
+func (o *Location) SetId(v int64) {
 	o.Id = v
 }
 
@@ -544,9 +544,9 @@ func (o *Location) SetLastUpdated(v time.Time) {
 }
 
 // GetRackCount returns the RackCount field value
-func (o *Location) GetRackCount() int32 {
+func (o *Location) GetRackCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -555,7 +555,7 @@ func (o *Location) GetRackCount() int32 {
 
 // GetRackCountOk returns a tuple with the RackCount field value
 // and a boolean to check if the value has been set.
-func (o *Location) GetRackCountOk() (*int32, bool) {
+func (o *Location) GetRackCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -563,14 +563,14 @@ func (o *Location) GetRackCountOk() (*int32, bool) {
 }
 
 // SetRackCount sets field value
-func (o *Location) SetRackCount(v int32) {
+func (o *Location) SetRackCount(v int64) {
 	o.RackCount = v
 }
 
 // GetDeviceCount returns the DeviceCount field value
-func (o *Location) GetDeviceCount() int32 {
+func (o *Location) GetDeviceCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -579,7 +579,7 @@ func (o *Location) GetDeviceCount() int32 {
 
 // GetDeviceCountOk returns a tuple with the DeviceCount field value
 // and a boolean to check if the value has been set.
-func (o *Location) GetDeviceCountOk() (*int32, bool) {
+func (o *Location) GetDeviceCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -587,7 +587,7 @@ func (o *Location) GetDeviceCountOk() (*int32, bool) {
 }
 
 // SetDeviceCount sets field value
-func (o *Location) SetDeviceCount(v int32) {
+func (o *Location) SetDeviceCount(v int64) {
 	o.DeviceCount = v
 }
 
@@ -616,9 +616,9 @@ func (o *Location) SetPrefixCount(v int64) {
 }
 
 // GetDepth returns the Depth field value
-func (o *Location) GetDepth() int32 {
+func (o *Location) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -627,7 +627,7 @@ func (o *Location) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *Location) GetDepthOk() (*int32, bool) {
+func (o *Location) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -635,7 +635,7 @@ func (o *Location) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *Location) SetDepth(v int32) {
+func (o *Location) SetDepth(v int64) {
 	o.Depth = v
 }
 

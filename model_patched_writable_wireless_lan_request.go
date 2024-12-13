@@ -25,7 +25,7 @@ type PatchedWritableWirelessLANRequest struct {
 	Status               *PatchedWritableWirelessLANRequestStatus `json:"status,omitempty"`
 	Vlan                 NullableBriefVLANRequest                 `json:"vlan,omitempty"`
 	ScopeType            NullableString                           `json:"scope_type,omitempty"`
-	ScopeId              NullableInt32                            `json:"scope_id,omitempty"`
+	ScopeId              NullableInt64                            `json:"scope_id,omitempty"`
 	Tenant               NullableBriefTenantRequest               `json:"tenant,omitempty"`
 	AuthType             NullableAuthenticationType1              `json:"auth_type,omitempty"`
 	AuthCipher           NullableAuthenticationCipher             `json:"auth_cipher,omitempty"`
@@ -281,9 +281,9 @@ func (o *PatchedWritableWirelessLANRequest) UnsetScopeType() {
 }
 
 // GetScopeId returns the ScopeId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedWritableWirelessLANRequest) GetScopeId() int32 {
+func (o *PatchedWritableWirelessLANRequest) GetScopeId() int64 {
 	if o == nil || IsNil(o.ScopeId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ScopeId.Get()
@@ -292,7 +292,7 @@ func (o *PatchedWritableWirelessLANRequest) GetScopeId() int32 {
 // GetScopeIdOk returns a tuple with the ScopeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedWritableWirelessLANRequest) GetScopeIdOk() (*int32, bool) {
+func (o *PatchedWritableWirelessLANRequest) GetScopeIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -308,8 +308,8 @@ func (o *PatchedWritableWirelessLANRequest) HasScopeId() bool {
 	return false
 }
 
-// SetScopeId gets a reference to the given NullableInt32 and assigns it to the ScopeId field.
-func (o *PatchedWritableWirelessLANRequest) SetScopeId(v int32) {
+// SetScopeId gets a reference to the given NullableInt64 and assigns it to the ScopeId field.
+func (o *PatchedWritableWirelessLANRequest) SetScopeId(v int64) {
 	o.ScopeId.Set(&v)
 }
 

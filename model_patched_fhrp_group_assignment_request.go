@@ -22,7 +22,7 @@ type PatchedFHRPGroupAssignmentRequest struct {
 	Group                *BriefFHRPGroupRequest `json:"group,omitempty"`
 	InterfaceType        *string                `json:"interface_type,omitempty"`
 	InterfaceId          *int64                 `json:"interface_id,omitempty"`
-	Priority             *int32                 `json:"priority,omitempty"`
+	Priority             *int64                 `json:"priority,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -142,9 +142,9 @@ func (o *PatchedFHRPGroupAssignmentRequest) SetInterfaceId(v int64) {
 }
 
 // GetPriority returns the Priority field value if set, zero value otherwise.
-func (o *PatchedFHRPGroupAssignmentRequest) GetPriority() int32 {
+func (o *PatchedFHRPGroupAssignmentRequest) GetPriority() int64 {
 	if o == nil || IsNil(o.Priority) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Priority
@@ -152,7 +152,7 @@ func (o *PatchedFHRPGroupAssignmentRequest) GetPriority() int32 {
 
 // GetPriorityOk returns a tuple with the Priority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedFHRPGroupAssignmentRequest) GetPriorityOk() (*int32, bool) {
+func (o *PatchedFHRPGroupAssignmentRequest) GetPriorityOk() (*int64, bool) {
 	if o == nil || IsNil(o.Priority) {
 		return nil, false
 	}
@@ -168,8 +168,8 @@ func (o *PatchedFHRPGroupAssignmentRequest) HasPriority() bool {
 	return false
 }
 
-// SetPriority gets a reference to the given int32 and assigns it to the Priority field.
-func (o *PatchedFHRPGroupAssignmentRequest) SetPriority(v int32) {
+// SetPriority gets a reference to the given int64 and assigns it to the Priority field.
+func (o *PatchedFHRPGroupAssignmentRequest) SetPriority(v int64) {
 	o.Priority = &v
 }
 

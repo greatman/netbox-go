@@ -34,7 +34,7 @@ type PatchedWritableCustomFieldRequest struct {
 	// The value of this field must be unique for the assigned object
 	Unique *bool `json:"unique,omitempty"`
 	// Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored.
-	SearchWeight *int32                                        `json:"search_weight,omitempty"`
+	SearchWeight *int64                                        `json:"search_weight,omitempty"`
 	FilterLogic  *PatchedWritableCustomFieldRequestFilterLogic `json:"filter_logic,omitempty"`
 	UiVisible    *PatchedWritableCustomFieldRequestUiVisible   `json:"ui_visible,omitempty"`
 	UiEditable   *PatchedWritableCustomFieldRequestUiEditable  `json:"ui_editable,omitempty"`
@@ -45,7 +45,7 @@ type PatchedWritableCustomFieldRequest struct {
 	// Filter the object selection choices using a query_params dict (must be a JSON value).Encapsulate strings with double quotes (e.g. \"Foo\").
 	RelatedObjectFilter interface{} `json:"related_object_filter,omitempty"`
 	// Fields with higher weights appear lower in a form.
-	Weight *int32 `json:"weight,omitempty"`
+	Weight *int64 `json:"weight,omitempty"`
 	// Minimum allowed value (for numeric fields)
 	ValidationMinimum NullableInt64 `json:"validation_minimum,omitempty"`
 	// Maximum allowed value (for numeric fields)
@@ -376,9 +376,9 @@ func (o *PatchedWritableCustomFieldRequest) SetUnique(v bool) {
 }
 
 // GetSearchWeight returns the SearchWeight field value if set, zero value otherwise.
-func (o *PatchedWritableCustomFieldRequest) GetSearchWeight() int32 {
+func (o *PatchedWritableCustomFieldRequest) GetSearchWeight() int64 {
 	if o == nil || IsNil(o.SearchWeight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SearchWeight
@@ -386,7 +386,7 @@ func (o *PatchedWritableCustomFieldRequest) GetSearchWeight() int32 {
 
 // GetSearchWeightOk returns a tuple with the SearchWeight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableCustomFieldRequest) GetSearchWeightOk() (*int32, bool) {
+func (o *PatchedWritableCustomFieldRequest) GetSearchWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.SearchWeight) {
 		return nil, false
 	}
@@ -402,8 +402,8 @@ func (o *PatchedWritableCustomFieldRequest) HasSearchWeight() bool {
 	return false
 }
 
-// SetSearchWeight gets a reference to the given int32 and assigns it to the SearchWeight field.
-func (o *PatchedWritableCustomFieldRequest) SetSearchWeight(v int32) {
+// SetSearchWeight gets a reference to the given int64 and assigns it to the SearchWeight field.
+func (o *PatchedWritableCustomFieldRequest) SetSearchWeight(v int64) {
 	o.SearchWeight = &v
 }
 
@@ -602,9 +602,9 @@ func (o *PatchedWritableCustomFieldRequest) SetRelatedObjectFilter(v interface{}
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *PatchedWritableCustomFieldRequest) GetWeight() int32 {
+func (o *PatchedWritableCustomFieldRequest) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -612,7 +612,7 @@ func (o *PatchedWritableCustomFieldRequest) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableCustomFieldRequest) GetWeightOk() (*int32, bool) {
+func (o *PatchedWritableCustomFieldRequest) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -628,8 +628,8 @@ func (o *PatchedWritableCustomFieldRequest) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *PatchedWritableCustomFieldRequest) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *PatchedWritableCustomFieldRequest) SetWeight(v int64) {
 	o.Weight = &v
 }
 

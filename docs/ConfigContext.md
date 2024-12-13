@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
-**Weight** | Pointer to **int32** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **IsActive** | Pointer to **bool** |  | [optional] 
 **Regions** | Pointer to [**[]Region**](Region.md) |  | [optional] 
@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 
 ### NewConfigContext
 
-`func NewConfigContext(id int32, url string, displayUrl string, display string, name string, dataPath string, dataFile BriefDataFile, dataSynced NullableTime, data interface{}, created NullableTime, lastUpdated NullableTime, ) *ConfigContext`
+`func NewConfigContext(id int64, url string, displayUrl string, display string, name string, dataPath string, dataFile BriefDataFile, dataSynced NullableTime, data interface{}, created NullableTime, lastUpdated NullableTime, ) *ConfigContext`
 
 NewConfigContext instantiates a new ConfigContext object
 This constructor will assign default values to properties that have it defined,
@@ -54,20 +54,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ConfigContext) GetId() int32`
+`func (o *ConfigContext) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ConfigContext) GetIdOk() (*int32, bool)`
+`func (o *ConfigContext) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ConfigContext) SetId(v int32)`
+`func (o *ConfigContext) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -154,20 +154,20 @@ SetName sets Name field to given value.
 
 ### GetWeight
 
-`func (o *ConfigContext) GetWeight() int32`
+`func (o *ConfigContext) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *ConfigContext) GetWeightOk() (*int32, bool)`
+`func (o *ConfigContext) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *ConfigContext) SetWeight(v int32)`
+`func (o *ConfigContext) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

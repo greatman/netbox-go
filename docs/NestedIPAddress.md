@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
-**Family** | **int32** |  | [readonly] 
+**Family** | **int64** |  | [readonly] 
 **Address** | **string** |  | 
 
 ## Methods
 
 ### NewNestedIPAddress
 
-`func NewNestedIPAddress(id int32, url string, displayUrl string, display string, family int32, address string, ) *NestedIPAddress`
+`func NewNestedIPAddress(id int64, url string, displayUrl string, display string, family int64, address string, ) *NestedIPAddress`
 
 NewNestedIPAddress instantiates a new NestedIPAddress object
 This constructor will assign default values to properties that have it defined,
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedIPAddress) GetId() int32`
+`func (o *NestedIPAddress) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedIPAddress) GetIdOk() (*int32, bool)`
+`func (o *NestedIPAddress) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedIPAddress) SetId(v int32)`
+`func (o *NestedIPAddress) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -112,20 +112,20 @@ SetDisplay sets Display field to given value.
 
 ### GetFamily
 
-`func (o *NestedIPAddress) GetFamily() int32`
+`func (o *NestedIPAddress) GetFamily() int64`
 
 GetFamily returns the Family field if non-nil, zero value otherwise.
 
 ### GetFamilyOk
 
-`func (o *NestedIPAddress) GetFamilyOk() (*int32, bool)`
+`func (o *NestedIPAddress) GetFamilyOk() (*int64, bool)`
 
 GetFamilyOk returns a tuple with the Family field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFamily
 
-`func (o *NestedIPAddress) SetFamily(v int32)`
+`func (o *NestedIPAddress) SetFamily(v int64)`
 
 SetFamily sets Family field to given value.
 

@@ -20,11 +20,11 @@ var _ MappedNullable = &BriefFHRPGroup{}
 
 // BriefFHRPGroup Adds support for custom fields and tags.
 type BriefFHRPGroup struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	Display              string                 `json:"display"`
 	Protocol             BriefFHRPGroupProtocol `json:"protocol"`
-	GroupId              int32                  `json:"group_id"`
+	GroupId              int64                  `json:"group_id"`
 	Description          *string                `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -35,7 +35,7 @@ type _BriefFHRPGroup BriefFHRPGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefFHRPGroup(id int32, url string, display string, protocol BriefFHRPGroupProtocol, groupId int32) *BriefFHRPGroup {
+func NewBriefFHRPGroup(id int64, url string, display string, protocol BriefFHRPGroupProtocol, groupId int64) *BriefFHRPGroup {
 	this := BriefFHRPGroup{}
 	this.Id = id
 	this.Url = url
@@ -54,9 +54,9 @@ func NewBriefFHRPGroupWithDefaults() *BriefFHRPGroup {
 }
 
 // GetId returns the Id field value
-func (o *BriefFHRPGroup) GetId() int32 {
+func (o *BriefFHRPGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -65,7 +65,7 @@ func (o *BriefFHRPGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefFHRPGroup) GetIdOk() (*int32, bool) {
+func (o *BriefFHRPGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -73,7 +73,7 @@ func (o *BriefFHRPGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefFHRPGroup) SetId(v int32) {
+func (o *BriefFHRPGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -150,9 +150,9 @@ func (o *BriefFHRPGroup) SetProtocol(v BriefFHRPGroupProtocol) {
 }
 
 // GetGroupId returns the GroupId field value
-func (o *BriefFHRPGroup) GetGroupId() int32 {
+func (o *BriefFHRPGroup) GetGroupId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -161,7 +161,7 @@ func (o *BriefFHRPGroup) GetGroupId() int32 {
 
 // GetGroupIdOk returns a tuple with the GroupId field value
 // and a boolean to check if the value has been set.
-func (o *BriefFHRPGroup) GetGroupIdOk() (*int32, bool) {
+func (o *BriefFHRPGroup) GetGroupIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -169,7 +169,7 @@ func (o *BriefFHRPGroup) GetGroupIdOk() (*int32, bool) {
 }
 
 // SetGroupId sets field value
-func (o *BriefFHRPGroup) SetGroupId(v int32) {
+func (o *BriefFHRPGroup) SetGroupId(v int64) {
 	o.GroupId = v
 }
 

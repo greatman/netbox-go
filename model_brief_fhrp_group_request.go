@@ -21,7 +21,7 @@ var _ MappedNullable = &BriefFHRPGroupRequest{}
 // BriefFHRPGroupRequest Adds support for custom fields and tags.
 type BriefFHRPGroupRequest struct {
 	Protocol             BriefFHRPGroupProtocol `json:"protocol"`
-	GroupId              int32                  `json:"group_id"`
+	GroupId              int64                  `json:"group_id"`
 	Description          *string                `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -32,7 +32,7 @@ type _BriefFHRPGroupRequest BriefFHRPGroupRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefFHRPGroupRequest(protocol BriefFHRPGroupProtocol, groupId int32) *BriefFHRPGroupRequest {
+func NewBriefFHRPGroupRequest(protocol BriefFHRPGroupProtocol, groupId int64) *BriefFHRPGroupRequest {
 	this := BriefFHRPGroupRequest{}
 	this.Protocol = protocol
 	this.GroupId = groupId
@@ -72,9 +72,9 @@ func (o *BriefFHRPGroupRequest) SetProtocol(v BriefFHRPGroupProtocol) {
 }
 
 // GetGroupId returns the GroupId field value
-func (o *BriefFHRPGroupRequest) GetGroupId() int32 {
+func (o *BriefFHRPGroupRequest) GetGroupId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -83,7 +83,7 @@ func (o *BriefFHRPGroupRequest) GetGroupId() int32 {
 
 // GetGroupIdOk returns a tuple with the GroupId field value
 // and a boolean to check if the value has been set.
-func (o *BriefFHRPGroupRequest) GetGroupIdOk() (*int32, bool) {
+func (o *BriefFHRPGroupRequest) GetGroupIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -91,7 +91,7 @@ func (o *BriefFHRPGroupRequest) GetGroupIdOk() (*int32, bool) {
 }
 
 // SetGroupId sets field value
-func (o *BriefFHRPGroupRequest) SetGroupId(v int32) {
+func (o *BriefFHRPGroupRequest) SetGroupId(v int64) {
 	o.GroupId = v
 }
 

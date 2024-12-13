@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | **int32** |  | 
+**Count** | **int64** |  | 
 **Next** | Pointer to **NullableString** |  | [optional] 
 **Previous** | Pointer to **NullableString** |  | [optional] 
 **Results** | [**[]Job**](Job.md) |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewPaginatedJobList
 
-`func NewPaginatedJobList(count int32, results []Job, ) *PaginatedJobList`
+`func NewPaginatedJobList(count int64, results []Job, ) *PaginatedJobList`
 
 NewPaginatedJobList instantiates a new PaginatedJobList object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCount
 
-`func (o *PaginatedJobList) GetCount() int32`
+`func (o *PaginatedJobList) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *PaginatedJobList) GetCountOk() (*int32, bool)`
+`func (o *PaginatedJobList) GetCountOk() (*int64, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *PaginatedJobList) SetCount(v int32)`
+`func (o *PaginatedJobList) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

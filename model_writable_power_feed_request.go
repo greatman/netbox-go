@@ -27,10 +27,10 @@ type WritablePowerFeedRequest struct {
 	Type       *PatchedWritablePowerFeedRequestType   `json:"type,omitempty"`
 	Supply     *PatchedWritablePowerFeedRequestSupply `json:"supply,omitempty"`
 	Phase      *PatchedWritablePowerFeedRequestPhase  `json:"phase,omitempty"`
-	Voltage    *int32                                 `json:"voltage,omitempty"`
-	Amperage   *int32                                 `json:"amperage,omitempty"`
+	Voltage    *int64                                 `json:"voltage,omitempty"`
+	Amperage   *int64                                 `json:"amperage,omitempty"`
 	// Maximum permissible draw (percentage)
-	MaxUtilization *int32 `json:"max_utilization,omitempty"`
+	MaxUtilization *int64 `json:"max_utilization,omitempty"`
 	// Treat as if a cable is connected
 	MarkConnected        *bool                      `json:"mark_connected,omitempty"`
 	Description          *string                    `json:"description,omitempty"`
@@ -282,9 +282,9 @@ func (o *WritablePowerFeedRequest) SetPhase(v PatchedWritablePowerFeedRequestPha
 }
 
 // GetVoltage returns the Voltage field value if set, zero value otherwise.
-func (o *WritablePowerFeedRequest) GetVoltage() int32 {
+func (o *WritablePowerFeedRequest) GetVoltage() int64 {
 	if o == nil || IsNil(o.Voltage) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Voltage
@@ -292,7 +292,7 @@ func (o *WritablePowerFeedRequest) GetVoltage() int32 {
 
 // GetVoltageOk returns a tuple with the Voltage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritablePowerFeedRequest) GetVoltageOk() (*int32, bool) {
+func (o *WritablePowerFeedRequest) GetVoltageOk() (*int64, bool) {
 	if o == nil || IsNil(o.Voltage) {
 		return nil, false
 	}
@@ -308,15 +308,15 @@ func (o *WritablePowerFeedRequest) HasVoltage() bool {
 	return false
 }
 
-// SetVoltage gets a reference to the given int32 and assigns it to the Voltage field.
-func (o *WritablePowerFeedRequest) SetVoltage(v int32) {
+// SetVoltage gets a reference to the given int64 and assigns it to the Voltage field.
+func (o *WritablePowerFeedRequest) SetVoltage(v int64) {
 	o.Voltage = &v
 }
 
 // GetAmperage returns the Amperage field value if set, zero value otherwise.
-func (o *WritablePowerFeedRequest) GetAmperage() int32 {
+func (o *WritablePowerFeedRequest) GetAmperage() int64 {
 	if o == nil || IsNil(o.Amperage) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Amperage
@@ -324,7 +324,7 @@ func (o *WritablePowerFeedRequest) GetAmperage() int32 {
 
 // GetAmperageOk returns a tuple with the Amperage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritablePowerFeedRequest) GetAmperageOk() (*int32, bool) {
+func (o *WritablePowerFeedRequest) GetAmperageOk() (*int64, bool) {
 	if o == nil || IsNil(o.Amperage) {
 		return nil, false
 	}
@@ -340,15 +340,15 @@ func (o *WritablePowerFeedRequest) HasAmperage() bool {
 	return false
 }
 
-// SetAmperage gets a reference to the given int32 and assigns it to the Amperage field.
-func (o *WritablePowerFeedRequest) SetAmperage(v int32) {
+// SetAmperage gets a reference to the given int64 and assigns it to the Amperage field.
+func (o *WritablePowerFeedRequest) SetAmperage(v int64) {
 	o.Amperage = &v
 }
 
 // GetMaxUtilization returns the MaxUtilization field value if set, zero value otherwise.
-func (o *WritablePowerFeedRequest) GetMaxUtilization() int32 {
+func (o *WritablePowerFeedRequest) GetMaxUtilization() int64 {
 	if o == nil || IsNil(o.MaxUtilization) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MaxUtilization
@@ -356,7 +356,7 @@ func (o *WritablePowerFeedRequest) GetMaxUtilization() int32 {
 
 // GetMaxUtilizationOk returns a tuple with the MaxUtilization field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritablePowerFeedRequest) GetMaxUtilizationOk() (*int32, bool) {
+func (o *WritablePowerFeedRequest) GetMaxUtilizationOk() (*int64, bool) {
 	if o == nil || IsNil(o.MaxUtilization) {
 		return nil, false
 	}
@@ -372,8 +372,8 @@ func (o *WritablePowerFeedRequest) HasMaxUtilization() bool {
 	return false
 }
 
-// SetMaxUtilization gets a reference to the given int32 and assigns it to the MaxUtilization field.
-func (o *WritablePowerFeedRequest) SetMaxUtilization(v int32) {
+// SetMaxUtilization gets a reference to the given int64 and assigns it to the MaxUtilization field.
+func (o *WritablePowerFeedRequest) SetMaxUtilization(v int64) {
 	o.MaxUtilization = &v
 }
 

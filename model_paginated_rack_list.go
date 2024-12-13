@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedRackList{}
 
 // PaginatedRackList struct for PaginatedRackList
 type PaginatedRackList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []Rack         `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedRackList PaginatedRackList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedRackList(count int32, results []Rack) *PaginatedRackList {
+func NewPaginatedRackList(count int64, results []Rack) *PaginatedRackList {
 	this := PaginatedRackList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedRackListWithDefaults() *PaginatedRackList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedRackList) GetCount() int32 {
+func (o *PaginatedRackList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedRackList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedRackList) GetCountOk() (*int32, bool) {
+func (o *PaginatedRackList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedRackList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedRackList) SetCount(v int32) {
+func (o *PaginatedRackList) SetCount(v int64) {
 	o.Count = v
 }
 

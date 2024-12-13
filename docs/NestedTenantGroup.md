@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
-**Depth** | **int32** |  | [readonly] 
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewNestedTenantGroup
 
-`func NewNestedTenantGroup(id int32, url string, displayUrl string, display string, name string, slug string, depth int32, ) *NestedTenantGroup`
+`func NewNestedTenantGroup(id int64, url string, displayUrl string, display string, name string, slug string, depth int64, ) *NestedTenantGroup`
 
 NewNestedTenantGroup instantiates a new NestedTenantGroup object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedTenantGroup) GetId() int32`
+`func (o *NestedTenantGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedTenantGroup) GetIdOk() (*int32, bool)`
+`func (o *NestedTenantGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedTenantGroup) SetId(v int32)`
+`func (o *NestedTenantGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -153,20 +153,20 @@ SetSlug sets Slug field to given value.
 
 ### GetDepth
 
-`func (o *NestedTenantGroup) GetDepth() int32`
+`func (o *NestedTenantGroup) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *NestedTenantGroup) GetDepthOk() (*int32, bool)`
+`func (o *NestedTenantGroup) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *NestedTenantGroup) SetDepth(v int32)`
+`func (o *NestedTenantGroup) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

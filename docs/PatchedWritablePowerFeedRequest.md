@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **Type** | Pointer to [**PatchedWritablePowerFeedRequestType**](PatchedWritablePowerFeedRequestType.md) |  | [optional] 
 **Supply** | Pointer to [**PatchedWritablePowerFeedRequestSupply**](PatchedWritablePowerFeedRequestSupply.md) |  | [optional] 
 **Phase** | Pointer to [**PatchedWritablePowerFeedRequestPhase**](PatchedWritablePowerFeedRequestPhase.md) |  | [optional] 
-**Voltage** | Pointer to **int32** |  | [optional] 
-**Amperage** | Pointer to **int32** |  | [optional] 
-**MaxUtilization** | Pointer to **int32** | Maximum permissible draw (percentage) | [optional] 
+**Voltage** | Pointer to **int64** |  | [optional] 
+**Amperage** | Pointer to **int64** |  | [optional] 
+**MaxUtilization** | Pointer to **int64** | Maximum permissible draw (percentage) | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
@@ -227,20 +227,20 @@ HasPhase returns a boolean if a field has been set.
 
 ### GetVoltage
 
-`func (o *PatchedWritablePowerFeedRequest) GetVoltage() int32`
+`func (o *PatchedWritablePowerFeedRequest) GetVoltage() int64`
 
 GetVoltage returns the Voltage field if non-nil, zero value otherwise.
 
 ### GetVoltageOk
 
-`func (o *PatchedWritablePowerFeedRequest) GetVoltageOk() (*int32, bool)`
+`func (o *PatchedWritablePowerFeedRequest) GetVoltageOk() (*int64, bool)`
 
 GetVoltageOk returns a tuple with the Voltage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVoltage
 
-`func (o *PatchedWritablePowerFeedRequest) SetVoltage(v int32)`
+`func (o *PatchedWritablePowerFeedRequest) SetVoltage(v int64)`
 
 SetVoltage sets Voltage field to given value.
 
@@ -252,20 +252,20 @@ HasVoltage returns a boolean if a field has been set.
 
 ### GetAmperage
 
-`func (o *PatchedWritablePowerFeedRequest) GetAmperage() int32`
+`func (o *PatchedWritablePowerFeedRequest) GetAmperage() int64`
 
 GetAmperage returns the Amperage field if non-nil, zero value otherwise.
 
 ### GetAmperageOk
 
-`func (o *PatchedWritablePowerFeedRequest) GetAmperageOk() (*int32, bool)`
+`func (o *PatchedWritablePowerFeedRequest) GetAmperageOk() (*int64, bool)`
 
 GetAmperageOk returns a tuple with the Amperage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAmperage
 
-`func (o *PatchedWritablePowerFeedRequest) SetAmperage(v int32)`
+`func (o *PatchedWritablePowerFeedRequest) SetAmperage(v int64)`
 
 SetAmperage sets Amperage field to given value.
 
@@ -277,20 +277,20 @@ HasAmperage returns a boolean if a field has been set.
 
 ### GetMaxUtilization
 
-`func (o *PatchedWritablePowerFeedRequest) GetMaxUtilization() int32`
+`func (o *PatchedWritablePowerFeedRequest) GetMaxUtilization() int64`
 
 GetMaxUtilization returns the MaxUtilization field if non-nil, zero value otherwise.
 
 ### GetMaxUtilizationOk
 
-`func (o *PatchedWritablePowerFeedRequest) GetMaxUtilizationOk() (*int32, bool)`
+`func (o *PatchedWritablePowerFeedRequest) GetMaxUtilizationOk() (*int64, bool)`
 
 GetMaxUtilizationOk returns a tuple with the MaxUtilization field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaxUtilization
 
-`func (o *PatchedWritablePowerFeedRequest) SetMaxUtilization(v int32)`
+`func (o *PatchedWritablePowerFeedRequest) SetMaxUtilization(v int64)`
 
 SetMaxUtilization sets MaxUtilization field to given value.
 

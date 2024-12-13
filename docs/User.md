@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewUser
 
-`func NewUser(id int32, url string, displayUrl string, display string, username string, ) *User`
+`func NewUser(id int64, url string, displayUrl string, display string, username string, ) *User`
 
 NewUser instantiates a new User object
 This constructor will assign default values to properties that have it defined,
@@ -40,20 +40,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *User) GetId() int32`
+`func (o *User) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *User) GetIdOk() (*int32, bool)`
+`func (o *User) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *User) SetId(v int32)`
+`func (o *User) SetId(v int64)`
 
 SetId sets Id field to given value.
 

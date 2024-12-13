@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Protocol** | [**BriefFHRPGroupProtocol**](BriefFHRPGroupProtocol.md) |  | 
-**GroupId** | **int32** |  | 
+**GroupId** | **int64** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
 ### NewBriefFHRPGroup
 
-`func NewBriefFHRPGroup(id int32, url string, display string, protocol BriefFHRPGroupProtocol, groupId int32, ) *BriefFHRPGroup`
+`func NewBriefFHRPGroup(id int64, url string, display string, protocol BriefFHRPGroupProtocol, groupId int64, ) *BriefFHRPGroup`
 
 NewBriefFHRPGroup instantiates a new BriefFHRPGroup object
 This constructor will assign default values to properties that have it defined,
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefFHRPGroup) GetId() int32`
+`func (o *BriefFHRPGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefFHRPGroup) GetIdOk() (*int32, bool)`
+`func (o *BriefFHRPGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefFHRPGroup) SetId(v int32)`
+`func (o *BriefFHRPGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -112,20 +112,20 @@ SetProtocol sets Protocol field to given value.
 
 ### GetGroupId
 
-`func (o *BriefFHRPGroup) GetGroupId() int32`
+`func (o *BriefFHRPGroup) GetGroupId() int64`
 
 GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
 ### GetGroupIdOk
 
-`func (o *BriefFHRPGroup) GetGroupIdOk() (*int32, bool)`
+`func (o *BriefFHRPGroup) GetGroupIdOk() (*int64, bool)`
 
 GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroupId
 
-`func (o *BriefFHRPGroup) SetGroupId(v int32)`
+`func (o *BriefFHRPGroup) SetGroupId(v int64)`
 
 SetGroupId sets GroupId field to given value.
 

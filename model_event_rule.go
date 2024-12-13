@@ -21,7 +21,7 @@ var _ MappedNullable = &EventRule{}
 
 // EventRule Adds support for custom fields and tags.
 type EventRule struct {
-	Id          int32    `json:"id"`
+	Id          int64    `json:"id"`
 	Url         string   `json:"url"`
 	DisplayUrl  string   `json:"display_url"`
 	Display     string   `json:"display"`
@@ -50,7 +50,7 @@ type _EventRule EventRule
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewEventRule(id int32, url string, displayUrl string, display string, objectTypes []string, name string, eventTypes []EventRuleEventTypesInner, actionType EventRuleActionType, actionObjectType string, actionObject map[string]interface{}, created NullableTime, lastUpdated NullableTime) *EventRule {
+func NewEventRule(id int64, url string, displayUrl string, display string, objectTypes []string, name string, eventTypes []EventRuleEventTypesInner, actionType EventRuleActionType, actionObjectType string, actionObject map[string]interface{}, created NullableTime, lastUpdated NullableTime) *EventRule {
 	this := EventRule{}
 	this.Id = id
 	this.Url = url
@@ -76,9 +76,9 @@ func NewEventRuleWithDefaults() *EventRule {
 }
 
 // GetId returns the Id field value
-func (o *EventRule) GetId() int32 {
+func (o *EventRule) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -87,7 +87,7 @@ func (o *EventRule) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *EventRule) GetIdOk() (*int32, bool) {
+func (o *EventRule) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -95,7 +95,7 @@ func (o *EventRule) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *EventRule) SetId(v int32) {
+func (o *EventRule) SetId(v int64) {
 	o.Id = v
 }
 

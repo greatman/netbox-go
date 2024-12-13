@@ -16,7 +16,7 @@ import (
 )
 
 // ConsolePortRequestSpeed * `1200` - 1200 bps * `2400` - 2400 bps * `4800` - 4800 bps * `9600` - 9600 bps * `19200` - 19.2 kbps * `38400` - 38.4 kbps * `57600` - 57.6 kbps * `115200` - 115.2 kbps
-type ConsolePortRequestSpeed int32
+type ConsolePortRequestSpeed int64
 
 // List of ConsolePortRequest_speed
 const (
@@ -43,7 +43,7 @@ var AllowedConsolePortRequestSpeedEnumValues = []ConsolePortRequestSpeed{
 }
 
 func (v *ConsolePortRequestSpeed) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -61,7 +61,7 @@ func (v *ConsolePortRequestSpeed) UnmarshalJSON(src []byte) error {
 
 // NewConsolePortRequestSpeedFromValue returns a pointer to a valid ConsolePortRequestSpeed
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewConsolePortRequestSpeedFromValue(v int32) (*ConsolePortRequestSpeed, error) {
+func NewConsolePortRequestSpeedFromValue(v int64) (*ConsolePortRequestSpeed, error) {
 	ev := ConsolePortRequestSpeed(v)
 	if ev.IsValid() {
 		return &ev, nil

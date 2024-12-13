@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **EncryptionAlgorithm** | Pointer to [**IKEProposalEncryptionAlgorithmValue**](IKEProposalEncryptionAlgorithmValue.md) |  | [optional] 
 **AuthenticationAlgorithm** | Pointer to [**NullablePatchedWritableIKEProposalRequestAuthenticationAlgorithm**](PatchedWritableIKEProposalRequestAuthenticationAlgorithm.md) |  | [optional] 
 **Group** | Pointer to [**PatchedWritableIKEProposalRequestGroup**](PatchedWritableIKEProposalRequestGroup.md) |  | [optional] 
-**SaLifetime** | Pointer to **NullableInt32** | Security association lifetime (in seconds) | [optional] 
+**SaLifetime** | Pointer to **NullableInt64** | Security association lifetime (in seconds) | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -196,20 +196,20 @@ HasGroup returns a boolean if a field has been set.
 
 ### GetSaLifetime
 
-`func (o *PatchedWritableIKEProposalRequest) GetSaLifetime() int32`
+`func (o *PatchedWritableIKEProposalRequest) GetSaLifetime() int64`
 
 GetSaLifetime returns the SaLifetime field if non-nil, zero value otherwise.
 
 ### GetSaLifetimeOk
 
-`func (o *PatchedWritableIKEProposalRequest) GetSaLifetimeOk() (*int32, bool)`
+`func (o *PatchedWritableIKEProposalRequest) GetSaLifetimeOk() (*int64, bool)`
 
 GetSaLifetimeOk returns a tuple with the SaLifetime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSaLifetime
 
-`func (o *PatchedWritableIKEProposalRequest) SetSaLifetime(v int32)`
+`func (o *PatchedWritableIKEProposalRequest) SetSaLifetime(v int64)`
 
 SetSaLifetime sets SaLifetime field to given value.
 

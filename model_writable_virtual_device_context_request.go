@@ -22,7 +22,7 @@ var _ MappedNullable = &WritableVirtualDeviceContextRequest{}
 type WritableVirtualDeviceContextRequest struct {
 	Name                 string                                           `json:"name"`
 	Device               BriefDeviceRequest                               `json:"device"`
-	Identifier           NullableInt32                                    `json:"identifier,omitempty"`
+	Identifier           NullableInt64                                    `json:"identifier,omitempty"`
 	Tenant               NullableBriefTenantRequest                       `json:"tenant,omitempty"`
 	PrimaryIp4           NullableBriefIPAddressRequest                    `json:"primary_ip4,omitempty"`
 	PrimaryIp6           NullableBriefIPAddressRequest                    `json:"primary_ip6,omitempty"`
@@ -105,9 +105,9 @@ func (o *WritableVirtualDeviceContextRequest) SetDevice(v BriefDeviceRequest) {
 }
 
 // GetIdentifier returns the Identifier field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableVirtualDeviceContextRequest) GetIdentifier() int32 {
+func (o *WritableVirtualDeviceContextRequest) GetIdentifier() int64 {
 	if o == nil || IsNil(o.Identifier.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Identifier.Get()
@@ -116,7 +116,7 @@ func (o *WritableVirtualDeviceContextRequest) GetIdentifier() int32 {
 // GetIdentifierOk returns a tuple with the Identifier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableVirtualDeviceContextRequest) GetIdentifierOk() (*int32, bool) {
+func (o *WritableVirtualDeviceContextRequest) GetIdentifierOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -132,8 +132,8 @@ func (o *WritableVirtualDeviceContextRequest) HasIdentifier() bool {
 	return false
 }
 
-// SetIdentifier gets a reference to the given NullableInt32 and assigns it to the Identifier field.
-func (o *WritableVirtualDeviceContextRequest) SetIdentifier(v int32) {
+// SetIdentifier gets a reference to the given NullableInt64 and assigns it to the Identifier field.
+func (o *WritableVirtualDeviceContextRequest) SetIdentifier(v int64) {
 	o.Identifier.Set(&v)
 }
 

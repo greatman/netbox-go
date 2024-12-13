@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Type** | [**BriefL2VPNTypeValue**](BriefL2VPNTypeValue.md) |  | 
-**ImportTargets** | Pointer to **[]int32** |  | [optional] 
-**ExportTargets** | Pointer to **[]int32** |  | [optional] 
+**ImportTargets** | Pointer to **[]int64** |  | [optional] 
+**ExportTargets** | Pointer to **[]int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
@@ -132,20 +132,20 @@ SetType sets Type field to given value.
 
 ### GetImportTargets
 
-`func (o *WritableL2VPNRequest) GetImportTargets() []int32`
+`func (o *WritableL2VPNRequest) GetImportTargets() []int64`
 
 GetImportTargets returns the ImportTargets field if non-nil, zero value otherwise.
 
 ### GetImportTargetsOk
 
-`func (o *WritableL2VPNRequest) GetImportTargetsOk() (*[]int32, bool)`
+`func (o *WritableL2VPNRequest) GetImportTargetsOk() (*[]int64, bool)`
 
 GetImportTargetsOk returns a tuple with the ImportTargets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImportTargets
 
-`func (o *WritableL2VPNRequest) SetImportTargets(v []int32)`
+`func (o *WritableL2VPNRequest) SetImportTargets(v []int64)`
 
 SetImportTargets sets ImportTargets field to given value.
 
@@ -157,20 +157,20 @@ HasImportTargets returns a boolean if a field has been set.
 
 ### GetExportTargets
 
-`func (o *WritableL2VPNRequest) GetExportTargets() []int32`
+`func (o *WritableL2VPNRequest) GetExportTargets() []int64`
 
 GetExportTargets returns the ExportTargets field if non-nil, zero value otherwise.
 
 ### GetExportTargetsOk
 
-`func (o *WritableL2VPNRequest) GetExportTargetsOk() (*[]int32, bool)`
+`func (o *WritableL2VPNRequest) GetExportTargetsOk() (*[]int64, bool)`
 
 GetExportTargetsOk returns a tuple with the ExportTargets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExportTargets
 
-`func (o *WritableL2VPNRequest) SetExportTargets(v []int32)`
+`func (o *WritableL2VPNRequest) SetExportTargets(v []int64)`
 
 SetExportTargets sets ExportTargets field to given value.
 

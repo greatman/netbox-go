@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
-**Cable** | **int32** |  | 
+**Cable** | **int64** |  | 
 **CableEnd** | [**End1**](End1.md) |  | 
 **TerminationType** | **string** |  | 
 **TerminationId** | **int64** |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewCableTermination
 
-`func NewCableTermination(id int32, url string, display string, cable int32, cableEnd End1, terminationType string, terminationId int64, termination interface{}, created NullableTime, lastUpdated NullableTime, ) *CableTermination`
+`func NewCableTermination(id int64, url string, display string, cable int64, cableEnd End1, terminationType string, terminationId int64, termination interface{}, created NullableTime, lastUpdated NullableTime, ) *CableTermination`
 
 NewCableTermination instantiates a new CableTermination object
 This constructor will assign default values to properties that have it defined,
@@ -36,20 +36,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *CableTermination) GetId() int32`
+`func (o *CableTermination) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *CableTermination) GetIdOk() (*int32, bool)`
+`func (o *CableTermination) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *CableTermination) SetId(v int32)`
+`func (o *CableTermination) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -96,20 +96,20 @@ SetDisplay sets Display field to given value.
 
 ### GetCable
 
-`func (o *CableTermination) GetCable() int32`
+`func (o *CableTermination) GetCable() int64`
 
 GetCable returns the Cable field if non-nil, zero value otherwise.
 
 ### GetCableOk
 
-`func (o *CableTermination) GetCableOk() (*int32, bool)`
+`func (o *CableTermination) GetCableOk() (*int64, bool)`
 
 GetCableOk returns a tuple with the Cable field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCable
 
-`func (o *CableTermination) SetCable(v int32)`
+`func (o *CableTermination) SetCable(v int64)`
 
 SetCable sets Cable field to given value.
 

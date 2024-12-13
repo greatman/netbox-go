@@ -20,11 +20,11 @@ var _ MappedNullable = &BriefVLAN{}
 
 // BriefVLAN Adds support for custom fields and tags.
 type BriefVLAN struct {
-	Id      int32  `json:"id"`
+	Id      int64  `json:"id"`
 	Url     string `json:"url"`
 	Display string `json:"display"`
 	// Numeric VLAN ID (1-4094)
-	Vid                  int32   `json:"vid"`
+	Vid                  int64   `json:"vid"`
 	Name                 string  `json:"name"`
 	Description          *string `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -36,7 +36,7 @@ type _BriefVLAN BriefVLAN
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefVLAN(id int32, url string, display string, vid int32, name string) *BriefVLAN {
+func NewBriefVLAN(id int64, url string, display string, vid int64, name string) *BriefVLAN {
 	this := BriefVLAN{}
 	this.Id = id
 	this.Url = url
@@ -55,9 +55,9 @@ func NewBriefVLANWithDefaults() *BriefVLAN {
 }
 
 // GetId returns the Id field value
-func (o *BriefVLAN) GetId() int32 {
+func (o *BriefVLAN) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -66,7 +66,7 @@ func (o *BriefVLAN) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefVLAN) GetIdOk() (*int32, bool) {
+func (o *BriefVLAN) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -74,7 +74,7 @@ func (o *BriefVLAN) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefVLAN) SetId(v int32) {
+func (o *BriefVLAN) SetId(v int64) {
 	o.Id = v
 }
 
@@ -127,9 +127,9 @@ func (o *BriefVLAN) SetDisplay(v string) {
 }
 
 // GetVid returns the Vid field value
-func (o *BriefVLAN) GetVid() int32 {
+func (o *BriefVLAN) GetVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -138,7 +138,7 @@ func (o *BriefVLAN) GetVid() int32 {
 
 // GetVidOk returns a tuple with the Vid field value
 // and a boolean to check if the value has been set.
-func (o *BriefVLAN) GetVidOk() (*int32, bool) {
+func (o *BriefVLAN) GetVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -146,7 +146,7 @@ func (o *BriefVLAN) GetVidOk() (*int32, bool) {
 }
 
 // SetVid sets field value
-func (o *BriefVLAN) SetVid(v int32) {
+func (o *BriefVLAN) SetVid(v int64) {
 	o.Vid = v
 }
 

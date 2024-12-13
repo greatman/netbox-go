@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefIPSecProfile{}
 
 // BriefIPSecProfile Adds support for custom fields and tags.
 type BriefIPSecProfile struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
@@ -34,7 +34,7 @@ type _BriefIPSecProfile BriefIPSecProfile
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefIPSecProfile(id int32, url string, display string, name string) *BriefIPSecProfile {
+func NewBriefIPSecProfile(id int64, url string, display string, name string) *BriefIPSecProfile {
 	this := BriefIPSecProfile{}
 	this.Id = id
 	this.Url = url
@@ -52,9 +52,9 @@ func NewBriefIPSecProfileWithDefaults() *BriefIPSecProfile {
 }
 
 // GetId returns the Id field value
-func (o *BriefIPSecProfile) GetId() int32 {
+func (o *BriefIPSecProfile) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -63,7 +63,7 @@ func (o *BriefIPSecProfile) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefIPSecProfile) GetIdOk() (*int32, bool) {
+func (o *BriefIPSecProfile) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,7 +71,7 @@ func (o *BriefIPSecProfile) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefIPSecProfile) SetId(v int32) {
+func (o *BriefIPSecProfile) SetId(v int64) {
 	o.Id = v
 }
 

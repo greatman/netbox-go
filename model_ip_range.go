@@ -21,14 +21,14 @@ var _ MappedNullable = &IPRange{}
 
 // IPRange Adds support for custom fields and tags.
 type IPRange struct {
-	Id           int32                  `json:"id"`
+	Id           int64                  `json:"id"`
 	Url          string                 `json:"url"`
 	DisplayUrl   string                 `json:"display_url"`
 	Display      string                 `json:"display"`
 	Family       AggregateFamily        `json:"family"`
 	StartAddress string                 `json:"start_address"`
 	EndAddress   string                 `json:"end_address"`
-	Size         int32                  `json:"size"`
+	Size         int64                  `json:"size"`
 	Vrf          NullableBriefVRF       `json:"vrf,omitempty"`
 	Tenant       NullableBriefTenant    `json:"tenant,omitempty"`
 	Status       *IPRangeStatus         `json:"status,omitempty"`
@@ -50,7 +50,7 @@ type _IPRange IPRange
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewIPRange(id int32, url string, displayUrl string, display string, family AggregateFamily, startAddress string, endAddress string, size int32, created NullableTime, lastUpdated NullableTime) *IPRange {
+func NewIPRange(id int64, url string, displayUrl string, display string, family AggregateFamily, startAddress string, endAddress string, size int64, created NullableTime, lastUpdated NullableTime) *IPRange {
 	this := IPRange{}
 	this.Id = id
 	this.Url = url
@@ -74,9 +74,9 @@ func NewIPRangeWithDefaults() *IPRange {
 }
 
 // GetId returns the Id field value
-func (o *IPRange) GetId() int32 {
+func (o *IPRange) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -85,7 +85,7 @@ func (o *IPRange) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *IPRange) GetIdOk() (*int32, bool) {
+func (o *IPRange) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -93,7 +93,7 @@ func (o *IPRange) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *IPRange) SetId(v int32) {
+func (o *IPRange) SetId(v int64) {
 	o.Id = v
 }
 
@@ -242,9 +242,9 @@ func (o *IPRange) SetEndAddress(v string) {
 }
 
 // GetSize returns the Size field value
-func (o *IPRange) GetSize() int32 {
+func (o *IPRange) GetSize() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -253,7 +253,7 @@ func (o *IPRange) GetSize() int32 {
 
 // GetSizeOk returns a tuple with the Size field value
 // and a boolean to check if the value has been set.
-func (o *IPRange) GetSizeOk() (*int32, bool) {
+func (o *IPRange) GetSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -261,7 +261,7 @@ func (o *IPRange) GetSizeOk() (*int32, bool) {
 }
 
 // SetSize sets field value
-func (o *IPRange) SetSize(v int32) {
+func (o *IPRange) SetSize(v int64) {
 	o.Size = v
 }
 

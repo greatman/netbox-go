@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Family** | **int32** |  | [readonly] 
+**Family** | **int64** |  | [readonly] 
 **Prefix** | **string** |  | [readonly] 
 **Vrf** | [**NullableBriefVRF**](BriefVRF.md) |  | [readonly] 
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewAvailablePrefix
 
-`func NewAvailablePrefix(family int32, prefix string, vrf NullableBriefVRF, ) *AvailablePrefix`
+`func NewAvailablePrefix(family int64, prefix string, vrf NullableBriefVRF, ) *AvailablePrefix`
 
 NewAvailablePrefix instantiates a new AvailablePrefix object
 This constructor will assign default values to properties that have it defined,
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetFamily
 
-`func (o *AvailablePrefix) GetFamily() int32`
+`func (o *AvailablePrefix) GetFamily() int64`
 
 GetFamily returns the Family field if non-nil, zero value otherwise.
 
 ### GetFamilyOk
 
-`func (o *AvailablePrefix) GetFamilyOk() (*int32, bool)`
+`func (o *AvailablePrefix) GetFamilyOk() (*int64, bool)`
 
 GetFamilyOk returns a tuple with the Family field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFamily
 
-`func (o *AvailablePrefix) SetFamily(v int32)`
+`func (o *AvailablePrefix) SetFamily(v int64)`
 
 SetFamily sets Family field to given value.
 

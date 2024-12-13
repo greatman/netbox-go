@@ -21,12 +21,12 @@ var _ MappedNullable = &ConfigContext{}
 
 // ConfigContext Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type ConfigContext struct {
-	Id            int32            `json:"id"`
+	Id            int64            `json:"id"`
 	Url           string           `json:"url"`
 	DisplayUrl    string           `json:"display_url"`
 	Display       string           `json:"display"`
 	Name          string           `json:"name"`
-	Weight        *int32           `json:"weight,omitempty"`
+	Weight        *int64           `json:"weight,omitempty"`
 	Description   *string          `json:"description,omitempty"`
 	IsActive      *bool            `json:"is_active,omitempty"`
 	Regions       []Region         `json:"regions,omitempty"`
@@ -59,7 +59,7 @@ type _ConfigContext ConfigContext
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewConfigContext(id int32, url string, displayUrl string, display string, name string, dataPath string, dataFile BriefDataFile, dataSynced NullableTime, data interface{}, created NullableTime, lastUpdated NullableTime) *ConfigContext {
+func NewConfigContext(id int64, url string, displayUrl string, display string, name string, dataPath string, dataFile BriefDataFile, dataSynced NullableTime, data interface{}, created NullableTime, lastUpdated NullableTime) *ConfigContext {
 	this := ConfigContext{}
 	this.Id = id
 	this.Url = url
@@ -84,9 +84,9 @@ func NewConfigContextWithDefaults() *ConfigContext {
 }
 
 // GetId returns the Id field value
-func (o *ConfigContext) GetId() int32 {
+func (o *ConfigContext) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -95,7 +95,7 @@ func (o *ConfigContext) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ConfigContext) GetIdOk() (*int32, bool) {
+func (o *ConfigContext) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *ConfigContext) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ConfigContext) SetId(v int32) {
+func (o *ConfigContext) SetId(v int64) {
 	o.Id = v
 }
 
@@ -204,9 +204,9 @@ func (o *ConfigContext) SetName(v string) {
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *ConfigContext) GetWeight() int32 {
+func (o *ConfigContext) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -214,7 +214,7 @@ func (o *ConfigContext) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ConfigContext) GetWeightOk() (*int32, bool) {
+func (o *ConfigContext) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -230,8 +230,8 @@ func (o *ConfigContext) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *ConfigContext) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *ConfigContext) SetWeight(v int64) {
 	o.Weight = &v
 }
 

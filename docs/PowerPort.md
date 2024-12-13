@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Type** | Pointer to [**NullablePowerPortType**](PowerPortType.md) |  | [optional] 
-**MaximumDraw** | Pointer to **NullableInt32** | Maximum power draw (watts) | [optional] 
-**AllocatedDraw** | Pointer to **NullableInt32** | Allocated power draw (watts) | [optional] 
+**MaximumDraw** | Pointer to **NullableInt64** | Maximum power draw (watts) | [optional] 
+**AllocatedDraw** | Pointer to **NullableInt64** | Allocated power draw (watts) | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Cable** | [**NullableBriefCable**](BriefCable.md) |  | [readonly] 
@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 
 ### NewPowerPort
 
-`func NewPowerPort(id int32, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool, ) *PowerPort`
+`func NewPowerPort(id int64, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool, ) *PowerPort`
 
 NewPowerPort instantiates a new PowerPort object
 This constructor will assign default values to properties that have it defined,
@@ -51,20 +51,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PowerPort) GetId() int32`
+`func (o *PowerPort) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PowerPort) GetIdOk() (*int32, bool)`
+`func (o *PowerPort) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PowerPort) SetId(v int32)`
+`func (o *PowerPort) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -266,20 +266,20 @@ HasType returns a boolean if a field has been set.
 UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetMaximumDraw
 
-`func (o *PowerPort) GetMaximumDraw() int32`
+`func (o *PowerPort) GetMaximumDraw() int64`
 
 GetMaximumDraw returns the MaximumDraw field if non-nil, zero value otherwise.
 
 ### GetMaximumDrawOk
 
-`func (o *PowerPort) GetMaximumDrawOk() (*int32, bool)`
+`func (o *PowerPort) GetMaximumDrawOk() (*int64, bool)`
 
 GetMaximumDrawOk returns a tuple with the MaximumDraw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaximumDraw
 
-`func (o *PowerPort) SetMaximumDraw(v int32)`
+`func (o *PowerPort) SetMaximumDraw(v int64)`
 
 SetMaximumDraw sets MaximumDraw field to given value.
 
@@ -301,20 +301,20 @@ HasMaximumDraw returns a boolean if a field has been set.
 UnsetMaximumDraw ensures that no value is present for MaximumDraw, not even an explicit nil
 ### GetAllocatedDraw
 
-`func (o *PowerPort) GetAllocatedDraw() int32`
+`func (o *PowerPort) GetAllocatedDraw() int64`
 
 GetAllocatedDraw returns the AllocatedDraw field if non-nil, zero value otherwise.
 
 ### GetAllocatedDrawOk
 
-`func (o *PowerPort) GetAllocatedDrawOk() (*int32, bool)`
+`func (o *PowerPort) GetAllocatedDrawOk() (*int64, bool)`
 
 GetAllocatedDrawOk returns a tuple with the AllocatedDraw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedDraw
 
-`func (o *PowerPort) SetAllocatedDraw(v int32)`
+`func (o *PowerPort) SetAllocatedDraw(v int64)`
 
 SetAllocatedDraw sets AllocatedDraw field to given value.
 

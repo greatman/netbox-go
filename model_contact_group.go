@@ -21,7 +21,7 @@ var _ MappedNullable = &ContactGroup{}
 
 // ContactGroup Extends PrimaryModelSerializer to include MPTT support.
 type ContactGroup struct {
-	Id                   int32                      `json:"id"`
+	Id                   int64                      `json:"id"`
 	Url                  string                     `json:"url"`
 	DisplayUrl           string                     `json:"display_url"`
 	Display              string                     `json:"display"`
@@ -33,8 +33,8 @@ type ContactGroup struct {
 	CustomFields         map[string]interface{}     `json:"custom_fields,omitempty"`
 	Created              NullableTime               `json:"created"`
 	LastUpdated          NullableTime               `json:"last_updated"`
-	ContactCount         int32                      `json:"contact_count"`
-	Depth                int32                      `json:"_depth"`
+	ContactCount         int64                      `json:"contact_count"`
+	Depth                int64                      `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -44,7 +44,7 @@ type _ContactGroup ContactGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewContactGroup(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, contactCount int32, depth int32) *ContactGroup {
+func NewContactGroup(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, contactCount int64, depth int64) *ContactGroup {
 	this := ContactGroup{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewContactGroupWithDefaults() *ContactGroup {
 }
 
 // GetId returns the Id field value
-func (o *ContactGroup) GetId() int32 {
+func (o *ContactGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *ContactGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ContactGroup) GetIdOk() (*int32, bool) {
+func (o *ContactGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *ContactGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ContactGroup) SetId(v int32) {
+func (o *ContactGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -403,9 +403,9 @@ func (o *ContactGroup) SetLastUpdated(v time.Time) {
 }
 
 // GetContactCount returns the ContactCount field value
-func (o *ContactGroup) GetContactCount() int32 {
+func (o *ContactGroup) GetContactCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -414,7 +414,7 @@ func (o *ContactGroup) GetContactCount() int32 {
 
 // GetContactCountOk returns a tuple with the ContactCount field value
 // and a boolean to check if the value has been set.
-func (o *ContactGroup) GetContactCountOk() (*int32, bool) {
+func (o *ContactGroup) GetContactCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -422,14 +422,14 @@ func (o *ContactGroup) GetContactCountOk() (*int32, bool) {
 }
 
 // SetContactCount sets field value
-func (o *ContactGroup) SetContactCount(v int32) {
+func (o *ContactGroup) SetContactCount(v int64) {
 	o.ContactCount = v
 }
 
 // GetDepth returns the Depth field value
-func (o *ContactGroup) GetDepth() int32 {
+func (o *ContactGroup) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -438,7 +438,7 @@ func (o *ContactGroup) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *ContactGroup) GetDepthOk() (*int32, bool) {
+func (o *ContactGroup) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -446,7 +446,7 @@ func (o *ContactGroup) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *ContactGroup) SetDepth(v int32) {
+func (o *ContactGroup) SetDepth(v int64) {
 	o.Depth = v
 }
 

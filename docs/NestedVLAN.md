@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
-**Vid** | **int32** | Numeric VLAN ID (1-4094) | 
+**Vid** | **int64** | Numeric VLAN ID (1-4094) | 
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewNestedVLAN
 
-`func NewNestedVLAN(id int32, url string, display string, vid int32, name string, ) *NestedVLAN`
+`func NewNestedVLAN(id int64, url string, display string, vid int64, name string, ) *NestedVLAN`
 
 NewNestedVLAN instantiates a new NestedVLAN object
 This constructor will assign default values to properties that have it defined,
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedVLAN) GetId() int32`
+`func (o *NestedVLAN) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedVLAN) GetIdOk() (*int32, bool)`
+`func (o *NestedVLAN) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedVLAN) SetId(v int32)`
+`func (o *NestedVLAN) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -92,20 +92,20 @@ SetDisplay sets Display field to given value.
 
 ### GetVid
 
-`func (o *NestedVLAN) GetVid() int32`
+`func (o *NestedVLAN) GetVid() int64`
 
 GetVid returns the Vid field if non-nil, zero value otherwise.
 
 ### GetVidOk
 
-`func (o *NestedVLAN) GetVidOk() (*int32, bool)`
+`func (o *NestedVLAN) GetVidOk() (*int64, bool)`
 
 GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVid
 
-`func (o *NestedVLAN) SetVid(v int32)`
+`func (o *NestedVLAN) SetVid(v int64)`
 
 SetVid sets Vid field to given value.
 

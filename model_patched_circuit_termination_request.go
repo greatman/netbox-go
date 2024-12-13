@@ -22,11 +22,11 @@ type PatchedCircuitTerminationRequest struct {
 	Circuit         *BriefCircuitRequest `json:"circuit,omitempty"`
 	TermSide        *TerminationSide1    `json:"term_side,omitempty"`
 	TerminationType NullableString       `json:"termination_type,omitempty"`
-	TerminationId   NullableInt32        `json:"termination_id,omitempty"`
+	TerminationId   NullableInt64        `json:"termination_id,omitempty"`
 	// Physical circuit speed
-	PortSpeed NullableInt32 `json:"port_speed,omitempty"`
+	PortSpeed NullableInt64 `json:"port_speed,omitempty"`
 	// Upstream speed, if different from port speed
-	UpstreamSpeed NullableInt32 `json:"upstream_speed,omitempty"`
+	UpstreamSpeed NullableInt64 `json:"upstream_speed,omitempty"`
 	// ID of the local cross-connect
 	XconnectId *string `json:"xconnect_id,omitempty"`
 	// Patch panel ID and port number(s)
@@ -166,9 +166,9 @@ func (o *PatchedCircuitTerminationRequest) UnsetTerminationType() {
 }
 
 // GetTerminationId returns the TerminationId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedCircuitTerminationRequest) GetTerminationId() int32 {
+func (o *PatchedCircuitTerminationRequest) GetTerminationId() int64 {
 	if o == nil || IsNil(o.TerminationId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TerminationId.Get()
@@ -177,7 +177,7 @@ func (o *PatchedCircuitTerminationRequest) GetTerminationId() int32 {
 // GetTerminationIdOk returns a tuple with the TerminationId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedCircuitTerminationRequest) GetTerminationIdOk() (*int32, bool) {
+func (o *PatchedCircuitTerminationRequest) GetTerminationIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -193,8 +193,8 @@ func (o *PatchedCircuitTerminationRequest) HasTerminationId() bool {
 	return false
 }
 
-// SetTerminationId gets a reference to the given NullableInt32 and assigns it to the TerminationId field.
-func (o *PatchedCircuitTerminationRequest) SetTerminationId(v int32) {
+// SetTerminationId gets a reference to the given NullableInt64 and assigns it to the TerminationId field.
+func (o *PatchedCircuitTerminationRequest) SetTerminationId(v int64) {
 	o.TerminationId.Set(&v)
 }
 
@@ -209,9 +209,9 @@ func (o *PatchedCircuitTerminationRequest) UnsetTerminationId() {
 }
 
 // GetPortSpeed returns the PortSpeed field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedCircuitTerminationRequest) GetPortSpeed() int32 {
+func (o *PatchedCircuitTerminationRequest) GetPortSpeed() int64 {
 	if o == nil || IsNil(o.PortSpeed.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PortSpeed.Get()
@@ -220,7 +220,7 @@ func (o *PatchedCircuitTerminationRequest) GetPortSpeed() int32 {
 // GetPortSpeedOk returns a tuple with the PortSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedCircuitTerminationRequest) GetPortSpeedOk() (*int32, bool) {
+func (o *PatchedCircuitTerminationRequest) GetPortSpeedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -236,8 +236,8 @@ func (o *PatchedCircuitTerminationRequest) HasPortSpeed() bool {
 	return false
 }
 
-// SetPortSpeed gets a reference to the given NullableInt32 and assigns it to the PortSpeed field.
-func (o *PatchedCircuitTerminationRequest) SetPortSpeed(v int32) {
+// SetPortSpeed gets a reference to the given NullableInt64 and assigns it to the PortSpeed field.
+func (o *PatchedCircuitTerminationRequest) SetPortSpeed(v int64) {
 	o.PortSpeed.Set(&v)
 }
 
@@ -252,9 +252,9 @@ func (o *PatchedCircuitTerminationRequest) UnsetPortSpeed() {
 }
 
 // GetUpstreamSpeed returns the UpstreamSpeed field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedCircuitTerminationRequest) GetUpstreamSpeed() int32 {
+func (o *PatchedCircuitTerminationRequest) GetUpstreamSpeed() int64 {
 	if o == nil || IsNil(o.UpstreamSpeed.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.UpstreamSpeed.Get()
@@ -263,7 +263,7 @@ func (o *PatchedCircuitTerminationRequest) GetUpstreamSpeed() int32 {
 // GetUpstreamSpeedOk returns a tuple with the UpstreamSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedCircuitTerminationRequest) GetUpstreamSpeedOk() (*int32, bool) {
+func (o *PatchedCircuitTerminationRequest) GetUpstreamSpeedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -279,8 +279,8 @@ func (o *PatchedCircuitTerminationRequest) HasUpstreamSpeed() bool {
 	return false
 }
 
-// SetUpstreamSpeed gets a reference to the given NullableInt32 and assigns it to the UpstreamSpeed field.
-func (o *PatchedCircuitTerminationRequest) SetUpstreamSpeed(v int32) {
+// SetUpstreamSpeed gets a reference to the given NullableInt64 and assigns it to the UpstreamSpeed field.
+func (o *PatchedCircuitTerminationRequest) SetUpstreamSpeed(v int64) {
 	o.UpstreamSpeed.Set(&v)
 }
 

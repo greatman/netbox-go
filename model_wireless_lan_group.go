@@ -21,7 +21,7 @@ var _ MappedNullable = &WirelessLANGroup{}
 
 // WirelessLANGroup Extends PrimaryModelSerializer to include MPTT support.
 type WirelessLANGroup struct {
-	Id                   int32                          `json:"id"`
+	Id                   int64                          `json:"id"`
 	Url                  string                         `json:"url"`
 	DisplayUrl           string                         `json:"display_url"`
 	Display              string                         `json:"display"`
@@ -33,8 +33,8 @@ type WirelessLANGroup struct {
 	CustomFields         map[string]interface{}         `json:"custom_fields,omitempty"`
 	Created              NullableTime                   `json:"created"`
 	LastUpdated          NullableTime                   `json:"last_updated"`
-	WirelesslanCount     int32                          `json:"wirelesslan_count"`
-	Depth                int32                          `json:"_depth"`
+	WirelesslanCount     int64                          `json:"wirelesslan_count"`
+	Depth                int64                          `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -44,7 +44,7 @@ type _WirelessLANGroup WirelessLANGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWirelessLANGroup(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, wirelesslanCount int32, depth int32) *WirelessLANGroup {
+func NewWirelessLANGroup(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, wirelesslanCount int64, depth int64) *WirelessLANGroup {
 	this := WirelessLANGroup{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewWirelessLANGroupWithDefaults() *WirelessLANGroup {
 }
 
 // GetId returns the Id field value
-func (o *WirelessLANGroup) GetId() int32 {
+func (o *WirelessLANGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *WirelessLANGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *WirelessLANGroup) GetIdOk() (*int32, bool) {
+func (o *WirelessLANGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *WirelessLANGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *WirelessLANGroup) SetId(v int32) {
+func (o *WirelessLANGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -403,9 +403,9 @@ func (o *WirelessLANGroup) SetLastUpdated(v time.Time) {
 }
 
 // GetWirelesslanCount returns the WirelesslanCount field value
-func (o *WirelessLANGroup) GetWirelesslanCount() int32 {
+func (o *WirelessLANGroup) GetWirelesslanCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -414,7 +414,7 @@ func (o *WirelessLANGroup) GetWirelesslanCount() int32 {
 
 // GetWirelesslanCountOk returns a tuple with the WirelesslanCount field value
 // and a boolean to check if the value has been set.
-func (o *WirelessLANGroup) GetWirelesslanCountOk() (*int32, bool) {
+func (o *WirelessLANGroup) GetWirelesslanCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -422,14 +422,14 @@ func (o *WirelessLANGroup) GetWirelesslanCountOk() (*int32, bool) {
 }
 
 // SetWirelesslanCount sets field value
-func (o *WirelessLANGroup) SetWirelesslanCount(v int32) {
+func (o *WirelessLANGroup) SetWirelesslanCount(v int64) {
 	o.WirelesslanCount = v
 }
 
 // GetDepth returns the Depth field value
-func (o *WirelessLANGroup) GetDepth() int32 {
+func (o *WirelessLANGroup) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -438,7 +438,7 @@ func (o *WirelessLANGroup) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *WirelessLANGroup) GetDepthOk() (*int32, bool) {
+func (o *WirelessLANGroup) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -446,7 +446,7 @@ func (o *WirelessLANGroup) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *WirelessLANGroup) SetDepth(v int32) {
+func (o *WirelessLANGroup) SetDepth(v int64) {
 	o.Depth = v
 }
 

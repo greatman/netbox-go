@@ -39,7 +39,7 @@ type PatchedWritableSiteRequest struct {
 	// GPS coordinate in decimal format (xx.yyyyyy)
 	Longitude            NullableFloat64        `json:"longitude,omitempty"`
 	Comments             *string                `json:"comments,omitempty"`
-	Asns                 []int32                `json:"asns,omitempty"`
+	Asns                 []int64                `json:"asns,omitempty"`
 	Tags                 []NestedTagRequest     `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -579,9 +579,9 @@ func (o *PatchedWritableSiteRequest) SetComments(v string) {
 }
 
 // GetAsns returns the Asns field value if set, zero value otherwise.
-func (o *PatchedWritableSiteRequest) GetAsns() []int32 {
+func (o *PatchedWritableSiteRequest) GetAsns() []int64 {
 	if o == nil || IsNil(o.Asns) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.Asns
@@ -589,7 +589,7 @@ func (o *PatchedWritableSiteRequest) GetAsns() []int32 {
 
 // GetAsnsOk returns a tuple with the Asns field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableSiteRequest) GetAsnsOk() ([]int32, bool) {
+func (o *PatchedWritableSiteRequest) GetAsnsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.Asns) {
 		return nil, false
 	}
@@ -605,8 +605,8 @@ func (o *PatchedWritableSiteRequest) HasAsns() bool {
 	return false
 }
 
-// SetAsns gets a reference to the given []int32 and assigns it to the Asns field.
-func (o *PatchedWritableSiteRequest) SetAsns(v []int32) {
+// SetAsns gets a reference to the given []int64 and assigns it to the Asns field.
+func (o *PatchedWritableSiteRequest) SetAsns(v []int64) {
 	o.Asns = v
 }
 

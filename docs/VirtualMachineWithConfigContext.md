@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -21,8 +21,8 @@ Name | Type | Description | Notes
 **PrimaryIp4** | Pointer to [**NullableBriefIPAddress**](BriefIPAddress.md) |  | [optional] 
 **PrimaryIp6** | Pointer to [**NullableBriefIPAddress**](BriefIPAddress.md) |  | [optional] 
 **Vcpus** | Pointer to **NullableFloat64** |  | [optional] 
-**Memory** | Pointer to **NullableInt32** |  | [optional] 
-**Disk** | Pointer to **NullableInt32** |  | [optional] 
+**Memory** | Pointer to **NullableInt64** |  | [optional] 
+**Disk** | Pointer to **NullableInt64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **ConfigTemplate** | Pointer to [**NullableBriefConfigTemplate**](BriefConfigTemplate.md) |  | [optional] 
@@ -32,14 +32,14 @@ Name | Type | Description | Notes
 **ConfigContext** | **interface{}** |  | [readonly] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**InterfaceCount** | **int32** |  | [readonly] 
-**VirtualDiskCount** | **int32** |  | [readonly] 
+**InterfaceCount** | **int64** |  | [readonly] 
+**VirtualDiskCount** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewVirtualMachineWithConfigContext
 
-`func NewVirtualMachineWithConfigContext(id int32, url string, displayUrl string, display string, name string, primaryIp NullableBriefIPAddress, configContext interface{}, created NullableTime, lastUpdated NullableTime, interfaceCount int32, virtualDiskCount int32, ) *VirtualMachineWithConfigContext`
+`func NewVirtualMachineWithConfigContext(id int64, url string, displayUrl string, display string, name string, primaryIp NullableBriefIPAddress, configContext interface{}, created NullableTime, lastUpdated NullableTime, interfaceCount int64, virtualDiskCount int64, ) *VirtualMachineWithConfigContext`
 
 NewVirtualMachineWithConfigContext instantiates a new VirtualMachineWithConfigContext object
 This constructor will assign default values to properties that have it defined,
@@ -56,20 +56,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VirtualMachineWithConfigContext) GetId() int32`
+`func (o *VirtualMachineWithConfigContext) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VirtualMachineWithConfigContext) GetIdOk() (*int32, bool)`
+`func (o *VirtualMachineWithConfigContext) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VirtualMachineWithConfigContext) SetId(v int32)`
+`func (o *VirtualMachineWithConfigContext) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -551,20 +551,20 @@ HasVcpus returns a boolean if a field has been set.
 UnsetVcpus ensures that no value is present for Vcpus, not even an explicit nil
 ### GetMemory
 
-`func (o *VirtualMachineWithConfigContext) GetMemory() int32`
+`func (o *VirtualMachineWithConfigContext) GetMemory() int64`
 
 GetMemory returns the Memory field if non-nil, zero value otherwise.
 
 ### GetMemoryOk
 
-`func (o *VirtualMachineWithConfigContext) GetMemoryOk() (*int32, bool)`
+`func (o *VirtualMachineWithConfigContext) GetMemoryOk() (*int64, bool)`
 
 GetMemoryOk returns a tuple with the Memory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemory
 
-`func (o *VirtualMachineWithConfigContext) SetMemory(v int32)`
+`func (o *VirtualMachineWithConfigContext) SetMemory(v int64)`
 
 SetMemory sets Memory field to given value.
 
@@ -586,20 +586,20 @@ HasMemory returns a boolean if a field has been set.
 UnsetMemory ensures that no value is present for Memory, not even an explicit nil
 ### GetDisk
 
-`func (o *VirtualMachineWithConfigContext) GetDisk() int32`
+`func (o *VirtualMachineWithConfigContext) GetDisk() int64`
 
 GetDisk returns the Disk field if non-nil, zero value otherwise.
 
 ### GetDiskOk
 
-`func (o *VirtualMachineWithConfigContext) GetDiskOk() (*int32, bool)`
+`func (o *VirtualMachineWithConfigContext) GetDiskOk() (*int64, bool)`
 
 GetDiskOk returns a tuple with the Disk field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDisk
 
-`func (o *VirtualMachineWithConfigContext) SetDisk(v int32)`
+`func (o *VirtualMachineWithConfigContext) SetDisk(v int64)`
 
 SetDisk sets Disk field to given value.
 
@@ -881,40 +881,40 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetInterfaceCount
 
-`func (o *VirtualMachineWithConfigContext) GetInterfaceCount() int32`
+`func (o *VirtualMachineWithConfigContext) GetInterfaceCount() int64`
 
 GetInterfaceCount returns the InterfaceCount field if non-nil, zero value otherwise.
 
 ### GetInterfaceCountOk
 
-`func (o *VirtualMachineWithConfigContext) GetInterfaceCountOk() (*int32, bool)`
+`func (o *VirtualMachineWithConfigContext) GetInterfaceCountOk() (*int64, bool)`
 
 GetInterfaceCountOk returns a tuple with the InterfaceCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterfaceCount
 
-`func (o *VirtualMachineWithConfigContext) SetInterfaceCount(v int32)`
+`func (o *VirtualMachineWithConfigContext) SetInterfaceCount(v int64)`
 
 SetInterfaceCount sets InterfaceCount field to given value.
 
 
 ### GetVirtualDiskCount
 
-`func (o *VirtualMachineWithConfigContext) GetVirtualDiskCount() int32`
+`func (o *VirtualMachineWithConfigContext) GetVirtualDiskCount() int64`
 
 GetVirtualDiskCount returns the VirtualDiskCount field if non-nil, zero value otherwise.
 
 ### GetVirtualDiskCountOk
 
-`func (o *VirtualMachineWithConfigContext) GetVirtualDiskCountOk() (*int32, bool)`
+`func (o *VirtualMachineWithConfigContext) GetVirtualDiskCountOk() (*int64, bool)`
 
 GetVirtualDiskCountOk returns a tuple with the VirtualDiskCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVirtualDiskCount
 
-`func (o *VirtualMachineWithConfigContext) SetVirtualDiskCount(v int32)`
+`func (o *VirtualMachineWithConfigContext) SetVirtualDiskCount(v int64)`
 
 SetVirtualDiskCount sets VirtualDiskCount field to given value.
 

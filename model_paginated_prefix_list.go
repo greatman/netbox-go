@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedPrefixList{}
 
 // PaginatedPrefixList struct for PaginatedPrefixList
 type PaginatedPrefixList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []Prefix       `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedPrefixList PaginatedPrefixList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedPrefixList(count int32, results []Prefix) *PaginatedPrefixList {
+func NewPaginatedPrefixList(count int64, results []Prefix) *PaginatedPrefixList {
 	this := PaginatedPrefixList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedPrefixListWithDefaults() *PaginatedPrefixList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedPrefixList) GetCount() int32 {
+func (o *PaginatedPrefixList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedPrefixList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedPrefixList) GetCountOk() (*int32, bool) {
+func (o *PaginatedPrefixList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedPrefixList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedPrefixList) SetCount(v int32) {
+func (o *PaginatedPrefixList) SetCount(v int64) {
 	o.Count = v
 }
 

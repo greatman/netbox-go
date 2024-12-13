@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Label** | Pointer to **string** |  | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewBriefCable
 
-`func NewBriefCable(id int32, url string, display string, ) *BriefCable`
+`func NewBriefCable(id int64, url string, display string, ) *BriefCable`
 
 NewBriefCable instantiates a new BriefCable object
 This constructor will assign default values to properties that have it defined,
@@ -31,20 +31,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefCable) GetId() int32`
+`func (o *BriefCable) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefCable) GetIdOk() (*int32, bool)`
+`func (o *BriefCable) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefCable) SetId(v int32)`
+`func (o *BriefCable) SetId(v int64)`
 
 SetId sets Id field to given value.
 

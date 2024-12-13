@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedVLANTranslationPolicyList{}
 
 // PaginatedVLANTranslationPolicyList struct for PaginatedVLANTranslationPolicyList
 type PaginatedVLANTranslationPolicyList struct {
-	Count                int32                   `json:"count"`
+	Count                int64                   `json:"count"`
 	Next                 NullableString          `json:"next,omitempty"`
 	Previous             NullableString          `json:"previous,omitempty"`
 	Results              []VLANTranslationPolicy `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedVLANTranslationPolicyList PaginatedVLANTranslationPolicyList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedVLANTranslationPolicyList(count int32, results []VLANTranslationPolicy) *PaginatedVLANTranslationPolicyList {
+func NewPaginatedVLANTranslationPolicyList(count int64, results []VLANTranslationPolicy) *PaginatedVLANTranslationPolicyList {
 	this := PaginatedVLANTranslationPolicyList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedVLANTranslationPolicyListWithDefaults() *PaginatedVLANTranslati
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedVLANTranslationPolicyList) GetCount() int32 {
+func (o *PaginatedVLANTranslationPolicyList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedVLANTranslationPolicyList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedVLANTranslationPolicyList) GetCountOk() (*int32, bool) {
+func (o *PaginatedVLANTranslationPolicyList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedVLANTranslationPolicyList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedVLANTranslationPolicyList) SetCount(v int32) {
+func (o *PaginatedVLANTranslationPolicyList) SetCount(v int64) {
 	o.Count = v
 }
 

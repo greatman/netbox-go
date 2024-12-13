@@ -26,7 +26,7 @@ type PatchedCustomLinkRequest struct {
 	LinkText *string `json:"link_text,omitempty"`
 	// Jinja2 template code for link URL
 	LinkUrl *string `json:"link_url,omitempty"`
-	Weight  *int32  `json:"weight,omitempty"`
+	Weight  *int64  `json:"weight,omitempty"`
 	// Links with the same group will appear as a dropdown menu
 	GroupName   *string                `json:"group_name,omitempty"`
 	ButtonClass *CustomLinkButtonClass `json:"button_class,omitempty"`
@@ -215,9 +215,9 @@ func (o *PatchedCustomLinkRequest) SetLinkUrl(v string) {
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *PatchedCustomLinkRequest) GetWeight() int32 {
+func (o *PatchedCustomLinkRequest) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -225,7 +225,7 @@ func (o *PatchedCustomLinkRequest) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedCustomLinkRequest) GetWeightOk() (*int32, bool) {
+func (o *PatchedCustomLinkRequest) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -241,8 +241,8 @@ func (o *PatchedCustomLinkRequest) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *PatchedCustomLinkRequest) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *PatchedCustomLinkRequest) SetWeight(v int64) {
 	o.Weight = &v
 }
 

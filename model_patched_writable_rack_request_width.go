@@ -16,7 +16,7 @@ import (
 )
 
 // PatchedWritableRackRequestWidth Rail-to-rail width  * `10` - 10 inches * `19` - 19 inches * `21` - 21 inches * `23` - 23 inches
-type PatchedWritableRackRequestWidth int32
+type PatchedWritableRackRequestWidth int64
 
 // List of PatchedWritableRackRequest_width
 const (
@@ -35,7 +35,7 @@ var AllowedPatchedWritableRackRequestWidthEnumValues = []PatchedWritableRackRequ
 }
 
 func (v *PatchedWritableRackRequestWidth) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -53,7 +53,7 @@ func (v *PatchedWritableRackRequestWidth) UnmarshalJSON(src []byte) error {
 
 // NewPatchedWritableRackRequestWidthFromValue returns a pointer to a valid PatchedWritableRackRequestWidth
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewPatchedWritableRackRequestWidthFromValue(v int32) (*PatchedWritableRackRequestWidth, error) {
+func NewPatchedWritableRackRequestWidthFromValue(v int64) (*PatchedWritableRackRequestWidth, error) {
 	ev := PatchedWritableRackRequestWidth(v)
 	if ev.IsValid() {
 		return &ev, nil

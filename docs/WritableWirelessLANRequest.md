@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Status** | Pointer to [**PatchedWritableWirelessLANRequestStatus**](PatchedWritableWirelessLANRequestStatus.md) |  | [optional] 
 **Vlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
 **ScopeType** | Pointer to **NullableString** |  | [optional] 
-**ScopeId** | Pointer to **NullableInt32** |  | [optional] 
+**ScopeId** | Pointer to **NullableInt64** |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **AuthType** | Pointer to [**NullableAuthenticationType1**](AuthenticationType1.md) |  | [optional] 
 **AuthCipher** | Pointer to [**NullableAuthenticationCipher**](AuthenticationCipher.md) |  | [optional] 
@@ -215,20 +215,20 @@ HasScopeType returns a boolean if a field has been set.
 UnsetScopeType ensures that no value is present for ScopeType, not even an explicit nil
 ### GetScopeId
 
-`func (o *WritableWirelessLANRequest) GetScopeId() int32`
+`func (o *WritableWirelessLANRequest) GetScopeId() int64`
 
 GetScopeId returns the ScopeId field if non-nil, zero value otherwise.
 
 ### GetScopeIdOk
 
-`func (o *WritableWirelessLANRequest) GetScopeIdOk() (*int32, bool)`
+`func (o *WritableWirelessLANRequest) GetScopeIdOk() (*int64, bool)`
 
 GetScopeIdOk returns a tuple with the ScopeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopeId
 
-`func (o *WritableWirelessLANRequest) SetScopeId(v int32)`
+`func (o *WritableWirelessLANRequest) SetScopeId(v int64)`
 
 SetScopeId sets ScopeId field to given value.
 

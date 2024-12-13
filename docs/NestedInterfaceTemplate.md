@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** | {module} is accepted as a substitution for the module bay position when attached to a module type. | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewNestedInterfaceTemplate
 
-`func NewNestedInterfaceTemplate(id int32, url string, display string, name string, ) *NestedInterfaceTemplate`
+`func NewNestedInterfaceTemplate(id int64, url string, display string, name string, ) *NestedInterfaceTemplate`
 
 NewNestedInterfaceTemplate instantiates a new NestedInterfaceTemplate object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedInterfaceTemplate) GetId() int32`
+`func (o *NestedInterfaceTemplate) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedInterfaceTemplate) GetIdOk() (*int32, bool)`
+`func (o *NestedInterfaceTemplate) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedInterfaceTemplate) SetId(v int32)`
+`func (o *NestedInterfaceTemplate) SetId(v int64)`
 
 SetId sets Id field to given value.
 

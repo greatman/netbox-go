@@ -16,7 +16,7 @@ import (
 )
 
 // PatchedWritableIKEProposalRequestGroup Diffie-Hellman group ID  * `1` - Group 1 * `2` - Group 2 * `5` - Group 5 * `14` - Group 14 * `15` - Group 15 * `16` - Group 16 * `17` - Group 17 * `18` - Group 18 * `19` - Group 19 * `20` - Group 20 * `21` - Group 21 * `22` - Group 22 * `23` - Group 23 * `24` - Group 24 * `25` - Group 25 * `26` - Group 26 * `27` - Group 27 * `28` - Group 28 * `29` - Group 29 * `30` - Group 30 * `31` - Group 31 * `32` - Group 32 * `33` - Group 33 * `34` - Group 34
-type PatchedWritableIKEProposalRequestGroup int32
+type PatchedWritableIKEProposalRequestGroup int64
 
 // List of PatchedWritableIKEProposalRequest_group
 const (
@@ -75,7 +75,7 @@ var AllowedPatchedWritableIKEProposalRequestGroupEnumValues = []PatchedWritableI
 }
 
 func (v *PatchedWritableIKEProposalRequestGroup) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -93,7 +93,7 @@ func (v *PatchedWritableIKEProposalRequestGroup) UnmarshalJSON(src []byte) error
 
 // NewPatchedWritableIKEProposalRequestGroupFromValue returns a pointer to a valid PatchedWritableIKEProposalRequestGroup
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewPatchedWritableIKEProposalRequestGroupFromValue(v int32) (*PatchedWritableIKEProposalRequestGroup, error) {
+func NewPatchedWritableIKEProposalRequestGroupFromValue(v int64) (*PatchedWritableIKEProposalRequestGroup, error) {
 	ev := PatchedWritableIKEProposalRequestGroup(v)
 	if ev.IsValid() {
 		return &ev, nil

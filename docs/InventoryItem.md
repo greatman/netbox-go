@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Device** | [**BriefDevice**](BriefDevice.md) |  | 
-**Parent** | Pointer to **NullableInt32** |  | [optional] 
+**Parent** | Pointer to **NullableInt64** |  | [optional] 
 **Name** | **string** |  | 
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Status** | Pointer to [**InventoryItemStatus**](InventoryItemStatus.md) |  | [optional] 
@@ -27,13 +27,13 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**Depth** | **int32** |  | [readonly] 
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewInventoryItem
 
-`func NewInventoryItem(id int32, url string, displayUrl string, display string, device BriefDevice, name string, component interface{}, created NullableTime, lastUpdated NullableTime, depth int32, ) *InventoryItem`
+`func NewInventoryItem(id int64, url string, displayUrl string, display string, device BriefDevice, name string, component interface{}, created NullableTime, lastUpdated NullableTime, depth int64, ) *InventoryItem`
 
 NewInventoryItem instantiates a new InventoryItem object
 This constructor will assign default values to properties that have it defined,
@@ -50,20 +50,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *InventoryItem) GetId() int32`
+`func (o *InventoryItem) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *InventoryItem) GetIdOk() (*int32, bool)`
+`func (o *InventoryItem) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *InventoryItem) SetId(v int32)`
+`func (o *InventoryItem) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -150,20 +150,20 @@ SetDevice sets Device field to given value.
 
 ### GetParent
 
-`func (o *InventoryItem) GetParent() int32`
+`func (o *InventoryItem) GetParent() int64`
 
 GetParent returns the Parent field if non-nil, zero value otherwise.
 
 ### GetParentOk
 
-`func (o *InventoryItem) GetParentOk() (*int32, bool)`
+`func (o *InventoryItem) GetParentOk() (*int64, bool)`
 
 GetParentOk returns a tuple with the Parent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParent
 
-`func (o *InventoryItem) SetParent(v int32)`
+`func (o *InventoryItem) SetParent(v int64)`
 
 SetParent sets Parent field to given value.
 
@@ -670,20 +670,20 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetDepth
 
-`func (o *InventoryItem) GetDepth() int32`
+`func (o *InventoryItem) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *InventoryItem) GetDepthOk() (*int32, bool)`
+`func (o *InventoryItem) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *InventoryItem) SetDepth(v int32)`
+`func (o *InventoryItem) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

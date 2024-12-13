@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewObjectPermission
 
-`func NewObjectPermission(id int32, url string, displayUrl string, display string, name string, objectTypes []string, actions []string, ) *ObjectPermission`
+`func NewObjectPermission(id int64, url string, displayUrl string, display string, name string, objectTypes []string, actions []string, ) *ObjectPermission`
 
 NewObjectPermission instantiates a new ObjectPermission object
 This constructor will assign default values to properties that have it defined,
@@ -38,20 +38,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ObjectPermission) GetId() int32`
+`func (o *ObjectPermission) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ObjectPermission) GetIdOk() (*int32, bool)`
+`func (o *ObjectPermission) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ObjectPermission) SetId(v int32)`
+`func (o *ObjectPermission) SetId(v int64)`
 
 SetId sets Id field to given value.
 

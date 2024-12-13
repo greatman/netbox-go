@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **ObjectType** | **string** |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewSubscription
 
-`func NewSubscription(id int32, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time, ) *Subscription`
+`func NewSubscription(id int64, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time, ) *Subscription`
 
 NewSubscription instantiates a new Subscription object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Subscription) GetId() int32`
+`func (o *Subscription) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Subscription) GetIdOk() (*int32, bool)`
+`func (o *Subscription) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Subscription) SetId(v int32)`
+`func (o *Subscription) SetId(v int64)`
 
 SetId sets Id field to given value.
 

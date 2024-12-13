@@ -16,7 +16,7 @@ import (
 )
 
 // PatchedWritableIPSecPolicyRequestPfsGroup Diffie-Hellman group for Perfect Forward Secrecy  * `1` - Group 1 * `2` - Group 2 * `5` - Group 5 * `14` - Group 14 * `15` - Group 15 * `16` - Group 16 * `17` - Group 17 * `18` - Group 18 * `19` - Group 19 * `20` - Group 20 * `21` - Group 21 * `22` - Group 22 * `23` - Group 23 * `24` - Group 24 * `25` - Group 25 * `26` - Group 26 * `27` - Group 27 * `28` - Group 28 * `29` - Group 29 * `30` - Group 30 * `31` - Group 31 * `32` - Group 32 * `33` - Group 33 * `34` - Group 34
-type PatchedWritableIPSecPolicyRequestPfsGroup int32
+type PatchedWritableIPSecPolicyRequestPfsGroup int64
 
 // List of PatchedWritableIPSecPolicyRequest_pfs_group
 const (
@@ -75,7 +75,7 @@ var AllowedPatchedWritableIPSecPolicyRequestPfsGroupEnumValues = []PatchedWritab
 }
 
 func (v *PatchedWritableIPSecPolicyRequestPfsGroup) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -93,7 +93,7 @@ func (v *PatchedWritableIPSecPolicyRequestPfsGroup) UnmarshalJSON(src []byte) er
 
 // NewPatchedWritableIPSecPolicyRequestPfsGroupFromValue returns a pointer to a valid PatchedWritableIPSecPolicyRequestPfsGroup
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewPatchedWritableIPSecPolicyRequestPfsGroupFromValue(v int32) (*PatchedWritableIPSecPolicyRequestPfsGroup, error) {
+func NewPatchedWritableIPSecPolicyRequestPfsGroupFromValue(v int64) (*PatchedWritableIPSecPolicyRequestPfsGroup, error) {
 	ev := PatchedWritableIPSecPolicyRequestPfsGroup(v)
 	if ev.IsValid() {
 		return &ev, nil

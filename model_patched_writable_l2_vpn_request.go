@@ -23,8 +23,8 @@ type PatchedWritableL2VPNRequest struct {
 	Name                 *string                    `json:"name,omitempty"`
 	Slug                 *string                    `json:"slug,omitempty" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	Type                 *BriefL2VPNTypeValue       `json:"type,omitempty"`
-	ImportTargets        []int32                    `json:"import_targets,omitempty"`
-	ExportTargets        []int32                    `json:"export_targets,omitempty"`
+	ImportTargets        []int64                    `json:"import_targets,omitempty"`
+	ExportTargets        []int64                    `json:"export_targets,omitempty"`
 	Description          *string                    `json:"description,omitempty"`
 	Comments             *string                    `json:"comments,omitempty"`
 	Tenant               NullableBriefTenantRequest `json:"tenant,omitempty"`
@@ -192,9 +192,9 @@ func (o *PatchedWritableL2VPNRequest) SetType(v BriefL2VPNTypeValue) {
 }
 
 // GetImportTargets returns the ImportTargets field value if set, zero value otherwise.
-func (o *PatchedWritableL2VPNRequest) GetImportTargets() []int32 {
+func (o *PatchedWritableL2VPNRequest) GetImportTargets() []int64 {
 	if o == nil || IsNil(o.ImportTargets) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.ImportTargets
@@ -202,7 +202,7 @@ func (o *PatchedWritableL2VPNRequest) GetImportTargets() []int32 {
 
 // GetImportTargetsOk returns a tuple with the ImportTargets field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableL2VPNRequest) GetImportTargetsOk() ([]int32, bool) {
+func (o *PatchedWritableL2VPNRequest) GetImportTargetsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.ImportTargets) {
 		return nil, false
 	}
@@ -218,15 +218,15 @@ func (o *PatchedWritableL2VPNRequest) HasImportTargets() bool {
 	return false
 }
 
-// SetImportTargets gets a reference to the given []int32 and assigns it to the ImportTargets field.
-func (o *PatchedWritableL2VPNRequest) SetImportTargets(v []int32) {
+// SetImportTargets gets a reference to the given []int64 and assigns it to the ImportTargets field.
+func (o *PatchedWritableL2VPNRequest) SetImportTargets(v []int64) {
 	o.ImportTargets = v
 }
 
 // GetExportTargets returns the ExportTargets field value if set, zero value otherwise.
-func (o *PatchedWritableL2VPNRequest) GetExportTargets() []int32 {
+func (o *PatchedWritableL2VPNRequest) GetExportTargets() []int64 {
 	if o == nil || IsNil(o.ExportTargets) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.ExportTargets
@@ -234,7 +234,7 @@ func (o *PatchedWritableL2VPNRequest) GetExportTargets() []int32 {
 
 // GetExportTargetsOk returns a tuple with the ExportTargets field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableL2VPNRequest) GetExportTargetsOk() ([]int32, bool) {
+func (o *PatchedWritableL2VPNRequest) GetExportTargetsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.ExportTargets) {
 		return nil, false
 	}
@@ -250,8 +250,8 @@ func (o *PatchedWritableL2VPNRequest) HasExportTargets() bool {
 	return false
 }
 
-// SetExportTargets gets a reference to the given []int32 and assigns it to the ExportTargets field.
-func (o *PatchedWritableL2VPNRequest) SetExportTargets(v []int32) {
+// SetExportTargets gets a reference to the given []int64 and assigns it to the ExportTargets field.
+func (o *PatchedWritableL2VPNRequest) SetExportTargets(v []int64) {
 	o.ExportTargets = v
 }
 

@@ -21,7 +21,7 @@ var _ MappedNullable = &FrontPortTemplate{}
 
 // FrontPortTemplate Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type FrontPortTemplate struct {
-	Id         int32                   `json:"id"`
+	Id         int64                   `json:"id"`
 	Url        string                  `json:"url"`
 	Display    string                  `json:"display"`
 	DeviceType NullableBriefDeviceType `json:"device_type,omitempty"`
@@ -33,7 +33,7 @@ type FrontPortTemplate struct {
 	Type                 FrontPortType         `json:"type"`
 	Color                *string               `json:"color,omitempty" validate:"regexp=^[0-9a-f]{6}$"`
 	RearPort             BriefRearPortTemplate `json:"rear_port"`
-	RearPortPosition     *int32                `json:"rear_port_position,omitempty"`
+	RearPortPosition     *int64                `json:"rear_port_position,omitempty"`
 	Description          *string               `json:"description,omitempty"`
 	Created              NullableTime          `json:"created"`
 	LastUpdated          NullableTime          `json:"last_updated"`
@@ -46,7 +46,7 @@ type _FrontPortTemplate FrontPortTemplate
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFrontPortTemplate(id int32, url string, display string, name string, type_ FrontPortType, rearPort BriefRearPortTemplate, created NullableTime, lastUpdated NullableTime) *FrontPortTemplate {
+func NewFrontPortTemplate(id int64, url string, display string, name string, type_ FrontPortType, rearPort BriefRearPortTemplate, created NullableTime, lastUpdated NullableTime) *FrontPortTemplate {
 	this := FrontPortTemplate{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewFrontPortTemplateWithDefaults() *FrontPortTemplate {
 }
 
 // GetId returns the Id field value
-func (o *FrontPortTemplate) GetId() int32 {
+func (o *FrontPortTemplate) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *FrontPortTemplate) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *FrontPortTemplate) GetIdOk() (*int32, bool) {
+func (o *FrontPortTemplate) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *FrontPortTemplate) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *FrontPortTemplate) SetId(v int32) {
+func (o *FrontPortTemplate) SetId(v int64) {
 	o.Id = v
 }
 
@@ -362,9 +362,9 @@ func (o *FrontPortTemplate) SetRearPort(v BriefRearPortTemplate) {
 }
 
 // GetRearPortPosition returns the RearPortPosition field value if set, zero value otherwise.
-func (o *FrontPortTemplate) GetRearPortPosition() int32 {
+func (o *FrontPortTemplate) GetRearPortPosition() int64 {
 	if o == nil || IsNil(o.RearPortPosition) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RearPortPosition
@@ -372,7 +372,7 @@ func (o *FrontPortTemplate) GetRearPortPosition() int32 {
 
 // GetRearPortPositionOk returns a tuple with the RearPortPosition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *FrontPortTemplate) GetRearPortPositionOk() (*int32, bool) {
+func (o *FrontPortTemplate) GetRearPortPositionOk() (*int64, bool) {
 	if o == nil || IsNil(o.RearPortPosition) {
 		return nil, false
 	}
@@ -388,8 +388,8 @@ func (o *FrontPortTemplate) HasRearPortPosition() bool {
 	return false
 }
 
-// SetRearPortPosition gets a reference to the given int32 and assigns it to the RearPortPosition field.
-func (o *FrontPortTemplate) SetRearPortPosition(v int32) {
+// SetRearPortPosition gets a reference to the given int64 and assigns it to the RearPortPosition field.
+func (o *FrontPortTemplate) SetRearPortPosition(v int64) {
 	o.RearPortPosition = &v
 }
 

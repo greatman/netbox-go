@@ -21,7 +21,7 @@ var _ MappedNullable = &Bookmark{}
 
 // Bookmark Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type Bookmark struct {
-	Id                   int32       `json:"id"`
+	Id                   int64       `json:"id"`
 	Url                  string      `json:"url"`
 	Display              string      `json:"display"`
 	ObjectType           string      `json:"object_type"`
@@ -38,7 +38,7 @@ type _Bookmark Bookmark
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBookmark(id int32, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time) *Bookmark {
+func NewBookmark(id int64, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time) *Bookmark {
 	this := Bookmark{}
 	this.Id = id
 	this.Url = url
@@ -60,9 +60,9 @@ func NewBookmarkWithDefaults() *Bookmark {
 }
 
 // GetId returns the Id field value
-func (o *Bookmark) GetId() int32 {
+func (o *Bookmark) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -71,7 +71,7 @@ func (o *Bookmark) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Bookmark) GetIdOk() (*int32, bool) {
+func (o *Bookmark) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -79,7 +79,7 @@ func (o *Bookmark) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Bookmark) SetId(v int32) {
+func (o *Bookmark) SetId(v int64) {
 	o.Id = v
 }
 

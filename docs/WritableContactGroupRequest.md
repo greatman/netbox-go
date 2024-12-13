@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
-**Parent** | Pointer to **NullableInt32** |  | [optional] 
+**Parent** | Pointer to **NullableInt64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -72,20 +72,20 @@ SetSlug sets Slug field to given value.
 
 ### GetParent
 
-`func (o *WritableContactGroupRequest) GetParent() int32`
+`func (o *WritableContactGroupRequest) GetParent() int64`
 
 GetParent returns the Parent field if non-nil, zero value otherwise.
 
 ### GetParentOk
 
-`func (o *WritableContactGroupRequest) GetParentOk() (*int32, bool)`
+`func (o *WritableContactGroupRequest) GetParentOk() (*int64, bool)`
 
 GetParentOk returns a tuple with the Parent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParent
 
-`func (o *WritableContactGroupRequest) SetParent(v int32)`
+`func (o *WritableContactGroupRequest) SetParent(v int64)`
 
 SetParent sets Parent field to given value.
 

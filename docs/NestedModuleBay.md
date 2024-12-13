@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewNestedModuleBay
 
-`func NewNestedModuleBay(id int32, url string, displayUrl string, display string, name string, ) *NestedModuleBay`
+`func NewNestedModuleBay(id int64, url string, displayUrl string, display string, name string, ) *NestedModuleBay`
 
 NewNestedModuleBay instantiates a new NestedModuleBay object
 This constructor will assign default values to properties that have it defined,
@@ -31,20 +31,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedModuleBay) GetId() int32`
+`func (o *NestedModuleBay) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedModuleBay) GetIdOk() (*int32, bool)`
+`func (o *NestedModuleBay) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedModuleBay) SetId(v int32)`
+`func (o *NestedModuleBay) SetId(v int64)`
 
 SetId sets Id field to given value.
 

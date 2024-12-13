@@ -21,19 +21,19 @@ var _ MappedNullable = &WritableInterfaceRequest{}
 // WritableInterfaceRequest Adds support for custom fields and tags.
 type WritableInterfaceRequest struct {
 	Device BriefDeviceRequest         `json:"device"`
-	Vdcs   []int32                    `json:"vdcs,omitempty"`
+	Vdcs   []int64                    `json:"vdcs,omitempty"`
 	Module NullableBriefModuleRequest `json:"module,omitempty"`
 	Name   string                     `json:"name"`
 	// Physical label
 	Label             *string                        `json:"label,omitempty"`
 	Type              InterfaceTypeValue             `json:"type"`
 	Enabled           *bool                          `json:"enabled,omitempty"`
-	Parent            NullableInt32                  `json:"parent,omitempty"`
-	Bridge            NullableInt32                  `json:"bridge,omitempty"`
-	Lag               NullableInt32                  `json:"lag,omitempty"`
-	Mtu               NullableInt32                  `json:"mtu,omitempty"`
+	Parent            NullableInt64                  `json:"parent,omitempty"`
+	Bridge            NullableInt64                  `json:"bridge,omitempty"`
+	Lag               NullableInt64                  `json:"lag,omitempty"`
+	Mtu               NullableInt64                  `json:"mtu,omitempty"`
 	PrimaryMacAddress NullableBriefMACAddressRequest `json:"primary_mac_address,omitempty"`
-	Speed             NullableInt32                  `json:"speed,omitempty"`
+	Speed             NullableInt64                  `json:"speed,omitempty"`
 	Duplex            NullableInterfaceRequestDuplex `json:"duplex,omitempty"`
 	Wwn               NullableString                 `json:"wwn,omitempty"`
 	// This interface is used only for out-of-band management
@@ -48,14 +48,14 @@ type WritableInterfaceRequest struct {
 	RfChannelFrequency NullableFloat64 `json:"rf_channel_frequency,omitempty"`
 	// Populated by selected channel (if set)
 	RfChannelWidth        NullableFloat64                           `json:"rf_channel_width,omitempty"`
-	TxPower               NullableInt32                             `json:"tx_power,omitempty"`
+	TxPower               NullableInt64                             `json:"tx_power,omitempty"`
 	UntaggedVlan          NullableBriefVLANRequest                  `json:"untagged_vlan,omitempty"`
-	TaggedVlans           []int32                                   `json:"tagged_vlans,omitempty"`
+	TaggedVlans           []int64                                   `json:"tagged_vlans,omitempty"`
 	QinqSvlan             NullableBriefVLANRequest                  `json:"qinq_svlan,omitempty"`
 	VlanTranslationPolicy NullableBriefVLANTranslationPolicyRequest `json:"vlan_translation_policy,omitempty"`
 	// Treat as if a cable is connected
 	MarkConnected        *bool                   `json:"mark_connected,omitempty"`
-	WirelessLans         []int32                 `json:"wireless_lans,omitempty"`
+	WirelessLans         []int64                 `json:"wireless_lans,omitempty"`
 	Vrf                  NullableBriefVRFRequest `json:"vrf,omitempty"`
 	Tags                 []NestedTagRequest      `json:"tags,omitempty"`
 	CustomFields         map[string]interface{}  `json:"custom_fields,omitempty"`
@@ -109,9 +109,9 @@ func (o *WritableInterfaceRequest) SetDevice(v BriefDeviceRequest) {
 }
 
 // GetVdcs returns the Vdcs field value if set, zero value otherwise.
-func (o *WritableInterfaceRequest) GetVdcs() []int32 {
+func (o *WritableInterfaceRequest) GetVdcs() []int64 {
 	if o == nil || IsNil(o.Vdcs) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.Vdcs
@@ -119,7 +119,7 @@ func (o *WritableInterfaceRequest) GetVdcs() []int32 {
 
 // GetVdcsOk returns a tuple with the Vdcs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritableInterfaceRequest) GetVdcsOk() ([]int32, bool) {
+func (o *WritableInterfaceRequest) GetVdcsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.Vdcs) {
 		return nil, false
 	}
@@ -135,8 +135,8 @@ func (o *WritableInterfaceRequest) HasVdcs() bool {
 	return false
 }
 
-// SetVdcs gets a reference to the given []int32 and assigns it to the Vdcs field.
-func (o *WritableInterfaceRequest) SetVdcs(v []int32) {
+// SetVdcs gets a reference to the given []int64 and assigns it to the Vdcs field.
+func (o *WritableInterfaceRequest) SetVdcs(v []int64) {
 	o.Vdcs = v
 }
 
@@ -296,9 +296,9 @@ func (o *WritableInterfaceRequest) SetEnabled(v bool) {
 }
 
 // GetParent returns the Parent field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableInterfaceRequest) GetParent() int32 {
+func (o *WritableInterfaceRequest) GetParent() int64 {
 	if o == nil || IsNil(o.Parent.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Parent.Get()
@@ -307,7 +307,7 @@ func (o *WritableInterfaceRequest) GetParent() int32 {
 // GetParentOk returns a tuple with the Parent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableInterfaceRequest) GetParentOk() (*int32, bool) {
+func (o *WritableInterfaceRequest) GetParentOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -323,8 +323,8 @@ func (o *WritableInterfaceRequest) HasParent() bool {
 	return false
 }
 
-// SetParent gets a reference to the given NullableInt32 and assigns it to the Parent field.
-func (o *WritableInterfaceRequest) SetParent(v int32) {
+// SetParent gets a reference to the given NullableInt64 and assigns it to the Parent field.
+func (o *WritableInterfaceRequest) SetParent(v int64) {
 	o.Parent.Set(&v)
 }
 
@@ -339,9 +339,9 @@ func (o *WritableInterfaceRequest) UnsetParent() {
 }
 
 // GetBridge returns the Bridge field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableInterfaceRequest) GetBridge() int32 {
+func (o *WritableInterfaceRequest) GetBridge() int64 {
 	if o == nil || IsNil(o.Bridge.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Bridge.Get()
@@ -350,7 +350,7 @@ func (o *WritableInterfaceRequest) GetBridge() int32 {
 // GetBridgeOk returns a tuple with the Bridge field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableInterfaceRequest) GetBridgeOk() (*int32, bool) {
+func (o *WritableInterfaceRequest) GetBridgeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -366,8 +366,8 @@ func (o *WritableInterfaceRequest) HasBridge() bool {
 	return false
 }
 
-// SetBridge gets a reference to the given NullableInt32 and assigns it to the Bridge field.
-func (o *WritableInterfaceRequest) SetBridge(v int32) {
+// SetBridge gets a reference to the given NullableInt64 and assigns it to the Bridge field.
+func (o *WritableInterfaceRequest) SetBridge(v int64) {
 	o.Bridge.Set(&v)
 }
 
@@ -382,9 +382,9 @@ func (o *WritableInterfaceRequest) UnsetBridge() {
 }
 
 // GetLag returns the Lag field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableInterfaceRequest) GetLag() int32 {
+func (o *WritableInterfaceRequest) GetLag() int64 {
 	if o == nil || IsNil(o.Lag.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Lag.Get()
@@ -393,7 +393,7 @@ func (o *WritableInterfaceRequest) GetLag() int32 {
 // GetLagOk returns a tuple with the Lag field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableInterfaceRequest) GetLagOk() (*int32, bool) {
+func (o *WritableInterfaceRequest) GetLagOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -409,8 +409,8 @@ func (o *WritableInterfaceRequest) HasLag() bool {
 	return false
 }
 
-// SetLag gets a reference to the given NullableInt32 and assigns it to the Lag field.
-func (o *WritableInterfaceRequest) SetLag(v int32) {
+// SetLag gets a reference to the given NullableInt64 and assigns it to the Lag field.
+func (o *WritableInterfaceRequest) SetLag(v int64) {
 	o.Lag.Set(&v)
 }
 
@@ -425,9 +425,9 @@ func (o *WritableInterfaceRequest) UnsetLag() {
 }
 
 // GetMtu returns the Mtu field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableInterfaceRequest) GetMtu() int32 {
+func (o *WritableInterfaceRequest) GetMtu() int64 {
 	if o == nil || IsNil(o.Mtu.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Mtu.Get()
@@ -436,7 +436,7 @@ func (o *WritableInterfaceRequest) GetMtu() int32 {
 // GetMtuOk returns a tuple with the Mtu field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableInterfaceRequest) GetMtuOk() (*int32, bool) {
+func (o *WritableInterfaceRequest) GetMtuOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -452,8 +452,8 @@ func (o *WritableInterfaceRequest) HasMtu() bool {
 	return false
 }
 
-// SetMtu gets a reference to the given NullableInt32 and assigns it to the Mtu field.
-func (o *WritableInterfaceRequest) SetMtu(v int32) {
+// SetMtu gets a reference to the given NullableInt64 and assigns it to the Mtu field.
+func (o *WritableInterfaceRequest) SetMtu(v int64) {
 	o.Mtu.Set(&v)
 }
 
@@ -511,9 +511,9 @@ func (o *WritableInterfaceRequest) UnsetPrimaryMacAddress() {
 }
 
 // GetSpeed returns the Speed field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableInterfaceRequest) GetSpeed() int32 {
+func (o *WritableInterfaceRequest) GetSpeed() int64 {
 	if o == nil || IsNil(o.Speed.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Speed.Get()
@@ -522,7 +522,7 @@ func (o *WritableInterfaceRequest) GetSpeed() int32 {
 // GetSpeedOk returns a tuple with the Speed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableInterfaceRequest) GetSpeedOk() (*int32, bool) {
+func (o *WritableInterfaceRequest) GetSpeedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -538,8 +538,8 @@ func (o *WritableInterfaceRequest) HasSpeed() bool {
 	return false
 }
 
-// SetSpeed gets a reference to the given NullableInt32 and assigns it to the Speed field.
-func (o *WritableInterfaceRequest) SetSpeed(v int32) {
+// SetSpeed gets a reference to the given NullableInt64 and assigns it to the Speed field.
+func (o *WritableInterfaceRequest) SetSpeed(v int64) {
 	o.Speed.Set(&v)
 }
 
@@ -1005,9 +1005,9 @@ func (o *WritableInterfaceRequest) UnsetRfChannelWidth() {
 }
 
 // GetTxPower returns the TxPower field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableInterfaceRequest) GetTxPower() int32 {
+func (o *WritableInterfaceRequest) GetTxPower() int64 {
 	if o == nil || IsNil(o.TxPower.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TxPower.Get()
@@ -1016,7 +1016,7 @@ func (o *WritableInterfaceRequest) GetTxPower() int32 {
 // GetTxPowerOk returns a tuple with the TxPower field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableInterfaceRequest) GetTxPowerOk() (*int32, bool) {
+func (o *WritableInterfaceRequest) GetTxPowerOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1032,8 +1032,8 @@ func (o *WritableInterfaceRequest) HasTxPower() bool {
 	return false
 }
 
-// SetTxPower gets a reference to the given NullableInt32 and assigns it to the TxPower field.
-func (o *WritableInterfaceRequest) SetTxPower(v int32) {
+// SetTxPower gets a reference to the given NullableInt64 and assigns it to the TxPower field.
+func (o *WritableInterfaceRequest) SetTxPower(v int64) {
 	o.TxPower.Set(&v)
 }
 
@@ -1091,9 +1091,9 @@ func (o *WritableInterfaceRequest) UnsetUntaggedVlan() {
 }
 
 // GetTaggedVlans returns the TaggedVlans field value if set, zero value otherwise.
-func (o *WritableInterfaceRequest) GetTaggedVlans() []int32 {
+func (o *WritableInterfaceRequest) GetTaggedVlans() []int64 {
 	if o == nil || IsNil(o.TaggedVlans) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.TaggedVlans
@@ -1101,7 +1101,7 @@ func (o *WritableInterfaceRequest) GetTaggedVlans() []int32 {
 
 // GetTaggedVlansOk returns a tuple with the TaggedVlans field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritableInterfaceRequest) GetTaggedVlansOk() ([]int32, bool) {
+func (o *WritableInterfaceRequest) GetTaggedVlansOk() ([]int64, bool) {
 	if o == nil || IsNil(o.TaggedVlans) {
 		return nil, false
 	}
@@ -1117,8 +1117,8 @@ func (o *WritableInterfaceRequest) HasTaggedVlans() bool {
 	return false
 }
 
-// SetTaggedVlans gets a reference to the given []int32 and assigns it to the TaggedVlans field.
-func (o *WritableInterfaceRequest) SetTaggedVlans(v []int32) {
+// SetTaggedVlans gets a reference to the given []int64 and assigns it to the TaggedVlans field.
+func (o *WritableInterfaceRequest) SetTaggedVlans(v []int64) {
 	o.TaggedVlans = v
 }
 
@@ -1241,9 +1241,9 @@ func (o *WritableInterfaceRequest) SetMarkConnected(v bool) {
 }
 
 // GetWirelessLans returns the WirelessLans field value if set, zero value otherwise.
-func (o *WritableInterfaceRequest) GetWirelessLans() []int32 {
+func (o *WritableInterfaceRequest) GetWirelessLans() []int64 {
 	if o == nil || IsNil(o.WirelessLans) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.WirelessLans
@@ -1251,7 +1251,7 @@ func (o *WritableInterfaceRequest) GetWirelessLans() []int32 {
 
 // GetWirelessLansOk returns a tuple with the WirelessLans field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritableInterfaceRequest) GetWirelessLansOk() ([]int32, bool) {
+func (o *WritableInterfaceRequest) GetWirelessLansOk() ([]int64, bool) {
 	if o == nil || IsNil(o.WirelessLans) {
 		return nil, false
 	}
@@ -1267,8 +1267,8 @@ func (o *WritableInterfaceRequest) HasWirelessLans() bool {
 	return false
 }
 
-// SetWirelessLans gets a reference to the given []int32 and assigns it to the WirelessLans field.
-func (o *WritableInterfaceRequest) SetWirelessLans(v []int32) {
+// SetWirelessLans gets a reference to the given []int64 and assigns it to the WirelessLans field.
+func (o *WritableInterfaceRequest) SetWirelessLans(v []int64) {
 	o.WirelessLans = v
 }
 

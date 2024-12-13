@@ -23,7 +23,7 @@ type VirtualDiskRequest struct {
 	VirtualMachine       BriefVirtualMachineRequest `json:"virtual_machine"`
 	Name                 string                     `json:"name"`
 	Description          *string                    `json:"description,omitempty"`
-	Size                 int32                      `json:"size"`
+	Size                 int64                      `json:"size"`
 	Tags                 []NestedTagRequest         `json:"tags,omitempty"`
 	CustomFields         map[string]interface{}     `json:"custom_fields,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -35,7 +35,7 @@ type _VirtualDiskRequest VirtualDiskRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVirtualDiskRequest(virtualMachine BriefVirtualMachineRequest, name string, size int32) *VirtualDiskRequest {
+func NewVirtualDiskRequest(virtualMachine BriefVirtualMachineRequest, name string, size int64) *VirtualDiskRequest {
 	this := VirtualDiskRequest{}
 	this.VirtualMachine = virtualMachine
 	this.Name = name
@@ -132,9 +132,9 @@ func (o *VirtualDiskRequest) SetDescription(v string) {
 }
 
 // GetSize returns the Size field value
-func (o *VirtualDiskRequest) GetSize() int32 {
+func (o *VirtualDiskRequest) GetSize() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -143,7 +143,7 @@ func (o *VirtualDiskRequest) GetSize() int32 {
 
 // GetSizeOk returns a tuple with the Size field value
 // and a boolean to check if the value has been set.
-func (o *VirtualDiskRequest) GetSizeOk() (*int32, bool) {
+func (o *VirtualDiskRequest) GetSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -151,7 +151,7 @@ func (o *VirtualDiskRequest) GetSizeOk() (*int32, bool) {
 }
 
 // SetSize sets field value
-func (o *VirtualDiskRequest) SetSize(v int32) {
+func (o *VirtualDiskRequest) SetSize(v int64) {
 	o.Size = v
 }
 

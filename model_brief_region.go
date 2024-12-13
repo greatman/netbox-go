@@ -20,14 +20,14 @@ var _ MappedNullable = &BriefRegion{}
 
 // BriefRegion Extends PrimaryModelSerializer to include MPTT support.
 type BriefRegion struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
 	Slug                 string  `json:"slug" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	Description          *string `json:"description,omitempty"`
-	SiteCount            int32   `json:"site_count"`
-	Depth                int32   `json:"_depth"`
+	SiteCount            int64   `json:"site_count"`
+	Depth                int64   `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -37,7 +37,7 @@ type _BriefRegion BriefRegion
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefRegion(id int32, url string, display string, name string, slug string, siteCount int32, depth int32) *BriefRegion {
+func NewBriefRegion(id int64, url string, display string, name string, slug string, siteCount int64, depth int64) *BriefRegion {
 	this := BriefRegion{}
 	this.Id = id
 	this.Url = url
@@ -58,9 +58,9 @@ func NewBriefRegionWithDefaults() *BriefRegion {
 }
 
 // GetId returns the Id field value
-func (o *BriefRegion) GetId() int32 {
+func (o *BriefRegion) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -69,7 +69,7 @@ func (o *BriefRegion) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefRegion) GetIdOk() (*int32, bool) {
+func (o *BriefRegion) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -77,7 +77,7 @@ func (o *BriefRegion) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefRegion) SetId(v int32) {
+func (o *BriefRegion) SetId(v int64) {
 	o.Id = v
 }
 
@@ -210,9 +210,9 @@ func (o *BriefRegion) SetDescription(v string) {
 }
 
 // GetSiteCount returns the SiteCount field value
-func (o *BriefRegion) GetSiteCount() int32 {
+func (o *BriefRegion) GetSiteCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -221,7 +221,7 @@ func (o *BriefRegion) GetSiteCount() int32 {
 
 // GetSiteCountOk returns a tuple with the SiteCount field value
 // and a boolean to check if the value has been set.
-func (o *BriefRegion) GetSiteCountOk() (*int32, bool) {
+func (o *BriefRegion) GetSiteCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -229,14 +229,14 @@ func (o *BriefRegion) GetSiteCountOk() (*int32, bool) {
 }
 
 // SetSiteCount sets field value
-func (o *BriefRegion) SetSiteCount(v int32) {
+func (o *BriefRegion) SetSiteCount(v int64) {
 	o.SiteCount = v
 }
 
 // GetDepth returns the Depth field value
-func (o *BriefRegion) GetDepth() int32 {
+func (o *BriefRegion) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -245,7 +245,7 @@ func (o *BriefRegion) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *BriefRegion) GetDepthOk() (*int32, bool) {
+func (o *BriefRegion) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -253,7 +253,7 @@ func (o *BriefRegion) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *BriefRegion) SetDepth(v int32) {
+func (o *BriefRegion) SetDepth(v int64) {
 	o.Depth = v
 }
 

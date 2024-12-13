@@ -21,7 +21,7 @@ var _ MappedNullable = &RouteTarget{}
 
 // RouteTarget Adds support for custom fields and tags.
 type RouteTarget struct {
-	Id         int32  `json:"id"`
+	Id         int64  `json:"id"`
 	Url        string `json:"url"`
 	DisplayUrl string `json:"display_url"`
 	Display    string `json:"display"`
@@ -43,7 +43,7 @@ type _RouteTarget RouteTarget
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRouteTarget(id int32, url string, displayUrl string, display string, name string, created NullableTime, lastUpdated NullableTime) *RouteTarget {
+func NewRouteTarget(id int64, url string, displayUrl string, display string, name string, created NullableTime, lastUpdated NullableTime) *RouteTarget {
 	this := RouteTarget{}
 	this.Id = id
 	this.Url = url
@@ -64,9 +64,9 @@ func NewRouteTargetWithDefaults() *RouteTarget {
 }
 
 // GetId returns the Id field value
-func (o *RouteTarget) GetId() int32 {
+func (o *RouteTarget) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -75,7 +75,7 @@ func (o *RouteTarget) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *RouteTarget) GetIdOk() (*int32, bool) {
+func (o *RouteTarget) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -83,7 +83,7 @@ func (o *RouteTarget) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *RouteTarget) SetId(v int32) {
+func (o *RouteTarget) SetId(v int64) {
 	o.Id = v
 }
 

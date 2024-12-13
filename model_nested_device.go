@@ -20,7 +20,7 @@ var _ MappedNullable = &NestedDevice{}
 
 // NestedDevice Represents an object related through a ForeignKey field. On write, it accepts a primary key (PK) value or a dictionary of attributes which can be used to uniquely identify the related object. This class should be subclassed to return a full representation of the related object on read.
 type NestedDevice struct {
-	Id                   int32          `json:"id"`
+	Id                   int64          `json:"id"`
 	Url                  string         `json:"url"`
 	DisplayUrl           string         `json:"display_url"`
 	Display              string         `json:"display"`
@@ -34,7 +34,7 @@ type _NestedDevice NestedDevice
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewNestedDevice(id int32, url string, displayUrl string, display string) *NestedDevice {
+func NewNestedDevice(id int64, url string, displayUrl string, display string) *NestedDevice {
 	this := NestedDevice{}
 	this.Id = id
 	this.Url = url
@@ -52,9 +52,9 @@ func NewNestedDeviceWithDefaults() *NestedDevice {
 }
 
 // GetId returns the Id field value
-func (o *NestedDevice) GetId() int32 {
+func (o *NestedDevice) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -63,7 +63,7 @@ func (o *NestedDevice) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *NestedDevice) GetIdOk() (*int32, bool) {
+func (o *NestedDevice) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,7 +71,7 @@ func (o *NestedDevice) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *NestedDevice) SetId(v int32) {
+func (o *NestedDevice) SetId(v int64) {
 	o.Id = v
 }
 

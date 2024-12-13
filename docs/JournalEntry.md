@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **AssignedObjectId** | **int64** |  | 
 **AssignedObject** | **interface{}** |  | [readonly] 
 **Created** | **NullableTime** |  | [readonly] 
-**CreatedBy** | Pointer to **NullableInt32** |  | [optional] 
+**CreatedBy** | Pointer to **NullableInt64** |  | [optional] 
 **Kind** | Pointer to [**JournalEntryKind**](JournalEntryKind.md) |  | [optional] 
 **Comments** | **string** |  | 
 **Tags** | Pointer to [**[]NestedTag**](NestedTag.md) |  | [optional] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewJournalEntry
 
-`func NewJournalEntry(id int32, url string, displayUrl string, display string, assignedObjectType string, assignedObjectId int64, assignedObject interface{}, created NullableTime, comments string, lastUpdated NullableTime, ) *JournalEntry`
+`func NewJournalEntry(id int64, url string, displayUrl string, display string, assignedObjectType string, assignedObjectId int64, assignedObject interface{}, created NullableTime, comments string, lastUpdated NullableTime, ) *JournalEntry`
 
 NewJournalEntry instantiates a new JournalEntry object
 This constructor will assign default values to properties that have it defined,
@@ -40,20 +40,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *JournalEntry) GetId() int32`
+`func (o *JournalEntry) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *JournalEntry) GetIdOk() (*int32, bool)`
+`func (o *JournalEntry) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *JournalEntry) SetId(v int32)`
+`func (o *JournalEntry) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -220,20 +220,20 @@ SetCreated sets Created field to given value.
 UnsetCreated ensures that no value is present for Created, not even an explicit nil
 ### GetCreatedBy
 
-`func (o *JournalEntry) GetCreatedBy() int32`
+`func (o *JournalEntry) GetCreatedBy() int64`
 
 GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
 
 ### GetCreatedByOk
 
-`func (o *JournalEntry) GetCreatedByOk() (*int32, bool)`
+`func (o *JournalEntry) GetCreatedByOk() (*int64, bool)`
 
 GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatedBy
 
-`func (o *JournalEntry) SetCreatedBy(v int32)`
+`func (o *JournalEntry) SetCreatedBy(v int64)`
 
 SetCreatedBy sets CreatedBy field to given value.
 

@@ -22,7 +22,7 @@ var _ MappedNullable = &WritableServiceTemplateRequest{}
 type WritableServiceTemplateRequest struct {
 	Name                 string                                `json:"name"`
 	Protocol             PatchedWritableServiceRequestProtocol `json:"protocol"`
-	Ports                []int32                               `json:"ports"`
+	Ports                []int64                               `json:"ports"`
 	Description          *string                               `json:"description,omitempty"`
 	Comments             *string                               `json:"comments,omitempty"`
 	Tags                 []NestedTagRequest                    `json:"tags,omitempty"`
@@ -36,7 +36,7 @@ type _WritableServiceTemplateRequest WritableServiceTemplateRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWritableServiceTemplateRequest(name string, protocol PatchedWritableServiceRequestProtocol, ports []int32) *WritableServiceTemplateRequest {
+func NewWritableServiceTemplateRequest(name string, protocol PatchedWritableServiceRequestProtocol, ports []int64) *WritableServiceTemplateRequest {
 	this := WritableServiceTemplateRequest{}
 	this.Name = name
 	this.Protocol = protocol
@@ -101,9 +101,9 @@ func (o *WritableServiceTemplateRequest) SetProtocol(v PatchedWritableServiceReq
 }
 
 // GetPorts returns the Ports field value
-func (o *WritableServiceTemplateRequest) GetPorts() []int32 {
+func (o *WritableServiceTemplateRequest) GetPorts() []int64 {
 	if o == nil {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 
@@ -112,7 +112,7 @@ func (o *WritableServiceTemplateRequest) GetPorts() []int32 {
 
 // GetPortsOk returns a tuple with the Ports field value
 // and a boolean to check if the value has been set.
-func (o *WritableServiceTemplateRequest) GetPortsOk() ([]int32, bool) {
+func (o *WritableServiceTemplateRequest) GetPortsOk() ([]int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -120,7 +120,7 @@ func (o *WritableServiceTemplateRequest) GetPortsOk() ([]int32, bool) {
 }
 
 // SetPorts sets field value
-func (o *WritableServiceTemplateRequest) SetPorts(v []int32) {
+func (o *WritableServiceTemplateRequest) SetPorts(v []int64) {
 	o.Ports = v
 }
 

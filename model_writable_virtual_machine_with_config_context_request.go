@@ -32,8 +32,8 @@ type WritableVirtualMachineWithConfigContextRequest struct {
 	PrimaryIp4     NullableBriefIPAddressRequest      `json:"primary_ip4,omitempty"`
 	PrimaryIp6     NullableBriefIPAddressRequest      `json:"primary_ip6,omitempty"`
 	Vcpus          NullableFloat64                    `json:"vcpus,omitempty"`
-	Memory         NullableInt32                      `json:"memory,omitempty"`
-	Disk           NullableInt32                      `json:"disk,omitempty"`
+	Memory         NullableInt64                      `json:"memory,omitempty"`
+	Disk           NullableInt64                      `json:"disk,omitempty"`
 	Description    *string                            `json:"description,omitempty"`
 	Comments       *string                            `json:"comments,omitempty"`
 	ConfigTemplate NullableBriefConfigTemplateRequest `json:"config_template,omitempty"`
@@ -540,9 +540,9 @@ func (o *WritableVirtualMachineWithConfigContextRequest) UnsetVcpus() {
 }
 
 // GetMemory returns the Memory field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableVirtualMachineWithConfigContextRequest) GetMemory() int32 {
+func (o *WritableVirtualMachineWithConfigContextRequest) GetMemory() int64 {
 	if o == nil || IsNil(o.Memory.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Memory.Get()
@@ -551,7 +551,7 @@ func (o *WritableVirtualMachineWithConfigContextRequest) GetMemory() int32 {
 // GetMemoryOk returns a tuple with the Memory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableVirtualMachineWithConfigContextRequest) GetMemoryOk() (*int32, bool) {
+func (o *WritableVirtualMachineWithConfigContextRequest) GetMemoryOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -567,8 +567,8 @@ func (o *WritableVirtualMachineWithConfigContextRequest) HasMemory() bool {
 	return false
 }
 
-// SetMemory gets a reference to the given NullableInt32 and assigns it to the Memory field.
-func (o *WritableVirtualMachineWithConfigContextRequest) SetMemory(v int32) {
+// SetMemory gets a reference to the given NullableInt64 and assigns it to the Memory field.
+func (o *WritableVirtualMachineWithConfigContextRequest) SetMemory(v int64) {
 	o.Memory.Set(&v)
 }
 
@@ -583,9 +583,9 @@ func (o *WritableVirtualMachineWithConfigContextRequest) UnsetMemory() {
 }
 
 // GetDisk returns the Disk field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableVirtualMachineWithConfigContextRequest) GetDisk() int32 {
+func (o *WritableVirtualMachineWithConfigContextRequest) GetDisk() int64 {
 	if o == nil || IsNil(o.Disk.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Disk.Get()
@@ -594,7 +594,7 @@ func (o *WritableVirtualMachineWithConfigContextRequest) GetDisk() int32 {
 // GetDiskOk returns a tuple with the Disk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableVirtualMachineWithConfigContextRequest) GetDiskOk() (*int32, bool) {
+func (o *WritableVirtualMachineWithConfigContextRequest) GetDiskOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -610,8 +610,8 @@ func (o *WritableVirtualMachineWithConfigContextRequest) HasDisk() bool {
 	return false
 }
 
-// SetDisk gets a reference to the given NullableInt32 and assigns it to the Disk field.
-func (o *WritableVirtualMachineWithConfigContextRequest) SetDisk(v int32) {
+// SetDisk gets a reference to the given NullableInt64 and assigns it to the Disk field.
+func (o *WritableVirtualMachineWithConfigContextRequest) SetDisk(v int64) {
 	o.Disk.Set(&v)
 }
 

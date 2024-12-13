@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**Groups** | Pointer to **[]int32** |  | [optional] 
-**Users** | Pointer to **[]int32** |  | [optional] 
+**Groups** | Pointer to **[]int64** |  | [optional] 
+**Users** | Pointer to **[]int64** |  | [optional] 
 
 ## Methods
 
@@ -80,20 +80,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetGroups
 
-`func (o *PatchedNotificationGroupRequest) GetGroups() []int32`
+`func (o *PatchedNotificationGroupRequest) GetGroups() []int64`
 
 GetGroups returns the Groups field if non-nil, zero value otherwise.
 
 ### GetGroupsOk
 
-`func (o *PatchedNotificationGroupRequest) GetGroupsOk() (*[]int32, bool)`
+`func (o *PatchedNotificationGroupRequest) GetGroupsOk() (*[]int64, bool)`
 
 GetGroupsOk returns a tuple with the Groups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroups
 
-`func (o *PatchedNotificationGroupRequest) SetGroups(v []int32)`
+`func (o *PatchedNotificationGroupRequest) SetGroups(v []int64)`
 
 SetGroups sets Groups field to given value.
 
@@ -105,20 +105,20 @@ HasGroups returns a boolean if a field has been set.
 
 ### GetUsers
 
-`func (o *PatchedNotificationGroupRequest) GetUsers() []int32`
+`func (o *PatchedNotificationGroupRequest) GetUsers() []int64`
 
 GetUsers returns the Users field if non-nil, zero value otherwise.
 
 ### GetUsersOk
 
-`func (o *PatchedNotificationGroupRequest) GetUsersOk() (*[]int32, bool)`
+`func (o *PatchedNotificationGroupRequest) GetUsersOk() (*[]int64, bool)`
 
 GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsers
 
-`func (o *PatchedNotificationGroupRequest) SetUsers(v []int32)`
+`func (o *PatchedNotificationGroupRequest) SetUsers(v []int64)`
 
 SetUsers sets Users field to given value.
 

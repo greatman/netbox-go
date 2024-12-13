@@ -21,7 +21,7 @@ var _ MappedNullable = &Prefix{}
 
 // Prefix Adds support for custom fields and tags.
 type Prefix struct {
-	Id         int32               `json:"id"`
+	Id         int64               `json:"id"`
 	Url        string              `json:"url"`
 	DisplayUrl string              `json:"display_url"`
 	Display    string              `json:"display"`
@@ -29,7 +29,7 @@ type Prefix struct {
 	Prefix     string              `json:"prefix"`
 	Vrf        NullableBriefVRF    `json:"vrf,omitempty"`
 	ScopeType  NullableString      `json:"scope_type,omitempty"`
-	ScopeId    NullableInt32       `json:"scope_id,omitempty"`
+	ScopeId    NullableInt64       `json:"scope_id,omitempty"`
 	Scope      interface{}         `json:"scope"`
 	Tenant     NullableBriefTenant `json:"tenant,omitempty"`
 	Vlan       NullableBriefVLAN   `json:"vlan,omitempty"`
@@ -45,8 +45,8 @@ type Prefix struct {
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
 	Created              NullableTime           `json:"created"`
 	LastUpdated          NullableTime           `json:"last_updated"`
-	Children             int32                  `json:"children"`
-	Depth                int32                  `json:"_depth"`
+	Children             int64                  `json:"children"`
+	Depth                int64                  `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -56,7 +56,7 @@ type _Prefix Prefix
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPrefix(id int32, url string, displayUrl string, display string, family AggregateFamily, prefix string, scope interface{}, created NullableTime, lastUpdated NullableTime, children int32, depth int32) *Prefix {
+func NewPrefix(id int64, url string, displayUrl string, display string, family AggregateFamily, prefix string, scope interface{}, created NullableTime, lastUpdated NullableTime, children int64, depth int64) *Prefix {
 	this := Prefix{}
 	this.Id = id
 	this.Url = url
@@ -81,9 +81,9 @@ func NewPrefixWithDefaults() *Prefix {
 }
 
 // GetId returns the Id field value
-func (o *Prefix) GetId() int32 {
+func (o *Prefix) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -92,7 +92,7 @@ func (o *Prefix) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Prefix) GetIdOk() (*int32, bool) {
+func (o *Prefix) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -100,7 +100,7 @@ func (o *Prefix) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Prefix) SetId(v int32) {
+func (o *Prefix) SetId(v int64) {
 	o.Id = v
 }
 
@@ -311,9 +311,9 @@ func (o *Prefix) UnsetScopeType() {
 }
 
 // GetScopeId returns the ScopeId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *Prefix) GetScopeId() int32 {
+func (o *Prefix) GetScopeId() int64 {
 	if o == nil || IsNil(o.ScopeId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ScopeId.Get()
@@ -322,7 +322,7 @@ func (o *Prefix) GetScopeId() int32 {
 // GetScopeIdOk returns a tuple with the ScopeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Prefix) GetScopeIdOk() (*int32, bool) {
+func (o *Prefix) GetScopeIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -338,8 +338,8 @@ func (o *Prefix) HasScopeId() bool {
 	return false
 }
 
-// SetScopeId gets a reference to the given NullableInt32 and assigns it to the ScopeId field.
-func (o *Prefix) SetScopeId(v int32) {
+// SetScopeId gets a reference to the given NullableInt64 and assigns it to the ScopeId field.
+func (o *Prefix) SetScopeId(v int64) {
 	o.ScopeId.Set(&v)
 }
 
@@ -785,9 +785,9 @@ func (o *Prefix) SetLastUpdated(v time.Time) {
 }
 
 // GetChildren returns the Children field value
-func (o *Prefix) GetChildren() int32 {
+func (o *Prefix) GetChildren() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -796,7 +796,7 @@ func (o *Prefix) GetChildren() int32 {
 
 // GetChildrenOk returns a tuple with the Children field value
 // and a boolean to check if the value has been set.
-func (o *Prefix) GetChildrenOk() (*int32, bool) {
+func (o *Prefix) GetChildrenOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -804,14 +804,14 @@ func (o *Prefix) GetChildrenOk() (*int32, bool) {
 }
 
 // SetChildren sets field value
-func (o *Prefix) SetChildren(v int32) {
+func (o *Prefix) SetChildren(v int64) {
 	o.Children = v
 }
 
 // GetDepth returns the Depth field value
-func (o *Prefix) GetDepth() int32 {
+func (o *Prefix) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -820,7 +820,7 @@ func (o *Prefix) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *Prefix) GetDepthOk() (*int32, bool) {
+func (o *Prefix) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -828,7 +828,7 @@ func (o *Prefix) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *Prefix) SetDepth(v int32) {
+func (o *Prefix) SetDepth(v int64) {
 	o.Depth = v
 }
 

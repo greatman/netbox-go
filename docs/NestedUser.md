@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewNestedUser
 
-`func NewNestedUser(id int32, url string, displayUrl string, display string, username string, ) *NestedUser`
+`func NewNestedUser(id int64, url string, displayUrl string, display string, username string, ) *NestedUser`
 
 NewNestedUser instantiates a new NestedUser object
 This constructor will assign default values to properties that have it defined,
@@ -31,20 +31,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedUser) GetId() int32`
+`func (o *NestedUser) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedUser) GetIdOk() (*int32, bool)`
+`func (o *NestedUser) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedUser) SetId(v int32)`
+`func (o *NestedUser) SetId(v int64)`
 
 SetId sets Id field to given value.
 

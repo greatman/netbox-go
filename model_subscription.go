@@ -21,7 +21,7 @@ var _ MappedNullable = &Subscription{}
 
 // Subscription Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type Subscription struct {
-	Id                   int32       `json:"id"`
+	Id                   int64       `json:"id"`
 	Url                  string      `json:"url"`
 	Display              string      `json:"display"`
 	ObjectType           string      `json:"object_type"`
@@ -38,7 +38,7 @@ type _Subscription Subscription
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSubscription(id int32, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time) *Subscription {
+func NewSubscription(id int64, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time) *Subscription {
 	this := Subscription{}
 	this.Id = id
 	this.Url = url
@@ -60,9 +60,9 @@ func NewSubscriptionWithDefaults() *Subscription {
 }
 
 // GetId returns the Id field value
-func (o *Subscription) GetId() int32 {
+func (o *Subscription) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -71,7 +71,7 @@ func (o *Subscription) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Subscription) GetIdOk() (*int32, bool) {
+func (o *Subscription) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -79,7 +79,7 @@ func (o *Subscription) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Subscription) SetId(v int32) {
+func (o *Subscription) SetId(v int64) {
 	o.Id = v
 }
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **DeviceType** | Pointer to [**NullableBriefDeviceType**](BriefDeviceType.md) |  | [optional] 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 
 ### NewInterfaceTemplate
 
-`func NewInterfaceTemplate(id int32, url string, display string, name string, type_ InterfaceType, created NullableTime, lastUpdated NullableTime, ) *InterfaceTemplate`
+`func NewInterfaceTemplate(id int64, url string, display string, name string, type_ InterfaceType, created NullableTime, lastUpdated NullableTime, ) *InterfaceTemplate`
 
 NewInterfaceTemplate instantiates a new InterfaceTemplate object
 This constructor will assign default values to properties that have it defined,
@@ -43,20 +43,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *InterfaceTemplate) GetId() int32`
+`func (o *InterfaceTemplate) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *InterfaceTemplate) GetIdOk() (*int32, bool)`
+`func (o *InterfaceTemplate) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *InterfaceTemplate) SetId(v int32)`
+`func (o *InterfaceTemplate) SetId(v int64)`
 
 SetId sets Id field to given value.
 

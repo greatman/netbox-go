@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **DeviceType** | Pointer to [**NullableBriefDeviceType**](BriefDeviceType.md) |  | [optional] 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewPowerOutletTemplate
 
-`func NewPowerOutletTemplate(id int32, url string, display string, name string, created NullableTime, lastUpdated NullableTime, ) *PowerOutletTemplate`
+`func NewPowerOutletTemplate(id int64, url string, display string, name string, created NullableTime, lastUpdated NullableTime, ) *PowerOutletTemplate`
 
 NewPowerOutletTemplate instantiates a new PowerOutletTemplate object
 This constructor will assign default values to properties that have it defined,
@@ -39,20 +39,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PowerOutletTemplate) GetId() int32`
+`func (o *PowerOutletTemplate) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PowerOutletTemplate) GetIdOk() (*int32, bool)`
+`func (o *PowerOutletTemplate) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PowerOutletTemplate) SetId(v int32)`
+`func (o *PowerOutletTemplate) SetId(v int64)`
 
 SetId sets Id field to given value.
 

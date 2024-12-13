@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Rack** | [**BriefRack**](BriefRack.md) |  | 
-**Units** | **[]int32** |  | 
+**Units** | **[]int64** |  | 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
 **User** | [**BriefUser**](BriefUser.md) |  | 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewRackReservation
 
-`func NewRackReservation(id int32, url string, displayUrl string, display string, rack BriefRack, units []int32, created NullableTime, lastUpdated NullableTime, user BriefUser, description string, ) *RackReservation`
+`func NewRackReservation(id int64, url string, displayUrl string, display string, rack BriefRack, units []int64, created NullableTime, lastUpdated NullableTime, user BriefUser, description string, ) *RackReservation`
 
 NewRackReservation instantiates a new RackReservation object
 This constructor will assign default values to properties that have it defined,
@@ -40,20 +40,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *RackReservation) GetId() int32`
+`func (o *RackReservation) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *RackReservation) GetIdOk() (*int32, bool)`
+`func (o *RackReservation) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *RackReservation) SetId(v int32)`
+`func (o *RackReservation) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -140,20 +140,20 @@ SetRack sets Rack field to given value.
 
 ### GetUnits
 
-`func (o *RackReservation) GetUnits() []int32`
+`func (o *RackReservation) GetUnits() []int64`
 
 GetUnits returns the Units field if non-nil, zero value otherwise.
 
 ### GetUnitsOk
 
-`func (o *RackReservation) GetUnitsOk() (*[]int32, bool)`
+`func (o *RackReservation) GetUnitsOk() (*[]int64, bool)`
 
 GetUnitsOk returns a tuple with the Units field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUnits
 
-`func (o *RackReservation) SetUnits(v []int32)`
+`func (o *RackReservation) SetUnits(v []int64)`
 
 SetUnits sets Units field to given value.
 

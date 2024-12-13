@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 
 ### NewSite
 
-`func NewSite(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, circuitCount int64, deviceCount int64, prefixCount int64, rackCount int64, virtualmachineCount int64, vlanCount int64, ) *Site`
+`func NewSite(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, circuitCount int64, deviceCount int64, prefixCount int64, rackCount int64, virtualmachineCount int64, vlanCount int64, ) *Site`
 
 NewSite instantiates a new Site object
 This constructor will assign default values to properties that have it defined,
@@ -55,20 +55,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Site) GetId() int32`
+`func (o *Site) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Site) GetIdOk() (*int32, bool)`
+`func (o *Site) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Site) SetId(v int32)`
+`func (o *Site) SetId(v int64)`
 
 SetId sets Id field to given value.
 

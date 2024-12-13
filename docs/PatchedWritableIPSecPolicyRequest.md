@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**Proposals** | Pointer to **[]int32** |  | [optional] 
+**Proposals** | Pointer to **[]int64** |  | [optional] 
 **PfsGroup** | Pointer to [**NullablePatchedWritableIPSecPolicyRequestPfsGroup**](PatchedWritableIPSecPolicyRequestPfsGroup.md) |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -83,20 +83,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetProposals
 
-`func (o *PatchedWritableIPSecPolicyRequest) GetProposals() []int32`
+`func (o *PatchedWritableIPSecPolicyRequest) GetProposals() []int64`
 
 GetProposals returns the Proposals field if non-nil, zero value otherwise.
 
 ### GetProposalsOk
 
-`func (o *PatchedWritableIPSecPolicyRequest) GetProposalsOk() (*[]int32, bool)`
+`func (o *PatchedWritableIPSecPolicyRequest) GetProposalsOk() (*[]int64, bool)`
 
 GetProposalsOk returns a tuple with the Proposals field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProposals
 
-`func (o *PatchedWritableIPSecPolicyRequest) SetProposals(v []int32)`
+`func (o *PatchedWritableIPSecPolicyRequest) SetProposals(v []int64)`
 
 SetProposals sets Proposals field to given value.
 

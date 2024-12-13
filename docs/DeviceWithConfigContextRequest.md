@@ -25,8 +25,8 @@ Name | Type | Description | Notes
 **OobIp** | Pointer to [**NullableBriefIPAddressRequest**](BriefIPAddressRequest.md) |  | [optional] 
 **Cluster** | Pointer to [**NullableBriefClusterRequest**](BriefClusterRequest.md) |  | [optional] 
 **VirtualChassis** | Pointer to [**NullableBriefVirtualChassisRequest**](BriefVirtualChassisRequest.md) |  | [optional] 
-**VcPosition** | Pointer to **NullableInt32** |  | [optional] 
-**VcPriority** | Pointer to **NullableInt32** | Virtual chassis master election priority | [optional] 
+**VcPosition** | Pointer to **NullableInt64** |  | [optional] 
+**VcPriority** | Pointer to **NullableInt64** | Virtual chassis master election priority | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **ConfigTemplate** | Pointer to [**NullableBriefConfigTemplateRequest**](BriefConfigTemplateRequest.md) |  | [optional] 
@@ -705,20 +705,20 @@ HasVirtualChassis returns a boolean if a field has been set.
 UnsetVirtualChassis ensures that no value is present for VirtualChassis, not even an explicit nil
 ### GetVcPosition
 
-`func (o *DeviceWithConfigContextRequest) GetVcPosition() int32`
+`func (o *DeviceWithConfigContextRequest) GetVcPosition() int64`
 
 GetVcPosition returns the VcPosition field if non-nil, zero value otherwise.
 
 ### GetVcPositionOk
 
-`func (o *DeviceWithConfigContextRequest) GetVcPositionOk() (*int32, bool)`
+`func (o *DeviceWithConfigContextRequest) GetVcPositionOk() (*int64, bool)`
 
 GetVcPositionOk returns a tuple with the VcPosition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVcPosition
 
-`func (o *DeviceWithConfigContextRequest) SetVcPosition(v int32)`
+`func (o *DeviceWithConfigContextRequest) SetVcPosition(v int64)`
 
 SetVcPosition sets VcPosition field to given value.
 
@@ -740,20 +740,20 @@ HasVcPosition returns a boolean if a field has been set.
 UnsetVcPosition ensures that no value is present for VcPosition, not even an explicit nil
 ### GetVcPriority
 
-`func (o *DeviceWithConfigContextRequest) GetVcPriority() int32`
+`func (o *DeviceWithConfigContextRequest) GetVcPriority() int64`
 
 GetVcPriority returns the VcPriority field if non-nil, zero value otherwise.
 
 ### GetVcPriorityOk
 
-`func (o *DeviceWithConfigContextRequest) GetVcPriorityOk() (*int32, bool)`
+`func (o *DeviceWithConfigContextRequest) GetVcPriorityOk() (*int64, bool)`
 
 GetVcPriorityOk returns a tuple with the VcPriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVcPriority
 
-`func (o *DeviceWithConfigContextRequest) SetVcPriority(v int32)`
+`func (o *DeviceWithConfigContextRequest) SetVcPriority(v int64)`
 
 SetVcPriority sets VcPriority field to given value.
 

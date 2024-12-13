@@ -21,7 +21,7 @@ var _ MappedNullable = &IKEProposal{}
 
 // IKEProposal Adds support for custom fields and tags.
 type IKEProposal struct {
-	Id                      int32                               `json:"id"`
+	Id                      int64                               `json:"id"`
 	Url                     string                              `json:"url"`
 	DisplayUrl              string                              `json:"display_url"`
 	Display                 string                              `json:"display"`
@@ -32,7 +32,7 @@ type IKEProposal struct {
 	AuthenticationAlgorithm *IKEProposalAuthenticationAlgorithm `json:"authentication_algorithm,omitempty"`
 	Group                   IKEProposalGroup                    `json:"group"`
 	// Security association lifetime (in seconds)
-	SaLifetime           NullableInt32          `json:"sa_lifetime,omitempty"`
+	SaLifetime           NullableInt64          `json:"sa_lifetime,omitempty"`
 	Comments             *string                `json:"comments,omitempty"`
 	Tags                 []NestedTag            `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
@@ -47,7 +47,7 @@ type _IKEProposal IKEProposal
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewIKEProposal(id int32, url string, displayUrl string, display string, name string, authenticationMethod IKEProposalAuthenticationMethod, encryptionAlgorithm IKEProposalEncryptionAlgorithm, group IKEProposalGroup, created NullableTime, lastUpdated NullableTime) *IKEProposal {
+func NewIKEProposal(id int64, url string, displayUrl string, display string, name string, authenticationMethod IKEProposalAuthenticationMethod, encryptionAlgorithm IKEProposalEncryptionAlgorithm, group IKEProposalGroup, created NullableTime, lastUpdated NullableTime) *IKEProposal {
 	this := IKEProposal{}
 	this.Id = id
 	this.Url = url
@@ -71,9 +71,9 @@ func NewIKEProposalWithDefaults() *IKEProposal {
 }
 
 // GetId returns the Id field value
-func (o *IKEProposal) GetId() int32 {
+func (o *IKEProposal) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -82,7 +82,7 @@ func (o *IKEProposal) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *IKEProposal) GetIdOk() (*int32, bool) {
+func (o *IKEProposal) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -90,7 +90,7 @@ func (o *IKEProposal) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *IKEProposal) SetId(v int32) {
+func (o *IKEProposal) SetId(v int64) {
 	o.Id = v
 }
 
@@ -327,9 +327,9 @@ func (o *IKEProposal) SetGroup(v IKEProposalGroup) {
 }
 
 // GetSaLifetime returns the SaLifetime field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *IKEProposal) GetSaLifetime() int32 {
+func (o *IKEProposal) GetSaLifetime() int64 {
 	if o == nil || IsNil(o.SaLifetime.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SaLifetime.Get()
@@ -338,7 +338,7 @@ func (o *IKEProposal) GetSaLifetime() int32 {
 // GetSaLifetimeOk returns a tuple with the SaLifetime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *IKEProposal) GetSaLifetimeOk() (*int32, bool) {
+func (o *IKEProposal) GetSaLifetimeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -354,8 +354,8 @@ func (o *IKEProposal) HasSaLifetime() bool {
 	return false
 }
 
-// SetSaLifetime gets a reference to the given NullableInt32 and assigns it to the SaLifetime field.
-func (o *IKEProposal) SetSaLifetime(v int32) {
+// SetSaLifetime gets a reference to the given NullableInt64 and assigns it to the SaLifetime field.
+func (o *IKEProposal) SetSaLifetime(v int64) {
 	o.SaLifetime.Set(&v)
 }
 

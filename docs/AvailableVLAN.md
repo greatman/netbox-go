@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vid** | **int32** |  | [readonly] 
+**Vid** | **int64** |  | [readonly] 
 **Group** | [**NullableBriefVLANGroup**](BriefVLANGroup.md) |  | [readonly] 
 
 ## Methods
 
 ### NewAvailableVLAN
 
-`func NewAvailableVLAN(vid int32, group NullableBriefVLANGroup, ) *AvailableVLAN`
+`func NewAvailableVLAN(vid int64, group NullableBriefVLANGroup, ) *AvailableVLAN`
 
 NewAvailableVLAN instantiates a new AvailableVLAN object
 This constructor will assign default values to properties that have it defined,
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetVid
 
-`func (o *AvailableVLAN) GetVid() int32`
+`func (o *AvailableVLAN) GetVid() int64`
 
 GetVid returns the Vid field if non-nil, zero value otherwise.
 
 ### GetVidOk
 
-`func (o *AvailableVLAN) GetVidOk() (*int32, bool)`
+`func (o *AvailableVLAN) GetVidOk() (*int64, bool)`
 
 GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVid
 
-`func (o *AvailableVLAN) SetVid(v int32)`
+`func (o *AvailableVLAN) SetVid(v int64)`
 
 SetVid sets Vid field to given value.
 

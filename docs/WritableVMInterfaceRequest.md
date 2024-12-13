@@ -7,14 +7,14 @@ Name | Type | Description | Notes
 **VirtualMachine** | [**BriefVirtualMachineRequest**](BriefVirtualMachineRequest.md) |  | 
 **Name** | **string** |  | 
 **Enabled** | Pointer to **bool** |  | [optional] 
-**Parent** | Pointer to **NullableInt32** |  | [optional] 
-**Bridge** | Pointer to **NullableInt32** |  | [optional] 
-**Mtu** | Pointer to **NullableInt32** |  | [optional] 
+**Parent** | Pointer to **NullableInt64** |  | [optional] 
+**Bridge** | Pointer to **NullableInt64** |  | [optional] 
+**Mtu** | Pointer to **NullableInt64** |  | [optional] 
 **PrimaryMacAddress** | Pointer to [**NullableBriefMACAddressRequest**](BriefMACAddressRequest.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Mode** | Pointer to [**NullablePatchedWritableInterfaceRequestMode**](PatchedWritableInterfaceRequestMode.md) |  | [optional] 
 **UntaggedVlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
-**TaggedVlans** | Pointer to **[]int32** |  | [optional] 
+**TaggedVlans** | Pointer to **[]int64** |  | [optional] 
 **QinqSvlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
 **VlanTranslationPolicy** | Pointer to [**NullableBriefVLANTranslationPolicyRequest**](BriefVLANTranslationPolicyRequest.md) |  | [optional] 
 **Vrf** | Pointer to [**NullableBriefVRFRequest**](BriefVRFRequest.md) |  | [optional] 
@@ -107,20 +107,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetParent
 
-`func (o *WritableVMInterfaceRequest) GetParent() int32`
+`func (o *WritableVMInterfaceRequest) GetParent() int64`
 
 GetParent returns the Parent field if non-nil, zero value otherwise.
 
 ### GetParentOk
 
-`func (o *WritableVMInterfaceRequest) GetParentOk() (*int32, bool)`
+`func (o *WritableVMInterfaceRequest) GetParentOk() (*int64, bool)`
 
 GetParentOk returns a tuple with the Parent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParent
 
-`func (o *WritableVMInterfaceRequest) SetParent(v int32)`
+`func (o *WritableVMInterfaceRequest) SetParent(v int64)`
 
 SetParent sets Parent field to given value.
 
@@ -142,20 +142,20 @@ HasParent returns a boolean if a field has been set.
 UnsetParent ensures that no value is present for Parent, not even an explicit nil
 ### GetBridge
 
-`func (o *WritableVMInterfaceRequest) GetBridge() int32`
+`func (o *WritableVMInterfaceRequest) GetBridge() int64`
 
 GetBridge returns the Bridge field if non-nil, zero value otherwise.
 
 ### GetBridgeOk
 
-`func (o *WritableVMInterfaceRequest) GetBridgeOk() (*int32, bool)`
+`func (o *WritableVMInterfaceRequest) GetBridgeOk() (*int64, bool)`
 
 GetBridgeOk returns a tuple with the Bridge field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBridge
 
-`func (o *WritableVMInterfaceRequest) SetBridge(v int32)`
+`func (o *WritableVMInterfaceRequest) SetBridge(v int64)`
 
 SetBridge sets Bridge field to given value.
 
@@ -177,20 +177,20 @@ HasBridge returns a boolean if a field has been set.
 UnsetBridge ensures that no value is present for Bridge, not even an explicit nil
 ### GetMtu
 
-`func (o *WritableVMInterfaceRequest) GetMtu() int32`
+`func (o *WritableVMInterfaceRequest) GetMtu() int64`
 
 GetMtu returns the Mtu field if non-nil, zero value otherwise.
 
 ### GetMtuOk
 
-`func (o *WritableVMInterfaceRequest) GetMtuOk() (*int32, bool)`
+`func (o *WritableVMInterfaceRequest) GetMtuOk() (*int64, bool)`
 
 GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMtu
 
-`func (o *WritableVMInterfaceRequest) SetMtu(v int32)`
+`func (o *WritableVMInterfaceRequest) SetMtu(v int64)`
 
 SetMtu sets Mtu field to given value.
 
@@ -342,20 +342,20 @@ HasUntaggedVlan returns a boolean if a field has been set.
 UnsetUntaggedVlan ensures that no value is present for UntaggedVlan, not even an explicit nil
 ### GetTaggedVlans
 
-`func (o *WritableVMInterfaceRequest) GetTaggedVlans() []int32`
+`func (o *WritableVMInterfaceRequest) GetTaggedVlans() []int64`
 
 GetTaggedVlans returns the TaggedVlans field if non-nil, zero value otherwise.
 
 ### GetTaggedVlansOk
 
-`func (o *WritableVMInterfaceRequest) GetTaggedVlansOk() (*[]int32, bool)`
+`func (o *WritableVMInterfaceRequest) GetTaggedVlansOk() (*[]int64, bool)`
 
 GetTaggedVlansOk returns a tuple with the TaggedVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTaggedVlans
 
-`func (o *WritableVMInterfaceRequest) SetTaggedVlans(v []int32)`
+`func (o *WritableVMInterfaceRequest) SetTaggedVlans(v []int64)`
 
 SetTaggedVlans sets TaggedVlans field to given value.
 

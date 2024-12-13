@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Protocol** | Pointer to [**BriefFHRPGroupProtocol**](BriefFHRPGroupProtocol.md) |  | [optional] 
-**GroupId** | Pointer to **int32** |  | [optional] 
+**GroupId** | Pointer to **int64** |  | [optional] 
 **AuthType** | Pointer to [**NullableAuthenticationType**](AuthenticationType.md) |  | [optional] 
 **AuthKey** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -85,20 +85,20 @@ HasProtocol returns a boolean if a field has been set.
 
 ### GetGroupId
 
-`func (o *PatchedFHRPGroupRequest) GetGroupId() int32`
+`func (o *PatchedFHRPGroupRequest) GetGroupId() int64`
 
 GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
 ### GetGroupIdOk
 
-`func (o *PatchedFHRPGroupRequest) GetGroupIdOk() (*int32, bool)`
+`func (o *PatchedFHRPGroupRequest) GetGroupIdOk() (*int64, bool)`
 
 GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroupId
 
-`func (o *PatchedFHRPGroupRequest) SetGroupId(v int32)`
+`func (o *PatchedFHRPGroupRequest) SetGroupId(v int64)`
 
 SetGroupId sets GroupId field to given value.
 

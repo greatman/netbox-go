@@ -20,17 +20,17 @@ var _ MappedNullable = &CircuitCircuitTermination{}
 
 // CircuitCircuitTermination Represents an object related through a ForeignKey field. On write, it accepts a primary key (PK) value or a dictionary of attributes which can be used to uniquely identify the related object. This class should be subclassed to return a full representation of the related object on read.
 type CircuitCircuitTermination struct {
-	Id              int32          `json:"id"`
+	Id              int64          `json:"id"`
 	Url             string         `json:"url"`
 	DisplayUrl      string         `json:"display_url"`
 	Display         string         `json:"display"`
 	TerminationType NullableString `json:"termination_type,omitempty"`
-	TerminationId   NullableInt32  `json:"termination_id,omitempty"`
+	TerminationId   NullableInt64  `json:"termination_id,omitempty"`
 	Termination     interface{}    `json:"termination"`
 	// Physical circuit speed
-	PortSpeed NullableInt32 `json:"port_speed,omitempty"`
+	PortSpeed NullableInt64 `json:"port_speed,omitempty"`
 	// Upstream speed, if different from port speed
-	UpstreamSpeed NullableInt32 `json:"upstream_speed,omitempty"`
+	UpstreamSpeed NullableInt64 `json:"upstream_speed,omitempty"`
 	// ID of the local cross-connect
 	XconnectId           *string `json:"xconnect_id,omitempty"`
 	Description          *string `json:"description,omitempty"`
@@ -43,7 +43,7 @@ type _CircuitCircuitTermination CircuitCircuitTermination
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCircuitCircuitTermination(id int32, url string, displayUrl string, display string, termination interface{}) *CircuitCircuitTermination {
+func NewCircuitCircuitTermination(id int64, url string, displayUrl string, display string, termination interface{}) *CircuitCircuitTermination {
 	this := CircuitCircuitTermination{}
 	this.Id = id
 	this.Url = url
@@ -62,9 +62,9 @@ func NewCircuitCircuitTerminationWithDefaults() *CircuitCircuitTermination {
 }
 
 // GetId returns the Id field value
-func (o *CircuitCircuitTermination) GetId() int32 {
+func (o *CircuitCircuitTermination) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -73,7 +73,7 @@ func (o *CircuitCircuitTermination) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *CircuitCircuitTermination) GetIdOk() (*int32, bool) {
+func (o *CircuitCircuitTermination) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -81,7 +81,7 @@ func (o *CircuitCircuitTermination) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *CircuitCircuitTermination) SetId(v int32) {
+func (o *CircuitCircuitTermination) SetId(v int64) {
 	o.Id = v
 }
 
@@ -201,9 +201,9 @@ func (o *CircuitCircuitTermination) UnsetTerminationType() {
 }
 
 // GetTerminationId returns the TerminationId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *CircuitCircuitTermination) GetTerminationId() int32 {
+func (o *CircuitCircuitTermination) GetTerminationId() int64 {
 	if o == nil || IsNil(o.TerminationId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TerminationId.Get()
@@ -212,7 +212,7 @@ func (o *CircuitCircuitTermination) GetTerminationId() int32 {
 // GetTerminationIdOk returns a tuple with the TerminationId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *CircuitCircuitTermination) GetTerminationIdOk() (*int32, bool) {
+func (o *CircuitCircuitTermination) GetTerminationIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -228,8 +228,8 @@ func (o *CircuitCircuitTermination) HasTerminationId() bool {
 	return false
 }
 
-// SetTerminationId gets a reference to the given NullableInt32 and assigns it to the TerminationId field.
-func (o *CircuitCircuitTermination) SetTerminationId(v int32) {
+// SetTerminationId gets a reference to the given NullableInt64 and assigns it to the TerminationId field.
+func (o *CircuitCircuitTermination) SetTerminationId(v int64) {
 	o.TerminationId.Set(&v)
 }
 
@@ -270,9 +270,9 @@ func (o *CircuitCircuitTermination) SetTermination(v interface{}) {
 }
 
 // GetPortSpeed returns the PortSpeed field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *CircuitCircuitTermination) GetPortSpeed() int32 {
+func (o *CircuitCircuitTermination) GetPortSpeed() int64 {
 	if o == nil || IsNil(o.PortSpeed.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.PortSpeed.Get()
@@ -281,7 +281,7 @@ func (o *CircuitCircuitTermination) GetPortSpeed() int32 {
 // GetPortSpeedOk returns a tuple with the PortSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *CircuitCircuitTermination) GetPortSpeedOk() (*int32, bool) {
+func (o *CircuitCircuitTermination) GetPortSpeedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -297,8 +297,8 @@ func (o *CircuitCircuitTermination) HasPortSpeed() bool {
 	return false
 }
 
-// SetPortSpeed gets a reference to the given NullableInt32 and assigns it to the PortSpeed field.
-func (o *CircuitCircuitTermination) SetPortSpeed(v int32) {
+// SetPortSpeed gets a reference to the given NullableInt64 and assigns it to the PortSpeed field.
+func (o *CircuitCircuitTermination) SetPortSpeed(v int64) {
 	o.PortSpeed.Set(&v)
 }
 
@@ -313,9 +313,9 @@ func (o *CircuitCircuitTermination) UnsetPortSpeed() {
 }
 
 // GetUpstreamSpeed returns the UpstreamSpeed field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *CircuitCircuitTermination) GetUpstreamSpeed() int32 {
+func (o *CircuitCircuitTermination) GetUpstreamSpeed() int64 {
 	if o == nil || IsNil(o.UpstreamSpeed.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.UpstreamSpeed.Get()
@@ -324,7 +324,7 @@ func (o *CircuitCircuitTermination) GetUpstreamSpeed() int32 {
 // GetUpstreamSpeedOk returns a tuple with the UpstreamSpeed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *CircuitCircuitTermination) GetUpstreamSpeedOk() (*int32, bool) {
+func (o *CircuitCircuitTermination) GetUpstreamSpeedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -340,8 +340,8 @@ func (o *CircuitCircuitTermination) HasUpstreamSpeed() bool {
 	return false
 }
 
-// SetUpstreamSpeed gets a reference to the given NullableInt32 and assigns it to the UpstreamSpeed field.
-func (o *CircuitCircuitTermination) SetUpstreamSpeed(v int32) {
+// SetUpstreamSpeed gets a reference to the given NullableInt64 and assigns it to the UpstreamSpeed field.
+func (o *CircuitCircuitTermination) SetUpstreamSpeed(v int64) {
 	o.UpstreamSpeed.Set(&v)
 }
 

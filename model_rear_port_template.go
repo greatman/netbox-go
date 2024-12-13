@@ -21,7 +21,7 @@ var _ MappedNullable = &RearPortTemplate{}
 
 // RearPortTemplate Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type RearPortTemplate struct {
-	Id         int32                   `json:"id"`
+	Id         int64                   `json:"id"`
 	Url        string                  `json:"url"`
 	Display    string                  `json:"display"`
 	DeviceType NullableBriefDeviceType `json:"device_type,omitempty"`
@@ -32,7 +32,7 @@ type RearPortTemplate struct {
 	Label                *string       `json:"label,omitempty"`
 	Type                 FrontPortType `json:"type"`
 	Color                *string       `json:"color,omitempty" validate:"regexp=^[0-9a-f]{6}$"`
-	Positions            *int32        `json:"positions,omitempty"`
+	Positions            *int64        `json:"positions,omitempty"`
 	Description          *string       `json:"description,omitempty"`
 	Created              NullableTime  `json:"created"`
 	LastUpdated          NullableTime  `json:"last_updated"`
@@ -45,7 +45,7 @@ type _RearPortTemplate RearPortTemplate
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRearPortTemplate(id int32, url string, display string, name string, type_ FrontPortType, created NullableTime, lastUpdated NullableTime) *RearPortTemplate {
+func NewRearPortTemplate(id int64, url string, display string, name string, type_ FrontPortType, created NullableTime, lastUpdated NullableTime) *RearPortTemplate {
 	this := RearPortTemplate{}
 	this.Id = id
 	this.Url = url
@@ -66,9 +66,9 @@ func NewRearPortTemplateWithDefaults() *RearPortTemplate {
 }
 
 // GetId returns the Id field value
-func (o *RearPortTemplate) GetId() int32 {
+func (o *RearPortTemplate) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -77,7 +77,7 @@ func (o *RearPortTemplate) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *RearPortTemplate) GetIdOk() (*int32, bool) {
+func (o *RearPortTemplate) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -85,7 +85,7 @@ func (o *RearPortTemplate) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *RearPortTemplate) SetId(v int32) {
+func (o *RearPortTemplate) SetId(v int64) {
 	o.Id = v
 }
 
@@ -336,9 +336,9 @@ func (o *RearPortTemplate) SetColor(v string) {
 }
 
 // GetPositions returns the Positions field value if set, zero value otherwise.
-func (o *RearPortTemplate) GetPositions() int32 {
+func (o *RearPortTemplate) GetPositions() int64 {
 	if o == nil || IsNil(o.Positions) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Positions
@@ -346,7 +346,7 @@ func (o *RearPortTemplate) GetPositions() int32 {
 
 // GetPositionsOk returns a tuple with the Positions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RearPortTemplate) GetPositionsOk() (*int32, bool) {
+func (o *RearPortTemplate) GetPositionsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Positions) {
 		return nil, false
 	}
@@ -362,8 +362,8 @@ func (o *RearPortTemplate) HasPositions() bool {
 	return false
 }
 
-// SetPositions gets a reference to the given int32 and assigns it to the Positions field.
-func (o *RearPortTemplate) SetPositions(v int32) {
+// SetPositions gets a reference to the given int64 and assigns it to the Positions field.
+func (o *RearPortTemplate) SetPositions(v int64) {
 	o.Positions = &v
 }
 

@@ -21,7 +21,7 @@ var _ MappedNullable = &ImageAttachment{}
 
 // ImageAttachment Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type ImageAttachment struct {
-	Id                   int32        `json:"id"`
+	Id                   int64        `json:"id"`
 	Url                  string       `json:"url"`
 	Display              string       `json:"display"`
 	ObjectType           string       `json:"object_type"`
@@ -29,8 +29,8 @@ type ImageAttachment struct {
 	Parent               interface{}  `json:"parent"`
 	Name                 *string      `json:"name,omitempty"`
 	Image                string       `json:"image"`
-	ImageHeight          int32        `json:"image_height"`
-	ImageWidth           int32        `json:"image_width"`
+	ImageHeight          int64        `json:"image_height"`
+	ImageWidth           int64        `json:"image_width"`
 	Created              NullableTime `json:"created"`
 	LastUpdated          NullableTime `json:"last_updated"`
 	AdditionalProperties map[string]interface{}
@@ -42,7 +42,7 @@ type _ImageAttachment ImageAttachment
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewImageAttachment(id int32, url string, display string, objectType string, objectId int64, parent interface{}, image string, imageHeight int32, imageWidth int32, created NullableTime, lastUpdated NullableTime) *ImageAttachment {
+func NewImageAttachment(id int64, url string, display string, objectType string, objectId int64, parent interface{}, image string, imageHeight int64, imageWidth int64, created NullableTime, lastUpdated NullableTime) *ImageAttachment {
 	this := ImageAttachment{}
 	this.Id = id
 	this.Url = url
@@ -67,9 +67,9 @@ func NewImageAttachmentWithDefaults() *ImageAttachment {
 }
 
 // GetId returns the Id field value
-func (o *ImageAttachment) GetId() int32 {
+func (o *ImageAttachment) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -78,7 +78,7 @@ func (o *ImageAttachment) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ImageAttachment) GetIdOk() (*int32, bool) {
+func (o *ImageAttachment) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -86,7 +86,7 @@ func (o *ImageAttachment) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ImageAttachment) SetId(v int32) {
+func (o *ImageAttachment) SetId(v int64) {
 	o.Id = v
 }
 
@@ -269,9 +269,9 @@ func (o *ImageAttachment) SetImage(v string) {
 }
 
 // GetImageHeight returns the ImageHeight field value
-func (o *ImageAttachment) GetImageHeight() int32 {
+func (o *ImageAttachment) GetImageHeight() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -280,7 +280,7 @@ func (o *ImageAttachment) GetImageHeight() int32 {
 
 // GetImageHeightOk returns a tuple with the ImageHeight field value
 // and a boolean to check if the value has been set.
-func (o *ImageAttachment) GetImageHeightOk() (*int32, bool) {
+func (o *ImageAttachment) GetImageHeightOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -288,14 +288,14 @@ func (o *ImageAttachment) GetImageHeightOk() (*int32, bool) {
 }
 
 // SetImageHeight sets field value
-func (o *ImageAttachment) SetImageHeight(v int32) {
+func (o *ImageAttachment) SetImageHeight(v int64) {
 	o.ImageHeight = v
 }
 
 // GetImageWidth returns the ImageWidth field value
-func (o *ImageAttachment) GetImageWidth() int32 {
+func (o *ImageAttachment) GetImageWidth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -304,7 +304,7 @@ func (o *ImageAttachment) GetImageWidth() int32 {
 
 // GetImageWidthOk returns a tuple with the ImageWidth field value
 // and a boolean to check if the value has been set.
-func (o *ImageAttachment) GetImageWidthOk() (*int32, bool) {
+func (o *ImageAttachment) GetImageWidthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -312,7 +312,7 @@ func (o *ImageAttachment) GetImageWidthOk() (*int32, bool) {
 }
 
 // SetImageWidth sets field value
-func (o *ImageAttachment) SetImageWidth(v int32) {
+func (o *ImageAttachment) SetImageWidth(v int64) {
 	o.ImageWidth = v
 }
 

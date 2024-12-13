@@ -21,7 +21,7 @@ var _ MappedNullable = &CustomField{}
 
 // CustomField Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type CustomField struct {
-	Id                int32           `json:"id"`
+	Id                int64           `json:"id"`
 	Url               string          `json:"url"`
 	DisplayUrl        string          `json:"display_url"`
 	Display           string          `json:"display"`
@@ -41,7 +41,7 @@ type CustomField struct {
 	// The value of this field must be unique for the assigned object
 	Unique *bool `json:"unique,omitempty"`
 	// Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored.
-	SearchWeight *int32                  `json:"search_weight,omitempty"`
+	SearchWeight *int64                  `json:"search_weight,omitempty"`
 	FilterLogic  *CustomFieldFilterLogic `json:"filter_logic,omitempty"`
 	UiVisible    *CustomFieldUiVisible   `json:"ui_visible,omitempty"`
 	UiEditable   *CustomFieldUiEditable  `json:"ui_editable,omitempty"`
@@ -52,7 +52,7 @@ type CustomField struct {
 	// Filter the object selection choices using a query_params dict (must be a JSON value).Encapsulate strings with double quotes (e.g. \"Foo\").
 	RelatedObjectFilter interface{} `json:"related_object_filter,omitempty"`
 	// Fields with higher weights appear lower in a form.
-	Weight *int32 `json:"weight,omitempty"`
+	Weight *int64 `json:"weight,omitempty"`
 	// Minimum allowed value (for numeric fields)
 	ValidationMinimum NullableInt64 `json:"validation_minimum,omitempty"`
 	// Maximum allowed value (for numeric fields)
@@ -72,7 +72,7 @@ type _CustomField CustomField
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCustomField(id int32, url string, displayUrl string, display string, objectTypes []string, type_ CustomFieldType, dataType string, name string, created NullableTime, lastUpdated NullableTime) *CustomField {
+func NewCustomField(id int64, url string, displayUrl string, display string, objectTypes []string, type_ CustomFieldType, dataType string, name string, created NullableTime, lastUpdated NullableTime) *CustomField {
 	this := CustomField{}
 	this.Id = id
 	this.Url = url
@@ -96,9 +96,9 @@ func NewCustomFieldWithDefaults() *CustomField {
 }
 
 // GetId returns the Id field value
-func (o *CustomField) GetId() int32 {
+func (o *CustomField) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -107,7 +107,7 @@ func (o *CustomField) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *CustomField) GetIdOk() (*int32, bool) {
+func (o *CustomField) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -115,7 +115,7 @@ func (o *CustomField) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *CustomField) SetId(v int32) {
+func (o *CustomField) SetId(v int64) {
 	o.Id = v
 }
 
@@ -491,9 +491,9 @@ func (o *CustomField) SetUnique(v bool) {
 }
 
 // GetSearchWeight returns the SearchWeight field value if set, zero value otherwise.
-func (o *CustomField) GetSearchWeight() int32 {
+func (o *CustomField) GetSearchWeight() int64 {
 	if o == nil || IsNil(o.SearchWeight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SearchWeight
@@ -501,7 +501,7 @@ func (o *CustomField) GetSearchWeight() int32 {
 
 // GetSearchWeightOk returns a tuple with the SearchWeight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CustomField) GetSearchWeightOk() (*int32, bool) {
+func (o *CustomField) GetSearchWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.SearchWeight) {
 		return nil, false
 	}
@@ -517,8 +517,8 @@ func (o *CustomField) HasSearchWeight() bool {
 	return false
 }
 
-// SetSearchWeight gets a reference to the given int32 and assigns it to the SearchWeight field.
-func (o *CustomField) SetSearchWeight(v int32) {
+// SetSearchWeight gets a reference to the given int64 and assigns it to the SearchWeight field.
+func (o *CustomField) SetSearchWeight(v int64) {
 	o.SearchWeight = &v
 }
 
@@ -717,9 +717,9 @@ func (o *CustomField) SetRelatedObjectFilter(v interface{}) {
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *CustomField) GetWeight() int32 {
+func (o *CustomField) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -727,7 +727,7 @@ func (o *CustomField) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CustomField) GetWeightOk() (*int32, bool) {
+func (o *CustomField) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -743,8 +743,8 @@ func (o *CustomField) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *CustomField) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *CustomField) SetWeight(v int64) {
 	o.Weight = &v
 }
 

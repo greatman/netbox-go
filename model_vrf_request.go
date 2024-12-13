@@ -28,8 +28,8 @@ type VRFRequest struct {
 	EnforceUnique        *bool                  `json:"enforce_unique,omitempty"`
 	Description          *string                `json:"description,omitempty"`
 	Comments             *string                `json:"comments,omitempty"`
-	ImportTargets        []int32                `json:"import_targets,omitempty"`
-	ExportTargets        []int32                `json:"export_targets,omitempty"`
+	ImportTargets        []int64                `json:"import_targets,omitempty"`
+	ExportTargets        []int64                `json:"export_targets,omitempty"`
 	Tags                 []NestedTagRequest     `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -262,9 +262,9 @@ func (o *VRFRequest) SetComments(v string) {
 }
 
 // GetImportTargets returns the ImportTargets field value if set, zero value otherwise.
-func (o *VRFRequest) GetImportTargets() []int32 {
+func (o *VRFRequest) GetImportTargets() []int64 {
 	if o == nil || IsNil(o.ImportTargets) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.ImportTargets
@@ -272,7 +272,7 @@ func (o *VRFRequest) GetImportTargets() []int32 {
 
 // GetImportTargetsOk returns a tuple with the ImportTargets field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VRFRequest) GetImportTargetsOk() ([]int32, bool) {
+func (o *VRFRequest) GetImportTargetsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.ImportTargets) {
 		return nil, false
 	}
@@ -288,15 +288,15 @@ func (o *VRFRequest) HasImportTargets() bool {
 	return false
 }
 
-// SetImportTargets gets a reference to the given []int32 and assigns it to the ImportTargets field.
-func (o *VRFRequest) SetImportTargets(v []int32) {
+// SetImportTargets gets a reference to the given []int64 and assigns it to the ImportTargets field.
+func (o *VRFRequest) SetImportTargets(v []int64) {
 	o.ImportTargets = v
 }
 
 // GetExportTargets returns the ExportTargets field value if set, zero value otherwise.
-func (o *VRFRequest) GetExportTargets() []int32 {
+func (o *VRFRequest) GetExportTargets() []int64 {
 	if o == nil || IsNil(o.ExportTargets) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.ExportTargets
@@ -304,7 +304,7 @@ func (o *VRFRequest) GetExportTargets() []int32 {
 
 // GetExportTargetsOk returns a tuple with the ExportTargets field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VRFRequest) GetExportTargetsOk() ([]int32, bool) {
+func (o *VRFRequest) GetExportTargetsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.ExportTargets) {
 		return nil, false
 	}
@@ -320,8 +320,8 @@ func (o *VRFRequest) HasExportTargets() bool {
 	return false
 }
 
-// SetExportTargets gets a reference to the given []int32 and assigns it to the ExportTargets field.
-func (o *VRFRequest) SetExportTargets(v []int32) {
+// SetExportTargets gets a reference to the given []int64 and assigns it to the ExportTargets field.
+func (o *VRFRequest) SetExportTargets(v []int64) {
 	o.ExportTargets = v
 }
 

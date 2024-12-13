@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Domain** | Pointer to **string** |  | [optional] 
-**Master** | Pointer to **NullableInt32** |  | [optional] 
+**Master** | Pointer to **NullableInt64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -83,20 +83,20 @@ HasDomain returns a boolean if a field has been set.
 
 ### GetMaster
 
-`func (o *PatchedWritableVirtualChassisRequest) GetMaster() int32`
+`func (o *PatchedWritableVirtualChassisRequest) GetMaster() int64`
 
 GetMaster returns the Master field if non-nil, zero value otherwise.
 
 ### GetMasterOk
 
-`func (o *PatchedWritableVirtualChassisRequest) GetMasterOk() (*int32, bool)`
+`func (o *PatchedWritableVirtualChassisRequest) GetMasterOk() (*int64, bool)`
 
 GetMasterOk returns a tuple with the Master field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaster
 
-`func (o *PatchedWritableVirtualChassisRequest) SetMaster(v int32)`
+`func (o *PatchedWritableVirtualChassisRequest) SetMaster(v int64)`
 
 SetMaster sets Master field to given value.
 

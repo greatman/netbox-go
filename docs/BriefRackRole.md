@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewBriefRackRole
 
-`func NewBriefRackRole(id int32, url string, display string, name string, slug string, rackCount int64, ) *BriefRackRole`
+`func NewBriefRackRole(id int64, url string, display string, name string, slug string, rackCount int64, ) *BriefRackRole`
 
 NewBriefRackRole instantiates a new BriefRackRole object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefRackRole) GetId() int32`
+`func (o *BriefRackRole) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefRackRole) GetIdOk() (*int32, bool)`
+`func (o *BriefRackRole) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefRackRole) SetId(v int32)`
+`func (o *BriefRackRole) SetId(v int64)`
 
 SetId sets Id field to given value.
 

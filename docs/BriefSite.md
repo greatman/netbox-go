@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** | Full name of the site | 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewBriefSite
 
-`func NewBriefSite(id int32, url string, display string, name string, slug string, ) *BriefSite`
+`func NewBriefSite(id int64, url string, display string, name string, slug string, ) *BriefSite`
 
 NewBriefSite instantiates a new BriefSite object
 This constructor will assign default values to properties that have it defined,
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefSite) GetId() int32`
+`func (o *BriefSite) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefSite) GetIdOk() (*int32, bool)`
+`func (o *BriefSite) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefSite) SetId(v int32)`
+`func (o *BriefSite) SetId(v int64)`
 
 SetId sets Id field to given value.
 

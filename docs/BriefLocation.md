@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**RackCount** | **int32** |  | [readonly] [default to 0]
-**Depth** | **int32** |  | [readonly] 
+**RackCount** | **int64** |  | [readonly] [default to 0]
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewBriefLocation
 
-`func NewBriefLocation(id int32, url string, display string, name string, slug string, rackCount int32, depth int32, ) *BriefLocation`
+`func NewBriefLocation(id int64, url string, display string, name string, slug string, rackCount int64, depth int64, ) *BriefLocation`
 
 NewBriefLocation instantiates a new BriefLocation object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefLocation) GetId() int32`
+`func (o *BriefLocation) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefLocation) GetIdOk() (*int32, bool)`
+`func (o *BriefLocation) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefLocation) SetId(v int32)`
+`func (o *BriefLocation) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -159,40 +159,40 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetRackCount
 
-`func (o *BriefLocation) GetRackCount() int32`
+`func (o *BriefLocation) GetRackCount() int64`
 
 GetRackCount returns the RackCount field if non-nil, zero value otherwise.
 
 ### GetRackCountOk
 
-`func (o *BriefLocation) GetRackCountOk() (*int32, bool)`
+`func (o *BriefLocation) GetRackCountOk() (*int64, bool)`
 
 GetRackCountOk returns a tuple with the RackCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRackCount
 
-`func (o *BriefLocation) SetRackCount(v int32)`
+`func (o *BriefLocation) SetRackCount(v int64)`
 
 SetRackCount sets RackCount field to given value.
 
 
 ### GetDepth
 
-`func (o *BriefLocation) GetDepth() int32`
+`func (o *BriefLocation) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *BriefLocation) GetDepthOk() (*int32, bool)`
+`func (o *BriefLocation) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *BriefLocation) SetDepth(v int32)`
+`func (o *BriefLocation) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

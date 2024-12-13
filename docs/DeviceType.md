@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -29,22 +29,22 @@ Name | Type | Description | Notes
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
 **DeviceCount** | **int64** |  | [readonly] 
-**ConsolePortTemplateCount** | **int32** |  | [readonly] 
-**ConsoleServerPortTemplateCount** | **int32** |  | [readonly] 
-**PowerPortTemplateCount** | **int32** |  | [readonly] 
-**PowerOutletTemplateCount** | **int32** |  | [readonly] 
-**InterfaceTemplateCount** | **int32** |  | [readonly] 
-**FrontPortTemplateCount** | **int32** |  | [readonly] 
-**RearPortTemplateCount** | **int32** |  | [readonly] 
-**DeviceBayTemplateCount** | **int32** |  | [readonly] 
-**ModuleBayTemplateCount** | **int32** |  | [readonly] 
-**InventoryItemTemplateCount** | **int32** |  | [readonly] 
+**ConsolePortTemplateCount** | **int64** |  | [readonly] 
+**ConsoleServerPortTemplateCount** | **int64** |  | [readonly] 
+**PowerPortTemplateCount** | **int64** |  | [readonly] 
+**PowerOutletTemplateCount** | **int64** |  | [readonly] 
+**InterfaceTemplateCount** | **int64** |  | [readonly] 
+**FrontPortTemplateCount** | **int64** |  | [readonly] 
+**RearPortTemplateCount** | **int64** |  | [readonly] 
+**DeviceBayTemplateCount** | **int64** |  | [readonly] 
+**ModuleBayTemplateCount** | **int64** |  | [readonly] 
+**InventoryItemTemplateCount** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewDeviceType
 
-`func NewDeviceType(id int32, url string, displayUrl string, display string, manufacturer BriefManufacturer, model string, slug string, created NullableTime, lastUpdated NullableTime, deviceCount int64, consolePortTemplateCount int32, consoleServerPortTemplateCount int32, powerPortTemplateCount int32, powerOutletTemplateCount int32, interfaceTemplateCount int32, frontPortTemplateCount int32, rearPortTemplateCount int32, deviceBayTemplateCount int32, moduleBayTemplateCount int32, inventoryItemTemplateCount int32, ) *DeviceType`
+`func NewDeviceType(id int64, url string, displayUrl string, display string, manufacturer BriefManufacturer, model string, slug string, created NullableTime, lastUpdated NullableTime, deviceCount int64, consolePortTemplateCount int64, consoleServerPortTemplateCount int64, powerPortTemplateCount int64, powerOutletTemplateCount int64, interfaceTemplateCount int64, frontPortTemplateCount int64, rearPortTemplateCount int64, deviceBayTemplateCount int64, moduleBayTemplateCount int64, inventoryItemTemplateCount int64, ) *DeviceType`
 
 NewDeviceType instantiates a new DeviceType object
 This constructor will assign default values to properties that have it defined,
@@ -61,20 +61,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *DeviceType) GetId() int32`
+`func (o *DeviceType) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *DeviceType) GetIdOk() (*int32, bool)`
+`func (o *DeviceType) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *DeviceType) SetId(v int32)`
+`func (o *DeviceType) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -726,200 +726,200 @@ SetDeviceCount sets DeviceCount field to given value.
 
 ### GetConsolePortTemplateCount
 
-`func (o *DeviceType) GetConsolePortTemplateCount() int32`
+`func (o *DeviceType) GetConsolePortTemplateCount() int64`
 
 GetConsolePortTemplateCount returns the ConsolePortTemplateCount field if non-nil, zero value otherwise.
 
 ### GetConsolePortTemplateCountOk
 
-`func (o *DeviceType) GetConsolePortTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetConsolePortTemplateCountOk() (*int64, bool)`
 
 GetConsolePortTemplateCountOk returns a tuple with the ConsolePortTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConsolePortTemplateCount
 
-`func (o *DeviceType) SetConsolePortTemplateCount(v int32)`
+`func (o *DeviceType) SetConsolePortTemplateCount(v int64)`
 
 SetConsolePortTemplateCount sets ConsolePortTemplateCount field to given value.
 
 
 ### GetConsoleServerPortTemplateCount
 
-`func (o *DeviceType) GetConsoleServerPortTemplateCount() int32`
+`func (o *DeviceType) GetConsoleServerPortTemplateCount() int64`
 
 GetConsoleServerPortTemplateCount returns the ConsoleServerPortTemplateCount field if non-nil, zero value otherwise.
 
 ### GetConsoleServerPortTemplateCountOk
 
-`func (o *DeviceType) GetConsoleServerPortTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetConsoleServerPortTemplateCountOk() (*int64, bool)`
 
 GetConsoleServerPortTemplateCountOk returns a tuple with the ConsoleServerPortTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConsoleServerPortTemplateCount
 
-`func (o *DeviceType) SetConsoleServerPortTemplateCount(v int32)`
+`func (o *DeviceType) SetConsoleServerPortTemplateCount(v int64)`
 
 SetConsoleServerPortTemplateCount sets ConsoleServerPortTemplateCount field to given value.
 
 
 ### GetPowerPortTemplateCount
 
-`func (o *DeviceType) GetPowerPortTemplateCount() int32`
+`func (o *DeviceType) GetPowerPortTemplateCount() int64`
 
 GetPowerPortTemplateCount returns the PowerPortTemplateCount field if non-nil, zero value otherwise.
 
 ### GetPowerPortTemplateCountOk
 
-`func (o *DeviceType) GetPowerPortTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetPowerPortTemplateCountOk() (*int64, bool)`
 
 GetPowerPortTemplateCountOk returns a tuple with the PowerPortTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPowerPortTemplateCount
 
-`func (o *DeviceType) SetPowerPortTemplateCount(v int32)`
+`func (o *DeviceType) SetPowerPortTemplateCount(v int64)`
 
 SetPowerPortTemplateCount sets PowerPortTemplateCount field to given value.
 
 
 ### GetPowerOutletTemplateCount
 
-`func (o *DeviceType) GetPowerOutletTemplateCount() int32`
+`func (o *DeviceType) GetPowerOutletTemplateCount() int64`
 
 GetPowerOutletTemplateCount returns the PowerOutletTemplateCount field if non-nil, zero value otherwise.
 
 ### GetPowerOutletTemplateCountOk
 
-`func (o *DeviceType) GetPowerOutletTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetPowerOutletTemplateCountOk() (*int64, bool)`
 
 GetPowerOutletTemplateCountOk returns a tuple with the PowerOutletTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPowerOutletTemplateCount
 
-`func (o *DeviceType) SetPowerOutletTemplateCount(v int32)`
+`func (o *DeviceType) SetPowerOutletTemplateCount(v int64)`
 
 SetPowerOutletTemplateCount sets PowerOutletTemplateCount field to given value.
 
 
 ### GetInterfaceTemplateCount
 
-`func (o *DeviceType) GetInterfaceTemplateCount() int32`
+`func (o *DeviceType) GetInterfaceTemplateCount() int64`
 
 GetInterfaceTemplateCount returns the InterfaceTemplateCount field if non-nil, zero value otherwise.
 
 ### GetInterfaceTemplateCountOk
 
-`func (o *DeviceType) GetInterfaceTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetInterfaceTemplateCountOk() (*int64, bool)`
 
 GetInterfaceTemplateCountOk returns a tuple with the InterfaceTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterfaceTemplateCount
 
-`func (o *DeviceType) SetInterfaceTemplateCount(v int32)`
+`func (o *DeviceType) SetInterfaceTemplateCount(v int64)`
 
 SetInterfaceTemplateCount sets InterfaceTemplateCount field to given value.
 
 
 ### GetFrontPortTemplateCount
 
-`func (o *DeviceType) GetFrontPortTemplateCount() int32`
+`func (o *DeviceType) GetFrontPortTemplateCount() int64`
 
 GetFrontPortTemplateCount returns the FrontPortTemplateCount field if non-nil, zero value otherwise.
 
 ### GetFrontPortTemplateCountOk
 
-`func (o *DeviceType) GetFrontPortTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetFrontPortTemplateCountOk() (*int64, bool)`
 
 GetFrontPortTemplateCountOk returns a tuple with the FrontPortTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFrontPortTemplateCount
 
-`func (o *DeviceType) SetFrontPortTemplateCount(v int32)`
+`func (o *DeviceType) SetFrontPortTemplateCount(v int64)`
 
 SetFrontPortTemplateCount sets FrontPortTemplateCount field to given value.
 
 
 ### GetRearPortTemplateCount
 
-`func (o *DeviceType) GetRearPortTemplateCount() int32`
+`func (o *DeviceType) GetRearPortTemplateCount() int64`
 
 GetRearPortTemplateCount returns the RearPortTemplateCount field if non-nil, zero value otherwise.
 
 ### GetRearPortTemplateCountOk
 
-`func (o *DeviceType) GetRearPortTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetRearPortTemplateCountOk() (*int64, bool)`
 
 GetRearPortTemplateCountOk returns a tuple with the RearPortTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRearPortTemplateCount
 
-`func (o *DeviceType) SetRearPortTemplateCount(v int32)`
+`func (o *DeviceType) SetRearPortTemplateCount(v int64)`
 
 SetRearPortTemplateCount sets RearPortTemplateCount field to given value.
 
 
 ### GetDeviceBayTemplateCount
 
-`func (o *DeviceType) GetDeviceBayTemplateCount() int32`
+`func (o *DeviceType) GetDeviceBayTemplateCount() int64`
 
 GetDeviceBayTemplateCount returns the DeviceBayTemplateCount field if non-nil, zero value otherwise.
 
 ### GetDeviceBayTemplateCountOk
 
-`func (o *DeviceType) GetDeviceBayTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetDeviceBayTemplateCountOk() (*int64, bool)`
 
 GetDeviceBayTemplateCountOk returns a tuple with the DeviceBayTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeviceBayTemplateCount
 
-`func (o *DeviceType) SetDeviceBayTemplateCount(v int32)`
+`func (o *DeviceType) SetDeviceBayTemplateCount(v int64)`
 
 SetDeviceBayTemplateCount sets DeviceBayTemplateCount field to given value.
 
 
 ### GetModuleBayTemplateCount
 
-`func (o *DeviceType) GetModuleBayTemplateCount() int32`
+`func (o *DeviceType) GetModuleBayTemplateCount() int64`
 
 GetModuleBayTemplateCount returns the ModuleBayTemplateCount field if non-nil, zero value otherwise.
 
 ### GetModuleBayTemplateCountOk
 
-`func (o *DeviceType) GetModuleBayTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetModuleBayTemplateCountOk() (*int64, bool)`
 
 GetModuleBayTemplateCountOk returns a tuple with the ModuleBayTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetModuleBayTemplateCount
 
-`func (o *DeviceType) SetModuleBayTemplateCount(v int32)`
+`func (o *DeviceType) SetModuleBayTemplateCount(v int64)`
 
 SetModuleBayTemplateCount sets ModuleBayTemplateCount field to given value.
 
 
 ### GetInventoryItemTemplateCount
 
-`func (o *DeviceType) GetInventoryItemTemplateCount() int32`
+`func (o *DeviceType) GetInventoryItemTemplateCount() int64`
 
 GetInventoryItemTemplateCount returns the InventoryItemTemplateCount field if non-nil, zero value otherwise.
 
 ### GetInventoryItemTemplateCountOk
 
-`func (o *DeviceType) GetInventoryItemTemplateCountOk() (*int32, bool)`
+`func (o *DeviceType) GetInventoryItemTemplateCountOk() (*int64, bool)`
 
 GetInventoryItemTemplateCountOk returns a tuple with the InventoryItemTemplateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInventoryItemTemplateCount
 
-`func (o *DeviceType) SetInventoryItemTemplateCount(v int32)`
+`func (o *DeviceType) SetInventoryItemTemplateCount(v int64)`
 
 SetInventoryItemTemplateCount sets InventoryItemTemplateCount field to given value.
 

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **VirtualMachine** | Pointer to [**NullableBriefVirtualMachineRequest**](BriefVirtualMachineRequest.md) |  | [optional] 
 **Name** | **string** |  | 
 **Protocol** | Pointer to [**PatchedWritableServiceRequestProtocol**](PatchedWritableServiceRequestProtocol.md) |  | [optional] 
-**Ports** | **[]int32** |  | 
-**Ipaddresses** | Pointer to **[]int32** |  | [optional] 
+**Ports** | **[]int64** |  | 
+**Ipaddresses** | Pointer to **[]int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewServiceRequest
 
-`func NewServiceRequest(name string, ports []int32, ) *ServiceRequest`
+`func NewServiceRequest(name string, ports []int64, ) *ServiceRequest`
 
 NewServiceRequest instantiates a new ServiceRequest object
 This constructor will assign default values to properties that have it defined,
@@ -151,40 +151,40 @@ HasProtocol returns a boolean if a field has been set.
 
 ### GetPorts
 
-`func (o *ServiceRequest) GetPorts() []int32`
+`func (o *ServiceRequest) GetPorts() []int64`
 
 GetPorts returns the Ports field if non-nil, zero value otherwise.
 
 ### GetPortsOk
 
-`func (o *ServiceRequest) GetPortsOk() (*[]int32, bool)`
+`func (o *ServiceRequest) GetPortsOk() (*[]int64, bool)`
 
 GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPorts
 
-`func (o *ServiceRequest) SetPorts(v []int32)`
+`func (o *ServiceRequest) SetPorts(v []int64)`
 
 SetPorts sets Ports field to given value.
 
 
 ### GetIpaddresses
 
-`func (o *ServiceRequest) GetIpaddresses() []int32`
+`func (o *ServiceRequest) GetIpaddresses() []int64`
 
 GetIpaddresses returns the Ipaddresses field if non-nil, zero value otherwise.
 
 ### GetIpaddressesOk
 
-`func (o *ServiceRequest) GetIpaddressesOk() (*[]int32, bool)`
+`func (o *ServiceRequest) GetIpaddressesOk() (*[]int64, bool)`
 
 GetIpaddressesOk returns a tuple with the Ipaddresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpaddresses
 
-`func (o *ServiceRequest) SetIpaddresses(v []int32)`
+`func (o *ServiceRequest) SetIpaddresses(v []int64)`
 
 SetIpaddresses sets Ipaddresses field to given value.
 

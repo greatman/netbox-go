@@ -20,7 +20,7 @@ var _ MappedNullable = &AvailablePrefix{}
 
 // AvailablePrefix Representation of a prefix which does not exist in the database.
 type AvailablePrefix struct {
-	Family               int32            `json:"family"`
+	Family               int64            `json:"family"`
 	Prefix               string           `json:"prefix"`
 	Vrf                  NullableBriefVRF `json:"vrf"`
 	AdditionalProperties map[string]interface{}
@@ -32,7 +32,7 @@ type _AvailablePrefix AvailablePrefix
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAvailablePrefix(family int32, prefix string, vrf NullableBriefVRF) *AvailablePrefix {
+func NewAvailablePrefix(family int64, prefix string, vrf NullableBriefVRF) *AvailablePrefix {
 	this := AvailablePrefix{}
 	this.Family = family
 	this.Prefix = prefix
@@ -49,9 +49,9 @@ func NewAvailablePrefixWithDefaults() *AvailablePrefix {
 }
 
 // GetFamily returns the Family field value
-func (o *AvailablePrefix) GetFamily() int32 {
+func (o *AvailablePrefix) GetFamily() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *AvailablePrefix) GetFamily() int32 {
 
 // GetFamilyOk returns a tuple with the Family field value
 // and a boolean to check if the value has been set.
-func (o *AvailablePrefix) GetFamilyOk() (*int32, bool) {
+func (o *AvailablePrefix) GetFamilyOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *AvailablePrefix) GetFamilyOk() (*int32, bool) {
 }
 
 // SetFamily sets field value
-func (o *AvailablePrefix) SetFamily(v int32) {
+func (o *AvailablePrefix) SetFamily(v int64) {
 	o.Family = v
 }
 

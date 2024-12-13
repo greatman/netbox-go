@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Site** | Pointer to [**NullableBriefSite**](BriefSite.md) |  | [optional] 
 **Group** | Pointer to [**NullableBriefVLANGroup**](BriefVLANGroup.md) |  | [optional] 
-**Vid** | **int32** | Numeric VLAN ID (1-4094) | 
+**Vid** | **int64** | Numeric VLAN ID (1-4094) | 
 **Name** | **string** |  | 
 **Tenant** | Pointer to [**NullableBriefTenant**](BriefTenant.md) |  | [optional] 
 **Status** | Pointer to [**IPRangeStatus**](IPRangeStatus.md) |  | [optional] 
@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 
 ### NewVLAN
 
-`func NewVLAN(id int32, url string, displayUrl string, display string, vid int32, name string, l2vpnTermination NullableBriefL2VPNTermination, created NullableTime, lastUpdated NullableTime, prefixCount int64, ) *VLAN`
+`func NewVLAN(id int64, url string, displayUrl string, display string, vid int64, name string, l2vpnTermination NullableBriefL2VPNTermination, created NullableTime, lastUpdated NullableTime, prefixCount int64, ) *VLAN`
 
 NewVLAN instantiates a new VLAN object
 This constructor will assign default values to properties that have it defined,
@@ -47,20 +47,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VLAN) GetId() int32`
+`func (o *VLAN) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VLAN) GetIdOk() (*int32, bool)`
+`func (o *VLAN) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VLAN) SetId(v int32)`
+`func (o *VLAN) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -197,20 +197,20 @@ HasGroup returns a boolean if a field has been set.
 UnsetGroup ensures that no value is present for Group, not even an explicit nil
 ### GetVid
 
-`func (o *VLAN) GetVid() int32`
+`func (o *VLAN) GetVid() int64`
 
 GetVid returns the Vid field if non-nil, zero value otherwise.
 
 ### GetVidOk
 
-`func (o *VLAN) GetVidOk() (*int32, bool)`
+`func (o *VLAN) GetVidOk() (*int64, bool)`
 
 GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVid
 
-`func (o *VLAN) SetVid(v int32)`
+`func (o *VLAN) SetVid(v int64)`
 
 SetVid sets Vid field to given value.
 

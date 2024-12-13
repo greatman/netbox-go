@@ -30,7 +30,7 @@ type WritableInterfaceTemplateRequest struct {
 	Enabled              *bool                                   `json:"enabled,omitempty"`
 	MgmtOnly             *bool                                   `json:"mgmt_only,omitempty"`
 	Description          *string                                 `json:"description,omitempty"`
-	Bridge               NullableInt32                           `json:"bridge,omitempty"`
+	Bridge               NullableInt64                           `json:"bridge,omitempty"`
 	PoeMode              NullableInterfaceTemplateRequestPoeMode `json:"poe_mode,omitempty"`
 	PoeType              NullableInterfaceTemplateRequestPoeType `json:"poe_type,omitempty"`
 	RfRole               NullableWirelessRole                    `json:"rf_role,omitempty"`
@@ -321,9 +321,9 @@ func (o *WritableInterfaceTemplateRequest) SetDescription(v string) {
 }
 
 // GetBridge returns the Bridge field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableInterfaceTemplateRequest) GetBridge() int32 {
+func (o *WritableInterfaceTemplateRequest) GetBridge() int64 {
 	if o == nil || IsNil(o.Bridge.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Bridge.Get()
@@ -332,7 +332,7 @@ func (o *WritableInterfaceTemplateRequest) GetBridge() int32 {
 // GetBridgeOk returns a tuple with the Bridge field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableInterfaceTemplateRequest) GetBridgeOk() (*int32, bool) {
+func (o *WritableInterfaceTemplateRequest) GetBridgeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -348,8 +348,8 @@ func (o *WritableInterfaceTemplateRequest) HasBridge() bool {
 	return false
 }
 
-// SetBridge gets a reference to the given NullableInt32 and assigns it to the Bridge field.
-func (o *WritableInterfaceTemplateRequest) SetBridge(v int32) {
+// SetBridge gets a reference to the given NullableInt64 and assigns it to the Bridge field.
+func (o *WritableInterfaceTemplateRequest) SetBridge(v int64) {
 	o.Bridge.Set(&v)
 }
 

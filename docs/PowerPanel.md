@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewPowerPanel
 
-`func NewPowerPanel(id int32, url string, displayUrl string, display string, site BriefSite, name string, powerfeedCount int64, created NullableTime, lastUpdated NullableTime, ) *PowerPanel`
+`func NewPowerPanel(id int64, url string, displayUrl string, display string, site BriefSite, name string, powerfeedCount int64, created NullableTime, lastUpdated NullableTime, ) *PowerPanel`
 
 NewPowerPanel instantiates a new PowerPanel object
 This constructor will assign default values to properties that have it defined,
@@ -40,20 +40,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PowerPanel) GetId() int32`
+`func (o *PowerPanel) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PowerPanel) GetIdOk() (*int32, bool)`
+`func (o *PowerPanel) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PowerPanel) SetId(v int32)`
+`func (o *PowerPanel) SetId(v int64)`
 
 SetId sets Id field to given value.
 

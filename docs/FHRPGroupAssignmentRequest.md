@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **Group** | [**BriefFHRPGroupRequest**](BriefFHRPGroupRequest.md) |  | 
 **InterfaceType** | **string** |  | 
 **InterfaceId** | **int64** |  | 
-**Priority** | **int32** |  | 
+**Priority** | **int64** |  | 
 
 ## Methods
 
 ### NewFHRPGroupAssignmentRequest
 
-`func NewFHRPGroupAssignmentRequest(group BriefFHRPGroupRequest, interfaceType string, interfaceId int64, priority int32, ) *FHRPGroupAssignmentRequest`
+`func NewFHRPGroupAssignmentRequest(group BriefFHRPGroupRequest, interfaceType string, interfaceId int64, priority int64, ) *FHRPGroupAssignmentRequest`
 
 NewFHRPGroupAssignmentRequest instantiates a new FHRPGroupAssignmentRequest object
 This constructor will assign default values to properties that have it defined,
@@ -90,20 +90,20 @@ SetInterfaceId sets InterfaceId field to given value.
 
 ### GetPriority
 
-`func (o *FHRPGroupAssignmentRequest) GetPriority() int32`
+`func (o *FHRPGroupAssignmentRequest) GetPriority() int64`
 
 GetPriority returns the Priority field if non-nil, zero value otherwise.
 
 ### GetPriorityOk
 
-`func (o *FHRPGroupAssignmentRequest) GetPriorityOk() (*int32, bool)`
+`func (o *FHRPGroupAssignmentRequest) GetPriorityOk() (*int64, bool)`
 
 GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriority
 
-`func (o *FHRPGroupAssignmentRequest) SetPriority(v int32)`
+`func (o *FHRPGroupAssignmentRequest) SetPriority(v int64)`
 
 SetPriority sets Priority field to given value.
 

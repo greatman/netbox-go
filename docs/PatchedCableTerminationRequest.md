@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Cable** | Pointer to **int32** |  | [optional] 
+**Cable** | Pointer to **int64** |  | [optional] 
 **CableEnd** | Pointer to [**End1**](End1.md) |  | [optional] 
 **TerminationType** | Pointer to **string** |  | [optional] 
 **TerminationId** | Pointer to **int64** |  | [optional] 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCable
 
-`func (o *PatchedCableTerminationRequest) GetCable() int32`
+`func (o *PatchedCableTerminationRequest) GetCable() int64`
 
 GetCable returns the Cable field if non-nil, zero value otherwise.
 
 ### GetCableOk
 
-`func (o *PatchedCableTerminationRequest) GetCableOk() (*int32, bool)`
+`func (o *PatchedCableTerminationRequest) GetCableOk() (*int64, bool)`
 
 GetCableOk returns a tuple with the Cable field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCable
 
-`func (o *PatchedCableTerminationRequest) SetCable(v int32)`
+`func (o *PatchedCableTerminationRequest) SetCable(v int64)`
 
 SetCable sets Cable field to given value.
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Role** | Pointer to [**NullablePatchedWritableIPAddressRequestRole**](PatchedWritableIPAddressRequestRole.md) |  | [optional] 
 **AssignedObjectType** | Pointer to **NullableString** |  | [optional] 
 **AssignedObjectId** | Pointer to **NullableInt64** |  | [optional] 
-**NatInside** | Pointer to **NullableInt32** | The IP for which this address is the \&quot;outside\&quot; IP | [optional] 
+**NatInside** | Pointer to **NullableInt64** | The IP for which this address is the \&quot;outside\&quot; IP | [optional] 
 **DnsName** | Pointer to **string** | Hostname or FQDN (not case-sensitive) | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
@@ -264,20 +264,20 @@ HasAssignedObjectId returns a boolean if a field has been set.
 UnsetAssignedObjectId ensures that no value is present for AssignedObjectId, not even an explicit nil
 ### GetNatInside
 
-`func (o *PatchedWritableIPAddressRequest) GetNatInside() int32`
+`func (o *PatchedWritableIPAddressRequest) GetNatInside() int64`
 
 GetNatInside returns the NatInside field if non-nil, zero value otherwise.
 
 ### GetNatInsideOk
 
-`func (o *PatchedWritableIPAddressRequest) GetNatInsideOk() (*int32, bool)`
+`func (o *PatchedWritableIPAddressRequest) GetNatInsideOk() (*int64, bool)`
 
 GetNatInsideOk returns a tuple with the NatInside field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNatInside
 
-`func (o *PatchedWritableIPAddressRequest) SetNatInside(v int32)`
+`func (o *PatchedWritableIPAddressRequest) SetNatInside(v int64)`
 
 SetNatInside sets NatInside field to given value.
 

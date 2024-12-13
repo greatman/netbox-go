@@ -16,7 +16,7 @@ import (
 )
 
 // PatchedWritableIKEPolicyRequestVersion * `1` - IKEv1 * `2` - IKEv2
-type PatchedWritableIKEPolicyRequestVersion int32
+type PatchedWritableIKEPolicyRequestVersion int64
 
 // List of PatchedWritableIKEPolicyRequest_version
 const (
@@ -31,7 +31,7 @@ var AllowedPatchedWritableIKEPolicyRequestVersionEnumValues = []PatchedWritableI
 }
 
 func (v *PatchedWritableIKEPolicyRequestVersion) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -49,7 +49,7 @@ func (v *PatchedWritableIKEPolicyRequestVersion) UnmarshalJSON(src []byte) error
 
 // NewPatchedWritableIKEPolicyRequestVersionFromValue returns a pointer to a valid PatchedWritableIKEPolicyRequestVersion
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewPatchedWritableIKEPolicyRequestVersionFromValue(v int32) (*PatchedWritableIKEPolicyRequestVersion, error) {
+func NewPatchedWritableIKEPolicyRequestVersionFromValue(v int64) (*PatchedWritableIKEPolicyRequestVersion, error) {
 	ev := PatchedWritableIKEPolicyRequestVersion(v)
 	if ev.IsValid() {
 		return &ev, nil

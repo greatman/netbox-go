@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -16,15 +16,15 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**SiteCount** | **int32** |  | [readonly] [default to 0]
+**SiteCount** | **int64** |  | [readonly] [default to 0]
 **PrefixCount** | **int64** |  | [readonly] 
-**Depth** | **int32** |  | [readonly] 
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewSiteGroup
 
-`func NewSiteGroup(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, siteCount int32, prefixCount int64, depth int32, ) *SiteGroup`
+`func NewSiteGroup(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, siteCount int64, prefixCount int64, depth int64, ) *SiteGroup`
 
 NewSiteGroup instantiates a new SiteGroup object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *SiteGroup) GetId() int32`
+`func (o *SiteGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *SiteGroup) GetIdOk() (*int32, bool)`
+`func (o *SiteGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *SiteGroup) SetId(v int32)`
+`func (o *SiteGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -331,20 +331,20 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetSiteCount
 
-`func (o *SiteGroup) GetSiteCount() int32`
+`func (o *SiteGroup) GetSiteCount() int64`
 
 GetSiteCount returns the SiteCount field if non-nil, zero value otherwise.
 
 ### GetSiteCountOk
 
-`func (o *SiteGroup) GetSiteCountOk() (*int32, bool)`
+`func (o *SiteGroup) GetSiteCountOk() (*int64, bool)`
 
 GetSiteCountOk returns a tuple with the SiteCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSiteCount
 
-`func (o *SiteGroup) SetSiteCount(v int32)`
+`func (o *SiteGroup) SetSiteCount(v int64)`
 
 SetSiteCount sets SiteCount field to given value.
 
@@ -371,20 +371,20 @@ SetPrefixCount sets PrefixCount field to given value.
 
 ### GetDepth
 
-`func (o *SiteGroup) GetDepth() int32`
+`func (o *SiteGroup) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *SiteGroup) GetDepthOk() (*int32, bool)`
+`func (o *SiteGroup) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *SiteGroup) SetDepth(v int32)`
+`func (o *SiteGroup) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

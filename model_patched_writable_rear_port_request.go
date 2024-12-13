@@ -27,7 +27,7 @@ type PatchedWritableRearPortRequest struct {
 	Type  *FrontPortTypeValue `json:"type,omitempty"`
 	Color *string             `json:"color,omitempty" validate:"regexp=^[0-9a-f]{6}$"`
 	// Number of front ports which may be mapped
-	Positions   *int32  `json:"positions,omitempty"`
+	Positions   *int64  `json:"positions,omitempty"`
 	Description *string `json:"description,omitempty"`
 	// Treat as if a cable is connected
 	MarkConnected        *bool                  `json:"mark_connected,omitempty"`
@@ -259,9 +259,9 @@ func (o *PatchedWritableRearPortRequest) SetColor(v string) {
 }
 
 // GetPositions returns the Positions field value if set, zero value otherwise.
-func (o *PatchedWritableRearPortRequest) GetPositions() int32 {
+func (o *PatchedWritableRearPortRequest) GetPositions() int64 {
 	if o == nil || IsNil(o.Positions) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Positions
@@ -269,7 +269,7 @@ func (o *PatchedWritableRearPortRequest) GetPositions() int32 {
 
 // GetPositionsOk returns a tuple with the Positions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableRearPortRequest) GetPositionsOk() (*int32, bool) {
+func (o *PatchedWritableRearPortRequest) GetPositionsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Positions) {
 		return nil, false
 	}
@@ -285,8 +285,8 @@ func (o *PatchedWritableRearPortRequest) HasPositions() bool {
 	return false
 }
 
-// SetPositions gets a reference to the given int32 and assigns it to the Positions field.
-func (o *PatchedWritableRearPortRequest) SetPositions(v int32) {
+// SetPositions gets a reference to the given int64 and assigns it to the Positions field.
+func (o *PatchedWritableRearPortRequest) SetPositions(v int64) {
 	o.Positions = &v
 }
 

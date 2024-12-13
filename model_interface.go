@@ -21,7 +21,7 @@ var _ MappedNullable = &Interface{}
 
 // Interface Adds support for custom fields and tags.
 type Interface struct {
-	Id         int32                  `json:"id"`
+	Id         int64                  `json:"id"`
 	Url        string                 `json:"url"`
 	DisplayUrl string                 `json:"display_url"`
 	Display    string                 `json:"display"`
@@ -36,11 +36,11 @@ type Interface struct {
 	Parent            NullableNestedInterface `json:"parent,omitempty"`
 	Bridge            NullableNestedInterface `json:"bridge,omitempty"`
 	Lag               NullableNestedInterface `json:"lag,omitempty"`
-	Mtu               NullableInt32           `json:"mtu,omitempty"`
+	Mtu               NullableInt64           `json:"mtu,omitempty"`
 	MacAddress        NullableString          `json:"mac_address"`
 	PrimaryMacAddress NullableBriefMACAddress `json:"primary_mac_address,omitempty"`
 	MacAddresses      []BriefMACAddress       `json:"mac_addresses"`
-	Speed             NullableInt32           `json:"speed,omitempty"`
+	Speed             NullableInt64           `json:"speed,omitempty"`
 	Duplex            NullableInterfaceDuplex `json:"duplex,omitempty"`
 	Wwn               NullableString          `json:"wwn,omitempty"`
 	// This interface is used only for out-of-band management
@@ -55,7 +55,7 @@ type Interface struct {
 	RfChannelFrequency NullableFloat64 `json:"rf_channel_frequency,omitempty"`
 	// Populated by selected channel (if set)
 	RfChannelWidth        NullableFloat64                    `json:"rf_channel_width,omitempty"`
-	TxPower               NullableInt32                      `json:"tx_power,omitempty"`
+	TxPower               NullableInt64                      `json:"tx_power,omitempty"`
 	UntaggedVlan          NullableBriefVLAN                  `json:"untagged_vlan,omitempty"`
 	TaggedVlans           []VLAN                             `json:"tagged_vlans,omitempty"`
 	QinqSvlan             NullableBriefVLAN                  `json:"qinq_svlan,omitempty"`
@@ -78,8 +78,8 @@ type Interface struct {
 	CustomFields                map[string]interface{}        `json:"custom_fields,omitempty"`
 	Created                     NullableTime                  `json:"created"`
 	LastUpdated                 NullableTime                  `json:"last_updated"`
-	CountIpaddresses            int32                         `json:"count_ipaddresses"`
-	CountFhrpGroups             int32                         `json:"count_fhrp_groups"`
+	CountIpaddresses            int64                         `json:"count_ipaddresses"`
+	CountFhrpGroups             int64                         `json:"count_fhrp_groups"`
 	Occupied                    bool                          `json:"_occupied"`
 	AdditionalProperties        map[string]interface{}
 }
@@ -90,7 +90,7 @@ type _Interface Interface
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInterface(id int32, url string, displayUrl string, display string, device BriefDevice, name string, type_ InterfaceType, macAddress NullableString, macAddresses []BriefMACAddress, cable NullableBriefCable, cableEnd string, wirelessLink NullableNestedWirelessLink, linkPeers []interface{}, linkPeersType NullableString, l2vpnTermination NullableBriefL2VPNTermination, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, countIpaddresses int32, countFhrpGroups int32, occupied bool) *Interface {
+func NewInterface(id int64, url string, displayUrl string, display string, device BriefDevice, name string, type_ InterfaceType, macAddress NullableString, macAddresses []BriefMACAddress, cable NullableBriefCable, cableEnd string, wirelessLink NullableNestedWirelessLink, linkPeers []interface{}, linkPeersType NullableString, l2vpnTermination NullableBriefL2VPNTermination, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, countIpaddresses int64, countFhrpGroups int64, occupied bool) *Interface {
 	this := Interface{}
 	this.Id = id
 	this.Url = url
@@ -127,9 +127,9 @@ func NewInterfaceWithDefaults() *Interface {
 }
 
 // GetId returns the Id field value
-func (o *Interface) GetId() int32 {
+func (o *Interface) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -138,7 +138,7 @@ func (o *Interface) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Interface) GetIdOk() (*int32, bool) {
+func (o *Interface) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -146,7 +146,7 @@ func (o *Interface) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Interface) SetId(v int32) {
+func (o *Interface) SetId(v int64) {
 	o.Id = v
 }
 
@@ -563,9 +563,9 @@ func (o *Interface) UnsetLag() {
 }
 
 // GetMtu returns the Mtu field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *Interface) GetMtu() int32 {
+func (o *Interface) GetMtu() int64 {
 	if o == nil || IsNil(o.Mtu.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Mtu.Get()
@@ -574,7 +574,7 @@ func (o *Interface) GetMtu() int32 {
 // GetMtuOk returns a tuple with the Mtu field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Interface) GetMtuOk() (*int32, bool) {
+func (o *Interface) GetMtuOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -590,8 +590,8 @@ func (o *Interface) HasMtu() bool {
 	return false
 }
 
-// SetMtu gets a reference to the given NullableInt32 and assigns it to the Mtu field.
-func (o *Interface) SetMtu(v int32) {
+// SetMtu gets a reference to the given NullableInt64 and assigns it to the Mtu field.
+func (o *Interface) SetMtu(v int64) {
 	o.Mtu.Set(&v)
 }
 
@@ -701,9 +701,9 @@ func (o *Interface) SetMacAddresses(v []BriefMACAddress) {
 }
 
 // GetSpeed returns the Speed field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *Interface) GetSpeed() int32 {
+func (o *Interface) GetSpeed() int64 {
 	if o == nil || IsNil(o.Speed.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Speed.Get()
@@ -712,7 +712,7 @@ func (o *Interface) GetSpeed() int32 {
 // GetSpeedOk returns a tuple with the Speed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Interface) GetSpeedOk() (*int32, bool) {
+func (o *Interface) GetSpeedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -728,8 +728,8 @@ func (o *Interface) HasSpeed() bool {
 	return false
 }
 
-// SetSpeed gets a reference to the given NullableInt32 and assigns it to the Speed field.
-func (o *Interface) SetSpeed(v int32) {
+// SetSpeed gets a reference to the given NullableInt64 and assigns it to the Speed field.
+func (o *Interface) SetSpeed(v int64) {
 	o.Speed.Set(&v)
 }
 
@@ -1140,9 +1140,9 @@ func (o *Interface) UnsetRfChannelWidth() {
 }
 
 // GetTxPower returns the TxPower field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *Interface) GetTxPower() int32 {
+func (o *Interface) GetTxPower() int64 {
 	if o == nil || IsNil(o.TxPower.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.TxPower.Get()
@@ -1151,7 +1151,7 @@ func (o *Interface) GetTxPower() int32 {
 // GetTxPowerOk returns a tuple with the TxPower field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Interface) GetTxPowerOk() (*int32, bool) {
+func (o *Interface) GetTxPowerOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1167,8 +1167,8 @@ func (o *Interface) HasTxPower() bool {
 	return false
 }
 
-// SetTxPower gets a reference to the given NullableInt32 and assigns it to the TxPower field.
-func (o *Interface) SetTxPower(v int32) {
+// SetTxPower gets a reference to the given NullableInt64 and assigns it to the TxPower field.
+func (o *Interface) SetTxPower(v int64) {
 	o.TxPower.Set(&v)
 }
 
@@ -1795,9 +1795,9 @@ func (o *Interface) SetLastUpdated(v time.Time) {
 }
 
 // GetCountIpaddresses returns the CountIpaddresses field value
-func (o *Interface) GetCountIpaddresses() int32 {
+func (o *Interface) GetCountIpaddresses() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -1806,7 +1806,7 @@ func (o *Interface) GetCountIpaddresses() int32 {
 
 // GetCountIpaddressesOk returns a tuple with the CountIpaddresses field value
 // and a boolean to check if the value has been set.
-func (o *Interface) GetCountIpaddressesOk() (*int32, bool) {
+func (o *Interface) GetCountIpaddressesOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1814,14 +1814,14 @@ func (o *Interface) GetCountIpaddressesOk() (*int32, bool) {
 }
 
 // SetCountIpaddresses sets field value
-func (o *Interface) SetCountIpaddresses(v int32) {
+func (o *Interface) SetCountIpaddresses(v int64) {
 	o.CountIpaddresses = v
 }
 
 // GetCountFhrpGroups returns the CountFhrpGroups field value
-func (o *Interface) GetCountFhrpGroups() int32 {
+func (o *Interface) GetCountFhrpGroups() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -1830,7 +1830,7 @@ func (o *Interface) GetCountFhrpGroups() int32 {
 
 // GetCountFhrpGroupsOk returns a tuple with the CountFhrpGroups field value
 // and a boolean to check if the value has been set.
-func (o *Interface) GetCountFhrpGroupsOk() (*int32, bool) {
+func (o *Interface) GetCountFhrpGroupsOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1838,7 +1838,7 @@ func (o *Interface) GetCountFhrpGroupsOk() (*int32, bool) {
 }
 
 // SetCountFhrpGroups sets field value
-func (o *Interface) SetCountFhrpGroups(v int32) {
+func (o *Interface) SetCountFhrpGroups(v int64) {
 	o.CountFhrpGroups = v
 }
 

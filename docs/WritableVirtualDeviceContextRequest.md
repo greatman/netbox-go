@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
 **Device** | [**BriefDeviceRequest**](BriefDeviceRequest.md) |  | 
-**Identifier** | Pointer to **NullableInt32** |  | [optional] 
+**Identifier** | Pointer to **NullableInt64** |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **PrimaryIp4** | Pointer to [**NullableBriefIPAddressRequest**](BriefIPAddressRequest.md) |  | [optional] 
 **PrimaryIp6** | Pointer to [**NullableBriefIPAddressRequest**](BriefIPAddressRequest.md) |  | [optional] 
@@ -77,20 +77,20 @@ SetDevice sets Device field to given value.
 
 ### GetIdentifier
 
-`func (o *WritableVirtualDeviceContextRequest) GetIdentifier() int32`
+`func (o *WritableVirtualDeviceContextRequest) GetIdentifier() int64`
 
 GetIdentifier returns the Identifier field if non-nil, zero value otherwise.
 
 ### GetIdentifierOk
 
-`func (o *WritableVirtualDeviceContextRequest) GetIdentifierOk() (*int32, bool)`
+`func (o *WritableVirtualDeviceContextRequest) GetIdentifierOk() (*int64, bool)`
 
 GetIdentifierOk returns a tuple with the Identifier field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIdentifier
 
-`func (o *WritableVirtualDeviceContextRequest) SetIdentifier(v int32)`
+`func (o *WritableVirtualDeviceContextRequest) SetIdentifier(v int64)`
 
 SetIdentifier sets Identifier field to given value.
 

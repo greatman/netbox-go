@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Site** | Pointer to [**NullableBriefSiteRequest**](BriefSiteRequest.md) |  | [optional] 
 **Group** | Pointer to [**NullableBriefVLANGroupRequest**](BriefVLANGroupRequest.md) |  | [optional] 
-**Vid** | **int32** | Numeric VLAN ID (1-4094) | 
+**Vid** | **int64** | Numeric VLAN ID (1-4094) | 
 **Name** | **string** |  | 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **Status** | Pointer to [**PatchedWritableVLANRequestStatus**](PatchedWritableVLANRequestStatus.md) |  | [optional] 
 **Role** | Pointer to [**NullableBriefRoleRequest**](BriefRoleRequest.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **QinqRole** | Pointer to [**NullableQInQRole**](QInQRole.md) |  | [optional] 
-**QinqSvlan** | Pointer to **NullableInt32** |  | [optional] 
+**QinqSvlan** | Pointer to **NullableInt64** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewWritableVLANRequest
 
-`func NewWritableVLANRequest(vid int32, name string, ) *WritableVLANRequest`
+`func NewWritableVLANRequest(vid int64, name string, ) *WritableVLANRequest`
 
 NewWritableVLANRequest instantiates a new WritableVLANRequest object
 This constructor will assign default values to properties that have it defined,
@@ -109,20 +109,20 @@ HasGroup returns a boolean if a field has been set.
 UnsetGroup ensures that no value is present for Group, not even an explicit nil
 ### GetVid
 
-`func (o *WritableVLANRequest) GetVid() int32`
+`func (o *WritableVLANRequest) GetVid() int64`
 
 GetVid returns the Vid field if non-nil, zero value otherwise.
 
 ### GetVidOk
 
-`func (o *WritableVLANRequest) GetVidOk() (*int32, bool)`
+`func (o *WritableVLANRequest) GetVidOk() (*int64, bool)`
 
 GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVid
 
-`func (o *WritableVLANRequest) SetVid(v int32)`
+`func (o *WritableVLANRequest) SetVid(v int64)`
 
 SetVid sets Vid field to given value.
 
@@ -304,20 +304,20 @@ HasQinqRole returns a boolean if a field has been set.
 UnsetQinqRole ensures that no value is present for QinqRole, not even an explicit nil
 ### GetQinqSvlan
 
-`func (o *WritableVLANRequest) GetQinqSvlan() int32`
+`func (o *WritableVLANRequest) GetQinqSvlan() int64`
 
 GetQinqSvlan returns the QinqSvlan field if non-nil, zero value otherwise.
 
 ### GetQinqSvlanOk
 
-`func (o *WritableVLANRequest) GetQinqSvlanOk() (*int32, bool)`
+`func (o *WritableVLANRequest) GetQinqSvlanOk() (*int64, bool)`
 
 GetQinqSvlanOk returns a tuple with the QinqSvlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQinqSvlan
 
-`func (o *WritableVLANRequest) SetQinqSvlan(v int32)`
+`func (o *WritableVLANRequest) SetQinqSvlan(v int64)`
 
 SetQinqSvlan sets QinqSvlan field to given value.
 

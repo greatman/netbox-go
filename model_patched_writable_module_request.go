@@ -20,7 +20,7 @@ var _ MappedNullable = &PatchedWritableModuleRequest{}
 // PatchedWritableModuleRequest Adds support for custom fields and tags.
 type PatchedWritableModuleRequest struct {
 	Device     *BriefDeviceRequest       `json:"device,omitempty"`
-	ModuleBay  *int32                    `json:"module_bay,omitempty"`
+	ModuleBay  *int64                    `json:"module_bay,omitempty"`
 	ModuleType *BriefModuleTypeRequest   `json:"module_type,omitempty"`
 	Status     *InventoryItemStatusValue `json:"status,omitempty"`
 	Serial     *string                   `json:"serial,omitempty"`
@@ -85,9 +85,9 @@ func (o *PatchedWritableModuleRequest) SetDevice(v BriefDeviceRequest) {
 }
 
 // GetModuleBay returns the ModuleBay field value if set, zero value otherwise.
-func (o *PatchedWritableModuleRequest) GetModuleBay() int32 {
+func (o *PatchedWritableModuleRequest) GetModuleBay() int64 {
 	if o == nil || IsNil(o.ModuleBay) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ModuleBay
@@ -95,7 +95,7 @@ func (o *PatchedWritableModuleRequest) GetModuleBay() int32 {
 
 // GetModuleBayOk returns a tuple with the ModuleBay field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableModuleRequest) GetModuleBayOk() (*int32, bool) {
+func (o *PatchedWritableModuleRequest) GetModuleBayOk() (*int64, bool) {
 	if o == nil || IsNil(o.ModuleBay) {
 		return nil, false
 	}
@@ -111,8 +111,8 @@ func (o *PatchedWritableModuleRequest) HasModuleBay() bool {
 	return false
 }
 
-// SetModuleBay gets a reference to the given int32 and assigns it to the ModuleBay field.
-func (o *PatchedWritableModuleRequest) SetModuleBay(v int32) {
+// SetModuleBay gets a reference to the given int64 and assigns it to the ModuleBay field.
+func (o *PatchedWritableModuleRequest) SetModuleBay(v int64) {
 	o.ModuleBay = &v
 }
 

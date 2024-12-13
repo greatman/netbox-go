@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **Type** | [**FrontPortType**](FrontPortType.md) |  | 
 **Color** | Pointer to **string** |  | [optional] 
 **RearPort** | [**FrontPortRearPort**](FrontPortRearPort.md) |  | 
-**RearPortPosition** | Pointer to **int32** | Mapped position on corresponding rear port | [optional] 
+**RearPortPosition** | Pointer to **int64** | Mapped position on corresponding rear port | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Cable** | [**NullableBriefCable**](BriefCable.md) |  | [readonly] 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 
 ### NewFrontPort
 
-`func NewFrontPort(id int32, url string, displayUrl string, display string, device BriefDevice, name string, type_ FrontPortType, rearPort FrontPortRearPort, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, created NullableTime, lastUpdated NullableTime, occupied bool, ) *FrontPort`
+`func NewFrontPort(id int64, url string, displayUrl string, display string, device BriefDevice, name string, type_ FrontPortType, rearPort FrontPortRearPort, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, created NullableTime, lastUpdated NullableTime, occupied bool, ) *FrontPort`
 
 NewFrontPort instantiates a new FrontPort object
 This constructor will assign default values to properties that have it defined,
@@ -49,20 +49,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *FrontPort) GetId() int32`
+`func (o *FrontPort) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *FrontPort) GetIdOk() (*int32, bool)`
+`func (o *FrontPort) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *FrontPort) SetId(v int32)`
+`func (o *FrontPort) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -294,20 +294,20 @@ SetRearPort sets RearPort field to given value.
 
 ### GetRearPortPosition
 
-`func (o *FrontPort) GetRearPortPosition() int32`
+`func (o *FrontPort) GetRearPortPosition() int64`
 
 GetRearPortPosition returns the RearPortPosition field if non-nil, zero value otherwise.
 
 ### GetRearPortPositionOk
 
-`func (o *FrontPort) GetRearPortPositionOk() (*int32, bool)`
+`func (o *FrontPort) GetRearPortPositionOk() (*int64, bool)`
 
 GetRearPortPositionOk returns a tuple with the RearPortPosition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRearPortPosition
 
-`func (o *FrontPort) SetRearPortPosition(v int32)`
+`func (o *FrontPort) SetRearPortPosition(v int64)`
 
 SetRearPortPosition sets RearPortPosition field to given value.
 

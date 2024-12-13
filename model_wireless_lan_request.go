@@ -26,7 +26,7 @@ type WirelessLANRequest struct {
 	Status               *WirelessLANStatusValue              `json:"status,omitempty"`
 	Vlan                 NullableBriefVLANRequest             `json:"vlan,omitempty"`
 	ScopeType            NullableString                       `json:"scope_type,omitempty"`
-	ScopeId              NullableInt32                        `json:"scope_id,omitempty"`
+	ScopeId              NullableInt64                        `json:"scope_id,omitempty"`
 	Tenant               NullableBriefTenantRequest           `json:"tenant,omitempty"`
 	AuthType             *WirelessLANAuthTypeValue            `json:"auth_type,omitempty"`
 	AuthCipher           *WirelessLANAuthCipherValue          `json:"auth_cipher,omitempty"`
@@ -275,9 +275,9 @@ func (o *WirelessLANRequest) UnsetScopeType() {
 }
 
 // GetScopeId returns the ScopeId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WirelessLANRequest) GetScopeId() int32 {
+func (o *WirelessLANRequest) GetScopeId() int64 {
 	if o == nil || IsNil(o.ScopeId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ScopeId.Get()
@@ -286,7 +286,7 @@ func (o *WirelessLANRequest) GetScopeId() int32 {
 // GetScopeIdOk returns a tuple with the ScopeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WirelessLANRequest) GetScopeIdOk() (*int32, bool) {
+func (o *WirelessLANRequest) GetScopeIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -302,8 +302,8 @@ func (o *WirelessLANRequest) HasScopeId() bool {
 	return false
 }
 
-// SetScopeId gets a reference to the given NullableInt32 and assigns it to the ScopeId field.
-func (o *WirelessLANRequest) SetScopeId(v int32) {
+// SetScopeId gets a reference to the given NullableInt64 and assigns it to the ScopeId field.
+func (o *WirelessLANRequest) SetScopeId(v int64) {
 	o.ScopeId.Set(&v)
 }
 

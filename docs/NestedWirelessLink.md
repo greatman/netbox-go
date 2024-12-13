@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewNestedWirelessLink
 
-`func NewNestedWirelessLink(id int32, url string, displayUrl string, display string, ) *NestedWirelessLink`
+`func NewNestedWirelessLink(id int64, url string, displayUrl string, display string, ) *NestedWirelessLink`
 
 NewNestedWirelessLink instantiates a new NestedWirelessLink object
 This constructor will assign default values to properties that have it defined,
@@ -31,20 +31,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedWirelessLink) GetId() int32`
+`func (o *NestedWirelessLink) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedWirelessLink) GetIdOk() (*int32, bool)`
+`func (o *NestedWirelessLink) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedWirelessLink) SetId(v int32)`
+`func (o *NestedWirelessLink) SetId(v int64)`
 
 SetId sets Id field to given value.
 

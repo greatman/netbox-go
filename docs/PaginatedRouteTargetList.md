@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | **int32** |  | 
+**Count** | **int64** |  | 
 **Next** | Pointer to **NullableString** |  | [optional] 
 **Previous** | Pointer to **NullableString** |  | [optional] 
 **Results** | [**[]RouteTarget**](RouteTarget.md) |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewPaginatedRouteTargetList
 
-`func NewPaginatedRouteTargetList(count int32, results []RouteTarget, ) *PaginatedRouteTargetList`
+`func NewPaginatedRouteTargetList(count int64, results []RouteTarget, ) *PaginatedRouteTargetList`
 
 NewPaginatedRouteTargetList instantiates a new PaginatedRouteTargetList object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCount
 
-`func (o *PaginatedRouteTargetList) GetCount() int32`
+`func (o *PaginatedRouteTargetList) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *PaginatedRouteTargetList) GetCountOk() (*int32, bool)`
+`func (o *PaginatedRouteTargetList) GetCountOk() (*int64, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *PaginatedRouteTargetList) SetCount(v int32)`
+`func (o *PaginatedRouteTargetList) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

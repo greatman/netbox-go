@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Site** | Pointer to [**NullableBriefSiteRequest**](BriefSiteRequest.md) |  | [optional] 
 **Group** | Pointer to [**NullableBriefVLANGroupRequest**](BriefVLANGroupRequest.md) |  | [optional] 
-**Vid** | Pointer to **int32** | Numeric VLAN ID (1-4094) | [optional] 
+**Vid** | Pointer to **int64** | Numeric VLAN ID (1-4094) | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **Status** | Pointer to [**PatchedWritableVLANRequestStatus**](PatchedWritableVLANRequestStatus.md) |  | [optional] 
 **Role** | Pointer to [**NullableBriefRoleRequest**](BriefRoleRequest.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **QinqRole** | Pointer to [**NullableQInQRole**](QInQRole.md) |  | [optional] 
-**QinqSvlan** | Pointer to **NullableInt32** |  | [optional] 
+**QinqSvlan** | Pointer to **NullableInt64** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -109,20 +109,20 @@ HasGroup returns a boolean if a field has been set.
 UnsetGroup ensures that no value is present for Group, not even an explicit nil
 ### GetVid
 
-`func (o *PatchedWritableVLANRequest) GetVid() int32`
+`func (o *PatchedWritableVLANRequest) GetVid() int64`
 
 GetVid returns the Vid field if non-nil, zero value otherwise.
 
 ### GetVidOk
 
-`func (o *PatchedWritableVLANRequest) GetVidOk() (*int32, bool)`
+`func (o *PatchedWritableVLANRequest) GetVidOk() (*int64, bool)`
 
 GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVid
 
-`func (o *PatchedWritableVLANRequest) SetVid(v int32)`
+`func (o *PatchedWritableVLANRequest) SetVid(v int64)`
 
 SetVid sets Vid field to given value.
 
@@ -314,20 +314,20 @@ HasQinqRole returns a boolean if a field has been set.
 UnsetQinqRole ensures that no value is present for QinqRole, not even an explicit nil
 ### GetQinqSvlan
 
-`func (o *PatchedWritableVLANRequest) GetQinqSvlan() int32`
+`func (o *PatchedWritableVLANRequest) GetQinqSvlan() int64`
 
 GetQinqSvlan returns the QinqSvlan field if non-nil, zero value otherwise.
 
 ### GetQinqSvlanOk
 
-`func (o *PatchedWritableVLANRequest) GetQinqSvlanOk() (*int32, bool)`
+`func (o *PatchedWritableVLANRequest) GetQinqSvlanOk() (*int64, bool)`
 
 GetQinqSvlanOk returns a tuple with the QinqSvlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQinqSvlan
 
-`func (o *PatchedWritableVLANRequest) SetQinqSvlan(v int32)`
+`func (o *PatchedWritableVLANRequest) SetQinqSvlan(v int64)`
 
 SetQinqSvlan sets QinqSvlan field to given value.
 

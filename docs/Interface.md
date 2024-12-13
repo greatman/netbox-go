@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -18,11 +18,11 @@ Name | Type | Description | Notes
 **Parent** | Pointer to [**NullableNestedInterface**](NestedInterface.md) |  | [optional] 
 **Bridge** | Pointer to [**NullableNestedInterface**](NestedInterface.md) |  | [optional] 
 **Lag** | Pointer to [**NullableNestedInterface**](NestedInterface.md) |  | [optional] 
-**Mtu** | Pointer to **NullableInt32** |  | [optional] 
+**Mtu** | Pointer to **NullableInt64** |  | [optional] 
 **MacAddress** | **NullableString** |  | [readonly] 
 **PrimaryMacAddress** | Pointer to [**NullableBriefMACAddress**](BriefMACAddress.md) |  | [optional] 
 **MacAddresses** | [**[]BriefMACAddress**](BriefMACAddress.md) |  | [readonly] 
-**Speed** | Pointer to **NullableInt32** |  | [optional] 
+**Speed** | Pointer to **NullableInt64** |  | [optional] 
 **Duplex** | Pointer to [**NullableInterfaceDuplex**](InterfaceDuplex.md) |  | [optional] 
 **Wwn** | Pointer to **NullableString** |  | [optional] 
 **MgmtOnly** | Pointer to **bool** | This interface is used only for out-of-band management | [optional] 
@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 **PoeType** | Pointer to [**InterfacePoeType**](InterfacePoeType.md) |  | [optional] 
 **RfChannelFrequency** | Pointer to **NullableFloat64** | Populated by selected channel (if set) | [optional] 
 **RfChannelWidth** | Pointer to **NullableFloat64** | Populated by selected channel (if set) | [optional] 
-**TxPower** | Pointer to **NullableInt32** |  | [optional] 
+**TxPower** | Pointer to **NullableInt64** |  | [optional] 
 **UntaggedVlan** | Pointer to [**NullableBriefVLAN**](BriefVLAN.md) |  | [optional] 
 **TaggedVlans** | Pointer to [**[]VLAN**](VLAN.md) |  | [optional] 
 **QinqSvlan** | Pointer to [**NullableBriefVLAN**](BriefVLAN.md) |  | [optional] 
@@ -55,15 +55,15 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**CountIpaddresses** | **int32** |  | [readonly] 
-**CountFhrpGroups** | **int32** |  | [readonly] 
+**CountIpaddresses** | **int64** |  | [readonly] 
+**CountFhrpGroups** | **int64** |  | [readonly] 
 **Occupied** | **bool** |  | [readonly] 
 
 ## Methods
 
 ### NewInterface
 
-`func NewInterface(id int32, url string, displayUrl string, display string, device BriefDevice, name string, type_ InterfaceType, macAddress NullableString, macAddresses []BriefMACAddress, cable NullableBriefCable, cableEnd string, wirelessLink NullableNestedWirelessLink, linkPeers []interface{}, linkPeersType NullableString, l2vpnTermination NullableBriefL2VPNTermination, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, countIpaddresses int32, countFhrpGroups int32, occupied bool, ) *Interface`
+`func NewInterface(id int64, url string, displayUrl string, display string, device BriefDevice, name string, type_ InterfaceType, macAddress NullableString, macAddresses []BriefMACAddress, cable NullableBriefCable, cableEnd string, wirelessLink NullableNestedWirelessLink, linkPeers []interface{}, linkPeersType NullableString, l2vpnTermination NullableBriefL2VPNTermination, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, countIpaddresses int64, countFhrpGroups int64, occupied bool, ) *Interface`
 
 NewInterface instantiates a new Interface object
 This constructor will assign default values to properties that have it defined,
@@ -80,20 +80,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Interface) GetId() int32`
+`func (o *Interface) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Interface) GetIdOk() (*int32, bool)`
+`func (o *Interface) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Interface) SetId(v int32)`
+`func (o *Interface) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -435,20 +435,20 @@ HasLag returns a boolean if a field has been set.
 UnsetLag ensures that no value is present for Lag, not even an explicit nil
 ### GetMtu
 
-`func (o *Interface) GetMtu() int32`
+`func (o *Interface) GetMtu() int64`
 
 GetMtu returns the Mtu field if non-nil, zero value otherwise.
 
 ### GetMtuOk
 
-`func (o *Interface) GetMtuOk() (*int32, bool)`
+`func (o *Interface) GetMtuOk() (*int64, bool)`
 
 GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMtu
 
-`func (o *Interface) SetMtu(v int32)`
+`func (o *Interface) SetMtu(v int64)`
 
 SetMtu sets Mtu field to given value.
 
@@ -565,20 +565,20 @@ SetMacAddresses sets MacAddresses field to given value.
 UnsetMacAddresses ensures that no value is present for MacAddresses, not even an explicit nil
 ### GetSpeed
 
-`func (o *Interface) GetSpeed() int32`
+`func (o *Interface) GetSpeed() int64`
 
 GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
 ### GetSpeedOk
 
-`func (o *Interface) GetSpeedOk() (*int32, bool)`
+`func (o *Interface) GetSpeedOk() (*int64, bool)`
 
 GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpeed
 
-`func (o *Interface) SetSpeed(v int32)`
+`func (o *Interface) SetSpeed(v int64)`
 
 SetSpeed sets Speed field to given value.
 
@@ -915,20 +915,20 @@ HasRfChannelWidth returns a boolean if a field has been set.
 UnsetRfChannelWidth ensures that no value is present for RfChannelWidth, not even an explicit nil
 ### GetTxPower
 
-`func (o *Interface) GetTxPower() int32`
+`func (o *Interface) GetTxPower() int64`
 
 GetTxPower returns the TxPower field if non-nil, zero value otherwise.
 
 ### GetTxPowerOk
 
-`func (o *Interface) GetTxPowerOk() (*int32, bool)`
+`func (o *Interface) GetTxPowerOk() (*int64, bool)`
 
 GetTxPowerOk returns a tuple with the TxPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTxPower
 
-`func (o *Interface) SetTxPower(v int32)`
+`func (o *Interface) SetTxPower(v int64)`
 
 SetTxPower sets TxPower field to given value.
 
@@ -1515,40 +1515,40 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetCountIpaddresses
 
-`func (o *Interface) GetCountIpaddresses() int32`
+`func (o *Interface) GetCountIpaddresses() int64`
 
 GetCountIpaddresses returns the CountIpaddresses field if non-nil, zero value otherwise.
 
 ### GetCountIpaddressesOk
 
-`func (o *Interface) GetCountIpaddressesOk() (*int32, bool)`
+`func (o *Interface) GetCountIpaddressesOk() (*int64, bool)`
 
 GetCountIpaddressesOk returns a tuple with the CountIpaddresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCountIpaddresses
 
-`func (o *Interface) SetCountIpaddresses(v int32)`
+`func (o *Interface) SetCountIpaddresses(v int64)`
 
 SetCountIpaddresses sets CountIpaddresses field to given value.
 
 
 ### GetCountFhrpGroups
 
-`func (o *Interface) GetCountFhrpGroups() int32`
+`func (o *Interface) GetCountFhrpGroups() int64`
 
 GetCountFhrpGroups returns the CountFhrpGroups field if non-nil, zero value otherwise.
 
 ### GetCountFhrpGroupsOk
 
-`func (o *Interface) GetCountFhrpGroupsOk() (*int32, bool)`
+`func (o *Interface) GetCountFhrpGroupsOk() (*int64, bool)`
 
 GetCountFhrpGroupsOk returns a tuple with the CountFhrpGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCountFhrpGroups
 
-`func (o *Interface) SetCountFhrpGroups(v int32)`
+`func (o *Interface) SetCountFhrpGroups(v int64)`
 
 SetCountFhrpGroups sets CountFhrpGroups field to given value.
 

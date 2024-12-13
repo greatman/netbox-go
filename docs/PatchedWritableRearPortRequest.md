@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Type** | Pointer to [**FrontPortTypeValue**](FrontPortTypeValue.md) |  | [optional] 
 **Color** | Pointer to **string** |  | [optional] 
-**Positions** | Pointer to **int32** | Number of front ports which may be mapped | [optional] 
+**Positions** | Pointer to **int64** | Number of front ports which may be mapped | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -197,20 +197,20 @@ HasColor returns a boolean if a field has been set.
 
 ### GetPositions
 
-`func (o *PatchedWritableRearPortRequest) GetPositions() int32`
+`func (o *PatchedWritableRearPortRequest) GetPositions() int64`
 
 GetPositions returns the Positions field if non-nil, zero value otherwise.
 
 ### GetPositionsOk
 
-`func (o *PatchedWritableRearPortRequest) GetPositionsOk() (*int32, bool)`
+`func (o *PatchedWritableRearPortRequest) GetPositionsOk() (*int64, bool)`
 
 GetPositionsOk returns a tuple with the Positions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositions
 
-`func (o *PatchedWritableRearPortRequest) SetPositions(v int32)`
+`func (o *PatchedWritableRearPortRequest) SetPositions(v int64)`
 
 SetPositions sets Positions field to given value.
 

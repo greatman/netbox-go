@@ -21,14 +21,14 @@ var _ MappedNullable = &VLANGroup{}
 
 // VLANGroup Adds support for custom fields and tags.
 type VLANGroup struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
 	Name                 string                 `json:"name"`
 	Slug                 string                 `json:"slug" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	ScopeType            NullableString         `json:"scope_type,omitempty"`
-	ScopeId              NullableInt32          `json:"scope_id,omitempty"`
+	ScopeId              NullableInt64          `json:"scope_id,omitempty"`
 	Scope                interface{}            `json:"scope"`
 	Description          *string                `json:"description,omitempty"`
 	Tags                 []NestedTag            `json:"tags,omitempty"`
@@ -46,7 +46,7 @@ type _VLANGroup VLANGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVLANGroup(id int32, url string, displayUrl string, display string, name string, slug string, scope interface{}, created NullableTime, lastUpdated NullableTime, vlanCount int64, utilization string) *VLANGroup {
+func NewVLANGroup(id int64, url string, displayUrl string, display string, name string, slug string, scope interface{}, created NullableTime, lastUpdated NullableTime, vlanCount int64, utilization string) *VLANGroup {
 	this := VLANGroup{}
 	this.Id = id
 	this.Url = url
@@ -71,9 +71,9 @@ func NewVLANGroupWithDefaults() *VLANGroup {
 }
 
 // GetId returns the Id field value
-func (o *VLANGroup) GetId() int32 {
+func (o *VLANGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -82,7 +82,7 @@ func (o *VLANGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *VLANGroup) GetIdOk() (*int32, bool) {
+func (o *VLANGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -90,7 +90,7 @@ func (o *VLANGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *VLANGroup) SetId(v int32) {
+func (o *VLANGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -258,9 +258,9 @@ func (o *VLANGroup) UnsetScopeType() {
 }
 
 // GetScopeId returns the ScopeId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *VLANGroup) GetScopeId() int32 {
+func (o *VLANGroup) GetScopeId() int64 {
 	if o == nil || IsNil(o.ScopeId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ScopeId.Get()
@@ -269,7 +269,7 @@ func (o *VLANGroup) GetScopeId() int32 {
 // GetScopeIdOk returns a tuple with the ScopeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *VLANGroup) GetScopeIdOk() (*int32, bool) {
+func (o *VLANGroup) GetScopeIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -285,8 +285,8 @@ func (o *VLANGroup) HasScopeId() bool {
 	return false
 }
 
-// SetScopeId gets a reference to the given NullableInt32 and assigns it to the ScopeId field.
-func (o *VLANGroup) SetScopeId(v int32) {
+// SetScopeId gets a reference to the given NullableInt64 and assigns it to the ScopeId field.
+func (o *VLANGroup) SetScopeId(v int64) {
 	o.ScopeId.Set(&v)
 }
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &MACAddress{}
 
 // MACAddress Adds support for custom fields and tags.
 type MACAddress struct {
-	Id                   int32          `json:"id"`
+	Id                   int64          `json:"id"`
 	Url                  string         `json:"url"`
 	DisplayUrl           string         `json:"display_url"`
 	Display              string         `json:"display"`
@@ -38,7 +38,7 @@ type _MACAddress MACAddress
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewMACAddress(id int32, url string, displayUrl string, display string, macAddress string, assignedObject interface{}) *MACAddress {
+func NewMACAddress(id int64, url string, displayUrl string, display string, macAddress string, assignedObject interface{}) *MACAddress {
 	this := MACAddress{}
 	this.Id = id
 	this.Url = url
@@ -58,9 +58,9 @@ func NewMACAddressWithDefaults() *MACAddress {
 }
 
 // GetId returns the Id field value
-func (o *MACAddress) GetId() int32 {
+func (o *MACAddress) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -69,7 +69,7 @@ func (o *MACAddress) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *MACAddress) GetIdOk() (*int32, bool) {
+func (o *MACAddress) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -77,7 +77,7 @@ func (o *MACAddress) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *MACAddress) SetId(v int32) {
+func (o *MACAddress) SetId(v int64) {
 	o.Id = v
 }
 

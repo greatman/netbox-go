@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**WirelesslanCount** | **int32** |  | [readonly] [default to 0]
-**Depth** | **int32** |  | [readonly] 
+**WirelesslanCount** | **int64** |  | [readonly] [default to 0]
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewBriefWirelessLANGroup
 
-`func NewBriefWirelessLANGroup(id int32, url string, display string, name string, slug string, wirelesslanCount int32, depth int32, ) *BriefWirelessLANGroup`
+`func NewBriefWirelessLANGroup(id int64, url string, display string, name string, slug string, wirelesslanCount int64, depth int64, ) *BriefWirelessLANGroup`
 
 NewBriefWirelessLANGroup instantiates a new BriefWirelessLANGroup object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefWirelessLANGroup) GetId() int32`
+`func (o *BriefWirelessLANGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefWirelessLANGroup) GetIdOk() (*int32, bool)`
+`func (o *BriefWirelessLANGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefWirelessLANGroup) SetId(v int32)`
+`func (o *BriefWirelessLANGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -159,40 +159,40 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetWirelesslanCount
 
-`func (o *BriefWirelessLANGroup) GetWirelesslanCount() int32`
+`func (o *BriefWirelessLANGroup) GetWirelesslanCount() int64`
 
 GetWirelesslanCount returns the WirelesslanCount field if non-nil, zero value otherwise.
 
 ### GetWirelesslanCountOk
 
-`func (o *BriefWirelessLANGroup) GetWirelesslanCountOk() (*int32, bool)`
+`func (o *BriefWirelessLANGroup) GetWirelesslanCountOk() (*int64, bool)`
 
 GetWirelesslanCountOk returns a tuple with the WirelesslanCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWirelesslanCount
 
-`func (o *BriefWirelessLANGroup) SetWirelesslanCount(v int32)`
+`func (o *BriefWirelessLANGroup) SetWirelesslanCount(v int64)`
 
 SetWirelesslanCount sets WirelesslanCount field to given value.
 
 
 ### GetDepth
 
-`func (o *BriefWirelessLANGroup) GetDepth() int32`
+`func (o *BriefWirelessLANGroup) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *BriefWirelessLANGroup) GetDepthOk() (*int32, bool)`
+`func (o *BriefWirelessLANGroup) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *BriefWirelessLANGroup) SetDepth(v int32)`
+`func (o *BriefWirelessLANGroup) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

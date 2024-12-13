@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewBriefIPSecProfile
 
-`func NewBriefIPSecProfile(id int32, url string, display string, name string, ) *BriefIPSecProfile`
+`func NewBriefIPSecProfile(id int64, url string, display string, name string, ) *BriefIPSecProfile`
 
 NewBriefIPSecProfile instantiates a new BriefIPSecProfile object
 This constructor will assign default values to properties that have it defined,
@@ -31,20 +31,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefIPSecProfile) GetId() int32`
+`func (o *BriefIPSecProfile) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefIPSecProfile) GetIdOk() (*int32, bool)`
+`func (o *BriefIPSecProfile) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefIPSecProfile) SetId(v int32)`
+`func (o *BriefIPSecProfile) SetId(v int64)`
 
 SetId sets Id field to given value.
 

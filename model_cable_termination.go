@@ -21,10 +21,10 @@ var _ MappedNullable = &CableTermination{}
 
 // CableTermination Adds support for custom fields and tags.
 type CableTermination struct {
-	Id                   int32        `json:"id"`
+	Id                   int64        `json:"id"`
 	Url                  string       `json:"url"`
 	Display              string       `json:"display"`
-	Cable                int32        `json:"cable"`
+	Cable                int64        `json:"cable"`
 	CableEnd             End1         `json:"cable_end"`
 	TerminationType      string       `json:"termination_type"`
 	TerminationId        int64        `json:"termination_id"`
@@ -40,7 +40,7 @@ type _CableTermination CableTermination
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCableTermination(id int32, url string, display string, cable int32, cableEnd End1, terminationType string, terminationId int64, termination interface{}, created NullableTime, lastUpdated NullableTime) *CableTermination {
+func NewCableTermination(id int64, url string, display string, cable int64, cableEnd End1, terminationType string, terminationId int64, termination interface{}, created NullableTime, lastUpdated NullableTime) *CableTermination {
 	this := CableTermination{}
 	this.Id = id
 	this.Url = url
@@ -64,9 +64,9 @@ func NewCableTerminationWithDefaults() *CableTermination {
 }
 
 // GetId returns the Id field value
-func (o *CableTermination) GetId() int32 {
+func (o *CableTermination) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -75,7 +75,7 @@ func (o *CableTermination) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *CableTermination) GetIdOk() (*int32, bool) {
+func (o *CableTermination) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -83,7 +83,7 @@ func (o *CableTermination) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *CableTermination) SetId(v int32) {
+func (o *CableTermination) SetId(v int64) {
 	o.Id = v
 }
 
@@ -136,9 +136,9 @@ func (o *CableTermination) SetDisplay(v string) {
 }
 
 // GetCable returns the Cable field value
-func (o *CableTermination) GetCable() int32 {
+func (o *CableTermination) GetCable() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -147,7 +147,7 @@ func (o *CableTermination) GetCable() int32 {
 
 // GetCableOk returns a tuple with the Cable field value
 // and a boolean to check if the value has been set.
-func (o *CableTermination) GetCableOk() (*int32, bool) {
+func (o *CableTermination) GetCableOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -155,7 +155,7 @@ func (o *CableTermination) GetCableOk() (*int32, bool) {
 }
 
 // SetCable sets field value
-func (o *CableTermination) SetCable(v int32) {
+func (o *CableTermination) SetCable(v int64) {
 	o.Cable = v
 }
 

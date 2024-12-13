@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedCircuitGroupList{}
 
 // PaginatedCircuitGroupList struct for PaginatedCircuitGroupList
 type PaginatedCircuitGroupList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []CircuitGroup `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedCircuitGroupList PaginatedCircuitGroupList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedCircuitGroupList(count int32, results []CircuitGroup) *PaginatedCircuitGroupList {
+func NewPaginatedCircuitGroupList(count int64, results []CircuitGroup) *PaginatedCircuitGroupList {
 	this := PaginatedCircuitGroupList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedCircuitGroupListWithDefaults() *PaginatedCircuitGroupList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedCircuitGroupList) GetCount() int32 {
+func (o *PaginatedCircuitGroupList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedCircuitGroupList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedCircuitGroupList) GetCountOk() (*int32, bool) {
+func (o *PaginatedCircuitGroupList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedCircuitGroupList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedCircuitGroupList) SetCount(v int32) {
+func (o *PaginatedCircuitGroupList) SetCount(v int64) {
 	o.Count = v
 }
 

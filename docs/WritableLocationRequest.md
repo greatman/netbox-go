@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Site** | [**BriefSiteRequest**](BriefSiteRequest.md) |  | 
-**Parent** | Pointer to **NullableInt32** |  | [optional] 
+**Parent** | Pointer to **NullableInt64** |  | [optional] 
 **Status** | Pointer to [**LocationStatusValue**](LocationStatusValue.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **Facility** | Pointer to **string** | Local facility ID or description | [optional] 
@@ -96,20 +96,20 @@ SetSite sets Site field to given value.
 
 ### GetParent
 
-`func (o *WritableLocationRequest) GetParent() int32`
+`func (o *WritableLocationRequest) GetParent() int64`
 
 GetParent returns the Parent field if non-nil, zero value otherwise.
 
 ### GetParentOk
 
-`func (o *WritableLocationRequest) GetParentOk() (*int32, bool)`
+`func (o *WritableLocationRequest) GetParentOk() (*int64, bool)`
 
 GetParentOk returns a tuple with the Parent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParent
 
-`func (o *WritableLocationRequest) SetParent(v int32)`
+`func (o *WritableLocationRequest) SetParent(v int64)`
 
 SetParent sets Parent field to given value.
 

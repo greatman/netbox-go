@@ -21,7 +21,7 @@ var _ MappedNullable = &ExportTemplate{}
 
 // ExportTemplate Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type ExportTemplate struct {
-	Id          int32    `json:"id"`
+	Id          int64    `json:"id"`
 	Url         string   `json:"url"`
 	DisplayUrl  string   `json:"display_url"`
 	Display     string   `json:"display"`
@@ -52,7 +52,7 @@ type _ExportTemplate ExportTemplate
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewExportTemplate(id int32, url string, displayUrl string, display string, objectTypes []string, name string, templateCode string, dataPath string, dataFile BriefDataFile, dataSynced NullableTime, created NullableTime, lastUpdated NullableTime) *ExportTemplate {
+func NewExportTemplate(id int64, url string, displayUrl string, display string, objectTypes []string, name string, templateCode string, dataPath string, dataFile BriefDataFile, dataSynced NullableTime, created NullableTime, lastUpdated NullableTime) *ExportTemplate {
 	this := ExportTemplate{}
 	this.Id = id
 	this.Url = url
@@ -78,9 +78,9 @@ func NewExportTemplateWithDefaults() *ExportTemplate {
 }
 
 // GetId returns the Id field value
-func (o *ExportTemplate) GetId() int32 {
+func (o *ExportTemplate) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -89,7 +89,7 @@ func (o *ExportTemplate) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ExportTemplate) GetIdOk() (*int32, bool) {
+func (o *ExportTemplate) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -97,7 +97,7 @@ func (o *ExportTemplate) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ExportTemplate) SetId(v int32) {
+func (o *ExportTemplate) SetId(v int64) {
 	o.Id = v
 }
 

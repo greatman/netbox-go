@@ -20,7 +20,7 @@ var _ MappedNullable = &NestedVMInterface{}
 
 // NestedVMInterface Represents an object related through a ForeignKey field. On write, it accepts a primary key (PK) value or a dictionary of attributes which can be used to uniquely identify the related object. This class should be subclassed to return a full representation of the related object on read.
 type NestedVMInterface struct {
-	Id                   int32                `json:"id"`
+	Id                   int64                `json:"id"`
 	Url                  string               `json:"url"`
 	DisplayUrl           string               `json:"display_url"`
 	Display              string               `json:"display"`
@@ -35,7 +35,7 @@ type _NestedVMInterface NestedVMInterface
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewNestedVMInterface(id int32, url string, displayUrl string, display string, virtualMachine NestedVirtualMachine, name string) *NestedVMInterface {
+func NewNestedVMInterface(id int64, url string, displayUrl string, display string, virtualMachine NestedVirtualMachine, name string) *NestedVMInterface {
 	this := NestedVMInterface{}
 	this.Id = id
 	this.Url = url
@@ -55,9 +55,9 @@ func NewNestedVMInterfaceWithDefaults() *NestedVMInterface {
 }
 
 // GetId returns the Id field value
-func (o *NestedVMInterface) GetId() int32 {
+func (o *NestedVMInterface) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -66,7 +66,7 @@ func (o *NestedVMInterface) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *NestedVMInterface) GetIdOk() (*int32, bool) {
+func (o *NestedVMInterface) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -74,7 +74,7 @@ func (o *NestedVMInterface) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *NestedVMInterface) SetId(v int32) {
+func (o *NestedVMInterface) SetId(v int64) {
 	o.Id = v
 }
 

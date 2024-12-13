@@ -16,7 +16,7 @@ import (
 )
 
 // RackWidthValue * `10` - 10 inches * `19` - 19 inches * `21` - 21 inches * `23` - 23 inches
-type RackWidthValue int32
+type RackWidthValue int64
 
 // List of Rack_width_value
 const (
@@ -35,7 +35,7 @@ var AllowedRackWidthValueEnumValues = []RackWidthValue{
 }
 
 func (v *RackWidthValue) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -53,7 +53,7 @@ func (v *RackWidthValue) UnmarshalJSON(src []byte) error {
 
 // NewRackWidthValueFromValue returns a pointer to a valid RackWidthValue
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewRackWidthValueFromValue(v int32) (*RackWidthValue, error) {
+func NewRackWidthValueFromValue(v int64) (*RackWidthValue, error) {
 	ev := RackWidthValue(v)
 	if ev.IsValid() {
 		return &ev, nil

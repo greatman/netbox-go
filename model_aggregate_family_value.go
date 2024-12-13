@@ -16,7 +16,7 @@ import (
 )
 
 // AggregateFamilyValue * `4` - IPv4 * `6` - IPv6
-type AggregateFamilyValue int32
+type AggregateFamilyValue int64
 
 // List of Aggregate_family_value
 const (
@@ -31,7 +31,7 @@ var AllowedAggregateFamilyValueEnumValues = []AggregateFamilyValue{
 }
 
 func (v *AggregateFamilyValue) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -49,7 +49,7 @@ func (v *AggregateFamilyValue) UnmarshalJSON(src []byte) error {
 
 // NewAggregateFamilyValueFromValue returns a pointer to a valid AggregateFamilyValue
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewAggregateFamilyValueFromValue(v int32) (*AggregateFamilyValue, error) {
+func NewAggregateFamilyValueFromValue(v int64) (*AggregateFamilyValue, error) {
 	ev := AggregateFamilyValue(v)
 	if ev.IsValid() {
 		return &ev, nil

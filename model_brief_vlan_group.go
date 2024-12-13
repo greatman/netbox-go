@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefVLANGroup{}
 
 // BriefVLANGroup Adds support for custom fields and tags.
 type BriefVLANGroup struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
@@ -36,7 +36,7 @@ type _BriefVLANGroup BriefVLANGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefVLANGroup(id int32, url string, display string, name string, slug string, vlanCount int64) *BriefVLANGroup {
+func NewBriefVLANGroup(id int64, url string, display string, name string, slug string, vlanCount int64) *BriefVLANGroup {
 	this := BriefVLANGroup{}
 	this.Id = id
 	this.Url = url
@@ -56,9 +56,9 @@ func NewBriefVLANGroupWithDefaults() *BriefVLANGroup {
 }
 
 // GetId returns the Id field value
-func (o *BriefVLANGroup) GetId() int32 {
+func (o *BriefVLANGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -67,7 +67,7 @@ func (o *BriefVLANGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefVLANGroup) GetIdOk() (*int32, bool) {
+func (o *BriefVLANGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -75,7 +75,7 @@ func (o *BriefVLANGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefVLANGroup) SetId(v int32) {
+func (o *BriefVLANGroup) SetId(v int64) {
 	o.Id = v
 }
 

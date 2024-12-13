@@ -20,7 +20,7 @@ var _ MappedNullable = &AvailableVLAN{}
 
 // AvailableVLAN Representation of a VLAN which does not exist in the database.
 type AvailableVLAN struct {
-	Vid                  int32                  `json:"vid"`
+	Vid                  int64                  `json:"vid"`
 	Group                NullableBriefVLANGroup `json:"group"`
 	AdditionalProperties map[string]interface{}
 }
@@ -31,7 +31,7 @@ type _AvailableVLAN AvailableVLAN
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAvailableVLAN(vid int32, group NullableBriefVLANGroup) *AvailableVLAN {
+func NewAvailableVLAN(vid int64, group NullableBriefVLANGroup) *AvailableVLAN {
 	this := AvailableVLAN{}
 	this.Vid = vid
 	this.Group = group
@@ -47,9 +47,9 @@ func NewAvailableVLANWithDefaults() *AvailableVLAN {
 }
 
 // GetVid returns the Vid field value
-func (o *AvailableVLAN) GetVid() int32 {
+func (o *AvailableVLAN) GetVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -58,7 +58,7 @@ func (o *AvailableVLAN) GetVid() int32 {
 
 // GetVidOk returns a tuple with the Vid field value
 // and a boolean to check if the value has been set.
-func (o *AvailableVLAN) GetVidOk() (*int32, bool) {
+func (o *AvailableVLAN) GetVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -66,7 +66,7 @@ func (o *AvailableVLAN) GetVidOk() (*int32, bool) {
 }
 
 // SetVid sets field value
-func (o *AvailableVLAN) SetVid(v int32) {
+func (o *AvailableVLAN) SetVid(v int64) {
 	o.Vid = v
 }
 

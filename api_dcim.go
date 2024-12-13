@@ -515,7 +515,7 @@ func (a *DcimAPIService) DcimCableTerminationsCreateExecute(r ApiDcimCableTermin
 type ApiDcimCableTerminationsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimCableTerminationsDestroyRequest) Execute() (*http.Response, error) {
@@ -531,7 +531,7 @@ Delete a cable termination object.
 	@param id A unique integer value identifying this cable termination.
 	@return ApiDcimCableTerminationsDestroyRequest
 */
-func (a *DcimAPIService) DcimCableTerminationsDestroy(ctx context.Context, id int32) ApiDcimCableTerminationsDestroyRequest {
+func (a *DcimAPIService) DcimCableTerminationsDestroy(ctx context.Context, id int64) ApiDcimCableTerminationsDestroyRequest {
 	return ApiDcimCableTerminationsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -621,8 +621,8 @@ func (a *DcimAPIService) DcimCableTerminationsDestroyExecute(r ApiDcimCableTermi
 type ApiDcimCableTerminationsListRequest struct {
 	ctx                context.Context
 	ApiService         *DcimAPIService
-	cable              *int32
-	cableN             *int32
+	cable              *int64
+	cableN             *int64
 	cableEnd           *End
 	created            *[]time.Time
 	createdEmpty       *[]time.Time
@@ -632,13 +632,13 @@ type ApiDcimCableTerminationsListRequest struct {
 	createdLte         *[]time.Time
 	createdN           *[]time.Time
 	createdByRequest   *string
-	id                 *[]int32
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
 	lastUpdated        *[]time.Time
 	lastUpdatedEmpty   *[]time.Time
 	lastUpdatedGt      *[]time.Time
@@ -646,28 +646,28 @@ type ApiDcimCableTerminationsListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
+	limit              *int64
 	modifiedByRequest  *string
-	offset             *int32
+	offset             *int64
 	ordering           *string
-	terminationId      *[]int32
+	terminationId      *[]int64
 	terminationIdEmpty *bool
-	terminationIdGt    *[]int32
-	terminationIdGte   *[]int32
-	terminationIdLt    *[]int32
-	terminationIdLte   *[]int32
-	terminationIdN     *[]int32
+	terminationIdGt    *[]int64
+	terminationIdGte   *[]int64
+	terminationIdLt    *[]int64
+	terminationIdLte   *[]int64
+	terminationIdN     *[]int64
 	terminationType    *string
 	terminationTypeN   *string
 	updatedByRequest   *string
 }
 
-func (r ApiDcimCableTerminationsListRequest) Cable(cable int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) Cable(cable int64) ApiDcimCableTerminationsListRequest {
 	r.cable = &cable
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) CableN(cableN int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) CableN(cableN int64) ApiDcimCableTerminationsListRequest {
 	r.cableN = &cableN
 	return r
 }
@@ -718,7 +718,7 @@ func (r ApiDcimCableTerminationsListRequest) CreatedByRequest(createdByRequest s
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) Id(id []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) Id(id []int64) ApiDcimCableTerminationsListRequest {
 	r.id = &id
 	return r
 }
@@ -728,27 +728,27 @@ func (r ApiDcimCableTerminationsListRequest) IdEmpty(idEmpty bool) ApiDcimCableT
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) IdGt(idGt []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) IdGt(idGt []int64) ApiDcimCableTerminationsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) IdGte(idGte []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) IdGte(idGte []int64) ApiDcimCableTerminationsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) IdLt(idLt []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) IdLt(idLt []int64) ApiDcimCableTerminationsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) IdLte(idLte []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) IdLte(idLte []int64) ApiDcimCableTerminationsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) IdN(idN []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) IdN(idN []int64) ApiDcimCableTerminationsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -789,7 +789,7 @@ func (r ApiDcimCableTerminationsListRequest) LastUpdatedN(lastUpdatedN []time.Ti
 }
 
 // Number of results to return per page.
-func (r ApiDcimCableTerminationsListRequest) Limit(limit int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) Limit(limit int64) ApiDcimCableTerminationsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -800,7 +800,7 @@ func (r ApiDcimCableTerminationsListRequest) ModifiedByRequest(modifiedByRequest
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimCableTerminationsListRequest) Offset(offset int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) Offset(offset int64) ApiDcimCableTerminationsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -811,7 +811,7 @@ func (r ApiDcimCableTerminationsListRequest) Ordering(ordering string) ApiDcimCa
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) TerminationId(terminationId []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) TerminationId(terminationId []int64) ApiDcimCableTerminationsListRequest {
 	r.terminationId = &terminationId
 	return r
 }
@@ -821,27 +821,27 @@ func (r ApiDcimCableTerminationsListRequest) TerminationIdEmpty(terminationIdEmp
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) TerminationIdGt(terminationIdGt []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) TerminationIdGt(terminationIdGt []int64) ApiDcimCableTerminationsListRequest {
 	r.terminationIdGt = &terminationIdGt
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) TerminationIdGte(terminationIdGte []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) TerminationIdGte(terminationIdGte []int64) ApiDcimCableTerminationsListRequest {
 	r.terminationIdGte = &terminationIdGte
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) TerminationIdLt(terminationIdLt []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) TerminationIdLt(terminationIdLt []int64) ApiDcimCableTerminationsListRequest {
 	r.terminationIdLt = &terminationIdLt
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) TerminationIdLte(terminationIdLte []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) TerminationIdLte(terminationIdLte []int64) ApiDcimCableTerminationsListRequest {
 	r.terminationIdLte = &terminationIdLte
 	return r
 }
 
-func (r ApiDcimCableTerminationsListRequest) TerminationIdN(terminationIdN []int32) ApiDcimCableTerminationsListRequest {
+func (r ApiDcimCableTerminationsListRequest) TerminationIdN(terminationIdN []int64) ApiDcimCableTerminationsListRequest {
 	r.terminationIdN = &terminationIdN
 	return r
 }
@@ -1298,7 +1298,7 @@ func (a *DcimAPIService) DcimCableTerminationsListExecute(r ApiDcimCableTerminat
 type ApiDcimCableTerminationsPartialUpdateRequest struct {
 	ctx                            context.Context
 	ApiService                     *DcimAPIService
-	id                             int32
+	id                             int64
 	patchedCableTerminationRequest *PatchedCableTerminationRequest
 }
 
@@ -1320,7 +1320,7 @@ Patch a cable termination object.
 	@param id A unique integer value identifying this cable termination.
 	@return ApiDcimCableTerminationsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimCableTerminationsPartialUpdate(ctx context.Context, id int32) ApiDcimCableTerminationsPartialUpdateRequest {
+func (a *DcimAPIService) DcimCableTerminationsPartialUpdate(ctx context.Context, id int64) ApiDcimCableTerminationsPartialUpdateRequest {
 	return ApiDcimCableTerminationsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1424,7 +1424,7 @@ func (a *DcimAPIService) DcimCableTerminationsPartialUpdateExecute(r ApiDcimCabl
 type ApiDcimCableTerminationsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimCableTerminationsRetrieveRequest) Execute() (*CableTermination, *http.Response, error) {
@@ -1440,7 +1440,7 @@ Get a cable termination object.
 	@param id A unique integer value identifying this cable termination.
 	@return ApiDcimCableTerminationsRetrieveRequest
 */
-func (a *DcimAPIService) DcimCableTerminationsRetrieve(ctx context.Context, id int32) ApiDcimCableTerminationsRetrieveRequest {
+func (a *DcimAPIService) DcimCableTerminationsRetrieve(ctx context.Context, id int64) ApiDcimCableTerminationsRetrieveRequest {
 	return ApiDcimCableTerminationsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1542,7 +1542,7 @@ func (a *DcimAPIService) DcimCableTerminationsRetrieveExecute(r ApiDcimCableTerm
 type ApiDcimCableTerminationsUpdateRequest struct {
 	ctx                     context.Context
 	ApiService              *DcimAPIService
-	id                      int32
+	id                      int64
 	cableTerminationRequest *CableTerminationRequest
 }
 
@@ -1564,7 +1564,7 @@ Put a cable termination object.
 	@param id A unique integer value identifying this cable termination.
 	@return ApiDcimCableTerminationsUpdateRequest
 */
-func (a *DcimAPIService) DcimCableTerminationsUpdate(ctx context.Context, id int32) ApiDcimCableTerminationsUpdateRequest {
+func (a *DcimAPIService) DcimCableTerminationsUpdate(ctx context.Context, id int64) ApiDcimCableTerminationsUpdateRequest {
 	return ApiDcimCableTerminationsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -2156,7 +2156,7 @@ func (a *DcimAPIService) DcimCablesCreateExecute(r ApiDcimCablesCreateRequest) (
 type ApiDcimCablesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimCablesDestroyRequest) Execute() (*http.Response, error) {
@@ -2172,7 +2172,7 @@ Delete a cable object.
 	@param id A unique integer value identifying this cable.
 	@return ApiDcimCablesDestroyRequest
 */
-func (a *DcimAPIService) DcimCablesDestroy(ctx context.Context, id int32) ApiDcimCablesDestroyRequest {
+func (a *DcimAPIService) DcimCablesDestroy(ctx context.Context, id int64) ApiDcimCablesDestroyRequest {
 	return ApiDcimCablesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -2262,7 +2262,7 @@ func (a *DcimAPIService) DcimCablesDestroyExecute(r ApiDcimCablesDestroyRequest)
 type ApiDcimCablesListRequest struct {
 	ctx                  context.Context
 	ApiService           *DcimAPIService
-	circuitterminationId *[]int32
+	circuitterminationId *[]int64
 	color                *[]string
 	colorEmpty           *bool
 	colorIc              *[]string
@@ -2274,8 +2274,8 @@ type ApiDcimCablesListRequest struct {
 	colorNie             *[]string
 	colorNiew            *[]string
 	colorNisw            *[]string
-	consoleportId        *[]int32
-	consoleserverportId  *[]int32
+	consoleportId        *[]int64
+	consoleserverportId  *[]int64
 	created              *[]time.Time
 	createdEmpty         *[]time.Time
 	createdGt            *[]time.Time
@@ -2296,16 +2296,16 @@ type ApiDcimCablesListRequest struct {
 	descriptionNiew      *[]string
 	descriptionNisw      *[]string
 	device               *[]string
-	deviceId             *[]int32
-	frontportId          *[]int32
-	id                   *[]int32
+	deviceId             *[]int64
+	frontportId          *[]int64
+	id                   *[]int64
 	idEmpty              *bool
-	idGt                 *[]int32
-	idGte                *[]int32
-	idLt                 *[]int32
-	idLte                *[]int32
-	idN                  *[]int32
-	interfaceId          *[]int32
+	idGt                 *[]int64
+	idGte                *[]int64
+	idLt                 *[]int64
+	idLte                *[]int64
+	idN                  *[]int64
+	interfaceId          *[]int64
 	label                *[]string
 	labelEmpty           *bool
 	labelIc              *[]string
@@ -2332,21 +2332,21 @@ type ApiDcimCablesListRequest struct {
 	lengthLte            *[]float64
 	lengthN              *[]float64
 	lengthUnit           *DcimCablesListLengthUnitParameter
-	limit                *int32
+	limit                *int64
 	location             *[]string
-	locationId           *[]int32
+	locationId           *[]int64
 	modifiedByRequest    *string
-	offset               *int32
+	offset               *int64
 	ordering             *string
-	powerfeedId          *[]int32
-	poweroutletId        *[]int32
-	powerportId          *[]int32
+	powerfeedId          *[]int64
+	poweroutletId        *[]int64
+	powerportId          *[]int64
 	q                    *string
 	rack                 *[]string
-	rackId               *[]int32
-	rearportId           *[]int32
+	rackId               *[]int64
+	rearportId           *[]int64
 	site                 *[]string
-	siteId               *[]int32
+	siteId               *[]int64
 	status               *[]string
 	statusEmpty          *bool
 	statusIc             *[]string
@@ -2366,12 +2366,12 @@ type ApiDcimCablesListRequest struct {
 	tenantGroupN         *[]string
 	tenantGroupId        *[]string
 	tenantGroupIdN       *[]string
-	tenantId             *[]*int32
-	tenantIdN            *[]*int32
-	terminationAId       *[]int32
+	tenantId             *[]*int64
+	tenantIdN            *[]*int64
+	terminationAId       *[]int64
 	terminationAType     *string
 	terminationATypeN    *string
-	terminationBId       *[]int32
+	terminationBId       *[]int64
 	terminationBType     *string
 	terminationBTypeN    *string
 	type_                *[]*string
@@ -2389,7 +2389,7 @@ type ApiDcimCablesListRequest struct {
 	updatedByRequest     *string
 }
 
-func (r ApiDcimCablesListRequest) CircuitterminationId(circuitterminationId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) CircuitterminationId(circuitterminationId []int64) ApiDcimCablesListRequest {
 	r.circuitterminationId = &circuitterminationId
 	return r
 }
@@ -2449,12 +2449,12 @@ func (r ApiDcimCablesListRequest) ColorNisw(colorNisw []string) ApiDcimCablesLis
 	return r
 }
 
-func (r ApiDcimCablesListRequest) ConsoleportId(consoleportId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) ConsoleportId(consoleportId []int64) ApiDcimCablesListRequest {
 	r.consoleportId = &consoleportId
 	return r
 }
 
-func (r ApiDcimCablesListRequest) ConsoleserverportId(consoleserverportId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) ConsoleserverportId(consoleserverportId []int64) ApiDcimCablesListRequest {
 	r.consoleserverportId = &consoleserverportId
 	return r
 }
@@ -2559,17 +2559,17 @@ func (r ApiDcimCablesListRequest) Device(device []string) ApiDcimCablesListReque
 	return r
 }
 
-func (r ApiDcimCablesListRequest) DeviceId(deviceId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) DeviceId(deviceId []int64) ApiDcimCablesListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
-func (r ApiDcimCablesListRequest) FrontportId(frontportId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) FrontportId(frontportId []int64) ApiDcimCablesListRequest {
 	r.frontportId = &frontportId
 	return r
 }
 
-func (r ApiDcimCablesListRequest) Id(id []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) Id(id []int64) ApiDcimCablesListRequest {
 	r.id = &id
 	return r
 }
@@ -2579,32 +2579,32 @@ func (r ApiDcimCablesListRequest) IdEmpty(idEmpty bool) ApiDcimCablesListRequest
 	return r
 }
 
-func (r ApiDcimCablesListRequest) IdGt(idGt []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) IdGt(idGt []int64) ApiDcimCablesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimCablesListRequest) IdGte(idGte []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) IdGte(idGte []int64) ApiDcimCablesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimCablesListRequest) IdLt(idLt []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) IdLt(idLt []int64) ApiDcimCablesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimCablesListRequest) IdLte(idLte []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) IdLte(idLte []int64) ApiDcimCablesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimCablesListRequest) IdN(idN []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) IdN(idN []int64) ApiDcimCablesListRequest {
 	r.idN = &idN
 	return r
 }
 
-func (r ApiDcimCablesListRequest) InterfaceId(interfaceId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) InterfaceId(interfaceId []int64) ApiDcimCablesListRequest {
 	r.interfaceId = &interfaceId
 	return r
 }
@@ -2741,7 +2741,7 @@ func (r ApiDcimCablesListRequest) LengthUnit(lengthUnit DcimCablesListLengthUnit
 }
 
 // Number of results to return per page.
-func (r ApiDcimCablesListRequest) Limit(limit int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) Limit(limit int64) ApiDcimCablesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -2751,7 +2751,7 @@ func (r ApiDcimCablesListRequest) Location(location []string) ApiDcimCablesListR
 	return r
 }
 
-func (r ApiDcimCablesListRequest) LocationId(locationId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) LocationId(locationId []int64) ApiDcimCablesListRequest {
 	r.locationId = &locationId
 	return r
 }
@@ -2762,7 +2762,7 @@ func (r ApiDcimCablesListRequest) ModifiedByRequest(modifiedByRequest string) Ap
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimCablesListRequest) Offset(offset int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) Offset(offset int64) ApiDcimCablesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -2773,17 +2773,17 @@ func (r ApiDcimCablesListRequest) Ordering(ordering string) ApiDcimCablesListReq
 	return r
 }
 
-func (r ApiDcimCablesListRequest) PowerfeedId(powerfeedId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) PowerfeedId(powerfeedId []int64) ApiDcimCablesListRequest {
 	r.powerfeedId = &powerfeedId
 	return r
 }
 
-func (r ApiDcimCablesListRequest) PoweroutletId(poweroutletId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) PoweroutletId(poweroutletId []int64) ApiDcimCablesListRequest {
 	r.poweroutletId = &poweroutletId
 	return r
 }
 
-func (r ApiDcimCablesListRequest) PowerportId(powerportId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) PowerportId(powerportId []int64) ApiDcimCablesListRequest {
 	r.powerportId = &powerportId
 	return r
 }
@@ -2799,12 +2799,12 @@ func (r ApiDcimCablesListRequest) Rack(rack []string) ApiDcimCablesListRequest {
 	return r
 }
 
-func (r ApiDcimCablesListRequest) RackId(rackId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) RackId(rackId []int64) ApiDcimCablesListRequest {
 	r.rackId = &rackId
 	return r
 }
 
-func (r ApiDcimCablesListRequest) RearportId(rearportId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) RearportId(rearportId []int64) ApiDcimCablesListRequest {
 	r.rearportId = &rearportId
 	return r
 }
@@ -2814,7 +2814,7 @@ func (r ApiDcimCablesListRequest) Site(site []string) ApiDcimCablesListRequest {
 	return r
 }
 
-func (r ApiDcimCablesListRequest) SiteId(siteId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) SiteId(siteId []int64) ApiDcimCablesListRequest {
 	r.siteId = &siteId
 	return r
 }
@@ -2917,18 +2917,18 @@ func (r ApiDcimCablesListRequest) TenantGroupIdN(tenantGroupIdN []string) ApiDci
 }
 
 // Tenant (ID)
-func (r ApiDcimCablesListRequest) TenantId(tenantId []*int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) TenantId(tenantId []*int64) ApiDcimCablesListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimCablesListRequest) TenantIdN(tenantIdN []*int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) TenantIdN(tenantIdN []*int64) ApiDcimCablesListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
 
-func (r ApiDcimCablesListRequest) TerminationAId(terminationAId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) TerminationAId(terminationAId []int64) ApiDcimCablesListRequest {
 	r.terminationAId = &terminationAId
 	return r
 }
@@ -2943,7 +2943,7 @@ func (r ApiDcimCablesListRequest) TerminationATypeN(terminationATypeN string) Ap
 	return r
 }
 
-func (r ApiDcimCablesListRequest) TerminationBId(terminationBId []int32) ApiDcimCablesListRequest {
+func (r ApiDcimCablesListRequest) TerminationBId(terminationBId []int64) ApiDcimCablesListRequest {
 	r.terminationBId = &terminationBId
 	return r
 }
@@ -4351,7 +4351,7 @@ func (a *DcimAPIService) DcimCablesListExecute(r ApiDcimCablesListRequest) (*Pag
 type ApiDcimCablesPartialUpdateRequest struct {
 	ctx                         context.Context
 	ApiService                  *DcimAPIService
-	id                          int32
+	id                          int64
 	patchedWritableCableRequest *PatchedWritableCableRequest
 }
 
@@ -4373,7 +4373,7 @@ Patch a cable object.
 	@param id A unique integer value identifying this cable.
 	@return ApiDcimCablesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimCablesPartialUpdate(ctx context.Context, id int32) ApiDcimCablesPartialUpdateRequest {
+func (a *DcimAPIService) DcimCablesPartialUpdate(ctx context.Context, id int64) ApiDcimCablesPartialUpdateRequest {
 	return ApiDcimCablesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -4477,7 +4477,7 @@ func (a *DcimAPIService) DcimCablesPartialUpdateExecute(r ApiDcimCablesPartialUp
 type ApiDcimCablesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimCablesRetrieveRequest) Execute() (*Cable, *http.Response, error) {
@@ -4493,7 +4493,7 @@ Get a cable object.
 	@param id A unique integer value identifying this cable.
 	@return ApiDcimCablesRetrieveRequest
 */
-func (a *DcimAPIService) DcimCablesRetrieve(ctx context.Context, id int32) ApiDcimCablesRetrieveRequest {
+func (a *DcimAPIService) DcimCablesRetrieve(ctx context.Context, id int64) ApiDcimCablesRetrieveRequest {
 	return ApiDcimCablesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -4595,7 +4595,7 @@ func (a *DcimAPIService) DcimCablesRetrieveExecute(r ApiDcimCablesRetrieveReques
 type ApiDcimCablesUpdateRequest struct {
 	ctx                  context.Context
 	ApiService           *DcimAPIService
-	id                   int32
+	id                   int64
 	writableCableRequest *WritableCableRequest
 }
 
@@ -4617,7 +4617,7 @@ Put a cable object.
 	@param id A unique integer value identifying this cable.
 	@return ApiDcimCablesUpdateRequest
 */
-func (a *DcimAPIService) DcimCablesUpdate(ctx context.Context, id int32) ApiDcimCablesUpdateRequest {
+func (a *DcimAPIService) DcimCablesUpdate(ctx context.Context, id int64) ApiDcimCablesUpdateRequest {
 	return ApiDcimCablesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -5350,7 +5350,7 @@ func (a *DcimAPIService) DcimConsolePortTemplatesCreateExecute(r ApiDcimConsoleP
 type ApiDcimConsolePortTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsolePortTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -5366,7 +5366,7 @@ Delete a console port template object.
 	@param id A unique integer value identifying this console port template.
 	@return ApiDcimConsolePortTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimConsolePortTemplatesDestroy(ctx context.Context, id int32) ApiDcimConsolePortTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimConsolePortTemplatesDestroy(ctx context.Context, id int64) ApiDcimConsolePortTemplatesDestroyRequest {
 	return ApiDcimConsolePortTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -5475,15 +5475,15 @@ type ApiDcimConsolePortTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]*int32
-	deviceTypeIdN     *[]*int32
-	id                *[]int32
+	deviceTypeId      *[]*int64
+	deviceTypeIdN     *[]*int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -5502,10 +5502,10 @@ type ApiDcimConsolePortTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
-	moduleTypeId      *[]*int32
-	moduleTypeIdN     *[]*int32
+	moduleTypeId      *[]*int64
+	moduleTypeIdN     *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -5517,7 +5517,7 @@ type ApiDcimConsolePortTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	type_             *DcimConsolePortTemplatesListTypeParameter
@@ -5620,18 +5620,18 @@ func (r ApiDcimConsolePortTemplatesListRequest) DescriptionNisw(descriptionNisw 
 }
 
 // Device type (ID)
-func (r ApiDcimConsolePortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimConsolePortTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimConsolePortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimConsolePortTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimConsolePortTemplatesListRequest) Id(id []int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) Id(id []int64) ApiDcimConsolePortTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -5641,27 +5641,27 @@ func (r ApiDcimConsolePortTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimCon
 	return r
 }
 
-func (r ApiDcimConsolePortTemplatesListRequest) IdGt(idGt []int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) IdGt(idGt []int64) ApiDcimConsolePortTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimConsolePortTemplatesListRequest) IdGte(idGte []int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) IdGte(idGte []int64) ApiDcimConsolePortTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimConsolePortTemplatesListRequest) IdLt(idLt []int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) IdLt(idLt []int64) ApiDcimConsolePortTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimConsolePortTemplatesListRequest) IdLte(idLte []int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) IdLte(idLte []int64) ApiDcimConsolePortTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimConsolePortTemplatesListRequest) IdN(idN []int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) IdN(idN []int64) ApiDcimConsolePortTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -5757,7 +5757,7 @@ func (r ApiDcimConsolePortTemplatesListRequest) LastUpdatedN(lastUpdatedN []time
 }
 
 // Number of results to return per page.
-func (r ApiDcimConsolePortTemplatesListRequest) Limit(limit int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) Limit(limit int64) ApiDcimConsolePortTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -5768,13 +5768,13 @@ func (r ApiDcimConsolePortTemplatesListRequest) ModifiedByRequest(modifiedByRequ
 }
 
 // Module type (ID)
-func (r ApiDcimConsolePortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimConsolePortTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimConsolePortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimConsolePortTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -5835,7 +5835,7 @@ func (r ApiDcimConsolePortTemplatesListRequest) NameNisw(nameNisw []string) ApiD
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimConsolePortTemplatesListRequest) Offset(offset int32) ApiDcimConsolePortTemplatesListRequest {
+func (r ApiDcimConsolePortTemplatesListRequest) Offset(offset int64) ApiDcimConsolePortTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -6605,7 +6605,7 @@ func (a *DcimAPIService) DcimConsolePortTemplatesListExecute(r ApiDcimConsolePor
 type ApiDcimConsolePortTemplatesPartialUpdateRequest struct {
 	ctx                                       context.Context
 	ApiService                                *DcimAPIService
-	id                                        int32
+	id                                        int64
 	patchedWritableConsolePortTemplateRequest *PatchedWritableConsolePortTemplateRequest
 }
 
@@ -6627,7 +6627,7 @@ Patch a console port template object.
 	@param id A unique integer value identifying this console port template.
 	@return ApiDcimConsolePortTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimConsolePortTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimConsolePortTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimConsolePortTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimConsolePortTemplatesPartialUpdateRequest {
 	return ApiDcimConsolePortTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -6731,7 +6731,7 @@ func (a *DcimAPIService) DcimConsolePortTemplatesPartialUpdateExecute(r ApiDcimC
 type ApiDcimConsolePortTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsolePortTemplatesRetrieveRequest) Execute() (*ConsolePortTemplate, *http.Response, error) {
@@ -6747,7 +6747,7 @@ Get a console port template object.
 	@param id A unique integer value identifying this console port template.
 	@return ApiDcimConsolePortTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimConsolePortTemplatesRetrieve(ctx context.Context, id int32) ApiDcimConsolePortTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimConsolePortTemplatesRetrieve(ctx context.Context, id int64) ApiDcimConsolePortTemplatesRetrieveRequest {
 	return ApiDcimConsolePortTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -6849,7 +6849,7 @@ func (a *DcimAPIService) DcimConsolePortTemplatesRetrieveExecute(r ApiDcimConsol
 type ApiDcimConsolePortTemplatesUpdateRequest struct {
 	ctx                                context.Context
 	ApiService                         *DcimAPIService
-	id                                 int32
+	id                                 int64
 	writableConsolePortTemplateRequest *WritableConsolePortTemplateRequest
 }
 
@@ -6871,7 +6871,7 @@ Put a console port template object.
 	@param id A unique integer value identifying this console port template.
 	@return ApiDcimConsolePortTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimConsolePortTemplatesUpdate(ctx context.Context, id int32) ApiDcimConsolePortTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimConsolePortTemplatesUpdate(ctx context.Context, id int64) ApiDcimConsolePortTemplatesUpdateRequest {
 	return ApiDcimConsolePortTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -7466,7 +7466,7 @@ func (a *DcimAPIService) DcimConsolePortsCreateExecute(r ApiDcimConsolePortsCrea
 type ApiDcimConsolePortsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsolePortsDestroyRequest) Execute() (*http.Response, error) {
@@ -7482,7 +7482,7 @@ Delete a console port object.
 	@param id A unique integer value identifying this console port.
 	@return ApiDcimConsolePortsDestroyRequest
 */
-func (a *DcimAPIService) DcimConsolePortsDestroy(ctx context.Context, id int32) ApiDcimConsolePortsDestroyRequest {
+func (a *DcimAPIService) DcimConsolePortsDestroy(ctx context.Context, id int64) ApiDcimConsolePortsDestroyRequest {
 	return ApiDcimConsolePortsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -7573,8 +7573,8 @@ type ApiDcimConsolePortsListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
 	cableEnd          *CircuitsCircuitTerminationsListCableEndParameter
-	cableId           *[]*int32
-	cableIdN          *[]*int32
+	cableId           *[]*int64
+	cableIdN          *[]*int64
 	cabled            *bool
 	connected         *bool
 	created           *[]time.Time
@@ -7598,12 +7598,12 @@ type ApiDcimConsolePortsListRequest struct {
 	descriptionNisw   *[]string
 	device            *[]*string
 	deviceN           *[]*string
-	deviceId          *[]int32
-	deviceIdN         *[]int32
+	deviceId          *[]int64
+	deviceIdN         *[]int64
 	deviceRole        *[]string
 	deviceRoleN       *[]string
-	deviceRoleId      *[]int32
-	deviceRoleIdN     *[]int32
+	deviceRoleId      *[]int64
+	deviceRoleIdN     *[]int64
 	deviceStatus      *[]string
 	deviceStatusEmpty *bool
 	deviceStatusIc    *[]string
@@ -7617,15 +7617,15 @@ type ApiDcimConsolePortsListRequest struct {
 	deviceStatusNisw  *[]string
 	deviceType        *[]string
 	deviceTypeN       *[]string
-	deviceTypeId      *[]int32
-	deviceTypeIdN     *[]int32
-	id                *[]int32
+	deviceTypeId      *[]int64
+	deviceTypeIdN     *[]int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -7644,15 +7644,15 @@ type ApiDcimConsolePortsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	location          *[]string
 	locationN         *[]string
-	locationId        *[]int32
-	locationIdN       *[]int32
+	locationId        *[]int64
+	locationIdN       *[]int64
 	markConnected     *bool
 	modifiedByRequest *string
-	moduleId          *[]*int32
-	moduleIdN         *[]*int32
+	moduleId          *[]*int64
+	moduleIdN         *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -7665,13 +7665,13 @@ type ApiDcimConsolePortsListRequest struct {
 	nameNiew          *[]string
 	nameNisw          *[]string
 	occupied          *bool
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	rack              *[]string
 	rackN             *[]string
-	rackId            *[]int32
-	rackIdN           *[]int32
+	rackId            *[]int64
+	rackIdN           *[]int64
 	region            *[]string
 	regionN           *[]string
 	regionId          *[]string
@@ -7682,8 +7682,8 @@ type ApiDcimConsolePortsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	speed             *DcimConsolePortsListSpeedParameter
 	tag               *[]string
 	tagN              *[]string
@@ -7701,8 +7701,8 @@ type ApiDcimConsolePortsListRequest struct {
 	updatedByRequest  *string
 	virtualChassis    *[]string
 	virtualChassisN   *[]string
-	virtualChassisId  *[]int32
-	virtualChassisIdN *[]int32
+	virtualChassisId  *[]int64
+	virtualChassisIdN *[]int64
 }
 
 // * &#x60;A&#x60; - A * &#x60;B&#x60; - B
@@ -7712,13 +7712,13 @@ func (r ApiDcimConsolePortsListRequest) CableEnd(cableEnd CircuitsCircuitTermina
 }
 
 // Cable (ID)
-func (r ApiDcimConsolePortsListRequest) CableId(cableId []*int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) CableId(cableId []*int64) ApiDcimConsolePortsListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimConsolePortsListRequest) CableIdN(cableIdN []*int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) CableIdN(cableIdN []*int64) ApiDcimConsolePortsListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -7841,13 +7841,13 @@ func (r ApiDcimConsolePortsListRequest) DeviceN(deviceN []*string) ApiDcimConsol
 }
 
 // Device (ID)
-func (r ApiDcimConsolePortsListRequest) DeviceId(deviceId []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) DeviceId(deviceId []int64) ApiDcimConsolePortsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimConsolePortsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimConsolePortsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -7865,13 +7865,13 @@ func (r ApiDcimConsolePortsListRequest) DeviceRoleN(deviceRoleN []string) ApiDci
 }
 
 // Device role (ID)
-func (r ApiDcimConsolePortsListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimConsolePortsListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimConsolePortsListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimConsolePortsListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -7944,18 +7944,18 @@ func (r ApiDcimConsolePortsListRequest) DeviceTypeN(deviceTypeN []string) ApiDci
 }
 
 // Device type (ID)
-func (r ApiDcimConsolePortsListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimConsolePortsListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimConsolePortsListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimConsolePortsListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimConsolePortsListRequest) Id(id []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) Id(id []int64) ApiDcimConsolePortsListRequest {
 	r.id = &id
 	return r
 }
@@ -7965,27 +7965,27 @@ func (r ApiDcimConsolePortsListRequest) IdEmpty(idEmpty bool) ApiDcimConsolePort
 	return r
 }
 
-func (r ApiDcimConsolePortsListRequest) IdGt(idGt []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) IdGt(idGt []int64) ApiDcimConsolePortsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimConsolePortsListRequest) IdGte(idGte []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) IdGte(idGte []int64) ApiDcimConsolePortsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimConsolePortsListRequest) IdLt(idLt []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) IdLt(idLt []int64) ApiDcimConsolePortsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimConsolePortsListRequest) IdLte(idLte []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) IdLte(idLte []int64) ApiDcimConsolePortsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimConsolePortsListRequest) IdN(idN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) IdN(idN []int64) ApiDcimConsolePortsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -8081,7 +8081,7 @@ func (r ApiDcimConsolePortsListRequest) LastUpdatedN(lastUpdatedN []time.Time) A
 }
 
 // Number of results to return per page.
-func (r ApiDcimConsolePortsListRequest) Limit(limit int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) Limit(limit int64) ApiDcimConsolePortsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -8099,13 +8099,13 @@ func (r ApiDcimConsolePortsListRequest) LocationN(locationN []string) ApiDcimCon
 }
 
 // Location (ID)
-func (r ApiDcimConsolePortsListRequest) LocationId(locationId []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) LocationId(locationId []int64) ApiDcimConsolePortsListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimConsolePortsListRequest) LocationIdN(locationIdN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) LocationIdN(locationIdN []int64) ApiDcimConsolePortsListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -8121,13 +8121,13 @@ func (r ApiDcimConsolePortsListRequest) ModifiedByRequest(modifiedByRequest stri
 }
 
 // Module (ID)
-func (r ApiDcimConsolePortsListRequest) ModuleId(moduleId []*int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) ModuleId(moduleId []*int64) ApiDcimConsolePortsListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimConsolePortsListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimConsolePortsListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
@@ -8193,7 +8193,7 @@ func (r ApiDcimConsolePortsListRequest) Occupied(occupied bool) ApiDcimConsolePo
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimConsolePortsListRequest) Offset(offset int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) Offset(offset int64) ApiDcimConsolePortsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -8223,13 +8223,13 @@ func (r ApiDcimConsolePortsListRequest) RackN(rackN []string) ApiDcimConsolePort
 }
 
 // Rack (ID)
-func (r ApiDcimConsolePortsListRequest) RackId(rackId []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) RackId(rackId []int64) ApiDcimConsolePortsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimConsolePortsListRequest) RackIdN(rackIdN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) RackIdN(rackIdN []int64) ApiDcimConsolePortsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -8287,13 +8287,13 @@ func (r ApiDcimConsolePortsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiD
 }
 
 // Site (ID)
-func (r ApiDcimConsolePortsListRequest) SiteId(siteId []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) SiteId(siteId []int64) ApiDcimConsolePortsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimConsolePortsListRequest) SiteIdN(siteIdN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) SiteIdN(siteIdN []int64) ApiDcimConsolePortsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -8397,13 +8397,13 @@ func (r ApiDcimConsolePortsListRequest) VirtualChassisN(virtualChassisN []string
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimConsolePortsListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimConsolePortsListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimConsolePortsListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimConsolePortsListRequest {
+func (r ApiDcimConsolePortsListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimConsolePortsListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -9809,7 +9809,7 @@ func (a *DcimAPIService) DcimConsolePortsListExecute(r ApiDcimConsolePortsListRe
 type ApiDcimConsolePortsPartialUpdateRequest struct {
 	ctx                               context.Context
 	ApiService                        *DcimAPIService
-	id                                int32
+	id                                int64
 	patchedWritableConsolePortRequest *PatchedWritableConsolePortRequest
 }
 
@@ -9831,7 +9831,7 @@ Patch a console port object.
 	@param id A unique integer value identifying this console port.
 	@return ApiDcimConsolePortsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimConsolePortsPartialUpdate(ctx context.Context, id int32) ApiDcimConsolePortsPartialUpdateRequest {
+func (a *DcimAPIService) DcimConsolePortsPartialUpdate(ctx context.Context, id int64) ApiDcimConsolePortsPartialUpdateRequest {
 	return ApiDcimConsolePortsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -9935,7 +9935,7 @@ func (a *DcimAPIService) DcimConsolePortsPartialUpdateExecute(r ApiDcimConsolePo
 type ApiDcimConsolePortsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsolePortsRetrieveRequest) Execute() (*ConsolePort, *http.Response, error) {
@@ -9951,7 +9951,7 @@ Get a console port object.
 	@param id A unique integer value identifying this console port.
 	@return ApiDcimConsolePortsRetrieveRequest
 */
-func (a *DcimAPIService) DcimConsolePortsRetrieve(ctx context.Context, id int32) ApiDcimConsolePortsRetrieveRequest {
+func (a *DcimAPIService) DcimConsolePortsRetrieve(ctx context.Context, id int64) ApiDcimConsolePortsRetrieveRequest {
 	return ApiDcimConsolePortsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -10053,7 +10053,7 @@ func (a *DcimAPIService) DcimConsolePortsRetrieveExecute(r ApiDcimConsolePortsRe
 type ApiDcimConsolePortsTraceRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsolePortsTraceRetrieveRequest) Execute() (*ConsolePort, *http.Response, error) {
@@ -10069,7 +10069,7 @@ Trace a complete cable path and return each segment as a three-tuple of (termina
 	@param id A unique integer value identifying this console port.
 	@return ApiDcimConsolePortsTraceRetrieveRequest
 */
-func (a *DcimAPIService) DcimConsolePortsTraceRetrieve(ctx context.Context, id int32) ApiDcimConsolePortsTraceRetrieveRequest {
+func (a *DcimAPIService) DcimConsolePortsTraceRetrieve(ctx context.Context, id int64) ApiDcimConsolePortsTraceRetrieveRequest {
 	return ApiDcimConsolePortsTraceRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -10171,7 +10171,7 @@ func (a *DcimAPIService) DcimConsolePortsTraceRetrieveExecute(r ApiDcimConsolePo
 type ApiDcimConsolePortsUpdateRequest struct {
 	ctx                        context.Context
 	ApiService                 *DcimAPIService
-	id                         int32
+	id                         int64
 	writableConsolePortRequest *WritableConsolePortRequest
 }
 
@@ -10193,7 +10193,7 @@ Put a console port object.
 	@param id A unique integer value identifying this console port.
 	@return ApiDcimConsolePortsUpdateRequest
 */
-func (a *DcimAPIService) DcimConsolePortsUpdate(ctx context.Context, id int32) ApiDcimConsolePortsUpdateRequest {
+func (a *DcimAPIService) DcimConsolePortsUpdate(ctx context.Context, id int64) ApiDcimConsolePortsUpdateRequest {
 	return ApiDcimConsolePortsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -10788,7 +10788,7 @@ func (a *DcimAPIService) DcimConsoleServerPortTemplatesCreateExecute(r ApiDcimCo
 type ApiDcimConsoleServerPortTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsoleServerPortTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -10804,7 +10804,7 @@ Delete a console server port template object.
 	@param id A unique integer value identifying this console server port template.
 	@return ApiDcimConsoleServerPortTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortTemplatesDestroy(ctx context.Context, id int32) ApiDcimConsoleServerPortTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimConsoleServerPortTemplatesDestroy(ctx context.Context, id int64) ApiDcimConsoleServerPortTemplatesDestroyRequest {
 	return ApiDcimConsoleServerPortTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -10913,15 +10913,15 @@ type ApiDcimConsoleServerPortTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]*int32
-	deviceTypeIdN     *[]*int32
-	id                *[]int32
+	deviceTypeId      *[]*int64
+	deviceTypeIdN     *[]*int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -10940,10 +10940,10 @@ type ApiDcimConsoleServerPortTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
-	moduleTypeId      *[]*int32
-	moduleTypeIdN     *[]*int32
+	moduleTypeId      *[]*int64
+	moduleTypeIdN     *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -10955,7 +10955,7 @@ type ApiDcimConsoleServerPortTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	type_             *DcimConsolePortTemplatesListTypeParameter
@@ -11058,18 +11058,18 @@ func (r ApiDcimConsoleServerPortTemplatesListRequest) DescriptionNisw(descriptio
 }
 
 // Device type (ID)
-func (r ApiDcimConsoleServerPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimConsoleServerPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimConsoleServerPortTemplatesListRequest) Id(id []int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) Id(id []int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -11079,27 +11079,27 @@ func (r ApiDcimConsoleServerPortTemplatesListRequest) IdEmpty(idEmpty bool) ApiD
 	return r
 }
 
-func (r ApiDcimConsoleServerPortTemplatesListRequest) IdGt(idGt []int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) IdGt(idGt []int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimConsoleServerPortTemplatesListRequest) IdGte(idGte []int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) IdGte(idGte []int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimConsoleServerPortTemplatesListRequest) IdLt(idLt []int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) IdLt(idLt []int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimConsoleServerPortTemplatesListRequest) IdLte(idLte []int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) IdLte(idLte []int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimConsoleServerPortTemplatesListRequest) IdN(idN []int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) IdN(idN []int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -11195,7 +11195,7 @@ func (r ApiDcimConsoleServerPortTemplatesListRequest) LastUpdatedN(lastUpdatedN 
 }
 
 // Number of results to return per page.
-func (r ApiDcimConsoleServerPortTemplatesListRequest) Limit(limit int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) Limit(limit int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -11206,13 +11206,13 @@ func (r ApiDcimConsoleServerPortTemplatesListRequest) ModifiedByRequest(modified
 }
 
 // Module type (ID)
-func (r ApiDcimConsoleServerPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimConsoleServerPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -11273,7 +11273,7 @@ func (r ApiDcimConsoleServerPortTemplatesListRequest) NameNisw(nameNisw []string
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimConsoleServerPortTemplatesListRequest) Offset(offset int32) ApiDcimConsoleServerPortTemplatesListRequest {
+func (r ApiDcimConsoleServerPortTemplatesListRequest) Offset(offset int64) ApiDcimConsoleServerPortTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -12043,7 +12043,7 @@ func (a *DcimAPIService) DcimConsoleServerPortTemplatesListExecute(r ApiDcimCons
 type ApiDcimConsoleServerPortTemplatesPartialUpdateRequest struct {
 	ctx                                             context.Context
 	ApiService                                      *DcimAPIService
-	id                                              int32
+	id                                              int64
 	patchedWritableConsoleServerPortTemplateRequest *PatchedWritableConsoleServerPortTemplateRequest
 }
 
@@ -12065,7 +12065,7 @@ Patch a console server port template object.
 	@param id A unique integer value identifying this console server port template.
 	@return ApiDcimConsoleServerPortTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimConsoleServerPortTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimConsoleServerPortTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimConsoleServerPortTemplatesPartialUpdateRequest {
 	return ApiDcimConsoleServerPortTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -12169,7 +12169,7 @@ func (a *DcimAPIService) DcimConsoleServerPortTemplatesPartialUpdateExecute(r Ap
 type ApiDcimConsoleServerPortTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsoleServerPortTemplatesRetrieveRequest) Execute() (*ConsoleServerPortTemplate, *http.Response, error) {
@@ -12185,7 +12185,7 @@ Get a console server port template object.
 	@param id A unique integer value identifying this console server port template.
 	@return ApiDcimConsoleServerPortTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortTemplatesRetrieve(ctx context.Context, id int32) ApiDcimConsoleServerPortTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimConsoleServerPortTemplatesRetrieve(ctx context.Context, id int64) ApiDcimConsoleServerPortTemplatesRetrieveRequest {
 	return ApiDcimConsoleServerPortTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -12287,7 +12287,7 @@ func (a *DcimAPIService) DcimConsoleServerPortTemplatesRetrieveExecute(r ApiDcim
 type ApiDcimConsoleServerPortTemplatesUpdateRequest struct {
 	ctx                                      context.Context
 	ApiService                               *DcimAPIService
-	id                                       int32
+	id                                       int64
 	writableConsoleServerPortTemplateRequest *WritableConsoleServerPortTemplateRequest
 }
 
@@ -12309,7 +12309,7 @@ Put a console server port template object.
 	@param id A unique integer value identifying this console server port template.
 	@return ApiDcimConsoleServerPortTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortTemplatesUpdate(ctx context.Context, id int32) ApiDcimConsoleServerPortTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimConsoleServerPortTemplatesUpdate(ctx context.Context, id int64) ApiDcimConsoleServerPortTemplatesUpdateRequest {
 	return ApiDcimConsoleServerPortTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -12904,7 +12904,7 @@ func (a *DcimAPIService) DcimConsoleServerPortsCreateExecute(r ApiDcimConsoleSer
 type ApiDcimConsoleServerPortsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsoleServerPortsDestroyRequest) Execute() (*http.Response, error) {
@@ -12920,7 +12920,7 @@ Delete a console server port object.
 	@param id A unique integer value identifying this console server port.
 	@return ApiDcimConsoleServerPortsDestroyRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortsDestroy(ctx context.Context, id int32) ApiDcimConsoleServerPortsDestroyRequest {
+func (a *DcimAPIService) DcimConsoleServerPortsDestroy(ctx context.Context, id int64) ApiDcimConsoleServerPortsDestroyRequest {
 	return ApiDcimConsoleServerPortsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -13011,8 +13011,8 @@ type ApiDcimConsoleServerPortsListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
 	cableEnd          *CircuitsCircuitTerminationsListCableEndParameter
-	cableId           *[]*int32
-	cableIdN          *[]*int32
+	cableId           *[]*int64
+	cableIdN          *[]*int64
 	cabled            *bool
 	connected         *bool
 	created           *[]time.Time
@@ -13036,12 +13036,12 @@ type ApiDcimConsoleServerPortsListRequest struct {
 	descriptionNisw   *[]string
 	device            *[]*string
 	deviceN           *[]*string
-	deviceId          *[]int32
-	deviceIdN         *[]int32
+	deviceId          *[]int64
+	deviceIdN         *[]int64
 	deviceRole        *[]string
 	deviceRoleN       *[]string
-	deviceRoleId      *[]int32
-	deviceRoleIdN     *[]int32
+	deviceRoleId      *[]int64
+	deviceRoleIdN     *[]int64
 	deviceStatus      *[]string
 	deviceStatusEmpty *bool
 	deviceStatusIc    *[]string
@@ -13055,15 +13055,15 @@ type ApiDcimConsoleServerPortsListRequest struct {
 	deviceStatusNisw  *[]string
 	deviceType        *[]string
 	deviceTypeN       *[]string
-	deviceTypeId      *[]int32
-	deviceTypeIdN     *[]int32
-	id                *[]int32
+	deviceTypeId      *[]int64
+	deviceTypeIdN     *[]int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -13082,15 +13082,15 @@ type ApiDcimConsoleServerPortsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	location          *[]string
 	locationN         *[]string
-	locationId        *[]int32
-	locationIdN       *[]int32
+	locationId        *[]int64
+	locationIdN       *[]int64
 	markConnected     *bool
 	modifiedByRequest *string
-	moduleId          *[]*int32
-	moduleIdN         *[]*int32
+	moduleId          *[]*int64
+	moduleIdN         *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -13103,13 +13103,13 @@ type ApiDcimConsoleServerPortsListRequest struct {
 	nameNiew          *[]string
 	nameNisw          *[]string
 	occupied          *bool
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	rack              *[]string
 	rackN             *[]string
-	rackId            *[]int32
-	rackIdN           *[]int32
+	rackId            *[]int64
+	rackIdN           *[]int64
 	region            *[]string
 	regionN           *[]string
 	regionId          *[]string
@@ -13120,8 +13120,8 @@ type ApiDcimConsoleServerPortsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	speed             *DcimConsolePortsListSpeedParameter
 	tag               *[]string
 	tagN              *[]string
@@ -13139,8 +13139,8 @@ type ApiDcimConsoleServerPortsListRequest struct {
 	updatedByRequest  *string
 	virtualChassis    *[]string
 	virtualChassisN   *[]string
-	virtualChassisId  *[]int32
-	virtualChassisIdN *[]int32
+	virtualChassisId  *[]int64
+	virtualChassisIdN *[]int64
 }
 
 // * &#x60;A&#x60; - A * &#x60;B&#x60; - B
@@ -13150,13 +13150,13 @@ func (r ApiDcimConsoleServerPortsListRequest) CableEnd(cableEnd CircuitsCircuitT
 }
 
 // Cable (ID)
-func (r ApiDcimConsoleServerPortsListRequest) CableId(cableId []*int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) CableId(cableId []*int64) ApiDcimConsoleServerPortsListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimConsoleServerPortsListRequest) CableIdN(cableIdN []*int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) CableIdN(cableIdN []*int64) ApiDcimConsoleServerPortsListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -13279,13 +13279,13 @@ func (r ApiDcimConsoleServerPortsListRequest) DeviceN(deviceN []*string) ApiDcim
 }
 
 // Device (ID)
-func (r ApiDcimConsoleServerPortsListRequest) DeviceId(deviceId []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) DeviceId(deviceId []int64) ApiDcimConsoleServerPortsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimConsoleServerPortsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -13303,13 +13303,13 @@ func (r ApiDcimConsoleServerPortsListRequest) DeviceRoleN(deviceRoleN []string) 
 }
 
 // Device role (ID)
-func (r ApiDcimConsoleServerPortsListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimConsoleServerPortsListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimConsoleServerPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -13382,18 +13382,18 @@ func (r ApiDcimConsoleServerPortsListRequest) DeviceTypeN(deviceTypeN []string) 
 }
 
 // Device type (ID)
-func (r ApiDcimConsoleServerPortsListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimConsoleServerPortsListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimConsoleServerPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimConsoleServerPortsListRequest) Id(id []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) Id(id []int64) ApiDcimConsoleServerPortsListRequest {
 	r.id = &id
 	return r
 }
@@ -13403,27 +13403,27 @@ func (r ApiDcimConsoleServerPortsListRequest) IdEmpty(idEmpty bool) ApiDcimConso
 	return r
 }
 
-func (r ApiDcimConsoleServerPortsListRequest) IdGt(idGt []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) IdGt(idGt []int64) ApiDcimConsoleServerPortsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimConsoleServerPortsListRequest) IdGte(idGte []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) IdGte(idGte []int64) ApiDcimConsoleServerPortsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimConsoleServerPortsListRequest) IdLt(idLt []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) IdLt(idLt []int64) ApiDcimConsoleServerPortsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimConsoleServerPortsListRequest) IdLte(idLte []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) IdLte(idLte []int64) ApiDcimConsoleServerPortsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimConsoleServerPortsListRequest) IdN(idN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) IdN(idN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -13519,7 +13519,7 @@ func (r ApiDcimConsoleServerPortsListRequest) LastUpdatedN(lastUpdatedN []time.T
 }
 
 // Number of results to return per page.
-func (r ApiDcimConsoleServerPortsListRequest) Limit(limit int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) Limit(limit int64) ApiDcimConsoleServerPortsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -13537,13 +13537,13 @@ func (r ApiDcimConsoleServerPortsListRequest) LocationN(locationN []string) ApiD
 }
 
 // Location (ID)
-func (r ApiDcimConsoleServerPortsListRequest) LocationId(locationId []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) LocationId(locationId []int64) ApiDcimConsoleServerPortsListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimConsoleServerPortsListRequest) LocationIdN(locationIdN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) LocationIdN(locationIdN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -13559,13 +13559,13 @@ func (r ApiDcimConsoleServerPortsListRequest) ModifiedByRequest(modifiedByReques
 }
 
 // Module (ID)
-func (r ApiDcimConsoleServerPortsListRequest) ModuleId(moduleId []*int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) ModuleId(moduleId []*int64) ApiDcimConsoleServerPortsListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimConsoleServerPortsListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimConsoleServerPortsListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
@@ -13631,7 +13631,7 @@ func (r ApiDcimConsoleServerPortsListRequest) Occupied(occupied bool) ApiDcimCon
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimConsoleServerPortsListRequest) Offset(offset int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) Offset(offset int64) ApiDcimConsoleServerPortsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -13661,13 +13661,13 @@ func (r ApiDcimConsoleServerPortsListRequest) RackN(rackN []string) ApiDcimConso
 }
 
 // Rack (ID)
-func (r ApiDcimConsoleServerPortsListRequest) RackId(rackId []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) RackId(rackId []int64) ApiDcimConsoleServerPortsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimConsoleServerPortsListRequest) RackIdN(rackIdN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) RackIdN(rackIdN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -13725,13 +13725,13 @@ func (r ApiDcimConsoleServerPortsListRequest) SiteGroupIdN(siteGroupIdN []string
 }
 
 // Site (ID)
-func (r ApiDcimConsoleServerPortsListRequest) SiteId(siteId []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) SiteId(siteId []int64) ApiDcimConsoleServerPortsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimConsoleServerPortsListRequest) SiteIdN(siteIdN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) SiteIdN(siteIdN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -13835,13 +13835,13 @@ func (r ApiDcimConsoleServerPortsListRequest) VirtualChassisN(virtualChassisN []
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimConsoleServerPortsListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimConsoleServerPortsListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimConsoleServerPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimConsoleServerPortsListRequest {
+func (r ApiDcimConsoleServerPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimConsoleServerPortsListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -15247,7 +15247,7 @@ func (a *DcimAPIService) DcimConsoleServerPortsListExecute(r ApiDcimConsoleServe
 type ApiDcimConsoleServerPortsPartialUpdateRequest struct {
 	ctx                                     context.Context
 	ApiService                              *DcimAPIService
-	id                                      int32
+	id                                      int64
 	patchedWritableConsoleServerPortRequest *PatchedWritableConsoleServerPortRequest
 }
 
@@ -15269,7 +15269,7 @@ Patch a console server port object.
 	@param id A unique integer value identifying this console server port.
 	@return ApiDcimConsoleServerPortsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortsPartialUpdate(ctx context.Context, id int32) ApiDcimConsoleServerPortsPartialUpdateRequest {
+func (a *DcimAPIService) DcimConsoleServerPortsPartialUpdate(ctx context.Context, id int64) ApiDcimConsoleServerPortsPartialUpdateRequest {
 	return ApiDcimConsoleServerPortsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -15373,7 +15373,7 @@ func (a *DcimAPIService) DcimConsoleServerPortsPartialUpdateExecute(r ApiDcimCon
 type ApiDcimConsoleServerPortsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsoleServerPortsRetrieveRequest) Execute() (*ConsoleServerPort, *http.Response, error) {
@@ -15389,7 +15389,7 @@ Get a console server port object.
 	@param id A unique integer value identifying this console server port.
 	@return ApiDcimConsoleServerPortsRetrieveRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortsRetrieve(ctx context.Context, id int32) ApiDcimConsoleServerPortsRetrieveRequest {
+func (a *DcimAPIService) DcimConsoleServerPortsRetrieve(ctx context.Context, id int64) ApiDcimConsoleServerPortsRetrieveRequest {
 	return ApiDcimConsoleServerPortsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -15491,7 +15491,7 @@ func (a *DcimAPIService) DcimConsoleServerPortsRetrieveExecute(r ApiDcimConsoleS
 type ApiDcimConsoleServerPortsTraceRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimConsoleServerPortsTraceRetrieveRequest) Execute() (*ConsoleServerPort, *http.Response, error) {
@@ -15507,7 +15507,7 @@ Trace a complete cable path and return each segment as a three-tuple of (termina
 	@param id A unique integer value identifying this console server port.
 	@return ApiDcimConsoleServerPortsTraceRetrieveRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortsTraceRetrieve(ctx context.Context, id int32) ApiDcimConsoleServerPortsTraceRetrieveRequest {
+func (a *DcimAPIService) DcimConsoleServerPortsTraceRetrieve(ctx context.Context, id int64) ApiDcimConsoleServerPortsTraceRetrieveRequest {
 	return ApiDcimConsoleServerPortsTraceRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -15609,7 +15609,7 @@ func (a *DcimAPIService) DcimConsoleServerPortsTraceRetrieveExecute(r ApiDcimCon
 type ApiDcimConsoleServerPortsUpdateRequest struct {
 	ctx                              context.Context
 	ApiService                       *DcimAPIService
-	id                               int32
+	id                               int64
 	writableConsoleServerPortRequest *WritableConsoleServerPortRequest
 }
 
@@ -15631,7 +15631,7 @@ Put a console server port object.
 	@param id A unique integer value identifying this console server port.
 	@return ApiDcimConsoleServerPortsUpdateRequest
 */
-func (a *DcimAPIService) DcimConsoleServerPortsUpdate(ctx context.Context, id int32) ApiDcimConsoleServerPortsUpdateRequest {
+func (a *DcimAPIService) DcimConsoleServerPortsUpdate(ctx context.Context, id int64) ApiDcimConsoleServerPortsUpdateRequest {
 	return ApiDcimConsoleServerPortsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -16226,7 +16226,7 @@ func (a *DcimAPIService) DcimDeviceBayTemplatesCreateExecute(r ApiDcimDeviceBayT
 type ApiDcimDeviceBayTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceBayTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -16242,7 +16242,7 @@ Delete a device bay template object.
 	@param id A unique integer value identifying this device bay template.
 	@return ApiDcimDeviceBayTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimDeviceBayTemplatesDestroy(ctx context.Context, id int32) ApiDcimDeviceBayTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimDeviceBayTemplatesDestroy(ctx context.Context, id int64) ApiDcimDeviceBayTemplatesDestroyRequest {
 	return ApiDcimDeviceBayTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -16351,15 +16351,15 @@ type ApiDcimDeviceBayTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]int32
-	deviceTypeIdN     *[]int32
-	id                *[]int32
+	deviceTypeId      *[]int64
+	deviceTypeIdN     *[]int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -16378,7 +16378,7 @@ type ApiDcimDeviceBayTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -16391,7 +16391,7 @@ type ApiDcimDeviceBayTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	updatedByRequest  *string
@@ -16493,18 +16493,18 @@ func (r ApiDcimDeviceBayTemplatesListRequest) DescriptionNisw(descriptionNisw []
 }
 
 // Device type (ID)
-func (r ApiDcimDeviceBayTemplatesListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimDeviceBayTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimDeviceBayTemplatesListRequest) Id(id []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) Id(id []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -16514,27 +16514,27 @@ func (r ApiDcimDeviceBayTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimDevic
 	return r
 }
 
-func (r ApiDcimDeviceBayTemplatesListRequest) IdGt(idGt []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) IdGt(idGt []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimDeviceBayTemplatesListRequest) IdGte(idGte []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) IdGte(idGte []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimDeviceBayTemplatesListRequest) IdLt(idLt []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) IdLt(idLt []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimDeviceBayTemplatesListRequest) IdLte(idLte []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) IdLte(idLte []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimDeviceBayTemplatesListRequest) IdN(idN []int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) IdN(idN []int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -16630,7 +16630,7 @@ func (r ApiDcimDeviceBayTemplatesListRequest) LastUpdatedN(lastUpdatedN []time.T
 }
 
 // Number of results to return per page.
-func (r ApiDcimDeviceBayTemplatesListRequest) Limit(limit int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) Limit(limit int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -16696,7 +16696,7 @@ func (r ApiDcimDeviceBayTemplatesListRequest) NameNisw(nameNisw []string) ApiDci
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimDeviceBayTemplatesListRequest) Offset(offset int32) ApiDcimDeviceBayTemplatesListRequest {
+func (r ApiDcimDeviceBayTemplatesListRequest) Offset(offset int64) ApiDcimDeviceBayTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -17435,7 +17435,7 @@ func (a *DcimAPIService) DcimDeviceBayTemplatesListExecute(r ApiDcimDeviceBayTem
 type ApiDcimDeviceBayTemplatesPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedDeviceBayTemplateRequest *PatchedDeviceBayTemplateRequest
 }
 
@@ -17457,7 +17457,7 @@ Patch a device bay template object.
 	@param id A unique integer value identifying this device bay template.
 	@return ApiDcimDeviceBayTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceBayTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimDeviceBayTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimDeviceBayTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimDeviceBayTemplatesPartialUpdateRequest {
 	return ApiDcimDeviceBayTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -17561,7 +17561,7 @@ func (a *DcimAPIService) DcimDeviceBayTemplatesPartialUpdateExecute(r ApiDcimDev
 type ApiDcimDeviceBayTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceBayTemplatesRetrieveRequest) Execute() (*DeviceBayTemplate, *http.Response, error) {
@@ -17577,7 +17577,7 @@ Get a device bay template object.
 	@param id A unique integer value identifying this device bay template.
 	@return ApiDcimDeviceBayTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimDeviceBayTemplatesRetrieve(ctx context.Context, id int32) ApiDcimDeviceBayTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimDeviceBayTemplatesRetrieve(ctx context.Context, id int64) ApiDcimDeviceBayTemplatesRetrieveRequest {
 	return ApiDcimDeviceBayTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -17679,7 +17679,7 @@ func (a *DcimAPIService) DcimDeviceBayTemplatesRetrieveExecute(r ApiDcimDeviceBa
 type ApiDcimDeviceBayTemplatesUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	deviceBayTemplateRequest *DeviceBayTemplateRequest
 }
 
@@ -17701,7 +17701,7 @@ Put a device bay template object.
 	@param id A unique integer value identifying this device bay template.
 	@return ApiDcimDeviceBayTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceBayTemplatesUpdate(ctx context.Context, id int32) ApiDcimDeviceBayTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimDeviceBayTemplatesUpdate(ctx context.Context, id int64) ApiDcimDeviceBayTemplatesUpdateRequest {
 	return ApiDcimDeviceBayTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -18296,7 +18296,7 @@ func (a *DcimAPIService) DcimDeviceBaysCreateExecute(r ApiDcimDeviceBaysCreateRe
 type ApiDcimDeviceBaysDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceBaysDestroyRequest) Execute() (*http.Response, error) {
@@ -18312,7 +18312,7 @@ Delete a device bay object.
 	@param id A unique integer value identifying this device bay.
 	@return ApiDcimDeviceBaysDestroyRequest
 */
-func (a *DcimAPIService) DcimDeviceBaysDestroy(ctx context.Context, id int32) ApiDcimDeviceBaysDestroyRequest {
+func (a *DcimAPIService) DcimDeviceBaysDestroy(ctx context.Context, id int64) ApiDcimDeviceBaysDestroyRequest {
 	return ApiDcimDeviceBaysDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -18423,12 +18423,12 @@ type ApiDcimDeviceBaysListRequest struct {
 	descriptionNisw    *[]string
 	device             *[]*string
 	deviceN            *[]*string
-	deviceId           *[]int32
-	deviceIdN          *[]int32
+	deviceId           *[]int64
+	deviceIdN          *[]int64
 	deviceRole         *[]string
 	deviceRoleN        *[]string
-	deviceRoleId       *[]int32
-	deviceRoleIdN      *[]int32
+	deviceRoleId       *[]int64
+	deviceRoleIdN      *[]int64
 	deviceStatus       *[]string
 	deviceStatusEmpty  *bool
 	deviceStatusIc     *[]string
@@ -18442,19 +18442,19 @@ type ApiDcimDeviceBaysListRequest struct {
 	deviceStatusNisw   *[]string
 	deviceType         *[]string
 	deviceTypeN        *[]string
-	deviceTypeId       *[]int32
-	deviceTypeIdN      *[]int32
-	id                 *[]int32
+	deviceTypeId       *[]int64
+	deviceTypeIdN      *[]int64
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
 	installedDevice    *[]*string
 	installedDeviceN   *[]*string
-	installedDeviceId  *[]*int32
-	installedDeviceIdN *[]*int32
+	installedDeviceId  *[]*int64
+	installedDeviceIdN *[]*int64
 	label              *[]string
 	labelEmpty         *bool
 	labelIc            *[]string
@@ -18473,11 +18473,11 @@ type ApiDcimDeviceBaysListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
+	limit              *int64
 	location           *[]string
 	locationN          *[]string
-	locationId         *[]int32
-	locationIdN        *[]int32
+	locationId         *[]int64
+	locationIdN        *[]int64
 	modifiedByRequest  *string
 	name               *[]string
 	nameEmpty          *bool
@@ -18490,13 +18490,13 @@ type ApiDcimDeviceBaysListRequest struct {
 	nameNie            *[]string
 	nameNiew           *[]string
 	nameNisw           *[]string
-	offset             *int32
+	offset             *int64
 	ordering           *string
 	q                  *string
 	rack               *[]string
 	rackN              *[]string
-	rackId             *[]int32
-	rackIdN            *[]int32
+	rackId             *[]int64
+	rackIdN            *[]int64
 	region             *[]string
 	regionN            *[]string
 	regionId           *[]string
@@ -18507,15 +18507,15 @@ type ApiDcimDeviceBaysListRequest struct {
 	siteGroupN         *[]string
 	siteGroupId        *[]string
 	siteGroupIdN       *[]string
-	siteId             *[]int32
-	siteIdN            *[]int32
+	siteId             *[]int64
+	siteIdN            *[]int64
 	tag                *[]string
 	tagN               *[]string
 	updatedByRequest   *string
 	virtualChassis     *[]string
 	virtualChassisN    *[]string
-	virtualChassisId   *[]int32
-	virtualChassisIdN  *[]int32
+	virtualChassisId   *[]int64
+	virtualChassisIdN  *[]int64
 }
 
 func (r ApiDcimDeviceBaysListRequest) Created(created []time.Time) ApiDcimDeviceBaysListRequest {
@@ -18626,13 +18626,13 @@ func (r ApiDcimDeviceBaysListRequest) DeviceN(deviceN []*string) ApiDcimDeviceBa
 }
 
 // Device (ID)
-func (r ApiDcimDeviceBaysListRequest) DeviceId(deviceId []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) DeviceId(deviceId []int64) ApiDcimDeviceBaysListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimDeviceBaysListRequest) DeviceIdN(deviceIdN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) DeviceIdN(deviceIdN []int64) ApiDcimDeviceBaysListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -18650,13 +18650,13 @@ func (r ApiDcimDeviceBaysListRequest) DeviceRoleN(deviceRoleN []string) ApiDcimD
 }
 
 // Device role (ID)
-func (r ApiDcimDeviceBaysListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimDeviceBaysListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimDeviceBaysListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimDeviceBaysListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -18729,18 +18729,18 @@ func (r ApiDcimDeviceBaysListRequest) DeviceTypeN(deviceTypeN []string) ApiDcimD
 }
 
 // Device type (ID)
-func (r ApiDcimDeviceBaysListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimDeviceBaysListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimDeviceBaysListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimDeviceBaysListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimDeviceBaysListRequest) Id(id []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) Id(id []int64) ApiDcimDeviceBaysListRequest {
 	r.id = &id
 	return r
 }
@@ -18750,27 +18750,27 @@ func (r ApiDcimDeviceBaysListRequest) IdEmpty(idEmpty bool) ApiDcimDeviceBaysLis
 	return r
 }
 
-func (r ApiDcimDeviceBaysListRequest) IdGt(idGt []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) IdGt(idGt []int64) ApiDcimDeviceBaysListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimDeviceBaysListRequest) IdGte(idGte []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) IdGte(idGte []int64) ApiDcimDeviceBaysListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimDeviceBaysListRequest) IdLt(idLt []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) IdLt(idLt []int64) ApiDcimDeviceBaysListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimDeviceBaysListRequest) IdLte(idLte []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) IdLte(idLte []int64) ApiDcimDeviceBaysListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimDeviceBaysListRequest) IdN(idN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) IdN(idN []int64) ApiDcimDeviceBaysListRequest {
 	r.idN = &idN
 	return r
 }
@@ -18788,13 +18788,13 @@ func (r ApiDcimDeviceBaysListRequest) InstalledDeviceN(installedDeviceN []*strin
 }
 
 // Installed device (ID)
-func (r ApiDcimDeviceBaysListRequest) InstalledDeviceId(installedDeviceId []*int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) InstalledDeviceId(installedDeviceId []*int64) ApiDcimDeviceBaysListRequest {
 	r.installedDeviceId = &installedDeviceId
 	return r
 }
 
 // Installed device (ID)
-func (r ApiDcimDeviceBaysListRequest) InstalledDeviceIdN(installedDeviceIdN []*int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) InstalledDeviceIdN(installedDeviceIdN []*int64) ApiDcimDeviceBaysListRequest {
 	r.installedDeviceIdN = &installedDeviceIdN
 	return r
 }
@@ -18890,7 +18890,7 @@ func (r ApiDcimDeviceBaysListRequest) LastUpdatedN(lastUpdatedN []time.Time) Api
 }
 
 // Number of results to return per page.
-func (r ApiDcimDeviceBaysListRequest) Limit(limit int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) Limit(limit int64) ApiDcimDeviceBaysListRequest {
 	r.limit = &limit
 	return r
 }
@@ -18908,13 +18908,13 @@ func (r ApiDcimDeviceBaysListRequest) LocationN(locationN []string) ApiDcimDevic
 }
 
 // Location (ID)
-func (r ApiDcimDeviceBaysListRequest) LocationId(locationId []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) LocationId(locationId []int64) ApiDcimDeviceBaysListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimDeviceBaysListRequest) LocationIdN(locationIdN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) LocationIdN(locationIdN []int64) ApiDcimDeviceBaysListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -18980,7 +18980,7 @@ func (r ApiDcimDeviceBaysListRequest) NameNisw(nameNisw []string) ApiDcimDeviceB
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimDeviceBaysListRequest) Offset(offset int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) Offset(offset int64) ApiDcimDeviceBaysListRequest {
 	r.offset = &offset
 	return r
 }
@@ -19010,13 +19010,13 @@ func (r ApiDcimDeviceBaysListRequest) RackN(rackN []string) ApiDcimDeviceBaysLis
 }
 
 // Rack (ID)
-func (r ApiDcimDeviceBaysListRequest) RackId(rackId []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) RackId(rackId []int64) ApiDcimDeviceBaysListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimDeviceBaysListRequest) RackIdN(rackIdN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) RackIdN(rackIdN []int64) ApiDcimDeviceBaysListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -19074,13 +19074,13 @@ func (r ApiDcimDeviceBaysListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDci
 }
 
 // Site (ID)
-func (r ApiDcimDeviceBaysListRequest) SiteId(siteId []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) SiteId(siteId []int64) ApiDcimDeviceBaysListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimDeviceBaysListRequest) SiteIdN(siteIdN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) SiteIdN(siteIdN []int64) ApiDcimDeviceBaysListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -19113,13 +19113,13 @@ func (r ApiDcimDeviceBaysListRequest) VirtualChassisN(virtualChassisN []string) 
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimDeviceBaysListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimDeviceBaysListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimDeviceBaysListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimDeviceBaysListRequest {
+func (r ApiDcimDeviceBaysListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimDeviceBaysListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -20394,7 +20394,7 @@ func (a *DcimAPIService) DcimDeviceBaysListExecute(r ApiDcimDeviceBaysListReques
 type ApiDcimDeviceBaysPartialUpdateRequest struct {
 	ctx                     context.Context
 	ApiService              *DcimAPIService
-	id                      int32
+	id                      int64
 	patchedDeviceBayRequest *PatchedDeviceBayRequest
 }
 
@@ -20416,7 +20416,7 @@ Patch a device bay object.
 	@param id A unique integer value identifying this device bay.
 	@return ApiDcimDeviceBaysPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceBaysPartialUpdate(ctx context.Context, id int32) ApiDcimDeviceBaysPartialUpdateRequest {
+func (a *DcimAPIService) DcimDeviceBaysPartialUpdate(ctx context.Context, id int64) ApiDcimDeviceBaysPartialUpdateRequest {
 	return ApiDcimDeviceBaysPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -20520,7 +20520,7 @@ func (a *DcimAPIService) DcimDeviceBaysPartialUpdateExecute(r ApiDcimDeviceBaysP
 type ApiDcimDeviceBaysRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceBaysRetrieveRequest) Execute() (*DeviceBay, *http.Response, error) {
@@ -20536,7 +20536,7 @@ Get a device bay object.
 	@param id A unique integer value identifying this device bay.
 	@return ApiDcimDeviceBaysRetrieveRequest
 */
-func (a *DcimAPIService) DcimDeviceBaysRetrieve(ctx context.Context, id int32) ApiDcimDeviceBaysRetrieveRequest {
+func (a *DcimAPIService) DcimDeviceBaysRetrieve(ctx context.Context, id int64) ApiDcimDeviceBaysRetrieveRequest {
 	return ApiDcimDeviceBaysRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -20638,7 +20638,7 @@ func (a *DcimAPIService) DcimDeviceBaysRetrieveExecute(r ApiDcimDeviceBaysRetrie
 type ApiDcimDeviceBaysUpdateRequest struct {
 	ctx              context.Context
 	ApiService       *DcimAPIService
-	id               int32
+	id               int64
 	deviceBayRequest *DeviceBayRequest
 }
 
@@ -20660,7 +20660,7 @@ Put a device bay object.
 	@param id A unique integer value identifying this device bay.
 	@return ApiDcimDeviceBaysUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceBaysUpdate(ctx context.Context, id int32) ApiDcimDeviceBaysUpdateRequest {
+func (a *DcimAPIService) DcimDeviceBaysUpdate(ctx context.Context, id int64) ApiDcimDeviceBaysUpdateRequest {
 	return ApiDcimDeviceBaysUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -21255,7 +21255,7 @@ func (a *DcimAPIService) DcimDeviceRolesCreateExecute(r ApiDcimDeviceRolesCreate
 type ApiDcimDeviceRolesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceRolesDestroyRequest) Execute() (*http.Response, error) {
@@ -21271,7 +21271,7 @@ Delete a device role object.
 	@param id A unique integer value identifying this device role.
 	@return ApiDcimDeviceRolesDestroyRequest
 */
-func (a *DcimAPIService) DcimDeviceRolesDestroy(ctx context.Context, id int32) ApiDcimDeviceRolesDestroyRequest {
+func (a *DcimAPIService) DcimDeviceRolesDestroy(ctx context.Context, id int64) ApiDcimDeviceRolesDestroyRequest {
 	return ApiDcimDeviceRolesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -21372,8 +21372,8 @@ type ApiDcimDeviceRolesListRequest struct {
 	colorNie          *[]string
 	colorNiew         *[]string
 	colorNisw         *[]string
-	configTemplateId  *[]*int32
-	configTemplateIdN *[]*int32
+	configTemplateId  *[]*int64
+	configTemplateIdN *[]*int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -21393,13 +21393,13 @@ type ApiDcimDeviceRolesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -21407,7 +21407,7 @@ type ApiDcimDeviceRolesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -21420,7 +21420,7 @@ type ApiDcimDeviceRolesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	slug              *[]string
@@ -21496,13 +21496,13 @@ func (r ApiDcimDeviceRolesListRequest) ColorNisw(colorNisw []string) ApiDcimDevi
 }
 
 // Config template (ID)
-func (r ApiDcimDeviceRolesListRequest) ConfigTemplateId(configTemplateId []*int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) ConfigTemplateId(configTemplateId []*int64) ApiDcimDeviceRolesListRequest {
 	r.configTemplateId = &configTemplateId
 	return r
 }
 
 // Config template (ID)
-func (r ApiDcimDeviceRolesListRequest) ConfigTemplateIdN(configTemplateIdN []*int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) ConfigTemplateIdN(configTemplateIdN []*int64) ApiDcimDeviceRolesListRequest {
 	r.configTemplateIdN = &configTemplateIdN
 	return r
 }
@@ -21602,7 +21602,7 @@ func (r ApiDcimDeviceRolesListRequest) DescriptionNisw(descriptionNisw []string)
 	return r
 }
 
-func (r ApiDcimDeviceRolesListRequest) Id(id []int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) Id(id []int64) ApiDcimDeviceRolesListRequest {
 	r.id = &id
 	return r
 }
@@ -21612,27 +21612,27 @@ func (r ApiDcimDeviceRolesListRequest) IdEmpty(idEmpty bool) ApiDcimDeviceRolesL
 	return r
 }
 
-func (r ApiDcimDeviceRolesListRequest) IdGt(idGt []int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) IdGt(idGt []int64) ApiDcimDeviceRolesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimDeviceRolesListRequest) IdGte(idGte []int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) IdGte(idGte []int64) ApiDcimDeviceRolesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimDeviceRolesListRequest) IdLt(idLt []int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) IdLt(idLt []int64) ApiDcimDeviceRolesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimDeviceRolesListRequest) IdLte(idLte []int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) IdLte(idLte []int64) ApiDcimDeviceRolesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimDeviceRolesListRequest) IdN(idN []int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) IdN(idN []int64) ApiDcimDeviceRolesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -21673,7 +21673,7 @@ func (r ApiDcimDeviceRolesListRequest) LastUpdatedN(lastUpdatedN []time.Time) Ap
 }
 
 // Number of results to return per page.
-func (r ApiDcimDeviceRolesListRequest) Limit(limit int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) Limit(limit int64) ApiDcimDeviceRolesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -21739,7 +21739,7 @@ func (r ApiDcimDeviceRolesListRequest) NameNisw(nameNisw []string) ApiDcimDevice
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimDeviceRolesListRequest) Offset(offset int32) ApiDcimDeviceRolesListRequest {
+func (r ApiDcimDeviceRolesListRequest) Offset(offset int64) ApiDcimDeviceRolesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -22686,7 +22686,7 @@ func (a *DcimAPIService) DcimDeviceRolesListExecute(r ApiDcimDeviceRolesListRequ
 type ApiDcimDeviceRolesPartialUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	patchedDeviceRoleRequest *PatchedDeviceRoleRequest
 }
 
@@ -22708,7 +22708,7 @@ Patch a device role object.
 	@param id A unique integer value identifying this device role.
 	@return ApiDcimDeviceRolesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceRolesPartialUpdate(ctx context.Context, id int32) ApiDcimDeviceRolesPartialUpdateRequest {
+func (a *DcimAPIService) DcimDeviceRolesPartialUpdate(ctx context.Context, id int64) ApiDcimDeviceRolesPartialUpdateRequest {
 	return ApiDcimDeviceRolesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -22812,7 +22812,7 @@ func (a *DcimAPIService) DcimDeviceRolesPartialUpdateExecute(r ApiDcimDeviceRole
 type ApiDcimDeviceRolesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceRolesRetrieveRequest) Execute() (*DeviceRole, *http.Response, error) {
@@ -22828,7 +22828,7 @@ Get a device role object.
 	@param id A unique integer value identifying this device role.
 	@return ApiDcimDeviceRolesRetrieveRequest
 */
-func (a *DcimAPIService) DcimDeviceRolesRetrieve(ctx context.Context, id int32) ApiDcimDeviceRolesRetrieveRequest {
+func (a *DcimAPIService) DcimDeviceRolesRetrieve(ctx context.Context, id int64) ApiDcimDeviceRolesRetrieveRequest {
 	return ApiDcimDeviceRolesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -22930,7 +22930,7 @@ func (a *DcimAPIService) DcimDeviceRolesRetrieveExecute(r ApiDcimDeviceRolesRetr
 type ApiDcimDeviceRolesUpdateRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
-	id                int32
+	id                int64
 	deviceRoleRequest *DeviceRoleRequest
 }
 
@@ -22952,7 +22952,7 @@ Put a device role object.
 	@param id A unique integer value identifying this device role.
 	@return ApiDcimDeviceRolesUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceRolesUpdate(ctx context.Context, id int32) ApiDcimDeviceRolesUpdateRequest {
+func (a *DcimAPIService) DcimDeviceRolesUpdate(ctx context.Context, id int64) ApiDcimDeviceRolesUpdateRequest {
 	return ApiDcimDeviceRolesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -23547,7 +23547,7 @@ func (a *DcimAPIService) DcimDeviceTypesCreateExecute(r ApiDcimDeviceTypesCreate
 type ApiDcimDeviceTypesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceTypesDestroyRequest) Execute() (*http.Response, error) {
@@ -23563,7 +23563,7 @@ Delete a device type object.
 	@param id A unique integer value identifying this device type.
 	@return ApiDcimDeviceTypesDestroyRequest
 */
-func (a *DcimAPIService) DcimDeviceTypesDestroy(ctx context.Context, id int32) ApiDcimDeviceTypesDestroyRequest {
+func (a *DcimAPIService) DcimDeviceTypesDestroy(ctx context.Context, id int64) ApiDcimDeviceTypesDestroyRequest {
 	return ApiDcimDeviceTypesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -23654,21 +23654,21 @@ type ApiDcimDeviceTypesListRequest struct {
 	ctx                                 context.Context
 	ApiService                          *DcimAPIService
 	airflow                             *DcimDeviceTypesListAirflowParameter
-	consolePortTemplateCount            *[]int32
+	consolePortTemplateCount            *[]int64
 	consolePortTemplateCountEmpty       *bool
-	consolePortTemplateCountGt          *[]int32
-	consolePortTemplateCountGte         *[]int32
-	consolePortTemplateCountLt          *[]int32
-	consolePortTemplateCountLte         *[]int32
-	consolePortTemplateCountN           *[]int32
+	consolePortTemplateCountGt          *[]int64
+	consolePortTemplateCountGte         *[]int64
+	consolePortTemplateCountLt          *[]int64
+	consolePortTemplateCountLte         *[]int64
+	consolePortTemplateCountN           *[]int64
 	consolePorts                        *bool
-	consoleServerPortTemplateCount      *[]int32
+	consoleServerPortTemplateCount      *[]int64
 	consoleServerPortTemplateCountEmpty *bool
-	consoleServerPortTemplateCountGt    *[]int32
-	consoleServerPortTemplateCountGte   *[]int32
-	consoleServerPortTemplateCountLt    *[]int32
-	consoleServerPortTemplateCountLte   *[]int32
-	consoleServerPortTemplateCountN     *[]int32
+	consoleServerPortTemplateCountGt    *[]int64
+	consoleServerPortTemplateCountGte   *[]int64
+	consoleServerPortTemplateCountLt    *[]int64
+	consoleServerPortTemplateCountLte   *[]int64
+	consoleServerPortTemplateCountN     *[]int64
 	consoleServerPorts                  *bool
 	created                             *[]time.Time
 	createdEmpty                        *[]time.Time
@@ -23680,8 +23680,8 @@ type ApiDcimDeviceTypesListRequest struct {
 	createdByRequest                    *string
 	defaultPlatform                     *[]string
 	defaultPlatformN                    *[]string
-	defaultPlatformId                   *[]*int32
-	defaultPlatformIdN                  *[]*int32
+	defaultPlatformId                   *[]*int64
+	defaultPlatformIdN                  *[]*int64
 	description                         *[]string
 	descriptionEmpty                    *bool
 	descriptionIc                       *[]string
@@ -23693,46 +23693,46 @@ type ApiDcimDeviceTypesListRequest struct {
 	descriptionNie                      *[]string
 	descriptionNiew                     *[]string
 	descriptionNisw                     *[]string
-	deviceBayTemplateCount              *[]int32
+	deviceBayTemplateCount              *[]int64
 	deviceBayTemplateCountEmpty         *bool
-	deviceBayTemplateCountGt            *[]int32
-	deviceBayTemplateCountGte           *[]int32
-	deviceBayTemplateCountLt            *[]int32
-	deviceBayTemplateCountLte           *[]int32
-	deviceBayTemplateCountN             *[]int32
+	deviceBayTemplateCountGt            *[]int64
+	deviceBayTemplateCountGte           *[]int64
+	deviceBayTemplateCountLt            *[]int64
+	deviceBayTemplateCountLte           *[]int64
+	deviceBayTemplateCountN             *[]int64
 	deviceBays                          *bool
 	excludeFromUtilization              *bool
-	frontPortTemplateCount              *[]int32
+	frontPortTemplateCount              *[]int64
 	frontPortTemplateCountEmpty         *bool
-	frontPortTemplateCountGt            *[]int32
-	frontPortTemplateCountGte           *[]int32
-	frontPortTemplateCountLt            *[]int32
-	frontPortTemplateCountLte           *[]int32
-	frontPortTemplateCountN             *[]int32
+	frontPortTemplateCountGt            *[]int64
+	frontPortTemplateCountGte           *[]int64
+	frontPortTemplateCountLt            *[]int64
+	frontPortTemplateCountLte           *[]int64
+	frontPortTemplateCountN             *[]int64
 	hasFrontImage                       *bool
 	hasRearImage                        *bool
-	id                                  *[]int32
+	id                                  *[]int64
 	idEmpty                             *bool
-	idGt                                *[]int32
-	idGte                               *[]int32
-	idLt                                *[]int32
-	idLte                               *[]int32
-	idN                                 *[]int32
-	interfaceTemplateCount              *[]int32
+	idGt                                *[]int64
+	idGte                               *[]int64
+	idLt                                *[]int64
+	idLte                               *[]int64
+	idN                                 *[]int64
+	interfaceTemplateCount              *[]int64
 	interfaceTemplateCountEmpty         *bool
-	interfaceTemplateCountGt            *[]int32
-	interfaceTemplateCountGte           *[]int32
-	interfaceTemplateCountLt            *[]int32
-	interfaceTemplateCountLte           *[]int32
-	interfaceTemplateCountN             *[]int32
+	interfaceTemplateCountGt            *[]int64
+	interfaceTemplateCountGte           *[]int64
+	interfaceTemplateCountLt            *[]int64
+	interfaceTemplateCountLte           *[]int64
+	interfaceTemplateCountN             *[]int64
 	interfaces                          *bool
-	inventoryItemTemplateCount          *[]int32
+	inventoryItemTemplateCount          *[]int64
 	inventoryItemTemplateCountEmpty     *bool
-	inventoryItemTemplateCountGt        *[]int32
-	inventoryItemTemplateCountGte       *[]int32
-	inventoryItemTemplateCountLt        *[]int32
-	inventoryItemTemplateCountLte       *[]int32
-	inventoryItemTemplateCountN         *[]int32
+	inventoryItemTemplateCountGt        *[]int64
+	inventoryItemTemplateCountGte       *[]int64
+	inventoryItemTemplateCountLt        *[]int64
+	inventoryItemTemplateCountLte       *[]int64
+	inventoryItemTemplateCountN         *[]int64
 	inventoryItems                      *bool
 	isFullDepth                         *bool
 	lastUpdated                         *[]time.Time
@@ -23742,11 +23742,11 @@ type ApiDcimDeviceTypesListRequest struct {
 	lastUpdatedLt                       *[]time.Time
 	lastUpdatedLte                      *[]time.Time
 	lastUpdatedN                        *[]time.Time
-	limit                               *int32
+	limit                               *int64
 	manufacturer                        *[]string
 	manufacturerN                       *[]string
-	manufacturerId                      *[]int32
-	manufacturerIdN                     *[]int32
+	manufacturerId                      *[]int64
+	manufacturerIdN                     *[]int64
 	model                               *[]string
 	modelEmpty                          *bool
 	modelIc                             *[]string
@@ -23759,15 +23759,15 @@ type ApiDcimDeviceTypesListRequest struct {
 	modelNiew                           *[]string
 	modelNisw                           *[]string
 	modifiedByRequest                   *string
-	moduleBayTemplateCount              *[]int32
+	moduleBayTemplateCount              *[]int64
 	moduleBayTemplateCountEmpty         *bool
-	moduleBayTemplateCountGt            *[]int32
-	moduleBayTemplateCountGte           *[]int32
-	moduleBayTemplateCountLt            *[]int32
-	moduleBayTemplateCountLte           *[]int32
-	moduleBayTemplateCountN             *[]int32
+	moduleBayTemplateCountGt            *[]int64
+	moduleBayTemplateCountGte           *[]int64
+	moduleBayTemplateCountLt            *[]int64
+	moduleBayTemplateCountLte           *[]int64
+	moduleBayTemplateCountN             *[]int64
 	moduleBays                          *bool
-	offset                              *int32
+	offset                              *int64
 	ordering                            *string
 	partNumber                          *[]string
 	partNumberEmpty                     *bool
@@ -23781,30 +23781,30 @@ type ApiDcimDeviceTypesListRequest struct {
 	partNumberNiew                      *[]string
 	partNumberNisw                      *[]string
 	passThroughPorts                    *bool
-	powerOutletTemplateCount            *[]int32
+	powerOutletTemplateCount            *[]int64
 	powerOutletTemplateCountEmpty       *bool
-	powerOutletTemplateCountGt          *[]int32
-	powerOutletTemplateCountGte         *[]int32
-	powerOutletTemplateCountLt          *[]int32
-	powerOutletTemplateCountLte         *[]int32
-	powerOutletTemplateCountN           *[]int32
+	powerOutletTemplateCountGt          *[]int64
+	powerOutletTemplateCountGte         *[]int64
+	powerOutletTemplateCountLt          *[]int64
+	powerOutletTemplateCountLte         *[]int64
+	powerOutletTemplateCountN           *[]int64
 	powerOutlets                        *bool
-	powerPortTemplateCount              *[]int32
+	powerPortTemplateCount              *[]int64
 	powerPortTemplateCountEmpty         *bool
-	powerPortTemplateCountGt            *[]int32
-	powerPortTemplateCountGte           *[]int32
-	powerPortTemplateCountLt            *[]int32
-	powerPortTemplateCountLte           *[]int32
-	powerPortTemplateCountN             *[]int32
+	powerPortTemplateCountGt            *[]int64
+	powerPortTemplateCountGte           *[]int64
+	powerPortTemplateCountLt            *[]int64
+	powerPortTemplateCountLte           *[]int64
+	powerPortTemplateCountN             *[]int64
 	powerPorts                          *bool
 	q                                   *string
-	rearPortTemplateCount               *[]int32
+	rearPortTemplateCount               *[]int64
 	rearPortTemplateCountEmpty          *bool
-	rearPortTemplateCountGt             *[]int32
-	rearPortTemplateCountGte            *[]int32
-	rearPortTemplateCountLt             *[]int32
-	rearPortTemplateCountLte            *[]int32
-	rearPortTemplateCountN              *[]int32
+	rearPortTemplateCountGt             *[]int64
+	rearPortTemplateCountGte            *[]int64
+	rearPortTemplateCountLt             *[]int64
+	rearPortTemplateCountLte            *[]int64
+	rearPortTemplateCountN              *[]int64
 	slug                                *[]string
 	slugEmpty                           *bool
 	slugIc                              *[]string
@@ -23843,7 +23843,7 @@ func (r ApiDcimDeviceTypesListRequest) Airflow(airflow DcimDeviceTypesListAirflo
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCount(consolePortTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCount(consolePortTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.consolePortTemplateCount = &consolePortTemplateCount
 	return r
 }
@@ -23853,27 +23853,27 @@ func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountEmpty(consolePort
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountGt(consolePortTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountGt(consolePortTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.consolePortTemplateCountGt = &consolePortTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountGte(consolePortTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountGte(consolePortTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.consolePortTemplateCountGte = &consolePortTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountLt(consolePortTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountLt(consolePortTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.consolePortTemplateCountLt = &consolePortTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountLte(consolePortTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountLte(consolePortTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.consolePortTemplateCountLte = &consolePortTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountN(consolePortTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsolePortTemplateCountN(consolePortTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.consolePortTemplateCountN = &consolePortTemplateCountN
 	return r
 }
@@ -23884,7 +23884,7 @@ func (r ApiDcimDeviceTypesListRequest) ConsolePorts(consolePorts bool) ApiDcimDe
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCount(consoleServerPortTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCount(consoleServerPortTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.consoleServerPortTemplateCount = &consoleServerPortTemplateCount
 	return r
 }
@@ -23894,27 +23894,27 @@ func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountEmpty(conso
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountGt(consoleServerPortTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountGt(consoleServerPortTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.consoleServerPortTemplateCountGt = &consoleServerPortTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountGte(consoleServerPortTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountGte(consoleServerPortTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.consoleServerPortTemplateCountGte = &consoleServerPortTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountLt(consoleServerPortTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountLt(consoleServerPortTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.consoleServerPortTemplateCountLt = &consoleServerPortTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountLte(consoleServerPortTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountLte(consoleServerPortTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.consoleServerPortTemplateCountLte = &consoleServerPortTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountN(consoleServerPortTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ConsoleServerPortTemplateCountN(consoleServerPortTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.consoleServerPortTemplateCountN = &consoleServerPortTemplateCountN
 	return r
 }
@@ -23978,13 +23978,13 @@ func (r ApiDcimDeviceTypesListRequest) DefaultPlatformN(defaultPlatformN []strin
 }
 
 // Default platform (ID)
-func (r ApiDcimDeviceTypesListRequest) DefaultPlatformId(defaultPlatformId []*int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DefaultPlatformId(defaultPlatformId []*int64) ApiDcimDeviceTypesListRequest {
 	r.defaultPlatformId = &defaultPlatformId
 	return r
 }
 
 // Default platform (ID)
-func (r ApiDcimDeviceTypesListRequest) DefaultPlatformIdN(defaultPlatformIdN []*int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DefaultPlatformIdN(defaultPlatformIdN []*int64) ApiDcimDeviceTypesListRequest {
 	r.defaultPlatformIdN = &defaultPlatformIdN
 	return r
 }
@@ -24044,7 +24044,7 @@ func (r ApiDcimDeviceTypesListRequest) DescriptionNisw(descriptionNisw []string)
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCount(deviceBayTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCount(deviceBayTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.deviceBayTemplateCount = &deviceBayTemplateCount
 	return r
 }
@@ -24054,27 +24054,27 @@ func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountEmpty(deviceBayTemp
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountGt(deviceBayTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountGt(deviceBayTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.deviceBayTemplateCountGt = &deviceBayTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountGte(deviceBayTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountGte(deviceBayTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.deviceBayTemplateCountGte = &deviceBayTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountLt(deviceBayTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountLt(deviceBayTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.deviceBayTemplateCountLt = &deviceBayTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountLte(deviceBayTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountLte(deviceBayTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.deviceBayTemplateCountLte = &deviceBayTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountN(deviceBayTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) DeviceBayTemplateCountN(deviceBayTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.deviceBayTemplateCountN = &deviceBayTemplateCountN
 	return r
 }
@@ -24090,7 +24090,7 @@ func (r ApiDcimDeviceTypesListRequest) ExcludeFromUtilization(excludeFromUtiliza
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCount(frontPortTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCount(frontPortTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.frontPortTemplateCount = &frontPortTemplateCount
 	return r
 }
@@ -24100,27 +24100,27 @@ func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountEmpty(frontPortTemp
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountGt(frontPortTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountGt(frontPortTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.frontPortTemplateCountGt = &frontPortTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountGte(frontPortTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountGte(frontPortTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.frontPortTemplateCountGte = &frontPortTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountLt(frontPortTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountLt(frontPortTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.frontPortTemplateCountLt = &frontPortTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountLte(frontPortTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountLte(frontPortTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.frontPortTemplateCountLte = &frontPortTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountN(frontPortTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) FrontPortTemplateCountN(frontPortTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.frontPortTemplateCountN = &frontPortTemplateCountN
 	return r
 }
@@ -24137,7 +24137,7 @@ func (r ApiDcimDeviceTypesListRequest) HasRearImage(hasRearImage bool) ApiDcimDe
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) Id(id []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) Id(id []int64) ApiDcimDeviceTypesListRequest {
 	r.id = &id
 	return r
 }
@@ -24147,32 +24147,32 @@ func (r ApiDcimDeviceTypesListRequest) IdEmpty(idEmpty bool) ApiDcimDeviceTypesL
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) IdGt(idGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) IdGt(idGt []int64) ApiDcimDeviceTypesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) IdGte(idGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) IdGte(idGte []int64) ApiDcimDeviceTypesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) IdLt(idLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) IdLt(idLt []int64) ApiDcimDeviceTypesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) IdLte(idLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) IdLte(idLte []int64) ApiDcimDeviceTypesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) IdN(idN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) IdN(idN []int64) ApiDcimDeviceTypesListRequest {
 	r.idN = &idN
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCount(interfaceTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCount(interfaceTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.interfaceTemplateCount = &interfaceTemplateCount
 	return r
 }
@@ -24182,27 +24182,27 @@ func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountEmpty(interfaceTemp
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountGt(interfaceTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountGt(interfaceTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.interfaceTemplateCountGt = &interfaceTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountGte(interfaceTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountGte(interfaceTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.interfaceTemplateCountGte = &interfaceTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountLt(interfaceTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountLt(interfaceTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.interfaceTemplateCountLt = &interfaceTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountLte(interfaceTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountLte(interfaceTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.interfaceTemplateCountLte = &interfaceTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountN(interfaceTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InterfaceTemplateCountN(interfaceTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.interfaceTemplateCountN = &interfaceTemplateCountN
 	return r
 }
@@ -24213,7 +24213,7 @@ func (r ApiDcimDeviceTypesListRequest) Interfaces(interfaces bool) ApiDcimDevice
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCount(inventoryItemTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCount(inventoryItemTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.inventoryItemTemplateCount = &inventoryItemTemplateCount
 	return r
 }
@@ -24223,27 +24223,27 @@ func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountEmpty(inventory
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountGt(inventoryItemTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountGt(inventoryItemTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.inventoryItemTemplateCountGt = &inventoryItemTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountGte(inventoryItemTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountGte(inventoryItemTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.inventoryItemTemplateCountGte = &inventoryItemTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountLt(inventoryItemTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountLt(inventoryItemTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.inventoryItemTemplateCountLt = &inventoryItemTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountLte(inventoryItemTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountLte(inventoryItemTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.inventoryItemTemplateCountLte = &inventoryItemTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountN(inventoryItemTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) InventoryItemTemplateCountN(inventoryItemTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.inventoryItemTemplateCountN = &inventoryItemTemplateCountN
 	return r
 }
@@ -24295,7 +24295,7 @@ func (r ApiDcimDeviceTypesListRequest) LastUpdatedN(lastUpdatedN []time.Time) Ap
 }
 
 // Number of results to return per page.
-func (r ApiDcimDeviceTypesListRequest) Limit(limit int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) Limit(limit int64) ApiDcimDeviceTypesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -24313,13 +24313,13 @@ func (r ApiDcimDeviceTypesListRequest) ManufacturerN(manufacturerN []string) Api
 }
 
 // Manufacturer (ID)
-func (r ApiDcimDeviceTypesListRequest) ManufacturerId(manufacturerId []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ManufacturerId(manufacturerId []int64) ApiDcimDeviceTypesListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimDeviceTypesListRequest) ManufacturerIdN(manufacturerIdN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ManufacturerIdN(manufacturerIdN []int64) ApiDcimDeviceTypesListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
@@ -24384,7 +24384,7 @@ func (r ApiDcimDeviceTypesListRequest) ModifiedByRequest(modifiedByRequest strin
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCount(moduleBayTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCount(moduleBayTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.moduleBayTemplateCount = &moduleBayTemplateCount
 	return r
 }
@@ -24394,27 +24394,27 @@ func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountEmpty(moduleBayTemp
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountGt(moduleBayTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountGt(moduleBayTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.moduleBayTemplateCountGt = &moduleBayTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountGte(moduleBayTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountGte(moduleBayTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.moduleBayTemplateCountGte = &moduleBayTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountLt(moduleBayTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountLt(moduleBayTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.moduleBayTemplateCountLt = &moduleBayTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountLte(moduleBayTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountLte(moduleBayTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.moduleBayTemplateCountLte = &moduleBayTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountN(moduleBayTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) ModuleBayTemplateCountN(moduleBayTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.moduleBayTemplateCountN = &moduleBayTemplateCountN
 	return r
 }
@@ -24426,7 +24426,7 @@ func (r ApiDcimDeviceTypesListRequest) ModuleBays(moduleBays bool) ApiDcimDevice
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimDeviceTypesListRequest) Offset(offset int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) Offset(offset int64) ApiDcimDeviceTypesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -24498,7 +24498,7 @@ func (r ApiDcimDeviceTypesListRequest) PassThroughPorts(passThroughPorts bool) A
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCount(powerOutletTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCount(powerOutletTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.powerOutletTemplateCount = &powerOutletTemplateCount
 	return r
 }
@@ -24508,27 +24508,27 @@ func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountEmpty(powerOutlet
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountGt(powerOutletTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountGt(powerOutletTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.powerOutletTemplateCountGt = &powerOutletTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountGte(powerOutletTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountGte(powerOutletTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.powerOutletTemplateCountGte = &powerOutletTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountLt(powerOutletTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountLt(powerOutletTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.powerOutletTemplateCountLt = &powerOutletTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountLte(powerOutletTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountLte(powerOutletTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.powerOutletTemplateCountLte = &powerOutletTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountN(powerOutletTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerOutletTemplateCountN(powerOutletTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.powerOutletTemplateCountN = &powerOutletTemplateCountN
 	return r
 }
@@ -24539,7 +24539,7 @@ func (r ApiDcimDeviceTypesListRequest) PowerOutlets(powerOutlets bool) ApiDcimDe
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCount(powerPortTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCount(powerPortTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.powerPortTemplateCount = &powerPortTemplateCount
 	return r
 }
@@ -24549,27 +24549,27 @@ func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountEmpty(powerPortTemp
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountGt(powerPortTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountGt(powerPortTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.powerPortTemplateCountGt = &powerPortTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountGte(powerPortTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountGte(powerPortTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.powerPortTemplateCountGte = &powerPortTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountLt(powerPortTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountLt(powerPortTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.powerPortTemplateCountLt = &powerPortTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountLte(powerPortTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountLte(powerPortTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.powerPortTemplateCountLte = &powerPortTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountN(powerPortTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) PowerPortTemplateCountN(powerPortTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.powerPortTemplateCountN = &powerPortTemplateCountN
 	return r
 }
@@ -24586,7 +24586,7 @@ func (r ApiDcimDeviceTypesListRequest) Q(q string) ApiDcimDeviceTypesListRequest
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCount(rearPortTemplateCount []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCount(rearPortTemplateCount []int64) ApiDcimDeviceTypesListRequest {
 	r.rearPortTemplateCount = &rearPortTemplateCount
 	return r
 }
@@ -24596,27 +24596,27 @@ func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountEmpty(rearPortTempla
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountGt(rearPortTemplateCountGt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountGt(rearPortTemplateCountGt []int64) ApiDcimDeviceTypesListRequest {
 	r.rearPortTemplateCountGt = &rearPortTemplateCountGt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountGte(rearPortTemplateCountGte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountGte(rearPortTemplateCountGte []int64) ApiDcimDeviceTypesListRequest {
 	r.rearPortTemplateCountGte = &rearPortTemplateCountGte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountLt(rearPortTemplateCountLt []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountLt(rearPortTemplateCountLt []int64) ApiDcimDeviceTypesListRequest {
 	r.rearPortTemplateCountLt = &rearPortTemplateCountLt
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountLte(rearPortTemplateCountLte []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountLte(rearPortTemplateCountLte []int64) ApiDcimDeviceTypesListRequest {
 	r.rearPortTemplateCountLte = &rearPortTemplateCountLte
 	return r
 }
 
-func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountN(rearPortTemplateCountN []int32) ApiDcimDeviceTypesListRequest {
+func (r ApiDcimDeviceTypesListRequest) RearPortTemplateCountN(rearPortTemplateCountN []int64) ApiDcimDeviceTypesListRequest {
 	r.rearPortTemplateCountN = &rearPortTemplateCountN
 	return r
 }
@@ -26567,7 +26567,7 @@ func (a *DcimAPIService) DcimDeviceTypesListExecute(r ApiDcimDeviceTypesListRequ
 type ApiDcimDeviceTypesPartialUpdateRequest struct {
 	ctx                              context.Context
 	ApiService                       *DcimAPIService
-	id                               int32
+	id                               int64
 	patchedWritableDeviceTypeRequest *PatchedWritableDeviceTypeRequest
 }
 
@@ -26589,7 +26589,7 @@ Patch a device type object.
 	@param id A unique integer value identifying this device type.
 	@return ApiDcimDeviceTypesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceTypesPartialUpdate(ctx context.Context, id int32) ApiDcimDeviceTypesPartialUpdateRequest {
+func (a *DcimAPIService) DcimDeviceTypesPartialUpdate(ctx context.Context, id int64) ApiDcimDeviceTypesPartialUpdateRequest {
 	return ApiDcimDeviceTypesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -26693,7 +26693,7 @@ func (a *DcimAPIService) DcimDeviceTypesPartialUpdateExecute(r ApiDcimDeviceType
 type ApiDcimDeviceTypesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDeviceTypesRetrieveRequest) Execute() (*DeviceType, *http.Response, error) {
@@ -26709,7 +26709,7 @@ Get a device type object.
 	@param id A unique integer value identifying this device type.
 	@return ApiDcimDeviceTypesRetrieveRequest
 */
-func (a *DcimAPIService) DcimDeviceTypesRetrieve(ctx context.Context, id int32) ApiDcimDeviceTypesRetrieveRequest {
+func (a *DcimAPIService) DcimDeviceTypesRetrieve(ctx context.Context, id int64) ApiDcimDeviceTypesRetrieveRequest {
 	return ApiDcimDeviceTypesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -26811,7 +26811,7 @@ func (a *DcimAPIService) DcimDeviceTypesRetrieveExecute(r ApiDcimDeviceTypesRetr
 type ApiDcimDeviceTypesUpdateRequest struct {
 	ctx                       context.Context
 	ApiService                *DcimAPIService
-	id                        int32
+	id                        int64
 	writableDeviceTypeRequest *WritableDeviceTypeRequest
 }
 
@@ -26833,7 +26833,7 @@ Put a device type object.
 	@param id A unique integer value identifying this device type.
 	@return ApiDcimDeviceTypesUpdateRequest
 */
-func (a *DcimAPIService) DcimDeviceTypesUpdate(ctx context.Context, id int32) ApiDcimDeviceTypesUpdateRequest {
+func (a *DcimAPIService) DcimDeviceTypesUpdate(ctx context.Context, id int64) ApiDcimDeviceTypesUpdateRequest {
 	return ApiDcimDeviceTypesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -27428,7 +27428,7 @@ func (a *DcimAPIService) DcimDevicesCreateExecute(r ApiDcimDevicesCreateRequest)
 type ApiDcimDevicesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDevicesDestroyRequest) Execute() (*http.Response, error) {
@@ -27444,7 +27444,7 @@ Delete a device object.
 	@param id A unique integer value identifying this device.
 	@return ApiDcimDevicesDestroyRequest
 */
-func (a *DcimAPIService) DcimDevicesDestroy(ctx context.Context, id int32) ApiDcimDevicesDestroyRequest {
+func (a *DcimAPIService) DcimDevicesDestroy(ctx context.Context, id int64) ApiDcimDevicesDestroyRequest {
 	return ApiDcimDevicesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -27548,34 +27548,34 @@ type ApiDcimDevicesListRequest struct {
 	assetTagNisw                *[]string
 	clusterGroup                *[]string
 	clusterGroupN               *[]string
-	clusterGroupId              *[]int32
-	clusterGroupIdN             *[]int32
-	clusterId                   *[]*int32
-	clusterIdN                  *[]*int32
-	configTemplateId            *[]*int32
-	configTemplateIdN           *[]*int32
-	consolePortCount            *[]int32
+	clusterGroupId              *[]int64
+	clusterGroupIdN             *[]int64
+	clusterId                   *[]*int64
+	clusterIdN                  *[]*int64
+	configTemplateId            *[]*int64
+	configTemplateIdN           *[]*int64
+	consolePortCount            *[]int64
 	consolePortCountEmpty       *bool
-	consolePortCountGt          *[]int32
-	consolePortCountGte         *[]int32
-	consolePortCountLt          *[]int32
-	consolePortCountLte         *[]int32
-	consolePortCountN           *[]int32
+	consolePortCountGt          *[]int64
+	consolePortCountGte         *[]int64
+	consolePortCountLt          *[]int64
+	consolePortCountLte         *[]int64
+	consolePortCountN           *[]int64
 	consolePorts                *bool
-	consoleServerPortCount      *[]int32
+	consoleServerPortCount      *[]int64
 	consoleServerPortCountEmpty *bool
-	consoleServerPortCountGt    *[]int32
-	consoleServerPortCountGte   *[]int32
-	consoleServerPortCountLt    *[]int32
-	consoleServerPortCountLte   *[]int32
-	consoleServerPortCountN     *[]int32
+	consoleServerPortCountGt    *[]int64
+	consoleServerPortCountGte   *[]int64
+	consoleServerPortCountLt    *[]int64
+	consoleServerPortCountLte   *[]int64
+	consoleServerPortCountN     *[]int64
 	consoleServerPorts          *bool
-	contact                     *[]int32
-	contactN                    *[]int32
+	contact                     *[]int64
+	contactN                    *[]int64
 	contactGroup                *[]string
 	contactGroupN               *[]string
-	contactRole                 *[]int32
-	contactRoleN                *[]int32
+	contactRole                 *[]int64
+	contactRoleN                *[]int64
 	created                     *[]time.Time
 	createdEmpty                *[]time.Time
 	createdGt                   *[]time.Time
@@ -27595,51 +27595,51 @@ type ApiDcimDevicesListRequest struct {
 	descriptionNie              *[]string
 	descriptionNiew             *[]string
 	descriptionNisw             *[]string
-	deviceBayCount              *[]int32
+	deviceBayCount              *[]int64
 	deviceBayCountEmpty         *bool
-	deviceBayCountGt            *[]int32
-	deviceBayCountGte           *[]int32
-	deviceBayCountLt            *[]int32
-	deviceBayCountLte           *[]int32
-	deviceBayCountN             *[]int32
+	deviceBayCountGt            *[]int64
+	deviceBayCountGte           *[]int64
+	deviceBayCountLt            *[]int64
+	deviceBayCountLte           *[]int64
+	deviceBayCountN             *[]int64
 	deviceBays                  *bool
 	deviceType                  *[]string
 	deviceTypeN                 *[]string
-	deviceTypeId                *[]int32
-	deviceTypeIdN               *[]int32
+	deviceTypeId                *[]int64
+	deviceTypeIdN               *[]int64
 	face                        *RackFace
-	frontPortCount              *[]int32
+	frontPortCount              *[]int64
 	frontPortCountEmpty         *bool
-	frontPortCountGt            *[]int32
-	frontPortCountGte           *[]int32
-	frontPortCountLt            *[]int32
-	frontPortCountLte           *[]int32
-	frontPortCountN             *[]int32
+	frontPortCountGt            *[]int64
+	frontPortCountGte           *[]int64
+	frontPortCountLt            *[]int64
+	frontPortCountLte           *[]int64
+	frontPortCountN             *[]int64
 	hasOobIp                    *bool
 	hasPrimaryIp                *bool
 	hasVirtualDeviceContext     *bool
-	id                          *[]int32
+	id                          *[]int64
 	idEmpty                     *bool
-	idGt                        *[]int32
-	idGte                       *[]int32
-	idLt                        *[]int32
-	idLte                       *[]int32
-	idN                         *[]int32
-	interfaceCount              *[]int32
+	idGt                        *[]int64
+	idGte                       *[]int64
+	idLt                        *[]int64
+	idLte                       *[]int64
+	idN                         *[]int64
+	interfaceCount              *[]int64
 	interfaceCountEmpty         *bool
-	interfaceCountGt            *[]int32
-	interfaceCountGte           *[]int32
-	interfaceCountLt            *[]int32
-	interfaceCountLte           *[]int32
-	interfaceCountN             *[]int32
+	interfaceCountGt            *[]int64
+	interfaceCountGte           *[]int64
+	interfaceCountLt            *[]int64
+	interfaceCountLte           *[]int64
+	interfaceCountN             *[]int64
 	interfaces                  *bool
-	inventoryItemCount          *[]int32
+	inventoryItemCount          *[]int64
 	inventoryItemCountEmpty     *bool
-	inventoryItemCountGt        *[]int32
-	inventoryItemCountGte       *[]int32
-	inventoryItemCountLt        *[]int32
-	inventoryItemCountLte       *[]int32
-	inventoryItemCountN         *[]int32
+	inventoryItemCountGt        *[]int64
+	inventoryItemCountGte       *[]int64
+	inventoryItemCountLt        *[]int64
+	inventoryItemCountLte       *[]int64
+	inventoryItemCountN         *[]int64
 	isFullDepth                 *bool
 	lastUpdated                 *[]time.Time
 	lastUpdatedEmpty            *[]time.Time
@@ -27655,7 +27655,7 @@ type ApiDcimDevicesListRequest struct {
 	latitudeLt                  *[]float64
 	latitudeLte                 *[]float64
 	latitudeN                   *[]float64
-	limit                       *int32
+	limit                       *int64
 	localContextData            *bool
 	locationId                  *[]string
 	locationIdN                 *[]string
@@ -27678,18 +27678,18 @@ type ApiDcimDevicesListRequest struct {
 	macAddressNisw              *[]string
 	manufacturer                *[]string
 	manufacturerN               *[]string
-	manufacturerId              *[]int32
-	manufacturerIdN             *[]int32
+	manufacturerId              *[]int64
+	manufacturerIdN             *[]int64
 	model                       *[]string
 	modelN                      *[]string
 	modifiedByRequest           *string
-	moduleBayCount              *[]int32
+	moduleBayCount              *[]int64
 	moduleBayCountEmpty         *bool
-	moduleBayCountGt            *[]int32
-	moduleBayCountGte           *[]int32
-	moduleBayCountLt            *[]int32
-	moduleBayCountLte           *[]int32
-	moduleBayCountN             *[]int32
+	moduleBayCountGt            *[]int64
+	moduleBayCountGte           *[]int64
+	moduleBayCountLt            *[]int64
+	moduleBayCountLte           *[]int64
+	moduleBayCountN             *[]int64
 	moduleBays                  *bool
 	name                        *[]string
 	nameEmpty                   *bool
@@ -27702,19 +27702,19 @@ type ApiDcimDevicesListRequest struct {
 	nameNie                     *[]string
 	nameNiew                    *[]string
 	nameNisw                    *[]string
-	offset                      *int32
-	oobIpId                     *[]int32
-	oobIpIdN                    *[]int32
+	offset                      *int64
+	oobIpId                     *[]int64
+	oobIpIdN                    *[]int64
 	ordering                    *string
-	parentBayId                 *[]int32
-	parentBayIdN                *[]int32
-	parentDeviceId              *[]int32
-	parentDeviceIdN             *[]int32
+	parentBayId                 *[]int64
+	parentBayIdN                *[]int64
+	parentDeviceId              *[]int64
+	parentDeviceIdN             *[]int64
 	passThroughPorts            *bool
 	platform                    *[]string
 	platformN                   *[]string
-	platformId                  *[]*int32
-	platformIdN                 *[]*int32
+	platformId                  *[]*int64
+	platformIdN                 *[]*int64
 	position                    *[]float64
 	positionEmpty               *bool
 	positionGt                  *[]float64
@@ -27722,44 +27722,44 @@ type ApiDcimDevicesListRequest struct {
 	positionLt                  *[]float64
 	positionLte                 *[]float64
 	positionN                   *[]float64
-	powerOutletCount            *[]int32
+	powerOutletCount            *[]int64
 	powerOutletCountEmpty       *bool
-	powerOutletCountGt          *[]int32
-	powerOutletCountGte         *[]int32
-	powerOutletCountLt          *[]int32
-	powerOutletCountLte         *[]int32
-	powerOutletCountN           *[]int32
+	powerOutletCountGt          *[]int64
+	powerOutletCountGte         *[]int64
+	powerOutletCountLt          *[]int64
+	powerOutletCountLte         *[]int64
+	powerOutletCountN           *[]int64
 	powerOutlets                *bool
-	powerPortCount              *[]int32
+	powerPortCount              *[]int64
 	powerPortCountEmpty         *bool
-	powerPortCountGt            *[]int32
-	powerPortCountGte           *[]int32
-	powerPortCountLt            *[]int32
-	powerPortCountLte           *[]int32
-	powerPortCountN             *[]int32
+	powerPortCountGt            *[]int64
+	powerPortCountGte           *[]int64
+	powerPortCountLt            *[]int64
+	powerPortCountLte           *[]int64
+	powerPortCountN             *[]int64
 	powerPorts                  *bool
-	primaryIp4Id                *[]int32
-	primaryIp4IdN               *[]int32
-	primaryIp6Id                *[]int32
-	primaryIp6IdN               *[]int32
+	primaryIp4Id                *[]int64
+	primaryIp4IdN               *[]int64
+	primaryIp6Id                *[]int64
+	primaryIp6IdN               *[]int64
 	q                           *string
-	rackId                      *[]int32
-	rackIdN                     *[]int32
-	rearPortCount               *[]int32
+	rackId                      *[]int64
+	rackIdN                     *[]int64
+	rearPortCount               *[]int64
 	rearPortCountEmpty          *bool
-	rearPortCountGt             *[]int32
-	rearPortCountGte            *[]int32
-	rearPortCountLt             *[]int32
-	rearPortCountLte            *[]int32
-	rearPortCountN              *[]int32
+	rearPortCountGt             *[]int64
+	rearPortCountGte            *[]int64
+	rearPortCountLt             *[]int64
+	rearPortCountLte            *[]int64
+	rearPortCountN              *[]int64
 	region                      *[]string
 	regionN                     *[]string
 	regionId                    *[]string
 	regionIdN                   *[]string
 	role                        *[]string
 	roleN                       *[]string
-	roleId                      *[]int32
-	roleIdN                     *[]int32
+	roleId                      *[]int64
+	roleIdN                     *[]int64
 	serial                      *[]string
 	serialEmpty                 *bool
 	serialIc                    *[]string
@@ -27777,8 +27777,8 @@ type ApiDcimDevicesListRequest struct {
 	siteGroupN                  *[]string
 	siteGroupId                 *[]string
 	siteGroupIdN                *[]string
-	siteId                      *[]int32
-	siteIdN                     *[]int32
+	siteId                      *[]int64
+	siteIdN                     *[]int64
 	status                      *[]string
 	statusEmpty                 *bool
 	statusIc                    *[]string
@@ -27798,25 +27798,25 @@ type ApiDcimDevicesListRequest struct {
 	tenantGroupN                *[]string
 	tenantGroupId               *[]string
 	tenantGroupIdN              *[]string
-	tenantId                    *[]*int32
-	tenantIdN                   *[]*int32
+	tenantId                    *[]*int64
+	tenantIdN                   *[]*int64
 	updatedByRequest            *string
-	vcPosition                  *[]int32
+	vcPosition                  *[]int64
 	vcPositionEmpty             *bool
-	vcPositionGt                *[]int32
-	vcPositionGte               *[]int32
-	vcPositionLt                *[]int32
-	vcPositionLte               *[]int32
-	vcPositionN                 *[]int32
-	vcPriority                  *[]int32
+	vcPositionGt                *[]int64
+	vcPositionGte               *[]int64
+	vcPositionLt                *[]int64
+	vcPositionLte               *[]int64
+	vcPositionN                 *[]int64
+	vcPriority                  *[]int64
 	vcPriorityEmpty             *bool
-	vcPriorityGt                *[]int32
-	vcPriorityGte               *[]int32
-	vcPriorityLt                *[]int32
-	vcPriorityLte               *[]int32
-	vcPriorityN                 *[]int32
-	virtualChassisId            *[]int32
-	virtualChassisIdN           *[]int32
+	vcPriorityGt                *[]int64
+	vcPriorityGte               *[]int64
+	vcPriorityLt                *[]int64
+	vcPriorityLte               *[]int64
+	vcPriorityN                 *[]int64
+	virtualChassisId            *[]int64
+	virtualChassisIdN           *[]int64
 	virtualChassisMember        *bool
 }
 
@@ -27894,42 +27894,42 @@ func (r ApiDcimDevicesListRequest) ClusterGroupN(clusterGroupN []string) ApiDcim
 }
 
 // Cluster group (ID)
-func (r ApiDcimDevicesListRequest) ClusterGroupId(clusterGroupId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ClusterGroupId(clusterGroupId []int64) ApiDcimDevicesListRequest {
 	r.clusterGroupId = &clusterGroupId
 	return r
 }
 
 // Cluster group (ID)
-func (r ApiDcimDevicesListRequest) ClusterGroupIdN(clusterGroupIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ClusterGroupIdN(clusterGroupIdN []int64) ApiDcimDevicesListRequest {
 	r.clusterGroupIdN = &clusterGroupIdN
 	return r
 }
 
 // VM cluster (ID)
-func (r ApiDcimDevicesListRequest) ClusterId(clusterId []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ClusterId(clusterId []*int64) ApiDcimDevicesListRequest {
 	r.clusterId = &clusterId
 	return r
 }
 
 // VM cluster (ID)
-func (r ApiDcimDevicesListRequest) ClusterIdN(clusterIdN []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ClusterIdN(clusterIdN []*int64) ApiDcimDevicesListRequest {
 	r.clusterIdN = &clusterIdN
 	return r
 }
 
 // Config template (ID)
-func (r ApiDcimDevicesListRequest) ConfigTemplateId(configTemplateId []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConfigTemplateId(configTemplateId []*int64) ApiDcimDevicesListRequest {
 	r.configTemplateId = &configTemplateId
 	return r
 }
 
 // Config template (ID)
-func (r ApiDcimDevicesListRequest) ConfigTemplateIdN(configTemplateIdN []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConfigTemplateIdN(configTemplateIdN []*int64) ApiDcimDevicesListRequest {
 	r.configTemplateIdN = &configTemplateIdN
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsolePortCount(consolePortCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsolePortCount(consolePortCount []int64) ApiDcimDevicesListRequest {
 	r.consolePortCount = &consolePortCount
 	return r
 }
@@ -27939,27 +27939,27 @@ func (r ApiDcimDevicesListRequest) ConsolePortCountEmpty(consolePortCountEmpty b
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsolePortCountGt(consolePortCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsolePortCountGt(consolePortCountGt []int64) ApiDcimDevicesListRequest {
 	r.consolePortCountGt = &consolePortCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsolePortCountGte(consolePortCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsolePortCountGte(consolePortCountGte []int64) ApiDcimDevicesListRequest {
 	r.consolePortCountGte = &consolePortCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsolePortCountLt(consolePortCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsolePortCountLt(consolePortCountLt []int64) ApiDcimDevicesListRequest {
 	r.consolePortCountLt = &consolePortCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsolePortCountLte(consolePortCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsolePortCountLte(consolePortCountLte []int64) ApiDcimDevicesListRequest {
 	r.consolePortCountLte = &consolePortCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsolePortCountN(consolePortCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsolePortCountN(consolePortCountN []int64) ApiDcimDevicesListRequest {
 	r.consolePortCountN = &consolePortCountN
 	return r
 }
@@ -27970,7 +27970,7 @@ func (r ApiDcimDevicesListRequest) ConsolePorts(consolePorts bool) ApiDcimDevice
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsoleServerPortCount(consoleServerPortCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsoleServerPortCount(consoleServerPortCount []int64) ApiDcimDevicesListRequest {
 	r.consoleServerPortCount = &consoleServerPortCount
 	return r
 }
@@ -27980,27 +27980,27 @@ func (r ApiDcimDevicesListRequest) ConsoleServerPortCountEmpty(consoleServerPort
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsoleServerPortCountGt(consoleServerPortCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsoleServerPortCountGt(consoleServerPortCountGt []int64) ApiDcimDevicesListRequest {
 	r.consoleServerPortCountGt = &consoleServerPortCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsoleServerPortCountGte(consoleServerPortCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsoleServerPortCountGte(consoleServerPortCountGte []int64) ApiDcimDevicesListRequest {
 	r.consoleServerPortCountGte = &consoleServerPortCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsoleServerPortCountLt(consoleServerPortCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsoleServerPortCountLt(consoleServerPortCountLt []int64) ApiDcimDevicesListRequest {
 	r.consoleServerPortCountLt = &consoleServerPortCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsoleServerPortCountLte(consoleServerPortCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsoleServerPortCountLte(consoleServerPortCountLte []int64) ApiDcimDevicesListRequest {
 	r.consoleServerPortCountLte = &consoleServerPortCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ConsoleServerPortCountN(consoleServerPortCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ConsoleServerPortCountN(consoleServerPortCountN []int64) ApiDcimDevicesListRequest {
 	r.consoleServerPortCountN = &consoleServerPortCountN
 	return r
 }
@@ -28012,13 +28012,13 @@ func (r ApiDcimDevicesListRequest) ConsoleServerPorts(consoleServerPorts bool) A
 }
 
 // Contact
-func (r ApiDcimDevicesListRequest) Contact(contact []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) Contact(contact []int64) ApiDcimDevicesListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimDevicesListRequest) ContactN(contactN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ContactN(contactN []int64) ApiDcimDevicesListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -28034,13 +28034,13 @@ func (r ApiDcimDevicesListRequest) ContactGroupN(contactGroupN []string) ApiDcim
 }
 
 // Contact Role
-func (r ApiDcimDevicesListRequest) ContactRole(contactRole []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ContactRole(contactRole []int64) ApiDcimDevicesListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimDevicesListRequest) ContactRoleN(contactRoleN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ContactRoleN(contactRoleN []int64) ApiDcimDevicesListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -28140,7 +28140,7 @@ func (r ApiDcimDevicesListRequest) DescriptionNisw(descriptionNisw []string) Api
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) DeviceBayCount(deviceBayCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceBayCount(deviceBayCount []int64) ApiDcimDevicesListRequest {
 	r.deviceBayCount = &deviceBayCount
 	return r
 }
@@ -28150,27 +28150,27 @@ func (r ApiDcimDevicesListRequest) DeviceBayCountEmpty(deviceBayCountEmpty bool)
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) DeviceBayCountGt(deviceBayCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceBayCountGt(deviceBayCountGt []int64) ApiDcimDevicesListRequest {
 	r.deviceBayCountGt = &deviceBayCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) DeviceBayCountGte(deviceBayCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceBayCountGte(deviceBayCountGte []int64) ApiDcimDevicesListRequest {
 	r.deviceBayCountGte = &deviceBayCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) DeviceBayCountLt(deviceBayCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceBayCountLt(deviceBayCountLt []int64) ApiDcimDevicesListRequest {
 	r.deviceBayCountLt = &deviceBayCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) DeviceBayCountLte(deviceBayCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceBayCountLte(deviceBayCountLte []int64) ApiDcimDevicesListRequest {
 	r.deviceBayCountLte = &deviceBayCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) DeviceBayCountN(deviceBayCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceBayCountN(deviceBayCountN []int64) ApiDcimDevicesListRequest {
 	r.deviceBayCountN = &deviceBayCountN
 	return r
 }
@@ -28194,13 +28194,13 @@ func (r ApiDcimDevicesListRequest) DeviceTypeN(deviceTypeN []string) ApiDcimDevi
 }
 
 // Device type (ID)
-func (r ApiDcimDevicesListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimDevicesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimDevicesListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimDevicesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
@@ -28211,7 +28211,7 @@ func (r ApiDcimDevicesListRequest) Face(face RackFace) ApiDcimDevicesListRequest
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) FrontPortCount(frontPortCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) FrontPortCount(frontPortCount []int64) ApiDcimDevicesListRequest {
 	r.frontPortCount = &frontPortCount
 	return r
 }
@@ -28221,27 +28221,27 @@ func (r ApiDcimDevicesListRequest) FrontPortCountEmpty(frontPortCountEmpty bool)
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) FrontPortCountGt(frontPortCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) FrontPortCountGt(frontPortCountGt []int64) ApiDcimDevicesListRequest {
 	r.frontPortCountGt = &frontPortCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) FrontPortCountGte(frontPortCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) FrontPortCountGte(frontPortCountGte []int64) ApiDcimDevicesListRequest {
 	r.frontPortCountGte = &frontPortCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) FrontPortCountLt(frontPortCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) FrontPortCountLt(frontPortCountLt []int64) ApiDcimDevicesListRequest {
 	r.frontPortCountLt = &frontPortCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) FrontPortCountLte(frontPortCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) FrontPortCountLte(frontPortCountLte []int64) ApiDcimDevicesListRequest {
 	r.frontPortCountLte = &frontPortCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) FrontPortCountN(frontPortCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) FrontPortCountN(frontPortCountN []int64) ApiDcimDevicesListRequest {
 	r.frontPortCountN = &frontPortCountN
 	return r
 }
@@ -28264,7 +28264,7 @@ func (r ApiDcimDevicesListRequest) HasVirtualDeviceContext(hasVirtualDeviceConte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) Id(id []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) Id(id []int64) ApiDcimDevicesListRequest {
 	r.id = &id
 	return r
 }
@@ -28274,32 +28274,32 @@ func (r ApiDcimDevicesListRequest) IdEmpty(idEmpty bool) ApiDcimDevicesListReque
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) IdGt(idGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) IdGt(idGt []int64) ApiDcimDevicesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) IdGte(idGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) IdGte(idGte []int64) ApiDcimDevicesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) IdLt(idLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) IdLt(idLt []int64) ApiDcimDevicesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) IdLte(idLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) IdLte(idLte []int64) ApiDcimDevicesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) IdN(idN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) IdN(idN []int64) ApiDcimDevicesListRequest {
 	r.idN = &idN
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InterfaceCount(interfaceCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InterfaceCount(interfaceCount []int64) ApiDcimDevicesListRequest {
 	r.interfaceCount = &interfaceCount
 	return r
 }
@@ -28309,27 +28309,27 @@ func (r ApiDcimDevicesListRequest) InterfaceCountEmpty(interfaceCountEmpty bool)
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InterfaceCountGt(interfaceCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InterfaceCountGt(interfaceCountGt []int64) ApiDcimDevicesListRequest {
 	r.interfaceCountGt = &interfaceCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InterfaceCountGte(interfaceCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InterfaceCountGte(interfaceCountGte []int64) ApiDcimDevicesListRequest {
 	r.interfaceCountGte = &interfaceCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InterfaceCountLt(interfaceCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InterfaceCountLt(interfaceCountLt []int64) ApiDcimDevicesListRequest {
 	r.interfaceCountLt = &interfaceCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InterfaceCountLte(interfaceCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InterfaceCountLte(interfaceCountLte []int64) ApiDcimDevicesListRequest {
 	r.interfaceCountLte = &interfaceCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InterfaceCountN(interfaceCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InterfaceCountN(interfaceCountN []int64) ApiDcimDevicesListRequest {
 	r.interfaceCountN = &interfaceCountN
 	return r
 }
@@ -28340,7 +28340,7 @@ func (r ApiDcimDevicesListRequest) Interfaces(interfaces bool) ApiDcimDevicesLis
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InventoryItemCount(inventoryItemCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InventoryItemCount(inventoryItemCount []int64) ApiDcimDevicesListRequest {
 	r.inventoryItemCount = &inventoryItemCount
 	return r
 }
@@ -28350,27 +28350,27 @@ func (r ApiDcimDevicesListRequest) InventoryItemCountEmpty(inventoryItemCountEmp
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InventoryItemCountGt(inventoryItemCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InventoryItemCountGt(inventoryItemCountGt []int64) ApiDcimDevicesListRequest {
 	r.inventoryItemCountGt = &inventoryItemCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InventoryItemCountGte(inventoryItemCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InventoryItemCountGte(inventoryItemCountGte []int64) ApiDcimDevicesListRequest {
 	r.inventoryItemCountGte = &inventoryItemCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InventoryItemCountLt(inventoryItemCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InventoryItemCountLt(inventoryItemCountLt []int64) ApiDcimDevicesListRequest {
 	r.inventoryItemCountLt = &inventoryItemCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InventoryItemCountLte(inventoryItemCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InventoryItemCountLte(inventoryItemCountLte []int64) ApiDcimDevicesListRequest {
 	r.inventoryItemCountLte = &inventoryItemCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) InventoryItemCountN(inventoryItemCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) InventoryItemCountN(inventoryItemCountN []int64) ApiDcimDevicesListRequest {
 	r.inventoryItemCountN = &inventoryItemCountN
 	return r
 }
@@ -28452,7 +28452,7 @@ func (r ApiDcimDevicesListRequest) LatitudeN(latitudeN []float64) ApiDcimDevices
 }
 
 // Number of results to return per page.
-func (r ApiDcimDevicesListRequest) Limit(limit int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) Limit(limit int64) ApiDcimDevicesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -28571,13 +28571,13 @@ func (r ApiDcimDevicesListRequest) ManufacturerN(manufacturerN []string) ApiDcim
 }
 
 // Manufacturer (ID)
-func (r ApiDcimDevicesListRequest) ManufacturerId(manufacturerId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ManufacturerId(manufacturerId []int64) ApiDcimDevicesListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimDevicesListRequest) ManufacturerIdN(manufacturerIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ManufacturerIdN(manufacturerIdN []int64) ApiDcimDevicesListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
@@ -28599,7 +28599,7 @@ func (r ApiDcimDevicesListRequest) ModifiedByRequest(modifiedByRequest string) A
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ModuleBayCount(moduleBayCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ModuleBayCount(moduleBayCount []int64) ApiDcimDevicesListRequest {
 	r.moduleBayCount = &moduleBayCount
 	return r
 }
@@ -28609,27 +28609,27 @@ func (r ApiDcimDevicesListRequest) ModuleBayCountEmpty(moduleBayCountEmpty bool)
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ModuleBayCountGt(moduleBayCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ModuleBayCountGt(moduleBayCountGt []int64) ApiDcimDevicesListRequest {
 	r.moduleBayCountGt = &moduleBayCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ModuleBayCountGte(moduleBayCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ModuleBayCountGte(moduleBayCountGte []int64) ApiDcimDevicesListRequest {
 	r.moduleBayCountGte = &moduleBayCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ModuleBayCountLt(moduleBayCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ModuleBayCountLt(moduleBayCountLt []int64) ApiDcimDevicesListRequest {
 	r.moduleBayCountLt = &moduleBayCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ModuleBayCountLte(moduleBayCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ModuleBayCountLte(moduleBayCountLte []int64) ApiDcimDevicesListRequest {
 	r.moduleBayCountLte = &moduleBayCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) ModuleBayCountN(moduleBayCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ModuleBayCountN(moduleBayCountN []int64) ApiDcimDevicesListRequest {
 	r.moduleBayCountN = &moduleBayCountN
 	return r
 }
@@ -28696,19 +28696,19 @@ func (r ApiDcimDevicesListRequest) NameNisw(nameNisw []string) ApiDcimDevicesLis
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimDevicesListRequest) Offset(offset int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) Offset(offset int64) ApiDcimDevicesListRequest {
 	r.offset = &offset
 	return r
 }
 
 // OOB IP (ID)
-func (r ApiDcimDevicesListRequest) OobIpId(oobIpId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) OobIpId(oobIpId []int64) ApiDcimDevicesListRequest {
 	r.oobIpId = &oobIpId
 	return r
 }
 
 // OOB IP (ID)
-func (r ApiDcimDevicesListRequest) OobIpIdN(oobIpIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) OobIpIdN(oobIpIdN []int64) ApiDcimDevicesListRequest {
 	r.oobIpIdN = &oobIpIdN
 	return r
 }
@@ -28720,25 +28720,25 @@ func (r ApiDcimDevicesListRequest) Ordering(ordering string) ApiDcimDevicesListR
 }
 
 // Parent bay (ID)
-func (r ApiDcimDevicesListRequest) ParentBayId(parentBayId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ParentBayId(parentBayId []int64) ApiDcimDevicesListRequest {
 	r.parentBayId = &parentBayId
 	return r
 }
 
 // Parent bay (ID)
-func (r ApiDcimDevicesListRequest) ParentBayIdN(parentBayIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ParentBayIdN(parentBayIdN []int64) ApiDcimDevicesListRequest {
 	r.parentBayIdN = &parentBayIdN
 	return r
 }
 
 // Parent Device (ID)
-func (r ApiDcimDevicesListRequest) ParentDeviceId(parentDeviceId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ParentDeviceId(parentDeviceId []int64) ApiDcimDevicesListRequest {
 	r.parentDeviceId = &parentDeviceId
 	return r
 }
 
 // Parent Device (ID)
-func (r ApiDcimDevicesListRequest) ParentDeviceIdN(parentDeviceIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) ParentDeviceIdN(parentDeviceIdN []int64) ApiDcimDevicesListRequest {
 	r.parentDeviceIdN = &parentDeviceIdN
 	return r
 }
@@ -28762,13 +28762,13 @@ func (r ApiDcimDevicesListRequest) PlatformN(platformN []string) ApiDcimDevicesL
 }
 
 // Platform (ID)
-func (r ApiDcimDevicesListRequest) PlatformId(platformId []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PlatformId(platformId []*int64) ApiDcimDevicesListRequest {
 	r.platformId = &platformId
 	return r
 }
 
 // Platform (ID)
-func (r ApiDcimDevicesListRequest) PlatformIdN(platformIdN []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PlatformIdN(platformIdN []*int64) ApiDcimDevicesListRequest {
 	r.platformIdN = &platformIdN
 	return r
 }
@@ -28808,7 +28808,7 @@ func (r ApiDcimDevicesListRequest) PositionN(positionN []float64) ApiDcimDevices
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerOutletCount(powerOutletCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerOutletCount(powerOutletCount []int64) ApiDcimDevicesListRequest {
 	r.powerOutletCount = &powerOutletCount
 	return r
 }
@@ -28818,27 +28818,27 @@ func (r ApiDcimDevicesListRequest) PowerOutletCountEmpty(powerOutletCountEmpty b
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerOutletCountGt(powerOutletCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerOutletCountGt(powerOutletCountGt []int64) ApiDcimDevicesListRequest {
 	r.powerOutletCountGt = &powerOutletCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerOutletCountGte(powerOutletCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerOutletCountGte(powerOutletCountGte []int64) ApiDcimDevicesListRequest {
 	r.powerOutletCountGte = &powerOutletCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerOutletCountLt(powerOutletCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerOutletCountLt(powerOutletCountLt []int64) ApiDcimDevicesListRequest {
 	r.powerOutletCountLt = &powerOutletCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerOutletCountLte(powerOutletCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerOutletCountLte(powerOutletCountLte []int64) ApiDcimDevicesListRequest {
 	r.powerOutletCountLte = &powerOutletCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerOutletCountN(powerOutletCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerOutletCountN(powerOutletCountN []int64) ApiDcimDevicesListRequest {
 	r.powerOutletCountN = &powerOutletCountN
 	return r
 }
@@ -28849,7 +28849,7 @@ func (r ApiDcimDevicesListRequest) PowerOutlets(powerOutlets bool) ApiDcimDevice
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerPortCount(powerPortCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerPortCount(powerPortCount []int64) ApiDcimDevicesListRequest {
 	r.powerPortCount = &powerPortCount
 	return r
 }
@@ -28859,27 +28859,27 @@ func (r ApiDcimDevicesListRequest) PowerPortCountEmpty(powerPortCountEmpty bool)
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerPortCountGt(powerPortCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerPortCountGt(powerPortCountGt []int64) ApiDcimDevicesListRequest {
 	r.powerPortCountGt = &powerPortCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerPortCountGte(powerPortCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerPortCountGte(powerPortCountGte []int64) ApiDcimDevicesListRequest {
 	r.powerPortCountGte = &powerPortCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerPortCountLt(powerPortCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerPortCountLt(powerPortCountLt []int64) ApiDcimDevicesListRequest {
 	r.powerPortCountLt = &powerPortCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerPortCountLte(powerPortCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerPortCountLte(powerPortCountLte []int64) ApiDcimDevicesListRequest {
 	r.powerPortCountLte = &powerPortCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) PowerPortCountN(powerPortCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PowerPortCountN(powerPortCountN []int64) ApiDcimDevicesListRequest {
 	r.powerPortCountN = &powerPortCountN
 	return r
 }
@@ -28891,25 +28891,25 @@ func (r ApiDcimDevicesListRequest) PowerPorts(powerPorts bool) ApiDcimDevicesLis
 }
 
 // Primary IPv4 (ID)
-func (r ApiDcimDevicesListRequest) PrimaryIp4Id(primaryIp4Id []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PrimaryIp4Id(primaryIp4Id []int64) ApiDcimDevicesListRequest {
 	r.primaryIp4Id = &primaryIp4Id
 	return r
 }
 
 // Primary IPv4 (ID)
-func (r ApiDcimDevicesListRequest) PrimaryIp4IdN(primaryIp4IdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PrimaryIp4IdN(primaryIp4IdN []int64) ApiDcimDevicesListRequest {
 	r.primaryIp4IdN = &primaryIp4IdN
 	return r
 }
 
 // Primary IPv6 (ID)
-func (r ApiDcimDevicesListRequest) PrimaryIp6Id(primaryIp6Id []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PrimaryIp6Id(primaryIp6Id []int64) ApiDcimDevicesListRequest {
 	r.primaryIp6Id = &primaryIp6Id
 	return r
 }
 
 // Primary IPv6 (ID)
-func (r ApiDcimDevicesListRequest) PrimaryIp6IdN(primaryIp6IdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) PrimaryIp6IdN(primaryIp6IdN []int64) ApiDcimDevicesListRequest {
 	r.primaryIp6IdN = &primaryIp6IdN
 	return r
 }
@@ -28921,18 +28921,18 @@ func (r ApiDcimDevicesListRequest) Q(q string) ApiDcimDevicesListRequest {
 }
 
 // Rack (ID)
-func (r ApiDcimDevicesListRequest) RackId(rackId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RackId(rackId []int64) ApiDcimDevicesListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimDevicesListRequest) RackIdN(rackIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RackIdN(rackIdN []int64) ApiDcimDevicesListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) RearPortCount(rearPortCount []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RearPortCount(rearPortCount []int64) ApiDcimDevicesListRequest {
 	r.rearPortCount = &rearPortCount
 	return r
 }
@@ -28942,27 +28942,27 @@ func (r ApiDcimDevicesListRequest) RearPortCountEmpty(rearPortCountEmpty bool) A
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) RearPortCountGt(rearPortCountGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RearPortCountGt(rearPortCountGt []int64) ApiDcimDevicesListRequest {
 	r.rearPortCountGt = &rearPortCountGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) RearPortCountGte(rearPortCountGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RearPortCountGte(rearPortCountGte []int64) ApiDcimDevicesListRequest {
 	r.rearPortCountGte = &rearPortCountGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) RearPortCountLt(rearPortCountLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RearPortCountLt(rearPortCountLt []int64) ApiDcimDevicesListRequest {
 	r.rearPortCountLt = &rearPortCountLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) RearPortCountLte(rearPortCountLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RearPortCountLte(rearPortCountLte []int64) ApiDcimDevicesListRequest {
 	r.rearPortCountLte = &rearPortCountLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) RearPortCountN(rearPortCountN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RearPortCountN(rearPortCountN []int64) ApiDcimDevicesListRequest {
 	r.rearPortCountN = &rearPortCountN
 	return r
 }
@@ -29000,13 +29000,13 @@ func (r ApiDcimDevicesListRequest) RoleN(roleN []string) ApiDcimDevicesListReque
 }
 
 // Role (ID)
-func (r ApiDcimDevicesListRequest) RoleId(roleId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RoleId(roleId []int64) ApiDcimDevicesListRequest {
 	r.roleId = &roleId
 	return r
 }
 
 // Role (ID)
-func (r ApiDcimDevicesListRequest) RoleIdN(roleIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) RoleIdN(roleIdN []int64) ApiDcimDevicesListRequest {
 	r.roleIdN = &roleIdN
 	return r
 }
@@ -29099,13 +29099,13 @@ func (r ApiDcimDevicesListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDcimDe
 }
 
 // Site (ID)
-func (r ApiDcimDevicesListRequest) SiteId(siteId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) SiteId(siteId []int64) ApiDcimDevicesListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimDevicesListRequest) SiteIdN(siteIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) SiteIdN(siteIdN []int64) ApiDcimDevicesListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -29208,13 +29208,13 @@ func (r ApiDcimDevicesListRequest) TenantGroupIdN(tenantGroupIdN []string) ApiDc
 }
 
 // Tenant (ID)
-func (r ApiDcimDevicesListRequest) TenantId(tenantId []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) TenantId(tenantId []*int64) ApiDcimDevicesListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimDevicesListRequest) TenantIdN(tenantIdN []*int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) TenantIdN(tenantIdN []*int64) ApiDcimDevicesListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
@@ -29224,7 +29224,7 @@ func (r ApiDcimDevicesListRequest) UpdatedByRequest(updatedByRequest string) Api
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPosition(vcPosition []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPosition(vcPosition []int64) ApiDcimDevicesListRequest {
 	r.vcPosition = &vcPosition
 	return r
 }
@@ -29234,32 +29234,32 @@ func (r ApiDcimDevicesListRequest) VcPositionEmpty(vcPositionEmpty bool) ApiDcim
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPositionGt(vcPositionGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPositionGt(vcPositionGt []int64) ApiDcimDevicesListRequest {
 	r.vcPositionGt = &vcPositionGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPositionGte(vcPositionGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPositionGte(vcPositionGte []int64) ApiDcimDevicesListRequest {
 	r.vcPositionGte = &vcPositionGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPositionLt(vcPositionLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPositionLt(vcPositionLt []int64) ApiDcimDevicesListRequest {
 	r.vcPositionLt = &vcPositionLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPositionLte(vcPositionLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPositionLte(vcPositionLte []int64) ApiDcimDevicesListRequest {
 	r.vcPositionLte = &vcPositionLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPositionN(vcPositionN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPositionN(vcPositionN []int64) ApiDcimDevicesListRequest {
 	r.vcPositionN = &vcPositionN
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPriority(vcPriority []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPriority(vcPriority []int64) ApiDcimDevicesListRequest {
 	r.vcPriority = &vcPriority
 	return r
 }
@@ -29269,39 +29269,39 @@ func (r ApiDcimDevicesListRequest) VcPriorityEmpty(vcPriorityEmpty bool) ApiDcim
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPriorityGt(vcPriorityGt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPriorityGt(vcPriorityGt []int64) ApiDcimDevicesListRequest {
 	r.vcPriorityGt = &vcPriorityGt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPriorityGte(vcPriorityGte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPriorityGte(vcPriorityGte []int64) ApiDcimDevicesListRequest {
 	r.vcPriorityGte = &vcPriorityGte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPriorityLt(vcPriorityLt []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPriorityLt(vcPriorityLt []int64) ApiDcimDevicesListRequest {
 	r.vcPriorityLt = &vcPriorityLt
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPriorityLte(vcPriorityLte []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPriorityLte(vcPriorityLte []int64) ApiDcimDevicesListRequest {
 	r.vcPriorityLte = &vcPriorityLte
 	return r
 }
 
-func (r ApiDcimDevicesListRequest) VcPriorityN(vcPriorityN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VcPriorityN(vcPriorityN []int64) ApiDcimDevicesListRequest {
 	r.vcPriorityN = &vcPriorityN
 	return r
 }
 
 // Virtual chassis (ID)
-func (r ApiDcimDevicesListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimDevicesListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual chassis (ID)
-func (r ApiDcimDevicesListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimDevicesListRequest {
+func (r ApiDcimDevicesListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimDevicesListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -32196,7 +32196,7 @@ func (a *DcimAPIService) DcimDevicesListExecute(r ApiDcimDevicesListRequest) (*P
 type ApiDcimDevicesPartialUpdateRequest struct {
 	ctx                                           context.Context
 	ApiService                                    *DcimAPIService
-	id                                            int32
+	id                                            int64
 	patchedWritableDeviceWithConfigContextRequest *PatchedWritableDeviceWithConfigContextRequest
 }
 
@@ -32218,7 +32218,7 @@ Patch a device object.
 	@param id A unique integer value identifying this device.
 	@return ApiDcimDevicesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimDevicesPartialUpdate(ctx context.Context, id int32) ApiDcimDevicesPartialUpdateRequest {
+func (a *DcimAPIService) DcimDevicesPartialUpdate(ctx context.Context, id int64) ApiDcimDevicesPartialUpdateRequest {
 	return ApiDcimDevicesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -32322,7 +32322,7 @@ func (a *DcimAPIService) DcimDevicesPartialUpdateExecute(r ApiDcimDevicesPartial
 type ApiDcimDevicesRenderConfigCreateRequest struct {
 	ctx                                    context.Context
 	ApiService                             *DcimAPIService
-	id                                     int32
+	id                                     int64
 	writableDeviceWithConfigContextRequest *WritableDeviceWithConfigContextRequest
 	format                                 *DcimDevicesRenderConfigCreateFormatParameter
 }
@@ -32350,7 +32350,7 @@ Resolve and render the preferred ConfigTemplate for this Device.
 	@param id A unique integer value identifying this device.
 	@return ApiDcimDevicesRenderConfigCreateRequest
 */
-func (a *DcimAPIService) DcimDevicesRenderConfigCreate(ctx context.Context, id int32) ApiDcimDevicesRenderConfigCreateRequest {
+func (a *DcimAPIService) DcimDevicesRenderConfigCreate(ctx context.Context, id int64) ApiDcimDevicesRenderConfigCreateRequest {
 	return ApiDcimDevicesRenderConfigCreateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -32460,7 +32460,7 @@ func (a *DcimAPIService) DcimDevicesRenderConfigCreateExecute(r ApiDcimDevicesRe
 type ApiDcimDevicesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimDevicesRetrieveRequest) Execute() (*DeviceWithConfigContext, *http.Response, error) {
@@ -32476,7 +32476,7 @@ Get a device object.
 	@param id A unique integer value identifying this device.
 	@return ApiDcimDevicesRetrieveRequest
 */
-func (a *DcimAPIService) DcimDevicesRetrieve(ctx context.Context, id int32) ApiDcimDevicesRetrieveRequest {
+func (a *DcimAPIService) DcimDevicesRetrieve(ctx context.Context, id int64) ApiDcimDevicesRetrieveRequest {
 	return ApiDcimDevicesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -32578,7 +32578,7 @@ func (a *DcimAPIService) DcimDevicesRetrieveExecute(r ApiDcimDevicesRetrieveRequ
 type ApiDcimDevicesUpdateRequest struct {
 	ctx                                    context.Context
 	ApiService                             *DcimAPIService
-	id                                     int32
+	id                                     int64
 	writableDeviceWithConfigContextRequest *WritableDeviceWithConfigContextRequest
 }
 
@@ -32600,7 +32600,7 @@ Put a device object.
 	@param id A unique integer value identifying this device.
 	@return ApiDcimDevicesUpdateRequest
 */
-func (a *DcimAPIService) DcimDevicesUpdate(ctx context.Context, id int32) ApiDcimDevicesUpdateRequest {
+func (a *DcimAPIService) DcimDevicesUpdate(ctx context.Context, id int64) ApiDcimDevicesUpdateRequest {
 	return ApiDcimDevicesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -33195,7 +33195,7 @@ func (a *DcimAPIService) DcimFrontPortTemplatesCreateExecute(r ApiDcimFrontPortT
 type ApiDcimFrontPortTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimFrontPortTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -33211,7 +33211,7 @@ Delete a front port template object.
 	@param id A unique integer value identifying this front port template.
 	@return ApiDcimFrontPortTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimFrontPortTemplatesDestroy(ctx context.Context, id int32) ApiDcimFrontPortTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimFrontPortTemplatesDestroy(ctx context.Context, id int64) ApiDcimFrontPortTemplatesDestroyRequest {
 	return ApiDcimFrontPortTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -33331,15 +33331,15 @@ type ApiDcimFrontPortTemplatesListRequest struct {
 	descriptionNie        *[]string
 	descriptionNiew       *[]string
 	descriptionNisw       *[]string
-	deviceTypeId          *[]*int32
-	deviceTypeIdN         *[]*int32
-	id                    *[]int32
+	deviceTypeId          *[]*int64
+	deviceTypeIdN         *[]*int64
+	id                    *[]int64
 	idEmpty               *bool
-	idGt                  *[]int32
-	idGte                 *[]int32
-	idLt                  *[]int32
-	idLte                 *[]int32
-	idN                   *[]int32
+	idGt                  *[]int64
+	idGte                 *[]int64
+	idLt                  *[]int64
+	idLte                 *[]int64
+	idN                   *[]int64
 	label                 *[]string
 	labelEmpty            *bool
 	labelIc               *[]string
@@ -33358,10 +33358,10 @@ type ApiDcimFrontPortTemplatesListRequest struct {
 	lastUpdatedLt         *[]time.Time
 	lastUpdatedLte        *[]time.Time
 	lastUpdatedN          *[]time.Time
-	limit                 *int32
+	limit                 *int64
 	modifiedByRequest     *string
-	moduleTypeId          *[]*int32
-	moduleTypeIdN         *[]*int32
+	moduleTypeId          *[]*int64
+	moduleTypeIdN         *[]*int64
 	name                  *[]string
 	nameEmpty             *bool
 	nameIc                *[]string
@@ -33373,18 +33373,18 @@ type ApiDcimFrontPortTemplatesListRequest struct {
 	nameNie               *[]string
 	nameNiew              *[]string
 	nameNisw              *[]string
-	offset                *int32
+	offset                *int64
 	ordering              *string
 	q                     *string
-	rearPortId            *[]int32
-	rearPortIdN           *[]int32
-	rearPortPosition      *[]int32
+	rearPortId            *[]int64
+	rearPortIdN           *[]int64
+	rearPortPosition      *[]int64
 	rearPortPositionEmpty *bool
-	rearPortPositionGt    *[]int32
-	rearPortPositionGte   *[]int32
-	rearPortPositionLt    *[]int32
-	rearPortPositionLte   *[]int32
-	rearPortPositionN     *[]int32
+	rearPortPositionGt    *[]int64
+	rearPortPositionGte   *[]int64
+	rearPortPositionLt    *[]int64
+	rearPortPositionLte   *[]int64
+	rearPortPositionN     *[]int64
 	type_                 *[]string
 	typeEmpty             *bool
 	typeIc                *[]string
@@ -33550,18 +33550,18 @@ func (r ApiDcimFrontPortTemplatesListRequest) DescriptionNisw(descriptionNisw []
 }
 
 // Device type (ID)
-func (r ApiDcimFrontPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimFrontPortTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimFrontPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimFrontPortTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) Id(id []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) Id(id []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -33571,27 +33571,27 @@ func (r ApiDcimFrontPortTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimFront
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) IdGt(idGt []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) IdGt(idGt []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) IdGte(idGte []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) IdGte(idGte []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) IdLt(idLt []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) IdLt(idLt []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) IdLte(idLte []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) IdLte(idLte []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) IdN(idN []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) IdN(idN []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -33687,7 +33687,7 @@ func (r ApiDcimFrontPortTemplatesListRequest) LastUpdatedN(lastUpdatedN []time.T
 }
 
 // Number of results to return per page.
-func (r ApiDcimFrontPortTemplatesListRequest) Limit(limit int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) Limit(limit int64) ApiDcimFrontPortTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -33698,13 +33698,13 @@ func (r ApiDcimFrontPortTemplatesListRequest) ModifiedByRequest(modifiedByReques
 }
 
 // Module type (ID)
-func (r ApiDcimFrontPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimFrontPortTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimFrontPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimFrontPortTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -33765,7 +33765,7 @@ func (r ApiDcimFrontPortTemplatesListRequest) NameNisw(nameNisw []string) ApiDci
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimFrontPortTemplatesListRequest) Offset(offset int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) Offset(offset int64) ApiDcimFrontPortTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -33782,17 +33782,17 @@ func (r ApiDcimFrontPortTemplatesListRequest) Q(q string) ApiDcimFrontPortTempla
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortId(rearPortId []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortId(rearPortId []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortId = &rearPortId
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortIdN(rearPortIdN []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortIdN(rearPortIdN []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortIdN = &rearPortIdN
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortPosition(rearPortPosition []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortPosition(rearPortPosition []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortPosition = &rearPortPosition
 	return r
 }
@@ -33802,27 +33802,27 @@ func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionEmpty(rearPortPosi
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionGt(rearPortPositionGt []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionGt(rearPortPositionGt []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortPositionGt = &rearPortPositionGt
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionGte(rearPortPositionGte []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionGte(rearPortPositionGte []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortPositionGte = &rearPortPositionGte
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionLt(rearPortPositionLt []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionLt(rearPortPositionLt []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortPositionLt = &rearPortPositionLt
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionLte(rearPortPositionLte []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionLte(rearPortPositionLte []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortPositionLte = &rearPortPositionLte
 	return r
 }
 
-func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionN(rearPortPositionN []int32) ApiDcimFrontPortTemplatesListRequest {
+func (r ApiDcimFrontPortTemplatesListRequest) RearPortPositionN(rearPortPositionN []int64) ApiDcimFrontPortTemplatesListRequest {
 	r.rearPortPositionN = &rearPortPositionN
 	return r
 }
@@ -34943,7 +34943,7 @@ func (a *DcimAPIService) DcimFrontPortTemplatesListExecute(r ApiDcimFrontPortTem
 type ApiDcimFrontPortTemplatesPartialUpdateRequest struct {
 	ctx                                     context.Context
 	ApiService                              *DcimAPIService
-	id                                      int32
+	id                                      int64
 	patchedWritableFrontPortTemplateRequest *PatchedWritableFrontPortTemplateRequest
 }
 
@@ -34965,7 +34965,7 @@ Patch a front port template object.
 	@param id A unique integer value identifying this front port template.
 	@return ApiDcimFrontPortTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimFrontPortTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimFrontPortTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimFrontPortTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimFrontPortTemplatesPartialUpdateRequest {
 	return ApiDcimFrontPortTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -35069,7 +35069,7 @@ func (a *DcimAPIService) DcimFrontPortTemplatesPartialUpdateExecute(r ApiDcimFro
 type ApiDcimFrontPortTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimFrontPortTemplatesRetrieveRequest) Execute() (*FrontPortTemplate, *http.Response, error) {
@@ -35085,7 +35085,7 @@ Get a front port template object.
 	@param id A unique integer value identifying this front port template.
 	@return ApiDcimFrontPortTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimFrontPortTemplatesRetrieve(ctx context.Context, id int32) ApiDcimFrontPortTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimFrontPortTemplatesRetrieve(ctx context.Context, id int64) ApiDcimFrontPortTemplatesRetrieveRequest {
 	return ApiDcimFrontPortTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -35187,7 +35187,7 @@ func (a *DcimAPIService) DcimFrontPortTemplatesRetrieveExecute(r ApiDcimFrontPor
 type ApiDcimFrontPortTemplatesUpdateRequest struct {
 	ctx                              context.Context
 	ApiService                       *DcimAPIService
-	id                               int32
+	id                               int64
 	writableFrontPortTemplateRequest *WritableFrontPortTemplateRequest
 }
 
@@ -35209,7 +35209,7 @@ Put a front port template object.
 	@param id A unique integer value identifying this front port template.
 	@return ApiDcimFrontPortTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimFrontPortTemplatesUpdate(ctx context.Context, id int32) ApiDcimFrontPortTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimFrontPortTemplatesUpdate(ctx context.Context, id int64) ApiDcimFrontPortTemplatesUpdateRequest {
 	return ApiDcimFrontPortTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -35804,7 +35804,7 @@ func (a *DcimAPIService) DcimFrontPortsCreateExecute(r ApiDcimFrontPortsCreateRe
 type ApiDcimFrontPortsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimFrontPortsDestroyRequest) Execute() (*http.Response, error) {
@@ -35820,7 +35820,7 @@ Delete a front port object.
 	@param id A unique integer value identifying this front port.
 	@return ApiDcimFrontPortsDestroyRequest
 */
-func (a *DcimAPIService) DcimFrontPortsDestroy(ctx context.Context, id int32) ApiDcimFrontPortsDestroyRequest {
+func (a *DcimAPIService) DcimFrontPortsDestroy(ctx context.Context, id int64) ApiDcimFrontPortsDestroyRequest {
 	return ApiDcimFrontPortsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -35911,8 +35911,8 @@ type ApiDcimFrontPortsListRequest struct {
 	ctx                   context.Context
 	ApiService            *DcimAPIService
 	cableEnd              *CircuitsCircuitTerminationsListCableEndParameter
-	cableId               *[]*int32
-	cableIdN              *[]*int32
+	cableId               *[]*int64
+	cableIdN              *[]*int64
 	cabled                *bool
 	color                 *[]string
 	colorEmpty            *bool
@@ -35946,12 +35946,12 @@ type ApiDcimFrontPortsListRequest struct {
 	descriptionNisw       *[]string
 	device                *[]*string
 	deviceN               *[]*string
-	deviceId              *[]int32
-	deviceIdN             *[]int32
+	deviceId              *[]int64
+	deviceIdN             *[]int64
 	deviceRole            *[]string
 	deviceRoleN           *[]string
-	deviceRoleId          *[]int32
-	deviceRoleIdN         *[]int32
+	deviceRoleId          *[]int64
+	deviceRoleIdN         *[]int64
 	deviceStatus          *[]string
 	deviceStatusEmpty     *bool
 	deviceStatusIc        *[]string
@@ -35965,15 +35965,15 @@ type ApiDcimFrontPortsListRequest struct {
 	deviceStatusNisw      *[]string
 	deviceType            *[]string
 	deviceTypeN           *[]string
-	deviceTypeId          *[]int32
-	deviceTypeIdN         *[]int32
-	id                    *[]int32
+	deviceTypeId          *[]int64
+	deviceTypeIdN         *[]int64
+	id                    *[]int64
 	idEmpty               *bool
-	idGt                  *[]int32
-	idGte                 *[]int32
-	idLt                  *[]int32
-	idLte                 *[]int32
-	idN                   *[]int32
+	idGt                  *[]int64
+	idGte                 *[]int64
+	idLt                  *[]int64
+	idLte                 *[]int64
+	idN                   *[]int64
 	label                 *[]string
 	labelEmpty            *bool
 	labelIc               *[]string
@@ -35992,15 +35992,15 @@ type ApiDcimFrontPortsListRequest struct {
 	lastUpdatedLt         *[]time.Time
 	lastUpdatedLte        *[]time.Time
 	lastUpdatedN          *[]time.Time
-	limit                 *int32
+	limit                 *int64
 	location              *[]string
 	locationN             *[]string
-	locationId            *[]int32
-	locationIdN           *[]int32
+	locationId            *[]int64
+	locationIdN           *[]int64
 	markConnected         *bool
 	modifiedByRequest     *string
-	moduleId              *[]*int32
-	moduleIdN             *[]*int32
+	moduleId              *[]*int64
+	moduleIdN             *[]*int64
 	name                  *[]string
 	nameEmpty             *bool
 	nameIc                *[]string
@@ -36013,22 +36013,22 @@ type ApiDcimFrontPortsListRequest struct {
 	nameNiew              *[]string
 	nameNisw              *[]string
 	occupied              *bool
-	offset                *int32
+	offset                *int64
 	ordering              *string
 	q                     *string
 	rack                  *[]string
 	rackN                 *[]string
-	rackId                *[]int32
-	rackIdN               *[]int32
-	rearPortId            *[]int32
-	rearPortIdN           *[]int32
-	rearPortPosition      *[]int32
+	rackId                *[]int64
+	rackIdN               *[]int64
+	rearPortId            *[]int64
+	rearPortIdN           *[]int64
+	rearPortPosition      *[]int64
 	rearPortPositionEmpty *bool
-	rearPortPositionGt    *[]int32
-	rearPortPositionGte   *[]int32
-	rearPortPositionLt    *[]int32
-	rearPortPositionLte   *[]int32
-	rearPortPositionN     *[]int32
+	rearPortPositionGt    *[]int64
+	rearPortPositionGte   *[]int64
+	rearPortPositionLt    *[]int64
+	rearPortPositionLte   *[]int64
+	rearPortPositionN     *[]int64
 	region                *[]string
 	regionN               *[]string
 	regionId              *[]string
@@ -36039,8 +36039,8 @@ type ApiDcimFrontPortsListRequest struct {
 	siteGroupN            *[]string
 	siteGroupId           *[]string
 	siteGroupIdN          *[]string
-	siteId                *[]int32
-	siteIdN               *[]int32
+	siteId                *[]int64
+	siteIdN               *[]int64
 	tag                   *[]string
 	tagN                  *[]string
 	type_                 *[]string
@@ -36057,8 +36057,8 @@ type ApiDcimFrontPortsListRequest struct {
 	updatedByRequest      *string
 	virtualChassis        *[]string
 	virtualChassisN       *[]string
-	virtualChassisId      *[]int32
-	virtualChassisIdN     *[]int32
+	virtualChassisId      *[]int64
+	virtualChassisIdN     *[]int64
 }
 
 // * &#x60;A&#x60; - A * &#x60;B&#x60; - B
@@ -36068,13 +36068,13 @@ func (r ApiDcimFrontPortsListRequest) CableEnd(cableEnd CircuitsCircuitTerminati
 }
 
 // Cable (ID)
-func (r ApiDcimFrontPortsListRequest) CableId(cableId []*int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) CableId(cableId []*int64) ApiDcimFrontPortsListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimFrontPortsListRequest) CableIdN(cableIdN []*int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) CableIdN(cableIdN []*int64) ApiDcimFrontPortsListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -36247,13 +36247,13 @@ func (r ApiDcimFrontPortsListRequest) DeviceN(deviceN []*string) ApiDcimFrontPor
 }
 
 // Device (ID)
-func (r ApiDcimFrontPortsListRequest) DeviceId(deviceId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) DeviceId(deviceId []int64) ApiDcimFrontPortsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimFrontPortsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimFrontPortsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -36271,13 +36271,13 @@ func (r ApiDcimFrontPortsListRequest) DeviceRoleN(deviceRoleN []string) ApiDcimF
 }
 
 // Device role (ID)
-func (r ApiDcimFrontPortsListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimFrontPortsListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimFrontPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimFrontPortsListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -36350,18 +36350,18 @@ func (r ApiDcimFrontPortsListRequest) DeviceTypeN(deviceTypeN []string) ApiDcimF
 }
 
 // Device type (ID)
-func (r ApiDcimFrontPortsListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimFrontPortsListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimFrontPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimFrontPortsListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) Id(id []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) Id(id []int64) ApiDcimFrontPortsListRequest {
 	r.id = &id
 	return r
 }
@@ -36371,27 +36371,27 @@ func (r ApiDcimFrontPortsListRequest) IdEmpty(idEmpty bool) ApiDcimFrontPortsLis
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) IdGt(idGt []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) IdGt(idGt []int64) ApiDcimFrontPortsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) IdGte(idGte []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) IdGte(idGte []int64) ApiDcimFrontPortsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) IdLt(idLt []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) IdLt(idLt []int64) ApiDcimFrontPortsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) IdLte(idLte []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) IdLte(idLte []int64) ApiDcimFrontPortsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) IdN(idN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) IdN(idN []int64) ApiDcimFrontPortsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -36487,7 +36487,7 @@ func (r ApiDcimFrontPortsListRequest) LastUpdatedN(lastUpdatedN []time.Time) Api
 }
 
 // Number of results to return per page.
-func (r ApiDcimFrontPortsListRequest) Limit(limit int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) Limit(limit int64) ApiDcimFrontPortsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -36505,13 +36505,13 @@ func (r ApiDcimFrontPortsListRequest) LocationN(locationN []string) ApiDcimFront
 }
 
 // Location (ID)
-func (r ApiDcimFrontPortsListRequest) LocationId(locationId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) LocationId(locationId []int64) ApiDcimFrontPortsListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimFrontPortsListRequest) LocationIdN(locationIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) LocationIdN(locationIdN []int64) ApiDcimFrontPortsListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -36527,13 +36527,13 @@ func (r ApiDcimFrontPortsListRequest) ModifiedByRequest(modifiedByRequest string
 }
 
 // Module (ID)
-func (r ApiDcimFrontPortsListRequest) ModuleId(moduleId []*int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) ModuleId(moduleId []*int64) ApiDcimFrontPortsListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimFrontPortsListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimFrontPortsListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
@@ -36599,7 +36599,7 @@ func (r ApiDcimFrontPortsListRequest) Occupied(occupied bool) ApiDcimFrontPortsL
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimFrontPortsListRequest) Offset(offset int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) Offset(offset int64) ApiDcimFrontPortsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -36629,28 +36629,28 @@ func (r ApiDcimFrontPortsListRequest) RackN(rackN []string) ApiDcimFrontPortsLis
 }
 
 // Rack (ID)
-func (r ApiDcimFrontPortsListRequest) RackId(rackId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RackId(rackId []int64) ApiDcimFrontPortsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimFrontPortsListRequest) RackIdN(rackIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RackIdN(rackIdN []int64) ApiDcimFrontPortsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortId(rearPortId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortId(rearPortId []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortId = &rearPortId
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortIdN(rearPortIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortIdN(rearPortIdN []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortIdN = &rearPortIdN
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortPosition(rearPortPosition []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortPosition(rearPortPosition []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortPosition = &rearPortPosition
 	return r
 }
@@ -36660,27 +36660,27 @@ func (r ApiDcimFrontPortsListRequest) RearPortPositionEmpty(rearPortPositionEmpt
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortPositionGt(rearPortPositionGt []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortPositionGt(rearPortPositionGt []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortPositionGt = &rearPortPositionGt
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortPositionGte(rearPortPositionGte []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortPositionGte(rearPortPositionGte []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortPositionGte = &rearPortPositionGte
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortPositionLt(rearPortPositionLt []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortPositionLt(rearPortPositionLt []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortPositionLt = &rearPortPositionLt
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortPositionLte(rearPortPositionLte []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortPositionLte(rearPortPositionLte []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortPositionLte = &rearPortPositionLte
 	return r
 }
 
-func (r ApiDcimFrontPortsListRequest) RearPortPositionN(rearPortPositionN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) RearPortPositionN(rearPortPositionN []int64) ApiDcimFrontPortsListRequest {
 	r.rearPortPositionN = &rearPortPositionN
 	return r
 }
@@ -36738,13 +36738,13 @@ func (r ApiDcimFrontPortsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDci
 }
 
 // Site (ID)
-func (r ApiDcimFrontPortsListRequest) SiteId(siteId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) SiteId(siteId []int64) ApiDcimFrontPortsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimFrontPortsListRequest) SiteIdN(siteIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) SiteIdN(siteIdN []int64) ApiDcimFrontPortsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -36832,13 +36832,13 @@ func (r ApiDcimFrontPortsListRequest) VirtualChassisN(virtualChassisN []string) 
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimFrontPortsListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimFrontPortsListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimFrontPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimFrontPortsListRequest {
+func (r ApiDcimFrontPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimFrontPortsListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -38442,7 +38442,7 @@ func (a *DcimAPIService) DcimFrontPortsListExecute(r ApiDcimFrontPortsListReques
 type ApiDcimFrontPortsPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedWritableFrontPortRequest *PatchedWritableFrontPortRequest
 }
 
@@ -38464,7 +38464,7 @@ Patch a front port object.
 	@param id A unique integer value identifying this front port.
 	@return ApiDcimFrontPortsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimFrontPortsPartialUpdate(ctx context.Context, id int32) ApiDcimFrontPortsPartialUpdateRequest {
+func (a *DcimAPIService) DcimFrontPortsPartialUpdate(ctx context.Context, id int64) ApiDcimFrontPortsPartialUpdateRequest {
 	return ApiDcimFrontPortsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -38568,7 +38568,7 @@ func (a *DcimAPIService) DcimFrontPortsPartialUpdateExecute(r ApiDcimFrontPortsP
 type ApiDcimFrontPortsPathsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimFrontPortsPathsRetrieveRequest) Execute() (*FrontPort, *http.Response, error) {
@@ -38584,7 +38584,7 @@ Return all CablePaths which traverse a given pass-through port.
 	@param id A unique integer value identifying this front port.
 	@return ApiDcimFrontPortsPathsRetrieveRequest
 */
-func (a *DcimAPIService) DcimFrontPortsPathsRetrieve(ctx context.Context, id int32) ApiDcimFrontPortsPathsRetrieveRequest {
+func (a *DcimAPIService) DcimFrontPortsPathsRetrieve(ctx context.Context, id int64) ApiDcimFrontPortsPathsRetrieveRequest {
 	return ApiDcimFrontPortsPathsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -38686,7 +38686,7 @@ func (a *DcimAPIService) DcimFrontPortsPathsRetrieveExecute(r ApiDcimFrontPortsP
 type ApiDcimFrontPortsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimFrontPortsRetrieveRequest) Execute() (*FrontPort, *http.Response, error) {
@@ -38702,7 +38702,7 @@ Get a front port object.
 	@param id A unique integer value identifying this front port.
 	@return ApiDcimFrontPortsRetrieveRequest
 */
-func (a *DcimAPIService) DcimFrontPortsRetrieve(ctx context.Context, id int32) ApiDcimFrontPortsRetrieveRequest {
+func (a *DcimAPIService) DcimFrontPortsRetrieve(ctx context.Context, id int64) ApiDcimFrontPortsRetrieveRequest {
 	return ApiDcimFrontPortsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -38804,7 +38804,7 @@ func (a *DcimAPIService) DcimFrontPortsRetrieveExecute(r ApiDcimFrontPortsRetrie
 type ApiDcimFrontPortsUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	writableFrontPortRequest *WritableFrontPortRequest
 }
 
@@ -38826,7 +38826,7 @@ Put a front port object.
 	@param id A unique integer value identifying this front port.
 	@return ApiDcimFrontPortsUpdateRequest
 */
-func (a *DcimAPIService) DcimFrontPortsUpdate(ctx context.Context, id int32) ApiDcimFrontPortsUpdateRequest {
+func (a *DcimAPIService) DcimFrontPortsUpdate(ctx context.Context, id int64) ApiDcimFrontPortsUpdateRequest {
 	return ApiDcimFrontPortsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -39421,7 +39421,7 @@ func (a *DcimAPIService) DcimInterfaceTemplatesCreateExecute(r ApiDcimInterfaceT
 type ApiDcimInterfaceTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInterfaceTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -39437,7 +39437,7 @@ Delete a interface template object.
 	@param id A unique integer value identifying this interface template.
 	@return ApiDcimInterfaceTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimInterfaceTemplatesDestroy(ctx context.Context, id int32) ApiDcimInterfaceTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimInterfaceTemplatesDestroy(ctx context.Context, id int64) ApiDcimInterfaceTemplatesDestroyRequest {
 	return ApiDcimInterfaceTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -39527,8 +39527,8 @@ func (a *DcimAPIService) DcimInterfaceTemplatesDestroyExecute(r ApiDcimInterface
 type ApiDcimInterfaceTemplatesListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
-	bridgeId          *[]int32
-	bridgeIdN         *[]int32
+	bridgeId          *[]int64
+	bridgeIdN         *[]int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -39548,16 +39548,16 @@ type ApiDcimInterfaceTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]*int32
-	deviceTypeIdN     *[]*int32
+	deviceTypeId      *[]*int64
+	deviceTypeIdN     *[]*int64
 	enabled           *bool
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -39576,11 +39576,11 @@ type ApiDcimInterfaceTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	mgmtOnly          *bool
 	modifiedByRequest *string
-	moduleTypeId      *[]*int32
-	moduleTypeIdN     *[]*int32
+	moduleTypeId      *[]*int64
+	moduleTypeIdN     *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -39592,7 +39592,7 @@ type ApiDcimInterfaceTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	poeMode           *[]*string
 	poeModeEmpty      *bool
@@ -39642,12 +39642,12 @@ type ApiDcimInterfaceTemplatesListRequest struct {
 	updatedByRequest  *string
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) BridgeId(bridgeId []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) BridgeId(bridgeId []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.bridgeId = &bridgeId
 	return r
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) BridgeIdN(bridgeIdN []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) BridgeIdN(bridgeIdN []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.bridgeIdN = &bridgeIdN
 	return r
 }
@@ -39748,13 +39748,13 @@ func (r ApiDcimInterfaceTemplatesListRequest) DescriptionNisw(descriptionNisw []
 }
 
 // Device type (ID)
-func (r ApiDcimInterfaceTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimInterfaceTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimInterfaceTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimInterfaceTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
@@ -39764,7 +39764,7 @@ func (r ApiDcimInterfaceTemplatesListRequest) Enabled(enabled bool) ApiDcimInter
 	return r
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) Id(id []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) Id(id []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -39774,27 +39774,27 @@ func (r ApiDcimInterfaceTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimInter
 	return r
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) IdGt(idGt []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) IdGt(idGt []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) IdGte(idGte []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) IdGte(idGte []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) IdLt(idLt []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) IdLt(idLt []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) IdLte(idLte []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) IdLte(idLte []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimInterfaceTemplatesListRequest) IdN(idN []int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) IdN(idN []int64) ApiDcimInterfaceTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -39890,7 +39890,7 @@ func (r ApiDcimInterfaceTemplatesListRequest) LastUpdatedN(lastUpdatedN []time.T
 }
 
 // Number of results to return per page.
-func (r ApiDcimInterfaceTemplatesListRequest) Limit(limit int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) Limit(limit int64) ApiDcimInterfaceTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -39906,13 +39906,13 @@ func (r ApiDcimInterfaceTemplatesListRequest) ModifiedByRequest(modifiedByReques
 }
 
 // Module type (ID)
-func (r ApiDcimInterfaceTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimInterfaceTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimInterfaceTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimInterfaceTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -39973,7 +39973,7 @@ func (r ApiDcimInterfaceTemplatesListRequest) NameNisw(nameNisw []string) ApiDci
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimInterfaceTemplatesListRequest) Offset(offset int32) ApiDcimInterfaceTemplatesListRequest {
+func (r ApiDcimInterfaceTemplatesListRequest) Offset(offset int64) ApiDcimInterfaceTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -41434,7 +41434,7 @@ func (a *DcimAPIService) DcimInterfaceTemplatesListExecute(r ApiDcimInterfaceTem
 type ApiDcimInterfaceTemplatesPartialUpdateRequest struct {
 	ctx                                     context.Context
 	ApiService                              *DcimAPIService
-	id                                      int32
+	id                                      int64
 	patchedWritableInterfaceTemplateRequest *PatchedWritableInterfaceTemplateRequest
 }
 
@@ -41456,7 +41456,7 @@ Patch a interface template object.
 	@param id A unique integer value identifying this interface template.
 	@return ApiDcimInterfaceTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimInterfaceTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimInterfaceTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimInterfaceTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimInterfaceTemplatesPartialUpdateRequest {
 	return ApiDcimInterfaceTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -41560,7 +41560,7 @@ func (a *DcimAPIService) DcimInterfaceTemplatesPartialUpdateExecute(r ApiDcimInt
 type ApiDcimInterfaceTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInterfaceTemplatesRetrieveRequest) Execute() (*InterfaceTemplate, *http.Response, error) {
@@ -41576,7 +41576,7 @@ Get a interface template object.
 	@param id A unique integer value identifying this interface template.
 	@return ApiDcimInterfaceTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimInterfaceTemplatesRetrieve(ctx context.Context, id int32) ApiDcimInterfaceTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimInterfaceTemplatesRetrieve(ctx context.Context, id int64) ApiDcimInterfaceTemplatesRetrieveRequest {
 	return ApiDcimInterfaceTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -41678,7 +41678,7 @@ func (a *DcimAPIService) DcimInterfaceTemplatesRetrieveExecute(r ApiDcimInterfac
 type ApiDcimInterfaceTemplatesUpdateRequest struct {
 	ctx                              context.Context
 	ApiService                       *DcimAPIService
-	id                               int32
+	id                               int64
 	writableInterfaceTemplateRequest *WritableInterfaceTemplateRequest
 }
 
@@ -41700,7 +41700,7 @@ Put a interface template object.
 	@param id A unique integer value identifying this interface template.
 	@return ApiDcimInterfaceTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimInterfaceTemplatesUpdate(ctx context.Context, id int32) ApiDcimInterfaceTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimInterfaceTemplatesUpdate(ctx context.Context, id int64) ApiDcimInterfaceTemplatesUpdateRequest {
 	return ApiDcimInterfaceTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -42295,7 +42295,7 @@ func (a *DcimAPIService) DcimInterfacesCreateExecute(r ApiDcimInterfacesCreateRe
 type ApiDcimInterfacesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInterfacesDestroyRequest) Execute() (*http.Response, error) {
@@ -42311,7 +42311,7 @@ Delete a interface object.
 	@param id A unique integer value identifying this interface.
 	@return ApiDcimInterfacesDestroyRequest
 */
-func (a *DcimAPIService) DcimInterfacesDestroy(ctx context.Context, id int32) ApiDcimInterfacesDestroyRequest {
+func (a *DcimAPIService) DcimInterfacesDestroy(ctx context.Context, id int64) ApiDcimInterfacesDestroyRequest {
 	return ApiDcimInterfacesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -42401,11 +42401,11 @@ func (a *DcimAPIService) DcimInterfacesDestroyExecute(r ApiDcimInterfacesDestroy
 type ApiDcimInterfacesListRequest struct {
 	ctx                          context.Context
 	ApiService                   *DcimAPIService
-	bridgeId                     *[]int32
-	bridgeIdN                    *[]int32
+	bridgeId                     *[]int64
+	bridgeIdN                    *[]int64
 	cableEnd                     *CircuitsCircuitTerminationsListCableEndParameter
-	cableId                      *[]*int32
-	cableIdN                     *[]*int32
+	cableId                      *[]*int64
+	cableIdN                     *[]*int64
 	cabled                       *bool
 	connected                    *bool
 	created                      *[]time.Time
@@ -42429,12 +42429,12 @@ type ApiDcimInterfacesListRequest struct {
 	descriptionNisw              *[]string
 	device                       *[]*string
 	deviceN                      *[]*string
-	deviceId                     *[]int32
-	deviceIdN                    *[]int32
+	deviceId                     *[]int64
+	deviceIdN                    *[]int64
 	deviceRole                   *[]string
 	deviceRoleN                  *[]string
-	deviceRoleId                 *[]int32
-	deviceRoleIdN                *[]int32
+	deviceRoleId                 *[]int64
+	deviceRoleIdN                *[]int64
 	deviceStatus                 *[]string
 	deviceStatusEmpty            *bool
 	deviceStatusIc               *[]string
@@ -42448,8 +42448,8 @@ type ApiDcimInterfacesListRequest struct {
 	deviceStatusNisw             *[]string
 	deviceType                   *[]string
 	deviceTypeN                  *[]string
-	deviceTypeId                 *[]int32
-	deviceTypeIdN                *[]int32
+	deviceTypeId                 *[]int64
+	deviceTypeIdN                *[]int64
 	duplex                       *[]*string
 	duplexEmpty                  *bool
 	duplexIc                     *[]*string
@@ -42462,18 +42462,18 @@ type ApiDcimInterfacesListRequest struct {
 	duplexNiew                   *[]*string
 	duplexNisw                   *[]*string
 	enabled                      *bool
-	id                           *[]int32
+	id                           *[]int64
 	idEmpty                      *bool
-	idGt                         *[]int32
-	idGte                        *[]int32
-	idLt                         *[]int32
-	idLte                        *[]int32
-	idN                          *[]int32
+	idGt                         *[]int64
+	idGte                        *[]int64
+	idLt                         *[]int64
+	idLte                        *[]int64
+	idN                          *[]int64
 	kind                         *string
 	l2vpn                        *[]*int64
 	l2vpnN                       *[]*int64
-	l2vpnId                      *[]int32
-	l2vpnIdN                     *[]int32
+	l2vpnId                      *[]int64
+	l2vpnIdN                     *[]int64
 	label                        *[]string
 	labelEmpty                   *bool
 	labelIc                      *[]string
@@ -42485,8 +42485,8 @@ type ApiDcimInterfacesListRequest struct {
 	labelNie                     *[]string
 	labelNiew                    *[]string
 	labelNisw                    *[]string
-	lagId                        *[]int32
-	lagIdN                       *[]int32
+	lagId                        *[]int64
+	lagIdN                       *[]int64
 	lastUpdated                  *[]time.Time
 	lastUpdatedEmpty             *[]time.Time
 	lastUpdatedGt                *[]time.Time
@@ -42494,11 +42494,11 @@ type ApiDcimInterfacesListRequest struct {
 	lastUpdatedLt                *[]time.Time
 	lastUpdatedLte               *[]time.Time
 	lastUpdatedN                 *[]time.Time
-	limit                        *int32
+	limit                        *int64
 	location                     *[]string
 	locationN                    *[]string
-	locationId                   *[]int32
-	locationIdN                  *[]int32
+	locationId                   *[]int64
+	locationIdN                  *[]int64
 	macAddress                   *[]string
 	macAddressIc                 *[]string
 	macAddressIe                 *[]string
@@ -42513,15 +42513,15 @@ type ApiDcimInterfacesListRequest struct {
 	mgmtOnly                     *bool
 	mode                         *DcimInterfacesListModeParameter
 	modifiedByRequest            *string
-	moduleId                     *[]*int32
-	moduleIdN                    *[]*int32
-	mtu                          *[]int32
+	moduleId                     *[]*int64
+	moduleIdN                    *[]*int64
+	mtu                          *[]int64
 	mtuEmpty                     *bool
-	mtuGt                        *[]int32
-	mtuGte                       *[]int32
-	mtuLt                        *[]int32
-	mtuLte                       *[]int32
-	mtuN                         *[]int32
+	mtuGt                        *[]int64
+	mtuGte                       *[]int64
+	mtuLt                        *[]int64
+	mtuLte                       *[]int64
+	mtuN                         *[]int64
 	name                         *[]string
 	nameEmpty                    *bool
 	nameIc                       *[]string
@@ -42534,10 +42534,10 @@ type ApiDcimInterfacesListRequest struct {
 	nameNiew                     *[]string
 	nameNisw                     *[]string
 	occupied                     *bool
-	offset                       *int32
+	offset                       *int64
 	ordering                     *string
-	parentId                     *[]int32
-	parentIdN                    *[]int32
+	parentId                     *[]int64
+	parentIdN                    *[]int64
 	poeMode                      *[]*string
 	poeModeEmpty                 *bool
 	poeModeIc                    *[]*string
@@ -42562,13 +42562,13 @@ type ApiDcimInterfacesListRequest struct {
 	poeTypeNisw                  *[]*string
 	primaryMacAddress            *[]string
 	primaryMacAddressN           *[]string
-	primaryMacAddressId          *[]int32
-	primaryMacAddressIdN         *[]int32
+	primaryMacAddressId          *[]int64
+	primaryMacAddressIdN         *[]int64
 	q                            *string
 	rack                         *[]string
 	rackN                        *[]string
-	rackId                       *[]int32
-	rackIdN                      *[]int32
+	rackId                       *[]int64
+	rackIdN                      *[]int64
 	region                       *[]string
 	regionN                      *[]string
 	regionId                     *[]string
@@ -42615,24 +42615,24 @@ type ApiDcimInterfacesListRequest struct {
 	siteGroupN                   *[]string
 	siteGroupId                  *[]string
 	siteGroupIdN                 *[]string
-	siteId                       *[]int32
-	siteIdN                      *[]int32
-	speed                        *[]int32
-	speedEmpty                   *[]int32
-	speedGt                      *[]int32
-	speedGte                     *[]int32
-	speedLt                      *[]int32
-	speedLte                     *[]int32
-	speedN                       *[]int32
+	siteId                       *[]int64
+	siteIdN                      *[]int64
+	speed                        *[]int64
+	speedEmpty                   *[]int64
+	speedGt                      *[]int64
+	speedGte                     *[]int64
+	speedLt                      *[]int64
+	speedLte                     *[]int64
+	speedN                       *[]int64
 	tag                          *[]string
 	tagN                         *[]string
-	txPower                      *[]int32
+	txPower                      *[]int64
 	txPowerEmpty                 *bool
-	txPowerGt                    *[]int32
-	txPowerGte                   *[]int32
-	txPowerLt                    *[]int32
-	txPowerLte                   *[]int32
-	txPowerN                     *[]int32
+	txPowerGt                    *[]int64
+	txPowerGte                   *[]int64
+	txPowerLt                    *[]int64
+	txPowerLte                   *[]int64
+	txPowerN                     *[]int64
 	type_                        *[]string
 	typeEmpty                    *bool
 	typeIc                       *[]string
@@ -42647,34 +42647,34 @@ type ApiDcimInterfacesListRequest struct {
 	updatedByRequest             *string
 	vdc                          *[]string
 	vdcN                         *[]string
-	vdcId                        *[]int32
-	vdcIdN                       *[]int32
-	vdcIdentifier                *[]*int32
-	vdcIdentifierN               *[]*int32
+	vdcId                        *[]int64
+	vdcIdN                       *[]int64
+	vdcIdentifier                *[]*int64
+	vdcIdentifierN               *[]*int64
 	virtualChassis               *[]string
 	virtualChassisN              *[]string
-	virtualChassisId             *[]int32
-	virtualChassisIdN            *[]int32
+	virtualChassisId             *[]int64
+	virtualChassisIdN            *[]int64
 	virtualChassisMember         *[]string
-	virtualChassisMemberId       *[]int32
-	virtualCircuitId             *[]int32
-	virtualCircuitIdN            *[]int32
-	virtualCircuitTerminationId  *[]int32
-	virtualCircuitTerminationIdN *[]int32
+	virtualChassisMemberId       *[]int64
+	virtualCircuitId             *[]int64
+	virtualCircuitIdN            *[]int64
+	virtualCircuitTerminationId  *[]int64
+	virtualCircuitTerminationIdN *[]int64
 	vlan                         *string
 	vlanId                       *string
 	vlanTranslationPolicy        *[]string
 	vlanTranslationPolicyN       *[]string
-	vlanTranslationPolicyId      *[]int32
-	vlanTranslationPolicyIdN     *[]int32
+	vlanTranslationPolicyId      *[]int64
+	vlanTranslationPolicyIdN     *[]int64
 	vrf                          *[]*string
 	vrfN                         *[]*string
-	vrfId                        *[]int32
-	vrfIdN                       *[]int32
-	wirelessLanId                *[]int32
-	wirelessLanIdN               *[]int32
-	wirelessLinkId               *[]*int32
-	wirelessLinkIdN              *[]*int32
+	vrfId                        *[]int64
+	vrfIdN                       *[]int64
+	wirelessLanId                *[]int64
+	wirelessLanIdN               *[]int64
+	wirelessLinkId               *[]*int64
+	wirelessLinkIdN              *[]*int64
 	wwn                          *[]string
 	wwnIc                        *[]string
 	wwnIe                        *[]string
@@ -42688,13 +42688,13 @@ type ApiDcimInterfacesListRequest struct {
 }
 
 // Bridged interface (ID)
-func (r ApiDcimInterfacesListRequest) BridgeId(bridgeId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) BridgeId(bridgeId []int64) ApiDcimInterfacesListRequest {
 	r.bridgeId = &bridgeId
 	return r
 }
 
 // Bridged interface (ID)
-func (r ApiDcimInterfacesListRequest) BridgeIdN(bridgeIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) BridgeIdN(bridgeIdN []int64) ApiDcimInterfacesListRequest {
 	r.bridgeIdN = &bridgeIdN
 	return r
 }
@@ -42706,13 +42706,13 @@ func (r ApiDcimInterfacesListRequest) CableEnd(cableEnd CircuitsCircuitTerminati
 }
 
 // Cable (ID)
-func (r ApiDcimInterfacesListRequest) CableId(cableId []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) CableId(cableId []*int64) ApiDcimInterfacesListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimInterfacesListRequest) CableIdN(cableIdN []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) CableIdN(cableIdN []*int64) ApiDcimInterfacesListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -42835,13 +42835,13 @@ func (r ApiDcimInterfacesListRequest) DeviceN(deviceN []*string) ApiDcimInterfac
 }
 
 // Device (ID)
-func (r ApiDcimInterfacesListRequest) DeviceId(deviceId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) DeviceId(deviceId []int64) ApiDcimInterfacesListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimInterfacesListRequest) DeviceIdN(deviceIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) DeviceIdN(deviceIdN []int64) ApiDcimInterfacesListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -42859,13 +42859,13 @@ func (r ApiDcimInterfacesListRequest) DeviceRoleN(deviceRoleN []string) ApiDcimI
 }
 
 // Device role (ID)
-func (r ApiDcimInterfacesListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimInterfacesListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimInterfacesListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimInterfacesListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -42938,13 +42938,13 @@ func (r ApiDcimInterfacesListRequest) DeviceTypeN(deviceTypeN []string) ApiDcimI
 }
 
 // Device type (ID)
-func (r ApiDcimInterfacesListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimInterfacesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimInterfacesListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimInterfacesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
@@ -43009,7 +43009,7 @@ func (r ApiDcimInterfacesListRequest) Enabled(enabled bool) ApiDcimInterfacesLis
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) Id(id []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) Id(id []int64) ApiDcimInterfacesListRequest {
 	r.id = &id
 	return r
 }
@@ -43019,27 +43019,27 @@ func (r ApiDcimInterfacesListRequest) IdEmpty(idEmpty bool) ApiDcimInterfacesLis
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) IdGt(idGt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) IdGt(idGt []int64) ApiDcimInterfacesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) IdGte(idGte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) IdGte(idGte []int64) ApiDcimInterfacesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) IdLt(idLt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) IdLt(idLt []int64) ApiDcimInterfacesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) IdLte(idLte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) IdLte(idLte []int64) ApiDcimInterfacesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) IdN(idN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) IdN(idN []int64) ApiDcimInterfacesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -43063,13 +43063,13 @@ func (r ApiDcimInterfacesListRequest) L2vpnN(l2vpnN []*int64) ApiDcimInterfacesL
 }
 
 // L2VPN (ID)
-func (r ApiDcimInterfacesListRequest) L2vpnId(l2vpnId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) L2vpnId(l2vpnId []int64) ApiDcimInterfacesListRequest {
 	r.l2vpnId = &l2vpnId
 	return r
 }
 
 // L2VPN (ID)
-func (r ApiDcimInterfacesListRequest) L2vpnIdN(l2vpnIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) L2vpnIdN(l2vpnIdN []int64) ApiDcimInterfacesListRequest {
 	r.l2vpnIdN = &l2vpnIdN
 	return r
 }
@@ -43130,13 +43130,13 @@ func (r ApiDcimInterfacesListRequest) LabelNisw(labelNisw []string) ApiDcimInter
 }
 
 // LAG interface (ID)
-func (r ApiDcimInterfacesListRequest) LagId(lagId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) LagId(lagId []int64) ApiDcimInterfacesListRequest {
 	r.lagId = &lagId
 	return r
 }
 
 // LAG interface (ID)
-func (r ApiDcimInterfacesListRequest) LagIdN(lagIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) LagIdN(lagIdN []int64) ApiDcimInterfacesListRequest {
 	r.lagIdN = &lagIdN
 	return r
 }
@@ -43177,7 +43177,7 @@ func (r ApiDcimInterfacesListRequest) LastUpdatedN(lastUpdatedN []time.Time) Api
 }
 
 // Number of results to return per page.
-func (r ApiDcimInterfacesListRequest) Limit(limit int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) Limit(limit int64) ApiDcimInterfacesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -43195,13 +43195,13 @@ func (r ApiDcimInterfacesListRequest) LocationN(locationN []string) ApiDcimInter
 }
 
 // Location (ID)
-func (r ApiDcimInterfacesListRequest) LocationId(locationId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) LocationId(locationId []int64) ApiDcimInterfacesListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimInterfacesListRequest) LocationIdN(locationIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) LocationIdN(locationIdN []int64) ApiDcimInterfacesListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -43278,18 +43278,18 @@ func (r ApiDcimInterfacesListRequest) ModifiedByRequest(modifiedByRequest string
 }
 
 // Module (ID)
-func (r ApiDcimInterfacesListRequest) ModuleId(moduleId []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) ModuleId(moduleId []*int64) ApiDcimInterfacesListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimInterfacesListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimInterfacesListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) Mtu(mtu []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) Mtu(mtu []int64) ApiDcimInterfacesListRequest {
 	r.mtu = &mtu
 	return r
 }
@@ -43299,27 +43299,27 @@ func (r ApiDcimInterfacesListRequest) MtuEmpty(mtuEmpty bool) ApiDcimInterfacesL
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) MtuGt(mtuGt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) MtuGt(mtuGt []int64) ApiDcimInterfacesListRequest {
 	r.mtuGt = &mtuGt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) MtuGte(mtuGte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) MtuGte(mtuGte []int64) ApiDcimInterfacesListRequest {
 	r.mtuGte = &mtuGte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) MtuLt(mtuLt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) MtuLt(mtuLt []int64) ApiDcimInterfacesListRequest {
 	r.mtuLt = &mtuLt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) MtuLte(mtuLte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) MtuLte(mtuLte []int64) ApiDcimInterfacesListRequest {
 	r.mtuLte = &mtuLte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) MtuN(mtuN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) MtuN(mtuN []int64) ApiDcimInterfacesListRequest {
 	r.mtuN = &mtuN
 	return r
 }
@@ -43385,7 +43385,7 @@ func (r ApiDcimInterfacesListRequest) Occupied(occupied bool) ApiDcimInterfacesL
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimInterfacesListRequest) Offset(offset int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) Offset(offset int64) ApiDcimInterfacesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -43397,13 +43397,13 @@ func (r ApiDcimInterfacesListRequest) Ordering(ordering string) ApiDcimInterface
 }
 
 // Parent interface (ID)
-func (r ApiDcimInterfacesListRequest) ParentId(parentId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) ParentId(parentId []int64) ApiDcimInterfacesListRequest {
 	r.parentId = &parentId
 	return r
 }
 
 // Parent interface (ID)
-func (r ApiDcimInterfacesListRequest) ParentIdN(parentIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) ParentIdN(parentIdN []int64) ApiDcimInterfacesListRequest {
 	r.parentIdN = &parentIdN
 	return r
 }
@@ -43531,13 +43531,13 @@ func (r ApiDcimInterfacesListRequest) PrimaryMacAddressN(primaryMacAddressN []st
 }
 
 // Primary MAC address (ID)
-func (r ApiDcimInterfacesListRequest) PrimaryMacAddressId(primaryMacAddressId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) PrimaryMacAddressId(primaryMacAddressId []int64) ApiDcimInterfacesListRequest {
 	r.primaryMacAddressId = &primaryMacAddressId
 	return r
 }
 
 // Primary MAC address (ID)
-func (r ApiDcimInterfacesListRequest) PrimaryMacAddressIdN(primaryMacAddressIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) PrimaryMacAddressIdN(primaryMacAddressIdN []int64) ApiDcimInterfacesListRequest {
 	r.primaryMacAddressIdN = &primaryMacAddressIdN
 	return r
 }
@@ -43561,13 +43561,13 @@ func (r ApiDcimInterfacesListRequest) RackN(rackN []string) ApiDcimInterfacesLis
 }
 
 // Rack (ID)
-func (r ApiDcimInterfacesListRequest) RackId(rackId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) RackId(rackId []int64) ApiDcimInterfacesListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimInterfacesListRequest) RackIdN(rackIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) RackIdN(rackIdN []int64) ApiDcimInterfacesListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -43805,48 +43805,48 @@ func (r ApiDcimInterfacesListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDci
 }
 
 // Site (ID)
-func (r ApiDcimInterfacesListRequest) SiteId(siteId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SiteId(siteId []int64) ApiDcimInterfacesListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimInterfacesListRequest) SiteIdN(siteIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SiteIdN(siteIdN []int64) ApiDcimInterfacesListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) Speed(speed []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) Speed(speed []int64) ApiDcimInterfacesListRequest {
 	r.speed = &speed
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) SpeedEmpty(speedEmpty []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SpeedEmpty(speedEmpty []int64) ApiDcimInterfacesListRequest {
 	r.speedEmpty = &speedEmpty
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) SpeedGt(speedGt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SpeedGt(speedGt []int64) ApiDcimInterfacesListRequest {
 	r.speedGt = &speedGt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) SpeedGte(speedGte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SpeedGte(speedGte []int64) ApiDcimInterfacesListRequest {
 	r.speedGte = &speedGte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) SpeedLt(speedLt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SpeedLt(speedLt []int64) ApiDcimInterfacesListRequest {
 	r.speedLt = &speedLt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) SpeedLte(speedLte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SpeedLte(speedLte []int64) ApiDcimInterfacesListRequest {
 	r.speedLte = &speedLte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) SpeedN(speedN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) SpeedN(speedN []int64) ApiDcimInterfacesListRequest {
 	r.speedN = &speedN
 	return r
 }
@@ -43861,7 +43861,7 @@ func (r ApiDcimInterfacesListRequest) TagN(tagN []string) ApiDcimInterfacesListR
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) TxPower(txPower []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) TxPower(txPower []int64) ApiDcimInterfacesListRequest {
 	r.txPower = &txPower
 	return r
 }
@@ -43871,27 +43871,27 @@ func (r ApiDcimInterfacesListRequest) TxPowerEmpty(txPowerEmpty bool) ApiDcimInt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) TxPowerGt(txPowerGt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) TxPowerGt(txPowerGt []int64) ApiDcimInterfacesListRequest {
 	r.txPowerGt = &txPowerGt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) TxPowerGte(txPowerGte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) TxPowerGte(txPowerGte []int64) ApiDcimInterfacesListRequest {
 	r.txPowerGte = &txPowerGte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) TxPowerLt(txPowerLt []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) TxPowerLt(txPowerLt []int64) ApiDcimInterfacesListRequest {
 	r.txPowerLt = &txPowerLt
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) TxPowerLte(txPowerLte []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) TxPowerLte(txPowerLte []int64) ApiDcimInterfacesListRequest {
 	r.txPowerLte = &txPowerLte
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) TxPowerN(txPowerN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) TxPowerN(txPowerN []int64) ApiDcimInterfacesListRequest {
 	r.txPowerN = &txPowerN
 	return r
 }
@@ -43969,25 +43969,25 @@ func (r ApiDcimInterfacesListRequest) VdcN(vdcN []string) ApiDcimInterfacesListR
 }
 
 // Virtual Device Context
-func (r ApiDcimInterfacesListRequest) VdcId(vdcId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VdcId(vdcId []int64) ApiDcimInterfacesListRequest {
 	r.vdcId = &vdcId
 	return r
 }
 
 // Virtual Device Context
-func (r ApiDcimInterfacesListRequest) VdcIdN(vdcIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VdcIdN(vdcIdN []int64) ApiDcimInterfacesListRequest {
 	r.vdcIdN = &vdcIdN
 	return r
 }
 
 // Virtual Device Context (Identifier)
-func (r ApiDcimInterfacesListRequest) VdcIdentifier(vdcIdentifier []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VdcIdentifier(vdcIdentifier []*int64) ApiDcimInterfacesListRequest {
 	r.vdcIdentifier = &vdcIdentifier
 	return r
 }
 
 // Virtual Device Context (Identifier)
-func (r ApiDcimInterfacesListRequest) VdcIdentifierN(vdcIdentifierN []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VdcIdentifierN(vdcIdentifierN []*int64) ApiDcimInterfacesListRequest {
 	r.vdcIdentifierN = &vdcIdentifierN
 	return r
 }
@@ -44005,13 +44005,13 @@ func (r ApiDcimInterfacesListRequest) VirtualChassisN(virtualChassisN []string) 
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimInterfacesListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimInterfacesListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimInterfacesListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimInterfacesListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -44021,31 +44021,31 @@ func (r ApiDcimInterfacesListRequest) VirtualChassisMember(virtualChassisMember 
 	return r
 }
 
-func (r ApiDcimInterfacesListRequest) VirtualChassisMemberId(virtualChassisMemberId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VirtualChassisMemberId(virtualChassisMemberId []int64) ApiDcimInterfacesListRequest {
 	r.virtualChassisMemberId = &virtualChassisMemberId
 	return r
 }
 
 // Virtual circuit (ID)
-func (r ApiDcimInterfacesListRequest) VirtualCircuitId(virtualCircuitId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VirtualCircuitId(virtualCircuitId []int64) ApiDcimInterfacesListRequest {
 	r.virtualCircuitId = &virtualCircuitId
 	return r
 }
 
 // Virtual circuit (ID)
-func (r ApiDcimInterfacesListRequest) VirtualCircuitIdN(virtualCircuitIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VirtualCircuitIdN(virtualCircuitIdN []int64) ApiDcimInterfacesListRequest {
 	r.virtualCircuitIdN = &virtualCircuitIdN
 	return r
 }
 
 // Virtual circuit termination (ID)
-func (r ApiDcimInterfacesListRequest) VirtualCircuitTerminationId(virtualCircuitTerminationId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VirtualCircuitTerminationId(virtualCircuitTerminationId []int64) ApiDcimInterfacesListRequest {
 	r.virtualCircuitTerminationId = &virtualCircuitTerminationId
 	return r
 }
 
 // Virtual circuit termination (ID)
-func (r ApiDcimInterfacesListRequest) VirtualCircuitTerminationIdN(virtualCircuitTerminationIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VirtualCircuitTerminationIdN(virtualCircuitTerminationIdN []int64) ApiDcimInterfacesListRequest {
 	r.virtualCircuitTerminationIdN = &virtualCircuitTerminationIdN
 	return r
 }
@@ -44075,13 +44075,13 @@ func (r ApiDcimInterfacesListRequest) VlanTranslationPolicyN(vlanTranslationPoli
 }
 
 // VLAN Translation Policy (ID)
-func (r ApiDcimInterfacesListRequest) VlanTranslationPolicyId(vlanTranslationPolicyId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VlanTranslationPolicyId(vlanTranslationPolicyId []int64) ApiDcimInterfacesListRequest {
 	r.vlanTranslationPolicyId = &vlanTranslationPolicyId
 	return r
 }
 
 // VLAN Translation Policy (ID)
-func (r ApiDcimInterfacesListRequest) VlanTranslationPolicyIdN(vlanTranslationPolicyIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VlanTranslationPolicyIdN(vlanTranslationPolicyIdN []int64) ApiDcimInterfacesListRequest {
 	r.vlanTranslationPolicyIdN = &vlanTranslationPolicyIdN
 	return r
 }
@@ -44099,37 +44099,37 @@ func (r ApiDcimInterfacesListRequest) VrfN(vrfN []*string) ApiDcimInterfacesList
 }
 
 // VRF
-func (r ApiDcimInterfacesListRequest) VrfId(vrfId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VrfId(vrfId []int64) ApiDcimInterfacesListRequest {
 	r.vrfId = &vrfId
 	return r
 }
 
 // VRF
-func (r ApiDcimInterfacesListRequest) VrfIdN(vrfIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) VrfIdN(vrfIdN []int64) ApiDcimInterfacesListRequest {
 	r.vrfIdN = &vrfIdN
 	return r
 }
 
 // Wireless LAN
-func (r ApiDcimInterfacesListRequest) WirelessLanId(wirelessLanId []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) WirelessLanId(wirelessLanId []int64) ApiDcimInterfacesListRequest {
 	r.wirelessLanId = &wirelessLanId
 	return r
 }
 
 // Wireless LAN
-func (r ApiDcimInterfacesListRequest) WirelessLanIdN(wirelessLanIdN []int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) WirelessLanIdN(wirelessLanIdN []int64) ApiDcimInterfacesListRequest {
 	r.wirelessLanIdN = &wirelessLanIdN
 	return r
 }
 
 // Wireless link
-func (r ApiDcimInterfacesListRequest) WirelessLinkId(wirelessLinkId []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) WirelessLinkId(wirelessLinkId []*int64) ApiDcimInterfacesListRequest {
 	r.wirelessLinkId = &wirelessLinkId
 	return r
 }
 
 // Wireless link
-func (r ApiDcimInterfacesListRequest) WirelessLinkIdN(wirelessLinkIdN []*int32) ApiDcimInterfacesListRequest {
+func (r ApiDcimInterfacesListRequest) WirelessLinkIdN(wirelessLinkIdN []*int64) ApiDcimInterfacesListRequest {
 	r.wirelessLinkIdN = &wirelessLinkIdN
 	return r
 }
@@ -47156,7 +47156,7 @@ func (a *DcimAPIService) DcimInterfacesListExecute(r ApiDcimInterfacesListReques
 type ApiDcimInterfacesPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedWritableInterfaceRequest *PatchedWritableInterfaceRequest
 }
 
@@ -47178,7 +47178,7 @@ Patch a interface object.
 	@param id A unique integer value identifying this interface.
 	@return ApiDcimInterfacesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimInterfacesPartialUpdate(ctx context.Context, id int32) ApiDcimInterfacesPartialUpdateRequest {
+func (a *DcimAPIService) DcimInterfacesPartialUpdate(ctx context.Context, id int64) ApiDcimInterfacesPartialUpdateRequest {
 	return ApiDcimInterfacesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -47282,7 +47282,7 @@ func (a *DcimAPIService) DcimInterfacesPartialUpdateExecute(r ApiDcimInterfacesP
 type ApiDcimInterfacesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInterfacesRetrieveRequest) Execute() (*Interface, *http.Response, error) {
@@ -47298,7 +47298,7 @@ Get a interface object.
 	@param id A unique integer value identifying this interface.
 	@return ApiDcimInterfacesRetrieveRequest
 */
-func (a *DcimAPIService) DcimInterfacesRetrieve(ctx context.Context, id int32) ApiDcimInterfacesRetrieveRequest {
+func (a *DcimAPIService) DcimInterfacesRetrieve(ctx context.Context, id int64) ApiDcimInterfacesRetrieveRequest {
 	return ApiDcimInterfacesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -47400,7 +47400,7 @@ func (a *DcimAPIService) DcimInterfacesRetrieveExecute(r ApiDcimInterfacesRetrie
 type ApiDcimInterfacesTraceRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInterfacesTraceRetrieveRequest) Execute() (*Interface, *http.Response, error) {
@@ -47416,7 +47416,7 @@ Trace a complete cable path and return each segment as a three-tuple of (termina
 	@param id A unique integer value identifying this interface.
 	@return ApiDcimInterfacesTraceRetrieveRequest
 */
-func (a *DcimAPIService) DcimInterfacesTraceRetrieve(ctx context.Context, id int32) ApiDcimInterfacesTraceRetrieveRequest {
+func (a *DcimAPIService) DcimInterfacesTraceRetrieve(ctx context.Context, id int64) ApiDcimInterfacesTraceRetrieveRequest {
 	return ApiDcimInterfacesTraceRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -47518,7 +47518,7 @@ func (a *DcimAPIService) DcimInterfacesTraceRetrieveExecute(r ApiDcimInterfacesT
 type ApiDcimInterfacesUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	writableInterfaceRequest *WritableInterfaceRequest
 }
 
@@ -47540,7 +47540,7 @@ Put a interface object.
 	@param id A unique integer value identifying this interface.
 	@return ApiDcimInterfacesUpdateRequest
 */
-func (a *DcimAPIService) DcimInterfacesUpdate(ctx context.Context, id int32) ApiDcimInterfacesUpdateRequest {
+func (a *DcimAPIService) DcimInterfacesUpdate(ctx context.Context, id int64) ApiDcimInterfacesUpdateRequest {
 	return ApiDcimInterfacesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -48135,7 +48135,7 @@ func (a *DcimAPIService) DcimInventoryItemRolesCreateExecute(r ApiDcimInventoryI
 type ApiDcimInventoryItemRolesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInventoryItemRolesDestroyRequest) Execute() (*http.Response, error) {
@@ -48151,7 +48151,7 @@ Delete a inventory item role object.
 	@param id A unique integer value identifying this inventory item role.
 	@return ApiDcimInventoryItemRolesDestroyRequest
 */
-func (a *DcimAPIService) DcimInventoryItemRolesDestroy(ctx context.Context, id int32) ApiDcimInventoryItemRolesDestroyRequest {
+func (a *DcimAPIService) DcimInventoryItemRolesDestroy(ctx context.Context, id int64) ApiDcimInventoryItemRolesDestroyRequest {
 	return ApiDcimInventoryItemRolesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -48271,13 +48271,13 @@ type ApiDcimInventoryItemRolesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -48285,7 +48285,7 @@ type ApiDcimInventoryItemRolesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -48298,7 +48298,7 @@ type ApiDcimInventoryItemRolesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	slug              *[]string
@@ -48467,7 +48467,7 @@ func (r ApiDcimInventoryItemRolesListRequest) DescriptionNisw(descriptionNisw []
 	return r
 }
 
-func (r ApiDcimInventoryItemRolesListRequest) Id(id []int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) Id(id []int64) ApiDcimInventoryItemRolesListRequest {
 	r.id = &id
 	return r
 }
@@ -48477,27 +48477,27 @@ func (r ApiDcimInventoryItemRolesListRequest) IdEmpty(idEmpty bool) ApiDcimInven
 	return r
 }
 
-func (r ApiDcimInventoryItemRolesListRequest) IdGt(idGt []int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) IdGt(idGt []int64) ApiDcimInventoryItemRolesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimInventoryItemRolesListRequest) IdGte(idGte []int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) IdGte(idGte []int64) ApiDcimInventoryItemRolesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimInventoryItemRolesListRequest) IdLt(idLt []int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) IdLt(idLt []int64) ApiDcimInventoryItemRolesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimInventoryItemRolesListRequest) IdLte(idLte []int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) IdLte(idLte []int64) ApiDcimInventoryItemRolesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimInventoryItemRolesListRequest) IdN(idN []int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) IdN(idN []int64) ApiDcimInventoryItemRolesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -48538,7 +48538,7 @@ func (r ApiDcimInventoryItemRolesListRequest) LastUpdatedN(lastUpdatedN []time.T
 }
 
 // Number of results to return per page.
-func (r ApiDcimInventoryItemRolesListRequest) Limit(limit int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) Limit(limit int64) ApiDcimInventoryItemRolesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -48604,7 +48604,7 @@ func (r ApiDcimInventoryItemRolesListRequest) NameNisw(nameNisw []string) ApiDci
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimInventoryItemRolesListRequest) Offset(offset int32) ApiDcimInventoryItemRolesListRequest {
+func (r ApiDcimInventoryItemRolesListRequest) Offset(offset int64) ApiDcimInventoryItemRolesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -49521,7 +49521,7 @@ func (a *DcimAPIService) DcimInventoryItemRolesListExecute(r ApiDcimInventoryIte
 type ApiDcimInventoryItemRolesPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedInventoryItemRoleRequest *PatchedInventoryItemRoleRequest
 }
 
@@ -49543,7 +49543,7 @@ Patch a inventory item role object.
 	@param id A unique integer value identifying this inventory item role.
 	@return ApiDcimInventoryItemRolesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimInventoryItemRolesPartialUpdate(ctx context.Context, id int32) ApiDcimInventoryItemRolesPartialUpdateRequest {
+func (a *DcimAPIService) DcimInventoryItemRolesPartialUpdate(ctx context.Context, id int64) ApiDcimInventoryItemRolesPartialUpdateRequest {
 	return ApiDcimInventoryItemRolesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -49647,7 +49647,7 @@ func (a *DcimAPIService) DcimInventoryItemRolesPartialUpdateExecute(r ApiDcimInv
 type ApiDcimInventoryItemRolesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInventoryItemRolesRetrieveRequest) Execute() (*InventoryItemRole, *http.Response, error) {
@@ -49663,7 +49663,7 @@ Get a inventory item role object.
 	@param id A unique integer value identifying this inventory item role.
 	@return ApiDcimInventoryItemRolesRetrieveRequest
 */
-func (a *DcimAPIService) DcimInventoryItemRolesRetrieve(ctx context.Context, id int32) ApiDcimInventoryItemRolesRetrieveRequest {
+func (a *DcimAPIService) DcimInventoryItemRolesRetrieve(ctx context.Context, id int64) ApiDcimInventoryItemRolesRetrieveRequest {
 	return ApiDcimInventoryItemRolesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -49765,7 +49765,7 @@ func (a *DcimAPIService) DcimInventoryItemRolesRetrieveExecute(r ApiDcimInventor
 type ApiDcimInventoryItemRolesUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	inventoryItemRoleRequest *InventoryItemRoleRequest
 }
 
@@ -49787,7 +49787,7 @@ Put a inventory item role object.
 	@param id A unique integer value identifying this inventory item role.
 	@return ApiDcimInventoryItemRolesUpdateRequest
 */
-func (a *DcimAPIService) DcimInventoryItemRolesUpdate(ctx context.Context, id int32) ApiDcimInventoryItemRolesUpdateRequest {
+func (a *DcimAPIService) DcimInventoryItemRolesUpdate(ctx context.Context, id int64) ApiDcimInventoryItemRolesUpdateRequest {
 	return ApiDcimInventoryItemRolesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -50382,7 +50382,7 @@ func (a *DcimAPIService) DcimInventoryItemTemplatesCreateExecute(r ApiDcimInvent
 type ApiDcimInventoryItemTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInventoryItemTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -50398,7 +50398,7 @@ Delete a inventory item template object.
 	@param id A unique integer value identifying this inventory item template.
 	@return ApiDcimInventoryItemTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimInventoryItemTemplatesDestroy(ctx context.Context, id int32) ApiDcimInventoryItemTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimInventoryItemTemplatesDestroy(ctx context.Context, id int64) ApiDcimInventoryItemTemplatesDestroyRequest {
 	return ApiDcimInventoryItemTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -50488,13 +50488,13 @@ func (a *DcimAPIService) DcimInventoryItemTemplatesDestroyExecute(r ApiDcimInven
 type ApiDcimInventoryItemTemplatesListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
-	componentId       *[]int32
-	componentIdEmpty  *[]int32
-	componentIdGt     *[]int32
-	componentIdGte    *[]int32
-	componentIdLt     *[]int32
-	componentIdLte    *[]int32
-	componentIdN      *[]int32
+	componentId       *[]int64
+	componentIdEmpty  *[]int64
+	componentIdGt     *[]int64
+	componentIdGte    *[]int64
+	componentIdLt     *[]int64
+	componentIdLte    *[]int64
+	componentIdN      *[]int64
 	componentType     *string
 	componentTypeN    *string
 	created           *[]time.Time
@@ -50516,15 +50516,15 @@ type ApiDcimInventoryItemTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]int32
-	deviceTypeIdN     *[]int32
-	id                *[]int32
+	deviceTypeId      *[]int64
+	deviceTypeIdN     *[]int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -50543,11 +50543,11 @@ type ApiDcimInventoryItemTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	manufacturer      *[]string
 	manufacturerN     *[]string
-	manufacturerId    *[]*int32
-	manufacturerIdN   *[]*int32
+	manufacturerId    *[]*int64
+	manufacturerIdN   *[]*int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -50560,10 +50560,10 @@ type ApiDcimInventoryItemTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
-	parentId          *[]*int32
-	parentIdN         *[]*int32
+	parentId          *[]*int64
+	parentIdN         *[]*int64
 	partId            *[]string
 	partIdEmpty       *bool
 	partIdIc          *[]string
@@ -50578,42 +50578,42 @@ type ApiDcimInventoryItemTemplatesListRequest struct {
 	q                 *string
 	role              *[]string
 	roleN             *[]string
-	roleId            *[]*int32
-	roleIdN           *[]*int32
+	roleId            *[]*int64
+	roleIdN           *[]*int64
 	updatedByRequest  *string
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) ComponentId(componentId []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ComponentId(componentId []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.componentId = &componentId
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdEmpty(componentIdEmpty []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdEmpty(componentIdEmpty []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.componentIdEmpty = &componentIdEmpty
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdGt(componentIdGt []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdGt(componentIdGt []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.componentIdGt = &componentIdGt
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdGte(componentIdGte []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdGte(componentIdGte []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.componentIdGte = &componentIdGte
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdLt(componentIdLt []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdLt(componentIdLt []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.componentIdLt = &componentIdLt
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdLte(componentIdLte []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdLte(componentIdLte []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.componentIdLte = &componentIdLte
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdN(componentIdN []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ComponentIdN(componentIdN []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.componentIdN = &componentIdN
 	return r
 }
@@ -50724,18 +50724,18 @@ func (r ApiDcimInventoryItemTemplatesListRequest) DescriptionNisw(descriptionNis
 }
 
 // Device type (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) Id(id []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) Id(id []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -50745,27 +50745,27 @@ func (r ApiDcimInventoryItemTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimI
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) IdGt(idGt []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) IdGt(idGt []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) IdGte(idGte []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) IdGte(idGte []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) IdLt(idLt []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) IdLt(idLt []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) IdLte(idLte []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) IdLte(idLte []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimInventoryItemTemplatesListRequest) IdN(idN []int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) IdN(idN []int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -50861,7 +50861,7 @@ func (r ApiDcimInventoryItemTemplatesListRequest) LastUpdatedN(lastUpdatedN []ti
 }
 
 // Number of results to return per page.
-func (r ApiDcimInventoryItemTemplatesListRequest) Limit(limit int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) Limit(limit int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -50879,13 +50879,13 @@ func (r ApiDcimInventoryItemTemplatesListRequest) ManufacturerN(manufacturerN []
 }
 
 // Manufacturer (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) ManufacturerId(manufacturerId []*int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ManufacturerId(manufacturerId []*int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) ManufacturerIdN(manufacturerIdN []*int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ManufacturerIdN(manufacturerIdN []*int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
@@ -50951,7 +50951,7 @@ func (r ApiDcimInventoryItemTemplatesListRequest) NameNisw(nameNisw []string) Ap
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimInventoryItemTemplatesListRequest) Offset(offset int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) Offset(offset int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -50963,13 +50963,13 @@ func (r ApiDcimInventoryItemTemplatesListRequest) Ordering(ordering string) ApiD
 }
 
 // Parent inventory item (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) ParentId(parentId []*int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ParentId(parentId []*int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.parentId = &parentId
 	return r
 }
 
 // Parent inventory item (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) ParentIdN(parentIdN []*int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) ParentIdN(parentIdN []*int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.parentIdN = &parentIdN
 	return r
 }
@@ -51048,13 +51048,13 @@ func (r ApiDcimInventoryItemTemplatesListRequest) RoleN(roleN []string) ApiDcimI
 }
 
 // Role (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) RoleId(roleId []*int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) RoleId(roleId []*int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.roleId = &roleId
 	return r
 }
 
 // Role (ID)
-func (r ApiDcimInventoryItemTemplatesListRequest) RoleIdN(roleIdN []*int32) ApiDcimInventoryItemTemplatesListRequest {
+func (r ApiDcimInventoryItemTemplatesListRequest) RoleIdN(roleIdN []*int64) ApiDcimInventoryItemTemplatesListRequest {
 	r.roleIdN = &roleIdN
 	return r
 }
@@ -52087,7 +52087,7 @@ func (a *DcimAPIService) DcimInventoryItemTemplatesListExecute(r ApiDcimInventor
 type ApiDcimInventoryItemTemplatesPartialUpdateRequest struct {
 	ctx                                 context.Context
 	ApiService                          *DcimAPIService
-	id                                  int32
+	id                                  int64
 	patchedInventoryItemTemplateRequest *PatchedInventoryItemTemplateRequest
 }
 
@@ -52109,7 +52109,7 @@ Patch a inventory item template object.
 	@param id A unique integer value identifying this inventory item template.
 	@return ApiDcimInventoryItemTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimInventoryItemTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimInventoryItemTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimInventoryItemTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimInventoryItemTemplatesPartialUpdateRequest {
 	return ApiDcimInventoryItemTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -52213,7 +52213,7 @@ func (a *DcimAPIService) DcimInventoryItemTemplatesPartialUpdateExecute(r ApiDci
 type ApiDcimInventoryItemTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInventoryItemTemplatesRetrieveRequest) Execute() (*InventoryItemTemplate, *http.Response, error) {
@@ -52229,7 +52229,7 @@ Get a inventory item template object.
 	@param id A unique integer value identifying this inventory item template.
 	@return ApiDcimInventoryItemTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimInventoryItemTemplatesRetrieve(ctx context.Context, id int32) ApiDcimInventoryItemTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimInventoryItemTemplatesRetrieve(ctx context.Context, id int64) ApiDcimInventoryItemTemplatesRetrieveRequest {
 	return ApiDcimInventoryItemTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -52331,7 +52331,7 @@ func (a *DcimAPIService) DcimInventoryItemTemplatesRetrieveExecute(r ApiDcimInve
 type ApiDcimInventoryItemTemplatesUpdateRequest struct {
 	ctx                          context.Context
 	ApiService                   *DcimAPIService
-	id                           int32
+	id                           int64
 	inventoryItemTemplateRequest *InventoryItemTemplateRequest
 }
 
@@ -52353,7 +52353,7 @@ Put a inventory item template object.
 	@param id A unique integer value identifying this inventory item template.
 	@return ApiDcimInventoryItemTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimInventoryItemTemplatesUpdate(ctx context.Context, id int32) ApiDcimInventoryItemTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimInventoryItemTemplatesUpdate(ctx context.Context, id int64) ApiDcimInventoryItemTemplatesUpdateRequest {
 	return ApiDcimInventoryItemTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -52948,7 +52948,7 @@ func (a *DcimAPIService) DcimInventoryItemsCreateExecute(r ApiDcimInventoryItems
 type ApiDcimInventoryItemsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInventoryItemsDestroyRequest) Execute() (*http.Response, error) {
@@ -52964,7 +52964,7 @@ Delete a inventory item object.
 	@param id A unique integer value identifying this inventory item.
 	@return ApiDcimInventoryItemsDestroyRequest
 */
-func (a *DcimAPIService) DcimInventoryItemsDestroy(ctx context.Context, id int32) ApiDcimInventoryItemsDestroyRequest {
+func (a *DcimAPIService) DcimInventoryItemsDestroy(ctx context.Context, id int64) ApiDcimInventoryItemsDestroyRequest {
 	return ApiDcimInventoryItemsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -53065,13 +53065,13 @@ type ApiDcimInventoryItemsListRequest struct {
 	assetTagNie       *[]string
 	assetTagNiew      *[]string
 	assetTagNisw      *[]string
-	componentId       *[]int32
-	componentIdEmpty  *[]int32
-	componentIdGt     *[]int32
-	componentIdGte    *[]int32
-	componentIdLt     *[]int32
-	componentIdLte    *[]int32
-	componentIdN      *[]int32
+	componentId       *[]int64
+	componentIdEmpty  *[]int64
+	componentIdGt     *[]int64
+	componentIdGte    *[]int64
+	componentIdLt     *[]int64
+	componentIdLte    *[]int64
+	componentIdN      *[]int64
 	componentType     *string
 	componentTypeN    *string
 	created           *[]time.Time
@@ -53095,12 +53095,12 @@ type ApiDcimInventoryItemsListRequest struct {
 	descriptionNisw   *[]string
 	device            *[]*string
 	deviceN           *[]*string
-	deviceId          *[]int32
-	deviceIdN         *[]int32
+	deviceId          *[]int64
+	deviceIdN         *[]int64
 	deviceRole        *[]string
 	deviceRoleN       *[]string
-	deviceRoleId      *[]int32
-	deviceRoleIdN     *[]int32
+	deviceRoleId      *[]int64
+	deviceRoleIdN     *[]int64
 	deviceStatus      *[]string
 	deviceStatusEmpty *bool
 	deviceStatusIc    *[]string
@@ -53114,16 +53114,16 @@ type ApiDcimInventoryItemsListRequest struct {
 	deviceStatusNisw  *[]string
 	deviceType        *[]string
 	deviceTypeN       *[]string
-	deviceTypeId      *[]int32
-	deviceTypeIdN     *[]int32
+	deviceTypeId      *[]int64
+	deviceTypeIdN     *[]int64
 	discovered        *bool
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -53142,15 +53142,15 @@ type ApiDcimInventoryItemsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	location          *[]string
 	locationN         *[]string
-	locationId        *[]int32
-	locationIdN       *[]int32
+	locationId        *[]int64
+	locationIdN       *[]int64
 	manufacturer      *[]string
 	manufacturerN     *[]string
-	manufacturerId    *[]*int32
-	manufacturerIdN   *[]*int32
+	manufacturerId    *[]*int64
+	manufacturerIdN   *[]*int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -53163,10 +53163,10 @@ type ApiDcimInventoryItemsListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
-	parentId          *[]*int32
-	parentIdN         *[]*int32
+	parentId          *[]*int64
+	parentIdN         *[]*int64
 	partId            *[]string
 	partIdEmpty       *bool
 	partIdIc          *[]string
@@ -53181,16 +53181,16 @@ type ApiDcimInventoryItemsListRequest struct {
 	q                 *string
 	rack              *[]string
 	rackN             *[]string
-	rackId            *[]int32
-	rackIdN           *[]int32
+	rackId            *[]int64
+	rackIdN           *[]int64
 	region            *[]string
 	regionN           *[]string
 	regionId          *[]string
 	regionIdN         *[]string
 	role              *[]string
 	roleN             *[]string
-	roleId            *[]*int32
-	roleIdN           *[]*int32
+	roleId            *[]*int64
+	roleIdN           *[]*int64
 	serial            *[]string
 	serialEmpty       *bool
 	serialIc          *[]string
@@ -53208,8 +53208,8 @@ type ApiDcimInventoryItemsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	status            *[]string
 	statusEmpty       *bool
 	statusIc          *[]string
@@ -53226,8 +53226,8 @@ type ApiDcimInventoryItemsListRequest struct {
 	updatedByRequest  *string
 	virtualChassis    *[]string
 	virtualChassisN   *[]string
-	virtualChassisId  *[]int32
-	virtualChassisIdN *[]int32
+	virtualChassisId  *[]int64
+	virtualChassisIdN *[]int64
 }
 
 func (r ApiDcimInventoryItemsListRequest) AssetTag(assetTag []string) ApiDcimInventoryItemsListRequest {
@@ -53285,37 +53285,37 @@ func (r ApiDcimInventoryItemsListRequest) AssetTagNisw(assetTagNisw []string) Ap
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) ComponentId(componentId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ComponentId(componentId []int64) ApiDcimInventoryItemsListRequest {
 	r.componentId = &componentId
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) ComponentIdEmpty(componentIdEmpty []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ComponentIdEmpty(componentIdEmpty []int64) ApiDcimInventoryItemsListRequest {
 	r.componentIdEmpty = &componentIdEmpty
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) ComponentIdGt(componentIdGt []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ComponentIdGt(componentIdGt []int64) ApiDcimInventoryItemsListRequest {
 	r.componentIdGt = &componentIdGt
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) ComponentIdGte(componentIdGte []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ComponentIdGte(componentIdGte []int64) ApiDcimInventoryItemsListRequest {
 	r.componentIdGte = &componentIdGte
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) ComponentIdLt(componentIdLt []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ComponentIdLt(componentIdLt []int64) ApiDcimInventoryItemsListRequest {
 	r.componentIdLt = &componentIdLt
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) ComponentIdLte(componentIdLte []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ComponentIdLte(componentIdLte []int64) ApiDcimInventoryItemsListRequest {
 	r.componentIdLte = &componentIdLte
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) ComponentIdN(componentIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ComponentIdN(componentIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.componentIdN = &componentIdN
 	return r
 }
@@ -53438,13 +53438,13 @@ func (r ApiDcimInventoryItemsListRequest) DeviceN(deviceN []*string) ApiDcimInve
 }
 
 // Device (ID)
-func (r ApiDcimInventoryItemsListRequest) DeviceId(deviceId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) DeviceId(deviceId []int64) ApiDcimInventoryItemsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimInventoryItemsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -53462,13 +53462,13 @@ func (r ApiDcimInventoryItemsListRequest) DeviceRoleN(deviceRoleN []string) ApiD
 }
 
 // Device role (ID)
-func (r ApiDcimInventoryItemsListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimInventoryItemsListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimInventoryItemsListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -53541,13 +53541,13 @@ func (r ApiDcimInventoryItemsListRequest) DeviceTypeN(deviceTypeN []string) ApiD
 }
 
 // Device type (ID)
-func (r ApiDcimInventoryItemsListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimInventoryItemsListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimInventoryItemsListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
@@ -53557,7 +53557,7 @@ func (r ApiDcimInventoryItemsListRequest) Discovered(discovered bool) ApiDcimInv
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) Id(id []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) Id(id []int64) ApiDcimInventoryItemsListRequest {
 	r.id = &id
 	return r
 }
@@ -53567,27 +53567,27 @@ func (r ApiDcimInventoryItemsListRequest) IdEmpty(idEmpty bool) ApiDcimInventory
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) IdGt(idGt []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) IdGt(idGt []int64) ApiDcimInventoryItemsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) IdGte(idGte []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) IdGte(idGte []int64) ApiDcimInventoryItemsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) IdLt(idLt []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) IdLt(idLt []int64) ApiDcimInventoryItemsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) IdLte(idLte []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) IdLte(idLte []int64) ApiDcimInventoryItemsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimInventoryItemsListRequest) IdN(idN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) IdN(idN []int64) ApiDcimInventoryItemsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -53683,7 +53683,7 @@ func (r ApiDcimInventoryItemsListRequest) LastUpdatedN(lastUpdatedN []time.Time)
 }
 
 // Number of results to return per page.
-func (r ApiDcimInventoryItemsListRequest) Limit(limit int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) Limit(limit int64) ApiDcimInventoryItemsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -53701,13 +53701,13 @@ func (r ApiDcimInventoryItemsListRequest) LocationN(locationN []string) ApiDcimI
 }
 
 // Location (ID)
-func (r ApiDcimInventoryItemsListRequest) LocationId(locationId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) LocationId(locationId []int64) ApiDcimInventoryItemsListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimInventoryItemsListRequest) LocationIdN(locationIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) LocationIdN(locationIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -53725,13 +53725,13 @@ func (r ApiDcimInventoryItemsListRequest) ManufacturerN(manufacturerN []string) 
 }
 
 // Manufacturer (ID)
-func (r ApiDcimInventoryItemsListRequest) ManufacturerId(manufacturerId []*int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ManufacturerId(manufacturerId []*int64) ApiDcimInventoryItemsListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimInventoryItemsListRequest) ManufacturerIdN(manufacturerIdN []*int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ManufacturerIdN(manufacturerIdN []*int64) ApiDcimInventoryItemsListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
@@ -53797,7 +53797,7 @@ func (r ApiDcimInventoryItemsListRequest) NameNisw(nameNisw []string) ApiDcimInv
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimInventoryItemsListRequest) Offset(offset int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) Offset(offset int64) ApiDcimInventoryItemsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -53809,13 +53809,13 @@ func (r ApiDcimInventoryItemsListRequest) Ordering(ordering string) ApiDcimInven
 }
 
 // Parent inventory item (ID)
-func (r ApiDcimInventoryItemsListRequest) ParentId(parentId []*int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ParentId(parentId []*int64) ApiDcimInventoryItemsListRequest {
 	r.parentId = &parentId
 	return r
 }
 
 // Parent inventory item (ID)
-func (r ApiDcimInventoryItemsListRequest) ParentIdN(parentIdN []*int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) ParentIdN(parentIdN []*int64) ApiDcimInventoryItemsListRequest {
 	r.parentIdN = &parentIdN
 	return r
 }
@@ -53894,13 +53894,13 @@ func (r ApiDcimInventoryItemsListRequest) RackN(rackN []string) ApiDcimInventory
 }
 
 // Rack (ID)
-func (r ApiDcimInventoryItemsListRequest) RackId(rackId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) RackId(rackId []int64) ApiDcimInventoryItemsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimInventoryItemsListRequest) RackIdN(rackIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) RackIdN(rackIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -53938,13 +53938,13 @@ func (r ApiDcimInventoryItemsListRequest) RoleN(roleN []string) ApiDcimInventory
 }
 
 // Role (ID)
-func (r ApiDcimInventoryItemsListRequest) RoleId(roleId []*int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) RoleId(roleId []*int64) ApiDcimInventoryItemsListRequest {
 	r.roleId = &roleId
 	return r
 }
 
 // Role (ID)
-func (r ApiDcimInventoryItemsListRequest) RoleIdN(roleIdN []*int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) RoleIdN(roleIdN []*int64) ApiDcimInventoryItemsListRequest {
 	r.roleIdN = &roleIdN
 	return r
 }
@@ -54037,13 +54037,13 @@ func (r ApiDcimInventoryItemsListRequest) SiteGroupIdN(siteGroupIdN []string) Ap
 }
 
 // Site (ID)
-func (r ApiDcimInventoryItemsListRequest) SiteId(siteId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) SiteId(siteId []int64) ApiDcimInventoryItemsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimInventoryItemsListRequest) SiteIdN(siteIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) SiteIdN(siteIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -54131,13 +54131,13 @@ func (r ApiDcimInventoryItemsListRequest) VirtualChassisN(virtualChassisN []stri
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimInventoryItemsListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimInventoryItemsListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimInventoryItemsListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimInventoryItemsListRequest {
+func (r ApiDcimInventoryItemsListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimInventoryItemsListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -56016,7 +56016,7 @@ func (a *DcimAPIService) DcimInventoryItemsListExecute(r ApiDcimInventoryItemsLi
 type ApiDcimInventoryItemsPartialUpdateRequest struct {
 	ctx                                 context.Context
 	ApiService                          *DcimAPIService
-	id                                  int32
+	id                                  int64
 	patchedWritableInventoryItemRequest *PatchedWritableInventoryItemRequest
 }
 
@@ -56038,7 +56038,7 @@ Patch a inventory item object.
 	@param id A unique integer value identifying this inventory item.
 	@return ApiDcimInventoryItemsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimInventoryItemsPartialUpdate(ctx context.Context, id int32) ApiDcimInventoryItemsPartialUpdateRequest {
+func (a *DcimAPIService) DcimInventoryItemsPartialUpdate(ctx context.Context, id int64) ApiDcimInventoryItemsPartialUpdateRequest {
 	return ApiDcimInventoryItemsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -56142,7 +56142,7 @@ func (a *DcimAPIService) DcimInventoryItemsPartialUpdateExecute(r ApiDcimInvento
 type ApiDcimInventoryItemsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimInventoryItemsRetrieveRequest) Execute() (*InventoryItem, *http.Response, error) {
@@ -56158,7 +56158,7 @@ Get a inventory item object.
 	@param id A unique integer value identifying this inventory item.
 	@return ApiDcimInventoryItemsRetrieveRequest
 */
-func (a *DcimAPIService) DcimInventoryItemsRetrieve(ctx context.Context, id int32) ApiDcimInventoryItemsRetrieveRequest {
+func (a *DcimAPIService) DcimInventoryItemsRetrieve(ctx context.Context, id int64) ApiDcimInventoryItemsRetrieveRequest {
 	return ApiDcimInventoryItemsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -56260,7 +56260,7 @@ func (a *DcimAPIService) DcimInventoryItemsRetrieveExecute(r ApiDcimInventoryIte
 type ApiDcimInventoryItemsUpdateRequest struct {
 	ctx                          context.Context
 	ApiService                   *DcimAPIService
-	id                           int32
+	id                           int64
 	writableInventoryItemRequest *WritableInventoryItemRequest
 }
 
@@ -56282,7 +56282,7 @@ Put a inventory item object.
 	@param id A unique integer value identifying this inventory item.
 	@return ApiDcimInventoryItemsUpdateRequest
 */
-func (a *DcimAPIService) DcimInventoryItemsUpdate(ctx context.Context, id int32) ApiDcimInventoryItemsUpdateRequest {
+func (a *DcimAPIService) DcimInventoryItemsUpdate(ctx context.Context, id int64) ApiDcimInventoryItemsUpdateRequest {
 	return ApiDcimInventoryItemsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -56877,7 +56877,7 @@ func (a *DcimAPIService) DcimLocationsCreateExecute(r ApiDcimLocationsCreateRequ
 type ApiDcimLocationsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimLocationsDestroyRequest) Execute() (*http.Response, error) {
@@ -56893,7 +56893,7 @@ Delete a location object.
 	@param id A unique integer value identifying this location.
 	@return ApiDcimLocationsDestroyRequest
 */
-func (a *DcimAPIService) DcimLocationsDestroy(ctx context.Context, id int32) ApiDcimLocationsDestroyRequest {
+func (a *DcimAPIService) DcimLocationsDestroy(ctx context.Context, id int64) ApiDcimLocationsDestroyRequest {
 	return ApiDcimLocationsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -56987,12 +56987,12 @@ type ApiDcimLocationsListRequest struct {
 	ancestorN         *[]string
 	ancestorId        *[]string
 	ancestorIdN       *[]string
-	contact           *[]int32
-	contactN          *[]int32
+	contact           *[]int64
+	contactN          *[]int64
 	contactGroup      *[]string
 	contactGroupN     *[]string
-	contactRole       *[]int32
-	contactRoleN      *[]int32
+	contactRole       *[]int64
+	contactRoleN      *[]int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -57023,13 +57023,13 @@ type ApiDcimLocationsListRequest struct {
 	facilityNie       *[]string
 	facilityNiew      *[]string
 	facilityNisw      *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -57037,7 +57037,7 @@ type ApiDcimLocationsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -57050,12 +57050,12 @@ type ApiDcimLocationsListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	parent            *[]string
 	parentN           *[]string
-	parentId          *[]*int32
-	parentIdN         *[]*int32
+	parentId          *[]*int64
+	parentIdN         *[]*int64
 	q                 *string
 	region            *[]string
 	regionN           *[]string
@@ -57067,8 +57067,8 @@ type ApiDcimLocationsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	slug              *[]string
 	slugEmpty         *bool
 	slugIc            *[]string
@@ -57099,8 +57099,8 @@ type ApiDcimLocationsListRequest struct {
 	tenantGroupN      *[]string
 	tenantGroupId     *[]string
 	tenantGroupIdN    *[]string
-	tenantId          *[]*int32
-	tenantIdN         *[]*int32
+	tenantId          *[]*int64
+	tenantIdN         *[]*int64
 	updatedByRequest  *string
 }
 
@@ -57125,13 +57125,13 @@ func (r ApiDcimLocationsListRequest) AncestorIdN(ancestorIdN []string) ApiDcimLo
 }
 
 // Contact
-func (r ApiDcimLocationsListRequest) Contact(contact []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) Contact(contact []int64) ApiDcimLocationsListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimLocationsListRequest) ContactN(contactN []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) ContactN(contactN []int64) ApiDcimLocationsListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -57147,13 +57147,13 @@ func (r ApiDcimLocationsListRequest) ContactGroupN(contactGroupN []string) ApiDc
 }
 
 // Contact Role
-func (r ApiDcimLocationsListRequest) ContactRole(contactRole []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) ContactRole(contactRole []int64) ApiDcimLocationsListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimLocationsListRequest) ContactRoleN(contactRoleN []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) ContactRoleN(contactRoleN []int64) ApiDcimLocationsListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -57308,7 +57308,7 @@ func (r ApiDcimLocationsListRequest) FacilityNisw(facilityNisw []string) ApiDcim
 	return r
 }
 
-func (r ApiDcimLocationsListRequest) Id(id []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) Id(id []int64) ApiDcimLocationsListRequest {
 	r.id = &id
 	return r
 }
@@ -57318,27 +57318,27 @@ func (r ApiDcimLocationsListRequest) IdEmpty(idEmpty bool) ApiDcimLocationsListR
 	return r
 }
 
-func (r ApiDcimLocationsListRequest) IdGt(idGt []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) IdGt(idGt []int64) ApiDcimLocationsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimLocationsListRequest) IdGte(idGte []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) IdGte(idGte []int64) ApiDcimLocationsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimLocationsListRequest) IdLt(idLt []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) IdLt(idLt []int64) ApiDcimLocationsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimLocationsListRequest) IdLte(idLte []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) IdLte(idLte []int64) ApiDcimLocationsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimLocationsListRequest) IdN(idN []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) IdN(idN []int64) ApiDcimLocationsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -57379,7 +57379,7 @@ func (r ApiDcimLocationsListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiD
 }
 
 // Number of results to return per page.
-func (r ApiDcimLocationsListRequest) Limit(limit int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) Limit(limit int64) ApiDcimLocationsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -57445,7 +57445,7 @@ func (r ApiDcimLocationsListRequest) NameNisw(nameNisw []string) ApiDcimLocation
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimLocationsListRequest) Offset(offset int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) Offset(offset int64) ApiDcimLocationsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -57469,13 +57469,13 @@ func (r ApiDcimLocationsListRequest) ParentN(parentN []string) ApiDcimLocationsL
 }
 
 // Parent location (ID)
-func (r ApiDcimLocationsListRequest) ParentId(parentId []*int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) ParentId(parentId []*int64) ApiDcimLocationsListRequest {
 	r.parentId = &parentId
 	return r
 }
 
 // Parent location (ID)
-func (r ApiDcimLocationsListRequest) ParentIdN(parentIdN []*int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) ParentIdN(parentIdN []*int64) ApiDcimLocationsListRequest {
 	r.parentIdN = &parentIdN
 	return r
 }
@@ -57539,13 +57539,13 @@ func (r ApiDcimLocationsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDcim
 }
 
 // Site (ID)
-func (r ApiDcimLocationsListRequest) SiteId(siteId []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) SiteId(siteId []int64) ApiDcimLocationsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimLocationsListRequest) SiteIdN(siteIdN []int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) SiteIdN(siteIdN []int64) ApiDcimLocationsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -57703,13 +57703,13 @@ func (r ApiDcimLocationsListRequest) TenantGroupIdN(tenantGroupIdN []string) Api
 }
 
 // Tenant (ID)
-func (r ApiDcimLocationsListRequest) TenantId(tenantId []*int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) TenantId(tenantId []*int64) ApiDcimLocationsListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimLocationsListRequest) TenantIdN(tenantIdN []*int32) ApiDcimLocationsListRequest {
+func (r ApiDcimLocationsListRequest) TenantIdN(tenantIdN []*int64) ApiDcimLocationsListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
@@ -59036,7 +59036,7 @@ func (a *DcimAPIService) DcimLocationsListExecute(r ApiDcimLocationsListRequest)
 type ApiDcimLocationsPartialUpdateRequest struct {
 	ctx                            context.Context
 	ApiService                     *DcimAPIService
-	id                             int32
+	id                             int64
 	patchedWritableLocationRequest *PatchedWritableLocationRequest
 }
 
@@ -59058,7 +59058,7 @@ Patch a location object.
 	@param id A unique integer value identifying this location.
 	@return ApiDcimLocationsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimLocationsPartialUpdate(ctx context.Context, id int32) ApiDcimLocationsPartialUpdateRequest {
+func (a *DcimAPIService) DcimLocationsPartialUpdate(ctx context.Context, id int64) ApiDcimLocationsPartialUpdateRequest {
 	return ApiDcimLocationsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -59162,7 +59162,7 @@ func (a *DcimAPIService) DcimLocationsPartialUpdateExecute(r ApiDcimLocationsPar
 type ApiDcimLocationsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimLocationsRetrieveRequest) Execute() (*Location, *http.Response, error) {
@@ -59178,7 +59178,7 @@ Get a location object.
 	@param id A unique integer value identifying this location.
 	@return ApiDcimLocationsRetrieveRequest
 */
-func (a *DcimAPIService) DcimLocationsRetrieve(ctx context.Context, id int32) ApiDcimLocationsRetrieveRequest {
+func (a *DcimAPIService) DcimLocationsRetrieve(ctx context.Context, id int64) ApiDcimLocationsRetrieveRequest {
 	return ApiDcimLocationsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -59280,7 +59280,7 @@ func (a *DcimAPIService) DcimLocationsRetrieveExecute(r ApiDcimLocationsRetrieve
 type ApiDcimLocationsUpdateRequest struct {
 	ctx                     context.Context
 	ApiService              *DcimAPIService
-	id                      int32
+	id                      int64
 	writableLocationRequest *WritableLocationRequest
 }
 
@@ -59302,7 +59302,7 @@ Put a location object.
 	@param id A unique integer value identifying this location.
 	@return ApiDcimLocationsUpdateRequest
 */
-func (a *DcimAPIService) DcimLocationsUpdate(ctx context.Context, id int32) ApiDcimLocationsUpdateRequest {
+func (a *DcimAPIService) DcimLocationsUpdate(ctx context.Context, id int64) ApiDcimLocationsUpdateRequest {
 	return ApiDcimLocationsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -59897,7 +59897,7 @@ func (a *DcimAPIService) DcimMacAddressesCreateExecute(r ApiDcimMacAddressesCrea
 type ApiDcimMacAddressesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimMacAddressesDestroyRequest) Execute() (*http.Response, error) {
@@ -59913,7 +59913,7 @@ Delete a MAC address object.
 	@param id A unique integer value identifying this MAC address.
 	@return ApiDcimMacAddressesDestroyRequest
 */
-func (a *DcimAPIService) DcimMacAddressesDestroy(ctx context.Context, id int32) ApiDcimMacAddressesDestroyRequest {
+func (a *DcimAPIService) DcimMacAddressesDestroy(ctx context.Context, id int64) ApiDcimMacAddressesDestroyRequest {
 	return ApiDcimMacAddressesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -60003,15 +60003,15 @@ func (a *DcimAPIService) DcimMacAddressesDestroyExecute(r ApiDcimMacAddressesDes
 type ApiDcimMacAddressesListRequest struct {
 	ctx                   context.Context
 	ApiService            *DcimAPIService
-	assignedObjectId      *[]int32
+	assignedObjectId      *[]int64
 	assignedObjectIdEmpty *bool
-	assignedObjectIdGt    *[]int32
-	assignedObjectIdGte   *[]int32
-	assignedObjectIdLt    *[]int32
-	assignedObjectIdLte   *[]int32
-	assignedObjectIdN     *[]int32
-	assignedObjectType    *int32
-	assignedObjectTypeN   *int32
+	assignedObjectIdGt    *[]int64
+	assignedObjectIdGte   *[]int64
+	assignedObjectIdLt    *[]int64
+	assignedObjectIdLte   *[]int64
+	assignedObjectIdN     *[]int64
+	assignedObjectType    *int64
+	assignedObjectTypeN   *int64
 	created               *[]time.Time
 	createdEmpty          *[]time.Time
 	createdGt             *[]time.Time
@@ -60032,18 +60032,18 @@ type ApiDcimMacAddressesListRequest struct {
 	descriptionNiew       *[]string
 	descriptionNisw       *[]string
 	device                *[]string
-	deviceId              *[]int32
-	id                    *[]int32
+	deviceId              *[]int64
+	id                    *[]int64
 	idEmpty               *bool
-	idGt                  *[]int32
-	idGte                 *[]int32
-	idLt                  *[]int32
-	idLte                 *[]int32
-	idN                   *[]int32
+	idGt                  *[]int64
+	idGte                 *[]int64
+	idLt                  *[]int64
+	idLte                 *[]int64
+	idN                   *[]int64
 	interface_            *[]string
 	interfaceN            *[]string
-	interfaceId           *[]int32
-	interfaceIdN          *[]int32
+	interfaceId           *[]int64
+	interfaceIdN          *[]int64
 	lastUpdated           *[]time.Time
 	lastUpdatedEmpty      *[]time.Time
 	lastUpdatedGt         *[]time.Time
@@ -60051,7 +60051,7 @@ type ApiDcimMacAddressesListRequest struct {
 	lastUpdatedLt         *[]time.Time
 	lastUpdatedLte        *[]time.Time
 	lastUpdatedN          *[]time.Time
-	limit                 *int32
+	limit                 *int64
 	macAddress            *[]string
 	macAddressIc          *[]string
 	macAddressIe          *[]string
@@ -60063,21 +60063,21 @@ type ApiDcimMacAddressesListRequest struct {
 	macAddressNiew        *[]string
 	macAddressNisw        *[]string
 	modifiedByRequest     *string
-	offset                *int32
+	offset                *int64
 	ordering              *string
 	q                     *string
 	tag                   *[]string
 	tagN                  *[]string
 	updatedByRequest      *string
 	virtualMachine        *[]string
-	virtualMachineId      *[]int32
+	virtualMachineId      *[]int64
 	vminterface           *[]string
 	vminterfaceN          *[]string
-	vminterfaceId         *[]int32
-	vminterfaceIdN        *[]int32
+	vminterfaceId         *[]int64
+	vminterfaceIdN        *[]int64
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectId(assignedObjectId []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectId(assignedObjectId []int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectId = &assignedObjectId
 	return r
 }
@@ -60087,37 +60087,37 @@ func (r ApiDcimMacAddressesListRequest) AssignedObjectIdEmpty(assignedObjectIdEm
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectIdGt(assignedObjectIdGt []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectIdGt(assignedObjectIdGt []int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectIdGt = &assignedObjectIdGt
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectIdGte(assignedObjectIdGte []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectIdGte(assignedObjectIdGte []int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectIdGte = &assignedObjectIdGte
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectIdLt(assignedObjectIdLt []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectIdLt(assignedObjectIdLt []int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectIdLt = &assignedObjectIdLt
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectIdLte(assignedObjectIdLte []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectIdLte(assignedObjectIdLte []int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectIdLte = &assignedObjectIdLte
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectIdN(assignedObjectIdN []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectIdN(assignedObjectIdN []int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectIdN = &assignedObjectIdN
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectType(assignedObjectType int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectType(assignedObjectType int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectType = &assignedObjectType
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) AssignedObjectTypeN(assignedObjectTypeN int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) AssignedObjectTypeN(assignedObjectTypeN int64) ApiDcimMacAddressesListRequest {
 	r.assignedObjectTypeN = &assignedObjectTypeN
 	return r
 }
@@ -60222,12 +60222,12 @@ func (r ApiDcimMacAddressesListRequest) Device(device []string) ApiDcimMacAddres
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) DeviceId(deviceId []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) DeviceId(deviceId []int64) ApiDcimMacAddressesListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) Id(id []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) Id(id []int64) ApiDcimMacAddressesListRequest {
 	r.id = &id
 	return r
 }
@@ -60237,27 +60237,27 @@ func (r ApiDcimMacAddressesListRequest) IdEmpty(idEmpty bool) ApiDcimMacAddresse
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) IdGt(idGt []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) IdGt(idGt []int64) ApiDcimMacAddressesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) IdGte(idGte []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) IdGte(idGte []int64) ApiDcimMacAddressesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) IdLt(idLt []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) IdLt(idLt []int64) ApiDcimMacAddressesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) IdLte(idLte []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) IdLte(idLte []int64) ApiDcimMacAddressesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) IdN(idN []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) IdN(idN []int64) ApiDcimMacAddressesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -60275,13 +60275,13 @@ func (r ApiDcimMacAddressesListRequest) InterfaceN(interfaceN []string) ApiDcimM
 }
 
 // Interface (ID)
-func (r ApiDcimMacAddressesListRequest) InterfaceId(interfaceId []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) InterfaceId(interfaceId []int64) ApiDcimMacAddressesListRequest {
 	r.interfaceId = &interfaceId
 	return r
 }
 
 // Interface (ID)
-func (r ApiDcimMacAddressesListRequest) InterfaceIdN(interfaceIdN []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) InterfaceIdN(interfaceIdN []int64) ApiDcimMacAddressesListRequest {
 	r.interfaceIdN = &interfaceIdN
 	return r
 }
@@ -60322,7 +60322,7 @@ func (r ApiDcimMacAddressesListRequest) LastUpdatedN(lastUpdatedN []time.Time) A
 }
 
 // Number of results to return per page.
-func (r ApiDcimMacAddressesListRequest) Limit(limit int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) Limit(limit int64) ApiDcimMacAddressesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -60383,7 +60383,7 @@ func (r ApiDcimMacAddressesListRequest) ModifiedByRequest(modifiedByRequest stri
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimMacAddressesListRequest) Offset(offset int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) Offset(offset int64) ApiDcimMacAddressesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -60420,7 +60420,7 @@ func (r ApiDcimMacAddressesListRequest) VirtualMachine(virtualMachine []string) 
 	return r
 }
 
-func (r ApiDcimMacAddressesListRequest) VirtualMachineId(virtualMachineId []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) VirtualMachineId(virtualMachineId []int64) ApiDcimMacAddressesListRequest {
 	r.virtualMachineId = &virtualMachineId
 	return r
 }
@@ -60438,13 +60438,13 @@ func (r ApiDcimMacAddressesListRequest) VminterfaceN(vminterfaceN []string) ApiD
 }
 
 // VM interface (ID)
-func (r ApiDcimMacAddressesListRequest) VminterfaceId(vminterfaceId []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) VminterfaceId(vminterfaceId []int64) ApiDcimMacAddressesListRequest {
 	r.vminterfaceId = &vminterfaceId
 	return r
 }
 
 // VM interface (ID)
-func (r ApiDcimMacAddressesListRequest) VminterfaceIdN(vminterfaceIdN []int32) ApiDcimMacAddressesListRequest {
+func (r ApiDcimMacAddressesListRequest) VminterfaceIdN(vminterfaceIdN []int64) ApiDcimMacAddressesListRequest {
 	r.vminterfaceIdN = &vminterfaceIdN
 	return r
 }
@@ -61257,7 +61257,7 @@ func (a *DcimAPIService) DcimMacAddressesListExecute(r ApiDcimMacAddressesListRe
 type ApiDcimMacAddressesPartialUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	patchedMACAddressRequest *PatchedMACAddressRequest
 }
 
@@ -61279,7 +61279,7 @@ Patch a MAC address object.
 	@param id A unique integer value identifying this MAC address.
 	@return ApiDcimMacAddressesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimMacAddressesPartialUpdate(ctx context.Context, id int32) ApiDcimMacAddressesPartialUpdateRequest {
+func (a *DcimAPIService) DcimMacAddressesPartialUpdate(ctx context.Context, id int64) ApiDcimMacAddressesPartialUpdateRequest {
 	return ApiDcimMacAddressesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -61383,7 +61383,7 @@ func (a *DcimAPIService) DcimMacAddressesPartialUpdateExecute(r ApiDcimMacAddres
 type ApiDcimMacAddressesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimMacAddressesRetrieveRequest) Execute() (*MACAddress, *http.Response, error) {
@@ -61399,7 +61399,7 @@ Get a MAC address object.
 	@param id A unique integer value identifying this MAC address.
 	@return ApiDcimMacAddressesRetrieveRequest
 */
-func (a *DcimAPIService) DcimMacAddressesRetrieve(ctx context.Context, id int32) ApiDcimMacAddressesRetrieveRequest {
+func (a *DcimAPIService) DcimMacAddressesRetrieve(ctx context.Context, id int64) ApiDcimMacAddressesRetrieveRequest {
 	return ApiDcimMacAddressesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -61501,7 +61501,7 @@ func (a *DcimAPIService) DcimMacAddressesRetrieveExecute(r ApiDcimMacAddressesRe
 type ApiDcimMacAddressesUpdateRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
-	id                int32
+	id                int64
 	mACAddressRequest *MACAddressRequest
 }
 
@@ -61523,7 +61523,7 @@ Put a MAC address object.
 	@param id A unique integer value identifying this MAC address.
 	@return ApiDcimMacAddressesUpdateRequest
 */
-func (a *DcimAPIService) DcimMacAddressesUpdate(ctx context.Context, id int32) ApiDcimMacAddressesUpdateRequest {
+func (a *DcimAPIService) DcimMacAddressesUpdate(ctx context.Context, id int64) ApiDcimMacAddressesUpdateRequest {
 	return ApiDcimMacAddressesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -62118,7 +62118,7 @@ func (a *DcimAPIService) DcimManufacturersCreateExecute(r ApiDcimManufacturersCr
 type ApiDcimManufacturersDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimManufacturersDestroyRequest) Execute() (*http.Response, error) {
@@ -62134,7 +62134,7 @@ Delete a manufacturer object.
 	@param id A unique integer value identifying this manufacturer.
 	@return ApiDcimManufacturersDestroyRequest
 */
-func (a *DcimAPIService) DcimManufacturersDestroy(ctx context.Context, id int32) ApiDcimManufacturersDestroyRequest {
+func (a *DcimAPIService) DcimManufacturersDestroy(ctx context.Context, id int64) ApiDcimManufacturersDestroyRequest {
 	return ApiDcimManufacturersDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -62224,12 +62224,12 @@ func (a *DcimAPIService) DcimManufacturersDestroyExecute(r ApiDcimManufacturersD
 type ApiDcimManufacturersListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
-	contact           *[]int32
-	contactN          *[]int32
+	contact           *[]int64
+	contactN          *[]int64
 	contactGroup      *[]string
 	contactGroupN     *[]string
-	contactRole       *[]int32
-	contactRoleN      *[]int32
+	contactRole       *[]int64
+	contactRoleN      *[]int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -62249,13 +62249,13 @@ type ApiDcimManufacturersListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -62263,7 +62263,7 @@ type ApiDcimManufacturersListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -62276,7 +62276,7 @@ type ApiDcimManufacturersListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	slug              *[]string
@@ -62296,13 +62296,13 @@ type ApiDcimManufacturersListRequest struct {
 }
 
 // Contact
-func (r ApiDcimManufacturersListRequest) Contact(contact []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) Contact(contact []int64) ApiDcimManufacturersListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimManufacturersListRequest) ContactN(contactN []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) ContactN(contactN []int64) ApiDcimManufacturersListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -62318,13 +62318,13 @@ func (r ApiDcimManufacturersListRequest) ContactGroupN(contactGroupN []string) A
 }
 
 // Contact Role
-func (r ApiDcimManufacturersListRequest) ContactRole(contactRole []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) ContactRole(contactRole []int64) ApiDcimManufacturersListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimManufacturersListRequest) ContactRoleN(contactRoleN []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) ContactRoleN(contactRoleN []int64) ApiDcimManufacturersListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -62424,7 +62424,7 @@ func (r ApiDcimManufacturersListRequest) DescriptionNisw(descriptionNisw []strin
 	return r
 }
 
-func (r ApiDcimManufacturersListRequest) Id(id []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) Id(id []int64) ApiDcimManufacturersListRequest {
 	r.id = &id
 	return r
 }
@@ -62434,27 +62434,27 @@ func (r ApiDcimManufacturersListRequest) IdEmpty(idEmpty bool) ApiDcimManufactur
 	return r
 }
 
-func (r ApiDcimManufacturersListRequest) IdGt(idGt []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) IdGt(idGt []int64) ApiDcimManufacturersListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimManufacturersListRequest) IdGte(idGte []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) IdGte(idGte []int64) ApiDcimManufacturersListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimManufacturersListRequest) IdLt(idLt []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) IdLt(idLt []int64) ApiDcimManufacturersListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimManufacturersListRequest) IdLte(idLte []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) IdLte(idLte []int64) ApiDcimManufacturersListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimManufacturersListRequest) IdN(idN []int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) IdN(idN []int64) ApiDcimManufacturersListRequest {
 	r.idN = &idN
 	return r
 }
@@ -62495,7 +62495,7 @@ func (r ApiDcimManufacturersListRequest) LastUpdatedN(lastUpdatedN []time.Time) 
 }
 
 // Number of results to return per page.
-func (r ApiDcimManufacturersListRequest) Limit(limit int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) Limit(limit int64) ApiDcimManufacturersListRequest {
 	r.limit = &limit
 	return r
 }
@@ -62561,7 +62561,7 @@ func (r ApiDcimManufacturersListRequest) NameNisw(nameNisw []string) ApiDcimManu
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimManufacturersListRequest) Offset(offset int32) ApiDcimManufacturersListRequest {
+func (r ApiDcimManufacturersListRequest) Offset(offset int64) ApiDcimManufacturersListRequest {
 	r.offset = &offset
 	return r
 }
@@ -63431,7 +63431,7 @@ func (a *DcimAPIService) DcimManufacturersListExecute(r ApiDcimManufacturersList
 type ApiDcimManufacturersPartialUpdateRequest struct {
 	ctx                        context.Context
 	ApiService                 *DcimAPIService
-	id                         int32
+	id                         int64
 	patchedManufacturerRequest *PatchedManufacturerRequest
 }
 
@@ -63453,7 +63453,7 @@ Patch a manufacturer object.
 	@param id A unique integer value identifying this manufacturer.
 	@return ApiDcimManufacturersPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimManufacturersPartialUpdate(ctx context.Context, id int32) ApiDcimManufacturersPartialUpdateRequest {
+func (a *DcimAPIService) DcimManufacturersPartialUpdate(ctx context.Context, id int64) ApiDcimManufacturersPartialUpdateRequest {
 	return ApiDcimManufacturersPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -63557,7 +63557,7 @@ func (a *DcimAPIService) DcimManufacturersPartialUpdateExecute(r ApiDcimManufact
 type ApiDcimManufacturersRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimManufacturersRetrieveRequest) Execute() (*Manufacturer, *http.Response, error) {
@@ -63573,7 +63573,7 @@ Get a manufacturer object.
 	@param id A unique integer value identifying this manufacturer.
 	@return ApiDcimManufacturersRetrieveRequest
 */
-func (a *DcimAPIService) DcimManufacturersRetrieve(ctx context.Context, id int32) ApiDcimManufacturersRetrieveRequest {
+func (a *DcimAPIService) DcimManufacturersRetrieve(ctx context.Context, id int64) ApiDcimManufacturersRetrieveRequest {
 	return ApiDcimManufacturersRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -63675,7 +63675,7 @@ func (a *DcimAPIService) DcimManufacturersRetrieveExecute(r ApiDcimManufacturers
 type ApiDcimManufacturersUpdateRequest struct {
 	ctx                 context.Context
 	ApiService          *DcimAPIService
-	id                  int32
+	id                  int64
 	manufacturerRequest *ManufacturerRequest
 }
 
@@ -63697,7 +63697,7 @@ Put a manufacturer object.
 	@param id A unique integer value identifying this manufacturer.
 	@return ApiDcimManufacturersUpdateRequest
 */
-func (a *DcimAPIService) DcimManufacturersUpdate(ctx context.Context, id int32) ApiDcimManufacturersUpdateRequest {
+func (a *DcimAPIService) DcimManufacturersUpdate(ctx context.Context, id int64) ApiDcimManufacturersUpdateRequest {
 	return ApiDcimManufacturersUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -64292,7 +64292,7 @@ func (a *DcimAPIService) DcimModuleBayTemplatesCreateExecute(r ApiDcimModuleBayT
 type ApiDcimModuleBayTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModuleBayTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -64308,7 +64308,7 @@ Delete a module bay template object.
 	@param id A unique integer value identifying this module bay template.
 	@return ApiDcimModuleBayTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimModuleBayTemplatesDestroy(ctx context.Context, id int32) ApiDcimModuleBayTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimModuleBayTemplatesDestroy(ctx context.Context, id int64) ApiDcimModuleBayTemplatesDestroyRequest {
 	return ApiDcimModuleBayTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -64417,15 +64417,15 @@ type ApiDcimModuleBayTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]*int32
-	deviceTypeIdN     *[]*int32
-	id                *[]int32
+	deviceTypeId      *[]*int64
+	deviceTypeIdN     *[]*int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -64444,10 +64444,10 @@ type ApiDcimModuleBayTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
-	moduleTypeId      *[]*int32
-	moduleTypeIdN     *[]*int32
+	moduleTypeId      *[]*int64
+	moduleTypeIdN     *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -64459,7 +64459,7 @@ type ApiDcimModuleBayTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	position          *[]string
 	positionEmpty     *bool
@@ -64572,18 +64572,18 @@ func (r ApiDcimModuleBayTemplatesListRequest) DescriptionNisw(descriptionNisw []
 }
 
 // Device type (ID)
-func (r ApiDcimModuleBayTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimModuleBayTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimModuleBayTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimModuleBayTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimModuleBayTemplatesListRequest) Id(id []int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) Id(id []int64) ApiDcimModuleBayTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -64593,27 +64593,27 @@ func (r ApiDcimModuleBayTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimModul
 	return r
 }
 
-func (r ApiDcimModuleBayTemplatesListRequest) IdGt(idGt []int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) IdGt(idGt []int64) ApiDcimModuleBayTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimModuleBayTemplatesListRequest) IdGte(idGte []int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) IdGte(idGte []int64) ApiDcimModuleBayTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimModuleBayTemplatesListRequest) IdLt(idLt []int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) IdLt(idLt []int64) ApiDcimModuleBayTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimModuleBayTemplatesListRequest) IdLte(idLte []int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) IdLte(idLte []int64) ApiDcimModuleBayTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimModuleBayTemplatesListRequest) IdN(idN []int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) IdN(idN []int64) ApiDcimModuleBayTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -64709,7 +64709,7 @@ func (r ApiDcimModuleBayTemplatesListRequest) LastUpdatedN(lastUpdatedN []time.T
 }
 
 // Number of results to return per page.
-func (r ApiDcimModuleBayTemplatesListRequest) Limit(limit int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) Limit(limit int64) ApiDcimModuleBayTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -64720,13 +64720,13 @@ func (r ApiDcimModuleBayTemplatesListRequest) ModifiedByRequest(modifiedByReques
 }
 
 // Module type (ID)
-func (r ApiDcimModuleBayTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimModuleBayTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimModuleBayTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimModuleBayTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -64787,7 +64787,7 @@ func (r ApiDcimModuleBayTemplatesListRequest) NameNisw(nameNisw []string) ApiDci
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimModuleBayTemplatesListRequest) Offset(offset int32) ApiDcimModuleBayTemplatesListRequest {
+func (r ApiDcimModuleBayTemplatesListRequest) Offset(offset int64) ApiDcimModuleBayTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -65716,7 +65716,7 @@ func (a *DcimAPIService) DcimModuleBayTemplatesListExecute(r ApiDcimModuleBayTem
 type ApiDcimModuleBayTemplatesPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedModuleBayTemplateRequest *PatchedModuleBayTemplateRequest
 }
 
@@ -65738,7 +65738,7 @@ Patch a module bay template object.
 	@param id A unique integer value identifying this module bay template.
 	@return ApiDcimModuleBayTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimModuleBayTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimModuleBayTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimModuleBayTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimModuleBayTemplatesPartialUpdateRequest {
 	return ApiDcimModuleBayTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -65842,7 +65842,7 @@ func (a *DcimAPIService) DcimModuleBayTemplatesPartialUpdateExecute(r ApiDcimMod
 type ApiDcimModuleBayTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModuleBayTemplatesRetrieveRequest) Execute() (*ModuleBayTemplate, *http.Response, error) {
@@ -65858,7 +65858,7 @@ Get a module bay template object.
 	@param id A unique integer value identifying this module bay template.
 	@return ApiDcimModuleBayTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimModuleBayTemplatesRetrieve(ctx context.Context, id int32) ApiDcimModuleBayTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimModuleBayTemplatesRetrieve(ctx context.Context, id int64) ApiDcimModuleBayTemplatesRetrieveRequest {
 	return ApiDcimModuleBayTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -65960,7 +65960,7 @@ func (a *DcimAPIService) DcimModuleBayTemplatesRetrieveExecute(r ApiDcimModuleBa
 type ApiDcimModuleBayTemplatesUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	moduleBayTemplateRequest *ModuleBayTemplateRequest
 }
 
@@ -65982,7 +65982,7 @@ Put a module bay template object.
 	@param id A unique integer value identifying this module bay template.
 	@return ApiDcimModuleBayTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimModuleBayTemplatesUpdate(ctx context.Context, id int32) ApiDcimModuleBayTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimModuleBayTemplatesUpdate(ctx context.Context, id int64) ApiDcimModuleBayTemplatesUpdateRequest {
 	return ApiDcimModuleBayTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -66577,7 +66577,7 @@ func (a *DcimAPIService) DcimModuleBaysCreateExecute(r ApiDcimModuleBaysCreateRe
 type ApiDcimModuleBaysDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModuleBaysDestroyRequest) Execute() (*http.Response, error) {
@@ -66593,7 +66593,7 @@ Delete a module bay object.
 	@param id A unique integer value identifying this module bay.
 	@return ApiDcimModuleBaysDestroyRequest
 */
-func (a *DcimAPIService) DcimModuleBaysDestroy(ctx context.Context, id int32) ApiDcimModuleBaysDestroyRequest {
+func (a *DcimAPIService) DcimModuleBaysDestroy(ctx context.Context, id int64) ApiDcimModuleBaysDestroyRequest {
 	return ApiDcimModuleBaysDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -66704,12 +66704,12 @@ type ApiDcimModuleBaysListRequest struct {
 	descriptionNisw    *[]string
 	device             *[]*string
 	deviceN            *[]*string
-	deviceId           *[]int32
-	deviceIdN          *[]int32
+	deviceId           *[]int64
+	deviceIdN          *[]int64
 	deviceRole         *[]string
 	deviceRoleN        *[]string
-	deviceRoleId       *[]int32
-	deviceRoleIdN      *[]int32
+	deviceRoleId       *[]int64
+	deviceRoleIdN      *[]int64
 	deviceStatus       *[]string
 	deviceStatusEmpty  *bool
 	deviceStatusIc     *[]string
@@ -66723,17 +66723,17 @@ type ApiDcimModuleBaysListRequest struct {
 	deviceStatusNisw   *[]string
 	deviceType         *[]string
 	deviceTypeN        *[]string
-	deviceTypeId       *[]int32
-	deviceTypeIdN      *[]int32
-	id                 *[]int32
+	deviceTypeId       *[]int64
+	deviceTypeIdN      *[]int64
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
-	installedModuleId  *[]int32
-	installedModuleIdN *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
+	installedModuleId  *[]int64
+	installedModuleIdN *[]int64
 	label              *[]string
 	labelEmpty         *bool
 	labelIc            *[]string
@@ -66752,14 +66752,14 @@ type ApiDcimModuleBaysListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
+	limit              *int64
 	location           *[]string
 	locationN          *[]string
-	locationId         *[]int32
-	locationIdN        *[]int32
+	locationId         *[]int64
+	locationIdN        *[]int64
 	modifiedByRequest  *string
-	moduleId           *[]*int32
-	moduleIdN          *[]*int32
+	moduleId           *[]*int64
+	moduleIdN          *[]*int64
 	name               *[]string
 	nameEmpty          *bool
 	nameIc             *[]string
@@ -66771,10 +66771,10 @@ type ApiDcimModuleBaysListRequest struct {
 	nameNie            *[]string
 	nameNiew           *[]string
 	nameNisw           *[]string
-	offset             *int32
+	offset             *int64
 	ordering           *string
-	parentId           *[]*int32
-	parentIdN          *[]*int32
+	parentId           *[]*int64
+	parentIdN          *[]*int64
 	position           *[]string
 	positionEmpty      *bool
 	positionIc         *[]string
@@ -66789,8 +66789,8 @@ type ApiDcimModuleBaysListRequest struct {
 	q                  *string
 	rack               *[]string
 	rackN              *[]string
-	rackId             *[]int32
-	rackIdN            *[]int32
+	rackId             *[]int64
+	rackIdN            *[]int64
 	region             *[]string
 	regionN            *[]string
 	regionId           *[]string
@@ -66801,15 +66801,15 @@ type ApiDcimModuleBaysListRequest struct {
 	siteGroupN         *[]string
 	siteGroupId        *[]string
 	siteGroupIdN       *[]string
-	siteId             *[]int32
-	siteIdN            *[]int32
+	siteId             *[]int64
+	siteIdN            *[]int64
 	tag                *[]string
 	tagN               *[]string
 	updatedByRequest   *string
 	virtualChassis     *[]string
 	virtualChassisN    *[]string
-	virtualChassisId   *[]int32
-	virtualChassisIdN  *[]int32
+	virtualChassisId   *[]int64
+	virtualChassisIdN  *[]int64
 }
 
 func (r ApiDcimModuleBaysListRequest) Created(created []time.Time) ApiDcimModuleBaysListRequest {
@@ -66920,13 +66920,13 @@ func (r ApiDcimModuleBaysListRequest) DeviceN(deviceN []*string) ApiDcimModuleBa
 }
 
 // Device (ID)
-func (r ApiDcimModuleBaysListRequest) DeviceId(deviceId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) DeviceId(deviceId []int64) ApiDcimModuleBaysListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimModuleBaysListRequest) DeviceIdN(deviceIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) DeviceIdN(deviceIdN []int64) ApiDcimModuleBaysListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -66944,13 +66944,13 @@ func (r ApiDcimModuleBaysListRequest) DeviceRoleN(deviceRoleN []string) ApiDcimM
 }
 
 // Device role (ID)
-func (r ApiDcimModuleBaysListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimModuleBaysListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimModuleBaysListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimModuleBaysListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -67023,18 +67023,18 @@ func (r ApiDcimModuleBaysListRequest) DeviceTypeN(deviceTypeN []string) ApiDcimM
 }
 
 // Device type (ID)
-func (r ApiDcimModuleBaysListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimModuleBaysListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimModuleBaysListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimModuleBaysListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimModuleBaysListRequest) Id(id []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) Id(id []int64) ApiDcimModuleBaysListRequest {
 	r.id = &id
 	return r
 }
@@ -67044,39 +67044,39 @@ func (r ApiDcimModuleBaysListRequest) IdEmpty(idEmpty bool) ApiDcimModuleBaysLis
 	return r
 }
 
-func (r ApiDcimModuleBaysListRequest) IdGt(idGt []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) IdGt(idGt []int64) ApiDcimModuleBaysListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimModuleBaysListRequest) IdGte(idGte []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) IdGte(idGte []int64) ApiDcimModuleBaysListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimModuleBaysListRequest) IdLt(idLt []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) IdLt(idLt []int64) ApiDcimModuleBaysListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimModuleBaysListRequest) IdLte(idLte []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) IdLte(idLte []int64) ApiDcimModuleBaysListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimModuleBaysListRequest) IdN(idN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) IdN(idN []int64) ApiDcimModuleBaysListRequest {
 	r.idN = &idN
 	return r
 }
 
 // Installed module (ID)
-func (r ApiDcimModuleBaysListRequest) InstalledModuleId(installedModuleId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) InstalledModuleId(installedModuleId []int64) ApiDcimModuleBaysListRequest {
 	r.installedModuleId = &installedModuleId
 	return r
 }
 
 // Installed module (ID)
-func (r ApiDcimModuleBaysListRequest) InstalledModuleIdN(installedModuleIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) InstalledModuleIdN(installedModuleIdN []int64) ApiDcimModuleBaysListRequest {
 	r.installedModuleIdN = &installedModuleIdN
 	return r
 }
@@ -67172,7 +67172,7 @@ func (r ApiDcimModuleBaysListRequest) LastUpdatedN(lastUpdatedN []time.Time) Api
 }
 
 // Number of results to return per page.
-func (r ApiDcimModuleBaysListRequest) Limit(limit int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) Limit(limit int64) ApiDcimModuleBaysListRequest {
 	r.limit = &limit
 	return r
 }
@@ -67190,13 +67190,13 @@ func (r ApiDcimModuleBaysListRequest) LocationN(locationN []string) ApiDcimModul
 }
 
 // Location (ID)
-func (r ApiDcimModuleBaysListRequest) LocationId(locationId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) LocationId(locationId []int64) ApiDcimModuleBaysListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimModuleBaysListRequest) LocationIdN(locationIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) LocationIdN(locationIdN []int64) ApiDcimModuleBaysListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -67207,13 +67207,13 @@ func (r ApiDcimModuleBaysListRequest) ModifiedByRequest(modifiedByRequest string
 }
 
 // Module (ID)
-func (r ApiDcimModuleBaysListRequest) ModuleId(moduleId []*int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) ModuleId(moduleId []*int64) ApiDcimModuleBaysListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimModuleBaysListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimModuleBaysListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
@@ -67274,7 +67274,7 @@ func (r ApiDcimModuleBaysListRequest) NameNisw(nameNisw []string) ApiDcimModuleB
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimModuleBaysListRequest) Offset(offset int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) Offset(offset int64) ApiDcimModuleBaysListRequest {
 	r.offset = &offset
 	return r
 }
@@ -67286,13 +67286,13 @@ func (r ApiDcimModuleBaysListRequest) Ordering(ordering string) ApiDcimModuleBay
 }
 
 // Parent module bay (ID)
-func (r ApiDcimModuleBaysListRequest) ParentId(parentId []*int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) ParentId(parentId []*int64) ApiDcimModuleBaysListRequest {
 	r.parentId = &parentId
 	return r
 }
 
 // Parent module bay (ID)
-func (r ApiDcimModuleBaysListRequest) ParentIdN(parentIdN []*int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) ParentIdN(parentIdN []*int64) ApiDcimModuleBaysListRequest {
 	r.parentIdN = &parentIdN
 	return r
 }
@@ -67371,13 +67371,13 @@ func (r ApiDcimModuleBaysListRequest) RackN(rackN []string) ApiDcimModuleBaysLis
 }
 
 // Rack (ID)
-func (r ApiDcimModuleBaysListRequest) RackId(rackId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) RackId(rackId []int64) ApiDcimModuleBaysListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimModuleBaysListRequest) RackIdN(rackIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) RackIdN(rackIdN []int64) ApiDcimModuleBaysListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -67435,13 +67435,13 @@ func (r ApiDcimModuleBaysListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDci
 }
 
 // Site (ID)
-func (r ApiDcimModuleBaysListRequest) SiteId(siteId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) SiteId(siteId []int64) ApiDcimModuleBaysListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimModuleBaysListRequest) SiteIdN(siteIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) SiteIdN(siteIdN []int64) ApiDcimModuleBaysListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -67474,13 +67474,13 @@ func (r ApiDcimModuleBaysListRequest) VirtualChassisN(virtualChassisN []string) 
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimModuleBaysListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimModuleBaysListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimModuleBaysListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimModuleBaysListRequest {
+func (r ApiDcimModuleBaysListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimModuleBaysListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -68890,7 +68890,7 @@ func (a *DcimAPIService) DcimModuleBaysListExecute(r ApiDcimModuleBaysListReques
 type ApiDcimModuleBaysPartialUpdateRequest struct {
 	ctx                     context.Context
 	ApiService              *DcimAPIService
-	id                      int32
+	id                      int64
 	patchedModuleBayRequest *PatchedModuleBayRequest
 }
 
@@ -68912,7 +68912,7 @@ Patch a module bay object.
 	@param id A unique integer value identifying this module bay.
 	@return ApiDcimModuleBaysPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimModuleBaysPartialUpdate(ctx context.Context, id int32) ApiDcimModuleBaysPartialUpdateRequest {
+func (a *DcimAPIService) DcimModuleBaysPartialUpdate(ctx context.Context, id int64) ApiDcimModuleBaysPartialUpdateRequest {
 	return ApiDcimModuleBaysPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -69016,7 +69016,7 @@ func (a *DcimAPIService) DcimModuleBaysPartialUpdateExecute(r ApiDcimModuleBaysP
 type ApiDcimModuleBaysRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModuleBaysRetrieveRequest) Execute() (*ModuleBay, *http.Response, error) {
@@ -69032,7 +69032,7 @@ Get a module bay object.
 	@param id A unique integer value identifying this module bay.
 	@return ApiDcimModuleBaysRetrieveRequest
 */
-func (a *DcimAPIService) DcimModuleBaysRetrieve(ctx context.Context, id int32) ApiDcimModuleBaysRetrieveRequest {
+func (a *DcimAPIService) DcimModuleBaysRetrieve(ctx context.Context, id int64) ApiDcimModuleBaysRetrieveRequest {
 	return ApiDcimModuleBaysRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -69134,7 +69134,7 @@ func (a *DcimAPIService) DcimModuleBaysRetrieveExecute(r ApiDcimModuleBaysRetrie
 type ApiDcimModuleBaysUpdateRequest struct {
 	ctx              context.Context
 	ApiService       *DcimAPIService
-	id               int32
+	id               int64
 	moduleBayRequest *ModuleBayRequest
 }
 
@@ -69156,7 +69156,7 @@ Put a module bay object.
 	@param id A unique integer value identifying this module bay.
 	@return ApiDcimModuleBaysUpdateRequest
 */
-func (a *DcimAPIService) DcimModuleBaysUpdate(ctx context.Context, id int32) ApiDcimModuleBaysUpdateRequest {
+func (a *DcimAPIService) DcimModuleBaysUpdate(ctx context.Context, id int64) ApiDcimModuleBaysUpdateRequest {
 	return ApiDcimModuleBaysUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -69751,7 +69751,7 @@ func (a *DcimAPIService) DcimModuleTypesCreateExecute(r ApiDcimModuleTypesCreate
 type ApiDcimModuleTypesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModuleTypesDestroyRequest) Execute() (*http.Response, error) {
@@ -69767,7 +69767,7 @@ Delete a module type object.
 	@param id A unique integer value identifying this module type.
 	@return ApiDcimModuleTypesDestroyRequest
 */
-func (a *DcimAPIService) DcimModuleTypesDestroy(ctx context.Context, id int32) ApiDcimModuleTypesDestroyRequest {
+func (a *DcimAPIService) DcimModuleTypesDestroy(ctx context.Context, id int64) ApiDcimModuleTypesDestroyRequest {
 	return ApiDcimModuleTypesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -69879,13 +69879,13 @@ type ApiDcimModuleTypesListRequest struct {
 	descriptionNie     *[]string
 	descriptionNiew    *[]string
 	descriptionNisw    *[]string
-	id                 *[]int32
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
 	interfaces         *bool
 	lastUpdated        *[]time.Time
 	lastUpdatedEmpty   *[]time.Time
@@ -69894,11 +69894,11 @@ type ApiDcimModuleTypesListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
+	limit              *int64
 	manufacturer       *[]string
 	manufacturerN      *[]string
-	manufacturerId     *[]int32
-	manufacturerIdN    *[]int32
+	manufacturerId     *[]int64
+	manufacturerIdN    *[]int64
 	model              *[]string
 	modelEmpty         *bool
 	modelIc            *[]string
@@ -69911,7 +69911,7 @@ type ApiDcimModuleTypesListRequest struct {
 	modelNiew          *[]string
 	modelNisw          *[]string
 	modifiedByRequest  *string
-	offset             *int32
+	offset             *int64
 	ordering           *string
 	partNumber         *[]string
 	partNumberEmpty    *bool
@@ -70054,7 +70054,7 @@ func (r ApiDcimModuleTypesListRequest) DescriptionNisw(descriptionNisw []string)
 	return r
 }
 
-func (r ApiDcimModuleTypesListRequest) Id(id []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) Id(id []int64) ApiDcimModuleTypesListRequest {
 	r.id = &id
 	return r
 }
@@ -70064,27 +70064,27 @@ func (r ApiDcimModuleTypesListRequest) IdEmpty(idEmpty bool) ApiDcimModuleTypesL
 	return r
 }
 
-func (r ApiDcimModuleTypesListRequest) IdGt(idGt []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) IdGt(idGt []int64) ApiDcimModuleTypesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimModuleTypesListRequest) IdGte(idGte []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) IdGte(idGte []int64) ApiDcimModuleTypesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimModuleTypesListRequest) IdLt(idLt []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) IdLt(idLt []int64) ApiDcimModuleTypesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimModuleTypesListRequest) IdLte(idLte []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) IdLte(idLte []int64) ApiDcimModuleTypesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimModuleTypesListRequest) IdN(idN []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) IdN(idN []int64) ApiDcimModuleTypesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -70131,7 +70131,7 @@ func (r ApiDcimModuleTypesListRequest) LastUpdatedN(lastUpdatedN []time.Time) Ap
 }
 
 // Number of results to return per page.
-func (r ApiDcimModuleTypesListRequest) Limit(limit int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) Limit(limit int64) ApiDcimModuleTypesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -70149,13 +70149,13 @@ func (r ApiDcimModuleTypesListRequest) ManufacturerN(manufacturerN []string) Api
 }
 
 // Manufacturer (ID)
-func (r ApiDcimModuleTypesListRequest) ManufacturerId(manufacturerId []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) ManufacturerId(manufacturerId []int64) ApiDcimModuleTypesListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimModuleTypesListRequest) ManufacturerIdN(manufacturerIdN []int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) ManufacturerIdN(manufacturerIdN []int64) ApiDcimModuleTypesListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
@@ -70221,7 +70221,7 @@ func (r ApiDcimModuleTypesListRequest) ModifiedByRequest(modifiedByRequest strin
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimModuleTypesListRequest) Offset(offset int32) ApiDcimModuleTypesListRequest {
+func (r ApiDcimModuleTypesListRequest) Offset(offset int64) ApiDcimModuleTypesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -71221,7 +71221,7 @@ func (a *DcimAPIService) DcimModuleTypesListExecute(r ApiDcimModuleTypesListRequ
 type ApiDcimModuleTypesPartialUpdateRequest struct {
 	ctx                              context.Context
 	ApiService                       *DcimAPIService
-	id                               int32
+	id                               int64
 	patchedWritableModuleTypeRequest *PatchedWritableModuleTypeRequest
 }
 
@@ -71243,7 +71243,7 @@ Patch a module type object.
 	@param id A unique integer value identifying this module type.
 	@return ApiDcimModuleTypesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimModuleTypesPartialUpdate(ctx context.Context, id int32) ApiDcimModuleTypesPartialUpdateRequest {
+func (a *DcimAPIService) DcimModuleTypesPartialUpdate(ctx context.Context, id int64) ApiDcimModuleTypesPartialUpdateRequest {
 	return ApiDcimModuleTypesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -71347,7 +71347,7 @@ func (a *DcimAPIService) DcimModuleTypesPartialUpdateExecute(r ApiDcimModuleType
 type ApiDcimModuleTypesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModuleTypesRetrieveRequest) Execute() (*ModuleType, *http.Response, error) {
@@ -71363,7 +71363,7 @@ Get a module type object.
 	@param id A unique integer value identifying this module type.
 	@return ApiDcimModuleTypesRetrieveRequest
 */
-func (a *DcimAPIService) DcimModuleTypesRetrieve(ctx context.Context, id int32) ApiDcimModuleTypesRetrieveRequest {
+func (a *DcimAPIService) DcimModuleTypesRetrieve(ctx context.Context, id int64) ApiDcimModuleTypesRetrieveRequest {
 	return ApiDcimModuleTypesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -71465,7 +71465,7 @@ func (a *DcimAPIService) DcimModuleTypesRetrieveExecute(r ApiDcimModuleTypesRetr
 type ApiDcimModuleTypesUpdateRequest struct {
 	ctx                       context.Context
 	ApiService                *DcimAPIService
-	id                        int32
+	id                        int64
 	writableModuleTypeRequest *WritableModuleTypeRequest
 }
 
@@ -71487,7 +71487,7 @@ Put a module type object.
 	@param id A unique integer value identifying this module type.
 	@return ApiDcimModuleTypesUpdateRequest
 */
-func (a *DcimAPIService) DcimModuleTypesUpdate(ctx context.Context, id int32) ApiDcimModuleTypesUpdateRequest {
+func (a *DcimAPIService) DcimModuleTypesUpdate(ctx context.Context, id int64) ApiDcimModuleTypesUpdateRequest {
 	return ApiDcimModuleTypesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -72082,7 +72082,7 @@ func (a *DcimAPIService) DcimModulesCreateExecute(r ApiDcimModulesCreateRequest)
 type ApiDcimModulesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModulesDestroyRequest) Execute() (*http.Response, error) {
@@ -72098,7 +72098,7 @@ Delete a module object.
 	@param id A unique integer value identifying this module.
 	@return ApiDcimModulesDestroyRequest
 */
-func (a *DcimAPIService) DcimModulesDestroy(ctx context.Context, id int32) ApiDcimModulesDestroyRequest {
+func (a *DcimAPIService) DcimModulesDestroy(ctx context.Context, id int64) ApiDcimModulesDestroyRequest {
 	return ApiDcimModulesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -72218,15 +72218,15 @@ type ApiDcimModulesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceId          *[]int32
-	deviceIdN         *[]int32
-	id                *[]int32
+	deviceId          *[]int64
+	deviceIdN         *[]int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -72234,19 +72234,19 @@ type ApiDcimModulesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	manufacturer      *[]string
 	manufacturerN     *[]string
-	manufacturerId    *[]int32
-	manufacturerIdN   *[]int32
+	manufacturerId    *[]int64
+	manufacturerIdN   *[]int64
 	modifiedByRequest *string
 	moduleBayId       *[]string
 	moduleBayIdN      *[]string
 	moduleType        *[]string
 	moduleTypeN       *[]string
-	moduleTypeId      *[]int32
-	moduleTypeIdN     *[]int32
-	offset            *int32
+	moduleTypeId      *[]int64
+	moduleTypeIdN     *[]int64
+	offset            *int64
 	ordering          *string
 	q                 *string
 	serial            *[]string
@@ -72427,18 +72427,18 @@ func (r ApiDcimModulesListRequest) DescriptionNisw(descriptionNisw []string) Api
 }
 
 // Device (ID)
-func (r ApiDcimModulesListRequest) DeviceId(deviceId []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) DeviceId(deviceId []int64) ApiDcimModulesListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimModulesListRequest) DeviceIdN(deviceIdN []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) DeviceIdN(deviceIdN []int64) ApiDcimModulesListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
 
-func (r ApiDcimModulesListRequest) Id(id []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) Id(id []int64) ApiDcimModulesListRequest {
 	r.id = &id
 	return r
 }
@@ -72448,27 +72448,27 @@ func (r ApiDcimModulesListRequest) IdEmpty(idEmpty bool) ApiDcimModulesListReque
 	return r
 }
 
-func (r ApiDcimModulesListRequest) IdGt(idGt []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) IdGt(idGt []int64) ApiDcimModulesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimModulesListRequest) IdGte(idGte []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) IdGte(idGte []int64) ApiDcimModulesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimModulesListRequest) IdLt(idLt []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) IdLt(idLt []int64) ApiDcimModulesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimModulesListRequest) IdLte(idLte []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) IdLte(idLte []int64) ApiDcimModulesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimModulesListRequest) IdN(idN []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) IdN(idN []int64) ApiDcimModulesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -72509,7 +72509,7 @@ func (r ApiDcimModulesListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiDci
 }
 
 // Number of results to return per page.
-func (r ApiDcimModulesListRequest) Limit(limit int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) Limit(limit int64) ApiDcimModulesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -72527,13 +72527,13 @@ func (r ApiDcimModulesListRequest) ManufacturerN(manufacturerN []string) ApiDcim
 }
 
 // Manufacturer (ID)
-func (r ApiDcimModulesListRequest) ManufacturerId(manufacturerId []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) ManufacturerId(manufacturerId []int64) ApiDcimModulesListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimModulesListRequest) ManufacturerIdN(manufacturerIdN []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) ManufacturerIdN(manufacturerIdN []int64) ApiDcimModulesListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
@@ -72566,19 +72566,19 @@ func (r ApiDcimModulesListRequest) ModuleTypeN(moduleTypeN []string) ApiDcimModu
 }
 
 // Module type (ID)
-func (r ApiDcimModulesListRequest) ModuleTypeId(moduleTypeId []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) ModuleTypeId(moduleTypeId []int64) ApiDcimModulesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimModulesListRequest) ModuleTypeIdN(moduleTypeIdN []int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) ModuleTypeIdN(moduleTypeIdN []int64) ApiDcimModulesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimModulesListRequest) Offset(offset int32) ApiDcimModulesListRequest {
+func (r ApiDcimModulesListRequest) Offset(offset int64) ApiDcimModulesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -73682,7 +73682,7 @@ func (a *DcimAPIService) DcimModulesListExecute(r ApiDcimModulesListRequest) (*P
 type ApiDcimModulesPartialUpdateRequest struct {
 	ctx                          context.Context
 	ApiService                   *DcimAPIService
-	id                           int32
+	id                           int64
 	patchedWritableModuleRequest *PatchedWritableModuleRequest
 }
 
@@ -73704,7 +73704,7 @@ Patch a module object.
 	@param id A unique integer value identifying this module.
 	@return ApiDcimModulesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimModulesPartialUpdate(ctx context.Context, id int32) ApiDcimModulesPartialUpdateRequest {
+func (a *DcimAPIService) DcimModulesPartialUpdate(ctx context.Context, id int64) ApiDcimModulesPartialUpdateRequest {
 	return ApiDcimModulesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -73808,7 +73808,7 @@ func (a *DcimAPIService) DcimModulesPartialUpdateExecute(r ApiDcimModulesPartial
 type ApiDcimModulesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimModulesRetrieveRequest) Execute() (*Module, *http.Response, error) {
@@ -73824,7 +73824,7 @@ Get a module object.
 	@param id A unique integer value identifying this module.
 	@return ApiDcimModulesRetrieveRequest
 */
-func (a *DcimAPIService) DcimModulesRetrieve(ctx context.Context, id int32) ApiDcimModulesRetrieveRequest {
+func (a *DcimAPIService) DcimModulesRetrieve(ctx context.Context, id int64) ApiDcimModulesRetrieveRequest {
 	return ApiDcimModulesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -73926,7 +73926,7 @@ func (a *DcimAPIService) DcimModulesRetrieveExecute(r ApiDcimModulesRetrieveRequ
 type ApiDcimModulesUpdateRequest struct {
 	ctx                   context.Context
 	ApiService            *DcimAPIService
-	id                    int32
+	id                    int64
 	writableModuleRequest *WritableModuleRequest
 }
 
@@ -73948,7 +73948,7 @@ Put a module object.
 	@param id A unique integer value identifying this module.
 	@return ApiDcimModulesUpdateRequest
 */
-func (a *DcimAPIService) DcimModulesUpdate(ctx context.Context, id int32) ApiDcimModulesUpdateRequest {
+func (a *DcimAPIService) DcimModulesUpdate(ctx context.Context, id int64) ApiDcimModulesUpdateRequest {
 	return ApiDcimModulesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -74543,7 +74543,7 @@ func (a *DcimAPIService) DcimPlatformsCreateExecute(r ApiDcimPlatformsCreateRequ
 type ApiDcimPlatformsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPlatformsDestroyRequest) Execute() (*http.Response, error) {
@@ -74559,7 +74559,7 @@ Delete a platform object.
 	@param id A unique integer value identifying this platform.
 	@return ApiDcimPlatformsDestroyRequest
 */
-func (a *DcimAPIService) DcimPlatformsDestroy(ctx context.Context, id int32) ApiDcimPlatformsDestroyRequest {
+func (a *DcimAPIService) DcimPlatformsDestroy(ctx context.Context, id int64) ApiDcimPlatformsDestroyRequest {
 	return ApiDcimPlatformsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -74650,8 +74650,8 @@ type ApiDcimPlatformsListRequest struct {
 	ctx                    context.Context
 	ApiService             *DcimAPIService
 	availableForDeviceType *string
-	configTemplateId       *[]*int32
-	configTemplateIdN      *[]*int32
+	configTemplateId       *[]*int64
+	configTemplateIdN      *[]*int64
 	created                *[]time.Time
 	createdEmpty           *[]time.Time
 	createdGt              *[]time.Time
@@ -74671,13 +74671,13 @@ type ApiDcimPlatformsListRequest struct {
 	descriptionNie         *[]string
 	descriptionNiew        *[]string
 	descriptionNisw        *[]string
-	id                     *[]int32
+	id                     *[]int64
 	idEmpty                *bool
-	idGt                   *[]int32
-	idGte                  *[]int32
-	idLt                   *[]int32
-	idLte                  *[]int32
-	idN                    *[]int32
+	idGt                   *[]int64
+	idGte                  *[]int64
+	idLt                   *[]int64
+	idLte                  *[]int64
+	idN                    *[]int64
 	lastUpdated            *[]time.Time
 	lastUpdatedEmpty       *[]time.Time
 	lastUpdatedGt          *[]time.Time
@@ -74685,11 +74685,11 @@ type ApiDcimPlatformsListRequest struct {
 	lastUpdatedLt          *[]time.Time
 	lastUpdatedLte         *[]time.Time
 	lastUpdatedN           *[]time.Time
-	limit                  *int32
+	limit                  *int64
 	manufacturer           *[]string
 	manufacturerN          *[]string
-	manufacturerId         *[]int32
-	manufacturerIdN        *[]int32
+	manufacturerId         *[]int64
+	manufacturerIdN        *[]int64
 	modifiedByRequest      *string
 	name                   *[]string
 	nameEmpty              *bool
@@ -74702,7 +74702,7 @@ type ApiDcimPlatformsListRequest struct {
 	nameNie                *[]string
 	nameNiew               *[]string
 	nameNisw               *[]string
-	offset                 *int32
+	offset                 *int64
 	ordering               *string
 	q                      *string
 	slug                   *[]string
@@ -74727,13 +74727,13 @@ func (r ApiDcimPlatformsListRequest) AvailableForDeviceType(availableForDeviceTy
 }
 
 // Config template (ID)
-func (r ApiDcimPlatformsListRequest) ConfigTemplateId(configTemplateId []*int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) ConfigTemplateId(configTemplateId []*int64) ApiDcimPlatformsListRequest {
 	r.configTemplateId = &configTemplateId
 	return r
 }
 
 // Config template (ID)
-func (r ApiDcimPlatformsListRequest) ConfigTemplateIdN(configTemplateIdN []*int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) ConfigTemplateIdN(configTemplateIdN []*int64) ApiDcimPlatformsListRequest {
 	r.configTemplateIdN = &configTemplateIdN
 	return r
 }
@@ -74833,7 +74833,7 @@ func (r ApiDcimPlatformsListRequest) DescriptionNisw(descriptionNisw []string) A
 	return r
 }
 
-func (r ApiDcimPlatformsListRequest) Id(id []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) Id(id []int64) ApiDcimPlatformsListRequest {
 	r.id = &id
 	return r
 }
@@ -74843,27 +74843,27 @@ func (r ApiDcimPlatformsListRequest) IdEmpty(idEmpty bool) ApiDcimPlatformsListR
 	return r
 }
 
-func (r ApiDcimPlatformsListRequest) IdGt(idGt []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) IdGt(idGt []int64) ApiDcimPlatformsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimPlatformsListRequest) IdGte(idGte []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) IdGte(idGte []int64) ApiDcimPlatformsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimPlatformsListRequest) IdLt(idLt []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) IdLt(idLt []int64) ApiDcimPlatformsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimPlatformsListRequest) IdLte(idLte []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) IdLte(idLte []int64) ApiDcimPlatformsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimPlatformsListRequest) IdN(idN []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) IdN(idN []int64) ApiDcimPlatformsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -74904,7 +74904,7 @@ func (r ApiDcimPlatformsListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiD
 }
 
 // Number of results to return per page.
-func (r ApiDcimPlatformsListRequest) Limit(limit int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) Limit(limit int64) ApiDcimPlatformsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -74922,13 +74922,13 @@ func (r ApiDcimPlatformsListRequest) ManufacturerN(manufacturerN []string) ApiDc
 }
 
 // Manufacturer (ID)
-func (r ApiDcimPlatformsListRequest) ManufacturerId(manufacturerId []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) ManufacturerId(manufacturerId []int64) ApiDcimPlatformsListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimPlatformsListRequest) ManufacturerIdN(manufacturerIdN []int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) ManufacturerIdN(manufacturerIdN []int64) ApiDcimPlatformsListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
@@ -74994,7 +74994,7 @@ func (r ApiDcimPlatformsListRequest) NameNisw(nameNisw []string) ApiDcimPlatform
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimPlatformsListRequest) Offset(offset int32) ApiDcimPlatformsListRequest {
+func (r ApiDcimPlatformsListRequest) Offset(offset int64) ApiDcimPlatformsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -75867,7 +75867,7 @@ func (a *DcimAPIService) DcimPlatformsListExecute(r ApiDcimPlatformsListRequest)
 type ApiDcimPlatformsPartialUpdateRequest struct {
 	ctx                    context.Context
 	ApiService             *DcimAPIService
-	id                     int32
+	id                     int64
 	patchedPlatformRequest *PatchedPlatformRequest
 }
 
@@ -75889,7 +75889,7 @@ Patch a platform object.
 	@param id A unique integer value identifying this platform.
 	@return ApiDcimPlatformsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimPlatformsPartialUpdate(ctx context.Context, id int32) ApiDcimPlatformsPartialUpdateRequest {
+func (a *DcimAPIService) DcimPlatformsPartialUpdate(ctx context.Context, id int64) ApiDcimPlatformsPartialUpdateRequest {
 	return ApiDcimPlatformsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -75993,7 +75993,7 @@ func (a *DcimAPIService) DcimPlatformsPartialUpdateExecute(r ApiDcimPlatformsPar
 type ApiDcimPlatformsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPlatformsRetrieveRequest) Execute() (*Platform, *http.Response, error) {
@@ -76009,7 +76009,7 @@ Get a platform object.
 	@param id A unique integer value identifying this platform.
 	@return ApiDcimPlatformsRetrieveRequest
 */
-func (a *DcimAPIService) DcimPlatformsRetrieve(ctx context.Context, id int32) ApiDcimPlatformsRetrieveRequest {
+func (a *DcimAPIService) DcimPlatformsRetrieve(ctx context.Context, id int64) ApiDcimPlatformsRetrieveRequest {
 	return ApiDcimPlatformsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -76111,7 +76111,7 @@ func (a *DcimAPIService) DcimPlatformsRetrieveExecute(r ApiDcimPlatformsRetrieve
 type ApiDcimPlatformsUpdateRequest struct {
 	ctx             context.Context
 	ApiService      *DcimAPIService
-	id              int32
+	id              int64
 	platformRequest *PlatformRequest
 }
 
@@ -76133,7 +76133,7 @@ Put a platform object.
 	@param id A unique integer value identifying this platform.
 	@return ApiDcimPlatformsUpdateRequest
 */
-func (a *DcimAPIService) DcimPlatformsUpdate(ctx context.Context, id int32) ApiDcimPlatformsUpdateRequest {
+func (a *DcimAPIService) DcimPlatformsUpdate(ctx context.Context, id int64) ApiDcimPlatformsUpdateRequest {
 	return ApiDcimPlatformsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -76728,7 +76728,7 @@ func (a *DcimAPIService) DcimPowerFeedsCreateExecute(r ApiDcimPowerFeedsCreateRe
 type ApiDcimPowerFeedsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerFeedsDestroyRequest) Execute() (*http.Response, error) {
@@ -76744,7 +76744,7 @@ Delete a power feed object.
 	@param id A unique integer value identifying this power feed.
 	@return ApiDcimPowerFeedsDestroyRequest
 */
-func (a *DcimAPIService) DcimPowerFeedsDestroy(ctx context.Context, id int32) ApiDcimPowerFeedsDestroyRequest {
+func (a *DcimAPIService) DcimPowerFeedsDestroy(ctx context.Context, id int64) ApiDcimPowerFeedsDestroyRequest {
 	return ApiDcimPowerFeedsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -76834,23 +76834,23 @@ func (a *DcimAPIService) DcimPowerFeedsDestroyExecute(r ApiDcimPowerFeedsDestroy
 type ApiDcimPowerFeedsListRequest struct {
 	ctx                 context.Context
 	ApiService          *DcimAPIService
-	amperage            *[]int32
+	amperage            *[]int64
 	amperageEmpty       *bool
-	amperageGt          *[]int32
-	amperageGte         *[]int32
-	amperageLt          *[]int32
-	amperageLte         *[]int32
-	amperageN           *[]int32
-	availablePower      *[]int32
+	amperageGt          *[]int64
+	amperageGte         *[]int64
+	amperageLt          *[]int64
+	amperageLte         *[]int64
+	amperageN           *[]int64
+	availablePower      *[]int64
 	availablePowerEmpty *bool
-	availablePowerGt    *[]int32
-	availablePowerGte   *[]int32
-	availablePowerLt    *[]int32
-	availablePowerLte   *[]int32
-	availablePowerN     *[]int32
+	availablePowerGt    *[]int64
+	availablePowerGte   *[]int64
+	availablePowerLt    *[]int64
+	availablePowerLte   *[]int64
+	availablePowerN     *[]int64
 	cableEnd            *CircuitsCircuitTerminationsListCableEndParameter
-	cableId             *[]*int32
-	cableIdN            *[]*int32
+	cableId             *[]*int64
+	cableIdN            *[]*int64
 	cabled              *bool
 	connected           *bool
 	created             *[]time.Time
@@ -76872,13 +76872,13 @@ type ApiDcimPowerFeedsListRequest struct {
 	descriptionNie      *[]string
 	descriptionNiew     *[]string
 	descriptionNisw     *[]string
-	id                  *[]int32
+	id                  *[]int64
 	idEmpty             *bool
-	idGt                *[]int32
-	idGte               *[]int32
-	idLt                *[]int32
-	idLte               *[]int32
-	idN                 *[]int32
+	idGt                *[]int64
+	idGte               *[]int64
+	idLt                *[]int64
+	idLte               *[]int64
+	idN                 *[]int64
 	lastUpdated         *[]time.Time
 	lastUpdatedEmpty    *[]time.Time
 	lastUpdatedGt       *[]time.Time
@@ -76886,15 +76886,15 @@ type ApiDcimPowerFeedsListRequest struct {
 	lastUpdatedLt       *[]time.Time
 	lastUpdatedLte      *[]time.Time
 	lastUpdatedN        *[]time.Time
-	limit               *int32
+	limit               *int64
 	markConnected       *bool
-	maxUtilization      *[]int32
+	maxUtilization      *[]int64
 	maxUtilizationEmpty *bool
-	maxUtilizationGt    *[]int32
-	maxUtilizationGte   *[]int32
-	maxUtilizationLt    *[]int32
-	maxUtilizationLte   *[]int32
-	maxUtilizationN     *[]int32
+	maxUtilizationGt    *[]int64
+	maxUtilizationGte   *[]int64
+	maxUtilizationLt    *[]int64
+	maxUtilizationLte   *[]int64
+	maxUtilizationN     *[]int64
 	modifiedByRequest   *string
 	name                *[]string
 	nameEmpty           *bool
@@ -76908,14 +76908,14 @@ type ApiDcimPowerFeedsListRequest struct {
 	nameNiew            *[]string
 	nameNisw            *[]string
 	occupied            *bool
-	offset              *int32
+	offset              *int64
 	ordering            *string
 	phase               *DcimPowerFeedsListPhaseParameter
-	powerPanelId        *[]int32
-	powerPanelIdN       *[]int32
+	powerPanelId        *[]int64
+	powerPanelIdN       *[]int64
 	q                   *string
-	rackId              *[]int32
-	rackIdN             *[]int32
+	rackId              *[]int64
+	rackIdN             *[]int64
 	region              *[]string
 	regionN             *[]string
 	regionId            *[]string
@@ -76926,8 +76926,8 @@ type ApiDcimPowerFeedsListRequest struct {
 	siteGroupN          *[]string
 	siteGroupId         *[]string
 	siteGroupIdN        *[]string
-	siteId              *[]int32
-	siteIdN             *[]int32
+	siteId              *[]int64
+	siteIdN             *[]int64
 	status              *[]string
 	statusEmpty         *bool
 	statusIc            *[]string
@@ -76948,20 +76948,20 @@ type ApiDcimPowerFeedsListRequest struct {
 	tenantGroupN        *[]string
 	tenantGroupId       *[]string
 	tenantGroupIdN      *[]string
-	tenantId            *[]*int32
-	tenantIdN           *[]*int32
+	tenantId            *[]*int64
+	tenantIdN           *[]*int64
 	type_               *DcimPowerFeedsListTypeParameter
 	updatedByRequest    *string
-	voltage             *[]int32
+	voltage             *[]int64
 	voltageEmpty        *bool
-	voltageGt           *[]int32
-	voltageGte          *[]int32
-	voltageLt           *[]int32
-	voltageLte          *[]int32
-	voltageN            *[]int32
+	voltageGt           *[]int64
+	voltageGte          *[]int64
+	voltageLt           *[]int64
+	voltageLte          *[]int64
+	voltageN            *[]int64
 }
 
-func (r ApiDcimPowerFeedsListRequest) Amperage(amperage []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) Amperage(amperage []int64) ApiDcimPowerFeedsListRequest {
 	r.amperage = &amperage
 	return r
 }
@@ -76971,32 +76971,32 @@ func (r ApiDcimPowerFeedsListRequest) AmperageEmpty(amperageEmpty bool) ApiDcimP
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AmperageGt(amperageGt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AmperageGt(amperageGt []int64) ApiDcimPowerFeedsListRequest {
 	r.amperageGt = &amperageGt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AmperageGte(amperageGte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AmperageGte(amperageGte []int64) ApiDcimPowerFeedsListRequest {
 	r.amperageGte = &amperageGte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AmperageLt(amperageLt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AmperageLt(amperageLt []int64) ApiDcimPowerFeedsListRequest {
 	r.amperageLt = &amperageLt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AmperageLte(amperageLte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AmperageLte(amperageLte []int64) ApiDcimPowerFeedsListRequest {
 	r.amperageLte = &amperageLte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AmperageN(amperageN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AmperageN(amperageN []int64) ApiDcimPowerFeedsListRequest {
 	r.amperageN = &amperageN
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AvailablePower(availablePower []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AvailablePower(availablePower []int64) ApiDcimPowerFeedsListRequest {
 	r.availablePower = &availablePower
 	return r
 }
@@ -77006,27 +77006,27 @@ func (r ApiDcimPowerFeedsListRequest) AvailablePowerEmpty(availablePowerEmpty bo
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AvailablePowerGt(availablePowerGt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AvailablePowerGt(availablePowerGt []int64) ApiDcimPowerFeedsListRequest {
 	r.availablePowerGt = &availablePowerGt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AvailablePowerGte(availablePowerGte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AvailablePowerGte(availablePowerGte []int64) ApiDcimPowerFeedsListRequest {
 	r.availablePowerGte = &availablePowerGte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AvailablePowerLt(availablePowerLt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AvailablePowerLt(availablePowerLt []int64) ApiDcimPowerFeedsListRequest {
 	r.availablePowerLt = &availablePowerLt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AvailablePowerLte(availablePowerLte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AvailablePowerLte(availablePowerLte []int64) ApiDcimPowerFeedsListRequest {
 	r.availablePowerLte = &availablePowerLte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) AvailablePowerN(availablePowerN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) AvailablePowerN(availablePowerN []int64) ApiDcimPowerFeedsListRequest {
 	r.availablePowerN = &availablePowerN
 	return r
 }
@@ -77038,13 +77038,13 @@ func (r ApiDcimPowerFeedsListRequest) CableEnd(cableEnd CircuitsCircuitTerminati
 }
 
 // Cable (ID)
-func (r ApiDcimPowerFeedsListRequest) CableId(cableId []*int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) CableId(cableId []*int64) ApiDcimPowerFeedsListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimPowerFeedsListRequest) CableIdN(cableIdN []*int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) CableIdN(cableIdN []*int64) ApiDcimPowerFeedsListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -77154,7 +77154,7 @@ func (r ApiDcimPowerFeedsListRequest) DescriptionNisw(descriptionNisw []string) 
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) Id(id []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) Id(id []int64) ApiDcimPowerFeedsListRequest {
 	r.id = &id
 	return r
 }
@@ -77164,27 +77164,27 @@ func (r ApiDcimPowerFeedsListRequest) IdEmpty(idEmpty bool) ApiDcimPowerFeedsLis
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) IdGt(idGt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) IdGt(idGt []int64) ApiDcimPowerFeedsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) IdGte(idGte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) IdGte(idGte []int64) ApiDcimPowerFeedsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) IdLt(idLt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) IdLt(idLt []int64) ApiDcimPowerFeedsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) IdLte(idLte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) IdLte(idLte []int64) ApiDcimPowerFeedsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) IdN(idN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) IdN(idN []int64) ApiDcimPowerFeedsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -77225,7 +77225,7 @@ func (r ApiDcimPowerFeedsListRequest) LastUpdatedN(lastUpdatedN []time.Time) Api
 }
 
 // Number of results to return per page.
-func (r ApiDcimPowerFeedsListRequest) Limit(limit int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) Limit(limit int64) ApiDcimPowerFeedsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -77235,7 +77235,7 @@ func (r ApiDcimPowerFeedsListRequest) MarkConnected(markConnected bool) ApiDcimP
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) MaxUtilization(maxUtilization []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) MaxUtilization(maxUtilization []int64) ApiDcimPowerFeedsListRequest {
 	r.maxUtilization = &maxUtilization
 	return r
 }
@@ -77245,27 +77245,27 @@ func (r ApiDcimPowerFeedsListRequest) MaxUtilizationEmpty(maxUtilizationEmpty bo
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) MaxUtilizationGt(maxUtilizationGt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) MaxUtilizationGt(maxUtilizationGt []int64) ApiDcimPowerFeedsListRequest {
 	r.maxUtilizationGt = &maxUtilizationGt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) MaxUtilizationGte(maxUtilizationGte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) MaxUtilizationGte(maxUtilizationGte []int64) ApiDcimPowerFeedsListRequest {
 	r.maxUtilizationGte = &maxUtilizationGte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) MaxUtilizationLt(maxUtilizationLt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) MaxUtilizationLt(maxUtilizationLt []int64) ApiDcimPowerFeedsListRequest {
 	r.maxUtilizationLt = &maxUtilizationLt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) MaxUtilizationLte(maxUtilizationLte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) MaxUtilizationLte(maxUtilizationLte []int64) ApiDcimPowerFeedsListRequest {
 	r.maxUtilizationLte = &maxUtilizationLte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) MaxUtilizationN(maxUtilizationN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) MaxUtilizationN(maxUtilizationN []int64) ApiDcimPowerFeedsListRequest {
 	r.maxUtilizationN = &maxUtilizationN
 	return r
 }
@@ -77336,7 +77336,7 @@ func (r ApiDcimPowerFeedsListRequest) Occupied(occupied bool) ApiDcimPowerFeedsL
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimPowerFeedsListRequest) Offset(offset int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) Offset(offset int64) ApiDcimPowerFeedsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -77354,13 +77354,13 @@ func (r ApiDcimPowerFeedsListRequest) Phase(phase DcimPowerFeedsListPhaseParamet
 }
 
 // Power panel (ID)
-func (r ApiDcimPowerFeedsListRequest) PowerPanelId(powerPanelId []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) PowerPanelId(powerPanelId []int64) ApiDcimPowerFeedsListRequest {
 	r.powerPanelId = &powerPanelId
 	return r
 }
 
 // Power panel (ID)
-func (r ApiDcimPowerFeedsListRequest) PowerPanelIdN(powerPanelIdN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) PowerPanelIdN(powerPanelIdN []int64) ApiDcimPowerFeedsListRequest {
 	r.powerPanelIdN = &powerPanelIdN
 	return r
 }
@@ -77372,13 +77372,13 @@ func (r ApiDcimPowerFeedsListRequest) Q(q string) ApiDcimPowerFeedsListRequest {
 }
 
 // Rack (ID)
-func (r ApiDcimPowerFeedsListRequest) RackId(rackId []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) RackId(rackId []int64) ApiDcimPowerFeedsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimPowerFeedsListRequest) RackIdN(rackIdN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) RackIdN(rackIdN []int64) ApiDcimPowerFeedsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -77436,13 +77436,13 @@ func (r ApiDcimPowerFeedsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDci
 }
 
 // Site (ID)
-func (r ApiDcimPowerFeedsListRequest) SiteId(siteId []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) SiteId(siteId []int64) ApiDcimPowerFeedsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimPowerFeedsListRequest) SiteIdN(siteIdN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) SiteIdN(siteIdN []int64) ApiDcimPowerFeedsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -77551,13 +77551,13 @@ func (r ApiDcimPowerFeedsListRequest) TenantGroupIdN(tenantGroupIdN []string) Ap
 }
 
 // Tenant (ID)
-func (r ApiDcimPowerFeedsListRequest) TenantId(tenantId []*int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) TenantId(tenantId []*int64) ApiDcimPowerFeedsListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimPowerFeedsListRequest) TenantIdN(tenantIdN []*int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) TenantIdN(tenantIdN []*int64) ApiDcimPowerFeedsListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
@@ -77573,7 +77573,7 @@ func (r ApiDcimPowerFeedsListRequest) UpdatedByRequest(updatedByRequest string) 
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) Voltage(voltage []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) Voltage(voltage []int64) ApiDcimPowerFeedsListRequest {
 	r.voltage = &voltage
 	return r
 }
@@ -77583,27 +77583,27 @@ func (r ApiDcimPowerFeedsListRequest) VoltageEmpty(voltageEmpty bool) ApiDcimPow
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) VoltageGt(voltageGt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) VoltageGt(voltageGt []int64) ApiDcimPowerFeedsListRequest {
 	r.voltageGt = &voltageGt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) VoltageGte(voltageGte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) VoltageGte(voltageGte []int64) ApiDcimPowerFeedsListRequest {
 	r.voltageGte = &voltageGte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) VoltageLt(voltageLt []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) VoltageLt(voltageLt []int64) ApiDcimPowerFeedsListRequest {
 	r.voltageLt = &voltageLt
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) VoltageLte(voltageLte []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) VoltageLte(voltageLte []int64) ApiDcimPowerFeedsListRequest {
 	r.voltageLte = &voltageLte
 	return r
 }
 
-func (r ApiDcimPowerFeedsListRequest) VoltageN(voltageN []int32) ApiDcimPowerFeedsListRequest {
+func (r ApiDcimPowerFeedsListRequest) VoltageN(voltageN []int64) ApiDcimPowerFeedsListRequest {
 	r.voltageN = &voltageN
 	return r
 }
@@ -78911,7 +78911,7 @@ func (a *DcimAPIService) DcimPowerFeedsListExecute(r ApiDcimPowerFeedsListReques
 type ApiDcimPowerFeedsPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedWritablePowerFeedRequest *PatchedWritablePowerFeedRequest
 }
 
@@ -78933,7 +78933,7 @@ Patch a power feed object.
 	@param id A unique integer value identifying this power feed.
 	@return ApiDcimPowerFeedsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerFeedsPartialUpdate(ctx context.Context, id int32) ApiDcimPowerFeedsPartialUpdateRequest {
+func (a *DcimAPIService) DcimPowerFeedsPartialUpdate(ctx context.Context, id int64) ApiDcimPowerFeedsPartialUpdateRequest {
 	return ApiDcimPowerFeedsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -79037,7 +79037,7 @@ func (a *DcimAPIService) DcimPowerFeedsPartialUpdateExecute(r ApiDcimPowerFeedsP
 type ApiDcimPowerFeedsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerFeedsRetrieveRequest) Execute() (*PowerFeed, *http.Response, error) {
@@ -79053,7 +79053,7 @@ Get a power feed object.
 	@param id A unique integer value identifying this power feed.
 	@return ApiDcimPowerFeedsRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerFeedsRetrieve(ctx context.Context, id int32) ApiDcimPowerFeedsRetrieveRequest {
+func (a *DcimAPIService) DcimPowerFeedsRetrieve(ctx context.Context, id int64) ApiDcimPowerFeedsRetrieveRequest {
 	return ApiDcimPowerFeedsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -79155,7 +79155,7 @@ func (a *DcimAPIService) DcimPowerFeedsRetrieveExecute(r ApiDcimPowerFeedsRetrie
 type ApiDcimPowerFeedsTraceRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerFeedsTraceRetrieveRequest) Execute() (*PowerFeed, *http.Response, error) {
@@ -79171,7 +79171,7 @@ Trace a complete cable path and return each segment as a three-tuple of (termina
 	@param id A unique integer value identifying this power feed.
 	@return ApiDcimPowerFeedsTraceRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerFeedsTraceRetrieve(ctx context.Context, id int32) ApiDcimPowerFeedsTraceRetrieveRequest {
+func (a *DcimAPIService) DcimPowerFeedsTraceRetrieve(ctx context.Context, id int64) ApiDcimPowerFeedsTraceRetrieveRequest {
 	return ApiDcimPowerFeedsTraceRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -79273,7 +79273,7 @@ func (a *DcimAPIService) DcimPowerFeedsTraceRetrieveExecute(r ApiDcimPowerFeedsT
 type ApiDcimPowerFeedsUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	writablePowerFeedRequest *WritablePowerFeedRequest
 }
 
@@ -79295,7 +79295,7 @@ Put a power feed object.
 	@param id A unique integer value identifying this power feed.
 	@return ApiDcimPowerFeedsUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerFeedsUpdate(ctx context.Context, id int32) ApiDcimPowerFeedsUpdateRequest {
+func (a *DcimAPIService) DcimPowerFeedsUpdate(ctx context.Context, id int64) ApiDcimPowerFeedsUpdateRequest {
 	return ApiDcimPowerFeedsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -79890,7 +79890,7 @@ func (a *DcimAPIService) DcimPowerOutletTemplatesCreateExecute(r ApiDcimPowerOut
 type ApiDcimPowerOutletTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerOutletTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -79906,7 +79906,7 @@ Delete a power outlet template object.
 	@param id A unique integer value identifying this power outlet template.
 	@return ApiDcimPowerOutletTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimPowerOutletTemplatesDestroy(ctx context.Context, id int32) ApiDcimPowerOutletTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimPowerOutletTemplatesDestroy(ctx context.Context, id int64) ApiDcimPowerOutletTemplatesDestroyRequest {
 	return ApiDcimPowerOutletTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -80015,8 +80015,8 @@ type ApiDcimPowerOutletTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]*int32
-	deviceTypeIdN     *[]*int32
+	deviceTypeId      *[]*int64
+	deviceTypeIdN     *[]*int64
 	feedLeg           *[]*string
 	feedLegEmpty      *bool
 	feedLegIc         *[]*string
@@ -80028,13 +80028,13 @@ type ApiDcimPowerOutletTemplatesListRequest struct {
 	feedLegNie        *[]*string
 	feedLegNiew       *[]*string
 	feedLegNisw       *[]*string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -80053,10 +80053,10 @@ type ApiDcimPowerOutletTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
-	moduleTypeId      *[]*int32
-	moduleTypeIdN     *[]*int32
+	moduleTypeId      *[]*int64
+	moduleTypeIdN     *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -80068,10 +80068,10 @@ type ApiDcimPowerOutletTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
-	powerPortId       *[]*int32
-	powerPortIdN      *[]*int32
+	powerPortId       *[]*int64
+	powerPortIdN      *[]*int64
 	q                 *string
 	type_             *DcimPowerOutletTemplatesListTypeParameter
 	updatedByRequest  *string
@@ -80173,13 +80173,13 @@ func (r ApiDcimPowerOutletTemplatesListRequest) DescriptionNisw(descriptionNisw 
 }
 
 // Device type (ID)
-func (r ApiDcimPowerOutletTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimPowerOutletTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
@@ -80249,7 +80249,7 @@ func (r ApiDcimPowerOutletTemplatesListRequest) FeedLegNisw(feedLegNisw []*strin
 	return r
 }
 
-func (r ApiDcimPowerOutletTemplatesListRequest) Id(id []int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) Id(id []int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -80259,27 +80259,27 @@ func (r ApiDcimPowerOutletTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimPow
 	return r
 }
 
-func (r ApiDcimPowerOutletTemplatesListRequest) IdGt(idGt []int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) IdGt(idGt []int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimPowerOutletTemplatesListRequest) IdGte(idGte []int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) IdGte(idGte []int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimPowerOutletTemplatesListRequest) IdLt(idLt []int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) IdLt(idLt []int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimPowerOutletTemplatesListRequest) IdLte(idLte []int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) IdLte(idLte []int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimPowerOutletTemplatesListRequest) IdN(idN []int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) IdN(idN []int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -80375,7 +80375,7 @@ func (r ApiDcimPowerOutletTemplatesListRequest) LastUpdatedN(lastUpdatedN []time
 }
 
 // Number of results to return per page.
-func (r ApiDcimPowerOutletTemplatesListRequest) Limit(limit int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) Limit(limit int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -80386,13 +80386,13 @@ func (r ApiDcimPowerOutletTemplatesListRequest) ModifiedByRequest(modifiedByRequ
 }
 
 // Module type (ID)
-func (r ApiDcimPowerOutletTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimPowerOutletTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -80453,7 +80453,7 @@ func (r ApiDcimPowerOutletTemplatesListRequest) NameNisw(nameNisw []string) ApiD
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimPowerOutletTemplatesListRequest) Offset(offset int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) Offset(offset int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -80465,13 +80465,13 @@ func (r ApiDcimPowerOutletTemplatesListRequest) Ordering(ordering string) ApiDci
 }
 
 // Power port (ID)
-func (r ApiDcimPowerOutletTemplatesListRequest) PowerPortId(powerPortId []*int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) PowerPortId(powerPortId []*int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.powerPortId = &powerPortId
 	return r
 }
 
 // Power port (ID)
-func (r ApiDcimPowerOutletTemplatesListRequest) PowerPortIdN(powerPortIdN []*int32) ApiDcimPowerOutletTemplatesListRequest {
+func (r ApiDcimPowerOutletTemplatesListRequest) PowerPortIdN(powerPortIdN []*int64) ApiDcimPowerOutletTemplatesListRequest {
 	r.powerPortIdN = &powerPortIdN
 	return r
 }
@@ -81370,7 +81370,7 @@ func (a *DcimAPIService) DcimPowerOutletTemplatesListExecute(r ApiDcimPowerOutle
 type ApiDcimPowerOutletTemplatesPartialUpdateRequest struct {
 	ctx                                       context.Context
 	ApiService                                *DcimAPIService
-	id                                        int32
+	id                                        int64
 	patchedWritablePowerOutletTemplateRequest *PatchedWritablePowerOutletTemplateRequest
 }
 
@@ -81392,7 +81392,7 @@ Patch a power outlet template object.
 	@param id A unique integer value identifying this power outlet template.
 	@return ApiDcimPowerOutletTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerOutletTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimPowerOutletTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimPowerOutletTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimPowerOutletTemplatesPartialUpdateRequest {
 	return ApiDcimPowerOutletTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -81496,7 +81496,7 @@ func (a *DcimAPIService) DcimPowerOutletTemplatesPartialUpdateExecute(r ApiDcimP
 type ApiDcimPowerOutletTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerOutletTemplatesRetrieveRequest) Execute() (*PowerOutletTemplate, *http.Response, error) {
@@ -81512,7 +81512,7 @@ Get a power outlet template object.
 	@param id A unique integer value identifying this power outlet template.
 	@return ApiDcimPowerOutletTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerOutletTemplatesRetrieve(ctx context.Context, id int32) ApiDcimPowerOutletTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimPowerOutletTemplatesRetrieve(ctx context.Context, id int64) ApiDcimPowerOutletTemplatesRetrieveRequest {
 	return ApiDcimPowerOutletTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -81614,7 +81614,7 @@ func (a *DcimAPIService) DcimPowerOutletTemplatesRetrieveExecute(r ApiDcimPowerO
 type ApiDcimPowerOutletTemplatesUpdateRequest struct {
 	ctx                                context.Context
 	ApiService                         *DcimAPIService
-	id                                 int32
+	id                                 int64
 	writablePowerOutletTemplateRequest *WritablePowerOutletTemplateRequest
 }
 
@@ -81636,7 +81636,7 @@ Put a power outlet template object.
 	@param id A unique integer value identifying this power outlet template.
 	@return ApiDcimPowerOutletTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerOutletTemplatesUpdate(ctx context.Context, id int32) ApiDcimPowerOutletTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimPowerOutletTemplatesUpdate(ctx context.Context, id int64) ApiDcimPowerOutletTemplatesUpdateRequest {
 	return ApiDcimPowerOutletTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -82231,7 +82231,7 @@ func (a *DcimAPIService) DcimPowerOutletsCreateExecute(r ApiDcimPowerOutletsCrea
 type ApiDcimPowerOutletsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerOutletsDestroyRequest) Execute() (*http.Response, error) {
@@ -82247,7 +82247,7 @@ Delete a power outlet object.
 	@param id A unique integer value identifying this power outlet.
 	@return ApiDcimPowerOutletsDestroyRequest
 */
-func (a *DcimAPIService) DcimPowerOutletsDestroy(ctx context.Context, id int32) ApiDcimPowerOutletsDestroyRequest {
+func (a *DcimAPIService) DcimPowerOutletsDestroy(ctx context.Context, id int64) ApiDcimPowerOutletsDestroyRequest {
 	return ApiDcimPowerOutletsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -82338,8 +82338,8 @@ type ApiDcimPowerOutletsListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
 	cableEnd          *CircuitsCircuitTerminationsListCableEndParameter
-	cableId           *[]*int32
-	cableIdN          *[]*int32
+	cableId           *[]*int64
+	cableIdN          *[]*int64
 	cabled            *bool
 	color             *[]string
 	colorEmpty        *bool
@@ -82374,12 +82374,12 @@ type ApiDcimPowerOutletsListRequest struct {
 	descriptionNisw   *[]string
 	device            *[]*string
 	deviceN           *[]*string
-	deviceId          *[]int32
-	deviceIdN         *[]int32
+	deviceId          *[]int64
+	deviceIdN         *[]int64
 	deviceRole        *[]string
 	deviceRoleN       *[]string
-	deviceRoleId      *[]int32
-	deviceRoleIdN     *[]int32
+	deviceRoleId      *[]int64
+	deviceRoleIdN     *[]int64
 	deviceStatus      *[]string
 	deviceStatusEmpty *bool
 	deviceStatusIc    *[]string
@@ -82393,8 +82393,8 @@ type ApiDcimPowerOutletsListRequest struct {
 	deviceStatusNisw  *[]string
 	deviceType        *[]string
 	deviceTypeN       *[]string
-	deviceTypeId      *[]int32
-	deviceTypeIdN     *[]int32
+	deviceTypeId      *[]int64
+	deviceTypeIdN     *[]int64
 	feedLeg           *[]*string
 	feedLegEmpty      *bool
 	feedLegIc         *[]*string
@@ -82406,13 +82406,13 @@ type ApiDcimPowerOutletsListRequest struct {
 	feedLegNie        *[]*string
 	feedLegNiew       *[]*string
 	feedLegNisw       *[]*string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -82431,15 +82431,15 @@ type ApiDcimPowerOutletsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	location          *[]string
 	locationN         *[]string
-	locationId        *[]int32
-	locationIdN       *[]int32
+	locationId        *[]int64
+	locationIdN       *[]int64
 	markConnected     *bool
 	modifiedByRequest *string
-	moduleId          *[]*int32
-	moduleIdN         *[]*int32
+	moduleId          *[]*int64
+	moduleIdN         *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -82452,15 +82452,15 @@ type ApiDcimPowerOutletsListRequest struct {
 	nameNiew          *[]string
 	nameNisw          *[]string
 	occupied          *bool
-	offset            *int32
+	offset            *int64
 	ordering          *string
-	powerPortId       *[]*int32
-	powerPortIdN      *[]*int32
+	powerPortId       *[]*int64
+	powerPortIdN      *[]*int64
 	q                 *string
 	rack              *[]string
 	rackN             *[]string
-	rackId            *[]int32
-	rackIdN           *[]int32
+	rackId            *[]int64
+	rackIdN           *[]int64
 	region            *[]string
 	regionN           *[]string
 	regionId          *[]string
@@ -82471,8 +82471,8 @@ type ApiDcimPowerOutletsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	tag               *[]string
 	tagN              *[]string
 	type_             *[]*string
@@ -82489,8 +82489,8 @@ type ApiDcimPowerOutletsListRequest struct {
 	updatedByRequest  *string
 	virtualChassis    *[]string
 	virtualChassisN   *[]string
-	virtualChassisId  *[]int32
-	virtualChassisIdN *[]int32
+	virtualChassisId  *[]int64
+	virtualChassisIdN *[]int64
 }
 
 // * &#x60;A&#x60; - A * &#x60;B&#x60; - B
@@ -82500,13 +82500,13 @@ func (r ApiDcimPowerOutletsListRequest) CableEnd(cableEnd CircuitsCircuitTermina
 }
 
 // Cable (ID)
-func (r ApiDcimPowerOutletsListRequest) CableId(cableId []*int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) CableId(cableId []*int64) ApiDcimPowerOutletsListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimPowerOutletsListRequest) CableIdN(cableIdN []*int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) CableIdN(cableIdN []*int64) ApiDcimPowerOutletsListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -82684,13 +82684,13 @@ func (r ApiDcimPowerOutletsListRequest) DeviceN(deviceN []*string) ApiDcimPowerO
 }
 
 // Device (ID)
-func (r ApiDcimPowerOutletsListRequest) DeviceId(deviceId []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) DeviceId(deviceId []int64) ApiDcimPowerOutletsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimPowerOutletsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimPowerOutletsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -82708,13 +82708,13 @@ func (r ApiDcimPowerOutletsListRequest) DeviceRoleN(deviceRoleN []string) ApiDci
 }
 
 // Device role (ID)
-func (r ApiDcimPowerOutletsListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimPowerOutletsListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimPowerOutletsListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimPowerOutletsListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -82787,13 +82787,13 @@ func (r ApiDcimPowerOutletsListRequest) DeviceTypeN(deviceTypeN []string) ApiDci
 }
 
 // Device type (ID)
-func (r ApiDcimPowerOutletsListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimPowerOutletsListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimPowerOutletsListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimPowerOutletsListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
@@ -82863,7 +82863,7 @@ func (r ApiDcimPowerOutletsListRequest) FeedLegNisw(feedLegNisw []*string) ApiDc
 	return r
 }
 
-func (r ApiDcimPowerOutletsListRequest) Id(id []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) Id(id []int64) ApiDcimPowerOutletsListRequest {
 	r.id = &id
 	return r
 }
@@ -82873,27 +82873,27 @@ func (r ApiDcimPowerOutletsListRequest) IdEmpty(idEmpty bool) ApiDcimPowerOutlet
 	return r
 }
 
-func (r ApiDcimPowerOutletsListRequest) IdGt(idGt []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) IdGt(idGt []int64) ApiDcimPowerOutletsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimPowerOutletsListRequest) IdGte(idGte []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) IdGte(idGte []int64) ApiDcimPowerOutletsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimPowerOutletsListRequest) IdLt(idLt []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) IdLt(idLt []int64) ApiDcimPowerOutletsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimPowerOutletsListRequest) IdLte(idLte []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) IdLte(idLte []int64) ApiDcimPowerOutletsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimPowerOutletsListRequest) IdN(idN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) IdN(idN []int64) ApiDcimPowerOutletsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -82989,7 +82989,7 @@ func (r ApiDcimPowerOutletsListRequest) LastUpdatedN(lastUpdatedN []time.Time) A
 }
 
 // Number of results to return per page.
-func (r ApiDcimPowerOutletsListRequest) Limit(limit int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) Limit(limit int64) ApiDcimPowerOutletsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -83007,13 +83007,13 @@ func (r ApiDcimPowerOutletsListRequest) LocationN(locationN []string) ApiDcimPow
 }
 
 // Location (ID)
-func (r ApiDcimPowerOutletsListRequest) LocationId(locationId []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) LocationId(locationId []int64) ApiDcimPowerOutletsListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimPowerOutletsListRequest) LocationIdN(locationIdN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) LocationIdN(locationIdN []int64) ApiDcimPowerOutletsListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -83029,13 +83029,13 @@ func (r ApiDcimPowerOutletsListRequest) ModifiedByRequest(modifiedByRequest stri
 }
 
 // Module (ID)
-func (r ApiDcimPowerOutletsListRequest) ModuleId(moduleId []*int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) ModuleId(moduleId []*int64) ApiDcimPowerOutletsListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimPowerOutletsListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimPowerOutletsListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
@@ -83101,7 +83101,7 @@ func (r ApiDcimPowerOutletsListRequest) Occupied(occupied bool) ApiDcimPowerOutl
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimPowerOutletsListRequest) Offset(offset int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) Offset(offset int64) ApiDcimPowerOutletsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -83113,13 +83113,13 @@ func (r ApiDcimPowerOutletsListRequest) Ordering(ordering string) ApiDcimPowerOu
 }
 
 // Power port (ID)
-func (r ApiDcimPowerOutletsListRequest) PowerPortId(powerPortId []*int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) PowerPortId(powerPortId []*int64) ApiDcimPowerOutletsListRequest {
 	r.powerPortId = &powerPortId
 	return r
 }
 
 // Power port (ID)
-func (r ApiDcimPowerOutletsListRequest) PowerPortIdN(powerPortIdN []*int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) PowerPortIdN(powerPortIdN []*int64) ApiDcimPowerOutletsListRequest {
 	r.powerPortIdN = &powerPortIdN
 	return r
 }
@@ -83143,13 +83143,13 @@ func (r ApiDcimPowerOutletsListRequest) RackN(rackN []string) ApiDcimPowerOutlet
 }
 
 // Rack (ID)
-func (r ApiDcimPowerOutletsListRequest) RackId(rackId []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) RackId(rackId []int64) ApiDcimPowerOutletsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimPowerOutletsListRequest) RackIdN(rackIdN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) RackIdN(rackIdN []int64) ApiDcimPowerOutletsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -83207,13 +83207,13 @@ func (r ApiDcimPowerOutletsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiD
 }
 
 // Site (ID)
-func (r ApiDcimPowerOutletsListRequest) SiteId(siteId []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) SiteId(siteId []int64) ApiDcimPowerOutletsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimPowerOutletsListRequest) SiteIdN(siteIdN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) SiteIdN(siteIdN []int64) ApiDcimPowerOutletsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -83311,13 +83311,13 @@ func (r ApiDcimPowerOutletsListRequest) VirtualChassisN(virtualChassisN []string
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimPowerOutletsListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimPowerOutletsListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimPowerOutletsListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimPowerOutletsListRequest {
+func (r ApiDcimPowerOutletsListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimPowerOutletsListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -84968,7 +84968,7 @@ func (a *DcimAPIService) DcimPowerOutletsListExecute(r ApiDcimPowerOutletsListRe
 type ApiDcimPowerOutletsPartialUpdateRequest struct {
 	ctx                               context.Context
 	ApiService                        *DcimAPIService
-	id                                int32
+	id                                int64
 	patchedWritablePowerOutletRequest *PatchedWritablePowerOutletRequest
 }
 
@@ -84990,7 +84990,7 @@ Patch a power outlet object.
 	@param id A unique integer value identifying this power outlet.
 	@return ApiDcimPowerOutletsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerOutletsPartialUpdate(ctx context.Context, id int32) ApiDcimPowerOutletsPartialUpdateRequest {
+func (a *DcimAPIService) DcimPowerOutletsPartialUpdate(ctx context.Context, id int64) ApiDcimPowerOutletsPartialUpdateRequest {
 	return ApiDcimPowerOutletsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -85094,7 +85094,7 @@ func (a *DcimAPIService) DcimPowerOutletsPartialUpdateExecute(r ApiDcimPowerOutl
 type ApiDcimPowerOutletsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerOutletsRetrieveRequest) Execute() (*PowerOutlet, *http.Response, error) {
@@ -85110,7 +85110,7 @@ Get a power outlet object.
 	@param id A unique integer value identifying this power outlet.
 	@return ApiDcimPowerOutletsRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerOutletsRetrieve(ctx context.Context, id int32) ApiDcimPowerOutletsRetrieveRequest {
+func (a *DcimAPIService) DcimPowerOutletsRetrieve(ctx context.Context, id int64) ApiDcimPowerOutletsRetrieveRequest {
 	return ApiDcimPowerOutletsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -85212,7 +85212,7 @@ func (a *DcimAPIService) DcimPowerOutletsRetrieveExecute(r ApiDcimPowerOutletsRe
 type ApiDcimPowerOutletsTraceRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerOutletsTraceRetrieveRequest) Execute() (*PowerOutlet, *http.Response, error) {
@@ -85228,7 +85228,7 @@ Trace a complete cable path and return each segment as a three-tuple of (termina
 	@param id A unique integer value identifying this power outlet.
 	@return ApiDcimPowerOutletsTraceRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerOutletsTraceRetrieve(ctx context.Context, id int32) ApiDcimPowerOutletsTraceRetrieveRequest {
+func (a *DcimAPIService) DcimPowerOutletsTraceRetrieve(ctx context.Context, id int64) ApiDcimPowerOutletsTraceRetrieveRequest {
 	return ApiDcimPowerOutletsTraceRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -85330,7 +85330,7 @@ func (a *DcimAPIService) DcimPowerOutletsTraceRetrieveExecute(r ApiDcimPowerOutl
 type ApiDcimPowerOutletsUpdateRequest struct {
 	ctx                        context.Context
 	ApiService                 *DcimAPIService
-	id                         int32
+	id                         int64
 	writablePowerOutletRequest *WritablePowerOutletRequest
 }
 
@@ -85352,7 +85352,7 @@ Put a power outlet object.
 	@param id A unique integer value identifying this power outlet.
 	@return ApiDcimPowerOutletsUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerOutletsUpdate(ctx context.Context, id int32) ApiDcimPowerOutletsUpdateRequest {
+func (a *DcimAPIService) DcimPowerOutletsUpdate(ctx context.Context, id int64) ApiDcimPowerOutletsUpdateRequest {
 	return ApiDcimPowerOutletsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -85947,7 +85947,7 @@ func (a *DcimAPIService) DcimPowerPanelsCreateExecute(r ApiDcimPowerPanelsCreate
 type ApiDcimPowerPanelsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerPanelsDestroyRequest) Execute() (*http.Response, error) {
@@ -85963,7 +85963,7 @@ Delete a power panel object.
 	@param id A unique integer value identifying this power panel.
 	@return ApiDcimPowerPanelsDestroyRequest
 */
-func (a *DcimAPIService) DcimPowerPanelsDestroy(ctx context.Context, id int32) ApiDcimPowerPanelsDestroyRequest {
+func (a *DcimAPIService) DcimPowerPanelsDestroy(ctx context.Context, id int64) ApiDcimPowerPanelsDestroyRequest {
 	return ApiDcimPowerPanelsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -86053,12 +86053,12 @@ func (a *DcimAPIService) DcimPowerPanelsDestroyExecute(r ApiDcimPowerPanelsDestr
 type ApiDcimPowerPanelsListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
-	contact           *[]int32
-	contactN          *[]int32
+	contact           *[]int64
+	contactN          *[]int64
 	contactGroup      *[]string
 	contactGroupN     *[]string
-	contactRole       *[]int32
-	contactRoleN      *[]int32
+	contactRole       *[]int64
+	contactRoleN      *[]int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -86078,13 +86078,13 @@ type ApiDcimPowerPanelsListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -86092,7 +86092,7 @@ type ApiDcimPowerPanelsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	locationId        *[]string
 	locationIdN       *[]string
 	modifiedByRequest *string
@@ -86107,7 +86107,7 @@ type ApiDcimPowerPanelsListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	region            *[]string
@@ -86120,21 +86120,21 @@ type ApiDcimPowerPanelsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	tag               *[]string
 	tagN              *[]string
 	updatedByRequest  *string
 }
 
 // Contact
-func (r ApiDcimPowerPanelsListRequest) Contact(contact []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) Contact(contact []int64) ApiDcimPowerPanelsListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimPowerPanelsListRequest) ContactN(contactN []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) ContactN(contactN []int64) ApiDcimPowerPanelsListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -86150,13 +86150,13 @@ func (r ApiDcimPowerPanelsListRequest) ContactGroupN(contactGroupN []string) Api
 }
 
 // Contact Role
-func (r ApiDcimPowerPanelsListRequest) ContactRole(contactRole []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) ContactRole(contactRole []int64) ApiDcimPowerPanelsListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimPowerPanelsListRequest) ContactRoleN(contactRoleN []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) ContactRoleN(contactRoleN []int64) ApiDcimPowerPanelsListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -86256,7 +86256,7 @@ func (r ApiDcimPowerPanelsListRequest) DescriptionNisw(descriptionNisw []string)
 	return r
 }
 
-func (r ApiDcimPowerPanelsListRequest) Id(id []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) Id(id []int64) ApiDcimPowerPanelsListRequest {
 	r.id = &id
 	return r
 }
@@ -86266,27 +86266,27 @@ func (r ApiDcimPowerPanelsListRequest) IdEmpty(idEmpty bool) ApiDcimPowerPanelsL
 	return r
 }
 
-func (r ApiDcimPowerPanelsListRequest) IdGt(idGt []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) IdGt(idGt []int64) ApiDcimPowerPanelsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimPowerPanelsListRequest) IdGte(idGte []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) IdGte(idGte []int64) ApiDcimPowerPanelsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimPowerPanelsListRequest) IdLt(idLt []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) IdLt(idLt []int64) ApiDcimPowerPanelsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimPowerPanelsListRequest) IdLte(idLte []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) IdLte(idLte []int64) ApiDcimPowerPanelsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimPowerPanelsListRequest) IdN(idN []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) IdN(idN []int64) ApiDcimPowerPanelsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -86327,7 +86327,7 @@ func (r ApiDcimPowerPanelsListRequest) LastUpdatedN(lastUpdatedN []time.Time) Ap
 }
 
 // Number of results to return per page.
-func (r ApiDcimPowerPanelsListRequest) Limit(limit int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) Limit(limit int64) ApiDcimPowerPanelsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -86403,7 +86403,7 @@ func (r ApiDcimPowerPanelsListRequest) NameNisw(nameNisw []string) ApiDcimPowerP
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimPowerPanelsListRequest) Offset(offset int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) Offset(offset int64) ApiDcimPowerPanelsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -86473,13 +86473,13 @@ func (r ApiDcimPowerPanelsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDc
 }
 
 // Site (ID)
-func (r ApiDcimPowerPanelsListRequest) SiteId(siteId []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) SiteId(siteId []int64) ApiDcimPowerPanelsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimPowerPanelsListRequest) SiteIdN(siteIdN []int32) ApiDcimPowerPanelsListRequest {
+func (r ApiDcimPowerPanelsListRequest) SiteIdN(siteIdN []int64) ApiDcimPowerPanelsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -87323,7 +87323,7 @@ func (a *DcimAPIService) DcimPowerPanelsListExecute(r ApiDcimPowerPanelsListRequ
 type ApiDcimPowerPanelsPartialUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	patchedPowerPanelRequest *PatchedPowerPanelRequest
 }
 
@@ -87345,7 +87345,7 @@ Patch a power panel object.
 	@param id A unique integer value identifying this power panel.
 	@return ApiDcimPowerPanelsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerPanelsPartialUpdate(ctx context.Context, id int32) ApiDcimPowerPanelsPartialUpdateRequest {
+func (a *DcimAPIService) DcimPowerPanelsPartialUpdate(ctx context.Context, id int64) ApiDcimPowerPanelsPartialUpdateRequest {
 	return ApiDcimPowerPanelsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -87449,7 +87449,7 @@ func (a *DcimAPIService) DcimPowerPanelsPartialUpdateExecute(r ApiDcimPowerPanel
 type ApiDcimPowerPanelsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerPanelsRetrieveRequest) Execute() (*PowerPanel, *http.Response, error) {
@@ -87465,7 +87465,7 @@ Get a power panel object.
 	@param id A unique integer value identifying this power panel.
 	@return ApiDcimPowerPanelsRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerPanelsRetrieve(ctx context.Context, id int32) ApiDcimPowerPanelsRetrieveRequest {
+func (a *DcimAPIService) DcimPowerPanelsRetrieve(ctx context.Context, id int64) ApiDcimPowerPanelsRetrieveRequest {
 	return ApiDcimPowerPanelsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -87567,7 +87567,7 @@ func (a *DcimAPIService) DcimPowerPanelsRetrieveExecute(r ApiDcimPowerPanelsRetr
 type ApiDcimPowerPanelsUpdateRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
-	id                int32
+	id                int64
 	powerPanelRequest *PowerPanelRequest
 }
 
@@ -87589,7 +87589,7 @@ Put a power panel object.
 	@param id A unique integer value identifying this power panel.
 	@return ApiDcimPowerPanelsUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerPanelsUpdate(ctx context.Context, id int32) ApiDcimPowerPanelsUpdateRequest {
+func (a *DcimAPIService) DcimPowerPanelsUpdate(ctx context.Context, id int64) ApiDcimPowerPanelsUpdateRequest {
 	return ApiDcimPowerPanelsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -88184,7 +88184,7 @@ func (a *DcimAPIService) DcimPowerPortTemplatesCreateExecute(r ApiDcimPowerPortT
 type ApiDcimPowerPortTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerPortTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -88200,7 +88200,7 @@ Delete a power port template object.
 	@param id A unique integer value identifying this power port template.
 	@return ApiDcimPowerPortTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimPowerPortTemplatesDestroy(ctx context.Context, id int32) ApiDcimPowerPortTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimPowerPortTemplatesDestroy(ctx context.Context, id int64) ApiDcimPowerPortTemplatesDestroyRequest {
 	return ApiDcimPowerPortTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -88290,13 +88290,13 @@ func (a *DcimAPIService) DcimPowerPortTemplatesDestroyExecute(r ApiDcimPowerPort
 type ApiDcimPowerPortTemplatesListRequest struct {
 	ctx                context.Context
 	ApiService         *DcimAPIService
-	allocatedDraw      *[]int32
+	allocatedDraw      *[]int64
 	allocatedDrawEmpty *bool
-	allocatedDrawGt    *[]int32
-	allocatedDrawGte   *[]int32
-	allocatedDrawLt    *[]int32
-	allocatedDrawLte   *[]int32
-	allocatedDrawN     *[]int32
+	allocatedDrawGt    *[]int64
+	allocatedDrawGte   *[]int64
+	allocatedDrawLt    *[]int64
+	allocatedDrawLte   *[]int64
+	allocatedDrawN     *[]int64
 	created            *[]time.Time
 	createdEmpty       *[]time.Time
 	createdGt          *[]time.Time
@@ -88316,15 +88316,15 @@ type ApiDcimPowerPortTemplatesListRequest struct {
 	descriptionNie     *[]string
 	descriptionNiew    *[]string
 	descriptionNisw    *[]string
-	deviceTypeId       *[]*int32
-	deviceTypeIdN      *[]*int32
-	id                 *[]int32
+	deviceTypeId       *[]*int64
+	deviceTypeIdN      *[]*int64
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
 	label              *[]string
 	labelEmpty         *bool
 	labelIc            *[]string
@@ -88343,17 +88343,17 @@ type ApiDcimPowerPortTemplatesListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
-	maximumDraw        *[]int32
+	limit              *int64
+	maximumDraw        *[]int64
 	maximumDrawEmpty   *bool
-	maximumDrawGt      *[]int32
-	maximumDrawGte     *[]int32
-	maximumDrawLt      *[]int32
-	maximumDrawLte     *[]int32
-	maximumDrawN       *[]int32
+	maximumDrawGt      *[]int64
+	maximumDrawGte     *[]int64
+	maximumDrawLt      *[]int64
+	maximumDrawLte     *[]int64
+	maximumDrawN       *[]int64
 	modifiedByRequest  *string
-	moduleTypeId       *[]*int32
-	moduleTypeIdN      *[]*int32
+	moduleTypeId       *[]*int64
+	moduleTypeIdN      *[]*int64
 	name               *[]string
 	nameEmpty          *bool
 	nameIc             *[]string
@@ -88365,14 +88365,14 @@ type ApiDcimPowerPortTemplatesListRequest struct {
 	nameNie            *[]string
 	nameNiew           *[]string
 	nameNisw           *[]string
-	offset             *int32
+	offset             *int64
 	ordering           *string
 	q                  *string
 	type_              *DcimPowerPortTemplatesListTypeParameter
 	updatedByRequest   *string
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDraw(allocatedDraw []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDraw(allocatedDraw []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.allocatedDraw = &allocatedDraw
 	return r
 }
@@ -88382,27 +88382,27 @@ func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawEmpty(allocatedDrawEm
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawGt(allocatedDrawGt []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawGt(allocatedDrawGt []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.allocatedDrawGt = &allocatedDrawGt
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawGte(allocatedDrawGte []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawGte(allocatedDrawGte []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.allocatedDrawGte = &allocatedDrawGte
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawLt(allocatedDrawLt []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawLt(allocatedDrawLt []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.allocatedDrawLt = &allocatedDrawLt
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawLte(allocatedDrawLte []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawLte(allocatedDrawLte []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.allocatedDrawLte = &allocatedDrawLte
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawN(allocatedDrawN []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) AllocatedDrawN(allocatedDrawN []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.allocatedDrawN = &allocatedDrawN
 	return r
 }
@@ -88503,18 +88503,18 @@ func (r ApiDcimPowerPortTemplatesListRequest) DescriptionNisw(descriptionNisw []
 }
 
 // Device type (ID)
-func (r ApiDcimPowerPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimPowerPortTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimPowerPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimPowerPortTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) Id(id []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) Id(id []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -88524,27 +88524,27 @@ func (r ApiDcimPowerPortTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimPower
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) IdGt(idGt []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) IdGt(idGt []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) IdGte(idGte []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) IdGte(idGte []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) IdLt(idLt []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) IdLt(idLt []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) IdLte(idLte []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) IdLte(idLte []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) IdN(idN []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) IdN(idN []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -88640,12 +88640,12 @@ func (r ApiDcimPowerPortTemplatesListRequest) LastUpdatedN(lastUpdatedN []time.T
 }
 
 // Number of results to return per page.
-func (r ApiDcimPowerPortTemplatesListRequest) Limit(limit int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) Limit(limit int64) ApiDcimPowerPortTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) MaximumDraw(maximumDraw []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) MaximumDraw(maximumDraw []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.maximumDraw = &maximumDraw
 	return r
 }
@@ -88655,27 +88655,27 @@ func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawEmpty(maximumDrawEmpty 
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawGt(maximumDrawGt []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawGt(maximumDrawGt []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.maximumDrawGt = &maximumDrawGt
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawGte(maximumDrawGte []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawGte(maximumDrawGte []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.maximumDrawGte = &maximumDrawGte
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawLt(maximumDrawLt []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawLt(maximumDrawLt []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.maximumDrawLt = &maximumDrawLt
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawLte(maximumDrawLte []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawLte(maximumDrawLte []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.maximumDrawLte = &maximumDrawLte
 	return r
 }
 
-func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawN(maximumDrawN []int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) MaximumDrawN(maximumDrawN []int64) ApiDcimPowerPortTemplatesListRequest {
 	r.maximumDrawN = &maximumDrawN
 	return r
 }
@@ -88686,13 +88686,13 @@ func (r ApiDcimPowerPortTemplatesListRequest) ModifiedByRequest(modifiedByReques
 }
 
 // Module type (ID)
-func (r ApiDcimPowerPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimPowerPortTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimPowerPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimPowerPortTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -88753,7 +88753,7 @@ func (r ApiDcimPowerPortTemplatesListRequest) NameNisw(nameNisw []string) ApiDci
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimPowerPortTemplatesListRequest) Offset(offset int32) ApiDcimPowerPortTemplatesListRequest {
+func (r ApiDcimPowerPortTemplatesListRequest) Offset(offset int64) ApiDcimPowerPortTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -89661,7 +89661,7 @@ func (a *DcimAPIService) DcimPowerPortTemplatesListExecute(r ApiDcimPowerPortTem
 type ApiDcimPowerPortTemplatesPartialUpdateRequest struct {
 	ctx                                     context.Context
 	ApiService                              *DcimAPIService
-	id                                      int32
+	id                                      int64
 	patchedWritablePowerPortTemplateRequest *PatchedWritablePowerPortTemplateRequest
 }
 
@@ -89683,7 +89683,7 @@ Patch a power port template object.
 	@param id A unique integer value identifying this power port template.
 	@return ApiDcimPowerPortTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerPortTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimPowerPortTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimPowerPortTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimPowerPortTemplatesPartialUpdateRequest {
 	return ApiDcimPowerPortTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -89787,7 +89787,7 @@ func (a *DcimAPIService) DcimPowerPortTemplatesPartialUpdateExecute(r ApiDcimPow
 type ApiDcimPowerPortTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerPortTemplatesRetrieveRequest) Execute() (*PowerPortTemplate, *http.Response, error) {
@@ -89803,7 +89803,7 @@ Get a power port template object.
 	@param id A unique integer value identifying this power port template.
 	@return ApiDcimPowerPortTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerPortTemplatesRetrieve(ctx context.Context, id int32) ApiDcimPowerPortTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimPowerPortTemplatesRetrieve(ctx context.Context, id int64) ApiDcimPowerPortTemplatesRetrieveRequest {
 	return ApiDcimPowerPortTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -89905,7 +89905,7 @@ func (a *DcimAPIService) DcimPowerPortTemplatesRetrieveExecute(r ApiDcimPowerPor
 type ApiDcimPowerPortTemplatesUpdateRequest struct {
 	ctx                              context.Context
 	ApiService                       *DcimAPIService
-	id                               int32
+	id                               int64
 	writablePowerPortTemplateRequest *WritablePowerPortTemplateRequest
 }
 
@@ -89927,7 +89927,7 @@ Put a power port template object.
 	@param id A unique integer value identifying this power port template.
 	@return ApiDcimPowerPortTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerPortTemplatesUpdate(ctx context.Context, id int32) ApiDcimPowerPortTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimPowerPortTemplatesUpdate(ctx context.Context, id int64) ApiDcimPowerPortTemplatesUpdateRequest {
 	return ApiDcimPowerPortTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -90522,7 +90522,7 @@ func (a *DcimAPIService) DcimPowerPortsCreateExecute(r ApiDcimPowerPortsCreateRe
 type ApiDcimPowerPortsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerPortsDestroyRequest) Execute() (*http.Response, error) {
@@ -90538,7 +90538,7 @@ Delete a power port object.
 	@param id A unique integer value identifying this power port.
 	@return ApiDcimPowerPortsDestroyRequest
 */
-func (a *DcimAPIService) DcimPowerPortsDestroy(ctx context.Context, id int32) ApiDcimPowerPortsDestroyRequest {
+func (a *DcimAPIService) DcimPowerPortsDestroy(ctx context.Context, id int64) ApiDcimPowerPortsDestroyRequest {
 	return ApiDcimPowerPortsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -90628,16 +90628,16 @@ func (a *DcimAPIService) DcimPowerPortsDestroyExecute(r ApiDcimPowerPortsDestroy
 type ApiDcimPowerPortsListRequest struct {
 	ctx                context.Context
 	ApiService         *DcimAPIService
-	allocatedDraw      *[]int32
+	allocatedDraw      *[]int64
 	allocatedDrawEmpty *bool
-	allocatedDrawGt    *[]int32
-	allocatedDrawGte   *[]int32
-	allocatedDrawLt    *[]int32
-	allocatedDrawLte   *[]int32
-	allocatedDrawN     *[]int32
+	allocatedDrawGt    *[]int64
+	allocatedDrawGte   *[]int64
+	allocatedDrawLt    *[]int64
+	allocatedDrawLte   *[]int64
+	allocatedDrawN     *[]int64
 	cableEnd           *CircuitsCircuitTerminationsListCableEndParameter
-	cableId            *[]*int32
-	cableIdN           *[]*int32
+	cableId            *[]*int64
+	cableIdN           *[]*int64
 	cabled             *bool
 	connected          *bool
 	created            *[]time.Time
@@ -90661,12 +90661,12 @@ type ApiDcimPowerPortsListRequest struct {
 	descriptionNisw    *[]string
 	device             *[]*string
 	deviceN            *[]*string
-	deviceId           *[]int32
-	deviceIdN          *[]int32
+	deviceId           *[]int64
+	deviceIdN          *[]int64
 	deviceRole         *[]string
 	deviceRoleN        *[]string
-	deviceRoleId       *[]int32
-	deviceRoleIdN      *[]int32
+	deviceRoleId       *[]int64
+	deviceRoleIdN      *[]int64
 	deviceStatus       *[]string
 	deviceStatusEmpty  *bool
 	deviceStatusIc     *[]string
@@ -90680,15 +90680,15 @@ type ApiDcimPowerPortsListRequest struct {
 	deviceStatusNisw   *[]string
 	deviceType         *[]string
 	deviceTypeN        *[]string
-	deviceTypeId       *[]int32
-	deviceTypeIdN      *[]int32
-	id                 *[]int32
+	deviceTypeId       *[]int64
+	deviceTypeIdN      *[]int64
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
 	label              *[]string
 	labelEmpty         *bool
 	labelIc            *[]string
@@ -90707,22 +90707,22 @@ type ApiDcimPowerPortsListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
+	limit              *int64
 	location           *[]string
 	locationN          *[]string
-	locationId         *[]int32
-	locationIdN        *[]int32
+	locationId         *[]int64
+	locationIdN        *[]int64
 	markConnected      *bool
-	maximumDraw        *[]int32
+	maximumDraw        *[]int64
 	maximumDrawEmpty   *bool
-	maximumDrawGt      *[]int32
-	maximumDrawGte     *[]int32
-	maximumDrawLt      *[]int32
-	maximumDrawLte     *[]int32
-	maximumDrawN       *[]int32
+	maximumDrawGt      *[]int64
+	maximumDrawGte     *[]int64
+	maximumDrawLt      *[]int64
+	maximumDrawLte     *[]int64
+	maximumDrawN       *[]int64
 	modifiedByRequest  *string
-	moduleId           *[]*int32
-	moduleIdN          *[]*int32
+	moduleId           *[]*int64
+	moduleIdN          *[]*int64
 	name               *[]string
 	nameEmpty          *bool
 	nameIc             *[]string
@@ -90735,13 +90735,13 @@ type ApiDcimPowerPortsListRequest struct {
 	nameNiew           *[]string
 	nameNisw           *[]string
 	occupied           *bool
-	offset             *int32
+	offset             *int64
 	ordering           *string
 	q                  *string
 	rack               *[]string
 	rackN              *[]string
-	rackId             *[]int32
-	rackIdN            *[]int32
+	rackId             *[]int64
+	rackIdN            *[]int64
 	region             *[]string
 	regionN            *[]string
 	regionId           *[]string
@@ -90752,8 +90752,8 @@ type ApiDcimPowerPortsListRequest struct {
 	siteGroupN         *[]string
 	siteGroupId        *[]string
 	siteGroupIdN       *[]string
-	siteId             *[]int32
-	siteIdN            *[]int32
+	siteId             *[]int64
+	siteIdN            *[]int64
 	tag                *[]string
 	tagN               *[]string
 	type_              *[]*string
@@ -90770,11 +90770,11 @@ type ApiDcimPowerPortsListRequest struct {
 	updatedByRequest   *string
 	virtualChassis     *[]string
 	virtualChassisN    *[]string
-	virtualChassisId   *[]int32
-	virtualChassisIdN  *[]int32
+	virtualChassisId   *[]int64
+	virtualChassisIdN  *[]int64
 }
 
-func (r ApiDcimPowerPortsListRequest) AllocatedDraw(allocatedDraw []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) AllocatedDraw(allocatedDraw []int64) ApiDcimPowerPortsListRequest {
 	r.allocatedDraw = &allocatedDraw
 	return r
 }
@@ -90784,27 +90784,27 @@ func (r ApiDcimPowerPortsListRequest) AllocatedDrawEmpty(allocatedDrawEmpty bool
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) AllocatedDrawGt(allocatedDrawGt []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) AllocatedDrawGt(allocatedDrawGt []int64) ApiDcimPowerPortsListRequest {
 	r.allocatedDrawGt = &allocatedDrawGt
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) AllocatedDrawGte(allocatedDrawGte []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) AllocatedDrawGte(allocatedDrawGte []int64) ApiDcimPowerPortsListRequest {
 	r.allocatedDrawGte = &allocatedDrawGte
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) AllocatedDrawLt(allocatedDrawLt []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) AllocatedDrawLt(allocatedDrawLt []int64) ApiDcimPowerPortsListRequest {
 	r.allocatedDrawLt = &allocatedDrawLt
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) AllocatedDrawLte(allocatedDrawLte []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) AllocatedDrawLte(allocatedDrawLte []int64) ApiDcimPowerPortsListRequest {
 	r.allocatedDrawLte = &allocatedDrawLte
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) AllocatedDrawN(allocatedDrawN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) AllocatedDrawN(allocatedDrawN []int64) ApiDcimPowerPortsListRequest {
 	r.allocatedDrawN = &allocatedDrawN
 	return r
 }
@@ -90816,13 +90816,13 @@ func (r ApiDcimPowerPortsListRequest) CableEnd(cableEnd CircuitsCircuitTerminati
 }
 
 // Cable (ID)
-func (r ApiDcimPowerPortsListRequest) CableId(cableId []*int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) CableId(cableId []*int64) ApiDcimPowerPortsListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimPowerPortsListRequest) CableIdN(cableIdN []*int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) CableIdN(cableIdN []*int64) ApiDcimPowerPortsListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -90945,13 +90945,13 @@ func (r ApiDcimPowerPortsListRequest) DeviceN(deviceN []*string) ApiDcimPowerPor
 }
 
 // Device (ID)
-func (r ApiDcimPowerPortsListRequest) DeviceId(deviceId []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) DeviceId(deviceId []int64) ApiDcimPowerPortsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimPowerPortsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimPowerPortsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -90969,13 +90969,13 @@ func (r ApiDcimPowerPortsListRequest) DeviceRoleN(deviceRoleN []string) ApiDcimP
 }
 
 // Device role (ID)
-func (r ApiDcimPowerPortsListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimPowerPortsListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimPowerPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimPowerPortsListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -91048,18 +91048,18 @@ func (r ApiDcimPowerPortsListRequest) DeviceTypeN(deviceTypeN []string) ApiDcimP
 }
 
 // Device type (ID)
-func (r ApiDcimPowerPortsListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimPowerPortsListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimPowerPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimPowerPortsListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) Id(id []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) Id(id []int64) ApiDcimPowerPortsListRequest {
 	r.id = &id
 	return r
 }
@@ -91069,27 +91069,27 @@ func (r ApiDcimPowerPortsListRequest) IdEmpty(idEmpty bool) ApiDcimPowerPortsLis
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) IdGt(idGt []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) IdGt(idGt []int64) ApiDcimPowerPortsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) IdGte(idGte []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) IdGte(idGte []int64) ApiDcimPowerPortsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) IdLt(idLt []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) IdLt(idLt []int64) ApiDcimPowerPortsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) IdLte(idLte []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) IdLte(idLte []int64) ApiDcimPowerPortsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) IdN(idN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) IdN(idN []int64) ApiDcimPowerPortsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -91185,7 +91185,7 @@ func (r ApiDcimPowerPortsListRequest) LastUpdatedN(lastUpdatedN []time.Time) Api
 }
 
 // Number of results to return per page.
-func (r ApiDcimPowerPortsListRequest) Limit(limit int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) Limit(limit int64) ApiDcimPowerPortsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -91203,13 +91203,13 @@ func (r ApiDcimPowerPortsListRequest) LocationN(locationN []string) ApiDcimPower
 }
 
 // Location (ID)
-func (r ApiDcimPowerPortsListRequest) LocationId(locationId []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) LocationId(locationId []int64) ApiDcimPowerPortsListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimPowerPortsListRequest) LocationIdN(locationIdN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) LocationIdN(locationIdN []int64) ApiDcimPowerPortsListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -91219,7 +91219,7 @@ func (r ApiDcimPowerPortsListRequest) MarkConnected(markConnected bool) ApiDcimP
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) MaximumDraw(maximumDraw []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) MaximumDraw(maximumDraw []int64) ApiDcimPowerPortsListRequest {
 	r.maximumDraw = &maximumDraw
 	return r
 }
@@ -91229,27 +91229,27 @@ func (r ApiDcimPowerPortsListRequest) MaximumDrawEmpty(maximumDrawEmpty bool) Ap
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) MaximumDrawGt(maximumDrawGt []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) MaximumDrawGt(maximumDrawGt []int64) ApiDcimPowerPortsListRequest {
 	r.maximumDrawGt = &maximumDrawGt
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) MaximumDrawGte(maximumDrawGte []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) MaximumDrawGte(maximumDrawGte []int64) ApiDcimPowerPortsListRequest {
 	r.maximumDrawGte = &maximumDrawGte
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) MaximumDrawLt(maximumDrawLt []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) MaximumDrawLt(maximumDrawLt []int64) ApiDcimPowerPortsListRequest {
 	r.maximumDrawLt = &maximumDrawLt
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) MaximumDrawLte(maximumDrawLte []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) MaximumDrawLte(maximumDrawLte []int64) ApiDcimPowerPortsListRequest {
 	r.maximumDrawLte = &maximumDrawLte
 	return r
 }
 
-func (r ApiDcimPowerPortsListRequest) MaximumDrawN(maximumDrawN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) MaximumDrawN(maximumDrawN []int64) ApiDcimPowerPortsListRequest {
 	r.maximumDrawN = &maximumDrawN
 	return r
 }
@@ -91260,13 +91260,13 @@ func (r ApiDcimPowerPortsListRequest) ModifiedByRequest(modifiedByRequest string
 }
 
 // Module (ID)
-func (r ApiDcimPowerPortsListRequest) ModuleId(moduleId []*int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) ModuleId(moduleId []*int64) ApiDcimPowerPortsListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimPowerPortsListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimPowerPortsListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
@@ -91332,7 +91332,7 @@ func (r ApiDcimPowerPortsListRequest) Occupied(occupied bool) ApiDcimPowerPortsL
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimPowerPortsListRequest) Offset(offset int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) Offset(offset int64) ApiDcimPowerPortsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -91362,13 +91362,13 @@ func (r ApiDcimPowerPortsListRequest) RackN(rackN []string) ApiDcimPowerPortsLis
 }
 
 // Rack (ID)
-func (r ApiDcimPowerPortsListRequest) RackId(rackId []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) RackId(rackId []int64) ApiDcimPowerPortsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimPowerPortsListRequest) RackIdN(rackIdN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) RackIdN(rackIdN []int64) ApiDcimPowerPortsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -91426,13 +91426,13 @@ func (r ApiDcimPowerPortsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDci
 }
 
 // Site (ID)
-func (r ApiDcimPowerPortsListRequest) SiteId(siteId []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) SiteId(siteId []int64) ApiDcimPowerPortsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimPowerPortsListRequest) SiteIdN(siteIdN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) SiteIdN(siteIdN []int64) ApiDcimPowerPortsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -91530,13 +91530,13 @@ func (r ApiDcimPowerPortsListRequest) VirtualChassisN(virtualChassisN []string) 
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimPowerPortsListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimPowerPortsListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimPowerPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimPowerPortsListRequest {
+func (r ApiDcimPowerPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimPowerPortsListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -93077,7 +93077,7 @@ func (a *DcimAPIService) DcimPowerPortsListExecute(r ApiDcimPowerPortsListReques
 type ApiDcimPowerPortsPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedWritablePowerPortRequest *PatchedWritablePowerPortRequest
 }
 
@@ -93099,7 +93099,7 @@ Patch a power port object.
 	@param id A unique integer value identifying this power port.
 	@return ApiDcimPowerPortsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerPortsPartialUpdate(ctx context.Context, id int32) ApiDcimPowerPortsPartialUpdateRequest {
+func (a *DcimAPIService) DcimPowerPortsPartialUpdate(ctx context.Context, id int64) ApiDcimPowerPortsPartialUpdateRequest {
 	return ApiDcimPowerPortsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -93203,7 +93203,7 @@ func (a *DcimAPIService) DcimPowerPortsPartialUpdateExecute(r ApiDcimPowerPortsP
 type ApiDcimPowerPortsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerPortsRetrieveRequest) Execute() (*PowerPort, *http.Response, error) {
@@ -93219,7 +93219,7 @@ Get a power port object.
 	@param id A unique integer value identifying this power port.
 	@return ApiDcimPowerPortsRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerPortsRetrieve(ctx context.Context, id int32) ApiDcimPowerPortsRetrieveRequest {
+func (a *DcimAPIService) DcimPowerPortsRetrieve(ctx context.Context, id int64) ApiDcimPowerPortsRetrieveRequest {
 	return ApiDcimPowerPortsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -93321,7 +93321,7 @@ func (a *DcimAPIService) DcimPowerPortsRetrieveExecute(r ApiDcimPowerPortsRetrie
 type ApiDcimPowerPortsTraceRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimPowerPortsTraceRetrieveRequest) Execute() (*PowerPort, *http.Response, error) {
@@ -93337,7 +93337,7 @@ Trace a complete cable path and return each segment as a three-tuple of (termina
 	@param id A unique integer value identifying this power port.
 	@return ApiDcimPowerPortsTraceRetrieveRequest
 */
-func (a *DcimAPIService) DcimPowerPortsTraceRetrieve(ctx context.Context, id int32) ApiDcimPowerPortsTraceRetrieveRequest {
+func (a *DcimAPIService) DcimPowerPortsTraceRetrieve(ctx context.Context, id int64) ApiDcimPowerPortsTraceRetrieveRequest {
 	return ApiDcimPowerPortsTraceRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -93439,7 +93439,7 @@ func (a *DcimAPIService) DcimPowerPortsTraceRetrieveExecute(r ApiDcimPowerPortsT
 type ApiDcimPowerPortsUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	writablePowerPortRequest *WritablePowerPortRequest
 }
 
@@ -93461,7 +93461,7 @@ Put a power port object.
 	@param id A unique integer value identifying this power port.
 	@return ApiDcimPowerPortsUpdateRequest
 */
-func (a *DcimAPIService) DcimPowerPortsUpdate(ctx context.Context, id int32) ApiDcimPowerPortsUpdateRequest {
+func (a *DcimAPIService) DcimPowerPortsUpdate(ctx context.Context, id int64) ApiDcimPowerPortsUpdateRequest {
 	return ApiDcimPowerPortsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -94056,7 +94056,7 @@ func (a *DcimAPIService) DcimRackReservationsCreateExecute(r ApiDcimRackReservat
 type ApiDcimRackReservationsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRackReservationsDestroyRequest) Execute() (*http.Response, error) {
@@ -94072,7 +94072,7 @@ Delete a rack reservation object.
 	@param id A unique integer value identifying this rack reservation.
 	@return ApiDcimRackReservationsDestroyRequest
 */
-func (a *DcimAPIService) DcimRackReservationsDestroy(ctx context.Context, id int32) ApiDcimRackReservationsDestroyRequest {
+func (a *DcimAPIService) DcimRackReservationsDestroy(ctx context.Context, id int64) ApiDcimRackReservationsDestroyRequest {
 	return ApiDcimRackReservationsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -94181,13 +94181,13 @@ type ApiDcimRackReservationsListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -94195,17 +94195,17 @@ type ApiDcimRackReservationsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	location          *[]string
 	locationN         *[]string
 	locationId        *[]string
 	locationIdN       *[]string
 	modifiedByRequest *string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
-	rackId            *[]int32
-	rackIdN           *[]int32
+	rackId            *[]int64
+	rackIdN           *[]int64
 	region            *[]string
 	regionN           *[]string
 	regionId          *[]string
@@ -94216,8 +94216,8 @@ type ApiDcimRackReservationsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	tag               *[]string
 	tagN              *[]string
 	tenant            *[]string
@@ -94226,14 +94226,14 @@ type ApiDcimRackReservationsListRequest struct {
 	tenantGroupN      *[]string
 	tenantGroupId     *[]string
 	tenantGroupIdN    *[]string
-	tenantId          *[]*int32
-	tenantIdN         *[]*int32
+	tenantId          *[]*int64
+	tenantIdN         *[]*int64
 	unit              *float32
 	updatedByRequest  *string
 	user              *[]string
 	userN             *[]string
-	userId            *[]int32
-	userIdN           *[]int32
+	userId            *[]int64
+	userIdN           *[]int64
 }
 
 func (r ApiDcimRackReservationsListRequest) Created(created []time.Time) ApiDcimRackReservationsListRequest {
@@ -94331,7 +94331,7 @@ func (r ApiDcimRackReservationsListRequest) DescriptionNisw(descriptionNisw []st
 	return r
 }
 
-func (r ApiDcimRackReservationsListRequest) Id(id []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) Id(id []int64) ApiDcimRackReservationsListRequest {
 	r.id = &id
 	return r
 }
@@ -94341,27 +94341,27 @@ func (r ApiDcimRackReservationsListRequest) IdEmpty(idEmpty bool) ApiDcimRackRes
 	return r
 }
 
-func (r ApiDcimRackReservationsListRequest) IdGt(idGt []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) IdGt(idGt []int64) ApiDcimRackReservationsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimRackReservationsListRequest) IdGte(idGte []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) IdGte(idGte []int64) ApiDcimRackReservationsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimRackReservationsListRequest) IdLt(idLt []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) IdLt(idLt []int64) ApiDcimRackReservationsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimRackReservationsListRequest) IdLte(idLte []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) IdLte(idLte []int64) ApiDcimRackReservationsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimRackReservationsListRequest) IdN(idN []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) IdN(idN []int64) ApiDcimRackReservationsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -94402,7 +94402,7 @@ func (r ApiDcimRackReservationsListRequest) LastUpdatedN(lastUpdatedN []time.Tim
 }
 
 // Number of results to return per page.
-func (r ApiDcimRackReservationsListRequest) Limit(limit int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) Limit(limit int64) ApiDcimRackReservationsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -94433,7 +94433,7 @@ func (r ApiDcimRackReservationsListRequest) ModifiedByRequest(modifiedByRequest 
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRackReservationsListRequest) Offset(offset int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) Offset(offset int64) ApiDcimRackReservationsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -94451,13 +94451,13 @@ func (r ApiDcimRackReservationsListRequest) Q(q string) ApiDcimRackReservationsL
 }
 
 // Rack (ID)
-func (r ApiDcimRackReservationsListRequest) RackId(rackId []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) RackId(rackId []int64) ApiDcimRackReservationsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimRackReservationsListRequest) RackIdN(rackIdN []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) RackIdN(rackIdN []int64) ApiDcimRackReservationsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -94515,13 +94515,13 @@ func (r ApiDcimRackReservationsListRequest) SiteGroupIdN(siteGroupIdN []string) 
 }
 
 // Site (ID)
-func (r ApiDcimRackReservationsListRequest) SiteId(siteId []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) SiteId(siteId []int64) ApiDcimRackReservationsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimRackReservationsListRequest) SiteIdN(siteIdN []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) SiteIdN(siteIdN []int64) ApiDcimRackReservationsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -94569,13 +94569,13 @@ func (r ApiDcimRackReservationsListRequest) TenantGroupIdN(tenantGroupIdN []stri
 }
 
 // Tenant (ID)
-func (r ApiDcimRackReservationsListRequest) TenantId(tenantId []*int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) TenantId(tenantId []*int64) ApiDcimRackReservationsListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimRackReservationsListRequest) TenantIdN(tenantIdN []*int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) TenantIdN(tenantIdN []*int64) ApiDcimRackReservationsListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
@@ -94603,13 +94603,13 @@ func (r ApiDcimRackReservationsListRequest) UserN(userN []string) ApiDcimRackRes
 }
 
 // User (ID)
-func (r ApiDcimRackReservationsListRequest) UserId(userId []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) UserId(userId []int64) ApiDcimRackReservationsListRequest {
 	r.userId = &userId
 	return r
 }
 
 // User (ID)
-func (r ApiDcimRackReservationsListRequest) UserIdN(userIdN []int32) ApiDcimRackReservationsListRequest {
+func (r ApiDcimRackReservationsListRequest) UserIdN(userIdN []int64) ApiDcimRackReservationsListRequest {
 	r.userIdN = &userIdN
 	return r
 }
@@ -95438,7 +95438,7 @@ func (a *DcimAPIService) DcimRackReservationsListExecute(r ApiDcimRackReservatio
 type ApiDcimRackReservationsPartialUpdateRequest struct {
 	ctx                           context.Context
 	ApiService                    *DcimAPIService
-	id                            int32
+	id                            int64
 	patchedRackReservationRequest *PatchedRackReservationRequest
 }
 
@@ -95460,7 +95460,7 @@ Patch a rack reservation object.
 	@param id A unique integer value identifying this rack reservation.
 	@return ApiDcimRackReservationsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimRackReservationsPartialUpdate(ctx context.Context, id int32) ApiDcimRackReservationsPartialUpdateRequest {
+func (a *DcimAPIService) DcimRackReservationsPartialUpdate(ctx context.Context, id int64) ApiDcimRackReservationsPartialUpdateRequest {
 	return ApiDcimRackReservationsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -95564,7 +95564,7 @@ func (a *DcimAPIService) DcimRackReservationsPartialUpdateExecute(r ApiDcimRackR
 type ApiDcimRackReservationsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRackReservationsRetrieveRequest) Execute() (*RackReservation, *http.Response, error) {
@@ -95580,7 +95580,7 @@ Get a rack reservation object.
 	@param id A unique integer value identifying this rack reservation.
 	@return ApiDcimRackReservationsRetrieveRequest
 */
-func (a *DcimAPIService) DcimRackReservationsRetrieve(ctx context.Context, id int32) ApiDcimRackReservationsRetrieveRequest {
+func (a *DcimAPIService) DcimRackReservationsRetrieve(ctx context.Context, id int64) ApiDcimRackReservationsRetrieveRequest {
 	return ApiDcimRackReservationsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -95682,7 +95682,7 @@ func (a *DcimAPIService) DcimRackReservationsRetrieveExecute(r ApiDcimRackReserv
 type ApiDcimRackReservationsUpdateRequest struct {
 	ctx                    context.Context
 	ApiService             *DcimAPIService
-	id                     int32
+	id                     int64
 	rackReservationRequest *RackReservationRequest
 }
 
@@ -95704,7 +95704,7 @@ Put a rack reservation object.
 	@param id A unique integer value identifying this rack reservation.
 	@return ApiDcimRackReservationsUpdateRequest
 */
-func (a *DcimAPIService) DcimRackReservationsUpdate(ctx context.Context, id int32) ApiDcimRackReservationsUpdateRequest {
+func (a *DcimAPIService) DcimRackReservationsUpdate(ctx context.Context, id int64) ApiDcimRackReservationsUpdateRequest {
 	return ApiDcimRackReservationsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -96299,7 +96299,7 @@ func (a *DcimAPIService) DcimRackRolesCreateExecute(r ApiDcimRackRolesCreateRequ
 type ApiDcimRackRolesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRackRolesDestroyRequest) Execute() (*http.Response, error) {
@@ -96315,7 +96315,7 @@ Delete a rack role object.
 	@param id A unique integer value identifying this rack role.
 	@return ApiDcimRackRolesDestroyRequest
 */
-func (a *DcimAPIService) DcimRackRolesDestroy(ctx context.Context, id int32) ApiDcimRackRolesDestroyRequest {
+func (a *DcimAPIService) DcimRackRolesDestroy(ctx context.Context, id int64) ApiDcimRackRolesDestroyRequest {
 	return ApiDcimRackRolesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -96435,13 +96435,13 @@ type ApiDcimRackRolesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -96449,7 +96449,7 @@ type ApiDcimRackRolesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -96462,7 +96462,7 @@ type ApiDcimRackRolesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	slug              *[]string
@@ -96631,7 +96631,7 @@ func (r ApiDcimRackRolesListRequest) DescriptionNisw(descriptionNisw []string) A
 	return r
 }
 
-func (r ApiDcimRackRolesListRequest) Id(id []int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) Id(id []int64) ApiDcimRackRolesListRequest {
 	r.id = &id
 	return r
 }
@@ -96641,27 +96641,27 @@ func (r ApiDcimRackRolesListRequest) IdEmpty(idEmpty bool) ApiDcimRackRolesListR
 	return r
 }
 
-func (r ApiDcimRackRolesListRequest) IdGt(idGt []int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) IdGt(idGt []int64) ApiDcimRackRolesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimRackRolesListRequest) IdGte(idGte []int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) IdGte(idGte []int64) ApiDcimRackRolesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimRackRolesListRequest) IdLt(idLt []int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) IdLt(idLt []int64) ApiDcimRackRolesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimRackRolesListRequest) IdLte(idLte []int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) IdLte(idLte []int64) ApiDcimRackRolesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimRackRolesListRequest) IdN(idN []int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) IdN(idN []int64) ApiDcimRackRolesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -96702,7 +96702,7 @@ func (r ApiDcimRackRolesListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiD
 }
 
 // Number of results to return per page.
-func (r ApiDcimRackRolesListRequest) Limit(limit int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) Limit(limit int64) ApiDcimRackRolesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -96768,7 +96768,7 @@ func (r ApiDcimRackRolesListRequest) NameNisw(nameNisw []string) ApiDcimRackRole
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRackRolesListRequest) Offset(offset int32) ApiDcimRackRolesListRequest {
+func (r ApiDcimRackRolesListRequest) Offset(offset int64) ApiDcimRackRolesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -97685,7 +97685,7 @@ func (a *DcimAPIService) DcimRackRolesListExecute(r ApiDcimRackRolesListRequest)
 type ApiDcimRackRolesPartialUpdateRequest struct {
 	ctx                    context.Context
 	ApiService             *DcimAPIService
-	id                     int32
+	id                     int64
 	patchedRackRoleRequest *PatchedRackRoleRequest
 }
 
@@ -97707,7 +97707,7 @@ Patch a rack role object.
 	@param id A unique integer value identifying this rack role.
 	@return ApiDcimRackRolesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimRackRolesPartialUpdate(ctx context.Context, id int32) ApiDcimRackRolesPartialUpdateRequest {
+func (a *DcimAPIService) DcimRackRolesPartialUpdate(ctx context.Context, id int64) ApiDcimRackRolesPartialUpdateRequest {
 	return ApiDcimRackRolesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -97811,7 +97811,7 @@ func (a *DcimAPIService) DcimRackRolesPartialUpdateExecute(r ApiDcimRackRolesPar
 type ApiDcimRackRolesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRackRolesRetrieveRequest) Execute() (*RackRole, *http.Response, error) {
@@ -97827,7 +97827,7 @@ Get a rack role object.
 	@param id A unique integer value identifying this rack role.
 	@return ApiDcimRackRolesRetrieveRequest
 */
-func (a *DcimAPIService) DcimRackRolesRetrieve(ctx context.Context, id int32) ApiDcimRackRolesRetrieveRequest {
+func (a *DcimAPIService) DcimRackRolesRetrieve(ctx context.Context, id int64) ApiDcimRackRolesRetrieveRequest {
 	return ApiDcimRackRolesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -97929,7 +97929,7 @@ func (a *DcimAPIService) DcimRackRolesRetrieveExecute(r ApiDcimRackRolesRetrieve
 type ApiDcimRackRolesUpdateRequest struct {
 	ctx             context.Context
 	ApiService      *DcimAPIService
-	id              int32
+	id              int64
 	rackRoleRequest *RackRoleRequest
 }
 
@@ -97951,7 +97951,7 @@ Put a rack role object.
 	@param id A unique integer value identifying this rack role.
 	@return ApiDcimRackRolesUpdateRequest
 */
-func (a *DcimAPIService) DcimRackRolesUpdate(ctx context.Context, id int32) ApiDcimRackRolesUpdateRequest {
+func (a *DcimAPIService) DcimRackRolesUpdate(ctx context.Context, id int64) ApiDcimRackRolesUpdateRequest {
 	return ApiDcimRackRolesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -98546,7 +98546,7 @@ func (a *DcimAPIService) DcimRackTypesCreateExecute(r ApiDcimRackTypesCreateRequ
 type ApiDcimRackTypesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRackTypesDestroyRequest) Execute() (*http.Response, error) {
@@ -98562,7 +98562,7 @@ Delete a rack type object.
 	@param id A unique integer value identifying this rack type.
 	@return ApiDcimRackTypesDestroyRequest
 */
-func (a *DcimAPIService) DcimRackTypesDestroy(ctx context.Context, id int32) ApiDcimRackTypesDestroyRequest {
+func (a *DcimAPIService) DcimRackTypesDestroy(ctx context.Context, id int64) ApiDcimRackTypesDestroyRequest {
 	return ApiDcimRackTypesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -98683,13 +98683,13 @@ type ApiDcimRackTypesListRequest struct {
 	formFactorNie      *[]string
 	formFactorNiew     *[]string
 	formFactorNisw     *[]string
-	id                 *[]int32
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
 	lastUpdated        *[]time.Time
 	lastUpdatedEmpty   *[]time.Time
 	lastUpdatedGt      *[]time.Time
@@ -98697,18 +98697,18 @@ type ApiDcimRackTypesListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
+	limit              *int64
 	manufacturer       *[]string
 	manufacturerN      *[]string
-	manufacturerId     *[]int32
-	manufacturerIdN    *[]int32
-	maxWeight          *[]int32
+	manufacturerId     *[]int64
+	manufacturerIdN    *[]int64
+	maxWeight          *[]int64
 	maxWeightEmpty     *bool
-	maxWeightGt        *[]int32
-	maxWeightGte       *[]int32
-	maxWeightLt        *[]int32
-	maxWeightLte       *[]int32
-	maxWeightN         *[]int32
+	maxWeightGt        *[]int64
+	maxWeightGte       *[]int64
+	maxWeightLt        *[]int64
+	maxWeightLte       *[]int64
+	maxWeightN         *[]int64
 	model              *[]string
 	modelEmpty         *bool
 	modelIc            *[]string
@@ -98721,30 +98721,30 @@ type ApiDcimRackTypesListRequest struct {
 	modelNiew          *[]string
 	modelNisw          *[]string
 	modifiedByRequest  *string
-	mountingDepth      *[]int32
+	mountingDepth      *[]int64
 	mountingDepthEmpty *bool
-	mountingDepthGt    *[]int32
-	mountingDepthGte   *[]int32
-	mountingDepthLt    *[]int32
-	mountingDepthLte   *[]int32
-	mountingDepthN     *[]int32
-	offset             *int32
+	mountingDepthGt    *[]int64
+	mountingDepthGte   *[]int64
+	mountingDepthLt    *[]int64
+	mountingDepthLte   *[]int64
+	mountingDepthN     *[]int64
+	offset             *int64
 	ordering           *string
-	outerDepth         *[]int32
+	outerDepth         *[]int64
 	outerDepthEmpty    *bool
-	outerDepthGt       *[]int32
-	outerDepthGte      *[]int32
-	outerDepthLt       *[]int32
-	outerDepthLte      *[]int32
-	outerDepthN        *[]int32
+	outerDepthGt       *[]int64
+	outerDepthGte      *[]int64
+	outerDepthLt       *[]int64
+	outerDepthLte      *[]int64
+	outerDepthN        *[]int64
 	outerUnit          *DcimRackTypesListOuterUnitParameter
-	outerWidth         *[]int32
+	outerWidth         *[]int64
 	outerWidthEmpty    *bool
-	outerWidthGt       *[]int32
-	outerWidthGte      *[]int32
-	outerWidthLt       *[]int32
-	outerWidthLte      *[]int32
-	outerWidthN        *[]int32
+	outerWidthGt       *[]int64
+	outerWidthGte      *[]int64
+	outerWidthLt       *[]int64
+	outerWidthLte      *[]int64
+	outerWidthN        *[]int64
 	q                  *string
 	slug               *[]string
 	slugEmpty          *bool
@@ -98757,22 +98757,22 @@ type ApiDcimRackTypesListRequest struct {
 	slugNie            *[]string
 	slugNiew           *[]string
 	slugNisw           *[]string
-	startingUnit       *[]int32
+	startingUnit       *[]int64
 	startingUnitEmpty  *bool
-	startingUnitGt     *[]int32
-	startingUnitGte    *[]int32
-	startingUnitLt     *[]int32
-	startingUnitLte    *[]int32
-	startingUnitN      *[]int32
+	startingUnitGt     *[]int64
+	startingUnitGte    *[]int64
+	startingUnitLt     *[]int64
+	startingUnitLte    *[]int64
+	startingUnitN      *[]int64
 	tag                *[]string
 	tagN               *[]string
-	uHeight            *[]int32
+	uHeight            *[]int64
 	uHeightEmpty       *bool
-	uHeightGt          *[]int32
-	uHeightGte         *[]int32
-	uHeightLt          *[]int32
-	uHeightLte         *[]int32
-	uHeightN           *[]int32
+	uHeightGt          *[]int64
+	uHeightGte         *[]int64
+	uHeightLt          *[]int64
+	uHeightLte         *[]int64
+	uHeightN           *[]int64
 	updatedByRequest   *string
 	weight             *[]float64
 	weightEmpty        *bool
@@ -98782,16 +98782,16 @@ type ApiDcimRackTypesListRequest struct {
 	weightLte          *[]float64
 	weightN            *[]float64
 	weightUnit         *DcimDeviceTypesListWeightUnitParameter
-	width              *[]int32
-	widthIc            *[]int32
-	widthIe            *[]int32
-	widthIew           *[]int32
-	widthIsw           *[]int32
-	widthN             *[]int32
-	widthNic           *[]int32
-	widthNie           *[]int32
-	widthNiew          *[]int32
-	widthNisw          *[]int32
+	width              *[]int64
+	widthIc            *[]int64
+	widthIe            *[]int64
+	widthIew           *[]int64
+	widthIsw           *[]int64
+	widthN             *[]int64
+	widthNic           *[]int64
+	widthNie           *[]int64
+	widthNiew          *[]int64
+	widthNisw          *[]int64
 }
 
 func (r ApiDcimRackTypesListRequest) Created(created []time.Time) ApiDcimRackTypesListRequest {
@@ -98949,7 +98949,7 @@ func (r ApiDcimRackTypesListRequest) FormFactorNisw(formFactorNisw []string) Api
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) Id(id []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) Id(id []int64) ApiDcimRackTypesListRequest {
 	r.id = &id
 	return r
 }
@@ -98959,27 +98959,27 @@ func (r ApiDcimRackTypesListRequest) IdEmpty(idEmpty bool) ApiDcimRackTypesListR
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) IdGt(idGt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) IdGt(idGt []int64) ApiDcimRackTypesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) IdGte(idGte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) IdGte(idGte []int64) ApiDcimRackTypesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) IdLt(idLt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) IdLt(idLt []int64) ApiDcimRackTypesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) IdLte(idLte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) IdLte(idLte []int64) ApiDcimRackTypesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) IdN(idN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) IdN(idN []int64) ApiDcimRackTypesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -99020,7 +99020,7 @@ func (r ApiDcimRackTypesListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiD
 }
 
 // Number of results to return per page.
-func (r ApiDcimRackTypesListRequest) Limit(limit int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) Limit(limit int64) ApiDcimRackTypesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -99038,18 +99038,18 @@ func (r ApiDcimRackTypesListRequest) ManufacturerN(manufacturerN []string) ApiDc
 }
 
 // Manufacturer (ID)
-func (r ApiDcimRackTypesListRequest) ManufacturerId(manufacturerId []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) ManufacturerId(manufacturerId []int64) ApiDcimRackTypesListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimRackTypesListRequest) ManufacturerIdN(manufacturerIdN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) ManufacturerIdN(manufacturerIdN []int64) ApiDcimRackTypesListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MaxWeight(maxWeight []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MaxWeight(maxWeight []int64) ApiDcimRackTypesListRequest {
 	r.maxWeight = &maxWeight
 	return r
 }
@@ -99059,27 +99059,27 @@ func (r ApiDcimRackTypesListRequest) MaxWeightEmpty(maxWeightEmpty bool) ApiDcim
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MaxWeightGt(maxWeightGt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MaxWeightGt(maxWeightGt []int64) ApiDcimRackTypesListRequest {
 	r.maxWeightGt = &maxWeightGt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MaxWeightGte(maxWeightGte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MaxWeightGte(maxWeightGte []int64) ApiDcimRackTypesListRequest {
 	r.maxWeightGte = &maxWeightGte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MaxWeightLt(maxWeightLt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MaxWeightLt(maxWeightLt []int64) ApiDcimRackTypesListRequest {
 	r.maxWeightLt = &maxWeightLt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MaxWeightLte(maxWeightLte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MaxWeightLte(maxWeightLte []int64) ApiDcimRackTypesListRequest {
 	r.maxWeightLte = &maxWeightLte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MaxWeightN(maxWeightN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MaxWeightN(maxWeightN []int64) ApiDcimRackTypesListRequest {
 	r.maxWeightN = &maxWeightN
 	return r
 }
@@ -99144,7 +99144,7 @@ func (r ApiDcimRackTypesListRequest) ModifiedByRequest(modifiedByRequest string)
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MountingDepth(mountingDepth []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MountingDepth(mountingDepth []int64) ApiDcimRackTypesListRequest {
 	r.mountingDepth = &mountingDepth
 	return r
 }
@@ -99154,33 +99154,33 @@ func (r ApiDcimRackTypesListRequest) MountingDepthEmpty(mountingDepthEmpty bool)
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MountingDepthGt(mountingDepthGt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MountingDepthGt(mountingDepthGt []int64) ApiDcimRackTypesListRequest {
 	r.mountingDepthGt = &mountingDepthGt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MountingDepthGte(mountingDepthGte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MountingDepthGte(mountingDepthGte []int64) ApiDcimRackTypesListRequest {
 	r.mountingDepthGte = &mountingDepthGte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MountingDepthLt(mountingDepthLt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MountingDepthLt(mountingDepthLt []int64) ApiDcimRackTypesListRequest {
 	r.mountingDepthLt = &mountingDepthLt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MountingDepthLte(mountingDepthLte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MountingDepthLte(mountingDepthLte []int64) ApiDcimRackTypesListRequest {
 	r.mountingDepthLte = &mountingDepthLte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) MountingDepthN(mountingDepthN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) MountingDepthN(mountingDepthN []int64) ApiDcimRackTypesListRequest {
 	r.mountingDepthN = &mountingDepthN
 	return r
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRackTypesListRequest) Offset(offset int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) Offset(offset int64) ApiDcimRackTypesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -99191,7 +99191,7 @@ func (r ApiDcimRackTypesListRequest) Ordering(ordering string) ApiDcimRackTypesL
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterDepth(outerDepth []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterDepth(outerDepth []int64) ApiDcimRackTypesListRequest {
 	r.outerDepth = &outerDepth
 	return r
 }
@@ -99201,27 +99201,27 @@ func (r ApiDcimRackTypesListRequest) OuterDepthEmpty(outerDepthEmpty bool) ApiDc
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterDepthGt(outerDepthGt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterDepthGt(outerDepthGt []int64) ApiDcimRackTypesListRequest {
 	r.outerDepthGt = &outerDepthGt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterDepthGte(outerDepthGte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterDepthGte(outerDepthGte []int64) ApiDcimRackTypesListRequest {
 	r.outerDepthGte = &outerDepthGte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterDepthLt(outerDepthLt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterDepthLt(outerDepthLt []int64) ApiDcimRackTypesListRequest {
 	r.outerDepthLt = &outerDepthLt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterDepthLte(outerDepthLte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterDepthLte(outerDepthLte []int64) ApiDcimRackTypesListRequest {
 	r.outerDepthLte = &outerDepthLte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterDepthN(outerDepthN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterDepthN(outerDepthN []int64) ApiDcimRackTypesListRequest {
 	r.outerDepthN = &outerDepthN
 	return r
 }
@@ -99232,7 +99232,7 @@ func (r ApiDcimRackTypesListRequest) OuterUnit(outerUnit DcimRackTypesListOuterU
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterWidth(outerWidth []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterWidth(outerWidth []int64) ApiDcimRackTypesListRequest {
 	r.outerWidth = &outerWidth
 	return r
 }
@@ -99242,27 +99242,27 @@ func (r ApiDcimRackTypesListRequest) OuterWidthEmpty(outerWidthEmpty bool) ApiDc
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterWidthGt(outerWidthGt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterWidthGt(outerWidthGt []int64) ApiDcimRackTypesListRequest {
 	r.outerWidthGt = &outerWidthGt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterWidthGte(outerWidthGte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterWidthGte(outerWidthGte []int64) ApiDcimRackTypesListRequest {
 	r.outerWidthGte = &outerWidthGte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterWidthLt(outerWidthLt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterWidthLt(outerWidthLt []int64) ApiDcimRackTypesListRequest {
 	r.outerWidthLt = &outerWidthLt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterWidthLte(outerWidthLte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterWidthLte(outerWidthLte []int64) ApiDcimRackTypesListRequest {
 	r.outerWidthLte = &outerWidthLte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) OuterWidthN(outerWidthN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) OuterWidthN(outerWidthN []int64) ApiDcimRackTypesListRequest {
 	r.outerWidthN = &outerWidthN
 	return r
 }
@@ -99328,7 +99328,7 @@ func (r ApiDcimRackTypesListRequest) SlugNisw(slugNisw []string) ApiDcimRackType
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) StartingUnit(startingUnit []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) StartingUnit(startingUnit []int64) ApiDcimRackTypesListRequest {
 	r.startingUnit = &startingUnit
 	return r
 }
@@ -99338,27 +99338,27 @@ func (r ApiDcimRackTypesListRequest) StartingUnitEmpty(startingUnitEmpty bool) A
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) StartingUnitGt(startingUnitGt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) StartingUnitGt(startingUnitGt []int64) ApiDcimRackTypesListRequest {
 	r.startingUnitGt = &startingUnitGt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) StartingUnitGte(startingUnitGte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) StartingUnitGte(startingUnitGte []int64) ApiDcimRackTypesListRequest {
 	r.startingUnitGte = &startingUnitGte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) StartingUnitLt(startingUnitLt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) StartingUnitLt(startingUnitLt []int64) ApiDcimRackTypesListRequest {
 	r.startingUnitLt = &startingUnitLt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) StartingUnitLte(startingUnitLte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) StartingUnitLte(startingUnitLte []int64) ApiDcimRackTypesListRequest {
 	r.startingUnitLte = &startingUnitLte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) StartingUnitN(startingUnitN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) StartingUnitN(startingUnitN []int64) ApiDcimRackTypesListRequest {
 	r.startingUnitN = &startingUnitN
 	return r
 }
@@ -99373,7 +99373,7 @@ func (r ApiDcimRackTypesListRequest) TagN(tagN []string) ApiDcimRackTypesListReq
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) UHeight(uHeight []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) UHeight(uHeight []int64) ApiDcimRackTypesListRequest {
 	r.uHeight = &uHeight
 	return r
 }
@@ -99383,27 +99383,27 @@ func (r ApiDcimRackTypesListRequest) UHeightEmpty(uHeightEmpty bool) ApiDcimRack
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) UHeightGt(uHeightGt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) UHeightGt(uHeightGt []int64) ApiDcimRackTypesListRequest {
 	r.uHeightGt = &uHeightGt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) UHeightGte(uHeightGte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) UHeightGte(uHeightGte []int64) ApiDcimRackTypesListRequest {
 	r.uHeightGte = &uHeightGte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) UHeightLt(uHeightLt []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) UHeightLt(uHeightLt []int64) ApiDcimRackTypesListRequest {
 	r.uHeightLt = &uHeightLt
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) UHeightLte(uHeightLte []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) UHeightLte(uHeightLte []int64) ApiDcimRackTypesListRequest {
 	r.uHeightLte = &uHeightLte
 	return r
 }
 
-func (r ApiDcimRackTypesListRequest) UHeightN(uHeightN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) UHeightN(uHeightN []int64) ApiDcimRackTypesListRequest {
 	r.uHeightN = &uHeightN
 	return r
 }
@@ -99455,61 +99455,61 @@ func (r ApiDcimRackTypesListRequest) WeightUnit(weightUnit DcimDeviceTypesListWe
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) Width(width []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) Width(width []int64) ApiDcimRackTypesListRequest {
 	r.width = &width
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthIc(widthIc []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthIc(widthIc []int64) ApiDcimRackTypesListRequest {
 	r.widthIc = &widthIc
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthIe(widthIe []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthIe(widthIe []int64) ApiDcimRackTypesListRequest {
 	r.widthIe = &widthIe
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthIew(widthIew []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthIew(widthIew []int64) ApiDcimRackTypesListRequest {
 	r.widthIew = &widthIew
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthIsw(widthIsw []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthIsw(widthIsw []int64) ApiDcimRackTypesListRequest {
 	r.widthIsw = &widthIsw
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthN(widthN []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthN(widthN []int64) ApiDcimRackTypesListRequest {
 	r.widthN = &widthN
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthNic(widthNic []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthNic(widthNic []int64) ApiDcimRackTypesListRequest {
 	r.widthNic = &widthNic
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthNie(widthNie []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthNie(widthNie []int64) ApiDcimRackTypesListRequest {
 	r.widthNie = &widthNie
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthNiew(widthNiew []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthNiew(widthNiew []int64) ApiDcimRackTypesListRequest {
 	r.widthNiew = &widthNiew
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRackTypesListRequest) WidthNisw(widthNisw []int32) ApiDcimRackTypesListRequest {
+func (r ApiDcimRackTypesListRequest) WidthNisw(widthNisw []int64) ApiDcimRackTypesListRequest {
 	r.widthNisw = &widthNisw
 	return r
 }
@@ -100990,7 +100990,7 @@ func (a *DcimAPIService) DcimRackTypesListExecute(r ApiDcimRackTypesListRequest)
 type ApiDcimRackTypesPartialUpdateRequest struct {
 	ctx                            context.Context
 	ApiService                     *DcimAPIService
-	id                             int32
+	id                             int64
 	patchedWritableRackTypeRequest *PatchedWritableRackTypeRequest
 }
 
@@ -101012,7 +101012,7 @@ Patch a rack type object.
 	@param id A unique integer value identifying this rack type.
 	@return ApiDcimRackTypesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimRackTypesPartialUpdate(ctx context.Context, id int32) ApiDcimRackTypesPartialUpdateRequest {
+func (a *DcimAPIService) DcimRackTypesPartialUpdate(ctx context.Context, id int64) ApiDcimRackTypesPartialUpdateRequest {
 	return ApiDcimRackTypesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -101116,7 +101116,7 @@ func (a *DcimAPIService) DcimRackTypesPartialUpdateExecute(r ApiDcimRackTypesPar
 type ApiDcimRackTypesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRackTypesRetrieveRequest) Execute() (*RackType, *http.Response, error) {
@@ -101132,7 +101132,7 @@ Get a rack type object.
 	@param id A unique integer value identifying this rack type.
 	@return ApiDcimRackTypesRetrieveRequest
 */
-func (a *DcimAPIService) DcimRackTypesRetrieve(ctx context.Context, id int32) ApiDcimRackTypesRetrieveRequest {
+func (a *DcimAPIService) DcimRackTypesRetrieve(ctx context.Context, id int64) ApiDcimRackTypesRetrieveRequest {
 	return ApiDcimRackTypesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -101234,7 +101234,7 @@ func (a *DcimAPIService) DcimRackTypesRetrieveExecute(r ApiDcimRackTypesRetrieve
 type ApiDcimRackTypesUpdateRequest struct {
 	ctx                     context.Context
 	ApiService              *DcimAPIService
-	id                      int32
+	id                      int64
 	writableRackTypeRequest *WritableRackTypeRequest
 }
 
@@ -101256,7 +101256,7 @@ Put a rack type object.
 	@param id A unique integer value identifying this rack type.
 	@return ApiDcimRackTypesUpdateRequest
 */
-func (a *DcimAPIService) DcimRackTypesUpdate(ctx context.Context, id int32) ApiDcimRackTypesUpdateRequest {
+func (a *DcimAPIService) DcimRackTypesUpdate(ctx context.Context, id int64) ApiDcimRackTypesUpdateRequest {
 	return ApiDcimRackTypesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -101851,7 +101851,7 @@ func (a *DcimAPIService) DcimRacksCreateExecute(r ApiDcimRacksCreateRequest) (*R
 type ApiDcimRacksDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRacksDestroyRequest) Execute() (*http.Response, error) {
@@ -101867,7 +101867,7 @@ Delete a rack object.
 	@param id A unique integer value identifying this rack.
 	@return ApiDcimRacksDestroyRequest
 */
-func (a *DcimAPIService) DcimRacksDestroy(ctx context.Context, id int32) ApiDcimRacksDestroyRequest {
+func (a *DcimAPIService) DcimRacksDestroy(ctx context.Context, id int64) ApiDcimRacksDestroyRequest {
 	return ApiDcimRacksDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -101957,22 +101957,22 @@ func (a *DcimAPIService) DcimRacksDestroyExecute(r ApiDcimRacksDestroyRequest) (
 type ApiDcimRacksElevationRetrieveRequest struct {
 	ctx           context.Context
 	ApiService    *DcimAPIService
-	id            int32
-	exclude       *int32
+	id            int64
+	exclude       *int64
 	expandDevices *bool
 	face          *DcimRacksElevationRetrieveFaceParameter
 	includeImages *bool
-	legendWidth   *int32
-	limit         *int32
-	marginWidth   *int32
-	offset        *int32
+	legendWidth   *int64
+	limit         *int64
+	marginWidth   *int64
+	offset        *int64
 	q             *string
 	render        *DcimRacksElevationRetrieveRenderParameter
-	unitHeight    *int32
-	unitWidth     *int32
+	unitHeight    *int64
+	unitWidth     *int64
 }
 
-func (r ApiDcimRacksElevationRetrieveRequest) Exclude(exclude int32) ApiDcimRacksElevationRetrieveRequest {
+func (r ApiDcimRacksElevationRetrieveRequest) Exclude(exclude int64) ApiDcimRacksElevationRetrieveRequest {
 	r.exclude = &exclude
 	return r
 }
@@ -101993,24 +101993,24 @@ func (r ApiDcimRacksElevationRetrieveRequest) IncludeImages(includeImages bool) 
 	return r
 }
 
-func (r ApiDcimRacksElevationRetrieveRequest) LegendWidth(legendWidth int32) ApiDcimRacksElevationRetrieveRequest {
+func (r ApiDcimRacksElevationRetrieveRequest) LegendWidth(legendWidth int64) ApiDcimRacksElevationRetrieveRequest {
 	r.legendWidth = &legendWidth
 	return r
 }
 
 // Number of results to return per page.
-func (r ApiDcimRacksElevationRetrieveRequest) Limit(limit int32) ApiDcimRacksElevationRetrieveRequest {
+func (r ApiDcimRacksElevationRetrieveRequest) Limit(limit int64) ApiDcimRacksElevationRetrieveRequest {
 	r.limit = &limit
 	return r
 }
 
-func (r ApiDcimRacksElevationRetrieveRequest) MarginWidth(marginWidth int32) ApiDcimRacksElevationRetrieveRequest {
+func (r ApiDcimRacksElevationRetrieveRequest) MarginWidth(marginWidth int64) ApiDcimRacksElevationRetrieveRequest {
 	r.marginWidth = &marginWidth
 	return r
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRacksElevationRetrieveRequest) Offset(offset int32) ApiDcimRacksElevationRetrieveRequest {
+func (r ApiDcimRacksElevationRetrieveRequest) Offset(offset int64) ApiDcimRacksElevationRetrieveRequest {
 	r.offset = &offset
 	return r
 }
@@ -102026,12 +102026,12 @@ func (r ApiDcimRacksElevationRetrieveRequest) Render(render DcimRacksElevationRe
 	return r
 }
 
-func (r ApiDcimRacksElevationRetrieveRequest) UnitHeight(unitHeight int32) ApiDcimRacksElevationRetrieveRequest {
+func (r ApiDcimRacksElevationRetrieveRequest) UnitHeight(unitHeight int64) ApiDcimRacksElevationRetrieveRequest {
 	r.unitHeight = &unitHeight
 	return r
 }
 
-func (r ApiDcimRacksElevationRetrieveRequest) UnitWidth(unitWidth int32) ApiDcimRacksElevationRetrieveRequest {
+func (r ApiDcimRacksElevationRetrieveRequest) UnitWidth(unitWidth int64) ApiDcimRacksElevationRetrieveRequest {
 	r.unitWidth = &unitWidth
 	return r
 }
@@ -102049,7 +102049,7 @@ Rack elevation representing the list of rack units. Also supports rendering the 
 	@param id A unique integer value identifying this rack.
 	@return ApiDcimRacksElevationRetrieveRequest
 */
-func (a *DcimAPIService) DcimRacksElevationRetrieve(ctx context.Context, id int32) ApiDcimRacksElevationRetrieveRequest {
+func (a *DcimAPIService) DcimRacksElevationRetrieve(ctx context.Context, id int64) ApiDcimRacksElevationRetrieveRequest {
 	return ApiDcimRacksElevationRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -102104,7 +102104,7 @@ func (a *DcimAPIService) DcimRacksElevationRetrieveExecute(r ApiDcimRacksElevati
 	if r.legendWidth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "legend_width", r.legendWidth, "form", "")
 	} else {
-		var defaultValue int32 = 30
+		var defaultValue int64 = 30
 		r.legendWidth = &defaultValue
 	}
 	if r.limit != nil {
@@ -102113,7 +102113,7 @@ func (a *DcimAPIService) DcimRacksElevationRetrieveExecute(r ApiDcimRacksElevati
 	if r.marginWidth != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "margin_width", r.marginWidth, "form", "")
 	} else {
-		var defaultValue int32 = 15
+		var defaultValue int64 = 15
 		r.marginWidth = &defaultValue
 	}
 	if r.offset != nil {
@@ -102217,12 +102217,12 @@ type ApiDcimRacksListRequest struct {
 	assetTagNie        *[]string
 	assetTagNiew       *[]string
 	assetTagNisw       *[]string
-	contact            *[]int32
-	contactN           *[]int32
+	contact            *[]int64
+	contactN           *[]int64
 	contactGroup       *[]string
 	contactGroupN      *[]string
-	contactRole        *[]int32
-	contactRoleN       *[]int32
+	contactRole        *[]int64
+	contactRoleN       *[]int64
 	created            *[]time.Time
 	createdEmpty       *[]time.Time
 	createdGt          *[]time.Time
@@ -102265,13 +102265,13 @@ type ApiDcimRacksListRequest struct {
 	formFactorNie      *[]*string
 	formFactorNiew     *[]*string
 	formFactorNisw     *[]*string
-	id                 *[]int32
+	id                 *[]int64
 	idEmpty            *bool
-	idGt               *[]int32
-	idGte              *[]int32
-	idLt               *[]int32
-	idLte              *[]int32
-	idN                *[]int32
+	idGt               *[]int64
+	idGte              *[]int64
+	idLt               *[]int64
+	idLte              *[]int64
+	idN                *[]int64
 	lastUpdated        *[]time.Time
 	lastUpdatedEmpty   *[]time.Time
 	lastUpdatedGt      *[]time.Time
@@ -102279,30 +102279,30 @@ type ApiDcimRacksListRequest struct {
 	lastUpdatedLt      *[]time.Time
 	lastUpdatedLte     *[]time.Time
 	lastUpdatedN       *[]time.Time
-	limit              *int32
+	limit              *int64
 	location           *[]string
 	locationN          *[]string
 	locationId         *[]string
 	locationIdN        *[]string
 	manufacturer       *[]string
 	manufacturerN      *[]string
-	manufacturerId     *[]int32
-	manufacturerIdN    *[]int32
-	maxWeight          *[]int32
+	manufacturerId     *[]int64
+	manufacturerIdN    *[]int64
+	maxWeight          *[]int64
 	maxWeightEmpty     *bool
-	maxWeightGt        *[]int32
-	maxWeightGte       *[]int32
-	maxWeightLt        *[]int32
-	maxWeightLte       *[]int32
-	maxWeightN         *[]int32
+	maxWeightGt        *[]int64
+	maxWeightGte       *[]int64
+	maxWeightLt        *[]int64
+	maxWeightLte       *[]int64
+	maxWeightN         *[]int64
 	modifiedByRequest  *string
-	mountingDepth      *[]int32
+	mountingDepth      *[]int64
 	mountingDepthEmpty *bool
-	mountingDepthGt    *[]int32
-	mountingDepthGte   *[]int32
-	mountingDepthLt    *[]int32
-	mountingDepthLte   *[]int32
-	mountingDepthN     *[]int32
+	mountingDepthGt    *[]int64
+	mountingDepthGte   *[]int64
+	mountingDepthLt    *[]int64
+	mountingDepthLte   *[]int64
+	mountingDepthN     *[]int64
 	name               *[]string
 	nameEmpty          *bool
 	nameIc             *[]string
@@ -102314,36 +102314,36 @@ type ApiDcimRacksListRequest struct {
 	nameNie            *[]string
 	nameNiew           *[]string
 	nameNisw           *[]string
-	offset             *int32
+	offset             *int64
 	ordering           *string
-	outerDepth         *[]int32
+	outerDepth         *[]int64
 	outerDepthEmpty    *bool
-	outerDepthGt       *[]int32
-	outerDepthGte      *[]int32
-	outerDepthLt       *[]int32
-	outerDepthLte      *[]int32
-	outerDepthN        *[]int32
+	outerDepthGt       *[]int64
+	outerDepthGte      *[]int64
+	outerDepthLt       *[]int64
+	outerDepthLte      *[]int64
+	outerDepthN        *[]int64
 	outerUnit          *DcimRackTypesListOuterUnitParameter
-	outerWidth         *[]int32
+	outerWidth         *[]int64
 	outerWidthEmpty    *bool
-	outerWidthGt       *[]int32
-	outerWidthGte      *[]int32
-	outerWidthLt       *[]int32
-	outerWidthLte      *[]int32
-	outerWidthN        *[]int32
+	outerWidthGt       *[]int64
+	outerWidthGte      *[]int64
+	outerWidthLt       *[]int64
+	outerWidthLte      *[]int64
+	outerWidthN        *[]int64
 	q                  *string
 	rackType           *[]string
 	rackTypeN          *[]string
-	rackTypeId         *[]*int32
-	rackTypeIdN        *[]*int32
+	rackTypeId         *[]*int64
+	rackTypeIdN        *[]*int64
 	region             *[]string
 	regionN            *[]string
 	regionId           *[]string
 	regionIdN          *[]string
 	role               *[]string
 	roleN              *[]string
-	roleId             *[]*int32
-	roleIdN            *[]*int32
+	roleId             *[]*int64
+	roleIdN            *[]*int64
 	serial             *[]string
 	serialEmpty        *bool
 	serialIc           *[]string
@@ -102361,15 +102361,15 @@ type ApiDcimRacksListRequest struct {
 	siteGroupN         *[]string
 	siteGroupId        *[]string
 	siteGroupIdN       *[]string
-	siteId             *[]int32
-	siteIdN            *[]int32
-	startingUnit       *[]int32
+	siteId             *[]int64
+	siteIdN            *[]int64
+	startingUnit       *[]int64
 	startingUnitEmpty  *bool
-	startingUnitGt     *[]int32
-	startingUnitGte    *[]int32
-	startingUnitLt     *[]int32
-	startingUnitLte    *[]int32
-	startingUnitN      *[]int32
+	startingUnitGt     *[]int64
+	startingUnitGte    *[]int64
+	startingUnitLt     *[]int64
+	startingUnitLte    *[]int64
+	startingUnitN      *[]int64
 	status             *[]string
 	statusEmpty        *bool
 	statusIc           *[]string
@@ -102389,15 +102389,15 @@ type ApiDcimRacksListRequest struct {
 	tenantGroupN       *[]string
 	tenantGroupId      *[]string
 	tenantGroupIdN     *[]string
-	tenantId           *[]*int32
-	tenantIdN          *[]*int32
-	uHeight            *[]int32
+	tenantId           *[]*int64
+	tenantIdN          *[]*int64
+	uHeight            *[]int64
 	uHeightEmpty       *bool
-	uHeightGt          *[]int32
-	uHeightGte         *[]int32
-	uHeightLt          *[]int32
-	uHeightLte         *[]int32
-	uHeightN           *[]int32
+	uHeightGt          *[]int64
+	uHeightGte         *[]int64
+	uHeightLt          *[]int64
+	uHeightLte         *[]int64
+	uHeightN           *[]int64
 	updatedByRequest   *string
 	weight             *[]float64
 	weightEmpty        *bool
@@ -102407,16 +102407,16 @@ type ApiDcimRacksListRequest struct {
 	weightLte          *[]float64
 	weightN            *[]float64
 	weightUnit         *DcimDeviceTypesListWeightUnitParameter
-	width              *[]int32
-	widthIc            *[]int32
-	widthIe            *[]int32
-	widthIew           *[]int32
-	widthIsw           *[]int32
-	widthN             *[]int32
-	widthNic           *[]int32
-	widthNie           *[]int32
-	widthNiew          *[]int32
-	widthNisw          *[]int32
+	width              *[]int64
+	widthIc            *[]int64
+	widthIe            *[]int64
+	widthIew           *[]int64
+	widthIsw           *[]int64
+	widthN             *[]int64
+	widthNic           *[]int64
+	widthNie           *[]int64
+	widthNiew          *[]int64
+	widthNisw          *[]int64
 }
 
 // * &#x60;front-to-rear&#x60; - Front to rear * &#x60;rear-to-front&#x60; - Rear to front
@@ -102481,13 +102481,13 @@ func (r ApiDcimRacksListRequest) AssetTagNisw(assetTagNisw []string) ApiDcimRack
 }
 
 // Contact
-func (r ApiDcimRacksListRequest) Contact(contact []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) Contact(contact []int64) ApiDcimRacksListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimRacksListRequest) ContactN(contactN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) ContactN(contactN []int64) ApiDcimRacksListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -102503,13 +102503,13 @@ func (r ApiDcimRacksListRequest) ContactGroupN(contactGroupN []string) ApiDcimRa
 }
 
 // Contact Role
-func (r ApiDcimRacksListRequest) ContactRole(contactRole []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) ContactRole(contactRole []int64) ApiDcimRacksListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimRacksListRequest) ContactRoleN(contactRoleN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) ContactRoleN(contactRoleN []int64) ApiDcimRacksListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -102724,7 +102724,7 @@ func (r ApiDcimRacksListRequest) FormFactorNisw(formFactorNisw []*string) ApiDci
 	return r
 }
 
-func (r ApiDcimRacksListRequest) Id(id []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) Id(id []int64) ApiDcimRacksListRequest {
 	r.id = &id
 	return r
 }
@@ -102734,27 +102734,27 @@ func (r ApiDcimRacksListRequest) IdEmpty(idEmpty bool) ApiDcimRacksListRequest {
 	return r
 }
 
-func (r ApiDcimRacksListRequest) IdGt(idGt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) IdGt(idGt []int64) ApiDcimRacksListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) IdGte(idGte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) IdGte(idGte []int64) ApiDcimRacksListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) IdLt(idLt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) IdLt(idLt []int64) ApiDcimRacksListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) IdLte(idLte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) IdLte(idLte []int64) ApiDcimRacksListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) IdN(idN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) IdN(idN []int64) ApiDcimRacksListRequest {
 	r.idN = &idN
 	return r
 }
@@ -102795,7 +102795,7 @@ func (r ApiDcimRacksListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiDcimR
 }
 
 // Number of results to return per page.
-func (r ApiDcimRacksListRequest) Limit(limit int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) Limit(limit int64) ApiDcimRacksListRequest {
 	r.limit = &limit
 	return r
 }
@@ -102833,18 +102833,18 @@ func (r ApiDcimRacksListRequest) ManufacturerN(manufacturerN []string) ApiDcimRa
 }
 
 // Manufacturer (ID)
-func (r ApiDcimRacksListRequest) ManufacturerId(manufacturerId []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) ManufacturerId(manufacturerId []int64) ApiDcimRacksListRequest {
 	r.manufacturerId = &manufacturerId
 	return r
 }
 
 // Manufacturer (ID)
-func (r ApiDcimRacksListRequest) ManufacturerIdN(manufacturerIdN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) ManufacturerIdN(manufacturerIdN []int64) ApiDcimRacksListRequest {
 	r.manufacturerIdN = &manufacturerIdN
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MaxWeight(maxWeight []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MaxWeight(maxWeight []int64) ApiDcimRacksListRequest {
 	r.maxWeight = &maxWeight
 	return r
 }
@@ -102854,27 +102854,27 @@ func (r ApiDcimRacksListRequest) MaxWeightEmpty(maxWeightEmpty bool) ApiDcimRack
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MaxWeightGt(maxWeightGt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MaxWeightGt(maxWeightGt []int64) ApiDcimRacksListRequest {
 	r.maxWeightGt = &maxWeightGt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MaxWeightGte(maxWeightGte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MaxWeightGte(maxWeightGte []int64) ApiDcimRacksListRequest {
 	r.maxWeightGte = &maxWeightGte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MaxWeightLt(maxWeightLt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MaxWeightLt(maxWeightLt []int64) ApiDcimRacksListRequest {
 	r.maxWeightLt = &maxWeightLt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MaxWeightLte(maxWeightLte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MaxWeightLte(maxWeightLte []int64) ApiDcimRacksListRequest {
 	r.maxWeightLte = &maxWeightLte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MaxWeightN(maxWeightN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MaxWeightN(maxWeightN []int64) ApiDcimRacksListRequest {
 	r.maxWeightN = &maxWeightN
 	return r
 }
@@ -102884,7 +102884,7 @@ func (r ApiDcimRacksListRequest) ModifiedByRequest(modifiedByRequest string) Api
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MountingDepth(mountingDepth []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MountingDepth(mountingDepth []int64) ApiDcimRacksListRequest {
 	r.mountingDepth = &mountingDepth
 	return r
 }
@@ -102894,27 +102894,27 @@ func (r ApiDcimRacksListRequest) MountingDepthEmpty(mountingDepthEmpty bool) Api
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MountingDepthGt(mountingDepthGt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MountingDepthGt(mountingDepthGt []int64) ApiDcimRacksListRequest {
 	r.mountingDepthGt = &mountingDepthGt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MountingDepthGte(mountingDepthGte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MountingDepthGte(mountingDepthGte []int64) ApiDcimRacksListRequest {
 	r.mountingDepthGte = &mountingDepthGte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MountingDepthLt(mountingDepthLt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MountingDepthLt(mountingDepthLt []int64) ApiDcimRacksListRequest {
 	r.mountingDepthLt = &mountingDepthLt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MountingDepthLte(mountingDepthLte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MountingDepthLte(mountingDepthLte []int64) ApiDcimRacksListRequest {
 	r.mountingDepthLte = &mountingDepthLte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) MountingDepthN(mountingDepthN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) MountingDepthN(mountingDepthN []int64) ApiDcimRacksListRequest {
 	r.mountingDepthN = &mountingDepthN
 	return r
 }
@@ -102975,7 +102975,7 @@ func (r ApiDcimRacksListRequest) NameNisw(nameNisw []string) ApiDcimRacksListReq
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRacksListRequest) Offset(offset int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) Offset(offset int64) ApiDcimRacksListRequest {
 	r.offset = &offset
 	return r
 }
@@ -102986,7 +102986,7 @@ func (r ApiDcimRacksListRequest) Ordering(ordering string) ApiDcimRacksListReque
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterDepth(outerDepth []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterDepth(outerDepth []int64) ApiDcimRacksListRequest {
 	r.outerDepth = &outerDepth
 	return r
 }
@@ -102996,27 +102996,27 @@ func (r ApiDcimRacksListRequest) OuterDepthEmpty(outerDepthEmpty bool) ApiDcimRa
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterDepthGt(outerDepthGt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterDepthGt(outerDepthGt []int64) ApiDcimRacksListRequest {
 	r.outerDepthGt = &outerDepthGt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterDepthGte(outerDepthGte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterDepthGte(outerDepthGte []int64) ApiDcimRacksListRequest {
 	r.outerDepthGte = &outerDepthGte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterDepthLt(outerDepthLt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterDepthLt(outerDepthLt []int64) ApiDcimRacksListRequest {
 	r.outerDepthLt = &outerDepthLt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterDepthLte(outerDepthLte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterDepthLte(outerDepthLte []int64) ApiDcimRacksListRequest {
 	r.outerDepthLte = &outerDepthLte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterDepthN(outerDepthN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterDepthN(outerDepthN []int64) ApiDcimRacksListRequest {
 	r.outerDepthN = &outerDepthN
 	return r
 }
@@ -103027,7 +103027,7 @@ func (r ApiDcimRacksListRequest) OuterUnit(outerUnit DcimRackTypesListOuterUnitP
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterWidth(outerWidth []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterWidth(outerWidth []int64) ApiDcimRacksListRequest {
 	r.outerWidth = &outerWidth
 	return r
 }
@@ -103037,27 +103037,27 @@ func (r ApiDcimRacksListRequest) OuterWidthEmpty(outerWidthEmpty bool) ApiDcimRa
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterWidthGt(outerWidthGt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterWidthGt(outerWidthGt []int64) ApiDcimRacksListRequest {
 	r.outerWidthGt = &outerWidthGt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterWidthGte(outerWidthGte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterWidthGte(outerWidthGte []int64) ApiDcimRacksListRequest {
 	r.outerWidthGte = &outerWidthGte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterWidthLt(outerWidthLt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterWidthLt(outerWidthLt []int64) ApiDcimRacksListRequest {
 	r.outerWidthLt = &outerWidthLt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterWidthLte(outerWidthLte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterWidthLte(outerWidthLte []int64) ApiDcimRacksListRequest {
 	r.outerWidthLte = &outerWidthLte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) OuterWidthN(outerWidthN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) OuterWidthN(outerWidthN []int64) ApiDcimRacksListRequest {
 	r.outerWidthN = &outerWidthN
 	return r
 }
@@ -103081,13 +103081,13 @@ func (r ApiDcimRacksListRequest) RackTypeN(rackTypeN []string) ApiDcimRacksListR
 }
 
 // Rack type (ID)
-func (r ApiDcimRacksListRequest) RackTypeId(rackTypeId []*int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) RackTypeId(rackTypeId []*int64) ApiDcimRacksListRequest {
 	r.rackTypeId = &rackTypeId
 	return r
 }
 
 // Rack type (ID)
-func (r ApiDcimRacksListRequest) RackTypeIdN(rackTypeIdN []*int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) RackTypeIdN(rackTypeIdN []*int64) ApiDcimRacksListRequest {
 	r.rackTypeIdN = &rackTypeIdN
 	return r
 }
@@ -103125,13 +103125,13 @@ func (r ApiDcimRacksListRequest) RoleN(roleN []string) ApiDcimRacksListRequest {
 }
 
 // Role (ID)
-func (r ApiDcimRacksListRequest) RoleId(roleId []*int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) RoleId(roleId []*int64) ApiDcimRacksListRequest {
 	r.roleId = &roleId
 	return r
 }
 
 // Role (ID)
-func (r ApiDcimRacksListRequest) RoleIdN(roleIdN []*int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) RoleIdN(roleIdN []*int64) ApiDcimRacksListRequest {
 	r.roleIdN = &roleIdN
 	return r
 }
@@ -103224,18 +103224,18 @@ func (r ApiDcimRacksListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDcimRack
 }
 
 // Site (ID)
-func (r ApiDcimRacksListRequest) SiteId(siteId []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) SiteId(siteId []int64) ApiDcimRacksListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimRacksListRequest) SiteIdN(siteIdN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) SiteIdN(siteIdN []int64) ApiDcimRacksListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
 
-func (r ApiDcimRacksListRequest) StartingUnit(startingUnit []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) StartingUnit(startingUnit []int64) ApiDcimRacksListRequest {
 	r.startingUnit = &startingUnit
 	return r
 }
@@ -103245,27 +103245,27 @@ func (r ApiDcimRacksListRequest) StartingUnitEmpty(startingUnitEmpty bool) ApiDc
 	return r
 }
 
-func (r ApiDcimRacksListRequest) StartingUnitGt(startingUnitGt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) StartingUnitGt(startingUnitGt []int64) ApiDcimRacksListRequest {
 	r.startingUnitGt = &startingUnitGt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) StartingUnitGte(startingUnitGte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) StartingUnitGte(startingUnitGte []int64) ApiDcimRacksListRequest {
 	r.startingUnitGte = &startingUnitGte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) StartingUnitLt(startingUnitLt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) StartingUnitLt(startingUnitLt []int64) ApiDcimRacksListRequest {
 	r.startingUnitLt = &startingUnitLt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) StartingUnitLte(startingUnitLte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) StartingUnitLte(startingUnitLte []int64) ApiDcimRacksListRequest {
 	r.startingUnitLte = &startingUnitLte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) StartingUnitN(startingUnitN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) StartingUnitN(startingUnitN []int64) ApiDcimRacksListRequest {
 	r.startingUnitN = &startingUnitN
 	return r
 }
@@ -103368,18 +103368,18 @@ func (r ApiDcimRacksListRequest) TenantGroupIdN(tenantGroupIdN []string) ApiDcim
 }
 
 // Tenant (ID)
-func (r ApiDcimRacksListRequest) TenantId(tenantId []*int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) TenantId(tenantId []*int64) ApiDcimRacksListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimRacksListRequest) TenantIdN(tenantIdN []*int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) TenantIdN(tenantIdN []*int64) ApiDcimRacksListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
 
-func (r ApiDcimRacksListRequest) UHeight(uHeight []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) UHeight(uHeight []int64) ApiDcimRacksListRequest {
 	r.uHeight = &uHeight
 	return r
 }
@@ -103389,27 +103389,27 @@ func (r ApiDcimRacksListRequest) UHeightEmpty(uHeightEmpty bool) ApiDcimRacksLis
 	return r
 }
 
-func (r ApiDcimRacksListRequest) UHeightGt(uHeightGt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) UHeightGt(uHeightGt []int64) ApiDcimRacksListRequest {
 	r.uHeightGt = &uHeightGt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) UHeightGte(uHeightGte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) UHeightGte(uHeightGte []int64) ApiDcimRacksListRequest {
 	r.uHeightGte = &uHeightGte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) UHeightLt(uHeightLt []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) UHeightLt(uHeightLt []int64) ApiDcimRacksListRequest {
 	r.uHeightLt = &uHeightLt
 	return r
 }
 
-func (r ApiDcimRacksListRequest) UHeightLte(uHeightLte []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) UHeightLte(uHeightLte []int64) ApiDcimRacksListRequest {
 	r.uHeightLte = &uHeightLte
 	return r
 }
 
-func (r ApiDcimRacksListRequest) UHeightN(uHeightN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) UHeightN(uHeightN []int64) ApiDcimRacksListRequest {
 	r.uHeightN = &uHeightN
 	return r
 }
@@ -103461,61 +103461,61 @@ func (r ApiDcimRacksListRequest) WeightUnit(weightUnit DcimDeviceTypesListWeight
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) Width(width []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) Width(width []int64) ApiDcimRacksListRequest {
 	r.width = &width
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthIc(widthIc []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthIc(widthIc []int64) ApiDcimRacksListRequest {
 	r.widthIc = &widthIc
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthIe(widthIe []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthIe(widthIe []int64) ApiDcimRacksListRequest {
 	r.widthIe = &widthIe
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthIew(widthIew []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthIew(widthIew []int64) ApiDcimRacksListRequest {
 	r.widthIew = &widthIew
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthIsw(widthIsw []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthIsw(widthIsw []int64) ApiDcimRacksListRequest {
 	r.widthIsw = &widthIsw
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthN(widthN []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthN(widthN []int64) ApiDcimRacksListRequest {
 	r.widthN = &widthN
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthNic(widthNic []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthNic(widthNic []int64) ApiDcimRacksListRequest {
 	r.widthNic = &widthNic
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthNie(widthNie []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthNie(widthNie []int64) ApiDcimRacksListRequest {
 	r.widthNie = &widthNie
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthNiew(widthNiew []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthNiew(widthNiew []int64) ApiDcimRacksListRequest {
 	r.widthNiew = &widthNiew
 	return r
 }
 
 // Rail-to-rail width
-func (r ApiDcimRacksListRequest) WidthNisw(widthNisw []int32) ApiDcimRacksListRequest {
+func (r ApiDcimRacksListRequest) WidthNisw(widthNisw []int64) ApiDcimRacksListRequest {
 	r.widthNisw = &widthNisw
 	return r
 }
@@ -105756,7 +105756,7 @@ func (a *DcimAPIService) DcimRacksListExecute(r ApiDcimRacksListRequest) (*Pagin
 type ApiDcimRacksPartialUpdateRequest struct {
 	ctx                        context.Context
 	ApiService                 *DcimAPIService
-	id                         int32
+	id                         int64
 	patchedWritableRackRequest *PatchedWritableRackRequest
 }
 
@@ -105778,7 +105778,7 @@ Patch a rack object.
 	@param id A unique integer value identifying this rack.
 	@return ApiDcimRacksPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimRacksPartialUpdate(ctx context.Context, id int32) ApiDcimRacksPartialUpdateRequest {
+func (a *DcimAPIService) DcimRacksPartialUpdate(ctx context.Context, id int64) ApiDcimRacksPartialUpdateRequest {
 	return ApiDcimRacksPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -105882,7 +105882,7 @@ func (a *DcimAPIService) DcimRacksPartialUpdateExecute(r ApiDcimRacksPartialUpda
 type ApiDcimRacksRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRacksRetrieveRequest) Execute() (*Rack, *http.Response, error) {
@@ -105898,7 +105898,7 @@ Get a rack object.
 	@param id A unique integer value identifying this rack.
 	@return ApiDcimRacksRetrieveRequest
 */
-func (a *DcimAPIService) DcimRacksRetrieve(ctx context.Context, id int32) ApiDcimRacksRetrieveRequest {
+func (a *DcimAPIService) DcimRacksRetrieve(ctx context.Context, id int64) ApiDcimRacksRetrieveRequest {
 	return ApiDcimRacksRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -106000,7 +106000,7 @@ func (a *DcimAPIService) DcimRacksRetrieveExecute(r ApiDcimRacksRetrieveRequest)
 type ApiDcimRacksUpdateRequest struct {
 	ctx                 context.Context
 	ApiService          *DcimAPIService
-	id                  int32
+	id                  int64
 	writableRackRequest *WritableRackRequest
 }
 
@@ -106022,7 +106022,7 @@ Put a rack object.
 	@param id A unique integer value identifying this rack.
 	@return ApiDcimRacksUpdateRequest
 */
-func (a *DcimAPIService) DcimRacksUpdate(ctx context.Context, id int32) ApiDcimRacksUpdateRequest {
+func (a *DcimAPIService) DcimRacksUpdate(ctx context.Context, id int64) ApiDcimRacksUpdateRequest {
 	return ApiDcimRacksUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -106617,7 +106617,7 @@ func (a *DcimAPIService) DcimRearPortTemplatesCreateExecute(r ApiDcimRearPortTem
 type ApiDcimRearPortTemplatesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRearPortTemplatesDestroyRequest) Execute() (*http.Response, error) {
@@ -106633,7 +106633,7 @@ Delete a rear port template object.
 	@param id A unique integer value identifying this rear port template.
 	@return ApiDcimRearPortTemplatesDestroyRequest
 */
-func (a *DcimAPIService) DcimRearPortTemplatesDestroy(ctx context.Context, id int32) ApiDcimRearPortTemplatesDestroyRequest {
+func (a *DcimAPIService) DcimRearPortTemplatesDestroy(ctx context.Context, id int64) ApiDcimRearPortTemplatesDestroyRequest {
 	return ApiDcimRearPortTemplatesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -106753,15 +106753,15 @@ type ApiDcimRearPortTemplatesListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	deviceTypeId      *[]*int32
-	deviceTypeIdN     *[]*int32
-	id                *[]int32
+	deviceTypeId      *[]*int64
+	deviceTypeIdN     *[]*int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -106780,10 +106780,10 @@ type ApiDcimRearPortTemplatesListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
-	moduleTypeId      *[]*int32
-	moduleTypeIdN     *[]*int32
+	moduleTypeId      *[]*int64
+	moduleTypeIdN     *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -106795,15 +106795,15 @@ type ApiDcimRearPortTemplatesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
-	positions         *[]int32
+	positions         *[]int64
 	positionsEmpty    *bool
-	positionsGt       *[]int32
-	positionsGte      *[]int32
-	positionsLt       *[]int32
-	positionsLte      *[]int32
-	positionsN        *[]int32
+	positionsGt       *[]int64
+	positionsGte      *[]int64
+	positionsLt       *[]int64
+	positionsLte      *[]int64
+	positionsN        *[]int64
 	q                 *string
 	type_             *[]string
 	typeEmpty         *bool
@@ -106970,18 +106970,18 @@ func (r ApiDcimRearPortTemplatesListRequest) DescriptionNisw(descriptionNisw []s
 }
 
 // Device type (ID)
-func (r ApiDcimRearPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) DeviceTypeId(deviceTypeId []*int64) ApiDcimRearPortTemplatesListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimRearPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) DeviceTypeIdN(deviceTypeIdN []*int64) ApiDcimRearPortTemplatesListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) Id(id []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) Id(id []int64) ApiDcimRearPortTemplatesListRequest {
 	r.id = &id
 	return r
 }
@@ -106991,27 +106991,27 @@ func (r ApiDcimRearPortTemplatesListRequest) IdEmpty(idEmpty bool) ApiDcimRearPo
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) IdGt(idGt []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) IdGt(idGt []int64) ApiDcimRearPortTemplatesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) IdGte(idGte []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) IdGte(idGte []int64) ApiDcimRearPortTemplatesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) IdLt(idLt []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) IdLt(idLt []int64) ApiDcimRearPortTemplatesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) IdLte(idLte []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) IdLte(idLte []int64) ApiDcimRearPortTemplatesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) IdN(idN []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) IdN(idN []int64) ApiDcimRearPortTemplatesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -107107,7 +107107,7 @@ func (r ApiDcimRearPortTemplatesListRequest) LastUpdatedN(lastUpdatedN []time.Ti
 }
 
 // Number of results to return per page.
-func (r ApiDcimRearPortTemplatesListRequest) Limit(limit int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) Limit(limit int64) ApiDcimRearPortTemplatesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -107118,13 +107118,13 @@ func (r ApiDcimRearPortTemplatesListRequest) ModifiedByRequest(modifiedByRequest
 }
 
 // Module type (ID)
-func (r ApiDcimRearPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) ModuleTypeId(moduleTypeId []*int64) ApiDcimRearPortTemplatesListRequest {
 	r.moduleTypeId = &moduleTypeId
 	return r
 }
 
 // Module type (ID)
-func (r ApiDcimRearPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) ModuleTypeIdN(moduleTypeIdN []*int64) ApiDcimRearPortTemplatesListRequest {
 	r.moduleTypeIdN = &moduleTypeIdN
 	return r
 }
@@ -107185,7 +107185,7 @@ func (r ApiDcimRearPortTemplatesListRequest) NameNisw(nameNisw []string) ApiDcim
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRearPortTemplatesListRequest) Offset(offset int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) Offset(offset int64) ApiDcimRearPortTemplatesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -107196,7 +107196,7 @@ func (r ApiDcimRearPortTemplatesListRequest) Ordering(ordering string) ApiDcimRe
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) Positions(positions []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) Positions(positions []int64) ApiDcimRearPortTemplatesListRequest {
 	r.positions = &positions
 	return r
 }
@@ -107206,27 +107206,27 @@ func (r ApiDcimRearPortTemplatesListRequest) PositionsEmpty(positionsEmpty bool)
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) PositionsGt(positionsGt []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) PositionsGt(positionsGt []int64) ApiDcimRearPortTemplatesListRequest {
 	r.positionsGt = &positionsGt
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) PositionsGte(positionsGte []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) PositionsGte(positionsGte []int64) ApiDcimRearPortTemplatesListRequest {
 	r.positionsGte = &positionsGte
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) PositionsLt(positionsLt []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) PositionsLt(positionsLt []int64) ApiDcimRearPortTemplatesListRequest {
 	r.positionsLt = &positionsLt
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) PositionsLte(positionsLte []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) PositionsLte(positionsLte []int64) ApiDcimRearPortTemplatesListRequest {
 	r.positionsLte = &positionsLte
 	return r
 }
 
-func (r ApiDcimRearPortTemplatesListRequest) PositionsN(positionsN []int32) ApiDcimRearPortTemplatesListRequest {
+func (r ApiDcimRearPortTemplatesListRequest) PositionsN(positionsN []int64) ApiDcimRearPortTemplatesListRequest {
 	r.positionsN = &positionsN
 	return r
 }
@@ -108331,7 +108331,7 @@ func (a *DcimAPIService) DcimRearPortTemplatesListExecute(r ApiDcimRearPortTempl
 type ApiDcimRearPortTemplatesPartialUpdateRequest struct {
 	ctx                                    context.Context
 	ApiService                             *DcimAPIService
-	id                                     int32
+	id                                     int64
 	patchedWritableRearPortTemplateRequest *PatchedWritableRearPortTemplateRequest
 }
 
@@ -108353,7 +108353,7 @@ Patch a rear port template object.
 	@param id A unique integer value identifying this rear port template.
 	@return ApiDcimRearPortTemplatesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimRearPortTemplatesPartialUpdate(ctx context.Context, id int32) ApiDcimRearPortTemplatesPartialUpdateRequest {
+func (a *DcimAPIService) DcimRearPortTemplatesPartialUpdate(ctx context.Context, id int64) ApiDcimRearPortTemplatesPartialUpdateRequest {
 	return ApiDcimRearPortTemplatesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -108457,7 +108457,7 @@ func (a *DcimAPIService) DcimRearPortTemplatesPartialUpdateExecute(r ApiDcimRear
 type ApiDcimRearPortTemplatesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRearPortTemplatesRetrieveRequest) Execute() (*RearPortTemplate, *http.Response, error) {
@@ -108473,7 +108473,7 @@ Get a rear port template object.
 	@param id A unique integer value identifying this rear port template.
 	@return ApiDcimRearPortTemplatesRetrieveRequest
 */
-func (a *DcimAPIService) DcimRearPortTemplatesRetrieve(ctx context.Context, id int32) ApiDcimRearPortTemplatesRetrieveRequest {
+func (a *DcimAPIService) DcimRearPortTemplatesRetrieve(ctx context.Context, id int64) ApiDcimRearPortTemplatesRetrieveRequest {
 	return ApiDcimRearPortTemplatesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -108575,7 +108575,7 @@ func (a *DcimAPIService) DcimRearPortTemplatesRetrieveExecute(r ApiDcimRearPortT
 type ApiDcimRearPortTemplatesUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	writableRearPortTemplateRequest *WritableRearPortTemplateRequest
 }
 
@@ -108597,7 +108597,7 @@ Put a rear port template object.
 	@param id A unique integer value identifying this rear port template.
 	@return ApiDcimRearPortTemplatesUpdateRequest
 */
-func (a *DcimAPIService) DcimRearPortTemplatesUpdate(ctx context.Context, id int32) ApiDcimRearPortTemplatesUpdateRequest {
+func (a *DcimAPIService) DcimRearPortTemplatesUpdate(ctx context.Context, id int64) ApiDcimRearPortTemplatesUpdateRequest {
 	return ApiDcimRearPortTemplatesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -109192,7 +109192,7 @@ func (a *DcimAPIService) DcimRearPortsCreateExecute(r ApiDcimRearPortsCreateRequ
 type ApiDcimRearPortsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRearPortsDestroyRequest) Execute() (*http.Response, error) {
@@ -109208,7 +109208,7 @@ Delete a rear port object.
 	@param id A unique integer value identifying this rear port.
 	@return ApiDcimRearPortsDestroyRequest
 */
-func (a *DcimAPIService) DcimRearPortsDestroy(ctx context.Context, id int32) ApiDcimRearPortsDestroyRequest {
+func (a *DcimAPIService) DcimRearPortsDestroy(ctx context.Context, id int64) ApiDcimRearPortsDestroyRequest {
 	return ApiDcimRearPortsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -109299,8 +109299,8 @@ type ApiDcimRearPortsListRequest struct {
 	ctx               context.Context
 	ApiService        *DcimAPIService
 	cableEnd          *CircuitsCircuitTerminationsListCableEndParameter
-	cableId           *[]*int32
-	cableIdN          *[]*int32
+	cableId           *[]*int64
+	cableIdN          *[]*int64
 	cabled            *bool
 	color             *[]string
 	colorEmpty        *bool
@@ -109334,12 +109334,12 @@ type ApiDcimRearPortsListRequest struct {
 	descriptionNisw   *[]string
 	device            *[]*string
 	deviceN           *[]*string
-	deviceId          *[]int32
-	deviceIdN         *[]int32
+	deviceId          *[]int64
+	deviceIdN         *[]int64
 	deviceRole        *[]string
 	deviceRoleN       *[]string
-	deviceRoleId      *[]int32
-	deviceRoleIdN     *[]int32
+	deviceRoleId      *[]int64
+	deviceRoleIdN     *[]int64
 	deviceStatus      *[]string
 	deviceStatusEmpty *bool
 	deviceStatusIc    *[]string
@@ -109353,15 +109353,15 @@ type ApiDcimRearPortsListRequest struct {
 	deviceStatusNisw  *[]string
 	deviceType        *[]string
 	deviceTypeN       *[]string
-	deviceTypeId      *[]int32
-	deviceTypeIdN     *[]int32
-	id                *[]int32
+	deviceTypeId      *[]int64
+	deviceTypeIdN     *[]int64
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	label             *[]string
 	labelEmpty        *bool
 	labelIc           *[]string
@@ -109380,15 +109380,15 @@ type ApiDcimRearPortsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	location          *[]string
 	locationN         *[]string
-	locationId        *[]int32
-	locationIdN       *[]int32
+	locationId        *[]int64
+	locationIdN       *[]int64
 	markConnected     *bool
 	modifiedByRequest *string
-	moduleId          *[]*int32
-	moduleIdN         *[]*int32
+	moduleId          *[]*int64
+	moduleIdN         *[]*int64
 	name              *[]string
 	nameEmpty         *bool
 	nameIc            *[]string
@@ -109401,20 +109401,20 @@ type ApiDcimRearPortsListRequest struct {
 	nameNiew          *[]string
 	nameNisw          *[]string
 	occupied          *bool
-	offset            *int32
+	offset            *int64
 	ordering          *string
-	positions         *[]int32
+	positions         *[]int64
 	positionsEmpty    *bool
-	positionsGt       *[]int32
-	positionsGte      *[]int32
-	positionsLt       *[]int32
-	positionsLte      *[]int32
-	positionsN        *[]int32
+	positionsGt       *[]int64
+	positionsGte      *[]int64
+	positionsLt       *[]int64
+	positionsLte      *[]int64
+	positionsN        *[]int64
 	q                 *string
 	rack              *[]string
 	rackN             *[]string
-	rackId            *[]int32
-	rackIdN           *[]int32
+	rackId            *[]int64
+	rackIdN           *[]int64
 	region            *[]string
 	regionN           *[]string
 	regionId          *[]string
@@ -109425,8 +109425,8 @@ type ApiDcimRearPortsListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	tag               *[]string
 	tagN              *[]string
 	type_             *[]string
@@ -109443,8 +109443,8 @@ type ApiDcimRearPortsListRequest struct {
 	updatedByRequest  *string
 	virtualChassis    *[]string
 	virtualChassisN   *[]string
-	virtualChassisId  *[]int32
-	virtualChassisIdN *[]int32
+	virtualChassisId  *[]int64
+	virtualChassisIdN *[]int64
 }
 
 // * &#x60;A&#x60; - A * &#x60;B&#x60; - B
@@ -109454,13 +109454,13 @@ func (r ApiDcimRearPortsListRequest) CableEnd(cableEnd CircuitsCircuitTerminatio
 }
 
 // Cable (ID)
-func (r ApiDcimRearPortsListRequest) CableId(cableId []*int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) CableId(cableId []*int64) ApiDcimRearPortsListRequest {
 	r.cableId = &cableId
 	return r
 }
 
 // Cable (ID)
-func (r ApiDcimRearPortsListRequest) CableIdN(cableIdN []*int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) CableIdN(cableIdN []*int64) ApiDcimRearPortsListRequest {
 	r.cableIdN = &cableIdN
 	return r
 }
@@ -109633,13 +109633,13 @@ func (r ApiDcimRearPortsListRequest) DeviceN(deviceN []*string) ApiDcimRearPorts
 }
 
 // Device (ID)
-func (r ApiDcimRearPortsListRequest) DeviceId(deviceId []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) DeviceId(deviceId []int64) ApiDcimRearPortsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // Device (ID)
-func (r ApiDcimRearPortsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimRearPortsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -109657,13 +109657,13 @@ func (r ApiDcimRearPortsListRequest) DeviceRoleN(deviceRoleN []string) ApiDcimRe
 }
 
 // Device role (ID)
-func (r ApiDcimRearPortsListRequest) DeviceRoleId(deviceRoleId []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) DeviceRoleId(deviceRoleId []int64) ApiDcimRearPortsListRequest {
 	r.deviceRoleId = &deviceRoleId
 	return r
 }
 
 // Device role (ID)
-func (r ApiDcimRearPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) DeviceRoleIdN(deviceRoleIdN []int64) ApiDcimRearPortsListRequest {
 	r.deviceRoleIdN = &deviceRoleIdN
 	return r
 }
@@ -109736,18 +109736,18 @@ func (r ApiDcimRearPortsListRequest) DeviceTypeN(deviceTypeN []string) ApiDcimRe
 }
 
 // Device type (ID)
-func (r ApiDcimRearPortsListRequest) DeviceTypeId(deviceTypeId []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) DeviceTypeId(deviceTypeId []int64) ApiDcimRearPortsListRequest {
 	r.deviceTypeId = &deviceTypeId
 	return r
 }
 
 // Device type (ID)
-func (r ApiDcimRearPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) DeviceTypeIdN(deviceTypeIdN []int64) ApiDcimRearPortsListRequest {
 	r.deviceTypeIdN = &deviceTypeIdN
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) Id(id []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) Id(id []int64) ApiDcimRearPortsListRequest {
 	r.id = &id
 	return r
 }
@@ -109757,27 +109757,27 @@ func (r ApiDcimRearPortsListRequest) IdEmpty(idEmpty bool) ApiDcimRearPortsListR
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) IdGt(idGt []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) IdGt(idGt []int64) ApiDcimRearPortsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) IdGte(idGte []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) IdGte(idGte []int64) ApiDcimRearPortsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) IdLt(idLt []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) IdLt(idLt []int64) ApiDcimRearPortsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) IdLte(idLte []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) IdLte(idLte []int64) ApiDcimRearPortsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) IdN(idN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) IdN(idN []int64) ApiDcimRearPortsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -109873,7 +109873,7 @@ func (r ApiDcimRearPortsListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiD
 }
 
 // Number of results to return per page.
-func (r ApiDcimRearPortsListRequest) Limit(limit int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) Limit(limit int64) ApiDcimRearPortsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -109891,13 +109891,13 @@ func (r ApiDcimRearPortsListRequest) LocationN(locationN []string) ApiDcimRearPo
 }
 
 // Location (ID)
-func (r ApiDcimRearPortsListRequest) LocationId(locationId []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) LocationId(locationId []int64) ApiDcimRearPortsListRequest {
 	r.locationId = &locationId
 	return r
 }
 
 // Location (ID)
-func (r ApiDcimRearPortsListRequest) LocationIdN(locationIdN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) LocationIdN(locationIdN []int64) ApiDcimRearPortsListRequest {
 	r.locationIdN = &locationIdN
 	return r
 }
@@ -109913,13 +109913,13 @@ func (r ApiDcimRearPortsListRequest) ModifiedByRequest(modifiedByRequest string)
 }
 
 // Module (ID)
-func (r ApiDcimRearPortsListRequest) ModuleId(moduleId []*int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) ModuleId(moduleId []*int64) ApiDcimRearPortsListRequest {
 	r.moduleId = &moduleId
 	return r
 }
 
 // Module (ID)
-func (r ApiDcimRearPortsListRequest) ModuleIdN(moduleIdN []*int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) ModuleIdN(moduleIdN []*int64) ApiDcimRearPortsListRequest {
 	r.moduleIdN = &moduleIdN
 	return r
 }
@@ -109985,7 +109985,7 @@ func (r ApiDcimRearPortsListRequest) Occupied(occupied bool) ApiDcimRearPortsLis
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRearPortsListRequest) Offset(offset int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) Offset(offset int64) ApiDcimRearPortsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -109996,7 +109996,7 @@ func (r ApiDcimRearPortsListRequest) Ordering(ordering string) ApiDcimRearPortsL
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) Positions(positions []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) Positions(positions []int64) ApiDcimRearPortsListRequest {
 	r.positions = &positions
 	return r
 }
@@ -110006,27 +110006,27 @@ func (r ApiDcimRearPortsListRequest) PositionsEmpty(positionsEmpty bool) ApiDcim
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) PositionsGt(positionsGt []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) PositionsGt(positionsGt []int64) ApiDcimRearPortsListRequest {
 	r.positionsGt = &positionsGt
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) PositionsGte(positionsGte []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) PositionsGte(positionsGte []int64) ApiDcimRearPortsListRequest {
 	r.positionsGte = &positionsGte
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) PositionsLt(positionsLt []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) PositionsLt(positionsLt []int64) ApiDcimRearPortsListRequest {
 	r.positionsLt = &positionsLt
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) PositionsLte(positionsLte []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) PositionsLte(positionsLte []int64) ApiDcimRearPortsListRequest {
 	r.positionsLte = &positionsLte
 	return r
 }
 
-func (r ApiDcimRearPortsListRequest) PositionsN(positionsN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) PositionsN(positionsN []int64) ApiDcimRearPortsListRequest {
 	r.positionsN = &positionsN
 	return r
 }
@@ -110050,13 +110050,13 @@ func (r ApiDcimRearPortsListRequest) RackN(rackN []string) ApiDcimRearPortsListR
 }
 
 // Rack (ID)
-func (r ApiDcimRearPortsListRequest) RackId(rackId []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) RackId(rackId []int64) ApiDcimRearPortsListRequest {
 	r.rackId = &rackId
 	return r
 }
 
 // Rack (ID)
-func (r ApiDcimRearPortsListRequest) RackIdN(rackIdN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) RackIdN(rackIdN []int64) ApiDcimRearPortsListRequest {
 	r.rackIdN = &rackIdN
 	return r
 }
@@ -110114,13 +110114,13 @@ func (r ApiDcimRearPortsListRequest) SiteGroupIdN(siteGroupIdN []string) ApiDcim
 }
 
 // Site (ID)
-func (r ApiDcimRearPortsListRequest) SiteId(siteId []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) SiteId(siteId []int64) ApiDcimRearPortsListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimRearPortsListRequest) SiteIdN(siteIdN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) SiteIdN(siteIdN []int64) ApiDcimRearPortsListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -110208,13 +110208,13 @@ func (r ApiDcimRearPortsListRequest) VirtualChassisN(virtualChassisN []string) A
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimRearPortsListRequest) VirtualChassisId(virtualChassisId []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) VirtualChassisId(virtualChassisId []int64) ApiDcimRearPortsListRequest {
 	r.virtualChassisId = &virtualChassisId
 	return r
 }
 
 // Virtual Chassis (ID)
-func (r ApiDcimRearPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int32) ApiDcimRearPortsListRequest {
+func (r ApiDcimRearPortsListRequest) VirtualChassisIdN(virtualChassisIdN []int64) ApiDcimRearPortsListRequest {
 	r.virtualChassisIdN = &virtualChassisIdN
 	return r
 }
@@ -111796,7 +111796,7 @@ func (a *DcimAPIService) DcimRearPortsListExecute(r ApiDcimRearPortsListRequest)
 type ApiDcimRearPortsPartialUpdateRequest struct {
 	ctx                            context.Context
 	ApiService                     *DcimAPIService
-	id                             int32
+	id                             int64
 	patchedWritableRearPortRequest *PatchedWritableRearPortRequest
 }
 
@@ -111818,7 +111818,7 @@ Patch a rear port object.
 	@param id A unique integer value identifying this rear port.
 	@return ApiDcimRearPortsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimRearPortsPartialUpdate(ctx context.Context, id int32) ApiDcimRearPortsPartialUpdateRequest {
+func (a *DcimAPIService) DcimRearPortsPartialUpdate(ctx context.Context, id int64) ApiDcimRearPortsPartialUpdateRequest {
 	return ApiDcimRearPortsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -111922,7 +111922,7 @@ func (a *DcimAPIService) DcimRearPortsPartialUpdateExecute(r ApiDcimRearPortsPar
 type ApiDcimRearPortsPathsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRearPortsPathsRetrieveRequest) Execute() (*RearPort, *http.Response, error) {
@@ -111938,7 +111938,7 @@ Return all CablePaths which traverse a given pass-through port.
 	@param id A unique integer value identifying this rear port.
 	@return ApiDcimRearPortsPathsRetrieveRequest
 */
-func (a *DcimAPIService) DcimRearPortsPathsRetrieve(ctx context.Context, id int32) ApiDcimRearPortsPathsRetrieveRequest {
+func (a *DcimAPIService) DcimRearPortsPathsRetrieve(ctx context.Context, id int64) ApiDcimRearPortsPathsRetrieveRequest {
 	return ApiDcimRearPortsPathsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -112040,7 +112040,7 @@ func (a *DcimAPIService) DcimRearPortsPathsRetrieveExecute(r ApiDcimRearPortsPat
 type ApiDcimRearPortsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRearPortsRetrieveRequest) Execute() (*RearPort, *http.Response, error) {
@@ -112056,7 +112056,7 @@ Get a rear port object.
 	@param id A unique integer value identifying this rear port.
 	@return ApiDcimRearPortsRetrieveRequest
 */
-func (a *DcimAPIService) DcimRearPortsRetrieve(ctx context.Context, id int32) ApiDcimRearPortsRetrieveRequest {
+func (a *DcimAPIService) DcimRearPortsRetrieve(ctx context.Context, id int64) ApiDcimRearPortsRetrieveRequest {
 	return ApiDcimRearPortsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -112158,7 +112158,7 @@ func (a *DcimAPIService) DcimRearPortsRetrieveExecute(r ApiDcimRearPortsRetrieve
 type ApiDcimRearPortsUpdateRequest struct {
 	ctx                     context.Context
 	ApiService              *DcimAPIService
-	id                      int32
+	id                      int64
 	writableRearPortRequest *WritableRearPortRequest
 }
 
@@ -112180,7 +112180,7 @@ Put a rear port object.
 	@param id A unique integer value identifying this rear port.
 	@return ApiDcimRearPortsUpdateRequest
 */
-func (a *DcimAPIService) DcimRearPortsUpdate(ctx context.Context, id int32) ApiDcimRearPortsUpdateRequest {
+func (a *DcimAPIService) DcimRearPortsUpdate(ctx context.Context, id int64) ApiDcimRearPortsUpdateRequest {
 	return ApiDcimRearPortsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -112775,7 +112775,7 @@ func (a *DcimAPIService) DcimRegionsCreateExecute(r ApiDcimRegionsCreateRequest)
 type ApiDcimRegionsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRegionsDestroyRequest) Execute() (*http.Response, error) {
@@ -112791,7 +112791,7 @@ Delete a region object.
 	@param id A unique integer value identifying this region.
 	@return ApiDcimRegionsDestroyRequest
 */
-func (a *DcimAPIService) DcimRegionsDestroy(ctx context.Context, id int32) ApiDcimRegionsDestroyRequest {
+func (a *DcimAPIService) DcimRegionsDestroy(ctx context.Context, id int64) ApiDcimRegionsDestroyRequest {
 	return ApiDcimRegionsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -112885,12 +112885,12 @@ type ApiDcimRegionsListRequest struct {
 	ancestorN         *[]string
 	ancestorId        *[]string
 	ancestorIdN       *[]string
-	contact           *[]int32
-	contactN          *[]int32
+	contact           *[]int64
+	contactN          *[]int64
 	contactGroup      *[]string
 	contactGroupN     *[]string
-	contactRole       *[]int32
-	contactRoleN      *[]int32
+	contactRole       *[]int64
+	contactRoleN      *[]int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -112910,13 +112910,13 @@ type ApiDcimRegionsListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -112924,7 +112924,7 @@ type ApiDcimRegionsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -112937,12 +112937,12 @@ type ApiDcimRegionsListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	parent            *[]string
 	parentN           *[]string
-	parentId          *[]*int32
-	parentIdN         *[]*int32
+	parentId          *[]*int64
+	parentIdN         *[]*int64
 	q                 *string
 	slug              *[]string
 	slugEmpty         *bool
@@ -112981,13 +112981,13 @@ func (r ApiDcimRegionsListRequest) AncestorIdN(ancestorIdN []string) ApiDcimRegi
 }
 
 // Contact
-func (r ApiDcimRegionsListRequest) Contact(contact []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) Contact(contact []int64) ApiDcimRegionsListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimRegionsListRequest) ContactN(contactN []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) ContactN(contactN []int64) ApiDcimRegionsListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -113003,13 +113003,13 @@ func (r ApiDcimRegionsListRequest) ContactGroupN(contactGroupN []string) ApiDcim
 }
 
 // Contact Role
-func (r ApiDcimRegionsListRequest) ContactRole(contactRole []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) ContactRole(contactRole []int64) ApiDcimRegionsListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimRegionsListRequest) ContactRoleN(contactRoleN []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) ContactRoleN(contactRoleN []int64) ApiDcimRegionsListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -113109,7 +113109,7 @@ func (r ApiDcimRegionsListRequest) DescriptionNisw(descriptionNisw []string) Api
 	return r
 }
 
-func (r ApiDcimRegionsListRequest) Id(id []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) Id(id []int64) ApiDcimRegionsListRequest {
 	r.id = &id
 	return r
 }
@@ -113119,27 +113119,27 @@ func (r ApiDcimRegionsListRequest) IdEmpty(idEmpty bool) ApiDcimRegionsListReque
 	return r
 }
 
-func (r ApiDcimRegionsListRequest) IdGt(idGt []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) IdGt(idGt []int64) ApiDcimRegionsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimRegionsListRequest) IdGte(idGte []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) IdGte(idGte []int64) ApiDcimRegionsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimRegionsListRequest) IdLt(idLt []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) IdLt(idLt []int64) ApiDcimRegionsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimRegionsListRequest) IdLte(idLte []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) IdLte(idLte []int64) ApiDcimRegionsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimRegionsListRequest) IdN(idN []int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) IdN(idN []int64) ApiDcimRegionsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -113180,7 +113180,7 @@ func (r ApiDcimRegionsListRequest) LastUpdatedN(lastUpdatedN []time.Time) ApiDci
 }
 
 // Number of results to return per page.
-func (r ApiDcimRegionsListRequest) Limit(limit int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) Limit(limit int64) ApiDcimRegionsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -113246,7 +113246,7 @@ func (r ApiDcimRegionsListRequest) NameNisw(nameNisw []string) ApiDcimRegionsLis
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimRegionsListRequest) Offset(offset int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) Offset(offset int64) ApiDcimRegionsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -113270,13 +113270,13 @@ func (r ApiDcimRegionsListRequest) ParentN(parentN []string) ApiDcimRegionsListR
 }
 
 // Parent region (ID)
-func (r ApiDcimRegionsListRequest) ParentId(parentId []*int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) ParentId(parentId []*int64) ApiDcimRegionsListRequest {
 	r.parentId = &parentId
 	return r
 }
 
 // Parent region (ID)
-func (r ApiDcimRegionsListRequest) ParentIdN(parentIdN []*int32) ApiDcimRegionsListRequest {
+func (r ApiDcimRegionsListRequest) ParentIdN(parentIdN []*int64) ApiDcimRegionsListRequest {
 	r.parentIdN = &parentIdN
 	return r
 }
@@ -114228,7 +114228,7 @@ func (a *DcimAPIService) DcimRegionsListExecute(r ApiDcimRegionsListRequest) (*P
 type ApiDcimRegionsPartialUpdateRequest struct {
 	ctx                          context.Context
 	ApiService                   *DcimAPIService
-	id                           int32
+	id                           int64
 	patchedWritableRegionRequest *PatchedWritableRegionRequest
 }
 
@@ -114250,7 +114250,7 @@ Patch a region object.
 	@param id A unique integer value identifying this region.
 	@return ApiDcimRegionsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimRegionsPartialUpdate(ctx context.Context, id int32) ApiDcimRegionsPartialUpdateRequest {
+func (a *DcimAPIService) DcimRegionsPartialUpdate(ctx context.Context, id int64) ApiDcimRegionsPartialUpdateRequest {
 	return ApiDcimRegionsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -114354,7 +114354,7 @@ func (a *DcimAPIService) DcimRegionsPartialUpdateExecute(r ApiDcimRegionsPartial
 type ApiDcimRegionsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimRegionsRetrieveRequest) Execute() (*Region, *http.Response, error) {
@@ -114370,7 +114370,7 @@ Get a region object.
 	@param id A unique integer value identifying this region.
 	@return ApiDcimRegionsRetrieveRequest
 */
-func (a *DcimAPIService) DcimRegionsRetrieve(ctx context.Context, id int32) ApiDcimRegionsRetrieveRequest {
+func (a *DcimAPIService) DcimRegionsRetrieve(ctx context.Context, id int64) ApiDcimRegionsRetrieveRequest {
 	return ApiDcimRegionsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -114472,7 +114472,7 @@ func (a *DcimAPIService) DcimRegionsRetrieveExecute(r ApiDcimRegionsRetrieveRequ
 type ApiDcimRegionsUpdateRequest struct {
 	ctx                   context.Context
 	ApiService            *DcimAPIService
-	id                    int32
+	id                    int64
 	writableRegionRequest *WritableRegionRequest
 }
 
@@ -114494,7 +114494,7 @@ Put a region object.
 	@param id A unique integer value identifying this region.
 	@return ApiDcimRegionsUpdateRequest
 */
-func (a *DcimAPIService) DcimRegionsUpdate(ctx context.Context, id int32) ApiDcimRegionsUpdateRequest {
+func (a *DcimAPIService) DcimRegionsUpdate(ctx context.Context, id int64) ApiDcimRegionsUpdateRequest {
 	return ApiDcimRegionsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -115089,7 +115089,7 @@ func (a *DcimAPIService) DcimSiteGroupsCreateExecute(r ApiDcimSiteGroupsCreateRe
 type ApiDcimSiteGroupsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimSiteGroupsDestroyRequest) Execute() (*http.Response, error) {
@@ -115105,7 +115105,7 @@ Delete a site group object.
 	@param id A unique integer value identifying this site group.
 	@return ApiDcimSiteGroupsDestroyRequest
 */
-func (a *DcimAPIService) DcimSiteGroupsDestroy(ctx context.Context, id int32) ApiDcimSiteGroupsDestroyRequest {
+func (a *DcimAPIService) DcimSiteGroupsDestroy(ctx context.Context, id int64) ApiDcimSiteGroupsDestroyRequest {
 	return ApiDcimSiteGroupsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -115199,12 +115199,12 @@ type ApiDcimSiteGroupsListRequest struct {
 	ancestorN         *[]string
 	ancestorId        *[]string
 	ancestorIdN       *[]string
-	contact           *[]int32
-	contactN          *[]int32
+	contact           *[]int64
+	contactN          *[]int64
 	contactGroup      *[]string
 	contactGroupN     *[]string
-	contactRole       *[]int32
-	contactRoleN      *[]int32
+	contactRole       *[]int64
+	contactRoleN      *[]int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -115224,13 +115224,13 @@ type ApiDcimSiteGroupsListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -115238,7 +115238,7 @@ type ApiDcimSiteGroupsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -115251,12 +115251,12 @@ type ApiDcimSiteGroupsListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	parent            *[]string
 	parentN           *[]string
-	parentId          *[]*int32
-	parentIdN         *[]*int32
+	parentId          *[]*int64
+	parentIdN         *[]*int64
 	q                 *string
 	slug              *[]string
 	slugEmpty         *bool
@@ -115295,13 +115295,13 @@ func (r ApiDcimSiteGroupsListRequest) AncestorIdN(ancestorIdN []string) ApiDcimS
 }
 
 // Contact
-func (r ApiDcimSiteGroupsListRequest) Contact(contact []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) Contact(contact []int64) ApiDcimSiteGroupsListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimSiteGroupsListRequest) ContactN(contactN []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) ContactN(contactN []int64) ApiDcimSiteGroupsListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -115317,13 +115317,13 @@ func (r ApiDcimSiteGroupsListRequest) ContactGroupN(contactGroupN []string) ApiD
 }
 
 // Contact Role
-func (r ApiDcimSiteGroupsListRequest) ContactRole(contactRole []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) ContactRole(contactRole []int64) ApiDcimSiteGroupsListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimSiteGroupsListRequest) ContactRoleN(contactRoleN []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) ContactRoleN(contactRoleN []int64) ApiDcimSiteGroupsListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -115423,7 +115423,7 @@ func (r ApiDcimSiteGroupsListRequest) DescriptionNisw(descriptionNisw []string) 
 	return r
 }
 
-func (r ApiDcimSiteGroupsListRequest) Id(id []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) Id(id []int64) ApiDcimSiteGroupsListRequest {
 	r.id = &id
 	return r
 }
@@ -115433,27 +115433,27 @@ func (r ApiDcimSiteGroupsListRequest) IdEmpty(idEmpty bool) ApiDcimSiteGroupsLis
 	return r
 }
 
-func (r ApiDcimSiteGroupsListRequest) IdGt(idGt []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) IdGt(idGt []int64) ApiDcimSiteGroupsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimSiteGroupsListRequest) IdGte(idGte []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) IdGte(idGte []int64) ApiDcimSiteGroupsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimSiteGroupsListRequest) IdLt(idLt []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) IdLt(idLt []int64) ApiDcimSiteGroupsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimSiteGroupsListRequest) IdLte(idLte []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) IdLte(idLte []int64) ApiDcimSiteGroupsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimSiteGroupsListRequest) IdN(idN []int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) IdN(idN []int64) ApiDcimSiteGroupsListRequest {
 	r.idN = &idN
 	return r
 }
@@ -115494,7 +115494,7 @@ func (r ApiDcimSiteGroupsListRequest) LastUpdatedN(lastUpdatedN []time.Time) Api
 }
 
 // Number of results to return per page.
-func (r ApiDcimSiteGroupsListRequest) Limit(limit int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) Limit(limit int64) ApiDcimSiteGroupsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -115560,7 +115560,7 @@ func (r ApiDcimSiteGroupsListRequest) NameNisw(nameNisw []string) ApiDcimSiteGro
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimSiteGroupsListRequest) Offset(offset int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) Offset(offset int64) ApiDcimSiteGroupsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -115584,13 +115584,13 @@ func (r ApiDcimSiteGroupsListRequest) ParentN(parentN []string) ApiDcimSiteGroup
 }
 
 // Parent site group (ID)
-func (r ApiDcimSiteGroupsListRequest) ParentId(parentId []*int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) ParentId(parentId []*int64) ApiDcimSiteGroupsListRequest {
 	r.parentId = &parentId
 	return r
 }
 
 // Parent site group (ID)
-func (r ApiDcimSiteGroupsListRequest) ParentIdN(parentIdN []*int32) ApiDcimSiteGroupsListRequest {
+func (r ApiDcimSiteGroupsListRequest) ParentIdN(parentIdN []*int64) ApiDcimSiteGroupsListRequest {
 	r.parentIdN = &parentIdN
 	return r
 }
@@ -116542,7 +116542,7 @@ func (a *DcimAPIService) DcimSiteGroupsListExecute(r ApiDcimSiteGroupsListReques
 type ApiDcimSiteGroupsPartialUpdateRequest struct {
 	ctx                             context.Context
 	ApiService                      *DcimAPIService
-	id                              int32
+	id                              int64
 	patchedWritableSiteGroupRequest *PatchedWritableSiteGroupRequest
 }
 
@@ -116564,7 +116564,7 @@ Patch a site group object.
 	@param id A unique integer value identifying this site group.
 	@return ApiDcimSiteGroupsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimSiteGroupsPartialUpdate(ctx context.Context, id int32) ApiDcimSiteGroupsPartialUpdateRequest {
+func (a *DcimAPIService) DcimSiteGroupsPartialUpdate(ctx context.Context, id int64) ApiDcimSiteGroupsPartialUpdateRequest {
 	return ApiDcimSiteGroupsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -116668,7 +116668,7 @@ func (a *DcimAPIService) DcimSiteGroupsPartialUpdateExecute(r ApiDcimSiteGroupsP
 type ApiDcimSiteGroupsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimSiteGroupsRetrieveRequest) Execute() (*SiteGroup, *http.Response, error) {
@@ -116684,7 +116684,7 @@ Get a site group object.
 	@param id A unique integer value identifying this site group.
 	@return ApiDcimSiteGroupsRetrieveRequest
 */
-func (a *DcimAPIService) DcimSiteGroupsRetrieve(ctx context.Context, id int32) ApiDcimSiteGroupsRetrieveRequest {
+func (a *DcimAPIService) DcimSiteGroupsRetrieve(ctx context.Context, id int64) ApiDcimSiteGroupsRetrieveRequest {
 	return ApiDcimSiteGroupsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -116786,7 +116786,7 @@ func (a *DcimAPIService) DcimSiteGroupsRetrieveExecute(r ApiDcimSiteGroupsRetrie
 type ApiDcimSiteGroupsUpdateRequest struct {
 	ctx                      context.Context
 	ApiService               *DcimAPIService
-	id                       int32
+	id                       int64
 	writableSiteGroupRequest *WritableSiteGroupRequest
 }
 
@@ -116808,7 +116808,7 @@ Put a site group object.
 	@param id A unique integer value identifying this site group.
 	@return ApiDcimSiteGroupsUpdateRequest
 */
-func (a *DcimAPIService) DcimSiteGroupsUpdate(ctx context.Context, id int32) ApiDcimSiteGroupsUpdateRequest {
+func (a *DcimAPIService) DcimSiteGroupsUpdate(ctx context.Context, id int64) ApiDcimSiteGroupsUpdateRequest {
 	return ApiDcimSiteGroupsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -117403,7 +117403,7 @@ func (a *DcimAPIService) DcimSitesCreateExecute(r ApiDcimSitesCreateRequest) (*S
 type ApiDcimSitesDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimSitesDestroyRequest) Execute() (*http.Response, error) {
@@ -117419,7 +117419,7 @@ Delete a site object.
 	@param id A unique integer value identifying this site.
 	@return ApiDcimSitesDestroyRequest
 */
-func (a *DcimAPIService) DcimSitesDestroy(ctx context.Context, id int32) ApiDcimSitesDestroyRequest {
+func (a *DcimAPIService) DcimSitesDestroy(ctx context.Context, id int64) ApiDcimSitesDestroyRequest {
 	return ApiDcimSitesDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -117511,14 +117511,14 @@ type ApiDcimSitesListRequest struct {
 	ApiService        *DcimAPIService
 	asn               *[]int64
 	asnN              *[]int64
-	asnId             *[]int32
-	asnIdN            *[]int32
-	contact           *[]int32
-	contactN          *[]int32
+	asnId             *[]int64
+	asnIdN            *[]int64
+	contact           *[]int64
+	contactN          *[]int64
 	contactGroup      *[]string
 	contactGroupN     *[]string
-	contactRole       *[]int32
-	contactRoleN      *[]int32
+	contactRole       *[]int64
+	contactRoleN      *[]int64
 	created           *[]time.Time
 	createdEmpty      *[]time.Time
 	createdGt         *[]time.Time
@@ -117553,13 +117553,13 @@ type ApiDcimSitesListRequest struct {
 	groupN            *[]string
 	groupId           *[]string
 	groupIdN          *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -117574,7 +117574,7 @@ type ApiDcimSitesListRequest struct {
 	latitudeLt        *[]float64
 	latitudeLte       *[]float64
 	latitudeN         *[]float64
-	limit             *int32
+	limit             *int64
 	longitude         *[]float64
 	longitudeEmpty    *bool
 	longitudeGt       *[]float64
@@ -117594,7 +117594,7 @@ type ApiDcimSitesListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	region            *[]string
@@ -117631,8 +117631,8 @@ type ApiDcimSitesListRequest struct {
 	tenantGroupN      *[]string
 	tenantGroupId     *[]string
 	tenantGroupIdN    *[]string
-	tenantId          *[]*int32
-	tenantIdN         *[]*int32
+	tenantId          *[]*int64
+	tenantIdN         *[]*int64
 	timeZone          *[]string
 	timeZoneIc        *[]string
 	timeZoneIe        *[]string
@@ -117659,25 +117659,25 @@ func (r ApiDcimSitesListRequest) AsnN(asnN []int64) ApiDcimSitesListRequest {
 }
 
 // AS (ID)
-func (r ApiDcimSitesListRequest) AsnId(asnId []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) AsnId(asnId []int64) ApiDcimSitesListRequest {
 	r.asnId = &asnId
 	return r
 }
 
 // AS (ID)
-func (r ApiDcimSitesListRequest) AsnIdN(asnIdN []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) AsnIdN(asnIdN []int64) ApiDcimSitesListRequest {
 	r.asnIdN = &asnIdN
 	return r
 }
 
 // Contact
-func (r ApiDcimSitesListRequest) Contact(contact []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) Contact(contact []int64) ApiDcimSitesListRequest {
 	r.contact = &contact
 	return r
 }
 
 // Contact
-func (r ApiDcimSitesListRequest) ContactN(contactN []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) ContactN(contactN []int64) ApiDcimSitesListRequest {
 	r.contactN = &contactN
 	return r
 }
@@ -117693,13 +117693,13 @@ func (r ApiDcimSitesListRequest) ContactGroupN(contactGroupN []string) ApiDcimSi
 }
 
 // Contact Role
-func (r ApiDcimSitesListRequest) ContactRole(contactRole []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) ContactRole(contactRole []int64) ApiDcimSitesListRequest {
 	r.contactRole = &contactRole
 	return r
 }
 
 // Contact Role
-func (r ApiDcimSitesListRequest) ContactRoleN(contactRoleN []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) ContactRoleN(contactRoleN []int64) ApiDcimSitesListRequest {
 	r.contactRoleN = &contactRoleN
 	return r
 }
@@ -117874,7 +117874,7 @@ func (r ApiDcimSitesListRequest) GroupIdN(groupIdN []string) ApiDcimSitesListReq
 	return r
 }
 
-func (r ApiDcimSitesListRequest) Id(id []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) Id(id []int64) ApiDcimSitesListRequest {
 	r.id = &id
 	return r
 }
@@ -117884,27 +117884,27 @@ func (r ApiDcimSitesListRequest) IdEmpty(idEmpty bool) ApiDcimSitesListRequest {
 	return r
 }
 
-func (r ApiDcimSitesListRequest) IdGt(idGt []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) IdGt(idGt []int64) ApiDcimSitesListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimSitesListRequest) IdGte(idGte []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) IdGte(idGte []int64) ApiDcimSitesListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimSitesListRequest) IdLt(idLt []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) IdLt(idLt []int64) ApiDcimSitesListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimSitesListRequest) IdLte(idLte []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) IdLte(idLte []int64) ApiDcimSitesListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimSitesListRequest) IdN(idN []int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) IdN(idN []int64) ApiDcimSitesListRequest {
 	r.idN = &idN
 	return r
 }
@@ -117980,7 +117980,7 @@ func (r ApiDcimSitesListRequest) LatitudeN(latitudeN []float64) ApiDcimSitesList
 }
 
 // Number of results to return per page.
-func (r ApiDcimSitesListRequest) Limit(limit int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) Limit(limit int64) ApiDcimSitesListRequest {
 	r.limit = &limit
 	return r
 }
@@ -118081,7 +118081,7 @@ func (r ApiDcimSitesListRequest) NameNisw(nameNisw []string) ApiDcimSitesListReq
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimSitesListRequest) Offset(offset int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) Offset(offset int64) ApiDcimSitesListRequest {
 	r.offset = &offset
 	return r
 }
@@ -118271,13 +118271,13 @@ func (r ApiDcimSitesListRequest) TenantGroupIdN(tenantGroupIdN []string) ApiDcim
 }
 
 // Tenant (ID)
-func (r ApiDcimSitesListRequest) TenantId(tenantId []*int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) TenantId(tenantId []*int64) ApiDcimSitesListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimSitesListRequest) TenantIdN(tenantIdN []*int32) ApiDcimSitesListRequest {
+func (r ApiDcimSitesListRequest) TenantIdN(tenantIdN []*int64) ApiDcimSitesListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
@@ -119814,7 +119814,7 @@ func (a *DcimAPIService) DcimSitesListExecute(r ApiDcimSitesListRequest) (*Pagin
 type ApiDcimSitesPartialUpdateRequest struct {
 	ctx                        context.Context
 	ApiService                 *DcimAPIService
-	id                         int32
+	id                         int64
 	patchedWritableSiteRequest *PatchedWritableSiteRequest
 }
 
@@ -119836,7 +119836,7 @@ Patch a site object.
 	@param id A unique integer value identifying this site.
 	@return ApiDcimSitesPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimSitesPartialUpdate(ctx context.Context, id int32) ApiDcimSitesPartialUpdateRequest {
+func (a *DcimAPIService) DcimSitesPartialUpdate(ctx context.Context, id int64) ApiDcimSitesPartialUpdateRequest {
 	return ApiDcimSitesPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -119940,7 +119940,7 @@ func (a *DcimAPIService) DcimSitesPartialUpdateExecute(r ApiDcimSitesPartialUpda
 type ApiDcimSitesRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimSitesRetrieveRequest) Execute() (*Site, *http.Response, error) {
@@ -119956,7 +119956,7 @@ Get a site object.
 	@param id A unique integer value identifying this site.
 	@return ApiDcimSitesRetrieveRequest
 */
-func (a *DcimAPIService) DcimSitesRetrieve(ctx context.Context, id int32) ApiDcimSitesRetrieveRequest {
+func (a *DcimAPIService) DcimSitesRetrieve(ctx context.Context, id int64) ApiDcimSitesRetrieveRequest {
 	return ApiDcimSitesRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -120058,7 +120058,7 @@ func (a *DcimAPIService) DcimSitesRetrieveExecute(r ApiDcimSitesRetrieveRequest)
 type ApiDcimSitesUpdateRequest struct {
 	ctx                 context.Context
 	ApiService          *DcimAPIService
-	id                  int32
+	id                  int64
 	writableSiteRequest *WritableSiteRequest
 }
 
@@ -120080,7 +120080,7 @@ Put a site object.
 	@param id A unique integer value identifying this site.
 	@return ApiDcimSitesUpdateRequest
 */
-func (a *DcimAPIService) DcimSitesUpdate(ctx context.Context, id int32) ApiDcimSitesUpdateRequest {
+func (a *DcimAPIService) DcimSitesUpdate(ctx context.Context, id int64) ApiDcimSitesUpdateRequest {
 	return ApiDcimSitesUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -120675,7 +120675,7 @@ func (a *DcimAPIService) DcimVirtualChassisCreateExecute(r ApiDcimVirtualChassis
 type ApiDcimVirtualChassisDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimVirtualChassisDestroyRequest) Execute() (*http.Response, error) {
@@ -120691,7 +120691,7 @@ Delete a virtual chassis object.
 	@param id A unique integer value identifying this virtual chassis.
 	@return ApiDcimVirtualChassisDestroyRequest
 */
-func (a *DcimAPIService) DcimVirtualChassisDestroy(ctx context.Context, id int32) ApiDcimVirtualChassisDestroyRequest {
+func (a *DcimAPIService) DcimVirtualChassisDestroy(ctx context.Context, id int64) ApiDcimVirtualChassisDestroyRequest {
 	return ApiDcimVirtualChassisDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -120811,13 +120811,13 @@ type ApiDcimVirtualChassisListRequest struct {
 	domainNie         *[]string
 	domainNiew        *[]string
 	domainNisw        *[]string
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -120825,18 +120825,18 @@ type ApiDcimVirtualChassisListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	master            *[]*string
 	masterN           *[]*string
-	masterId          *[]*int32
-	masterIdN         *[]*int32
-	memberCount       *[]int32
+	masterId          *[]*int64
+	masterIdN         *[]*int64
+	memberCount       *[]int64
 	memberCountEmpty  *bool
-	memberCountGt     *[]int32
-	memberCountGte    *[]int32
-	memberCountLt     *[]int32
-	memberCountLte    *[]int32
-	memberCountN      *[]int32
+	memberCountGt     *[]int64
+	memberCountGte    *[]int64
+	memberCountLt     *[]int64
+	memberCountLte    *[]int64
+	memberCountN      *[]int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -120849,7 +120849,7 @@ type ApiDcimVirtualChassisListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
 	q                 *string
 	region            *[]string
@@ -120862,14 +120862,14 @@ type ApiDcimVirtualChassisListRequest struct {
 	siteGroupN        *[]string
 	siteGroupId       *[]string
 	siteGroupIdN      *[]string
-	siteId            *[]int32
-	siteIdN           *[]int32
+	siteId            *[]int64
+	siteIdN           *[]int64
 	tag               *[]string
 	tagN              *[]string
 	tenant            *[]string
 	tenantN           *[]string
-	tenantId          *[]int32
-	tenantIdN         *[]int32
+	tenantId          *[]int64
+	tenantIdN         *[]int64
 	updatedByRequest  *string
 }
 
@@ -121023,7 +121023,7 @@ func (r ApiDcimVirtualChassisListRequest) DomainNisw(domainNisw []string) ApiDci
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) Id(id []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) Id(id []int64) ApiDcimVirtualChassisListRequest {
 	r.id = &id
 	return r
 }
@@ -121033,27 +121033,27 @@ func (r ApiDcimVirtualChassisListRequest) IdEmpty(idEmpty bool) ApiDcimVirtualCh
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) IdGt(idGt []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) IdGt(idGt []int64) ApiDcimVirtualChassisListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) IdGte(idGte []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) IdGte(idGte []int64) ApiDcimVirtualChassisListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) IdLt(idLt []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) IdLt(idLt []int64) ApiDcimVirtualChassisListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) IdLte(idLte []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) IdLte(idLte []int64) ApiDcimVirtualChassisListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) IdN(idN []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) IdN(idN []int64) ApiDcimVirtualChassisListRequest {
 	r.idN = &idN
 	return r
 }
@@ -121094,7 +121094,7 @@ func (r ApiDcimVirtualChassisListRequest) LastUpdatedN(lastUpdatedN []time.Time)
 }
 
 // Number of results to return per page.
-func (r ApiDcimVirtualChassisListRequest) Limit(limit int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) Limit(limit int64) ApiDcimVirtualChassisListRequest {
 	r.limit = &limit
 	return r
 }
@@ -121112,18 +121112,18 @@ func (r ApiDcimVirtualChassisListRequest) MasterN(masterN []*string) ApiDcimVirt
 }
 
 // Master (ID)
-func (r ApiDcimVirtualChassisListRequest) MasterId(masterId []*int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MasterId(masterId []*int64) ApiDcimVirtualChassisListRequest {
 	r.masterId = &masterId
 	return r
 }
 
 // Master (ID)
-func (r ApiDcimVirtualChassisListRequest) MasterIdN(masterIdN []*int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MasterIdN(masterIdN []*int64) ApiDcimVirtualChassisListRequest {
 	r.masterIdN = &masterIdN
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) MemberCount(memberCount []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MemberCount(memberCount []int64) ApiDcimVirtualChassisListRequest {
 	r.memberCount = &memberCount
 	return r
 }
@@ -121133,27 +121133,27 @@ func (r ApiDcimVirtualChassisListRequest) MemberCountEmpty(memberCountEmpty bool
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) MemberCountGt(memberCountGt []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MemberCountGt(memberCountGt []int64) ApiDcimVirtualChassisListRequest {
 	r.memberCountGt = &memberCountGt
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) MemberCountGte(memberCountGte []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MemberCountGte(memberCountGte []int64) ApiDcimVirtualChassisListRequest {
 	r.memberCountGte = &memberCountGte
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) MemberCountLt(memberCountLt []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MemberCountLt(memberCountLt []int64) ApiDcimVirtualChassisListRequest {
 	r.memberCountLt = &memberCountLt
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) MemberCountLte(memberCountLte []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MemberCountLte(memberCountLte []int64) ApiDcimVirtualChassisListRequest {
 	r.memberCountLte = &memberCountLte
 	return r
 }
 
-func (r ApiDcimVirtualChassisListRequest) MemberCountN(memberCountN []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) MemberCountN(memberCountN []int64) ApiDcimVirtualChassisListRequest {
 	r.memberCountN = &memberCountN
 	return r
 }
@@ -121219,7 +121219,7 @@ func (r ApiDcimVirtualChassisListRequest) NameNisw(nameNisw []string) ApiDcimVir
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimVirtualChassisListRequest) Offset(offset int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) Offset(offset int64) ApiDcimVirtualChassisListRequest {
 	r.offset = &offset
 	return r
 }
@@ -121289,13 +121289,13 @@ func (r ApiDcimVirtualChassisListRequest) SiteGroupIdN(siteGroupIdN []string) Ap
 }
 
 // Site (ID)
-func (r ApiDcimVirtualChassisListRequest) SiteId(siteId []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) SiteId(siteId []int64) ApiDcimVirtualChassisListRequest {
 	r.siteId = &siteId
 	return r
 }
 
 // Site (ID)
-func (r ApiDcimVirtualChassisListRequest) SiteIdN(siteIdN []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) SiteIdN(siteIdN []int64) ApiDcimVirtualChassisListRequest {
 	r.siteIdN = &siteIdN
 	return r
 }
@@ -121323,13 +121323,13 @@ func (r ApiDcimVirtualChassisListRequest) TenantN(tenantN []string) ApiDcimVirtu
 }
 
 // Tenant (ID)
-func (r ApiDcimVirtualChassisListRequest) TenantId(tenantId []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) TenantId(tenantId []int64) ApiDcimVirtualChassisListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimVirtualChassisListRequest) TenantIdN(tenantIdN []int32) ApiDcimVirtualChassisListRequest {
+func (r ApiDcimVirtualChassisListRequest) TenantIdN(tenantIdN []int64) ApiDcimVirtualChassisListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
@@ -122345,7 +122345,7 @@ func (a *DcimAPIService) DcimVirtualChassisListExecute(r ApiDcimVirtualChassisLi
 type ApiDcimVirtualChassisPartialUpdateRequest struct {
 	ctx                                  context.Context
 	ApiService                           *DcimAPIService
-	id                                   int32
+	id                                   int64
 	patchedWritableVirtualChassisRequest *PatchedWritableVirtualChassisRequest
 }
 
@@ -122367,7 +122367,7 @@ Patch a virtual chassis object.
 	@param id A unique integer value identifying this virtual chassis.
 	@return ApiDcimVirtualChassisPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimVirtualChassisPartialUpdate(ctx context.Context, id int32) ApiDcimVirtualChassisPartialUpdateRequest {
+func (a *DcimAPIService) DcimVirtualChassisPartialUpdate(ctx context.Context, id int64) ApiDcimVirtualChassisPartialUpdateRequest {
 	return ApiDcimVirtualChassisPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -122471,7 +122471,7 @@ func (a *DcimAPIService) DcimVirtualChassisPartialUpdateExecute(r ApiDcimVirtual
 type ApiDcimVirtualChassisRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimVirtualChassisRetrieveRequest) Execute() (*VirtualChassis, *http.Response, error) {
@@ -122487,7 +122487,7 @@ Get a virtual chassis object.
 	@param id A unique integer value identifying this virtual chassis.
 	@return ApiDcimVirtualChassisRetrieveRequest
 */
-func (a *DcimAPIService) DcimVirtualChassisRetrieve(ctx context.Context, id int32) ApiDcimVirtualChassisRetrieveRequest {
+func (a *DcimAPIService) DcimVirtualChassisRetrieve(ctx context.Context, id int64) ApiDcimVirtualChassisRetrieveRequest {
 	return ApiDcimVirtualChassisRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -122589,7 +122589,7 @@ func (a *DcimAPIService) DcimVirtualChassisRetrieveExecute(r ApiDcimVirtualChass
 type ApiDcimVirtualChassisUpdateRequest struct {
 	ctx                           context.Context
 	ApiService                    *DcimAPIService
-	id                            int32
+	id                            int64
 	writableVirtualChassisRequest *WritableVirtualChassisRequest
 }
 
@@ -122611,7 +122611,7 @@ Put a virtual chassis object.
 	@param id A unique integer value identifying this virtual chassis.
 	@return ApiDcimVirtualChassisUpdateRequest
 */
-func (a *DcimAPIService) DcimVirtualChassisUpdate(ctx context.Context, id int32) ApiDcimVirtualChassisUpdateRequest {
+func (a *DcimAPIService) DcimVirtualChassisUpdate(ctx context.Context, id int64) ApiDcimVirtualChassisUpdateRequest {
 	return ApiDcimVirtualChassisUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -123206,7 +123206,7 @@ func (a *DcimAPIService) DcimVirtualDeviceContextsCreateExecute(r ApiDcimVirtual
 type ApiDcimVirtualDeviceContextsDestroyRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimVirtualDeviceContextsDestroyRequest) Execute() (*http.Response, error) {
@@ -123222,7 +123222,7 @@ Delete a virtual device context object.
 	@param id A unique integer value identifying this virtual device context.
 	@return ApiDcimVirtualDeviceContextsDestroyRequest
 */
-func (a *DcimAPIService) DcimVirtualDeviceContextsDestroy(ctx context.Context, id int32) ApiDcimVirtualDeviceContextsDestroyRequest {
+func (a *DcimAPIService) DcimVirtualDeviceContextsDestroy(ctx context.Context, id int64) ApiDcimVirtualDeviceContextsDestroyRequest {
 	return ApiDcimVirtualDeviceContextsDestroyRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -123331,27 +123331,27 @@ type ApiDcimVirtualDeviceContextsListRequest struct {
 	descriptionNie    *[]string
 	descriptionNiew   *[]string
 	descriptionNisw   *[]string
-	device            *[]int32
-	deviceN           *[]int32
-	deviceId          *[]int32
-	deviceIdN         *[]int32
+	device            *[]int64
+	deviceN           *[]int64
+	deviceId          *[]int64
+	deviceIdN         *[]int64
 	hasPrimaryIp      *bool
-	id                *[]int32
+	id                *[]int64
 	idEmpty           *bool
-	idGt              *[]int32
-	idGte             *[]int32
-	idLt              *[]int32
-	idLte             *[]int32
-	idN               *[]int32
-	identifier        *[]int32
+	idGt              *[]int64
+	idGte             *[]int64
+	idLt              *[]int64
+	idLte             *[]int64
+	idN               *[]int64
+	identifier        *[]int64
 	identifierEmpty   *bool
-	identifierGt      *[]int32
-	identifierGte     *[]int32
-	identifierLt      *[]int32
-	identifierLte     *[]int32
-	identifierN       *[]int32
-	interfaceId       *[]int32
-	interfaceIdN      *[]int32
+	identifierGt      *[]int64
+	identifierGte     *[]int64
+	identifierLt      *[]int64
+	identifierLte     *[]int64
+	identifierN       *[]int64
+	interfaceId       *[]int64
+	interfaceIdN      *[]int64
 	lastUpdated       *[]time.Time
 	lastUpdatedEmpty  *[]time.Time
 	lastUpdatedGt     *[]time.Time
@@ -123359,7 +123359,7 @@ type ApiDcimVirtualDeviceContextsListRequest struct {
 	lastUpdatedLt     *[]time.Time
 	lastUpdatedLte    *[]time.Time
 	lastUpdatedN      *[]time.Time
-	limit             *int32
+	limit             *int64
 	modifiedByRequest *string
 	name              *[]string
 	nameEmpty         *bool
@@ -123372,12 +123372,12 @@ type ApiDcimVirtualDeviceContextsListRequest struct {
 	nameNie           *[]string
 	nameNiew          *[]string
 	nameNisw          *[]string
-	offset            *int32
+	offset            *int64
 	ordering          *string
-	primaryIp4Id      *[]int32
-	primaryIp4IdN     *[]int32
-	primaryIp6Id      *[]int32
-	primaryIp6IdN     *[]int32
+	primaryIp4Id      *[]int64
+	primaryIp4IdN     *[]int64
+	primaryIp6Id      *[]int64
+	primaryIp6IdN     *[]int64
 	q                 *string
 	status            *[]string
 	statusEmpty       *bool
@@ -123398,8 +123398,8 @@ type ApiDcimVirtualDeviceContextsListRequest struct {
 	tenantGroupN      *[]string
 	tenantGroupId     *[]string
 	tenantGroupIdN    *[]string
-	tenantId          *[]*int32
-	tenantIdN         *[]*int32
+	tenantId          *[]*int64
+	tenantIdN         *[]*int64
 	updatedByRequest  *string
 }
 
@@ -123499,25 +123499,25 @@ func (r ApiDcimVirtualDeviceContextsListRequest) DescriptionNisw(descriptionNisw
 }
 
 // Device model
-func (r ApiDcimVirtualDeviceContextsListRequest) Device(device []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) Device(device []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.device = &device
 	return r
 }
 
 // Device model
-func (r ApiDcimVirtualDeviceContextsListRequest) DeviceN(deviceN []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) DeviceN(deviceN []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.deviceN = &deviceN
 	return r
 }
 
 // VDC (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) DeviceId(deviceId []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) DeviceId(deviceId []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.deviceId = &deviceId
 	return r
 }
 
 // VDC (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) DeviceIdN(deviceIdN []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) DeviceIdN(deviceIdN []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.deviceIdN = &deviceIdN
 	return r
 }
@@ -123528,7 +123528,7 @@ func (r ApiDcimVirtualDeviceContextsListRequest) HasPrimaryIp(hasPrimaryIp bool)
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) Id(id []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) Id(id []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.id = &id
 	return r
 }
@@ -123538,32 +123538,32 @@ func (r ApiDcimVirtualDeviceContextsListRequest) IdEmpty(idEmpty bool) ApiDcimVi
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdGt(idGt []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdGt(idGt []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.idGt = &idGt
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdGte(idGte []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdGte(idGte []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.idGte = &idGte
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdLt(idLt []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdLt(idLt []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.idLt = &idLt
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdLte(idLte []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdLte(idLte []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.idLte = &idLte
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdN(idN []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdN(idN []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.idN = &idN
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) Identifier(identifier []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) Identifier(identifier []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.identifier = &identifier
 	return r
 }
@@ -123573,39 +123573,39 @@ func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierEmpty(identifierEmpty
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierGt(identifierGt []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierGt(identifierGt []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.identifierGt = &identifierGt
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierGte(identifierGte []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierGte(identifierGte []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.identifierGte = &identifierGte
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierLt(identifierLt []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierLt(identifierLt []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.identifierLt = &identifierLt
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierLte(identifierLte []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierLte(identifierLte []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.identifierLte = &identifierLte
 	return r
 }
 
-func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierN(identifierN []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) IdentifierN(identifierN []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.identifierN = &identifierN
 	return r
 }
 
 // Interface (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) InterfaceId(interfaceId []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) InterfaceId(interfaceId []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.interfaceId = &interfaceId
 	return r
 }
 
 // Interface (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) InterfaceIdN(interfaceIdN []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) InterfaceIdN(interfaceIdN []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.interfaceIdN = &interfaceIdN
 	return r
 }
@@ -123646,7 +123646,7 @@ func (r ApiDcimVirtualDeviceContextsListRequest) LastUpdatedN(lastUpdatedN []tim
 }
 
 // Number of results to return per page.
-func (r ApiDcimVirtualDeviceContextsListRequest) Limit(limit int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) Limit(limit int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.limit = &limit
 	return r
 }
@@ -123712,7 +123712,7 @@ func (r ApiDcimVirtualDeviceContextsListRequest) NameNisw(nameNisw []string) Api
 }
 
 // The initial index from which to return the results.
-func (r ApiDcimVirtualDeviceContextsListRequest) Offset(offset int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) Offset(offset int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.offset = &offset
 	return r
 }
@@ -123724,25 +123724,25 @@ func (r ApiDcimVirtualDeviceContextsListRequest) Ordering(ordering string) ApiDc
 }
 
 // Primary IPv4 (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp4Id(primaryIp4Id []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp4Id(primaryIp4Id []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.primaryIp4Id = &primaryIp4Id
 	return r
 }
 
 // Primary IPv4 (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp4IdN(primaryIp4IdN []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp4IdN(primaryIp4IdN []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.primaryIp4IdN = &primaryIp4IdN
 	return r
 }
 
 // Primary IPv6 (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp6Id(primaryIp6Id []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp6Id(primaryIp6Id []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.primaryIp6Id = &primaryIp6Id
 	return r
 }
 
 // Primary IPv6 (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp6IdN(primaryIp6IdN []int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) PrimaryIp6IdN(primaryIp6IdN []int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.primaryIp6IdN = &primaryIp6IdN
 	return r
 }
@@ -123851,13 +123851,13 @@ func (r ApiDcimVirtualDeviceContextsListRequest) TenantGroupIdN(tenantGroupIdN [
 }
 
 // Tenant (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) TenantId(tenantId []*int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) TenantId(tenantId []*int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.tenantId = &tenantId
 	return r
 }
 
 // Tenant (ID)
-func (r ApiDcimVirtualDeviceContextsListRequest) TenantIdN(tenantIdN []*int32) ApiDcimVirtualDeviceContextsListRequest {
+func (r ApiDcimVirtualDeviceContextsListRequest) TenantIdN(tenantIdN []*int64) ApiDcimVirtualDeviceContextsListRequest {
 	r.tenantIdN = &tenantIdN
 	return r
 }
@@ -124854,7 +124854,7 @@ func (a *DcimAPIService) DcimVirtualDeviceContextsListExecute(r ApiDcimVirtualDe
 type ApiDcimVirtualDeviceContextsPartialUpdateRequest struct {
 	ctx                                        context.Context
 	ApiService                                 *DcimAPIService
-	id                                         int32
+	id                                         int64
 	patchedWritableVirtualDeviceContextRequest *PatchedWritableVirtualDeviceContextRequest
 }
 
@@ -124876,7 +124876,7 @@ Patch a virtual device context object.
 	@param id A unique integer value identifying this virtual device context.
 	@return ApiDcimVirtualDeviceContextsPartialUpdateRequest
 */
-func (a *DcimAPIService) DcimVirtualDeviceContextsPartialUpdate(ctx context.Context, id int32) ApiDcimVirtualDeviceContextsPartialUpdateRequest {
+func (a *DcimAPIService) DcimVirtualDeviceContextsPartialUpdate(ctx context.Context, id int64) ApiDcimVirtualDeviceContextsPartialUpdateRequest {
 	return ApiDcimVirtualDeviceContextsPartialUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -124980,7 +124980,7 @@ func (a *DcimAPIService) DcimVirtualDeviceContextsPartialUpdateExecute(r ApiDcim
 type ApiDcimVirtualDeviceContextsRetrieveRequest struct {
 	ctx        context.Context
 	ApiService *DcimAPIService
-	id         int32
+	id         int64
 }
 
 func (r ApiDcimVirtualDeviceContextsRetrieveRequest) Execute() (*VirtualDeviceContext, *http.Response, error) {
@@ -124996,7 +124996,7 @@ Get a virtual device context object.
 	@param id A unique integer value identifying this virtual device context.
 	@return ApiDcimVirtualDeviceContextsRetrieveRequest
 */
-func (a *DcimAPIService) DcimVirtualDeviceContextsRetrieve(ctx context.Context, id int32) ApiDcimVirtualDeviceContextsRetrieveRequest {
+func (a *DcimAPIService) DcimVirtualDeviceContextsRetrieve(ctx context.Context, id int64) ApiDcimVirtualDeviceContextsRetrieveRequest {
 	return ApiDcimVirtualDeviceContextsRetrieveRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -125098,7 +125098,7 @@ func (a *DcimAPIService) DcimVirtualDeviceContextsRetrieveExecute(r ApiDcimVirtu
 type ApiDcimVirtualDeviceContextsUpdateRequest struct {
 	ctx                                 context.Context
 	ApiService                          *DcimAPIService
-	id                                  int32
+	id                                  int64
 	writableVirtualDeviceContextRequest *WritableVirtualDeviceContextRequest
 }
 
@@ -125120,7 +125120,7 @@ Put a virtual device context object.
 	@param id A unique integer value identifying this virtual device context.
 	@return ApiDcimVirtualDeviceContextsUpdateRequest
 */
-func (a *DcimAPIService) DcimVirtualDeviceContextsUpdate(ctx context.Context, id int32) ApiDcimVirtualDeviceContextsUpdateRequest {
+func (a *DcimAPIService) DcimVirtualDeviceContextsUpdate(ctx context.Context, id int64) ApiDcimVirtualDeviceContextsUpdateRequest {
 	return ApiDcimVirtualDeviceContextsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,

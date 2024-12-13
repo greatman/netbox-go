@@ -21,14 +21,14 @@ var _ MappedNullable = &VLAN{}
 
 // VLAN Adds support for custom fields and tags.
 type VLAN struct {
-	Id         int32                  `json:"id"`
+	Id         int64                  `json:"id"`
 	Url        string                 `json:"url"`
 	DisplayUrl string                 `json:"display_url"`
 	Display    string                 `json:"display"`
 	Site       NullableBriefSite      `json:"site,omitempty"`
 	Group      NullableBriefVLANGroup `json:"group,omitempty"`
 	// Numeric VLAN ID (1-4094)
-	Vid                  int32                         `json:"vid"`
+	Vid                  int64                         `json:"vid"`
 	Name                 string                        `json:"name"`
 	Tenant               NullableBriefTenant           `json:"tenant,omitempty"`
 	Status               *IPRangeStatus                `json:"status,omitempty"`
@@ -52,7 +52,7 @@ type _VLAN VLAN
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVLAN(id int32, url string, displayUrl string, display string, vid int32, name string, l2vpnTermination NullableBriefL2VPNTermination, created NullableTime, lastUpdated NullableTime, prefixCount int64) *VLAN {
+func NewVLAN(id int64, url string, displayUrl string, display string, vid int64, name string, l2vpnTermination NullableBriefL2VPNTermination, created NullableTime, lastUpdated NullableTime, prefixCount int64) *VLAN {
 	this := VLAN{}
 	this.Id = id
 	this.Url = url
@@ -76,9 +76,9 @@ func NewVLANWithDefaults() *VLAN {
 }
 
 // GetId returns the Id field value
-func (o *VLAN) GetId() int32 {
+func (o *VLAN) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -87,7 +87,7 @@ func (o *VLAN) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *VLAN) GetIdOk() (*int32, bool) {
+func (o *VLAN) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -95,7 +95,7 @@ func (o *VLAN) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *VLAN) SetId(v int32) {
+func (o *VLAN) SetId(v int64) {
 	o.Id = v
 }
 
@@ -258,9 +258,9 @@ func (o *VLAN) UnsetGroup() {
 }
 
 // GetVid returns the Vid field value
-func (o *VLAN) GetVid() int32 {
+func (o *VLAN) GetVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -269,7 +269,7 @@ func (o *VLAN) GetVid() int32 {
 
 // GetVidOk returns a tuple with the Vid field value
 // and a boolean to check if the value has been set.
-func (o *VLAN) GetVidOk() (*int32, bool) {
+func (o *VLAN) GetVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -277,7 +277,7 @@ func (o *VLAN) GetVidOk() (*int32, bool) {
 }
 
 // SetVid sets field value
-func (o *VLAN) SetVid(v int32) {
+func (o *VLAN) SetVid(v int64) {
 	o.Vid = v
 }
 

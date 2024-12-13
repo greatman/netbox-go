@@ -20,10 +20,10 @@ var _ MappedNullable = &Script{}
 
 // Script Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type Script struct {
-	Id                   int32          `json:"id"`
+	Id                   int64          `json:"id"`
 	Url                  string         `json:"url"`
 	DisplayUrl           string         `json:"display_url"`
-	Module               int32          `json:"module"`
+	Module               int64          `json:"module"`
 	Name                 string         `json:"name"`
 	Description          NullableString `json:"description"`
 	Vars                 interface{}    `json:"vars"`
@@ -39,7 +39,7 @@ type _Script Script
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewScript(id int32, url string, displayUrl string, module int32, name string, description NullableString, vars interface{}, result BriefJob, display string, isExecutable bool) *Script {
+func NewScript(id int64, url string, displayUrl string, module int64, name string, description NullableString, vars interface{}, result BriefJob, display string, isExecutable bool) *Script {
 	this := Script{}
 	this.Id = id
 	this.Url = url
@@ -63,9 +63,9 @@ func NewScriptWithDefaults() *Script {
 }
 
 // GetId returns the Id field value
-func (o *Script) GetId() int32 {
+func (o *Script) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -74,7 +74,7 @@ func (o *Script) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Script) GetIdOk() (*int32, bool) {
+func (o *Script) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -82,7 +82,7 @@ func (o *Script) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Script) SetId(v int32) {
+func (o *Script) SetId(v int64) {
 	o.Id = v
 }
 
@@ -135,9 +135,9 @@ func (o *Script) SetDisplayUrl(v string) {
 }
 
 // GetModule returns the Module field value
-func (o *Script) GetModule() int32 {
+func (o *Script) GetModule() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -146,7 +146,7 @@ func (o *Script) GetModule() int32 {
 
 // GetModuleOk returns a tuple with the Module field value
 // and a boolean to check if the value has been set.
-func (o *Script) GetModuleOk() (*int32, bool) {
+func (o *Script) GetModuleOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -154,7 +154,7 @@ func (o *Script) GetModuleOk() (*int32, bool) {
 }
 
 // SetModule sets field value
-func (o *Script) SetModule(v int32) {
+func (o *Script) SetModule(v int64) {
 	o.Module = v
 }
 

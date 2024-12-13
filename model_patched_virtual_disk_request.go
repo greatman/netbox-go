@@ -22,7 +22,7 @@ type PatchedVirtualDiskRequest struct {
 	VirtualMachine       *BriefVirtualMachineRequest `json:"virtual_machine,omitempty"`
 	Name                 *string                     `json:"name,omitempty"`
 	Description          *string                     `json:"description,omitempty"`
-	Size                 *int32                      `json:"size,omitempty"`
+	Size                 *int64                      `json:"size,omitempty"`
 	Tags                 []NestedTagRequest          `json:"tags,omitempty"`
 	CustomFields         map[string]interface{}      `json:"custom_fields,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -144,9 +144,9 @@ func (o *PatchedVirtualDiskRequest) SetDescription(v string) {
 }
 
 // GetSize returns the Size field value if set, zero value otherwise.
-func (o *PatchedVirtualDiskRequest) GetSize() int32 {
+func (o *PatchedVirtualDiskRequest) GetSize() int64 {
 	if o == nil || IsNil(o.Size) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Size
@@ -154,7 +154,7 @@ func (o *PatchedVirtualDiskRequest) GetSize() int32 {
 
 // GetSizeOk returns a tuple with the Size field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedVirtualDiskRequest) GetSizeOk() (*int32, bool) {
+func (o *PatchedVirtualDiskRequest) GetSizeOk() (*int64, bool) {
 	if o == nil || IsNil(o.Size) {
 		return nil, false
 	}
@@ -170,8 +170,8 @@ func (o *PatchedVirtualDiskRequest) HasSize() bool {
 	return false
 }
 
-// SetSize gets a reference to the given int32 and assigns it to the Size field.
-func (o *PatchedVirtualDiskRequest) SetSize(v int32) {
+// SetSize gets a reference to the given int64 and assigns it to the Size field.
+func (o *PatchedVirtualDiskRequest) SetSize(v int64) {
 	o.Size = &v
 }
 

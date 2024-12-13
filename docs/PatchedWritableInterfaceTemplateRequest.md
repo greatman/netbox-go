@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** |  | [optional] 
 **MgmtOnly** | Pointer to **bool** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**Bridge** | Pointer to **NullableInt32** |  | [optional] 
+**Bridge** | Pointer to **NullableInt64** |  | [optional] 
 **PoeMode** | Pointer to [**NullableInterfaceTemplateRequestPoeMode**](InterfaceTemplateRequestPoeMode.md) |  | [optional] 
 **PoeType** | Pointer to [**NullableInterfaceTemplateRequestPoeType**](InterfaceTemplateRequestPoeType.md) |  | [optional] 
 **RfRole** | Pointer to [**NullableWirelessRole**](WirelessRole.md) |  | [optional] 
@@ -258,20 +258,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetBridge
 
-`func (o *PatchedWritableInterfaceTemplateRequest) GetBridge() int32`
+`func (o *PatchedWritableInterfaceTemplateRequest) GetBridge() int64`
 
 GetBridge returns the Bridge field if non-nil, zero value otherwise.
 
 ### GetBridgeOk
 
-`func (o *PatchedWritableInterfaceTemplateRequest) GetBridgeOk() (*int32, bool)`
+`func (o *PatchedWritableInterfaceTemplateRequest) GetBridgeOk() (*int64, bool)`
 
 GetBridgeOk returns a tuple with the Bridge field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBridge
 
-`func (o *PatchedWritableInterfaceTemplateRequest) SetBridge(v int32)`
+`func (o *PatchedWritableInterfaceTemplateRequest) SetBridge(v int64)`
 
 SetBridge sets Bridge field to given value.
 

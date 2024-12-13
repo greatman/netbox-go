@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **ScopeType** | Pointer to **NullableString** |  | [optional] 
-**ScopeId** | Pointer to **NullableInt32** |  | [optional] 
+**ScopeId** | Pointer to **NullableInt64** |  | [optional] 
 **Scope** | **interface{}** |  | [readonly] 
 **Description** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTag**](NestedTag.md) |  | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 ### NewVLANGroup
 
-`func NewVLANGroup(id int32, url string, displayUrl string, display string, name string, slug string, scope interface{}, created NullableTime, lastUpdated NullableTime, vlanCount int64, utilization string, ) *VLANGroup`
+`func NewVLANGroup(id int64, url string, displayUrl string, display string, name string, slug string, scope interface{}, created NullableTime, lastUpdated NullableTime, vlanCount int64, utilization string, ) *VLANGroup`
 
 NewVLANGroup instantiates a new VLANGroup object
 This constructor will assign default values to properties that have it defined,
@@ -42,20 +42,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VLANGroup) GetId() int32`
+`func (o *VLANGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VLANGroup) GetIdOk() (*int32, bool)`
+`func (o *VLANGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VLANGroup) SetId(v int32)`
+`func (o *VLANGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -197,20 +197,20 @@ HasScopeType returns a boolean if a field has been set.
 UnsetScopeType ensures that no value is present for ScopeType, not even an explicit nil
 ### GetScopeId
 
-`func (o *VLANGroup) GetScopeId() int32`
+`func (o *VLANGroup) GetScopeId() int64`
 
 GetScopeId returns the ScopeId field if non-nil, zero value otherwise.
 
 ### GetScopeIdOk
 
-`func (o *VLANGroup) GetScopeIdOk() (*int32, bool)`
+`func (o *VLANGroup) GetScopeIdOk() (*int64, bool)`
 
 GetScopeIdOk returns a tuple with the ScopeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopeId
 
-`func (o *VLANGroup) SetScopeId(v int32)`
+`func (o *VLANGroup) SetScopeId(v int64)`
 
 SetScopeId sets ScopeId field to given value.
 

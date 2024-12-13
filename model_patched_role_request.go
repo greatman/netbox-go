@@ -21,7 +21,7 @@ var _ MappedNullable = &PatchedRoleRequest{}
 type PatchedRoleRequest struct {
 	Name                 *string                `json:"name,omitempty"`
 	Slug                 *string                `json:"slug,omitempty" validate:"regexp=^[-a-zA-Z0-9_]+$"`
-	Weight               *int32                 `json:"weight,omitempty"`
+	Weight               *int64                 `json:"weight,omitempty"`
 	Description          *string                `json:"description,omitempty"`
 	Tags                 []NestedTagRequest     `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
@@ -112,9 +112,9 @@ func (o *PatchedRoleRequest) SetSlug(v string) {
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *PatchedRoleRequest) GetWeight() int32 {
+func (o *PatchedRoleRequest) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -122,7 +122,7 @@ func (o *PatchedRoleRequest) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedRoleRequest) GetWeightOk() (*int32, bool) {
+func (o *PatchedRoleRequest) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -138,8 +138,8 @@ func (o *PatchedRoleRequest) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *PatchedRoleRequest) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *PatchedRoleRequest) SetWeight(v int64) {
 	o.Weight = &v
 }
 

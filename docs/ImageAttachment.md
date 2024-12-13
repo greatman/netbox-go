@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **ObjectType** | **string** |  | 
@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **Parent** | **interface{}** |  | [readonly] 
 **Name** | Pointer to **string** |  | [optional] 
 **Image** | **string** |  | 
-**ImageHeight** | **int32** |  | [readonly] 
-**ImageWidth** | **int32** |  | [readonly] 
+**ImageHeight** | **int64** |  | [readonly] 
+**ImageWidth** | **int64** |  | [readonly] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewImageAttachment
 
-`func NewImageAttachment(id int32, url string, display string, objectType string, objectId int64, parent interface{}, image string, imageHeight int32, imageWidth int32, created NullableTime, lastUpdated NullableTime, ) *ImageAttachment`
+`func NewImageAttachment(id int64, url string, display string, objectType string, objectId int64, parent interface{}, image string, imageHeight int64, imageWidth int64, created NullableTime, lastUpdated NullableTime, ) *ImageAttachment`
 
 NewImageAttachment instantiates a new ImageAttachment object
 This constructor will assign default values to properties that have it defined,
@@ -38,20 +38,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ImageAttachment) GetId() int32`
+`func (o *ImageAttachment) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ImageAttachment) GetIdOk() (*int32, bool)`
+`func (o *ImageAttachment) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ImageAttachment) SetId(v int32)`
+`func (o *ImageAttachment) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -213,40 +213,40 @@ SetImage sets Image field to given value.
 
 ### GetImageHeight
 
-`func (o *ImageAttachment) GetImageHeight() int32`
+`func (o *ImageAttachment) GetImageHeight() int64`
 
 GetImageHeight returns the ImageHeight field if non-nil, zero value otherwise.
 
 ### GetImageHeightOk
 
-`func (o *ImageAttachment) GetImageHeightOk() (*int32, bool)`
+`func (o *ImageAttachment) GetImageHeightOk() (*int64, bool)`
 
 GetImageHeightOk returns a tuple with the ImageHeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageHeight
 
-`func (o *ImageAttachment) SetImageHeight(v int32)`
+`func (o *ImageAttachment) SetImageHeight(v int64)`
 
 SetImageHeight sets ImageHeight field to given value.
 
 
 ### GetImageWidth
 
-`func (o *ImageAttachment) GetImageWidth() int32`
+`func (o *ImageAttachment) GetImageWidth() int64`
 
 GetImageWidth returns the ImageWidth field if non-nil, zero value otherwise.
 
 ### GetImageWidthOk
 
-`func (o *ImageAttachment) GetImageWidthOk() (*int32, bool)`
+`func (o *ImageAttachment) GetImageWidthOk() (*int64, bool)`
 
 GetImageWidthOk returns a tuple with the ImageWidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageWidth
 
-`func (o *ImageAttachment) SetImageWidth(v int32)`
+`func (o *ImageAttachment) SetImageWidth(v int64)`
 
 SetImageWidth sets ImageWidth field to given value.
 

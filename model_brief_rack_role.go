@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefRackRole{}
 
 // BriefRackRole Adds support for custom fields and tags.
 type BriefRackRole struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
@@ -36,7 +36,7 @@ type _BriefRackRole BriefRackRole
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefRackRole(id int32, url string, display string, name string, slug string, rackCount int64) *BriefRackRole {
+func NewBriefRackRole(id int64, url string, display string, name string, slug string, rackCount int64) *BriefRackRole {
 	this := BriefRackRole{}
 	this.Id = id
 	this.Url = url
@@ -56,9 +56,9 @@ func NewBriefRackRoleWithDefaults() *BriefRackRole {
 }
 
 // GetId returns the Id field value
-func (o *BriefRackRole) GetId() int32 {
+func (o *BriefRackRole) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -67,7 +67,7 @@ func (o *BriefRackRole) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefRackRole) GetIdOk() (*int32, bool) {
+func (o *BriefRackRole) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -75,7 +75,7 @@ func (o *BriefRackRole) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefRackRole) SetId(v int32) {
+func (o *BriefRackRole) SetId(v int64) {
 	o.Id = v
 }
 

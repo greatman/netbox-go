@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Family** | [**AggregateFamily**](AggregateFamily.md) |  | 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewBriefIPAddress
 
-`func NewBriefIPAddress(id int32, url string, display string, family AggregateFamily, address string, ) *BriefIPAddress`
+`func NewBriefIPAddress(id int64, url string, display string, family AggregateFamily, address string, ) *BriefIPAddress`
 
 NewBriefIPAddress instantiates a new BriefIPAddress object
 This constructor will assign default values to properties that have it defined,
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefIPAddress) GetId() int32`
+`func (o *BriefIPAddress) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefIPAddress) GetIdOk() (*int32, bool)`
+`func (o *BriefIPAddress) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefIPAddress) SetId(v int32)`
+`func (o *BriefIPAddress) SetId(v int64)`
 
 SetId sets Id field to given value.
 

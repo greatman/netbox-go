@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**User** | Pointer to **NullableInt32** |  | [optional] 
-**Weight** | Pointer to **int32** |  | [optional] 
+**User** | Pointer to **NullableInt64** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **Enabled** | Pointer to **bool** |  | [optional] 
 **Shared** | Pointer to **bool** |  | [optional] 
 **Parameters** | **interface{}** |  | 
@@ -120,20 +120,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetUser
 
-`func (o *SavedFilterRequest) GetUser() int32`
+`func (o *SavedFilterRequest) GetUser() int64`
 
 GetUser returns the User field if non-nil, zero value otherwise.
 
 ### GetUserOk
 
-`func (o *SavedFilterRequest) GetUserOk() (*int32, bool)`
+`func (o *SavedFilterRequest) GetUserOk() (*int64, bool)`
 
 GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUser
 
-`func (o *SavedFilterRequest) SetUser(v int32)`
+`func (o *SavedFilterRequest) SetUser(v int64)`
 
 SetUser sets User field to given value.
 
@@ -155,20 +155,20 @@ HasUser returns a boolean if a field has been set.
 UnsetUser ensures that no value is present for User, not even an explicit nil
 ### GetWeight
 
-`func (o *SavedFilterRequest) GetWeight() int32`
+`func (o *SavedFilterRequest) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *SavedFilterRequest) GetWeightOk() (*int32, bool)`
+`func (o *SavedFilterRequest) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *SavedFilterRequest) SetWeight(v int32)`
+`func (o *SavedFilterRequest) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

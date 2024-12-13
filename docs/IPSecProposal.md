@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **Description** | Pointer to **string** |  | [optional] 
 **EncryptionAlgorithm** | [**IKEProposalEncryptionAlgorithm**](IKEProposalEncryptionAlgorithm.md) |  | 
 **AuthenticationAlgorithm** | [**IKEProposalAuthenticationAlgorithm**](IKEProposalAuthenticationAlgorithm.md) |  | 
-**SaLifetimeSeconds** | Pointer to **NullableInt32** | Security association lifetime (seconds) | [optional] 
-**SaLifetimeData** | Pointer to **NullableInt32** | Security association lifetime (in kilobytes) | [optional] 
+**SaLifetimeSeconds** | Pointer to **NullableInt64** | Security association lifetime (seconds) | [optional] 
+**SaLifetimeData** | Pointer to **NullableInt64** | Security association lifetime (in kilobytes) | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTag**](NestedTag.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewIPSecProposal
 
-`func NewIPSecProposal(id int32, url string, displayUrl string, display string, name string, encryptionAlgorithm IKEProposalEncryptionAlgorithm, authenticationAlgorithm IKEProposalAuthenticationAlgorithm, created NullableTime, lastUpdated NullableTime, ) *IPSecProposal`
+`func NewIPSecProposal(id int64, url string, displayUrl string, display string, name string, encryptionAlgorithm IKEProposalEncryptionAlgorithm, authenticationAlgorithm IKEProposalAuthenticationAlgorithm, created NullableTime, lastUpdated NullableTime, ) *IPSecProposal`
 
 NewIPSecProposal instantiates a new IPSecProposal object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *IPSecProposal) GetId() int32`
+`func (o *IPSecProposal) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *IPSecProposal) GetIdOk() (*int32, bool)`
+`func (o *IPSecProposal) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *IPSecProposal) SetId(v int32)`
+`func (o *IPSecProposal) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -206,20 +206,20 @@ SetAuthenticationAlgorithm sets AuthenticationAlgorithm field to given value.
 
 ### GetSaLifetimeSeconds
 
-`func (o *IPSecProposal) GetSaLifetimeSeconds() int32`
+`func (o *IPSecProposal) GetSaLifetimeSeconds() int64`
 
 GetSaLifetimeSeconds returns the SaLifetimeSeconds field if non-nil, zero value otherwise.
 
 ### GetSaLifetimeSecondsOk
 
-`func (o *IPSecProposal) GetSaLifetimeSecondsOk() (*int32, bool)`
+`func (o *IPSecProposal) GetSaLifetimeSecondsOk() (*int64, bool)`
 
 GetSaLifetimeSecondsOk returns a tuple with the SaLifetimeSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSaLifetimeSeconds
 
-`func (o *IPSecProposal) SetSaLifetimeSeconds(v int32)`
+`func (o *IPSecProposal) SetSaLifetimeSeconds(v int64)`
 
 SetSaLifetimeSeconds sets SaLifetimeSeconds field to given value.
 
@@ -241,20 +241,20 @@ HasSaLifetimeSeconds returns a boolean if a field has been set.
 UnsetSaLifetimeSeconds ensures that no value is present for SaLifetimeSeconds, not even an explicit nil
 ### GetSaLifetimeData
 
-`func (o *IPSecProposal) GetSaLifetimeData() int32`
+`func (o *IPSecProposal) GetSaLifetimeData() int64`
 
 GetSaLifetimeData returns the SaLifetimeData field if non-nil, zero value otherwise.
 
 ### GetSaLifetimeDataOk
 
-`func (o *IPSecProposal) GetSaLifetimeDataOk() (*int32, bool)`
+`func (o *IPSecProposal) GetSaLifetimeDataOk() (*int64, bool)`
 
 GetSaLifetimeDataOk returns a tuple with the SaLifetimeData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSaLifetimeData
 
-`func (o *IPSecProposal) SetSaLifetimeData(v int32)`
+`func (o *IPSecProposal) SetSaLifetimeData(v int64)`
 
 SetSaLifetimeData sets SaLifetimeData field to given value.
 

@@ -23,7 +23,7 @@ type VLANRequest struct {
 	Site  NullableBriefSiteRequest      `json:"site,omitempty"`
 	Group NullableBriefVLANGroupRequest `json:"group,omitempty"`
 	// Numeric VLAN ID (1-4094)
-	Vid                  int32                      `json:"vid"`
+	Vid                  int64                      `json:"vid"`
 	Name                 string                     `json:"name"`
 	Tenant               NullableBriefTenantRequest `json:"tenant,omitempty"`
 	Status               *IPRangeStatusValue        `json:"status,omitempty"`
@@ -43,7 +43,7 @@ type _VLANRequest VLANRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVLANRequest(vid int32, name string) *VLANRequest {
+func NewVLANRequest(vid int64, name string) *VLANRequest {
 	this := VLANRequest{}
 	this.Vid = vid
 	this.Name = name
@@ -145,9 +145,9 @@ func (o *VLANRequest) UnsetGroup() {
 }
 
 // GetVid returns the Vid field value
-func (o *VLANRequest) GetVid() int32 {
+func (o *VLANRequest) GetVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -156,7 +156,7 @@ func (o *VLANRequest) GetVid() int32 {
 
 // GetVidOk returns a tuple with the Vid field value
 // and a boolean to check if the value has been set.
-func (o *VLANRequest) GetVidOk() (*int32, bool) {
+func (o *VLANRequest) GetVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -164,7 +164,7 @@ func (o *VLANRequest) GetVidOk() (*int32, bool) {
 }
 
 // SetVid sets field value
-func (o *VLANRequest) SetVid(v int32) {
+func (o *VLANRequest) SetVid(v int64) {
 	o.Vid = v
 }
 

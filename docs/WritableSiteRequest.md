@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **Latitude** | Pointer to **NullableFloat64** | GPS coordinate in decimal format (xx.yyyyyy) | [optional] 
 **Longitude** | Pointer to **NullableFloat64** | GPS coordinate in decimal format (xx.yyyyyy) | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
-**Asns** | Pointer to **[]int32** |  | [optional] 
+**Asns** | Pointer to **[]int64** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 
@@ -443,20 +443,20 @@ HasComments returns a boolean if a field has been set.
 
 ### GetAsns
 
-`func (o *WritableSiteRequest) GetAsns() []int32`
+`func (o *WritableSiteRequest) GetAsns() []int64`
 
 GetAsns returns the Asns field if non-nil, zero value otherwise.
 
 ### GetAsnsOk
 
-`func (o *WritableSiteRequest) GetAsnsOk() (*[]int32, bool)`
+`func (o *WritableSiteRequest) GetAsnsOk() (*[]int64, bool)`
 
 GetAsnsOk returns a tuple with the Asns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAsns
 
-`func (o *WritableSiteRequest) SetAsns(v []int32)`
+`func (o *WritableSiteRequest) SetAsns(v []int64)`
 
 SetAsns sets Asns field to given value.
 

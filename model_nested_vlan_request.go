@@ -21,7 +21,7 @@ var _ MappedNullable = &NestedVLANRequest{}
 // NestedVLANRequest Represents an object related through a ForeignKey field. On write, it accepts a primary key (PK) value or a dictionary of attributes which can be used to uniquely identify the related object. This class should be subclassed to return a full representation of the related object on read.
 type NestedVLANRequest struct {
 	// Numeric VLAN ID (1-4094)
-	Vid                  int32   `json:"vid"`
+	Vid                  int64   `json:"vid"`
 	Name                 string  `json:"name"`
 	Description          *string `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -33,7 +33,7 @@ type _NestedVLANRequest NestedVLANRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewNestedVLANRequest(vid int32, name string) *NestedVLANRequest {
+func NewNestedVLANRequest(vid int64, name string) *NestedVLANRequest {
 	this := NestedVLANRequest{}
 	this.Vid = vid
 	this.Name = name
@@ -49,9 +49,9 @@ func NewNestedVLANRequestWithDefaults() *NestedVLANRequest {
 }
 
 // GetVid returns the Vid field value
-func (o *NestedVLANRequest) GetVid() int32 {
+func (o *NestedVLANRequest) GetVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *NestedVLANRequest) GetVid() int32 {
 
 // GetVidOk returns a tuple with the Vid field value
 // and a boolean to check if the value has been set.
-func (o *NestedVLANRequest) GetVidOk() (*int32, bool) {
+func (o *NestedVLANRequest) GetVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *NestedVLANRequest) GetVidOk() (*int32, bool) {
 }
 
 // SetVid sets field value
-func (o *NestedVLANRequest) SetVid(v int32) {
+func (o *NestedVLANRequest) SetVid(v int64) {
 	o.Vid = v
 }
 

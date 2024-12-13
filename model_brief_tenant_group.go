@@ -20,14 +20,14 @@ var _ MappedNullable = &BriefTenantGroup{}
 
 // BriefTenantGroup Extends PrimaryModelSerializer to include MPTT support.
 type BriefTenantGroup struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
 	Slug                 string  `json:"slug" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	Description          *string `json:"description,omitempty"`
-	TenantCount          int32   `json:"tenant_count"`
-	Depth                int32   `json:"_depth"`
+	TenantCount          int64   `json:"tenant_count"`
+	Depth                int64   `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -37,7 +37,7 @@ type _BriefTenantGroup BriefTenantGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefTenantGroup(id int32, url string, display string, name string, slug string, tenantCount int32, depth int32) *BriefTenantGroup {
+func NewBriefTenantGroup(id int64, url string, display string, name string, slug string, tenantCount int64, depth int64) *BriefTenantGroup {
 	this := BriefTenantGroup{}
 	this.Id = id
 	this.Url = url
@@ -58,9 +58,9 @@ func NewBriefTenantGroupWithDefaults() *BriefTenantGroup {
 }
 
 // GetId returns the Id field value
-func (o *BriefTenantGroup) GetId() int32 {
+func (o *BriefTenantGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -69,7 +69,7 @@ func (o *BriefTenantGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefTenantGroup) GetIdOk() (*int32, bool) {
+func (o *BriefTenantGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -77,7 +77,7 @@ func (o *BriefTenantGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefTenantGroup) SetId(v int32) {
+func (o *BriefTenantGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -210,9 +210,9 @@ func (o *BriefTenantGroup) SetDescription(v string) {
 }
 
 // GetTenantCount returns the TenantCount field value
-func (o *BriefTenantGroup) GetTenantCount() int32 {
+func (o *BriefTenantGroup) GetTenantCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -221,7 +221,7 @@ func (o *BriefTenantGroup) GetTenantCount() int32 {
 
 // GetTenantCountOk returns a tuple with the TenantCount field value
 // and a boolean to check if the value has been set.
-func (o *BriefTenantGroup) GetTenantCountOk() (*int32, bool) {
+func (o *BriefTenantGroup) GetTenantCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -229,14 +229,14 @@ func (o *BriefTenantGroup) GetTenantCountOk() (*int32, bool) {
 }
 
 // SetTenantCount sets field value
-func (o *BriefTenantGroup) SetTenantCount(v int32) {
+func (o *BriefTenantGroup) SetTenantCount(v int64) {
 	o.TenantCount = v
 }
 
 // GetDepth returns the Depth field value
-func (o *BriefTenantGroup) GetDepth() int32 {
+func (o *BriefTenantGroup) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -245,7 +245,7 @@ func (o *BriefTenantGroup) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *BriefTenantGroup) GetDepthOk() (*int32, bool) {
+func (o *BriefTenantGroup) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -253,7 +253,7 @@ func (o *BriefTenantGroup) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *BriefTenantGroup) SetDepth(v int32) {
+func (o *BriefTenantGroup) SetDepth(v int64) {
 	o.Depth = v
 }
 

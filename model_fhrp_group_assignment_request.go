@@ -23,7 +23,7 @@ type FHRPGroupAssignmentRequest struct {
 	Group                BriefFHRPGroupRequest `json:"group"`
 	InterfaceType        string                `json:"interface_type"`
 	InterfaceId          int64                 `json:"interface_id"`
-	Priority             int32                 `json:"priority"`
+	Priority             int64                 `json:"priority"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -33,7 +33,7 @@ type _FHRPGroupAssignmentRequest FHRPGroupAssignmentRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFHRPGroupAssignmentRequest(group BriefFHRPGroupRequest, interfaceType string, interfaceId int64, priority int32) *FHRPGroupAssignmentRequest {
+func NewFHRPGroupAssignmentRequest(group BriefFHRPGroupRequest, interfaceType string, interfaceId int64, priority int64) *FHRPGroupAssignmentRequest {
 	this := FHRPGroupAssignmentRequest{}
 	this.Group = group
 	this.InterfaceType = interfaceType
@@ -123,9 +123,9 @@ func (o *FHRPGroupAssignmentRequest) SetInterfaceId(v int64) {
 }
 
 // GetPriority returns the Priority field value
-func (o *FHRPGroupAssignmentRequest) GetPriority() int32 {
+func (o *FHRPGroupAssignmentRequest) GetPriority() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -134,7 +134,7 @@ func (o *FHRPGroupAssignmentRequest) GetPriority() int32 {
 
 // GetPriorityOk returns a tuple with the Priority field value
 // and a boolean to check if the value has been set.
-func (o *FHRPGroupAssignmentRequest) GetPriorityOk() (*int32, bool) {
+func (o *FHRPGroupAssignmentRequest) GetPriorityOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -142,7 +142,7 @@ func (o *FHRPGroupAssignmentRequest) GetPriorityOk() (*int32, bool) {
 }
 
 // SetPriority sets field value
-func (o *FHRPGroupAssignmentRequest) SetPriority(v int32) {
+func (o *FHRPGroupAssignmentRequest) SetPriority(v int64) {
 	o.Priority = v
 }
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AssignedObjectType** | Pointer to **string** |  | [optional] 
 **AssignedObjectId** | Pointer to **int64** |  | [optional] 
-**CreatedBy** | Pointer to **NullableInt32** |  | [optional] 
+**CreatedBy** | Pointer to **NullableInt64** |  | [optional] 
 **Kind** | Pointer to [**JournalEntryKindValue**](JournalEntryKindValue.md) |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -83,20 +83,20 @@ HasAssignedObjectId returns a boolean if a field has been set.
 
 ### GetCreatedBy
 
-`func (o *PatchedWritableJournalEntryRequest) GetCreatedBy() int32`
+`func (o *PatchedWritableJournalEntryRequest) GetCreatedBy() int64`
 
 GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
 
 ### GetCreatedByOk
 
-`func (o *PatchedWritableJournalEntryRequest) GetCreatedByOk() (*int32, bool)`
+`func (o *PatchedWritableJournalEntryRequest) GetCreatedByOk() (*int64, bool)`
 
 GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatedBy
 
-`func (o *PatchedWritableJournalEntryRequest) SetCreatedBy(v int32)`
+`func (o *PatchedWritableJournalEntryRequest) SetCreatedBy(v int64)`
 
 SetCreatedBy sets CreatedBy field to given value.
 

@@ -21,7 +21,7 @@ var _ MappedNullable = &ConsoleServerPortTemplate{}
 
 // ConsoleServerPortTemplate Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type ConsoleServerPortTemplate struct {
-	Id         int32                   `json:"id"`
+	Id         int64                   `json:"id"`
 	Url        string                  `json:"url"`
 	Display    string                  `json:"display"`
 	DeviceType NullableBriefDeviceType `json:"device_type,omitempty"`
@@ -43,7 +43,7 @@ type _ConsoleServerPortTemplate ConsoleServerPortTemplate
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewConsoleServerPortTemplate(id int32, url string, display string, name string, created NullableTime, lastUpdated NullableTime) *ConsoleServerPortTemplate {
+func NewConsoleServerPortTemplate(id int64, url string, display string, name string, created NullableTime, lastUpdated NullableTime) *ConsoleServerPortTemplate {
 	this := ConsoleServerPortTemplate{}
 	this.Id = id
 	this.Url = url
@@ -63,9 +63,9 @@ func NewConsoleServerPortTemplateWithDefaults() *ConsoleServerPortTemplate {
 }
 
 // GetId returns the Id field value
-func (o *ConsoleServerPortTemplate) GetId() int32 {
+func (o *ConsoleServerPortTemplate) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -74,7 +74,7 @@ func (o *ConsoleServerPortTemplate) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ConsoleServerPortTemplate) GetIdOk() (*int32, bool) {
+func (o *ConsoleServerPortTemplate) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -82,7 +82,7 @@ func (o *ConsoleServerPortTemplate) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ConsoleServerPortTemplate) SetId(v int32) {
+func (o *ConsoleServerPortTemplate) SetId(v int64) {
 	o.Id = v
 }
 

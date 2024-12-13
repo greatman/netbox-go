@@ -27,9 +27,9 @@ type WritableFrontPortRequest struct {
 	Label    *string            `json:"label,omitempty"`
 	Type     FrontPortTypeValue `json:"type"`
 	Color    *string            `json:"color,omitempty" validate:"regexp=^[0-9a-f]{6}$"`
-	RearPort int32              `json:"rear_port"`
+	RearPort int64              `json:"rear_port"`
 	// Mapped position on corresponding rear port
-	RearPortPosition *int32  `json:"rear_port_position,omitempty"`
+	RearPortPosition *int64  `json:"rear_port_position,omitempty"`
 	Description      *string `json:"description,omitempty"`
 	// Treat as if a cable is connected
 	MarkConnected        *bool                  `json:"mark_connected,omitempty"`
@@ -44,7 +44,7 @@ type _WritableFrontPortRequest WritableFrontPortRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWritableFrontPortRequest(device BriefDeviceRequest, name string, type_ FrontPortTypeValue, rearPort int32) *WritableFrontPortRequest {
+func NewWritableFrontPortRequest(device BriefDeviceRequest, name string, type_ FrontPortTypeValue, rearPort int64) *WritableFrontPortRequest {
 	this := WritableFrontPortRequest{}
 	this.Device = device
 	this.Name = name
@@ -241,9 +241,9 @@ func (o *WritableFrontPortRequest) SetColor(v string) {
 }
 
 // GetRearPort returns the RearPort field value
-func (o *WritableFrontPortRequest) GetRearPort() int32 {
+func (o *WritableFrontPortRequest) GetRearPort() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -252,7 +252,7 @@ func (o *WritableFrontPortRequest) GetRearPort() int32 {
 
 // GetRearPortOk returns a tuple with the RearPort field value
 // and a boolean to check if the value has been set.
-func (o *WritableFrontPortRequest) GetRearPortOk() (*int32, bool) {
+func (o *WritableFrontPortRequest) GetRearPortOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -260,14 +260,14 @@ func (o *WritableFrontPortRequest) GetRearPortOk() (*int32, bool) {
 }
 
 // SetRearPort sets field value
-func (o *WritableFrontPortRequest) SetRearPort(v int32) {
+func (o *WritableFrontPortRequest) SetRearPort(v int64) {
 	o.RearPort = v
 }
 
 // GetRearPortPosition returns the RearPortPosition field value if set, zero value otherwise.
-func (o *WritableFrontPortRequest) GetRearPortPosition() int32 {
+func (o *WritableFrontPortRequest) GetRearPortPosition() int64 {
 	if o == nil || IsNil(o.RearPortPosition) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RearPortPosition
@@ -275,7 +275,7 @@ func (o *WritableFrontPortRequest) GetRearPortPosition() int32 {
 
 // GetRearPortPositionOk returns a tuple with the RearPortPosition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritableFrontPortRequest) GetRearPortPositionOk() (*int32, bool) {
+func (o *WritableFrontPortRequest) GetRearPortPositionOk() (*int64, bool) {
 	if o == nil || IsNil(o.RearPortPosition) {
 		return nil, false
 	}
@@ -291,8 +291,8 @@ func (o *WritableFrontPortRequest) HasRearPortPosition() bool {
 	return false
 }
 
-// SetRearPortPosition gets a reference to the given int32 and assigns it to the RearPortPosition field.
-func (o *WritableFrontPortRequest) SetRearPortPosition(v int32) {
+// SetRearPortPosition gets a reference to the given int64 and assigns it to the RearPortPosition field.
+func (o *WritableFrontPortRequest) SetRearPortPosition(v int64) {
 	o.RearPortPosition = &v
 }
 

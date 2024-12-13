@@ -5,18 +5,18 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Device** | Pointer to [**BriefDeviceRequest**](BriefDeviceRequest.md) |  | [optional] 
-**Vdcs** | Pointer to **[]int32** |  | [optional] 
+**Vdcs** | Pointer to **[]int64** |  | [optional] 
 **Module** | Pointer to [**NullableBriefModuleRequest**](BriefModuleRequest.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Type** | Pointer to [**InterfaceTypeValue**](InterfaceTypeValue.md) |  | [optional] 
 **Enabled** | Pointer to **bool** |  | [optional] 
-**Parent** | Pointer to **NullableInt32** |  | [optional] 
-**Bridge** | Pointer to **NullableInt32** |  | [optional] 
-**Lag** | Pointer to **NullableInt32** |  | [optional] 
-**Mtu** | Pointer to **NullableInt32** |  | [optional] 
+**Parent** | Pointer to **NullableInt64** |  | [optional] 
+**Bridge** | Pointer to **NullableInt64** |  | [optional] 
+**Lag** | Pointer to **NullableInt64** |  | [optional] 
+**Mtu** | Pointer to **NullableInt64** |  | [optional] 
 **PrimaryMacAddress** | Pointer to [**NullableBriefMACAddressRequest**](BriefMACAddressRequest.md) |  | [optional] 
-**Speed** | Pointer to **NullableInt32** |  | [optional] 
+**Speed** | Pointer to **NullableInt64** |  | [optional] 
 **Duplex** | Pointer to [**NullableInterfaceRequestDuplex**](InterfaceRequestDuplex.md) |  | [optional] 
 **Wwn** | Pointer to **NullableString** |  | [optional] 
 **MgmtOnly** | Pointer to **bool** | This interface is used only for out-of-band management | [optional] 
@@ -28,13 +28,13 @@ Name | Type | Description | Notes
 **PoeType** | Pointer to [**NullableInterfaceTemplateRequestPoeType**](InterfaceTemplateRequestPoeType.md) |  | [optional] 
 **RfChannelFrequency** | Pointer to **NullableFloat64** | Populated by selected channel (if set) | [optional] 
 **RfChannelWidth** | Pointer to **NullableFloat64** | Populated by selected channel (if set) | [optional] 
-**TxPower** | Pointer to **NullableInt32** |  | [optional] 
+**TxPower** | Pointer to **NullableInt64** |  | [optional] 
 **UntaggedVlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
-**TaggedVlans** | Pointer to **[]int32** |  | [optional] 
+**TaggedVlans** | Pointer to **[]int64** |  | [optional] 
 **QinqSvlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
 **VlanTranslationPolicy** | Pointer to [**NullableBriefVLANTranslationPolicyRequest**](BriefVLANTranslationPolicyRequest.md) |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
-**WirelessLans** | Pointer to **[]int32** |  | [optional] 
+**WirelessLans** | Pointer to **[]int64** |  | [optional] 
 **Vrf** | Pointer to [**NullableBriefVRFRequest**](BriefVRFRequest.md) |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -85,20 +85,20 @@ HasDevice returns a boolean if a field has been set.
 
 ### GetVdcs
 
-`func (o *PatchedWritableInterfaceRequest) GetVdcs() []int32`
+`func (o *PatchedWritableInterfaceRequest) GetVdcs() []int64`
 
 GetVdcs returns the Vdcs field if non-nil, zero value otherwise.
 
 ### GetVdcsOk
 
-`func (o *PatchedWritableInterfaceRequest) GetVdcsOk() (*[]int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetVdcsOk() (*[]int64, bool)`
 
 GetVdcsOk returns a tuple with the Vdcs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVdcs
 
-`func (o *PatchedWritableInterfaceRequest) SetVdcs(v []int32)`
+`func (o *PatchedWritableInterfaceRequest) SetVdcs(v []int64)`
 
 SetVdcs sets Vdcs field to given value.
 
@@ -245,20 +245,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetParent
 
-`func (o *PatchedWritableInterfaceRequest) GetParent() int32`
+`func (o *PatchedWritableInterfaceRequest) GetParent() int64`
 
 GetParent returns the Parent field if non-nil, zero value otherwise.
 
 ### GetParentOk
 
-`func (o *PatchedWritableInterfaceRequest) GetParentOk() (*int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetParentOk() (*int64, bool)`
 
 GetParentOk returns a tuple with the Parent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParent
 
-`func (o *PatchedWritableInterfaceRequest) SetParent(v int32)`
+`func (o *PatchedWritableInterfaceRequest) SetParent(v int64)`
 
 SetParent sets Parent field to given value.
 
@@ -280,20 +280,20 @@ HasParent returns a boolean if a field has been set.
 UnsetParent ensures that no value is present for Parent, not even an explicit nil
 ### GetBridge
 
-`func (o *PatchedWritableInterfaceRequest) GetBridge() int32`
+`func (o *PatchedWritableInterfaceRequest) GetBridge() int64`
 
 GetBridge returns the Bridge field if non-nil, zero value otherwise.
 
 ### GetBridgeOk
 
-`func (o *PatchedWritableInterfaceRequest) GetBridgeOk() (*int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetBridgeOk() (*int64, bool)`
 
 GetBridgeOk returns a tuple with the Bridge field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBridge
 
-`func (o *PatchedWritableInterfaceRequest) SetBridge(v int32)`
+`func (o *PatchedWritableInterfaceRequest) SetBridge(v int64)`
 
 SetBridge sets Bridge field to given value.
 
@@ -315,20 +315,20 @@ HasBridge returns a boolean if a field has been set.
 UnsetBridge ensures that no value is present for Bridge, not even an explicit nil
 ### GetLag
 
-`func (o *PatchedWritableInterfaceRequest) GetLag() int32`
+`func (o *PatchedWritableInterfaceRequest) GetLag() int64`
 
 GetLag returns the Lag field if non-nil, zero value otherwise.
 
 ### GetLagOk
 
-`func (o *PatchedWritableInterfaceRequest) GetLagOk() (*int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetLagOk() (*int64, bool)`
 
 GetLagOk returns a tuple with the Lag field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLag
 
-`func (o *PatchedWritableInterfaceRequest) SetLag(v int32)`
+`func (o *PatchedWritableInterfaceRequest) SetLag(v int64)`
 
 SetLag sets Lag field to given value.
 
@@ -350,20 +350,20 @@ HasLag returns a boolean if a field has been set.
 UnsetLag ensures that no value is present for Lag, not even an explicit nil
 ### GetMtu
 
-`func (o *PatchedWritableInterfaceRequest) GetMtu() int32`
+`func (o *PatchedWritableInterfaceRequest) GetMtu() int64`
 
 GetMtu returns the Mtu field if non-nil, zero value otherwise.
 
 ### GetMtuOk
 
-`func (o *PatchedWritableInterfaceRequest) GetMtuOk() (*int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetMtuOk() (*int64, bool)`
 
 GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMtu
 
-`func (o *PatchedWritableInterfaceRequest) SetMtu(v int32)`
+`func (o *PatchedWritableInterfaceRequest) SetMtu(v int64)`
 
 SetMtu sets Mtu field to given value.
 
@@ -420,20 +420,20 @@ HasPrimaryMacAddress returns a boolean if a field has been set.
 UnsetPrimaryMacAddress ensures that no value is present for PrimaryMacAddress, not even an explicit nil
 ### GetSpeed
 
-`func (o *PatchedWritableInterfaceRequest) GetSpeed() int32`
+`func (o *PatchedWritableInterfaceRequest) GetSpeed() int64`
 
 GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
 ### GetSpeedOk
 
-`func (o *PatchedWritableInterfaceRequest) GetSpeedOk() (*int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetSpeedOk() (*int64, bool)`
 
 GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpeed
 
-`func (o *PatchedWritableInterfaceRequest) SetSpeed(v int32)`
+`func (o *PatchedWritableInterfaceRequest) SetSpeed(v int64)`
 
 SetSpeed sets Speed field to given value.
 
@@ -820,20 +820,20 @@ HasRfChannelWidth returns a boolean if a field has been set.
 UnsetRfChannelWidth ensures that no value is present for RfChannelWidth, not even an explicit nil
 ### GetTxPower
 
-`func (o *PatchedWritableInterfaceRequest) GetTxPower() int32`
+`func (o *PatchedWritableInterfaceRequest) GetTxPower() int64`
 
 GetTxPower returns the TxPower field if non-nil, zero value otherwise.
 
 ### GetTxPowerOk
 
-`func (o *PatchedWritableInterfaceRequest) GetTxPowerOk() (*int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetTxPowerOk() (*int64, bool)`
 
 GetTxPowerOk returns a tuple with the TxPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTxPower
 
-`func (o *PatchedWritableInterfaceRequest) SetTxPower(v int32)`
+`func (o *PatchedWritableInterfaceRequest) SetTxPower(v int64)`
 
 SetTxPower sets TxPower field to given value.
 
@@ -890,20 +890,20 @@ HasUntaggedVlan returns a boolean if a field has been set.
 UnsetUntaggedVlan ensures that no value is present for UntaggedVlan, not even an explicit nil
 ### GetTaggedVlans
 
-`func (o *PatchedWritableInterfaceRequest) GetTaggedVlans() []int32`
+`func (o *PatchedWritableInterfaceRequest) GetTaggedVlans() []int64`
 
 GetTaggedVlans returns the TaggedVlans field if non-nil, zero value otherwise.
 
 ### GetTaggedVlansOk
 
-`func (o *PatchedWritableInterfaceRequest) GetTaggedVlansOk() (*[]int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetTaggedVlansOk() (*[]int64, bool)`
 
 GetTaggedVlansOk returns a tuple with the TaggedVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTaggedVlans
 
-`func (o *PatchedWritableInterfaceRequest) SetTaggedVlans(v []int32)`
+`func (o *PatchedWritableInterfaceRequest) SetTaggedVlans(v []int64)`
 
 SetTaggedVlans sets TaggedVlans field to given value.
 
@@ -1010,20 +1010,20 @@ HasMarkConnected returns a boolean if a field has been set.
 
 ### GetWirelessLans
 
-`func (o *PatchedWritableInterfaceRequest) GetWirelessLans() []int32`
+`func (o *PatchedWritableInterfaceRequest) GetWirelessLans() []int64`
 
 GetWirelessLans returns the WirelessLans field if non-nil, zero value otherwise.
 
 ### GetWirelessLansOk
 
-`func (o *PatchedWritableInterfaceRequest) GetWirelessLansOk() (*[]int32, bool)`
+`func (o *PatchedWritableInterfaceRequest) GetWirelessLansOk() (*[]int64, bool)`
 
 GetWirelessLansOk returns a tuple with the WirelessLans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWirelessLans
 
-`func (o *PatchedWritableInterfaceRequest) SetWirelessLans(v []int32)`
+`func (o *PatchedWritableInterfaceRequest) SetWirelessLans(v []int64)`
 
 SetWirelessLans sets WirelessLans field to given value.
 

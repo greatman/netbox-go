@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Family** | [**AggregateFamily**](AggregateFamily.md) |  | 
 **StartAddress** | **string** |  | 
 **EndAddress** | **string** |  | 
-**Size** | **int32** |  | [readonly] 
+**Size** | **int64** |  | [readonly] 
 **Vrf** | Pointer to [**NullableBriefVRF**](BriefVRF.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenant**](BriefTenant.md) |  | [optional] 
 **Status** | Pointer to [**IPRangeStatus**](IPRangeStatus.md) |  | [optional] 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 
 ### NewIPRange
 
-`func NewIPRange(id int32, url string, displayUrl string, display string, family AggregateFamily, startAddress string, endAddress string, size int32, created NullableTime, lastUpdated NullableTime, ) *IPRange`
+`func NewIPRange(id int64, url string, displayUrl string, display string, family AggregateFamily, startAddress string, endAddress string, size int64, created NullableTime, lastUpdated NullableTime, ) *IPRange`
 
 NewIPRange instantiates a new IPRange object
 This constructor will assign default values to properties that have it defined,
@@ -45,20 +45,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *IPRange) GetId() int32`
+`func (o *IPRange) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *IPRange) GetIdOk() (*int32, bool)`
+`func (o *IPRange) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *IPRange) SetId(v int32)`
+`func (o *IPRange) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -185,20 +185,20 @@ SetEndAddress sets EndAddress field to given value.
 
 ### GetSize
 
-`func (o *IPRange) GetSize() int32`
+`func (o *IPRange) GetSize() int64`
 
 GetSize returns the Size field if non-nil, zero value otherwise.
 
 ### GetSizeOk
 
-`func (o *IPRange) GetSizeOk() (*int32, bool)`
+`func (o *IPRange) GetSizeOk() (*int64, bool)`
 
 GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSize
 
-`func (o *IPRange) SetSize(v int32)`
+`func (o *IPRange) SetSize(v int64)`
 
 SetSize sets Size field to given value.
 

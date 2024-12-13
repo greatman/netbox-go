@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **ObjectType** | **string** |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewNotification
 
-`func NewNotification(id int32, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time, eventType Event, ) *Notification`
+`func NewNotification(id int64, url string, display string, objectType string, objectId int64, object interface{}, user BriefUser, created time.Time, eventType Event, ) *Notification`
 
 NewNotification instantiates a new Notification object
 This constructor will assign default values to properties that have it defined,
@@ -36,20 +36,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Notification) GetId() int32`
+`func (o *Notification) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Notification) GetIdOk() (*int32, bool)`
+`func (o *Notification) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Notification) SetId(v int32)`
+`func (o *Notification) SetId(v int64)`
 
 SetId sets Id field to given value.
 

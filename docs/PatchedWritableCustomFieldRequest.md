@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 **Description** | Pointer to **string** |  | [optional] 
 **Required** | Pointer to **bool** | This field is required when creating new objects or editing an existing object. | [optional] 
 **Unique** | Pointer to **bool** | The value of this field must be unique for the assigned object | [optional] 
-**SearchWeight** | Pointer to **int32** | Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored. | [optional] 
+**SearchWeight** | Pointer to **int64** | Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored. | [optional] 
 **FilterLogic** | Pointer to [**PatchedWritableCustomFieldRequestFilterLogic**](PatchedWritableCustomFieldRequestFilterLogic.md) |  | [optional] 
 **UiVisible** | Pointer to [**PatchedWritableCustomFieldRequestUiVisible**](PatchedWritableCustomFieldRequestUiVisible.md) |  | [optional] 
 **UiEditable** | Pointer to [**PatchedWritableCustomFieldRequestUiEditable**](PatchedWritableCustomFieldRequestUiEditable.md) |  | [optional] 
 **IsCloneable** | Pointer to **bool** | Replicate this value when cloning objects | [optional] 
 **Default** | Pointer to **interface{}** | Default value for the field (must be a JSON value). Encapsulate strings with double quotes (e.g. \&quot;Foo\&quot;). | [optional] 
 **RelatedObjectFilter** | Pointer to **interface{}** | Filter the object selection choices using a query_params dict (must be a JSON value).Encapsulate strings with double quotes (e.g. \&quot;Foo\&quot;). | [optional] 
-**Weight** | Pointer to **int32** | Fields with higher weights appear lower in a form. | [optional] 
+**Weight** | Pointer to **int64** | Fields with higher weights appear lower in a form. | [optional] 
 **ValidationMinimum** | Pointer to **NullableInt64** | Minimum allowed value (for numeric fields) | [optional] 
 **ValidationMaximum** | Pointer to **NullableInt64** | Maximum allowed value (for numeric fields) | [optional] 
 **ValidationRegex** | Pointer to **string** | Regular expression to enforce on text field values. Use ^ and $ to force matching of entire string. For example, &lt;code&gt;^[A-Z]{3}$&lt;/code&gt; will limit values to exactly three uppercase letters. | [optional] 
@@ -283,20 +283,20 @@ HasUnique returns a boolean if a field has been set.
 
 ### GetSearchWeight
 
-`func (o *PatchedWritableCustomFieldRequest) GetSearchWeight() int32`
+`func (o *PatchedWritableCustomFieldRequest) GetSearchWeight() int64`
 
 GetSearchWeight returns the SearchWeight field if non-nil, zero value otherwise.
 
 ### GetSearchWeightOk
 
-`func (o *PatchedWritableCustomFieldRequest) GetSearchWeightOk() (*int32, bool)`
+`func (o *PatchedWritableCustomFieldRequest) GetSearchWeightOk() (*int64, bool)`
 
 GetSearchWeightOk returns a tuple with the SearchWeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSearchWeight
 
-`func (o *PatchedWritableCustomFieldRequest) SetSearchWeight(v int32)`
+`func (o *PatchedWritableCustomFieldRequest) SetSearchWeight(v int64)`
 
 SetSearchWeight sets SearchWeight field to given value.
 
@@ -478,20 +478,20 @@ HasRelatedObjectFilter returns a boolean if a field has been set.
 UnsetRelatedObjectFilter ensures that no value is present for RelatedObjectFilter, not even an explicit nil
 ### GetWeight
 
-`func (o *PatchedWritableCustomFieldRequest) GetWeight() int32`
+`func (o *PatchedWritableCustomFieldRequest) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *PatchedWritableCustomFieldRequest) GetWeightOk() (*int32, bool)`
+`func (o *PatchedWritableCustomFieldRequest) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *PatchedWritableCustomFieldRequest) SetWeight(v int32)`
+`func (o *PatchedWritableCustomFieldRequest) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

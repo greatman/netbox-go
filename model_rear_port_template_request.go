@@ -28,7 +28,7 @@ type RearPortTemplateRequest struct {
 	Label                *string            `json:"label,omitempty"`
 	Type                 FrontPortTypeValue `json:"type"`
 	Color                *string            `json:"color,omitempty" validate:"regexp=^[0-9a-f]{6}$"`
-	Positions            *int32             `json:"positions,omitempty"`
+	Positions            *int64             `json:"positions,omitempty"`
 	Description          *string            `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -253,9 +253,9 @@ func (o *RearPortTemplateRequest) SetColor(v string) {
 }
 
 // GetPositions returns the Positions field value if set, zero value otherwise.
-func (o *RearPortTemplateRequest) GetPositions() int32 {
+func (o *RearPortTemplateRequest) GetPositions() int64 {
 	if o == nil || IsNil(o.Positions) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Positions
@@ -263,7 +263,7 @@ func (o *RearPortTemplateRequest) GetPositions() int32 {
 
 // GetPositionsOk returns a tuple with the Positions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RearPortTemplateRequest) GetPositionsOk() (*int32, bool) {
+func (o *RearPortTemplateRequest) GetPositionsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Positions) {
 		return nil, false
 	}
@@ -279,8 +279,8 @@ func (o *RearPortTemplateRequest) HasPositions() bool {
 	return false
 }
 
-// SetPositions gets a reference to the given int32 and assigns it to the Positions field.
-func (o *RearPortTemplateRequest) SetPositions(v int32) {
+// SetPositions gets a reference to the given int64 and assigns it to the Positions field.
+func (o *RearPortTemplateRequest) SetPositions(v int64) {
 	o.Positions = &v
 }
 

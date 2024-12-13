@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**User** | Pointer to **NullableInt32** |  | [optional] 
-**Weight** | Pointer to **int32** |  | [optional] 
+**User** | Pointer to **NullableInt64** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **Enabled** | Pointer to **bool** |  | [optional] 
 **Shared** | Pointer to **bool** |  | [optional] 
 **Parameters** | **interface{}** |  | 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewSavedFilter
 
-`func NewSavedFilter(id int32, url string, displayUrl string, display string, objectTypes []string, name string, slug string, parameters interface{}, created NullableTime, lastUpdated NullableTime, ) *SavedFilter`
+`func NewSavedFilter(id int64, url string, displayUrl string, display string, objectTypes []string, name string, slug string, parameters interface{}, created NullableTime, lastUpdated NullableTime, ) *SavedFilter`
 
 NewSavedFilter instantiates a new SavedFilter object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *SavedFilter) GetId() int32`
+`func (o *SavedFilter) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *SavedFilter) GetIdOk() (*int32, bool)`
+`func (o *SavedFilter) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *SavedFilter) SetId(v int32)`
+`func (o *SavedFilter) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -206,20 +206,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetUser
 
-`func (o *SavedFilter) GetUser() int32`
+`func (o *SavedFilter) GetUser() int64`
 
 GetUser returns the User field if non-nil, zero value otherwise.
 
 ### GetUserOk
 
-`func (o *SavedFilter) GetUserOk() (*int32, bool)`
+`func (o *SavedFilter) GetUserOk() (*int64, bool)`
 
 GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUser
 
-`func (o *SavedFilter) SetUser(v int32)`
+`func (o *SavedFilter) SetUser(v int64)`
 
 SetUser sets User field to given value.
 
@@ -241,20 +241,20 @@ HasUser returns a boolean if a field has been set.
 UnsetUser ensures that no value is present for User, not even an explicit nil
 ### GetWeight
 
-`func (o *SavedFilter) GetWeight() int32`
+`func (o *SavedFilter) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *SavedFilter) GetWeightOk() (*int32, bool)`
+`func (o *SavedFilter) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *SavedFilter) SetWeight(v int32)`
+`func (o *SavedFilter) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

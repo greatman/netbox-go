@@ -20,7 +20,7 @@ var _ MappedNullable = &PatchedRackReservationRequest{}
 // PatchedRackReservationRequest Adds support for custom fields and tags.
 type PatchedRackReservationRequest struct {
 	Rack                 *BriefRackRequest          `json:"rack,omitempty"`
-	Units                []int32                    `json:"units,omitempty"`
+	Units                []int64                    `json:"units,omitempty"`
 	User                 *BriefUserRequest          `json:"user,omitempty"`
 	Tenant               NullableBriefTenantRequest `json:"tenant,omitempty"`
 	Description          *string                    `json:"description,omitempty"`
@@ -82,9 +82,9 @@ func (o *PatchedRackReservationRequest) SetRack(v BriefRackRequest) {
 }
 
 // GetUnits returns the Units field value if set, zero value otherwise.
-func (o *PatchedRackReservationRequest) GetUnits() []int32 {
+func (o *PatchedRackReservationRequest) GetUnits() []int64 {
 	if o == nil || IsNil(o.Units) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.Units
@@ -92,7 +92,7 @@ func (o *PatchedRackReservationRequest) GetUnits() []int32 {
 
 // GetUnitsOk returns a tuple with the Units field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedRackReservationRequest) GetUnitsOk() ([]int32, bool) {
+func (o *PatchedRackReservationRequest) GetUnitsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.Units) {
 		return nil, false
 	}
@@ -108,8 +108,8 @@ func (o *PatchedRackReservationRequest) HasUnits() bool {
 	return false
 }
 
-// SetUnits gets a reference to the given []int32 and assigns it to the Units field.
-func (o *PatchedRackReservationRequest) SetUnits(v []int32) {
+// SetUnits gets a reference to the given []int64 and assigns it to the Units field.
+func (o *PatchedRackReservationRequest) SetUnits(v []int64) {
 	o.Units = v
 }
 

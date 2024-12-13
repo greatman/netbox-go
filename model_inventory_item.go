@@ -21,12 +21,12 @@ var _ MappedNullable = &InventoryItem{}
 
 // InventoryItem Adds support for custom fields and tags.
 type InventoryItem struct {
-	Id         int32         `json:"id"`
+	Id         int64         `json:"id"`
 	Url        string        `json:"url"`
 	DisplayUrl string        `json:"display_url"`
 	Display    string        `json:"display"`
 	Device     BriefDevice   `json:"device"`
-	Parent     NullableInt32 `json:"parent,omitempty"`
+	Parent     NullableInt64 `json:"parent,omitempty"`
 	Name       string        `json:"name"`
 	// Physical label
 	Label        *string                        `json:"label,omitempty"`
@@ -48,7 +48,7 @@ type InventoryItem struct {
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
 	Created              NullableTime           `json:"created"`
 	LastUpdated          NullableTime           `json:"last_updated"`
-	Depth                int32                  `json:"_depth"`
+	Depth                int64                  `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -58,7 +58,7 @@ type _InventoryItem InventoryItem
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInventoryItem(id int32, url string, displayUrl string, display string, device BriefDevice, name string, component interface{}, created NullableTime, lastUpdated NullableTime, depth int32) *InventoryItem {
+func NewInventoryItem(id int64, url string, displayUrl string, display string, device BriefDevice, name string, component interface{}, created NullableTime, lastUpdated NullableTime, depth int64) *InventoryItem {
 	this := InventoryItem{}
 	this.Id = id
 	this.Url = url
@@ -82,9 +82,9 @@ func NewInventoryItemWithDefaults() *InventoryItem {
 }
 
 // GetId returns the Id field value
-func (o *InventoryItem) GetId() int32 {
+func (o *InventoryItem) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -93,7 +93,7 @@ func (o *InventoryItem) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *InventoryItem) GetIdOk() (*int32, bool) {
+func (o *InventoryItem) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -101,7 +101,7 @@ func (o *InventoryItem) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *InventoryItem) SetId(v int32) {
+func (o *InventoryItem) SetId(v int64) {
 	o.Id = v
 }
 
@@ -202,9 +202,9 @@ func (o *InventoryItem) SetDevice(v BriefDevice) {
 }
 
 // GetParent returns the Parent field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *InventoryItem) GetParent() int32 {
+func (o *InventoryItem) GetParent() int64 {
 	if o == nil || IsNil(o.Parent.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Parent.Get()
@@ -213,7 +213,7 @@ func (o *InventoryItem) GetParent() int32 {
 // GetParentOk returns a tuple with the Parent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *InventoryItem) GetParentOk() (*int32, bool) {
+func (o *InventoryItem) GetParentOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -229,8 +229,8 @@ func (o *InventoryItem) HasParent() bool {
 	return false
 }
 
-// SetParent gets a reference to the given NullableInt32 and assigns it to the Parent field.
-func (o *InventoryItem) SetParent(v int32) {
+// SetParent gets a reference to the given NullableInt64 and assigns it to the Parent field.
+func (o *InventoryItem) SetParent(v int64) {
 	o.Parent.Set(&v)
 }
 
@@ -818,9 +818,9 @@ func (o *InventoryItem) SetLastUpdated(v time.Time) {
 }
 
 // GetDepth returns the Depth field value
-func (o *InventoryItem) GetDepth() int32 {
+func (o *InventoryItem) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -829,7 +829,7 @@ func (o *InventoryItem) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *InventoryItem) GetDepthOk() (*int32, bool) {
+func (o *InventoryItem) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -837,7 +837,7 @@ func (o *InventoryItem) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *InventoryItem) SetDepth(v int32) {
+func (o *InventoryItem) SetDepth(v int64) {
 	o.Depth = v
 }
 

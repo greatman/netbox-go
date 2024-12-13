@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Master** | Pointer to [**NullableNestedDevice**](NestedDevice.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**MemberCount** | **int32** |  | [readonly] 
+**MemberCount** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewBriefVirtualChassis
 
-`func NewBriefVirtualChassis(id int32, url string, display string, name string, memberCount int32, ) *BriefVirtualChassis`
+`func NewBriefVirtualChassis(id int64, url string, display string, name string, memberCount int64, ) *BriefVirtualChassis`
 
 NewBriefVirtualChassis instantiates a new BriefVirtualChassis object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefVirtualChassis) GetId() int32`
+`func (o *BriefVirtualChassis) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefVirtualChassis) GetIdOk() (*int32, bool)`
+`func (o *BriefVirtualChassis) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefVirtualChassis) SetId(v int32)`
+`func (o *BriefVirtualChassis) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -173,20 +173,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetMemberCount
 
-`func (o *BriefVirtualChassis) GetMemberCount() int32`
+`func (o *BriefVirtualChassis) GetMemberCount() int64`
 
 GetMemberCount returns the MemberCount field if non-nil, zero value otherwise.
 
 ### GetMemberCountOk
 
-`func (o *BriefVirtualChassis) GetMemberCountOk() (*int32, bool)`
+`func (o *BriefVirtualChassis) GetMemberCountOk() (*int64, bool)`
 
 GetMemberCountOk returns a tuple with the MemberCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemberCount
 
-`func (o *BriefVirtualChassis) SetMemberCount(v int32)`
+`func (o *BriefVirtualChassis) SetMemberCount(v int64)`
 
 SetMemberCount sets MemberCount field to given value.
 

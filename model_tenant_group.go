@@ -21,7 +21,7 @@ var _ MappedNullable = &TenantGroup{}
 
 // TenantGroup Extends PrimaryModelSerializer to include MPTT support.
 type TenantGroup struct {
-	Id                   int32                     `json:"id"`
+	Id                   int64                     `json:"id"`
 	Url                  string                    `json:"url"`
 	DisplayUrl           string                    `json:"display_url"`
 	Display              string                    `json:"display"`
@@ -33,8 +33,8 @@ type TenantGroup struct {
 	CustomFields         map[string]interface{}    `json:"custom_fields,omitempty"`
 	Created              NullableTime              `json:"created"`
 	LastUpdated          NullableTime              `json:"last_updated"`
-	TenantCount          int32                     `json:"tenant_count"`
-	Depth                int32                     `json:"_depth"`
+	TenantCount          int64                     `json:"tenant_count"`
+	Depth                int64                     `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -44,7 +44,7 @@ type _TenantGroup TenantGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTenantGroup(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, tenantCount int32, depth int32) *TenantGroup {
+func NewTenantGroup(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, tenantCount int64, depth int64) *TenantGroup {
 	this := TenantGroup{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewTenantGroupWithDefaults() *TenantGroup {
 }
 
 // GetId returns the Id field value
-func (o *TenantGroup) GetId() int32 {
+func (o *TenantGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *TenantGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *TenantGroup) GetIdOk() (*int32, bool) {
+func (o *TenantGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *TenantGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *TenantGroup) SetId(v int32) {
+func (o *TenantGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -403,9 +403,9 @@ func (o *TenantGroup) SetLastUpdated(v time.Time) {
 }
 
 // GetTenantCount returns the TenantCount field value
-func (o *TenantGroup) GetTenantCount() int32 {
+func (o *TenantGroup) GetTenantCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -414,7 +414,7 @@ func (o *TenantGroup) GetTenantCount() int32 {
 
 // GetTenantCountOk returns a tuple with the TenantCount field value
 // and a boolean to check if the value has been set.
-func (o *TenantGroup) GetTenantCountOk() (*int32, bool) {
+func (o *TenantGroup) GetTenantCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -422,14 +422,14 @@ func (o *TenantGroup) GetTenantCountOk() (*int32, bool) {
 }
 
 // SetTenantCount sets field value
-func (o *TenantGroup) SetTenantCount(v int32) {
+func (o *TenantGroup) SetTenantCount(v int64) {
 	o.TenantCount = v
 }
 
 // GetDepth returns the Depth field value
-func (o *TenantGroup) GetDepth() int32 {
+func (o *TenantGroup) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -438,7 +438,7 @@ func (o *TenantGroup) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *TenantGroup) GetDepthOk() (*int32, bool) {
+func (o *TenantGroup) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -446,7 +446,7 @@ func (o *TenantGroup) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *TenantGroup) SetDepth(v int32) {
+func (o *TenantGroup) SetDepth(v int64) {
 	o.Depth = v
 }
 

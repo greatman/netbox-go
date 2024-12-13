@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**Groups** | Pointer to **[]int32** |  | [optional] 
-**Users** | Pointer to **[]int32** |  | [optional] 
+**Groups** | Pointer to **[]int64** |  | [optional] 
+**Users** | Pointer to **[]int64** |  | [optional] 
 
 ## Methods
 
@@ -75,20 +75,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetGroups
 
-`func (o *NotificationGroupRequest) GetGroups() []int32`
+`func (o *NotificationGroupRequest) GetGroups() []int64`
 
 GetGroups returns the Groups field if non-nil, zero value otherwise.
 
 ### GetGroupsOk
 
-`func (o *NotificationGroupRequest) GetGroupsOk() (*[]int32, bool)`
+`func (o *NotificationGroupRequest) GetGroupsOk() (*[]int64, bool)`
 
 GetGroupsOk returns a tuple with the Groups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroups
 
-`func (o *NotificationGroupRequest) SetGroups(v []int32)`
+`func (o *NotificationGroupRequest) SetGroups(v []int64)`
 
 SetGroups sets Groups field to given value.
 
@@ -100,20 +100,20 @@ HasGroups returns a boolean if a field has been set.
 
 ### GetUsers
 
-`func (o *NotificationGroupRequest) GetUsers() []int32`
+`func (o *NotificationGroupRequest) GetUsers() []int64`
 
 GetUsers returns the Users field if non-nil, zero value otherwise.
 
 ### GetUsersOk
 
-`func (o *NotificationGroupRequest) GetUsersOk() (*[]int32, bool)`
+`func (o *NotificationGroupRequest) GetUsersOk() (*[]int64, bool)`
 
 GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsers
 
-`func (o *NotificationGroupRequest) SetUsers(v []int32)`
+`func (o *NotificationGroupRequest) SetUsers(v []int64)`
 
 SetUsers sets Users field to given value.
 

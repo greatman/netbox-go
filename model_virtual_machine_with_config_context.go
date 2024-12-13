@@ -21,7 +21,7 @@ var _ MappedNullable = &VirtualMachineWithConfigContext{}
 
 // VirtualMachineWithConfigContext Adds support for custom fields and tags.
 type VirtualMachineWithConfigContext struct {
-	Id             int32                       `json:"id"`
+	Id             int64                       `json:"id"`
 	Url            string                      `json:"url"`
 	DisplayUrl     string                      `json:"display_url"`
 	Display        string                      `json:"display"`
@@ -38,8 +38,8 @@ type VirtualMachineWithConfigContext struct {
 	PrimaryIp4     NullableBriefIPAddress      `json:"primary_ip4,omitempty"`
 	PrimaryIp6     NullableBriefIPAddress      `json:"primary_ip6,omitempty"`
 	Vcpus          NullableFloat64             `json:"vcpus,omitempty"`
-	Memory         NullableInt32               `json:"memory,omitempty"`
-	Disk           NullableInt32               `json:"disk,omitempty"`
+	Memory         NullableInt64               `json:"memory,omitempty"`
+	Disk           NullableInt64               `json:"disk,omitempty"`
 	Description    *string                     `json:"description,omitempty"`
 	Comments       *string                     `json:"comments,omitempty"`
 	ConfigTemplate NullableBriefConfigTemplate `json:"config_template,omitempty"`
@@ -50,8 +50,8 @@ type VirtualMachineWithConfigContext struct {
 	ConfigContext        interface{}            `json:"config_context"`
 	Created              NullableTime           `json:"created"`
 	LastUpdated          NullableTime           `json:"last_updated"`
-	InterfaceCount       int32                  `json:"interface_count"`
-	VirtualDiskCount     int32                  `json:"virtual_disk_count"`
+	InterfaceCount       int64                  `json:"interface_count"`
+	VirtualDiskCount     int64                  `json:"virtual_disk_count"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -61,7 +61,7 @@ type _VirtualMachineWithConfigContext VirtualMachineWithConfigContext
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVirtualMachineWithConfigContext(id int32, url string, displayUrl string, display string, name string, primaryIp NullableBriefIPAddress, configContext interface{}, created NullableTime, lastUpdated NullableTime, interfaceCount int32, virtualDiskCount int32) *VirtualMachineWithConfigContext {
+func NewVirtualMachineWithConfigContext(id int64, url string, displayUrl string, display string, name string, primaryIp NullableBriefIPAddress, configContext interface{}, created NullableTime, lastUpdated NullableTime, interfaceCount int64, virtualDiskCount int64) *VirtualMachineWithConfigContext {
 	this := VirtualMachineWithConfigContext{}
 	this.Id = id
 	this.Url = url
@@ -86,9 +86,9 @@ func NewVirtualMachineWithConfigContextWithDefaults() *VirtualMachineWithConfigC
 }
 
 // GetId returns the Id field value
-func (o *VirtualMachineWithConfigContext) GetId() int32 {
+func (o *VirtualMachineWithConfigContext) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -97,7 +97,7 @@ func (o *VirtualMachineWithConfigContext) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *VirtualMachineWithConfigContext) GetIdOk() (*int32, bool) {
+func (o *VirtualMachineWithConfigContext) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -105,7 +105,7 @@ func (o *VirtualMachineWithConfigContext) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *VirtualMachineWithConfigContext) SetId(v int32) {
+func (o *VirtualMachineWithConfigContext) SetId(v int64) {
 	o.Id = v
 }
 
@@ -683,9 +683,9 @@ func (o *VirtualMachineWithConfigContext) UnsetVcpus() {
 }
 
 // GetMemory returns the Memory field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *VirtualMachineWithConfigContext) GetMemory() int32 {
+func (o *VirtualMachineWithConfigContext) GetMemory() int64 {
 	if o == nil || IsNil(o.Memory.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Memory.Get()
@@ -694,7 +694,7 @@ func (o *VirtualMachineWithConfigContext) GetMemory() int32 {
 // GetMemoryOk returns a tuple with the Memory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *VirtualMachineWithConfigContext) GetMemoryOk() (*int32, bool) {
+func (o *VirtualMachineWithConfigContext) GetMemoryOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -710,8 +710,8 @@ func (o *VirtualMachineWithConfigContext) HasMemory() bool {
 	return false
 }
 
-// SetMemory gets a reference to the given NullableInt32 and assigns it to the Memory field.
-func (o *VirtualMachineWithConfigContext) SetMemory(v int32) {
+// SetMemory gets a reference to the given NullableInt64 and assigns it to the Memory field.
+func (o *VirtualMachineWithConfigContext) SetMemory(v int64) {
 	o.Memory.Set(&v)
 }
 
@@ -726,9 +726,9 @@ func (o *VirtualMachineWithConfigContext) UnsetMemory() {
 }
 
 // GetDisk returns the Disk field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *VirtualMachineWithConfigContext) GetDisk() int32 {
+func (o *VirtualMachineWithConfigContext) GetDisk() int64 {
 	if o == nil || IsNil(o.Disk.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Disk.Get()
@@ -737,7 +737,7 @@ func (o *VirtualMachineWithConfigContext) GetDisk() int32 {
 // GetDiskOk returns a tuple with the Disk field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *VirtualMachineWithConfigContext) GetDiskOk() (*int32, bool) {
+func (o *VirtualMachineWithConfigContext) GetDiskOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -753,8 +753,8 @@ func (o *VirtualMachineWithConfigContext) HasDisk() bool {
 	return false
 }
 
-// SetDisk gets a reference to the given NullableInt32 and assigns it to the Disk field.
-func (o *VirtualMachineWithConfigContext) SetDisk(v int32) {
+// SetDisk gets a reference to the given NullableInt64 and assigns it to the Disk field.
+func (o *VirtualMachineWithConfigContext) SetDisk(v int64) {
 	o.Disk.Set(&v)
 }
 
@@ -1051,9 +1051,9 @@ func (o *VirtualMachineWithConfigContext) SetLastUpdated(v time.Time) {
 }
 
 // GetInterfaceCount returns the InterfaceCount field value
-func (o *VirtualMachineWithConfigContext) GetInterfaceCount() int32 {
+func (o *VirtualMachineWithConfigContext) GetInterfaceCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -1062,7 +1062,7 @@ func (o *VirtualMachineWithConfigContext) GetInterfaceCount() int32 {
 
 // GetInterfaceCountOk returns a tuple with the InterfaceCount field value
 // and a boolean to check if the value has been set.
-func (o *VirtualMachineWithConfigContext) GetInterfaceCountOk() (*int32, bool) {
+func (o *VirtualMachineWithConfigContext) GetInterfaceCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1070,14 +1070,14 @@ func (o *VirtualMachineWithConfigContext) GetInterfaceCountOk() (*int32, bool) {
 }
 
 // SetInterfaceCount sets field value
-func (o *VirtualMachineWithConfigContext) SetInterfaceCount(v int32) {
+func (o *VirtualMachineWithConfigContext) SetInterfaceCount(v int64) {
 	o.InterfaceCount = v
 }
 
 // GetVirtualDiskCount returns the VirtualDiskCount field value
-func (o *VirtualMachineWithConfigContext) GetVirtualDiskCount() int32 {
+func (o *VirtualMachineWithConfigContext) GetVirtualDiskCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -1086,7 +1086,7 @@ func (o *VirtualMachineWithConfigContext) GetVirtualDiskCount() int32 {
 
 // GetVirtualDiskCountOk returns a tuple with the VirtualDiskCount field value
 // and a boolean to check if the value has been set.
-func (o *VirtualMachineWithConfigContext) GetVirtualDiskCountOk() (*int32, bool) {
+func (o *VirtualMachineWithConfigContext) GetVirtualDiskCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1094,7 +1094,7 @@ func (o *VirtualMachineWithConfigContext) GetVirtualDiskCountOk() (*int32, bool)
 }
 
 // SetVirtualDiskCount sets field value
-func (o *VirtualMachineWithConfigContext) SetVirtualDiskCount(v int32) {
+func (o *VirtualMachineWithConfigContext) SetVirtualDiskCount(v int64) {
 	o.VirtualDiskCount = v
 }
 

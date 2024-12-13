@@ -16,7 +16,7 @@ import (
 )
 
 // IKEPolicyVersionValue * `1` - IKEv1 * `2` - IKEv2
-type IKEPolicyVersionValue int32
+type IKEPolicyVersionValue int64
 
 // List of IKEPolicy_version_value
 const (
@@ -31,7 +31,7 @@ var AllowedIKEPolicyVersionValueEnumValues = []IKEPolicyVersionValue{
 }
 
 func (v *IKEPolicyVersionValue) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -49,7 +49,7 @@ func (v *IKEPolicyVersionValue) UnmarshalJSON(src []byte) error {
 
 // NewIKEPolicyVersionValueFromValue returns a pointer to a valid IKEPolicyVersionValue
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewIKEPolicyVersionValueFromValue(v int32) (*IKEPolicyVersionValue, error) {
+func NewIKEPolicyVersionValueFromValue(v int64) (*IKEPolicyVersionValue, error) {
 	ev := IKEPolicyVersionValue(v)
 	if ev.IsValid() {
 		return &ev, nil

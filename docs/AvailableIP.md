@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Family** | **int32** |  | [readonly] 
+**Family** | **int64** |  | [readonly] 
 **Address** | **string** |  | [readonly] 
 **Vrf** | [**NullableBriefVRF**](BriefVRF.md) |  | [readonly] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewAvailableIP
 
-`func NewAvailableIP(family int32, address string, vrf NullableBriefVRF, ) *AvailableIP`
+`func NewAvailableIP(family int64, address string, vrf NullableBriefVRF, ) *AvailableIP`
 
 NewAvailableIP instantiates a new AvailableIP object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetFamily
 
-`func (o *AvailableIP) GetFamily() int32`
+`func (o *AvailableIP) GetFamily() int64`
 
 GetFamily returns the Family field if non-nil, zero value otherwise.
 
 ### GetFamilyOk
 
-`func (o *AvailableIP) GetFamilyOk() (*int32, bool)`
+`func (o *AvailableIP) GetFamilyOk() (*int64, bool)`
 
 GetFamilyOk returns a tuple with the Family field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFamily
 
-`func (o *AvailableIP) SetFamily(v int32)`
+`func (o *AvailableIP) SetFamily(v int64)`
 
 SetFamily sets Family field to given value.
 

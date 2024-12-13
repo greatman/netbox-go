@@ -21,7 +21,7 @@ var _ MappedNullable = &ASNRange{}
 
 // ASNRange Adds support for custom fields and tags.
 type ASNRange struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
@@ -36,7 +36,7 @@ type ASNRange struct {
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
 	Created              NullableTime           `json:"created"`
 	LastUpdated          NullableTime           `json:"last_updated"`
-	AsnCount             int32                  `json:"asn_count"`
+	AsnCount             int64                  `json:"asn_count"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -46,7 +46,7 @@ type _ASNRange ASNRange
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewASNRange(id int32, url string, displayUrl string, display string, name string, slug string, rir BriefRIR, start int64, end int64, created NullableTime, lastUpdated NullableTime, asnCount int32) *ASNRange {
+func NewASNRange(id int64, url string, displayUrl string, display string, name string, slug string, rir BriefRIR, start int64, end int64, created NullableTime, lastUpdated NullableTime, asnCount int64) *ASNRange {
 	this := ASNRange{}
 	this.Id = id
 	this.Url = url
@@ -72,9 +72,9 @@ func NewASNRangeWithDefaults() *ASNRange {
 }
 
 // GetId returns the Id field value
-func (o *ASNRange) GetId() int32 {
+func (o *ASNRange) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -83,7 +83,7 @@ func (o *ASNRange) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ASNRange) GetIdOk() (*int32, bool) {
+func (o *ASNRange) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -91,7 +91,7 @@ func (o *ASNRange) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ASNRange) SetId(v int32) {
+func (o *ASNRange) SetId(v int64) {
 	o.Id = v
 }
 
@@ -479,9 +479,9 @@ func (o *ASNRange) SetLastUpdated(v time.Time) {
 }
 
 // GetAsnCount returns the AsnCount field value
-func (o *ASNRange) GetAsnCount() int32 {
+func (o *ASNRange) GetAsnCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -490,7 +490,7 @@ func (o *ASNRange) GetAsnCount() int32 {
 
 // GetAsnCountOk returns a tuple with the AsnCount field value
 // and a boolean to check if the value has been set.
-func (o *ASNRange) GetAsnCountOk() (*int32, bool) {
+func (o *ASNRange) GetAsnCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -498,7 +498,7 @@ func (o *ASNRange) GetAsnCountOk() (*int32, bool) {
 }
 
 // SetAsnCount sets field value
-func (o *ASNRange) SetAsnCount(v int32) {
+func (o *ASNRange) SetAsnCount(v int64) {
 	o.AsnCount = v
 }
 

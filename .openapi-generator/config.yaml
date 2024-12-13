@@ -12,6 +12,9 @@ globalProperty:
   apiTests: false
   modelTests: false
 
+typeMappings:
+  integer: int64
+
 additionalProperties:
   disallowAdditionalPropertiesIfNotPresent: "false"
   packageVersion: "3"

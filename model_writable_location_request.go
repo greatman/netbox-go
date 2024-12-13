@@ -23,7 +23,7 @@ type WritableLocationRequest struct {
 	Name   string                     `json:"name"`
 	Slug   string                     `json:"slug" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	Site   BriefSiteRequest           `json:"site"`
-	Parent NullableInt32              `json:"parent,omitempty"`
+	Parent NullableInt64              `json:"parent,omitempty"`
 	Status *LocationStatusValue       `json:"status,omitempty"`
 	Tenant NullableBriefTenantRequest `json:"tenant,omitempty"`
 	// Local facility ID or description
@@ -129,9 +129,9 @@ func (o *WritableLocationRequest) SetSite(v BriefSiteRequest) {
 }
 
 // GetParent returns the Parent field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableLocationRequest) GetParent() int32 {
+func (o *WritableLocationRequest) GetParent() int64 {
 	if o == nil || IsNil(o.Parent.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Parent.Get()
@@ -140,7 +140,7 @@ func (o *WritableLocationRequest) GetParent() int32 {
 // GetParentOk returns a tuple with the Parent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableLocationRequest) GetParentOk() (*int32, bool) {
+func (o *WritableLocationRequest) GetParentOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -156,8 +156,8 @@ func (o *WritableLocationRequest) HasParent() bool {
 	return false
 }
 
-// SetParent gets a reference to the given NullableInt32 and assigns it to the Parent field.
-func (o *WritableLocationRequest) SetParent(v int32) {
+// SetParent gets a reference to the given NullableInt64 and assigns it to the Parent field.
+func (o *WritableLocationRequest) SetParent(v int64) {
 	o.Parent.Set(&v)
 }
 

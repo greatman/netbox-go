@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** |  | [optional] 
 **LinkText** | **string** | Jinja2 template code for link text | 
 **LinkUrl** | **string** | Jinja2 template code for link URL | 
-**Weight** | Pointer to **int32** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **GroupName** | Pointer to **string** | Links with the same group will appear as a dropdown menu | [optional] 
 **ButtonClass** | Pointer to [**CustomLinkButtonClass**](CustomLinkButtonClass.md) |  | [optional] 
 **NewWindow** | Pointer to **bool** | Force link to open in a new window | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewCustomLink
 
-`func NewCustomLink(id int32, url string, displayUrl string, display string, objectTypes []string, name string, linkText string, linkUrl string, created NullableTime, lastUpdated NullableTime, ) *CustomLink`
+`func NewCustomLink(id int64, url string, displayUrl string, display string, objectTypes []string, name string, linkText string, linkUrl string, created NullableTime, lastUpdated NullableTime, ) *CustomLink`
 
 NewCustomLink instantiates a new CustomLink object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *CustomLink) GetId() int32`
+`func (o *CustomLink) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *CustomLink) GetIdOk() (*int32, bool)`
+`func (o *CustomLink) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *CustomLink) SetId(v int32)`
+`func (o *CustomLink) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -226,20 +226,20 @@ SetLinkUrl sets LinkUrl field to given value.
 
 ### GetWeight
 
-`func (o *CustomLink) GetWeight() int32`
+`func (o *CustomLink) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *CustomLink) GetWeightOk() (*int32, bool)`
+`func (o *CustomLink) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *CustomLink) SetWeight(v int32)`
+`func (o *CustomLink) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

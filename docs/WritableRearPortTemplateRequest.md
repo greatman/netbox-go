@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Type** | [**FrontPortTypeValue**](FrontPortTypeValue.md) |  | 
 **Color** | Pointer to **string** |  | [optional] 
-**Positions** | Pointer to **int32** |  | [optional] 
+**Positions** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -194,20 +194,20 @@ HasColor returns a boolean if a field has been set.
 
 ### GetPositions
 
-`func (o *WritableRearPortTemplateRequest) GetPositions() int32`
+`func (o *WritableRearPortTemplateRequest) GetPositions() int64`
 
 GetPositions returns the Positions field if non-nil, zero value otherwise.
 
 ### GetPositionsOk
 
-`func (o *WritableRearPortTemplateRequest) GetPositionsOk() (*int32, bool)`
+`func (o *WritableRearPortTemplateRequest) GetPositionsOk() (*int64, bool)`
 
 GetPositionsOk returns a tuple with the Positions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositions
 
-`func (o *WritableRearPortTemplateRequest) SetPositions(v int32)`
+`func (o *WritableRearPortTemplateRequest) SetPositions(v int64)`
 
 SetPositions sets Positions field to given value.
 

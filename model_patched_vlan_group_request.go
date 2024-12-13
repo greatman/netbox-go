@@ -22,7 +22,7 @@ type PatchedVLANGroupRequest struct {
 	Name                 *string                `json:"name,omitempty"`
 	Slug                 *string                `json:"slug,omitempty" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	ScopeType            NullableString         `json:"scope_type,omitempty"`
-	ScopeId              NullableInt32          `json:"scope_id,omitempty"`
+	ScopeId              NullableInt64          `json:"scope_id,omitempty"`
 	Description          *string                `json:"description,omitempty"`
 	Tags                 []NestedTagRequest     `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
@@ -156,9 +156,9 @@ func (o *PatchedVLANGroupRequest) UnsetScopeType() {
 }
 
 // GetScopeId returns the ScopeId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedVLANGroupRequest) GetScopeId() int32 {
+func (o *PatchedVLANGroupRequest) GetScopeId() int64 {
 	if o == nil || IsNil(o.ScopeId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ScopeId.Get()
@@ -167,7 +167,7 @@ func (o *PatchedVLANGroupRequest) GetScopeId() int32 {
 // GetScopeIdOk returns a tuple with the ScopeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedVLANGroupRequest) GetScopeIdOk() (*int32, bool) {
+func (o *PatchedVLANGroupRequest) GetScopeIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -183,8 +183,8 @@ func (o *PatchedVLANGroupRequest) HasScopeId() bool {
 	return false
 }
 
-// SetScopeId gets a reference to the given NullableInt32 and assigns it to the ScopeId field.
-func (o *PatchedVLANGroupRequest) SetScopeId(v int32) {
+// SetScopeId gets a reference to the given NullableInt64 and assigns it to the ScopeId field.
+func (o *PatchedVLANGroupRequest) SetScopeId(v int64) {
 	o.ScopeId.Set(&v)
 }
 

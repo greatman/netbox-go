@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **IsActive** | Pointer to **bool** | Designates whether this user should be treated as active. Unselect this instead of deleting accounts. | [optional] 
 **DateJoined** | Pointer to **time.Time** |  | [optional] 
 **LastLogin** | Pointer to **NullableTime** |  | [optional] 
-**Groups** | Pointer to **[]int32** |  | [optional] 
-**Permissions** | Pointer to **[]int32** |  | [optional] 
+**Groups** | Pointer to **[]int64** |  | [optional] 
+**Permissions** | Pointer to **[]int64** |  | [optional] 
 
 ## Methods
 
@@ -262,20 +262,20 @@ HasLastLogin returns a boolean if a field has been set.
 UnsetLastLogin ensures that no value is present for LastLogin, not even an explicit nil
 ### GetGroups
 
-`func (o *UserRequest) GetGroups() []int32`
+`func (o *UserRequest) GetGroups() []int64`
 
 GetGroups returns the Groups field if non-nil, zero value otherwise.
 
 ### GetGroupsOk
 
-`func (o *UserRequest) GetGroupsOk() (*[]int32, bool)`
+`func (o *UserRequest) GetGroupsOk() (*[]int64, bool)`
 
 GetGroupsOk returns a tuple with the Groups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroups
 
-`func (o *UserRequest) SetGroups(v []int32)`
+`func (o *UserRequest) SetGroups(v []int64)`
 
 SetGroups sets Groups field to given value.
 
@@ -287,20 +287,20 @@ HasGroups returns a boolean if a field has been set.
 
 ### GetPermissions
 
-`func (o *UserRequest) GetPermissions() []int32`
+`func (o *UserRequest) GetPermissions() []int64`
 
 GetPermissions returns the Permissions field if non-nil, zero value otherwise.
 
 ### GetPermissionsOk
 
-`func (o *UserRequest) GetPermissionsOk() (*[]int32, bool)`
+`func (o *UserRequest) GetPermissionsOk() (*[]int64, bool)`
 
 GetPermissionsOk returns a tuple with the Permissions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPermissions
 
-`func (o *UserRequest) SetPermissions(v []int32)`
+`func (o *UserRequest) SetPermissions(v []int64)`
 
 SetPermissions sets Permissions field to given value.
 

@@ -20,13 +20,13 @@ var _ MappedNullable = &NestedLocation{}
 
 // NestedLocation Represents an object related through a ForeignKey field. On write, it accepts a primary key (PK) value or a dictionary of attributes which can be used to uniquely identify the related object. This class should be subclassed to return a full representation of the related object on read.
 type NestedLocation struct {
-	Id                   int32  `json:"id"`
+	Id                   int64  `json:"id"`
 	Url                  string `json:"url"`
 	DisplayUrl           string `json:"display_url"`
 	Display              string `json:"display"`
 	Name                 string `json:"name"`
 	Slug                 string `json:"slug" validate:"regexp=^[-a-zA-Z0-9_]+$"`
-	Depth                int32  `json:"_depth"`
+	Depth                int64  `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -36,7 +36,7 @@ type _NestedLocation NestedLocation
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewNestedLocation(id int32, url string, displayUrl string, display string, name string, slug string, depth int32) *NestedLocation {
+func NewNestedLocation(id int64, url string, displayUrl string, display string, name string, slug string, depth int64) *NestedLocation {
 	this := NestedLocation{}
 	this.Id = id
 	this.Url = url
@@ -57,9 +57,9 @@ func NewNestedLocationWithDefaults() *NestedLocation {
 }
 
 // GetId returns the Id field value
-func (o *NestedLocation) GetId() int32 {
+func (o *NestedLocation) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -68,7 +68,7 @@ func (o *NestedLocation) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *NestedLocation) GetIdOk() (*int32, bool) {
+func (o *NestedLocation) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -76,7 +76,7 @@ func (o *NestedLocation) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *NestedLocation) SetId(v int32) {
+func (o *NestedLocation) SetId(v int64) {
 	o.Id = v
 }
 
@@ -201,9 +201,9 @@ func (o *NestedLocation) SetSlug(v string) {
 }
 
 // GetDepth returns the Depth field value
-func (o *NestedLocation) GetDepth() int32 {
+func (o *NestedLocation) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -212,7 +212,7 @@ func (o *NestedLocation) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *NestedLocation) GetDepthOk() (*int32, bool) {
+func (o *NestedLocation) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -220,7 +220,7 @@ func (o *NestedLocation) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *NestedLocation) SetDepth(v int32) {
+func (o *NestedLocation) SetDepth(v int64) {
 	o.Depth = v
 }
 

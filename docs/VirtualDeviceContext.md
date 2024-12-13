@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Device** | [**BriefDevice**](BriefDevice.md) |  | 
-**Identifier** | Pointer to **NullableInt32** |  | [optional] 
+**Identifier** | Pointer to **NullableInt64** |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenant**](BriefTenant.md) |  | [optional] 
 **PrimaryIp** | [**NullableBriefIPAddress**](BriefIPAddress.md) |  | [readonly] 
 **PrimaryIp4** | Pointer to [**NullableBriefIPAddress**](BriefIPAddress.md) |  | [optional] 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 
 ### NewVirtualDeviceContext
 
-`func NewVirtualDeviceContext(id int32, url string, displayUrl string, display string, name string, device BriefDevice, primaryIp NullableBriefIPAddress, status VirtualDeviceContextStatus, created NullableTime, lastUpdated NullableTime, interfaceCount int64, ) *VirtualDeviceContext`
+`func NewVirtualDeviceContext(id int64, url string, displayUrl string, display string, name string, device BriefDevice, primaryIp NullableBriefIPAddress, status VirtualDeviceContextStatus, created NullableTime, lastUpdated NullableTime, interfaceCount int64, ) *VirtualDeviceContext`
 
 NewVirtualDeviceContext instantiates a new VirtualDeviceContext object
 This constructor will assign default values to properties that have it defined,
@@ -45,20 +45,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VirtualDeviceContext) GetId() int32`
+`func (o *VirtualDeviceContext) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VirtualDeviceContext) GetIdOk() (*int32, bool)`
+`func (o *VirtualDeviceContext) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VirtualDeviceContext) SetId(v int32)`
+`func (o *VirtualDeviceContext) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -165,20 +165,20 @@ SetDevice sets Device field to given value.
 
 ### GetIdentifier
 
-`func (o *VirtualDeviceContext) GetIdentifier() int32`
+`func (o *VirtualDeviceContext) GetIdentifier() int64`
 
 GetIdentifier returns the Identifier field if non-nil, zero value otherwise.
 
 ### GetIdentifierOk
 
-`func (o *VirtualDeviceContext) GetIdentifierOk() (*int32, bool)`
+`func (o *VirtualDeviceContext) GetIdentifierOk() (*int64, bool)`
 
 GetIdentifierOk returns a tuple with the Identifier field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIdentifier
 
-`func (o *VirtualDeviceContext) SetIdentifier(v int32)`
+`func (o *VirtualDeviceContext) SetIdentifier(v int64)`
 
 SetIdentifier sets Identifier field to given value.
 

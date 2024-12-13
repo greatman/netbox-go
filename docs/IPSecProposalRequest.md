@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **Description** | Pointer to **string** |  | [optional] 
 **EncryptionAlgorithm** | [**IKEProposalEncryptionAlgorithmValue**](IKEProposalEncryptionAlgorithmValue.md) |  | 
 **AuthenticationAlgorithm** | [**IKEProposalAuthenticationAlgorithmValue**](IKEProposalAuthenticationAlgorithmValue.md) |  | 
-**SaLifetimeSeconds** | Pointer to **NullableInt32** | Security association lifetime (seconds) | [optional] 
-**SaLifetimeData** | Pointer to **NullableInt32** | Security association lifetime (in kilobytes) | [optional] 
+**SaLifetimeSeconds** | Pointer to **NullableInt64** | Security association lifetime (seconds) | [optional] 
+**SaLifetimeData** | Pointer to **NullableInt64** | Security association lifetime (in kilobytes) | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -120,20 +120,20 @@ SetAuthenticationAlgorithm sets AuthenticationAlgorithm field to given value.
 
 ### GetSaLifetimeSeconds
 
-`func (o *IPSecProposalRequest) GetSaLifetimeSeconds() int32`
+`func (o *IPSecProposalRequest) GetSaLifetimeSeconds() int64`
 
 GetSaLifetimeSeconds returns the SaLifetimeSeconds field if non-nil, zero value otherwise.
 
 ### GetSaLifetimeSecondsOk
 
-`func (o *IPSecProposalRequest) GetSaLifetimeSecondsOk() (*int32, bool)`
+`func (o *IPSecProposalRequest) GetSaLifetimeSecondsOk() (*int64, bool)`
 
 GetSaLifetimeSecondsOk returns a tuple with the SaLifetimeSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSaLifetimeSeconds
 
-`func (o *IPSecProposalRequest) SetSaLifetimeSeconds(v int32)`
+`func (o *IPSecProposalRequest) SetSaLifetimeSeconds(v int64)`
 
 SetSaLifetimeSeconds sets SaLifetimeSeconds field to given value.
 
@@ -155,20 +155,20 @@ HasSaLifetimeSeconds returns a boolean if a field has been set.
 UnsetSaLifetimeSeconds ensures that no value is present for SaLifetimeSeconds, not even an explicit nil
 ### GetSaLifetimeData
 
-`func (o *IPSecProposalRequest) GetSaLifetimeData() int32`
+`func (o *IPSecProposalRequest) GetSaLifetimeData() int64`
 
 GetSaLifetimeData returns the SaLifetimeData field if non-nil, zero value otherwise.
 
 ### GetSaLifetimeDataOk
 
-`func (o *IPSecProposalRequest) GetSaLifetimeDataOk() (*int32, bool)`
+`func (o *IPSecProposalRequest) GetSaLifetimeDataOk() (*int64, bool)`
 
 GetSaLifetimeDataOk returns a tuple with the SaLifetimeData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSaLifetimeData
 
-`func (o *IPSecProposalRequest) SetSaLifetimeData(v int32)`
+`func (o *IPSecProposalRequest) SetSaLifetimeData(v int64)`
 
 SetSaLifetimeData sets SaLifetimeData field to given value.
 

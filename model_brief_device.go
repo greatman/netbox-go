@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefDevice{}
 
 // BriefDevice Adds support for custom fields and tags.
 type BriefDevice struct {
-	Id                   int32          `json:"id"`
+	Id                   int64          `json:"id"`
 	Url                  string         `json:"url"`
 	Display              string         `json:"display"`
 	Name                 NullableString `json:"name,omitempty"`
@@ -34,7 +34,7 @@ type _BriefDevice BriefDevice
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefDevice(id int32, url string, display string) *BriefDevice {
+func NewBriefDevice(id int64, url string, display string) *BriefDevice {
 	this := BriefDevice{}
 	this.Id = id
 	this.Url = url
@@ -51,9 +51,9 @@ func NewBriefDeviceWithDefaults() *BriefDevice {
 }
 
 // GetId returns the Id field value
-func (o *BriefDevice) GetId() int32 {
+func (o *BriefDevice) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -62,7 +62,7 @@ func (o *BriefDevice) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefDevice) GetIdOk() (*int32, bool) {
+func (o *BriefDevice) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -70,7 +70,7 @@ func (o *BriefDevice) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefDevice) SetId(v int32) {
+func (o *BriefDevice) SetId(v int64) {
 	o.Id = v
 }
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &CableTerminationRequest{}
 
 // CableTerminationRequest Adds support for custom fields and tags.
 type CableTerminationRequest struct {
-	Cable                int32  `json:"cable"`
+	Cable                int64  `json:"cable"`
 	CableEnd             End1   `json:"cable_end"`
 	TerminationType      string `json:"termination_type"`
 	TerminationId        int64  `json:"termination_id"`
@@ -33,7 +33,7 @@ type _CableTerminationRequest CableTerminationRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCableTerminationRequest(cable int32, cableEnd End1, terminationType string, terminationId int64) *CableTerminationRequest {
+func NewCableTerminationRequest(cable int64, cableEnd End1, terminationType string, terminationId int64) *CableTerminationRequest {
 	this := CableTerminationRequest{}
 	this.Cable = cable
 	this.CableEnd = cableEnd
@@ -51,9 +51,9 @@ func NewCableTerminationRequestWithDefaults() *CableTerminationRequest {
 }
 
 // GetCable returns the Cable field value
-func (o *CableTerminationRequest) GetCable() int32 {
+func (o *CableTerminationRequest) GetCable() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -62,7 +62,7 @@ func (o *CableTerminationRequest) GetCable() int32 {
 
 // GetCableOk returns a tuple with the Cable field value
 // and a boolean to check if the value has been set.
-func (o *CableTerminationRequest) GetCableOk() (*int32, bool) {
+func (o *CableTerminationRequest) GetCableOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -70,7 +70,7 @@ func (o *CableTerminationRequest) GetCableOk() (*int32, bool) {
 }
 
 // SetCable sets field value
-func (o *CableTerminationRequest) SetCable(v int32) {
+func (o *CableTerminationRequest) SetCable(v int64) {
 	o.Cable = v
 }
 

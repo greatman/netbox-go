@@ -21,7 +21,7 @@ var _ MappedNullable = &TunnelGroup{}
 
 // TunnelGroup Adds support for custom fields and tags.
 type TunnelGroup struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
@@ -42,7 +42,7 @@ type _TunnelGroup TunnelGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTunnelGroup(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, tunnelCount int64) *TunnelGroup {
+func NewTunnelGroup(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, tunnelCount int64) *TunnelGroup {
 	this := TunnelGroup{}
 	this.Id = id
 	this.Url = url
@@ -65,9 +65,9 @@ func NewTunnelGroupWithDefaults() *TunnelGroup {
 }
 
 // GetId returns the Id field value
-func (o *TunnelGroup) GetId() int32 {
+func (o *TunnelGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -76,7 +76,7 @@ func (o *TunnelGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *TunnelGroup) GetIdOk() (*int32, bool) {
+func (o *TunnelGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -84,7 +84,7 @@ func (o *TunnelGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *TunnelGroup) SetId(v int32) {
+func (o *TunnelGroup) SetId(v int64) {
 	o.Id = v
 }
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | **int32** |  | 
+**Count** | **int64** |  | 
 **Next** | Pointer to **NullableString** |  | [optional] 
 **Previous** | Pointer to **NullableString** |  | [optional] 
 **Results** | [**[]InventoryItemTemplate**](InventoryItemTemplate.md) |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewPaginatedInventoryItemTemplateList
 
-`func NewPaginatedInventoryItemTemplateList(count int32, results []InventoryItemTemplate, ) *PaginatedInventoryItemTemplateList`
+`func NewPaginatedInventoryItemTemplateList(count int64, results []InventoryItemTemplate, ) *PaginatedInventoryItemTemplateList`
 
 NewPaginatedInventoryItemTemplateList instantiates a new PaginatedInventoryItemTemplateList object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCount
 
-`func (o *PaginatedInventoryItemTemplateList) GetCount() int32`
+`func (o *PaginatedInventoryItemTemplateList) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *PaginatedInventoryItemTemplateList) GetCountOk() (*int32, bool)`
+`func (o *PaginatedInventoryItemTemplateList) GetCountOk() (*int64, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *PaginatedInventoryItemTemplateList) SetCount(v int32)`
+`func (o *PaginatedInventoryItemTemplateList) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

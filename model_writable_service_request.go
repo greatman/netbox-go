@@ -24,8 +24,8 @@ type WritableServiceRequest struct {
 	VirtualMachine       NullableBriefVirtualMachineRequest    `json:"virtual_machine,omitempty"`
 	Name                 string                                `json:"name"`
 	Protocol             PatchedWritableServiceRequestProtocol `json:"protocol"`
-	Ports                []int32                               `json:"ports"`
-	Ipaddresses          []int32                               `json:"ipaddresses,omitempty"`
+	Ports                []int64                               `json:"ports"`
+	Ipaddresses          []int64                               `json:"ipaddresses,omitempty"`
 	Description          *string                               `json:"description,omitempty"`
 	Comments             *string                               `json:"comments,omitempty"`
 	Tags                 []NestedTagRequest                    `json:"tags,omitempty"`
@@ -39,7 +39,7 @@ type _WritableServiceRequest WritableServiceRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWritableServiceRequest(name string, protocol PatchedWritableServiceRequestProtocol, ports []int32) *WritableServiceRequest {
+func NewWritableServiceRequest(name string, protocol PatchedWritableServiceRequestProtocol, ports []int64) *WritableServiceRequest {
 	this := WritableServiceRequest{}
 	this.Name = name
 	this.Protocol = protocol
@@ -190,9 +190,9 @@ func (o *WritableServiceRequest) SetProtocol(v PatchedWritableServiceRequestProt
 }
 
 // GetPorts returns the Ports field value
-func (o *WritableServiceRequest) GetPorts() []int32 {
+func (o *WritableServiceRequest) GetPorts() []int64 {
 	if o == nil {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 
@@ -201,7 +201,7 @@ func (o *WritableServiceRequest) GetPorts() []int32 {
 
 // GetPortsOk returns a tuple with the Ports field value
 // and a boolean to check if the value has been set.
-func (o *WritableServiceRequest) GetPortsOk() ([]int32, bool) {
+func (o *WritableServiceRequest) GetPortsOk() ([]int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -209,14 +209,14 @@ func (o *WritableServiceRequest) GetPortsOk() ([]int32, bool) {
 }
 
 // SetPorts sets field value
-func (o *WritableServiceRequest) SetPorts(v []int32) {
+func (o *WritableServiceRequest) SetPorts(v []int64) {
 	o.Ports = v
 }
 
 // GetIpaddresses returns the Ipaddresses field value if set, zero value otherwise.
-func (o *WritableServiceRequest) GetIpaddresses() []int32 {
+func (o *WritableServiceRequest) GetIpaddresses() []int64 {
 	if o == nil || IsNil(o.Ipaddresses) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.Ipaddresses
@@ -224,7 +224,7 @@ func (o *WritableServiceRequest) GetIpaddresses() []int32 {
 
 // GetIpaddressesOk returns a tuple with the Ipaddresses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *WritableServiceRequest) GetIpaddressesOk() ([]int32, bool) {
+func (o *WritableServiceRequest) GetIpaddressesOk() ([]int64, bool) {
 	if o == nil || IsNil(o.Ipaddresses) {
 		return nil, false
 	}
@@ -240,8 +240,8 @@ func (o *WritableServiceRequest) HasIpaddresses() bool {
 	return false
 }
 
-// SetIpaddresses gets a reference to the given []int32 and assigns it to the Ipaddresses field.
-func (o *WritableServiceRequest) SetIpaddresses(v []int32) {
+// SetIpaddresses gets a reference to the given []int64 and assigns it to the Ipaddresses field.
+func (o *WritableServiceRequest) SetIpaddresses(v []int64) {
 	o.Ipaddresses = v
 }
 

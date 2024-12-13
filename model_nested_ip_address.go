@@ -20,11 +20,11 @@ var _ MappedNullable = &NestedIPAddress{}
 
 // NestedIPAddress Represents an object related through a ForeignKey field. On write, it accepts a primary key (PK) value or a dictionary of attributes which can be used to uniquely identify the related object. This class should be subclassed to return a full representation of the related object on read.
 type NestedIPAddress struct {
-	Id                   int32  `json:"id"`
+	Id                   int64  `json:"id"`
 	Url                  string `json:"url"`
 	DisplayUrl           string `json:"display_url"`
 	Display              string `json:"display"`
-	Family               int32  `json:"family"`
+	Family               int64  `json:"family"`
 	Address              string `json:"address"`
 	AdditionalProperties map[string]interface{}
 }
@@ -35,7 +35,7 @@ type _NestedIPAddress NestedIPAddress
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewNestedIPAddress(id int32, url string, displayUrl string, display string, family int32, address string) *NestedIPAddress {
+func NewNestedIPAddress(id int64, url string, displayUrl string, display string, family int64, address string) *NestedIPAddress {
 	this := NestedIPAddress{}
 	this.Id = id
 	this.Url = url
@@ -55,9 +55,9 @@ func NewNestedIPAddressWithDefaults() *NestedIPAddress {
 }
 
 // GetId returns the Id field value
-func (o *NestedIPAddress) GetId() int32 {
+func (o *NestedIPAddress) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -66,7 +66,7 @@ func (o *NestedIPAddress) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *NestedIPAddress) GetIdOk() (*int32, bool) {
+func (o *NestedIPAddress) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -74,7 +74,7 @@ func (o *NestedIPAddress) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *NestedIPAddress) SetId(v int32) {
+func (o *NestedIPAddress) SetId(v int64) {
 	o.Id = v
 }
 
@@ -151,9 +151,9 @@ func (o *NestedIPAddress) SetDisplay(v string) {
 }
 
 // GetFamily returns the Family field value
-func (o *NestedIPAddress) GetFamily() int32 {
+func (o *NestedIPAddress) GetFamily() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -162,7 +162,7 @@ func (o *NestedIPAddress) GetFamily() int32 {
 
 // GetFamilyOk returns a tuple with the Family field value
 // and a boolean to check if the value has been set.
-func (o *NestedIPAddress) GetFamilyOk() (*int32, bool) {
+func (o *NestedIPAddress) GetFamilyOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -170,7 +170,7 @@ func (o *NestedIPAddress) GetFamilyOk() (*int32, bool) {
 }
 
 // SetFamily sets field value
-func (o *NestedIPAddress) SetFamily(v int32) {
+func (o *NestedIPAddress) SetFamily(v int64) {
 	o.Family = v
 }
 

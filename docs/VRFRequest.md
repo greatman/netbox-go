@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **EnforceUnique** | Pointer to **bool** | Prevent duplicate prefixes/IP addresses within this VRF | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
-**ImportTargets** | Pointer to **[]int32** |  | [optional] 
-**ExportTargets** | Pointer to **[]int32** |  | [optional] 
+**ImportTargets** | Pointer to **[]int64** |  | [optional] 
+**ExportTargets** | Pointer to **[]int64** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 
@@ -201,20 +201,20 @@ HasComments returns a boolean if a field has been set.
 
 ### GetImportTargets
 
-`func (o *VRFRequest) GetImportTargets() []int32`
+`func (o *VRFRequest) GetImportTargets() []int64`
 
 GetImportTargets returns the ImportTargets field if non-nil, zero value otherwise.
 
 ### GetImportTargetsOk
 
-`func (o *VRFRequest) GetImportTargetsOk() (*[]int32, bool)`
+`func (o *VRFRequest) GetImportTargetsOk() (*[]int64, bool)`
 
 GetImportTargetsOk returns a tuple with the ImportTargets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImportTargets
 
-`func (o *VRFRequest) SetImportTargets(v []int32)`
+`func (o *VRFRequest) SetImportTargets(v []int64)`
 
 SetImportTargets sets ImportTargets field to given value.
 
@@ -226,20 +226,20 @@ HasImportTargets returns a boolean if a field has been set.
 
 ### GetExportTargets
 
-`func (o *VRFRequest) GetExportTargets() []int32`
+`func (o *VRFRequest) GetExportTargets() []int64`
 
 GetExportTargets returns the ExportTargets field if non-nil, zero value otherwise.
 
 ### GetExportTargetsOk
 
-`func (o *VRFRequest) GetExportTargetsOk() (*[]int32, bool)`
+`func (o *VRFRequest) GetExportTargetsOk() (*[]int64, bool)`
 
 GetExportTargetsOk returns a tuple with the ExportTargets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExportTargets
 
-`func (o *VRFRequest) SetExportTargets(v []int32)`
+`func (o *VRFRequest) SetExportTargets(v []int64)`
 
 SetExportTargets sets ExportTargets field to given value.
 

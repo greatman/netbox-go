@@ -20,7 +20,7 @@ var _ MappedNullable = &FrontPortRearPort{}
 
 // FrontPortRearPort NestedRearPortSerializer but with parent device omitted (since front and rear ports must belong to same device)
 type FrontPortRearPort struct {
-	Id         int32  `json:"id"`
+	Id         int64  `json:"id"`
 	Url        string `json:"url"`
 	DisplayUrl string `json:"display_url"`
 	Display    string `json:"display"`
@@ -37,7 +37,7 @@ type _FrontPortRearPort FrontPortRearPort
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFrontPortRearPort(id int32, url string, displayUrl string, display string, name string) *FrontPortRearPort {
+func NewFrontPortRearPort(id int64, url string, displayUrl string, display string, name string) *FrontPortRearPort {
 	this := FrontPortRearPort{}
 	this.Id = id
 	this.Url = url
@@ -56,9 +56,9 @@ func NewFrontPortRearPortWithDefaults() *FrontPortRearPort {
 }
 
 // GetId returns the Id field value
-func (o *FrontPortRearPort) GetId() int32 {
+func (o *FrontPortRearPort) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -67,7 +67,7 @@ func (o *FrontPortRearPort) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *FrontPortRearPort) GetIdOk() (*int32, bool) {
+func (o *FrontPortRearPort) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -75,7 +75,7 @@ func (o *FrontPortRearPort) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *FrontPortRearPort) SetId(v int32) {
+func (o *FrontPortRearPort) SetId(v int64) {
 	o.Id = v
 }
 

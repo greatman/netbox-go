@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** |  | [optional] 
 **Slug** | Pointer to **string** |  | [optional] 
 **ScopeType** | Pointer to **NullableString** |  | [optional] 
-**ScopeId** | Pointer to **NullableInt32** |  | [optional] 
+**ScopeId** | Pointer to **NullableInt64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -118,20 +118,20 @@ HasScopeType returns a boolean if a field has been set.
 UnsetScopeType ensures that no value is present for ScopeType, not even an explicit nil
 ### GetScopeId
 
-`func (o *PatchedVLANGroupRequest) GetScopeId() int32`
+`func (o *PatchedVLANGroupRequest) GetScopeId() int64`
 
 GetScopeId returns the ScopeId field if non-nil, zero value otherwise.
 
 ### GetScopeIdOk
 
-`func (o *PatchedVLANGroupRequest) GetScopeIdOk() (*int32, bool)`
+`func (o *PatchedVLANGroupRequest) GetScopeIdOk() (*int64, bool)`
 
 GetScopeIdOk returns a tuple with the ScopeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopeId
 
-`func (o *PatchedVLANGroupRequest) SetScopeId(v int32)`
+`func (o *PatchedVLANGroupRequest) SetScopeId(v int64)`
 
 SetScopeId sets ScopeId field to given value.
 

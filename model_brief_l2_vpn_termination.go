@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefL2VPNTermination{}
 
 // BriefL2VPNTermination Adds support for custom fields and tags.
 type BriefL2VPNTermination struct {
-	Id                   int32      `json:"id"`
+	Id                   int64      `json:"id"`
 	Url                  string     `json:"url"`
 	Display              string     `json:"display"`
 	L2vpn                BriefL2VPN `json:"l2vpn"`
@@ -33,7 +33,7 @@ type _BriefL2VPNTermination BriefL2VPNTermination
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefL2VPNTermination(id int32, url string, display string, l2vpn BriefL2VPN) *BriefL2VPNTermination {
+func NewBriefL2VPNTermination(id int64, url string, display string, l2vpn BriefL2VPN) *BriefL2VPNTermination {
 	this := BriefL2VPNTermination{}
 	this.Id = id
 	this.Url = url
@@ -51,9 +51,9 @@ func NewBriefL2VPNTerminationWithDefaults() *BriefL2VPNTermination {
 }
 
 // GetId returns the Id field value
-func (o *BriefL2VPNTermination) GetId() int32 {
+func (o *BriefL2VPNTermination) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -62,7 +62,7 @@ func (o *BriefL2VPNTermination) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefL2VPNTermination) GetIdOk() (*int32, bool) {
+func (o *BriefL2VPNTermination) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -70,7 +70,7 @@ func (o *BriefL2VPNTermination) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefL2VPNTermination) SetId(v int32) {
+func (o *BriefL2VPNTermination) SetId(v int64) {
 	o.Id = v
 }
 

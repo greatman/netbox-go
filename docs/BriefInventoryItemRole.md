@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewBriefInventoryItemRole
 
-`func NewBriefInventoryItemRole(id int32, url string, display string, name string, slug string, inventoryitemCount int64, ) *BriefInventoryItemRole`
+`func NewBriefInventoryItemRole(id int64, url string, display string, name string, slug string, inventoryitemCount int64, ) *BriefInventoryItemRole`
 
 NewBriefInventoryItemRole instantiates a new BriefInventoryItemRole object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefInventoryItemRole) GetId() int32`
+`func (o *BriefInventoryItemRole) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefInventoryItemRole) GetIdOk() (*int32, bool)`
+`func (o *BriefInventoryItemRole) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefInventoryItemRole) SetId(v int32)`
+`func (o *BriefInventoryItemRole) SetId(v int64)`
 
 SetId sets Id field to given value.
 

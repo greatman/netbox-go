@@ -21,7 +21,7 @@ var _ MappedNullable = &CustomLink{}
 
 // CustomLink Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type CustomLink struct {
-	Id          int32    `json:"id"`
+	Id          int64    `json:"id"`
 	Url         string   `json:"url"`
 	DisplayUrl  string   `json:"display_url"`
 	Display     string   `json:"display"`
@@ -32,7 +32,7 @@ type CustomLink struct {
 	LinkText string `json:"link_text"`
 	// Jinja2 template code for link URL
 	LinkUrl string `json:"link_url"`
-	Weight  *int32 `json:"weight,omitempty"`
+	Weight  *int64 `json:"weight,omitempty"`
 	// Links with the same group will appear as a dropdown menu
 	GroupName   *string                `json:"group_name,omitempty"`
 	ButtonClass *CustomLinkButtonClass `json:"button_class,omitempty"`
@@ -49,7 +49,7 @@ type _CustomLink CustomLink
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCustomLink(id int32, url string, displayUrl string, display string, objectTypes []string, name string, linkText string, linkUrl string, created NullableTime, lastUpdated NullableTime) *CustomLink {
+func NewCustomLink(id int64, url string, displayUrl string, display string, objectTypes []string, name string, linkText string, linkUrl string, created NullableTime, lastUpdated NullableTime) *CustomLink {
 	this := CustomLink{}
 	this.Id = id
 	this.Url = url
@@ -73,9 +73,9 @@ func NewCustomLinkWithDefaults() *CustomLink {
 }
 
 // GetId returns the Id field value
-func (o *CustomLink) GetId() int32 {
+func (o *CustomLink) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -84,7 +84,7 @@ func (o *CustomLink) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *CustomLink) GetIdOk() (*int32, bool) {
+func (o *CustomLink) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -92,7 +92,7 @@ func (o *CustomLink) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *CustomLink) SetId(v int32) {
+func (o *CustomLink) SetId(v int64) {
 	o.Id = v
 }
 
@@ -297,9 +297,9 @@ func (o *CustomLink) SetLinkUrl(v string) {
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *CustomLink) GetWeight() int32 {
+func (o *CustomLink) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -307,7 +307,7 @@ func (o *CustomLink) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CustomLink) GetWeightOk() (*int32, bool) {
+func (o *CustomLink) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -323,8 +323,8 @@ func (o *CustomLink) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *CustomLink) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *CustomLink) SetWeight(v int64) {
 	o.Weight = &v
 }
 

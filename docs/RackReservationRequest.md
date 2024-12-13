@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Rack** | [**BriefRackRequest**](BriefRackRequest.md) |  | 
-**Units** | **[]int32** |  | 
+**Units** | **[]int64** |  | 
 **User** | [**BriefUserRequest**](BriefUserRequest.md) |  | 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **Description** | **string** |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewRackReservationRequest
 
-`func NewRackReservationRequest(rack BriefRackRequest, units []int32, user BriefUserRequest, description string, ) *RackReservationRequest`
+`func NewRackReservationRequest(rack BriefRackRequest, units []int64, user BriefUserRequest, description string, ) *RackReservationRequest`
 
 NewRackReservationRequest instantiates a new RackReservationRequest object
 This constructor will assign default values to properties that have it defined,
@@ -54,20 +54,20 @@ SetRack sets Rack field to given value.
 
 ### GetUnits
 
-`func (o *RackReservationRequest) GetUnits() []int32`
+`func (o *RackReservationRequest) GetUnits() []int64`
 
 GetUnits returns the Units field if non-nil, zero value otherwise.
 
 ### GetUnitsOk
 
-`func (o *RackReservationRequest) GetUnitsOk() (*[]int32, bool)`
+`func (o *RackReservationRequest) GetUnitsOk() (*[]int64, bool)`
 
 GetUnitsOk returns a tuple with the Units field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUnits
 
-`func (o *RackReservationRequest) SetUnits(v []int32)`
+`func (o *RackReservationRequest) SetUnits(v []int64)`
 
 SetUnits sets Units field to given value.
 

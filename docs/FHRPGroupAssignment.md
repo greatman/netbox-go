@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Group** | [**BriefFHRPGroup**](BriefFHRPGroup.md) |  | 
 **InterfaceType** | **string** |  | 
 **InterfaceId** | **int64** |  | 
 **Interface** | **interface{}** |  | [readonly] 
-**Priority** | **int32** |  | 
+**Priority** | **int64** |  | 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewFHRPGroupAssignment
 
-`func NewFHRPGroupAssignment(id int32, url string, display string, group BriefFHRPGroup, interfaceType string, interfaceId int64, interface_ interface{}, priority int32, created NullableTime, lastUpdated NullableTime, ) *FHRPGroupAssignment`
+`func NewFHRPGroupAssignment(id int64, url string, display string, group BriefFHRPGroup, interfaceType string, interfaceId int64, interface_ interface{}, priority int64, created NullableTime, lastUpdated NullableTime, ) *FHRPGroupAssignment`
 
 NewFHRPGroupAssignment instantiates a new FHRPGroupAssignment object
 This constructor will assign default values to properties that have it defined,
@@ -36,20 +36,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *FHRPGroupAssignment) GetId() int32`
+`func (o *FHRPGroupAssignment) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *FHRPGroupAssignment) GetIdOk() (*int32, bool)`
+`func (o *FHRPGroupAssignment) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *FHRPGroupAssignment) SetId(v int32)`
+`func (o *FHRPGroupAssignment) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -186,20 +186,20 @@ SetInterface sets Interface field to given value.
 UnsetInterface ensures that no value is present for Interface, not even an explicit nil
 ### GetPriority
 
-`func (o *FHRPGroupAssignment) GetPriority() int32`
+`func (o *FHRPGroupAssignment) GetPriority() int64`
 
 GetPriority returns the Priority field if non-nil, zero value otherwise.
 
 ### GetPriorityOk
 
-`func (o *FHRPGroupAssignment) GetPriorityOk() (*int32, bool)`
+`func (o *FHRPGroupAssignment) GetPriorityOk() (*int64, bool)`
 
 GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriority
 
-`func (o *FHRPGroupAssignment) SetPriority(v int32)`
+`func (o *FHRPGroupAssignment) SetPriority(v int64)`
 
 SetPriority sets Priority field to given value.
 

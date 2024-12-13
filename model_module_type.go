@@ -21,7 +21,7 @@ var _ MappedNullable = &ModuleType{}
 
 // ModuleType Adds support for custom fields and tags.
 type ModuleType struct {
-	Id           int32             `json:"id"`
+	Id           int64             `json:"id"`
 	Url          string            `json:"url"`
 	DisplayUrl   string            `json:"display_url"`
 	Display      string            `json:"display"`
@@ -47,7 +47,7 @@ type _ModuleType ModuleType
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewModuleType(id int32, url string, displayUrl string, display string, manufacturer BriefManufacturer, model string, created NullableTime, lastUpdated NullableTime) *ModuleType {
+func NewModuleType(id int64, url string, displayUrl string, display string, manufacturer BriefManufacturer, model string, created NullableTime, lastUpdated NullableTime) *ModuleType {
 	this := ModuleType{}
 	this.Id = id
 	this.Url = url
@@ -69,9 +69,9 @@ func NewModuleTypeWithDefaults() *ModuleType {
 }
 
 // GetId returns the Id field value
-func (o *ModuleType) GetId() int32 {
+func (o *ModuleType) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -80,7 +80,7 @@ func (o *ModuleType) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ModuleType) GetIdOk() (*int32, bool) {
+func (o *ModuleType) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -88,7 +88,7 @@ func (o *ModuleType) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ModuleType) SetId(v int32) {
+func (o *ModuleType) SetId(v int64) {
 	o.Id = v
 }
 

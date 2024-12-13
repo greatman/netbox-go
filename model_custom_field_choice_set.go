@@ -21,7 +21,7 @@ var _ MappedNullable = &CustomFieldChoiceSet{}
 
 // CustomFieldChoiceSet Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type CustomFieldChoiceSet struct {
-	Id           int32                            `json:"id"`
+	Id           int64                            `json:"id"`
 	Url          string                           `json:"url"`
 	DisplayUrl   string                           `json:"display_url"`
 	Display      string                           `json:"display"`
@@ -43,7 +43,7 @@ type _CustomFieldChoiceSet CustomFieldChoiceSet
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCustomFieldChoiceSet(id int32, url string, displayUrl string, display string, name string, extraChoices [][]interface{}, choicesCount string, created NullableTime, lastUpdated NullableTime) *CustomFieldChoiceSet {
+func NewCustomFieldChoiceSet(id int64, url string, displayUrl string, display string, name string, extraChoices [][]interface{}, choicesCount string, created NullableTime, lastUpdated NullableTime) *CustomFieldChoiceSet {
 	this := CustomFieldChoiceSet{}
 	this.Id = id
 	this.Url = url
@@ -66,9 +66,9 @@ func NewCustomFieldChoiceSetWithDefaults() *CustomFieldChoiceSet {
 }
 
 // GetId returns the Id field value
-func (o *CustomFieldChoiceSet) GetId() int32 {
+func (o *CustomFieldChoiceSet) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -77,7 +77,7 @@ func (o *CustomFieldChoiceSet) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *CustomFieldChoiceSet) GetIdOk() (*int32, bool) {
+func (o *CustomFieldChoiceSet) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -85,7 +85,7 @@ func (o *CustomFieldChoiceSet) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *CustomFieldChoiceSet) SetId(v int32) {
+func (o *CustomFieldChoiceSet) SetId(v int64) {
 	o.Id = v
 }
 

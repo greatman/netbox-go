@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | **int32** |  | 
+**Count** | **int64** |  | 
 **Next** | Pointer to **NullableString** |  | [optional] 
 **Previous** | Pointer to **NullableString** |  | [optional] 
 **Results** | [**[]CircuitTermination**](CircuitTermination.md) |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewPaginatedCircuitTerminationList
 
-`func NewPaginatedCircuitTerminationList(count int32, results []CircuitTermination, ) *PaginatedCircuitTerminationList`
+`func NewPaginatedCircuitTerminationList(count int64, results []CircuitTermination, ) *PaginatedCircuitTerminationList`
 
 NewPaginatedCircuitTerminationList instantiates a new PaginatedCircuitTerminationList object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCount
 
-`func (o *PaginatedCircuitTerminationList) GetCount() int32`
+`func (o *PaginatedCircuitTerminationList) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *PaginatedCircuitTerminationList) GetCountOk() (*int32, bool)`
+`func (o *PaginatedCircuitTerminationList) GetCountOk() (*int64, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *PaginatedCircuitTerminationList) SetCount(v int32)`
+`func (o *PaginatedCircuitTerminationList) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

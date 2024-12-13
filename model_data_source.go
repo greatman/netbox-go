@@ -21,7 +21,7 @@ var _ MappedNullable = &DataSource{}
 
 // DataSource Adds support for custom fields and tags.
 type DataSource struct {
-	Id          int32            `json:"id"`
+	Id          int64            `json:"id"`
 	Url         string           `json:"url"`
 	DisplayUrl  string           `json:"display_url"`
 	Display     string           `json:"display"`
@@ -49,7 +49,7 @@ type _DataSource DataSource
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewDataSource(id int32, url string, displayUrl string, display string, name string, type_ DataSourceType, sourceUrl string, status DataSourceStatus, created NullableTime, lastUpdated NullableTime, lastSynced NullableTime, fileCount int64) *DataSource {
+func NewDataSource(id int64, url string, displayUrl string, display string, name string, type_ DataSourceType, sourceUrl string, status DataSourceStatus, created NullableTime, lastUpdated NullableTime, lastSynced NullableTime, fileCount int64) *DataSource {
 	this := DataSource{}
 	this.Id = id
 	this.Url = url
@@ -75,9 +75,9 @@ func NewDataSourceWithDefaults() *DataSource {
 }
 
 // GetId returns the Id field value
-func (o *DataSource) GetId() int32 {
+func (o *DataSource) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -86,7 +86,7 @@ func (o *DataSource) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *DataSource) GetIdOk() (*int32, bool) {
+func (o *DataSource) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -94,7 +94,7 @@ func (o *DataSource) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *DataSource) SetId(v int32) {
+func (o *DataSource) SetId(v int64) {
 	o.Id = v
 }
 

@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Protocol** | [**BriefFHRPGroupProtocol**](BriefFHRPGroupProtocol.md) |  | 
-**GroupId** | **int32** |  | 
+**GroupId** | **int64** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
 ### NewBriefFHRPGroupRequest
 
-`func NewBriefFHRPGroupRequest(protocol BriefFHRPGroupProtocol, groupId int32, ) *BriefFHRPGroupRequest`
+`func NewBriefFHRPGroupRequest(protocol BriefFHRPGroupProtocol, groupId int64, ) *BriefFHRPGroupRequest`
 
 NewBriefFHRPGroupRequest instantiates a new BriefFHRPGroupRequest object
 This constructor will assign default values to properties that have it defined,
@@ -49,20 +49,20 @@ SetProtocol sets Protocol field to given value.
 
 ### GetGroupId
 
-`func (o *BriefFHRPGroupRequest) GetGroupId() int32`
+`func (o *BriefFHRPGroupRequest) GetGroupId() int64`
 
 GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
 ### GetGroupIdOk
 
-`func (o *BriefFHRPGroupRequest) GetGroupIdOk() (*int32, bool)`
+`func (o *BriefFHRPGroupRequest) GetGroupIdOk() (*int64, bool)`
 
 GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroupId
 
-`func (o *BriefFHRPGroupRequest) SetGroupId(v int32)`
+`func (o *BriefFHRPGroupRequest) SetGroupId(v int64)`
 
 SetGroupId sets GroupId field to given value.
 

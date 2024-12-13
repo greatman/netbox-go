@@ -21,7 +21,7 @@ var _ MappedNullable = &Cluster{}
 
 // Cluster Adds support for custom fields and tags.
 type Cluster struct {
-	Id                   int32                     `json:"id"`
+	Id                   int64                     `json:"id"`
 	Url                  string                    `json:"url"`
 	DisplayUrl           string                    `json:"display_url"`
 	Display              string                    `json:"display"`
@@ -31,7 +31,7 @@ type Cluster struct {
 	Status               *ClusterStatus            `json:"status,omitempty"`
 	Tenant               NullableBriefTenant       `json:"tenant,omitempty"`
 	ScopeType            NullableString            `json:"scope_type,omitempty"`
-	ScopeId              NullableInt32             `json:"scope_id,omitempty"`
+	ScopeId              NullableInt64             `json:"scope_id,omitempty"`
 	Scope                interface{}               `json:"scope"`
 	Description          *string                   `json:"description,omitempty"`
 	Comments             *string                   `json:"comments,omitempty"`
@@ -42,8 +42,8 @@ type Cluster struct {
 	DeviceCount          int64                     `json:"device_count"`
 	VirtualmachineCount  int64                     `json:"virtualmachine_count"`
 	AllocatedVcpus       float64                   `json:"allocated_vcpus"`
-	AllocatedMemory      int32                     `json:"allocated_memory"`
-	AllocatedDisk        int32                     `json:"allocated_disk"`
+	AllocatedMemory      int64                     `json:"allocated_memory"`
+	AllocatedDisk        int64                     `json:"allocated_disk"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -53,7 +53,7 @@ type _Cluster Cluster
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCluster(id int32, url string, displayUrl string, display string, name string, type_ BriefClusterType, scope interface{}, created NullableTime, lastUpdated NullableTime, deviceCount int64, virtualmachineCount int64, allocatedVcpus float64, allocatedMemory int32, allocatedDisk int32) *Cluster {
+func NewCluster(id int64, url string, displayUrl string, display string, name string, type_ BriefClusterType, scope interface{}, created NullableTime, lastUpdated NullableTime, deviceCount int64, virtualmachineCount int64, allocatedVcpus float64, allocatedMemory int64, allocatedDisk int64) *Cluster {
 	this := Cluster{}
 	this.Id = id
 	this.Url = url
@@ -81,9 +81,9 @@ func NewClusterWithDefaults() *Cluster {
 }
 
 // GetId returns the Id field value
-func (o *Cluster) GetId() int32 {
+func (o *Cluster) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -92,7 +92,7 @@ func (o *Cluster) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Cluster) GetIdOk() (*int32, bool) {
+func (o *Cluster) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -100,7 +100,7 @@ func (o *Cluster) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Cluster) SetId(v int32) {
+func (o *Cluster) SetId(v int64) {
 	o.Id = v
 }
 
@@ -386,9 +386,9 @@ func (o *Cluster) UnsetScopeType() {
 }
 
 // GetScopeId returns the ScopeId field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *Cluster) GetScopeId() int32 {
+func (o *Cluster) GetScopeId() int64 {
 	if o == nil || IsNil(o.ScopeId.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ScopeId.Get()
@@ -397,7 +397,7 @@ func (o *Cluster) GetScopeId() int32 {
 // GetScopeIdOk returns a tuple with the ScopeId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Cluster) GetScopeIdOk() (*int32, bool) {
+func (o *Cluster) GetScopeIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -413,8 +413,8 @@ func (o *Cluster) HasScopeId() bool {
 	return false
 }
 
-// SetScopeId gets a reference to the given NullableInt32 and assigns it to the ScopeId field.
-func (o *Cluster) SetScopeId(v int32) {
+// SetScopeId gets a reference to the given NullableInt64 and assigns it to the ScopeId field.
+func (o *Cluster) SetScopeId(v int64) {
 	o.ScopeId.Set(&v)
 }
 
@@ -707,9 +707,9 @@ func (o *Cluster) SetAllocatedVcpus(v float64) {
 }
 
 // GetAllocatedMemory returns the AllocatedMemory field value
-func (o *Cluster) GetAllocatedMemory() int32 {
+func (o *Cluster) GetAllocatedMemory() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -718,7 +718,7 @@ func (o *Cluster) GetAllocatedMemory() int32 {
 
 // GetAllocatedMemoryOk returns a tuple with the AllocatedMemory field value
 // and a boolean to check if the value has been set.
-func (o *Cluster) GetAllocatedMemoryOk() (*int32, bool) {
+func (o *Cluster) GetAllocatedMemoryOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -726,14 +726,14 @@ func (o *Cluster) GetAllocatedMemoryOk() (*int32, bool) {
 }
 
 // SetAllocatedMemory sets field value
-func (o *Cluster) SetAllocatedMemory(v int32) {
+func (o *Cluster) SetAllocatedMemory(v int64) {
 	o.AllocatedMemory = v
 }
 
 // GetAllocatedDisk returns the AllocatedDisk field value
-func (o *Cluster) GetAllocatedDisk() int32 {
+func (o *Cluster) GetAllocatedDisk() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -742,7 +742,7 @@ func (o *Cluster) GetAllocatedDisk() int32 {
 
 // GetAllocatedDiskOk returns a tuple with the AllocatedDisk field value
 // and a boolean to check if the value has been set.
-func (o *Cluster) GetAllocatedDiskOk() (*int32, bool) {
+func (o *Cluster) GetAllocatedDiskOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -750,7 +750,7 @@ func (o *Cluster) GetAllocatedDiskOk() (*int32, bool) {
 }
 
 // SetAllocatedDisk sets field value
-func (o *Cluster) SetAllocatedDisk(v int32) {
+func (o *Cluster) SetAllocatedDisk(v int64) {
 	o.AllocatedDisk = v
 }
 

@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **ObjectTypes** | Pointer to **[]string** |  | [optional] 
 **Actions** | Pointer to **[]string** | The list of actions granted by this permission | [optional] 
 **Constraints** | Pointer to **interface{}** | Queryset filter matching the applicable objects of the selected type(s) | [optional] 
-**Groups** | Pointer to **[]int32** |  | [optional] 
-**Users** | Pointer to **[]int32** |  | [optional] 
+**Groups** | Pointer to **[]int64** |  | [optional] 
+**Users** | Pointer to **[]int64** |  | [optional] 
 
 ## Methods
 
@@ -194,20 +194,20 @@ HasConstraints returns a boolean if a field has been set.
 UnsetConstraints ensures that no value is present for Constraints, not even an explicit nil
 ### GetGroups
 
-`func (o *PatchedObjectPermissionRequest) GetGroups() []int32`
+`func (o *PatchedObjectPermissionRequest) GetGroups() []int64`
 
 GetGroups returns the Groups field if non-nil, zero value otherwise.
 
 ### GetGroupsOk
 
-`func (o *PatchedObjectPermissionRequest) GetGroupsOk() (*[]int32, bool)`
+`func (o *PatchedObjectPermissionRequest) GetGroupsOk() (*[]int64, bool)`
 
 GetGroupsOk returns a tuple with the Groups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroups
 
-`func (o *PatchedObjectPermissionRequest) SetGroups(v []int32)`
+`func (o *PatchedObjectPermissionRequest) SetGroups(v []int64)`
 
 SetGroups sets Groups field to given value.
 
@@ -219,20 +219,20 @@ HasGroups returns a boolean if a field has been set.
 
 ### GetUsers
 
-`func (o *PatchedObjectPermissionRequest) GetUsers() []int32`
+`func (o *PatchedObjectPermissionRequest) GetUsers() []int64`
 
 GetUsers returns the Users field if non-nil, zero value otherwise.
 
 ### GetUsersOk
 
-`func (o *PatchedObjectPermissionRequest) GetUsersOk() (*[]int32, bool)`
+`func (o *PatchedObjectPermissionRequest) GetUsersOk() (*[]int64, bool)`
 
 GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsers
 
-`func (o *PatchedObjectPermissionRequest) SetUsers(v []int32)`
+`func (o *PatchedObjectPermissionRequest) SetUsers(v []int64)`
 
 SetUsers sets Users field to given value.
 

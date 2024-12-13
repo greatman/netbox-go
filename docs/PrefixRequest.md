@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Prefix** | **string** |  | 
 **Vrf** | Pointer to [**NullableBriefVRFRequest**](BriefVRFRequest.md) |  | [optional] 
 **ScopeType** | Pointer to **NullableString** |  | [optional] 
-**ScopeId** | Pointer to **NullableInt32** |  | [optional] 
+**ScopeId** | Pointer to **NullableInt64** |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **Vlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
 **Status** | Pointer to [**PrefixStatusValue**](PrefixStatusValue.md) |  | [optional] 
@@ -130,20 +130,20 @@ HasScopeType returns a boolean if a field has been set.
 UnsetScopeType ensures that no value is present for ScopeType, not even an explicit nil
 ### GetScopeId
 
-`func (o *PrefixRequest) GetScopeId() int32`
+`func (o *PrefixRequest) GetScopeId() int64`
 
 GetScopeId returns the ScopeId field if non-nil, zero value otherwise.
 
 ### GetScopeIdOk
 
-`func (o *PrefixRequest) GetScopeIdOk() (*int32, bool)`
+`func (o *PrefixRequest) GetScopeIdOk() (*int64, bool)`
 
 GetScopeIdOk returns a tuple with the ScopeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopeId
 
-`func (o *PrefixRequest) SetScopeId(v int32)`
+`func (o *PrefixRequest) SetScopeId(v int64)`
 
 SetScopeId sets ScopeId field to given value.
 

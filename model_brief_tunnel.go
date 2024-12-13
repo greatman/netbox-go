@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefTunnel{}
 
 // BriefTunnel Adds support for custom fields and tags.
 type BriefTunnel struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
@@ -34,7 +34,7 @@ type _BriefTunnel BriefTunnel
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefTunnel(id int32, url string, display string, name string) *BriefTunnel {
+func NewBriefTunnel(id int64, url string, display string, name string) *BriefTunnel {
 	this := BriefTunnel{}
 	this.Id = id
 	this.Url = url
@@ -52,9 +52,9 @@ func NewBriefTunnelWithDefaults() *BriefTunnel {
 }
 
 // GetId returns the Id field value
-func (o *BriefTunnel) GetId() int32 {
+func (o *BriefTunnel) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -63,7 +63,7 @@ func (o *BriefTunnel) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefTunnel) GetIdOk() (*int32, bool) {
+func (o *BriefTunnel) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,7 +71,7 @@ func (o *BriefTunnel) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefTunnel) SetId(v int32) {
+func (o *BriefTunnel) SetId(v int64) {
 	o.Id = v
 }
 

@@ -21,7 +21,7 @@ var _ MappedNullable = &SiteGroup{}
 
 // SiteGroup Extends PrimaryModelSerializer to include MPTT support.
 type SiteGroup struct {
-	Id                   int32                   `json:"id"`
+	Id                   int64                   `json:"id"`
 	Url                  string                  `json:"url"`
 	DisplayUrl           string                  `json:"display_url"`
 	Display              string                  `json:"display"`
@@ -33,9 +33,9 @@ type SiteGroup struct {
 	CustomFields         map[string]interface{}  `json:"custom_fields,omitempty"`
 	Created              NullableTime            `json:"created"`
 	LastUpdated          NullableTime            `json:"last_updated"`
-	SiteCount            int32                   `json:"site_count"`
+	SiteCount            int64                   `json:"site_count"`
 	PrefixCount          int64                   `json:"prefix_count"`
-	Depth                int32                   `json:"_depth"`
+	Depth                int64                   `json:"_depth"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -45,7 +45,7 @@ type _SiteGroup SiteGroup
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSiteGroup(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, siteCount int32, prefixCount int64, depth int32) *SiteGroup {
+func NewSiteGroup(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, siteCount int64, prefixCount int64, depth int64) *SiteGroup {
 	this := SiteGroup{}
 	this.Id = id
 	this.Url = url
@@ -70,9 +70,9 @@ func NewSiteGroupWithDefaults() *SiteGroup {
 }
 
 // GetId returns the Id field value
-func (o *SiteGroup) GetId() int32 {
+func (o *SiteGroup) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -81,7 +81,7 @@ func (o *SiteGroup) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *SiteGroup) GetIdOk() (*int32, bool) {
+func (o *SiteGroup) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -89,7 +89,7 @@ func (o *SiteGroup) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *SiteGroup) SetId(v int32) {
+func (o *SiteGroup) SetId(v int64) {
 	o.Id = v
 }
 
@@ -405,9 +405,9 @@ func (o *SiteGroup) SetLastUpdated(v time.Time) {
 }
 
 // GetSiteCount returns the SiteCount field value
-func (o *SiteGroup) GetSiteCount() int32 {
+func (o *SiteGroup) GetSiteCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -416,7 +416,7 @@ func (o *SiteGroup) GetSiteCount() int32 {
 
 // GetSiteCountOk returns a tuple with the SiteCount field value
 // and a boolean to check if the value has been set.
-func (o *SiteGroup) GetSiteCountOk() (*int32, bool) {
+func (o *SiteGroup) GetSiteCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -424,7 +424,7 @@ func (o *SiteGroup) GetSiteCountOk() (*int32, bool) {
 }
 
 // SetSiteCount sets field value
-func (o *SiteGroup) SetSiteCount(v int32) {
+func (o *SiteGroup) SetSiteCount(v int64) {
 	o.SiteCount = v
 }
 
@@ -453,9 +453,9 @@ func (o *SiteGroup) SetPrefixCount(v int64) {
 }
 
 // GetDepth returns the Depth field value
-func (o *SiteGroup) GetDepth() int32 {
+func (o *SiteGroup) GetDepth() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -464,7 +464,7 @@ func (o *SiteGroup) GetDepth() int32 {
 
 // GetDepthOk returns a tuple with the Depth field value
 // and a boolean to check if the value has been set.
-func (o *SiteGroup) GetDepthOk() (*int32, bool) {
+func (o *SiteGroup) GetDepthOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -472,7 +472,7 @@ func (o *SiteGroup) GetDepthOk() (*int32, bool) {
 }
 
 // SetDepth sets field value
-func (o *SiteGroup) SetDepth(v int32) {
+func (o *SiteGroup) SetDepth(v int64) {
 	o.Depth = v
 }
 

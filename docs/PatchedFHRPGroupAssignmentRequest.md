@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Group** | Pointer to [**BriefFHRPGroupRequest**](BriefFHRPGroupRequest.md) |  | [optional] 
 **InterfaceType** | Pointer to **string** |  | [optional] 
 **InterfaceId** | Pointer to **int64** |  | [optional] 
-**Priority** | Pointer to **int32** |  | [optional] 
+**Priority** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 
@@ -105,20 +105,20 @@ HasInterfaceId returns a boolean if a field has been set.
 
 ### GetPriority
 
-`func (o *PatchedFHRPGroupAssignmentRequest) GetPriority() int32`
+`func (o *PatchedFHRPGroupAssignmentRequest) GetPriority() int64`
 
 GetPriority returns the Priority field if non-nil, zero value otherwise.
 
 ### GetPriorityOk
 
-`func (o *PatchedFHRPGroupAssignmentRequest) GetPriorityOk() (*int32, bool)`
+`func (o *PatchedFHRPGroupAssignmentRequest) GetPriorityOk() (*int64, bool)`
 
 GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriority
 
-`func (o *PatchedFHRPGroupAssignmentRequest) SetPriority(v int32)`
+`func (o *PatchedFHRPGroupAssignmentRequest) SetPriority(v int64)`
 
 SetPriority sets Priority field to given value.
 

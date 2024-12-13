@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Device** | [**BriefDevice**](BriefDevice.md) |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewBriefPowerPort
 
-`func NewBriefPowerPort(id int32, url string, display string, device BriefDevice, name string, cable NullableBriefCable, occupied bool, ) *BriefPowerPort`
+`func NewBriefPowerPort(id int64, url string, display string, device BriefDevice, name string, cable NullableBriefCable, occupied bool, ) *BriefPowerPort`
 
 NewBriefPowerPort instantiates a new BriefPowerPort object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefPowerPort) GetId() int32`
+`func (o *BriefPowerPort) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefPowerPort) GetIdOk() (*int32, bool)`
+`func (o *BriefPowerPort) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefPowerPort) SetId(v int32)`
+`func (o *BriefPowerPort) SetId(v int64)`
 
 SetId sets Id field to given value.
 

@@ -20,14 +20,14 @@ var _ MappedNullable = &VLANTranslationRule{}
 
 // VLANTranslationRule Adds support for custom fields and tags.
 type VLANTranslationRule struct {
-	Id      int32  `json:"id"`
+	Id      int64  `json:"id"`
 	Url     string `json:"url"`
 	Display string `json:"display"`
-	Policy  int32  `json:"policy"`
+	Policy  int64  `json:"policy"`
 	// Numeric VLAN ID (1-4094)
-	LocalVid int32 `json:"local_vid"`
+	LocalVid int64 `json:"local_vid"`
 	// Numeric VLAN ID (1-4094)
-	RemoteVid            int32   `json:"remote_vid"`
+	RemoteVid            int64   `json:"remote_vid"`
 	Description          *string `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -38,7 +38,7 @@ type _VLANTranslationRule VLANTranslationRule
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVLANTranslationRule(id int32, url string, display string, policy int32, localVid int32, remoteVid int32) *VLANTranslationRule {
+func NewVLANTranslationRule(id int64, url string, display string, policy int64, localVid int64, remoteVid int64) *VLANTranslationRule {
 	this := VLANTranslationRule{}
 	this.Id = id
 	this.Url = url
@@ -58,9 +58,9 @@ func NewVLANTranslationRuleWithDefaults() *VLANTranslationRule {
 }
 
 // GetId returns the Id field value
-func (o *VLANTranslationRule) GetId() int32 {
+func (o *VLANTranslationRule) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -69,7 +69,7 @@ func (o *VLANTranslationRule) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *VLANTranslationRule) GetIdOk() (*int32, bool) {
+func (o *VLANTranslationRule) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -77,7 +77,7 @@ func (o *VLANTranslationRule) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *VLANTranslationRule) SetId(v int32) {
+func (o *VLANTranslationRule) SetId(v int64) {
 	o.Id = v
 }
 
@@ -130,9 +130,9 @@ func (o *VLANTranslationRule) SetDisplay(v string) {
 }
 
 // GetPolicy returns the Policy field value
-func (o *VLANTranslationRule) GetPolicy() int32 {
+func (o *VLANTranslationRule) GetPolicy() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -141,7 +141,7 @@ func (o *VLANTranslationRule) GetPolicy() int32 {
 
 // GetPolicyOk returns a tuple with the Policy field value
 // and a boolean to check if the value has been set.
-func (o *VLANTranslationRule) GetPolicyOk() (*int32, bool) {
+func (o *VLANTranslationRule) GetPolicyOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -149,14 +149,14 @@ func (o *VLANTranslationRule) GetPolicyOk() (*int32, bool) {
 }
 
 // SetPolicy sets field value
-func (o *VLANTranslationRule) SetPolicy(v int32) {
+func (o *VLANTranslationRule) SetPolicy(v int64) {
 	o.Policy = v
 }
 
 // GetLocalVid returns the LocalVid field value
-func (o *VLANTranslationRule) GetLocalVid() int32 {
+func (o *VLANTranslationRule) GetLocalVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -165,7 +165,7 @@ func (o *VLANTranslationRule) GetLocalVid() int32 {
 
 // GetLocalVidOk returns a tuple with the LocalVid field value
 // and a boolean to check if the value has been set.
-func (o *VLANTranslationRule) GetLocalVidOk() (*int32, bool) {
+func (o *VLANTranslationRule) GetLocalVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -173,14 +173,14 @@ func (o *VLANTranslationRule) GetLocalVidOk() (*int32, bool) {
 }
 
 // SetLocalVid sets field value
-func (o *VLANTranslationRule) SetLocalVid(v int32) {
+func (o *VLANTranslationRule) SetLocalVid(v int64) {
 	o.LocalVid = v
 }
 
 // GetRemoteVid returns the RemoteVid field value
-func (o *VLANTranslationRule) GetRemoteVid() int32 {
+func (o *VLANTranslationRule) GetRemoteVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -189,7 +189,7 @@ func (o *VLANTranslationRule) GetRemoteVid() int32 {
 
 // GetRemoteVidOk returns a tuple with the RemoteVid field value
 // and a boolean to check if the value has been set.
-func (o *VLANTranslationRule) GetRemoteVidOk() (*int32, bool) {
+func (o *VLANTranslationRule) GetRemoteVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -197,7 +197,7 @@ func (o *VLANTranslationRule) GetRemoteVidOk() (*int32, bool) {
 }
 
 // SetRemoteVid sets field value
-func (o *VLANTranslationRule) SetRemoteVid(v int32) {
+func (o *VLANTranslationRule) SetRemoteVid(v int64) {
 	o.RemoteVid = v
 }
 

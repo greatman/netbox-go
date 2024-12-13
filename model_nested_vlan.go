@@ -20,11 +20,11 @@ var _ MappedNullable = &NestedVLAN{}
 
 // NestedVLAN Represents an object related through a ForeignKey field. On write, it accepts a primary key (PK) value or a dictionary of attributes which can be used to uniquely identify the related object. This class should be subclassed to return a full representation of the related object on read.
 type NestedVLAN struct {
-	Id      int32  `json:"id"`
+	Id      int64  `json:"id"`
 	Url     string `json:"url"`
 	Display string `json:"display"`
 	// Numeric VLAN ID (1-4094)
-	Vid                  int32   `json:"vid"`
+	Vid                  int64   `json:"vid"`
 	Name                 string  `json:"name"`
 	Description          *string `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -36,7 +36,7 @@ type _NestedVLAN NestedVLAN
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewNestedVLAN(id int32, url string, display string, vid int32, name string) *NestedVLAN {
+func NewNestedVLAN(id int64, url string, display string, vid int64, name string) *NestedVLAN {
 	this := NestedVLAN{}
 	this.Id = id
 	this.Url = url
@@ -55,9 +55,9 @@ func NewNestedVLANWithDefaults() *NestedVLAN {
 }
 
 // GetId returns the Id field value
-func (o *NestedVLAN) GetId() int32 {
+func (o *NestedVLAN) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -66,7 +66,7 @@ func (o *NestedVLAN) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *NestedVLAN) GetIdOk() (*int32, bool) {
+func (o *NestedVLAN) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -74,7 +74,7 @@ func (o *NestedVLAN) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *NestedVLAN) SetId(v int32) {
+func (o *NestedVLAN) SetId(v int64) {
 	o.Id = v
 }
 
@@ -127,9 +127,9 @@ func (o *NestedVLAN) SetDisplay(v string) {
 }
 
 // GetVid returns the Vid field value
-func (o *NestedVLAN) GetVid() int32 {
+func (o *NestedVLAN) GetVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -138,7 +138,7 @@ func (o *NestedVLAN) GetVid() int32 {
 
 // GetVidOk returns a tuple with the Vid field value
 // and a boolean to check if the value has been set.
-func (o *NestedVLAN) GetVidOk() (*int32, bool) {
+func (o *NestedVLAN) GetVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -146,7 +146,7 @@ func (o *NestedVLAN) GetVidOk() (*int32, bool) {
 }
 
 // SetVid sets field value
-func (o *NestedVLAN) SetVid(v int32) {
+func (o *NestedVLAN) SetVid(v int64) {
 	o.Vid = v
 }
 

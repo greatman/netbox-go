@@ -20,7 +20,7 @@ var _ MappedNullable = &AvailableIP{}
 
 // AvailableIP Representation of an IP address which does not exist in the database.
 type AvailableIP struct {
-	Family               int32            `json:"family"`
+	Family               int64            `json:"family"`
 	Address              string           `json:"address"`
 	Vrf                  NullableBriefVRF `json:"vrf"`
 	Description          *string          `json:"description,omitempty"`
@@ -33,7 +33,7 @@ type _AvailableIP AvailableIP
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAvailableIP(family int32, address string, vrf NullableBriefVRF) *AvailableIP {
+func NewAvailableIP(family int64, address string, vrf NullableBriefVRF) *AvailableIP {
 	this := AvailableIP{}
 	this.Family = family
 	this.Address = address
@@ -50,9 +50,9 @@ func NewAvailableIPWithDefaults() *AvailableIP {
 }
 
 // GetFamily returns the Family field value
-func (o *AvailableIP) GetFamily() int32 {
+func (o *AvailableIP) GetFamily() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -61,7 +61,7 @@ func (o *AvailableIP) GetFamily() int32 {
 
 // GetFamilyOk returns a tuple with the Family field value
 // and a boolean to check if the value has been set.
-func (o *AvailableIP) GetFamilyOk() (*int32, bool) {
+func (o *AvailableIP) GetFamilyOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -69,7 +69,7 @@ func (o *AvailableIP) GetFamilyOk() (*int32, bool) {
 }
 
 // SetFamily sets field value
-func (o *AvailableIP) SetFamily(v int32) {
+func (o *AvailableIP) SetFamily(v int64) {
 	o.Family = v
 }
 

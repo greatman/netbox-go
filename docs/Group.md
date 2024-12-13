@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 **Permissions** | Pointer to [**[]ObjectPermission**](ObjectPermission.md) |  | [optional] 
-**UserCount** | **int32** |  | [readonly] 
+**UserCount** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewGroup
 
-`func NewGroup(id int32, url string, displayUrl string, display string, name string, userCount int32, ) *Group`
+`func NewGroup(id int64, url string, displayUrl string, display string, name string, userCount int64, ) *Group`
 
 NewGroup instantiates a new Group object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Group) GetId() int32`
+`func (o *Group) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Group) GetIdOk() (*int32, bool)`
+`func (o *Group) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Group) SetId(v int32)`
+`func (o *Group) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -184,20 +184,20 @@ HasPermissions returns a boolean if a field has been set.
 
 ### GetUserCount
 
-`func (o *Group) GetUserCount() int32`
+`func (o *Group) GetUserCount() int64`
 
 GetUserCount returns the UserCount field if non-nil, zero value otherwise.
 
 ### GetUserCountOk
 
-`func (o *Group) GetUserCountOk() (*int32, bool)`
+`func (o *Group) GetUserCountOk() (*int64, bool)`
 
 GetUserCountOk returns a tuple with the UserCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUserCount
 
-`func (o *Group) SetUserCount(v int32)`
+`func (o *Group) SetUserCount(v int64)`
 
 SetUserCount sets UserCount field to given value.
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Type** | [**FrontPortTypeValue**](FrontPortTypeValue.md) |  | 
 **Color** | Pointer to **string** |  | [optional] 
 **RearPort** | [**FrontPortRearPortRequest**](FrontPortRearPortRequest.md) |  | 
-**RearPortPosition** | Pointer to **int32** | Mapped position on corresponding rear port | [optional] 
+**RearPortPosition** | Pointer to **int64** | Mapped position on corresponding rear port | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -203,20 +203,20 @@ SetRearPort sets RearPort field to given value.
 
 ### GetRearPortPosition
 
-`func (o *FrontPortRequest) GetRearPortPosition() int32`
+`func (o *FrontPortRequest) GetRearPortPosition() int64`
 
 GetRearPortPosition returns the RearPortPosition field if non-nil, zero value otherwise.
 
 ### GetRearPortPositionOk
 
-`func (o *FrontPortRequest) GetRearPortPositionOk() (*int32, bool)`
+`func (o *FrontPortRequest) GetRearPortPositionOk() (*int64, bool)`
 
 GetRearPortPositionOk returns a tuple with the RearPortPosition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRearPortPosition
 
-`func (o *FrontPortRequest) SetRearPortPosition(v int32)`
+`func (o *FrontPortRequest) SetRearPortPosition(v int64)`
 
 SetRearPortPosition sets RearPortPosition field to given value.
 

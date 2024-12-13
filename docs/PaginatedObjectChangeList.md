@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | **int32** |  | 
+**Count** | **int64** |  | 
 **Next** | Pointer to **NullableString** |  | [optional] 
 **Previous** | Pointer to **NullableString** |  | [optional] 
 **Results** | [**[]ObjectChange**](ObjectChange.md) |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewPaginatedObjectChangeList
 
-`func NewPaginatedObjectChangeList(count int32, results []ObjectChange, ) *PaginatedObjectChangeList`
+`func NewPaginatedObjectChangeList(count int64, results []ObjectChange, ) *PaginatedObjectChangeList`
 
 NewPaginatedObjectChangeList instantiates a new PaginatedObjectChangeList object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCount
 
-`func (o *PaginatedObjectChangeList) GetCount() int32`
+`func (o *PaginatedObjectChangeList) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *PaginatedObjectChangeList) GetCountOk() (*int32, bool)`
+`func (o *PaginatedObjectChangeList) GetCountOk() (*int64, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *PaginatedObjectChangeList) SetCount(v int32)`
+`func (o *PaginatedObjectChangeList) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

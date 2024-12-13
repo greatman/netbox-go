@@ -25,9 +25,9 @@ type IPSecProposalRequest struct {
 	EncryptionAlgorithm     IKEProposalEncryptionAlgorithmValue     `json:"encryption_algorithm"`
 	AuthenticationAlgorithm IKEProposalAuthenticationAlgorithmValue `json:"authentication_algorithm"`
 	// Security association lifetime (seconds)
-	SaLifetimeSeconds NullableInt32 `json:"sa_lifetime_seconds,omitempty"`
+	SaLifetimeSeconds NullableInt64 `json:"sa_lifetime_seconds,omitempty"`
 	// Security association lifetime (in kilobytes)
-	SaLifetimeData       NullableInt32          `json:"sa_lifetime_data,omitempty"`
+	SaLifetimeData       NullableInt64          `json:"sa_lifetime_data,omitempty"`
 	Comments             *string                `json:"comments,omitempty"`
 	Tags                 []NestedTagRequest     `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
@@ -161,9 +161,9 @@ func (o *IPSecProposalRequest) SetAuthenticationAlgorithm(v IKEProposalAuthentic
 }
 
 // GetSaLifetimeSeconds returns the SaLifetimeSeconds field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *IPSecProposalRequest) GetSaLifetimeSeconds() int32 {
+func (o *IPSecProposalRequest) GetSaLifetimeSeconds() int64 {
 	if o == nil || IsNil(o.SaLifetimeSeconds.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SaLifetimeSeconds.Get()
@@ -172,7 +172,7 @@ func (o *IPSecProposalRequest) GetSaLifetimeSeconds() int32 {
 // GetSaLifetimeSecondsOk returns a tuple with the SaLifetimeSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *IPSecProposalRequest) GetSaLifetimeSecondsOk() (*int32, bool) {
+func (o *IPSecProposalRequest) GetSaLifetimeSecondsOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -188,8 +188,8 @@ func (o *IPSecProposalRequest) HasSaLifetimeSeconds() bool {
 	return false
 }
 
-// SetSaLifetimeSeconds gets a reference to the given NullableInt32 and assigns it to the SaLifetimeSeconds field.
-func (o *IPSecProposalRequest) SetSaLifetimeSeconds(v int32) {
+// SetSaLifetimeSeconds gets a reference to the given NullableInt64 and assigns it to the SaLifetimeSeconds field.
+func (o *IPSecProposalRequest) SetSaLifetimeSeconds(v int64) {
 	o.SaLifetimeSeconds.Set(&v)
 }
 
@@ -204,9 +204,9 @@ func (o *IPSecProposalRequest) UnsetSaLifetimeSeconds() {
 }
 
 // GetSaLifetimeData returns the SaLifetimeData field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *IPSecProposalRequest) GetSaLifetimeData() int32 {
+func (o *IPSecProposalRequest) GetSaLifetimeData() int64 {
 	if o == nil || IsNil(o.SaLifetimeData.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SaLifetimeData.Get()
@@ -215,7 +215,7 @@ func (o *IPSecProposalRequest) GetSaLifetimeData() int32 {
 // GetSaLifetimeDataOk returns a tuple with the SaLifetimeData field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *IPSecProposalRequest) GetSaLifetimeDataOk() (*int32, bool) {
+func (o *IPSecProposalRequest) GetSaLifetimeDataOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -231,8 +231,8 @@ func (o *IPSecProposalRequest) HasSaLifetimeData() bool {
 	return false
 }
 
-// SetSaLifetimeData gets a reference to the given NullableInt32 and assigns it to the SaLifetimeData field.
-func (o *IPSecProposalRequest) SetSaLifetimeData(v int32) {
+// SetSaLifetimeData gets a reference to the given NullableInt64 and assigns it to the SaLifetimeData field.
+func (o *IPSecProposalRequest) SetSaLifetimeData(v int64) {
 	o.SaLifetimeData.Set(&v)
 }
 

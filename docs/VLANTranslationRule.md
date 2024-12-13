@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
-**Policy** | **int32** |  | 
-**LocalVid** | **int32** | Numeric VLAN ID (1-4094) | 
-**RemoteVid** | **int32** | Numeric VLAN ID (1-4094) | 
+**Policy** | **int64** |  | 
+**LocalVid** | **int64** | Numeric VLAN ID (1-4094) | 
+**RemoteVid** | **int64** | Numeric VLAN ID (1-4094) | 
 **Description** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
 ### NewVLANTranslationRule
 
-`func NewVLANTranslationRule(id int32, url string, display string, policy int32, localVid int32, remoteVid int32, ) *VLANTranslationRule`
+`func NewVLANTranslationRule(id int64, url string, display string, policy int64, localVid int64, remoteVid int64, ) *VLANTranslationRule`
 
 NewVLANTranslationRule instantiates a new VLANTranslationRule object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VLANTranslationRule) GetId() int32`
+`func (o *VLANTranslationRule) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VLANTranslationRule) GetIdOk() (*int32, bool)`
+`func (o *VLANTranslationRule) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VLANTranslationRule) SetId(v int32)`
+`func (o *VLANTranslationRule) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -93,60 +93,60 @@ SetDisplay sets Display field to given value.
 
 ### GetPolicy
 
-`func (o *VLANTranslationRule) GetPolicy() int32`
+`func (o *VLANTranslationRule) GetPolicy() int64`
 
 GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
 ### GetPolicyOk
 
-`func (o *VLANTranslationRule) GetPolicyOk() (*int32, bool)`
+`func (o *VLANTranslationRule) GetPolicyOk() (*int64, bool)`
 
 GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicy
 
-`func (o *VLANTranslationRule) SetPolicy(v int32)`
+`func (o *VLANTranslationRule) SetPolicy(v int64)`
 
 SetPolicy sets Policy field to given value.
 
 
 ### GetLocalVid
 
-`func (o *VLANTranslationRule) GetLocalVid() int32`
+`func (o *VLANTranslationRule) GetLocalVid() int64`
 
 GetLocalVid returns the LocalVid field if non-nil, zero value otherwise.
 
 ### GetLocalVidOk
 
-`func (o *VLANTranslationRule) GetLocalVidOk() (*int32, bool)`
+`func (o *VLANTranslationRule) GetLocalVidOk() (*int64, bool)`
 
 GetLocalVidOk returns a tuple with the LocalVid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocalVid
 
-`func (o *VLANTranslationRule) SetLocalVid(v int32)`
+`func (o *VLANTranslationRule) SetLocalVid(v int64)`
 
 SetLocalVid sets LocalVid field to given value.
 
 
 ### GetRemoteVid
 
-`func (o *VLANTranslationRule) GetRemoteVid() int32`
+`func (o *VLANTranslationRule) GetRemoteVid() int64`
 
 GetRemoteVid returns the RemoteVid field if non-nil, zero value otherwise.
 
 ### GetRemoteVidOk
 
-`func (o *VLANTranslationRule) GetRemoteVidOk() (*int32, bool)`
+`func (o *VLANTranslationRule) GetRemoteVidOk() (*int64, bool)`
 
 GetRemoteVidOk returns a tuple with the RemoteVid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemoteVid
 
-`func (o *VLANTranslationRule) SetRemoteVid(v int32)`
+`func (o *VLANTranslationRule) SetRemoteVid(v int64)`
 
 SetRemoteVid sets RemoteVid field to given value.
 

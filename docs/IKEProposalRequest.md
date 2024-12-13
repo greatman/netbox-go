@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **EncryptionAlgorithm** | [**IKEProposalEncryptionAlgorithmValue**](IKEProposalEncryptionAlgorithmValue.md) |  | 
 **AuthenticationAlgorithm** | Pointer to [**IKEProposalAuthenticationAlgorithmValue**](IKEProposalAuthenticationAlgorithmValue.md) |  | [optional] 
 **Group** | [**IKEProposalGroupValue**](IKEProposalGroupValue.md) |  | 
-**SaLifetime** | Pointer to **NullableInt32** | Security association lifetime (in seconds) | [optional] 
+**SaLifetime** | Pointer to **NullableInt64** | Security association lifetime (in seconds) | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -166,20 +166,20 @@ SetGroup sets Group field to given value.
 
 ### GetSaLifetime
 
-`func (o *IKEProposalRequest) GetSaLifetime() int32`
+`func (o *IKEProposalRequest) GetSaLifetime() int64`
 
 GetSaLifetime returns the SaLifetime field if non-nil, zero value otherwise.
 
 ### GetSaLifetimeOk
 
-`func (o *IKEProposalRequest) GetSaLifetimeOk() (*int32, bool)`
+`func (o *IKEProposalRequest) GetSaLifetimeOk() (*int64, bool)`
 
 GetSaLifetimeOk returns a tuple with the SaLifetime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSaLifetime
 
-`func (o *IKEProposalRequest) SetSaLifetime(v int32)`
+`func (o *IKEProposalRequest) SetSaLifetime(v int64)`
 
 SetSaLifetime sets SaLifetime field to given value.
 

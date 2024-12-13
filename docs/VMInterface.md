@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** |  | [optional] 
 **Parent** | Pointer to [**NullableNestedVMInterface**](NestedVMInterface.md) |  | [optional] 
 **Bridge** | Pointer to [**NullableNestedVMInterface**](NestedVMInterface.md) |  | [optional] 
-**Mtu** | Pointer to **NullableInt32** |  | [optional] 
+**Mtu** | Pointer to **NullableInt64** |  | [optional] 
 **MacAddress** | **NullableString** |  | [readonly] 
 **PrimaryMacAddress** | Pointer to [**NullableBriefMACAddress**](BriefMACAddress.md) |  | [optional] 
 **MacAddresses** | [**[]BriefMACAddress**](BriefMACAddress.md) |  | [readonly] 
@@ -29,14 +29,14 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**CountIpaddresses** | **int32** |  | [readonly] 
-**CountFhrpGroups** | **int32** |  | [readonly] 
+**CountIpaddresses** | **int64** |  | [readonly] 
+**CountFhrpGroups** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewVMInterface
 
-`func NewVMInterface(id int32, url string, displayUrl string, display string, virtualMachine BriefVirtualMachine, name string, macAddress NullableString, macAddresses []BriefMACAddress, l2vpnTermination NullableBriefL2VPNTermination, created NullableTime, lastUpdated NullableTime, countIpaddresses int32, countFhrpGroups int32, ) *VMInterface`
+`func NewVMInterface(id int64, url string, displayUrl string, display string, virtualMachine BriefVirtualMachine, name string, macAddress NullableString, macAddresses []BriefMACAddress, l2vpnTermination NullableBriefL2VPNTermination, created NullableTime, lastUpdated NullableTime, countIpaddresses int64, countFhrpGroups int64, ) *VMInterface`
 
 NewVMInterface instantiates a new VMInterface object
 This constructor will assign default values to properties that have it defined,
@@ -53,20 +53,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VMInterface) GetId() int32`
+`func (o *VMInterface) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VMInterface) GetIdOk() (*int32, bool)`
+`func (o *VMInterface) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VMInterface) SetId(v int32)`
+`func (o *VMInterface) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -268,20 +268,20 @@ HasBridge returns a boolean if a field has been set.
 UnsetBridge ensures that no value is present for Bridge, not even an explicit nil
 ### GetMtu
 
-`func (o *VMInterface) GetMtu() int32`
+`func (o *VMInterface) GetMtu() int64`
 
 GetMtu returns the Mtu field if non-nil, zero value otherwise.
 
 ### GetMtuOk
 
-`func (o *VMInterface) GetMtuOk() (*int32, bool)`
+`func (o *VMInterface) GetMtuOk() (*int64, bool)`
 
 GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMtu
 
-`func (o *VMInterface) SetMtu(v int32)`
+`func (o *VMInterface) SetMtu(v int64)`
 
 SetMtu sets Mtu field to given value.
 
@@ -753,40 +753,40 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetCountIpaddresses
 
-`func (o *VMInterface) GetCountIpaddresses() int32`
+`func (o *VMInterface) GetCountIpaddresses() int64`
 
 GetCountIpaddresses returns the CountIpaddresses field if non-nil, zero value otherwise.
 
 ### GetCountIpaddressesOk
 
-`func (o *VMInterface) GetCountIpaddressesOk() (*int32, bool)`
+`func (o *VMInterface) GetCountIpaddressesOk() (*int64, bool)`
 
 GetCountIpaddressesOk returns a tuple with the CountIpaddresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCountIpaddresses
 
-`func (o *VMInterface) SetCountIpaddresses(v int32)`
+`func (o *VMInterface) SetCountIpaddresses(v int64)`
 
 SetCountIpaddresses sets CountIpaddresses field to given value.
 
 
 ### GetCountFhrpGroups
 
-`func (o *VMInterface) GetCountFhrpGroups() int32`
+`func (o *VMInterface) GetCountFhrpGroups() int64`
 
 GetCountFhrpGroups returns the CountFhrpGroups field if non-nil, zero value otherwise.
 
 ### GetCountFhrpGroupsOk
 
-`func (o *VMInterface) GetCountFhrpGroupsOk() (*int32, bool)`
+`func (o *VMInterface) GetCountFhrpGroupsOk() (*int64, bool)`
 
 GetCountFhrpGroupsOk returns a tuple with the CountFhrpGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCountFhrpGroups
 
-`func (o *VMInterface) SetCountFhrpGroups(v int32)`
+`func (o *VMInterface) SetCountFhrpGroups(v int64)`
 
 SetCountFhrpGroups sets CountFhrpGroups field to given value.
 

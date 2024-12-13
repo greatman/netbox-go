@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -17,14 +17,14 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**MemberCount** | **int32** |  | [readonly] 
+**MemberCount** | **int64** |  | [readonly] 
 **Members** | [**[]NestedDevice**](NestedDevice.md) |  | [readonly] 
 
 ## Methods
 
 ### NewVirtualChassis
 
-`func NewVirtualChassis(id int32, url string, displayUrl string, display string, name string, created NullableTime, lastUpdated NullableTime, memberCount int32, members []NestedDevice, ) *VirtualChassis`
+`func NewVirtualChassis(id int64, url string, displayUrl string, display string, name string, created NullableTime, lastUpdated NullableTime, memberCount int64, members []NestedDevice, ) *VirtualChassis`
 
 NewVirtualChassis instantiates a new VirtualChassis object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VirtualChassis) GetId() int32`
+`func (o *VirtualChassis) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VirtualChassis) GetIdOk() (*int32, bool)`
+`func (o *VirtualChassis) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VirtualChassis) SetId(v int32)`
+`func (o *VirtualChassis) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -361,20 +361,20 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetMemberCount
 
-`func (o *VirtualChassis) GetMemberCount() int32`
+`func (o *VirtualChassis) GetMemberCount() int64`
 
 GetMemberCount returns the MemberCount field if non-nil, zero value otherwise.
 
 ### GetMemberCountOk
 
-`func (o *VirtualChassis) GetMemberCountOk() (*int32, bool)`
+`func (o *VirtualChassis) GetMemberCountOk() (*int64, bool)`
 
 GetMemberCountOk returns a tuple with the MemberCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMemberCount
 
-`func (o *VirtualChassis) SetMemberCount(v int32)`
+`func (o *VirtualChassis) SetMemberCount(v int64)`
 
 SetMemberCount sets MemberCount field to given value.
 

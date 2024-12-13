@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** |  | [optional] 
 **LinkText** | Pointer to **string** | Jinja2 template code for link text | [optional] 
 **LinkUrl** | Pointer to **string** | Jinja2 template code for link URL | [optional] 
-**Weight** | Pointer to **int32** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **GroupName** | Pointer to **string** | Links with the same group will appear as a dropdown menu | [optional] 
 **ButtonClass** | Pointer to [**CustomLinkButtonClass**](CustomLinkButtonClass.md) |  | [optional] 
 **NewWindow** | Pointer to **bool** | Force link to open in a new window | [optional] 
@@ -160,20 +160,20 @@ HasLinkUrl returns a boolean if a field has been set.
 
 ### GetWeight
 
-`func (o *PatchedCustomLinkRequest) GetWeight() int32`
+`func (o *PatchedCustomLinkRequest) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *PatchedCustomLinkRequest) GetWeightOk() (*int32, bool)`
+`func (o *PatchedCustomLinkRequest) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *PatchedCustomLinkRequest) SetWeight(v int32)`
+`func (o *PatchedCustomLinkRequest) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

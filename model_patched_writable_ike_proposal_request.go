@@ -26,7 +26,7 @@ type PatchedWritableIKEProposalRequest struct {
 	AuthenticationAlgorithm NullablePatchedWritableIKEProposalRequestAuthenticationAlgorithm `json:"authentication_algorithm,omitempty"`
 	Group                   *PatchedWritableIKEProposalRequestGroup                          `json:"group,omitempty"`
 	// Security association lifetime (in seconds)
-	SaLifetime           NullableInt32          `json:"sa_lifetime,omitempty"`
+	SaLifetime           NullableInt64          `json:"sa_lifetime,omitempty"`
 	Comments             *string                `json:"comments,omitempty"`
 	Tags                 []NestedTagRequest     `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
@@ -256,9 +256,9 @@ func (o *PatchedWritableIKEProposalRequest) SetGroup(v PatchedWritableIKEProposa
 }
 
 // GetSaLifetime returns the SaLifetime field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedWritableIKEProposalRequest) GetSaLifetime() int32 {
+func (o *PatchedWritableIKEProposalRequest) GetSaLifetime() int64 {
 	if o == nil || IsNil(o.SaLifetime.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.SaLifetime.Get()
@@ -267,7 +267,7 @@ func (o *PatchedWritableIKEProposalRequest) GetSaLifetime() int32 {
 // GetSaLifetimeOk returns a tuple with the SaLifetime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedWritableIKEProposalRequest) GetSaLifetimeOk() (*int32, bool) {
+func (o *PatchedWritableIKEProposalRequest) GetSaLifetimeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -283,8 +283,8 @@ func (o *PatchedWritableIKEProposalRequest) HasSaLifetime() bool {
 	return false
 }
 
-// SetSaLifetime gets a reference to the given NullableInt32 and assigns it to the SaLifetime field.
-func (o *PatchedWritableIKEProposalRequest) SetSaLifetime(v int32) {
+// SetSaLifetime gets a reference to the given NullableInt64 and assigns it to the SaLifetime field.
+func (o *PatchedWritableIKEProposalRequest) SetSaLifetime(v int64) {
 	o.SaLifetime.Set(&v)
 }
 

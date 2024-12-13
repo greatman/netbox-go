@@ -20,7 +20,7 @@ var _ MappedNullable = &PatchedInventoryItemTemplateRequest{}
 // PatchedInventoryItemTemplateRequest Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type PatchedInventoryItemTemplateRequest struct {
 	DeviceType *BriefDeviceTypeRequest `json:"device_type,omitempty"`
-	Parent     NullableInt32           `json:"parent,omitempty"`
+	Parent     NullableInt64           `json:"parent,omitempty"`
 	// {module} is accepted as a substitution for the module bay position when attached to a module type.
 	Name *string `json:"name,omitempty"`
 	// Physical label
@@ -87,9 +87,9 @@ func (o *PatchedInventoryItemTemplateRequest) SetDeviceType(v BriefDeviceTypeReq
 }
 
 // GetParent returns the Parent field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedInventoryItemTemplateRequest) GetParent() int32 {
+func (o *PatchedInventoryItemTemplateRequest) GetParent() int64 {
 	if o == nil || IsNil(o.Parent.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Parent.Get()
@@ -98,7 +98,7 @@ func (o *PatchedInventoryItemTemplateRequest) GetParent() int32 {
 // GetParentOk returns a tuple with the Parent field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedInventoryItemTemplateRequest) GetParentOk() (*int32, bool) {
+func (o *PatchedInventoryItemTemplateRequest) GetParentOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -114,8 +114,8 @@ func (o *PatchedInventoryItemTemplateRequest) HasParent() bool {
 	return false
 }
 
-// SetParent gets a reference to the given NullableInt32 and assigns it to the Parent field.
-func (o *PatchedInventoryItemTemplateRequest) SetParent(v int32) {
+// SetParent gets a reference to the given NullableInt64 and assigns it to the Parent field.
+func (o *PatchedInventoryItemTemplateRequest) SetParent(v int64) {
 	o.Parent.Set(&v)
 }
 

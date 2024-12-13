@@ -16,7 +16,7 @@ import (
 )
 
 // DcimConsolePortsListSpeedParameter the model 'DcimConsolePortsListSpeedParameter'
-type DcimConsolePortsListSpeedParameter int32
+type DcimConsolePortsListSpeedParameter int64
 
 // List of dcim_console_ports_list_speed_parameter
 const (
@@ -43,7 +43,7 @@ var AllowedDcimConsolePortsListSpeedParameterEnumValues = []DcimConsolePortsList
 }
 
 func (v *DcimConsolePortsListSpeedParameter) UnmarshalJSON(src []byte) error {
-	var value int32
+	var value int64
 	err := json.Unmarshal(src, &value)
 	if err != nil {
 		return err
@@ -61,7 +61,7 @@ func (v *DcimConsolePortsListSpeedParameter) UnmarshalJSON(src []byte) error {
 
 // NewDcimConsolePortsListSpeedParameterFromValue returns a pointer to a valid DcimConsolePortsListSpeedParameter
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
-func NewDcimConsolePortsListSpeedParameterFromValue(v int32) (*DcimConsolePortsListSpeedParameter, error) {
+func NewDcimConsolePortsListSpeedParameterFromValue(v int64) (*DcimConsolePortsListSpeedParameter, error) {
 	ev := DcimConsolePortsListSpeedParameter(v)
 	if ev.IsValid() {
 		return &ev, nil

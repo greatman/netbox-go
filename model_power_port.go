@@ -21,7 +21,7 @@ var _ MappedNullable = &PowerPort{}
 
 // PowerPort Adds support for custom fields and tags.
 type PowerPort struct {
-	Id         int32               `json:"id"`
+	Id         int64               `json:"id"`
 	Url        string              `json:"url"`
 	DisplayUrl string              `json:"display_url"`
 	Display    string              `json:"display"`
@@ -32,9 +32,9 @@ type PowerPort struct {
 	Label *string               `json:"label,omitempty"`
 	Type  NullablePowerPortType `json:"type,omitempty"`
 	// Maximum power draw (watts)
-	MaximumDraw NullableInt32 `json:"maximum_draw,omitempty"`
+	MaximumDraw NullableInt64 `json:"maximum_draw,omitempty"`
 	// Allocated power draw (watts)
-	AllocatedDraw NullableInt32 `json:"allocated_draw,omitempty"`
+	AllocatedDraw NullableInt64 `json:"allocated_draw,omitempty"`
 	Description   *string       `json:"description,omitempty"`
 	// Treat as if a cable is connected
 	MarkConnected *bool              `json:"mark_connected,omitempty"`
@@ -60,7 +60,7 @@ type _PowerPort PowerPort
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPowerPort(id int32, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool) *PowerPort {
+func NewPowerPort(id int64, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool) *PowerPort {
 	this := PowerPort{}
 	this.Id = id
 	this.Url = url
@@ -90,9 +90,9 @@ func NewPowerPortWithDefaults() *PowerPort {
 }
 
 // GetId returns the Id field value
-func (o *PowerPort) GetId() int32 {
+func (o *PowerPort) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -101,7 +101,7 @@ func (o *PowerPort) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PowerPort) GetIdOk() (*int32, bool) {
+func (o *PowerPort) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -109,7 +109,7 @@ func (o *PowerPort) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *PowerPort) SetId(v int32) {
+func (o *PowerPort) SetId(v int64) {
 	o.Id = v
 }
 
@@ -352,9 +352,9 @@ func (o *PowerPort) UnsetType() {
 }
 
 // GetMaximumDraw returns the MaximumDraw field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PowerPort) GetMaximumDraw() int32 {
+func (o *PowerPort) GetMaximumDraw() int64 {
 	if o == nil || IsNil(o.MaximumDraw.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MaximumDraw.Get()
@@ -363,7 +363,7 @@ func (o *PowerPort) GetMaximumDraw() int32 {
 // GetMaximumDrawOk returns a tuple with the MaximumDraw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PowerPort) GetMaximumDrawOk() (*int32, bool) {
+func (o *PowerPort) GetMaximumDrawOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -379,8 +379,8 @@ func (o *PowerPort) HasMaximumDraw() bool {
 	return false
 }
 
-// SetMaximumDraw gets a reference to the given NullableInt32 and assigns it to the MaximumDraw field.
-func (o *PowerPort) SetMaximumDraw(v int32) {
+// SetMaximumDraw gets a reference to the given NullableInt64 and assigns it to the MaximumDraw field.
+func (o *PowerPort) SetMaximumDraw(v int64) {
 	o.MaximumDraw.Set(&v)
 }
 
@@ -395,9 +395,9 @@ func (o *PowerPort) UnsetMaximumDraw() {
 }
 
 // GetAllocatedDraw returns the AllocatedDraw field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PowerPort) GetAllocatedDraw() int32 {
+func (o *PowerPort) GetAllocatedDraw() int64 {
 	if o == nil || IsNil(o.AllocatedDraw.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AllocatedDraw.Get()
@@ -406,7 +406,7 @@ func (o *PowerPort) GetAllocatedDraw() int32 {
 // GetAllocatedDrawOk returns a tuple with the AllocatedDraw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PowerPort) GetAllocatedDrawOk() (*int32, bool) {
+func (o *PowerPort) GetAllocatedDrawOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -422,8 +422,8 @@ func (o *PowerPort) HasAllocatedDraw() bool {
 	return false
 }
 
-// SetAllocatedDraw gets a reference to the given NullableInt32 and assigns it to the AllocatedDraw field.
-func (o *PowerPort) SetAllocatedDraw(v int32) {
+// SetAllocatedDraw gets a reference to the given NullableInt64 and assigns it to the AllocatedDraw field.
+func (o *PowerPort) SetAllocatedDraw(v int64) {
 	o.AllocatedDraw.Set(&v)
 }
 

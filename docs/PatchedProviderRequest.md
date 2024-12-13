@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Full name of the provider | [optional] 
 **Slug** | Pointer to **string** |  | [optional] 
-**Accounts** | Pointer to **[]int32** |  | [optional] 
+**Accounts** | Pointer to **[]int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
-**Asns** | Pointer to **[]int32** |  | [optional] 
+**Asns** | Pointer to **[]int64** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 
@@ -84,20 +84,20 @@ HasSlug returns a boolean if a field has been set.
 
 ### GetAccounts
 
-`func (o *PatchedProviderRequest) GetAccounts() []int32`
+`func (o *PatchedProviderRequest) GetAccounts() []int64`
 
 GetAccounts returns the Accounts field if non-nil, zero value otherwise.
 
 ### GetAccountsOk
 
-`func (o *PatchedProviderRequest) GetAccountsOk() (*[]int32, bool)`
+`func (o *PatchedProviderRequest) GetAccountsOk() (*[]int64, bool)`
 
 GetAccountsOk returns a tuple with the Accounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAccounts
 
-`func (o *PatchedProviderRequest) SetAccounts(v []int32)`
+`func (o *PatchedProviderRequest) SetAccounts(v []int64)`
 
 SetAccounts sets Accounts field to given value.
 
@@ -159,20 +159,20 @@ HasComments returns a boolean if a field has been set.
 
 ### GetAsns
 
-`func (o *PatchedProviderRequest) GetAsns() []int32`
+`func (o *PatchedProviderRequest) GetAsns() []int64`
 
 GetAsns returns the Asns field if non-nil, zero value otherwise.
 
 ### GetAsnsOk
 
-`func (o *PatchedProviderRequest) GetAsnsOk() (*[]int32, bool)`
+`func (o *PatchedProviderRequest) GetAsnsOk() (*[]int64, bool)`
 
 GetAsnsOk returns a tuple with the Asns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAsns
 
-`func (o *PatchedProviderRequest) SetAsns(v []int32)`
+`func (o *PatchedProviderRequest) SetAsns(v []int64)`
 
 SetAsns sets Asns field to given value.
 

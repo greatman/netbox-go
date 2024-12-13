@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewConfigTemplate
 
-`func NewConfigTemplate(id int32, url string, displayUrl string, display string, name string, templateCode string, dataPath string, dataSynced NullableTime, created NullableTime, lastUpdated NullableTime, ) *ConfigTemplate`
+`func NewConfigTemplate(id int64, url string, displayUrl string, display string, name string, templateCode string, dataPath string, dataSynced NullableTime, created NullableTime, lastUpdated NullableTime, ) *ConfigTemplate`
 
 NewConfigTemplate instantiates a new ConfigTemplate object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ConfigTemplate) GetId() int32`
+`func (o *ConfigTemplate) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ConfigTemplate) GetIdOk() (*int32, bool)`
+`func (o *ConfigTemplate) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ConfigTemplate) SetId(v int32)`
+`func (o *ConfigTemplate) SetId(v int64)`
 
 SetId sets Id field to given value.
 

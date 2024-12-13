@@ -426,7 +426,7 @@ import (
 )
 
 func main() {
-	cableTerminationRequest := []openapiclient.CableTerminationRequest{*openapiclient.NewCableTerminationRequest(int32(123), openapiclient.End_1("A"), "TerminationType_example", int64(123))} // []CableTerminationRequest | 
+	cableTerminationRequest := []openapiclient.CableTerminationRequest{*openapiclient.NewCableTerminationRequest(int64(123), openapiclient.End_1("A"), "TerminationType_example", int64(123))} // []CableTerminationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -490,7 +490,7 @@ import (
 )
 
 func main() {
-	cableTerminationRequest := []openapiclient.CableTerminationRequest{*openapiclient.NewCableTerminationRequest(int32(123), openapiclient.End_1("A"), "TerminationType_example", int64(123))} // []CableTerminationRequest | 
+	cableTerminationRequest := []openapiclient.CableTerminationRequest{*openapiclient.NewCableTerminationRequest(int64(123), openapiclient.End_1("A"), "TerminationType_example", int64(123))} // []CableTerminationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -556,7 +556,7 @@ import (
 )
 
 func main() {
-	cableTerminationRequest := []openapiclient.CableTerminationRequest{*openapiclient.NewCableTerminationRequest(int32(123), openapiclient.End_1("A"), "TerminationType_example", int64(123))} // []CableTerminationRequest | 
+	cableTerminationRequest := []openapiclient.CableTerminationRequest{*openapiclient.NewCableTerminationRequest(int64(123), openapiclient.End_1("A"), "TerminationType_example", int64(123))} // []CableTerminationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -622,7 +622,7 @@ import (
 )
 
 func main() {
-	cableTerminationRequest := *openapiclient.NewCableTerminationRequest(int32(123), openapiclient.End_1("A"), "TerminationType_example", int64(123)) // CableTerminationRequest | 
+	cableTerminationRequest := *openapiclient.NewCableTerminationRequest(int64(123), openapiclient.End_1("A"), "TerminationType_example", int64(123)) // CableTerminationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -688,7 +688,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable termination.
+	id := int64(56) // int64 | A unique integer value identifying this cable termination.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -706,7 +706,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable termination. | 
+**id** | **int64** | A unique integer value identifying this cable termination. | 
 
 ### Other Parameters
 
@@ -757,8 +757,8 @@ import (
 )
 
 func main() {
-	cable := int32(56) // int32 |  (optional)
-	cableN := int32(56) // int32 |  (optional)
+	cable := int64(56) // int64 |  (optional)
+	cableN := int64(56) // int64 |  (optional)
 	cableEnd := openapiclient.End("A") // End | * `A` - A * `B` - B (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -768,13 +768,13 @@ func main() {
 	createdLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdN := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -782,17 +782,17 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	terminationId := []int32{int32(123)} // []int32 |  (optional)
+	terminationId := []int64{int64(123)} // []int64 |  (optional)
 	terminationIdEmpty := true // bool |  (optional)
-	terminationIdGt := []int32{int32(123)} // []int32 |  (optional)
-	terminationIdGte := []int32{int32(123)} // []int32 |  (optional)
-	terminationIdLt := []int32{int32(123)} // []int32 |  (optional)
-	terminationIdLte := []int32{int32(123)} // []int32 |  (optional)
-	terminationIdN := []int32{int32(123)} // []int32 |  (optional)
+	terminationIdGt := []int64{int64(123)} // []int64 |  (optional)
+	terminationIdGte := []int64{int64(123)} // []int64 |  (optional)
+	terminationIdLt := []int64{int64(123)} // []int64 |  (optional)
+	terminationIdLte := []int64{int64(123)} // []int64 |  (optional)
+	terminationIdN := []int64{int64(123)} // []int64 |  (optional)
 	terminationType := "terminationType_example" // string |  (optional)
 	terminationTypeN := "terminationTypeN_example" // string |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
@@ -820,8 +820,8 @@ Other parameters are passed through a pointer to a apiDcimCableTerminationsListR
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cable** | **int32** |  | 
- **cableN** | **int32** |  | 
+ **cable** | **int64** |  | 
+ **cableN** | **int64** |  | 
  **cableEnd** | [**End**](End.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
@@ -831,13 +831,13 @@ Name | Type | Description  | Notes
  **createdLte** | [**[]time.Time**](time.Time.md) |  | 
  **createdN** | [**[]time.Time**](time.Time.md) |  | 
  **createdByRequest** | **string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -845,17 +845,17 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **terminationId** | **[]int32** |  | 
+ **terminationId** | **[]int64** |  | 
  **terminationIdEmpty** | **bool** |  | 
- **terminationIdGt** | **[]int32** |  | 
- **terminationIdGte** | **[]int32** |  | 
- **terminationIdLt** | **[]int32** |  | 
- **terminationIdLte** | **[]int32** |  | 
- **terminationIdN** | **[]int32** |  | 
+ **terminationIdGt** | **[]int64** |  | 
+ **terminationIdGte** | **[]int64** |  | 
+ **terminationIdLt** | **[]int64** |  | 
+ **terminationIdLte** | **[]int64** |  | 
+ **terminationIdN** | **[]int64** |  | 
  **terminationType** | **string** |  | 
  **terminationTypeN** | **string** |  | 
  **updatedByRequest** | **string** |  | 
@@ -899,7 +899,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable termination.
+	id := int64(56) // int64 | A unique integer value identifying this cable termination.
 	patchedCableTerminationRequest := *openapiclient.NewPatchedCableTerminationRequest() // PatchedCableTerminationRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -920,7 +920,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable termination. | 
+**id** | **int64** | A unique integer value identifying this cable termination. | 
 
 ### Other Parameters
 
@@ -971,7 +971,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable termination.
+	id := int64(56) // int64 | A unique integer value identifying this cable termination.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -991,7 +991,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable termination. | 
+**id** | **int64** | A unique integer value identifying this cable termination. | 
 
 ### Other Parameters
 
@@ -1041,8 +1041,8 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable termination.
-	cableTerminationRequest := *openapiclient.NewCableTerminationRequest(int32(123), openapiclient.End_1("A"), "TerminationType_example", int64(123)) // CableTerminationRequest | 
+	id := int64(56) // int64 | A unique integer value identifying this cable termination.
+	cableTerminationRequest := *openapiclient.NewCableTerminationRequest(int64(123), openapiclient.End_1("A"), "TerminationType_example", int64(123)) // CableTerminationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1062,7 +1062,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable termination. | 
+**id** | **int64** | A unique integer value identifying this cable termination. | 
 
 ### Other Parameters
 
@@ -1375,7 +1375,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable.
+	id := int64(56) // int64 | A unique integer value identifying this cable.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1393,7 +1393,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable. | 
+**id** | **int64** | A unique integer value identifying this cable. | 
 
 ### Other Parameters
 
@@ -1444,7 +1444,7 @@ import (
 )
 
 func main() {
-	circuitterminationId := []int32{int32(123)} // []int32 |  (optional)
+	circuitterminationId := []int64{int64(123)} // []int64 |  (optional)
 	color := []string{"Inner_example"} // []string |  (optional)
 	colorEmpty := true // bool |  (optional)
 	colorIc := []string{"Inner_example"} // []string |  (optional)
@@ -1456,8 +1456,8 @@ func main() {
 	colorNie := []string{"Inner_example"} // []string |  (optional)
 	colorNiew := []string{"Inner_example"} // []string |  (optional)
 	colorNisw := []string{"Inner_example"} // []string |  (optional)
-	consoleportId := []int32{int32(123)} // []int32 |  (optional)
-	consoleserverportId := []int32{int32(123)} // []int32 |  (optional)
+	consoleportId := []int64{int64(123)} // []int64 |  (optional)
+	consoleserverportId := []int64{int64(123)} // []int64 |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -1478,16 +1478,16 @@ func main() {
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []string{"Inner_example"} // []string |  (optional)
-	deviceId := []int32{int32(123)} // []int32 |  (optional)
-	frontportId := []int32{int32(123)} // []int32 |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceId := []int64{int64(123)} // []int64 |  (optional)
+	frontportId := []int64{int64(123)} // []int64 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceId := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
+	interfaceId := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -1514,21 +1514,21 @@ func main() {
 	lengthLte := []float64{float64(123)} // []float64 |  (optional)
 	lengthN := []float64{float64(123)} // []float64 |  (optional)
 	lengthUnit := openapiclient.dcim_cables_list_length_unit_parameter("cm") // DcimCablesListLengthUnitParameter | * `km` - Kilometers * `m` - Meters * `cm` - Centimeters * `mi` - Miles * `ft` - Feet * `in` - Inches (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string |  (optional)
-	locationId := []int32{int32(123)} // []int32 |  (optional)
+	locationId := []int64{int64(123)} // []int64 |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	powerfeedId := []int32{int32(123)} // []int32 |  (optional)
-	poweroutletId := []int32{int32(123)} // []int32 |  (optional)
-	powerportId := []int32{int32(123)} // []int32 |  (optional)
+	powerfeedId := []int64{int64(123)} // []int64 |  (optional)
+	poweroutletId := []int64{int64(123)} // []int64 |  (optional)
+	powerportId := []int64{int64(123)} // []int64 |  (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string |  (optional)
-	rackId := []int32{int32(123)} // []int32 |  (optional)
-	rearportId := []int32{int32(123)} // []int32 |  (optional)
+	rackId := []int64{int64(123)} // []int64 |  (optional)
+	rearportId := []int64{int64(123)} // []int64 |  (optional)
 	site := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 |  (optional)
+	siteId := []int64{int64(123)} // []int64 |  (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
 	statusEmpty := true // bool |  (optional)
 	statusIc := []string{"Inner_example"} // []string |  (optional)
@@ -1548,12 +1548,12 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	terminationAId := []int32{int32(123)} // []int32 |  (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	terminationAId := []int64{int64(123)} // []int64 |  (optional)
 	terminationAType := "terminationAType_example" // string |  (optional)
 	terminationATypeN := "terminationATypeN_example" // string |  (optional)
-	terminationBId := []int32{int32(123)} // []int32 |  (optional)
+	terminationBId := []int64{int64(123)} // []int64 |  (optional)
 	terminationBType := "terminationBType_example" // string |  (optional)
 	terminationBTypeN := "terminationBTypeN_example" // string |  (optional)
 	type_ := []*string{"Inner_example"} // []*string |  (optional)
@@ -1593,7 +1593,7 @@ Other parameters are passed through a pointer to a apiDcimCablesListRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **circuitterminationId** | **[]int32** |  | 
+ **circuitterminationId** | **[]int64** |  | 
  **color** | **[]string** |  | 
  **colorEmpty** | **bool** |  | 
  **colorIc** | **[]string** |  | 
@@ -1605,8 +1605,8 @@ Name | Type | Description  | Notes
  **colorNie** | **[]string** |  | 
  **colorNiew** | **[]string** |  | 
  **colorNisw** | **[]string** |  | 
- **consoleportId** | **[]int32** |  | 
- **consoleserverportId** | **[]int32** |  | 
+ **consoleportId** | **[]int64** |  | 
+ **consoleserverportId** | **[]int64** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -1627,16 +1627,16 @@ Name | Type | Description  | Notes
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** |  | 
- **deviceId** | **[]int32** |  | 
- **frontportId** | **[]int32** |  | 
- **id** | **[]int32** |  | 
+ **deviceId** | **[]int64** |  | 
+ **frontportId** | **[]int64** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **interfaceId** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
+ **interfaceId** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -1663,21 +1663,21 @@ Name | Type | Description  | Notes
  **lengthLte** | **[]float64** |  | 
  **lengthN** | **[]float64** |  | 
  **lengthUnit** | [**DcimCablesListLengthUnitParameter**](DcimCablesListLengthUnitParameter.md) | * &#x60;km&#x60; - Kilometers * &#x60;m&#x60; - Meters * &#x60;cm&#x60; - Centimeters * &#x60;mi&#x60; - Miles * &#x60;ft&#x60; - Feet * &#x60;in&#x60; - Inches | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** |  | 
- **locationId** | **[]int32** |  | 
+ **locationId** | **[]int64** |  | 
  **modifiedByRequest** | **string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **powerfeedId** | **[]int32** |  | 
- **poweroutletId** | **[]int32** |  | 
- **powerportId** | **[]int32** |  | 
+ **powerfeedId** | **[]int64** |  | 
+ **poweroutletId** | **[]int64** |  | 
+ **powerportId** | **[]int64** |  | 
  **q** | **string** | Search | 
  **rack** | **[]string** |  | 
- **rackId** | **[]int32** |  | 
- **rearportId** | **[]int32** |  | 
+ **rackId** | **[]int64** |  | 
+ **rearportId** | **[]int64** |  | 
  **site** | **[]string** |  | 
- **siteId** | **[]int32** |  | 
+ **siteId** | **[]int64** |  | 
  **status** | **[]string** |  | 
  **statusEmpty** | **bool** |  | 
  **statusIc** | **[]string** |  | 
@@ -1697,12 +1697,12 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
- **terminationAId** | **[]int32** |  | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
+ **terminationAId** | **[]int64** |  | 
  **terminationAType** | **string** |  | 
  **terminationATypeN** | **string** |  | 
- **terminationBId** | **[]int32** |  | 
+ **terminationBId** | **[]int64** |  | 
  **terminationBType** | **string** |  | 
  **terminationBTypeN** | **string** |  | 
  **type_** | **[]string** |  | 
@@ -1758,7 +1758,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable.
+	id := int64(56) // int64 | A unique integer value identifying this cable.
 	patchedWritableCableRequest := *openapiclient.NewPatchedWritableCableRequest() // PatchedWritableCableRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1779,7 +1779,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable. | 
+**id** | **int64** | A unique integer value identifying this cable. | 
 
 ### Other Parameters
 
@@ -1830,7 +1830,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable.
+	id := int64(56) // int64 | A unique integer value identifying this cable.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1850,7 +1850,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable. | 
+**id** | **int64** | A unique integer value identifying this cable. | 
 
 ### Other Parameters
 
@@ -1900,7 +1900,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this cable.
+	id := int64(56) // int64 | A unique integer value identifying this cable.
 	writableCableRequest := *openapiclient.NewWritableCableRequest() // WritableCableRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1921,7 +1921,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this cable. | 
+**id** | **int64** | A unique integer value identifying this cable. | 
 
 ### Other Parameters
 
@@ -2302,7 +2302,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port template.
+	id := int64(56) // int64 | A unique integer value identifying this console port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2320,7 +2320,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port template. | 
+**id** | **int64** | A unique integer value identifying this console port template. | 
 
 ### Other Parameters
 
@@ -2390,15 +2390,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -2417,10 +2417,10 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -2432,7 +2432,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	type_ := openapiclient.dcim_console_port_templates_list_type_parameter("Other") // DcimConsolePortTemplatesListTypeParameter | * `Serial` - [('de-9', 'DE-9'), ('db-25', 'DB-25'), ('rj-11', 'RJ-11'), ('rj-12', 'RJ-12'), ('rj-45', 'RJ-45'), ('mini-din-8', 'Mini-DIN 8')] * `USB` - [('usb-a', 'USB Type A'), ('usb-b', 'USB Type B'), ('usb-c', 'USB Type C'), ('usb-mini-a', 'USB Mini A'), ('usb-mini-b', 'USB Mini B'), ('usb-micro-a', 'USB Micro A'), ('usb-micro-b', 'USB Micro B'), ('usb-micro-ab', 'USB Micro AB')] * `Other` - [('other', 'Other')] (optional)
@@ -2480,15 +2480,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -2507,10 +2507,10 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -2522,7 +2522,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **type_** | [**DcimConsolePortTemplatesListTypeParameter**](DcimConsolePortTemplatesListTypeParameter.md) | * &#x60;Serial&#x60; - [(&#39;de-9&#39;, &#39;DE-9&#39;), (&#39;db-25&#39;, &#39;DB-25&#39;), (&#39;rj-11&#39;, &#39;RJ-11&#39;), (&#39;rj-12&#39;, &#39;RJ-12&#39;), (&#39;rj-45&#39;, &#39;RJ-45&#39;), (&#39;mini-din-8&#39;, &#39;Mini-DIN 8&#39;)] * &#x60;USB&#x60; - [(&#39;usb-a&#39;, &#39;USB Type A&#39;), (&#39;usb-b&#39;, &#39;USB Type B&#39;), (&#39;usb-c&#39;, &#39;USB Type C&#39;), (&#39;usb-mini-a&#39;, &#39;USB Mini A&#39;), (&#39;usb-mini-b&#39;, &#39;USB Mini B&#39;), (&#39;usb-micro-a&#39;, &#39;USB Micro A&#39;), (&#39;usb-micro-b&#39;, &#39;USB Micro B&#39;), (&#39;usb-micro-ab&#39;, &#39;USB Micro AB&#39;)] * &#x60;Other&#x60; - [(&#39;other&#39;, &#39;Other&#39;)] | 
@@ -2567,7 +2567,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port template.
+	id := int64(56) // int64 | A unique integer value identifying this console port template.
 	patchedWritableConsolePortTemplateRequest := *openapiclient.NewPatchedWritableConsolePortTemplateRequest() // PatchedWritableConsolePortTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -2588,7 +2588,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port template. | 
+**id** | **int64** | A unique integer value identifying this console port template. | 
 
 ### Other Parameters
 
@@ -2639,7 +2639,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port template.
+	id := int64(56) // int64 | A unique integer value identifying this console port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2659,7 +2659,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port template. | 
+**id** | **int64** | A unique integer value identifying this console port template. | 
 
 ### Other Parameters
 
@@ -2709,7 +2709,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port template.
+	id := int64(56) // int64 | A unique integer value identifying this console port template.
 	writableConsolePortTemplateRequest := *openapiclient.NewWritableConsolePortTemplateRequest("Name_example") // WritableConsolePortTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -2730,7 +2730,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port template. | 
+**id** | **int64** | A unique integer value identifying this console port template. | 
 
 ### Other Parameters
 
@@ -3043,7 +3043,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port.
+	id := int64(56) // int64 | A unique integer value identifying this console port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3061,7 +3061,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port. | 
+**id** | **int64** | A unique integer value identifying this console port. | 
 
 ### Other Parameters
 
@@ -3113,8 +3113,8 @@ import (
 
 func main() {
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	connected := true // bool |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -3138,12 +3138,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -3157,15 +3157,15 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -3184,15 +3184,15 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	markConnected := true // bool |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -3205,13 +3205,13 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -3222,8 +3222,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	speed := openapiclient.dcim_console_ports_list_speed_parameter(115200) // DcimConsolePortsListSpeedParameter | Port speed in bits per second  * `1200` - 1200 bps * `2400` - 2400 bps * `4800` - 4800 bps * `9600` - 9600 bps * `19200` - 19.2 kbps * `38400` - 38.4 kbps * `57600` - 57.6 kbps * `115200` - 115.2 kbps (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
@@ -3241,8 +3241,8 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3268,8 +3268,8 @@ Other parameters are passed through a pointer to a apiDcimConsolePortsListReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **connected** | **bool** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -3293,12 +3293,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -3312,15 +3312,15 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -3339,15 +3339,15 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **markConnected** | **bool** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -3360,13 +3360,13 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -3377,8 +3377,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **speed** | [**DcimConsolePortsListSpeedParameter**](DcimConsolePortsListSpeedParameter.md) | Port speed in bits per second  * &#x60;1200&#x60; - 1200 bps * &#x60;2400&#x60; - 2400 bps * &#x60;4800&#x60; - 4800 bps * &#x60;9600&#x60; - 9600 bps * &#x60;19200&#x60; - 19.2 kbps * &#x60;38400&#x60; - 38.4 kbps * &#x60;57600&#x60; - 57.6 kbps * &#x60;115200&#x60; - 115.2 kbps | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
@@ -3396,8 +3396,8 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -3438,7 +3438,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port.
+	id := int64(56) // int64 | A unique integer value identifying this console port.
 	patchedWritableConsolePortRequest := *openapiclient.NewPatchedWritableConsolePortRequest() // PatchedWritableConsolePortRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -3459,7 +3459,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port. | 
+**id** | **int64** | A unique integer value identifying this console port. | 
 
 ### Other Parameters
 
@@ -3510,7 +3510,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port.
+	id := int64(56) // int64 | A unique integer value identifying this console port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3530,7 +3530,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port. | 
+**id** | **int64** | A unique integer value identifying this console port. | 
 
 ### Other Parameters
 
@@ -3580,7 +3580,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port.
+	id := int64(56) // int64 | A unique integer value identifying this console port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -3600,7 +3600,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port. | 
+**id** | **int64** | A unique integer value identifying this console port. | 
 
 ### Other Parameters
 
@@ -3650,7 +3650,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console port.
+	id := int64(56) // int64 | A unique integer value identifying this console port.
 	writableConsolePortRequest := *openapiclient.NewWritableConsolePortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example") // WritableConsolePortRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -3671,7 +3671,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console port. | 
+**id** | **int64** | A unique integer value identifying this console port. | 
 
 ### Other Parameters
 
@@ -3984,7 +3984,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port template.
+	id := int64(56) // int64 | A unique integer value identifying this console server port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4002,7 +4002,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port template. | 
+**id** | **int64** | A unique integer value identifying this console server port template. | 
 
 ### Other Parameters
 
@@ -4072,15 +4072,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -4099,10 +4099,10 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -4114,7 +4114,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	type_ := openapiclient.dcim_console_port_templates_list_type_parameter("Other") // DcimConsolePortTemplatesListTypeParameter | * `Serial` - [('de-9', 'DE-9'), ('db-25', 'DB-25'), ('rj-11', 'RJ-11'), ('rj-12', 'RJ-12'), ('rj-45', 'RJ-45'), ('mini-din-8', 'Mini-DIN 8')] * `USB` - [('usb-a', 'USB Type A'), ('usb-b', 'USB Type B'), ('usb-c', 'USB Type C'), ('usb-mini-a', 'USB Mini A'), ('usb-mini-b', 'USB Mini B'), ('usb-micro-a', 'USB Micro A'), ('usb-micro-b', 'USB Micro B'), ('usb-micro-ab', 'USB Micro AB')] * `Other` - [('other', 'Other')] (optional)
@@ -4162,15 +4162,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -4189,10 +4189,10 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -4204,7 +4204,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **type_** | [**DcimConsolePortTemplatesListTypeParameter**](DcimConsolePortTemplatesListTypeParameter.md) | * &#x60;Serial&#x60; - [(&#39;de-9&#39;, &#39;DE-9&#39;), (&#39;db-25&#39;, &#39;DB-25&#39;), (&#39;rj-11&#39;, &#39;RJ-11&#39;), (&#39;rj-12&#39;, &#39;RJ-12&#39;), (&#39;rj-45&#39;, &#39;RJ-45&#39;), (&#39;mini-din-8&#39;, &#39;Mini-DIN 8&#39;)] * &#x60;USB&#x60; - [(&#39;usb-a&#39;, &#39;USB Type A&#39;), (&#39;usb-b&#39;, &#39;USB Type B&#39;), (&#39;usb-c&#39;, &#39;USB Type C&#39;), (&#39;usb-mini-a&#39;, &#39;USB Mini A&#39;), (&#39;usb-mini-b&#39;, &#39;USB Mini B&#39;), (&#39;usb-micro-a&#39;, &#39;USB Micro A&#39;), (&#39;usb-micro-b&#39;, &#39;USB Micro B&#39;), (&#39;usb-micro-ab&#39;, &#39;USB Micro AB&#39;)] * &#x60;Other&#x60; - [(&#39;other&#39;, &#39;Other&#39;)] | 
@@ -4249,7 +4249,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port template.
+	id := int64(56) // int64 | A unique integer value identifying this console server port template.
 	patchedWritableConsoleServerPortTemplateRequest := *openapiclient.NewPatchedWritableConsoleServerPortTemplateRequest() // PatchedWritableConsoleServerPortTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -4270,7 +4270,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port template. | 
+**id** | **int64** | A unique integer value identifying this console server port template. | 
 
 ### Other Parameters
 
@@ -4321,7 +4321,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port template.
+	id := int64(56) // int64 | A unique integer value identifying this console server port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4341,7 +4341,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port template. | 
+**id** | **int64** | A unique integer value identifying this console server port template. | 
 
 ### Other Parameters
 
@@ -4391,7 +4391,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port template.
+	id := int64(56) // int64 | A unique integer value identifying this console server port template.
 	writableConsoleServerPortTemplateRequest := *openapiclient.NewWritableConsoleServerPortTemplateRequest("Name_example") // WritableConsoleServerPortTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -4412,7 +4412,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port template. | 
+**id** | **int64** | A unique integer value identifying this console server port template. | 
 
 ### Other Parameters
 
@@ -4725,7 +4725,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port.
+	id := int64(56) // int64 | A unique integer value identifying this console server port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4743,7 +4743,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port. | 
+**id** | **int64** | A unique integer value identifying this console server port. | 
 
 ### Other Parameters
 
@@ -4795,8 +4795,8 @@ import (
 
 func main() {
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	connected := true // bool |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -4820,12 +4820,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -4839,15 +4839,15 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -4866,15 +4866,15 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	markConnected := true // bool |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -4887,13 +4887,13 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -4904,8 +4904,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	speed := openapiclient.dcim_console_ports_list_speed_parameter(115200) // DcimConsolePortsListSpeedParameter | Port speed in bits per second  * `1200` - 1200 bps * `2400` - 2400 bps * `4800` - 4800 bps * `9600` - 9600 bps * `19200` - 19.2 kbps * `38400` - 38.4 kbps * `57600` - 57.6 kbps * `115200` - 115.2 kbps (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
@@ -4923,8 +4923,8 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -4950,8 +4950,8 @@ Other parameters are passed through a pointer to a apiDcimConsoleServerPortsList
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **connected** | **bool** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -4975,12 +4975,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -4994,15 +4994,15 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -5021,15 +5021,15 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **markConnected** | **bool** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -5042,13 +5042,13 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -5059,8 +5059,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **speed** | [**DcimConsolePortsListSpeedParameter**](DcimConsolePortsListSpeedParameter.md) | Port speed in bits per second  * &#x60;1200&#x60; - 1200 bps * &#x60;2400&#x60; - 2400 bps * &#x60;4800&#x60; - 4800 bps * &#x60;9600&#x60; - 9600 bps * &#x60;19200&#x60; - 19.2 kbps * &#x60;38400&#x60; - 38.4 kbps * &#x60;57600&#x60; - 57.6 kbps * &#x60;115200&#x60; - 115.2 kbps | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
@@ -5078,8 +5078,8 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -5120,7 +5120,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port.
+	id := int64(56) // int64 | A unique integer value identifying this console server port.
 	patchedWritableConsoleServerPortRequest := *openapiclient.NewPatchedWritableConsoleServerPortRequest() // PatchedWritableConsoleServerPortRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -5141,7 +5141,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port. | 
+**id** | **int64** | A unique integer value identifying this console server port. | 
 
 ### Other Parameters
 
@@ -5192,7 +5192,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port.
+	id := int64(56) // int64 | A unique integer value identifying this console server port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -5212,7 +5212,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port. | 
+**id** | **int64** | A unique integer value identifying this console server port. | 
 
 ### Other Parameters
 
@@ -5262,7 +5262,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port.
+	id := int64(56) // int64 | A unique integer value identifying this console server port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -5282,7 +5282,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port. | 
+**id** | **int64** | A unique integer value identifying this console server port. | 
 
 ### Other Parameters
 
@@ -5332,7 +5332,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this console server port.
+	id := int64(56) // int64 | A unique integer value identifying this console server port.
 	writableConsoleServerPortRequest := *openapiclient.NewWritableConsoleServerPortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example") // WritableConsoleServerPortRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -5353,7 +5353,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this console server port. | 
+**id** | **int64** | A unique integer value identifying this console server port. | 
 
 ### Other Parameters
 
@@ -5666,7 +5666,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay template.
+	id := int64(56) // int64 | A unique integer value identifying this device bay template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -5684,7 +5684,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay template. | 
+**id** | **int64** | A unique integer value identifying this device bay template. | 
 
 ### Other Parameters
 
@@ -5754,15 +5754,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -5781,7 +5781,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -5794,7 +5794,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
@@ -5841,15 +5841,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -5868,7 +5868,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -5881,7 +5881,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **updatedByRequest** | **string** |  | 
@@ -5925,7 +5925,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay template.
+	id := int64(56) // int64 | A unique integer value identifying this device bay template.
 	patchedDeviceBayTemplateRequest := *openapiclient.NewPatchedDeviceBayTemplateRequest() // PatchedDeviceBayTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -5946,7 +5946,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay template. | 
+**id** | **int64** | A unique integer value identifying this device bay template. | 
 
 ### Other Parameters
 
@@ -5997,7 +5997,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay template.
+	id := int64(56) // int64 | A unique integer value identifying this device bay template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6017,7 +6017,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay template. | 
+**id** | **int64** | A unique integer value identifying this device bay template. | 
 
 ### Other Parameters
 
@@ -6067,7 +6067,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay template.
+	id := int64(56) // int64 | A unique integer value identifying this device bay template.
 	deviceBayTemplateRequest := *openapiclient.NewDeviceBayTemplateRequest(*openapiclient.NewBriefDeviceTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example", "Slug_example"), "Name_example") // DeviceBayTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -6088,7 +6088,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay template. | 
+**id** | **int64** | A unique integer value identifying this device bay template. | 
 
 ### Other Parameters
 
@@ -6401,7 +6401,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay.
+	id := int64(56) // int64 | A unique integer value identifying this device bay.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6419,7 +6419,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay. | 
+**id** | **int64** | A unique integer value identifying this device bay. | 
 
 ### Other Parameters
 
@@ -6491,12 +6491,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -6510,19 +6510,19 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	installedDevice := []*string{"Inner_example"} // []*string | Installed device (name) (optional)
 	installedDeviceN := []*string{"Inner_example"} // []*string | Installed device (name) (optional)
-	installedDeviceId := []*int32{int32(123)} // []*int32 | Installed device (ID) (optional)
-	installedDeviceIdN := []*int32{int32(123)} // []*int32 | Installed device (ID) (optional)
+	installedDeviceId := []*int64{int64(123)} // []*int64 | Installed device (ID) (optional)
+	installedDeviceIdN := []*int64{int64(123)} // []*int64 | Installed device (ID) (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -6541,11 +6541,11 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -6558,13 +6558,13 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -6575,15 +6575,15 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6629,12 +6629,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -6648,19 +6648,19 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **installedDevice** | **[]string** | Installed device (name) | 
  **installedDeviceN** | **[]string** | Installed device (name) | 
- **installedDeviceId** | **[]int32** | Installed device (ID) | 
- **installedDeviceIdN** | **[]int32** | Installed device (ID) | 
+ **installedDeviceId** | **[]int64** | Installed device (ID) | 
+ **installedDeviceIdN** | **[]int64** | Installed device (ID) | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -6679,11 +6679,11 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -6696,13 +6696,13 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -6713,15 +6713,15 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -6762,7 +6762,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay.
+	id := int64(56) // int64 | A unique integer value identifying this device bay.
 	patchedDeviceBayRequest := *openapiclient.NewPatchedDeviceBayRequest() // PatchedDeviceBayRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -6783,7 +6783,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay. | 
+**id** | **int64** | A unique integer value identifying this device bay. | 
 
 ### Other Parameters
 
@@ -6834,7 +6834,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay.
+	id := int64(56) // int64 | A unique integer value identifying this device bay.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6854,7 +6854,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay. | 
+**id** | **int64** | A unique integer value identifying this device bay. | 
 
 ### Other Parameters
 
@@ -6904,7 +6904,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device bay.
+	id := int64(56) // int64 | A unique integer value identifying this device bay.
 	deviceBayRequest := *openapiclient.NewDeviceBayRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example") // DeviceBayRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -6925,7 +6925,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device bay. | 
+**id** | **int64** | A unique integer value identifying this device bay. | 
 
 ### Other Parameters
 
@@ -7238,7 +7238,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device role.
+	id := int64(56) // int64 | A unique integer value identifying this device role.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -7256,7 +7256,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device role. | 
+**id** | **int64** | A unique integer value identifying this device role. | 
 
 ### Other Parameters
 
@@ -7318,8 +7318,8 @@ func main() {
 	colorNie := []string{"Inner_example"} // []string |  (optional)
 	colorNiew := []string{"Inner_example"} // []string |  (optional)
 	colorNisw := []string{"Inner_example"} // []string |  (optional)
-	configTemplateId := []*int32{int32(123)} // []*int32 | Config template (ID) (optional)
-	configTemplateIdN := []*int32{int32(123)} // []*int32 | Config template (ID) (optional)
+	configTemplateId := []*int64{int64(123)} // []*int64 | Config template (ID) (optional)
+	configTemplateIdN := []*int64{int64(123)} // []*int64 | Config template (ID) (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -7339,13 +7339,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -7353,7 +7353,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -7366,7 +7366,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
@@ -7419,8 +7419,8 @@ Name | Type | Description  | Notes
  **colorNie** | **[]string** |  | 
  **colorNiew** | **[]string** |  | 
  **colorNisw** | **[]string** |  | 
- **configTemplateId** | **[]int32** | Config template (ID) | 
- **configTemplateIdN** | **[]int32** | Config template (ID) | 
+ **configTemplateId** | **[]int64** | Config template (ID) | 
+ **configTemplateIdN** | **[]int64** | Config template (ID) | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -7440,13 +7440,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -7454,7 +7454,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -7467,7 +7467,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
@@ -7525,7 +7525,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device role.
+	id := int64(56) // int64 | A unique integer value identifying this device role.
 	patchedDeviceRoleRequest := *openapiclient.NewPatchedDeviceRoleRequest() // PatchedDeviceRoleRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -7546,7 +7546,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device role. | 
+**id** | **int64** | A unique integer value identifying this device role. | 
 
 ### Other Parameters
 
@@ -7597,7 +7597,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device role.
+	id := int64(56) // int64 | A unique integer value identifying this device role.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -7617,7 +7617,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device role. | 
+**id** | **int64** | A unique integer value identifying this device role. | 
 
 ### Other Parameters
 
@@ -7667,7 +7667,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device role.
+	id := int64(56) // int64 | A unique integer value identifying this device role.
 	deviceRoleRequest := *openapiclient.NewDeviceRoleRequest("Name_example", "Slug_example") // DeviceRoleRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -7688,7 +7688,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device role. | 
+**id** | **int64** | A unique integer value identifying this device role. | 
 
 ### Other Parameters
 
@@ -8001,7 +8001,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device type.
+	id := int64(56) // int64 | A unique integer value identifying this device type.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -8019,7 +8019,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device type. | 
+**id** | **int64** | A unique integer value identifying this device type. | 
 
 ### Other Parameters
 
@@ -8071,21 +8071,21 @@ import (
 
 func main() {
 	airflow := openapiclient.dcim_device_types_list_airflow_parameter("bottom-to-top") // DcimDeviceTypesListAirflowParameter | * `front-to-rear` - Front to rear * `rear-to-front` - Rear to front * `left-to-right` - Left to right * `right-to-left` - Right to left * `side-to-rear` - Side to rear * `rear-to-side` - Rear to side * `bottom-to-top` - Bottom to top * `top-to-bottom` - Top to bottom * `passive` - Passive * `mixed` - Mixed (optional)
-	consolePortTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	consolePortTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	consolePortTemplateCountEmpty := true // bool |  (optional)
-	consolePortTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	consolePortTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	consolePortTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	consolePortTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	consolePortTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	consolePortTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	consolePortTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	consolePortTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	consolePortTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	consolePortTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	consolePorts := true // bool | Has console ports (optional)
-	consoleServerPortTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	consoleServerPortTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	consoleServerPortTemplateCountEmpty := true // bool |  (optional)
-	consoleServerPortTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	consoleServerPortTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	consoleServerPorts := true // bool | Has console server ports (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -8097,8 +8097,8 @@ func main() {
 	createdByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	defaultPlatform := []string{"Inner_example"} // []string | Default platform (slug) (optional)
 	defaultPlatformN := []string{"Inner_example"} // []string | Default platform (slug) (optional)
-	defaultPlatformId := []*int32{int32(123)} // []*int32 | Default platform (ID) (optional)
-	defaultPlatformIdN := []*int32{int32(123)} // []*int32 | Default platform (ID) (optional)
+	defaultPlatformId := []*int64{int64(123)} // []*int64 | Default platform (ID) (optional)
+	defaultPlatformIdN := []*int64{int64(123)} // []*int64 | Default platform (ID) (optional)
 	description := []string{"Inner_example"} // []string |  (optional)
 	descriptionEmpty := true // bool |  (optional)
 	descriptionIc := []string{"Inner_example"} // []string |  (optional)
@@ -8110,46 +8110,46 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceBayTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	deviceBayTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	deviceBayTemplateCountEmpty := true // bool |  (optional)
-	deviceBayTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	deviceBayTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	deviceBays := true // bool | Has device bays (optional)
 	excludeFromUtilization := true // bool |  (optional)
-	frontPortTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	frontPortTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	frontPortTemplateCountEmpty := true // bool |  (optional)
-	frontPortTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	frontPortTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	frontPortTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	frontPortTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	frontPortTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	frontPortTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	frontPortTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	frontPortTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	frontPortTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	frontPortTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	hasFrontImage := true // bool | Has a front image (optional)
 	hasRearImage := true // bool | Has a rear image (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
+	interfaceTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	interfaceTemplateCountEmpty := true // bool |  (optional)
-	interfaceTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	interfaceTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	interfaceTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	interfaceTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	interfaceTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	interfaceTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	interfaceTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	interfaceTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	interfaceTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	interfaceTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	interfaces := true // bool | Has interfaces (optional)
-	inventoryItemTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	inventoryItemTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	inventoryItemTemplateCountEmpty := true // bool |  (optional)
-	inventoryItemTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	inventoryItemTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	inventoryItems := true // bool | Has inventory items (optional)
 	isFullDepth := true // bool |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -8159,11 +8159,11 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
+	manufacturerId := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
 	model := []string{"Inner_example"} // []string |  (optional)
 	modelEmpty := true // bool |  (optional)
 	modelIc := []string{"Inner_example"} // []string |  (optional)
@@ -8176,15 +8176,15 @@ func main() {
 	modelNiew := []string{"Inner_example"} // []string |  (optional)
 	modelNisw := []string{"Inner_example"} // []string |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleBayTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	moduleBayTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	moduleBayTemplateCountEmpty := true // bool |  (optional)
-	moduleBayTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	moduleBayTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	moduleBays := true // bool | Has module bays (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	partNumber := []string{"Inner_example"} // []string |  (optional)
 	partNumberEmpty := true // bool |  (optional)
@@ -8198,30 +8198,30 @@ func main() {
 	partNumberNiew := []string{"Inner_example"} // []string |  (optional)
 	partNumberNisw := []string{"Inner_example"} // []string |  (optional)
 	passThroughPorts := true // bool | Has pass-through ports (optional)
-	powerOutletTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	powerOutletTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	powerOutletTemplateCountEmpty := true // bool |  (optional)
-	powerOutletTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	powerOutletTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	powerOutlets := true // bool | Has power outlets (optional)
-	powerPortTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	powerPortTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	powerPortTemplateCountEmpty := true // bool |  (optional)
-	powerPortTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	powerPortTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	powerPortTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	powerPortTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	powerPortTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	powerPortTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	powerPortTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	powerPortTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	powerPortTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	powerPortTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	powerPorts := true // bool | Has power ports (optional)
 	q := "q_example" // string | Search (optional)
-	rearPortTemplateCount := []int32{int32(123)} // []int32 |  (optional)
+	rearPortTemplateCount := []int64{int64(123)} // []int64 |  (optional)
 	rearPortTemplateCountEmpty := true // bool |  (optional)
-	rearPortTemplateCountGt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortTemplateCountGte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortTemplateCountLt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortTemplateCountLte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortTemplateCountN := []int32{int32(123)} // []int32 |  (optional)
+	rearPortTemplateCountGt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortTemplateCountGte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortTemplateCountLt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortTemplateCountLte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortTemplateCountN := []int64{int64(123)} // []int64 |  (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
 	slugEmpty := true // bool |  (optional)
 	slugIc := []string{"Inner_example"} // []string |  (optional)
@@ -8277,21 +8277,21 @@ Other parameters are passed through a pointer to a apiDcimDeviceTypesListRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **airflow** | [**DcimDeviceTypesListAirflowParameter**](DcimDeviceTypesListAirflowParameter.md) | * &#x60;front-to-rear&#x60; - Front to rear * &#x60;rear-to-front&#x60; - Rear to front * &#x60;left-to-right&#x60; - Left to right * &#x60;right-to-left&#x60; - Right to left * &#x60;side-to-rear&#x60; - Side to rear * &#x60;rear-to-side&#x60; - Rear to side * &#x60;bottom-to-top&#x60; - Bottom to top * &#x60;top-to-bottom&#x60; - Top to bottom * &#x60;passive&#x60; - Passive * &#x60;mixed&#x60; - Mixed | 
- **consolePortTemplateCount** | **[]int32** |  | 
+ **consolePortTemplateCount** | **[]int64** |  | 
  **consolePortTemplateCountEmpty** | **bool** |  | 
- **consolePortTemplateCountGt** | **[]int32** |  | 
- **consolePortTemplateCountGte** | **[]int32** |  | 
- **consolePortTemplateCountLt** | **[]int32** |  | 
- **consolePortTemplateCountLte** | **[]int32** |  | 
- **consolePortTemplateCountN** | **[]int32** |  | 
+ **consolePortTemplateCountGt** | **[]int64** |  | 
+ **consolePortTemplateCountGte** | **[]int64** |  | 
+ **consolePortTemplateCountLt** | **[]int64** |  | 
+ **consolePortTemplateCountLte** | **[]int64** |  | 
+ **consolePortTemplateCountN** | **[]int64** |  | 
  **consolePorts** | **bool** | Has console ports | 
- **consoleServerPortTemplateCount** | **[]int32** |  | 
+ **consoleServerPortTemplateCount** | **[]int64** |  | 
  **consoleServerPortTemplateCountEmpty** | **bool** |  | 
- **consoleServerPortTemplateCountGt** | **[]int32** |  | 
- **consoleServerPortTemplateCountGte** | **[]int32** |  | 
- **consoleServerPortTemplateCountLt** | **[]int32** |  | 
- **consoleServerPortTemplateCountLte** | **[]int32** |  | 
- **consoleServerPortTemplateCountN** | **[]int32** |  | 
+ **consoleServerPortTemplateCountGt** | **[]int64** |  | 
+ **consoleServerPortTemplateCountGte** | **[]int64** |  | 
+ **consoleServerPortTemplateCountLt** | **[]int64** |  | 
+ **consoleServerPortTemplateCountLte** | **[]int64** |  | 
+ **consoleServerPortTemplateCountN** | **[]int64** |  | 
  **consoleServerPorts** | **bool** | Has console server ports | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
@@ -8303,8 +8303,8 @@ Name | Type | Description  | Notes
  **createdByRequest** | **string** |  | 
  **defaultPlatform** | **[]string** | Default platform (slug) | 
  **defaultPlatformN** | **[]string** | Default platform (slug) | 
- **defaultPlatformId** | **[]int32** | Default platform (ID) | 
- **defaultPlatformIdN** | **[]int32** | Default platform (ID) | 
+ **defaultPlatformId** | **[]int64** | Default platform (ID) | 
+ **defaultPlatformIdN** | **[]int64** | Default platform (ID) | 
  **description** | **[]string** |  | 
  **descriptionEmpty** | **bool** |  | 
  **descriptionIc** | **[]string** |  | 
@@ -8316,46 +8316,46 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceBayTemplateCount** | **[]int32** |  | 
+ **deviceBayTemplateCount** | **[]int64** |  | 
  **deviceBayTemplateCountEmpty** | **bool** |  | 
- **deviceBayTemplateCountGt** | **[]int32** |  | 
- **deviceBayTemplateCountGte** | **[]int32** |  | 
- **deviceBayTemplateCountLt** | **[]int32** |  | 
- **deviceBayTemplateCountLte** | **[]int32** |  | 
- **deviceBayTemplateCountN** | **[]int32** |  | 
+ **deviceBayTemplateCountGt** | **[]int64** |  | 
+ **deviceBayTemplateCountGte** | **[]int64** |  | 
+ **deviceBayTemplateCountLt** | **[]int64** |  | 
+ **deviceBayTemplateCountLte** | **[]int64** |  | 
+ **deviceBayTemplateCountN** | **[]int64** |  | 
  **deviceBays** | **bool** | Has device bays | 
  **excludeFromUtilization** | **bool** |  | 
- **frontPortTemplateCount** | **[]int32** |  | 
+ **frontPortTemplateCount** | **[]int64** |  | 
  **frontPortTemplateCountEmpty** | **bool** |  | 
- **frontPortTemplateCountGt** | **[]int32** |  | 
- **frontPortTemplateCountGte** | **[]int32** |  | 
- **frontPortTemplateCountLt** | **[]int32** |  | 
- **frontPortTemplateCountLte** | **[]int32** |  | 
- **frontPortTemplateCountN** | **[]int32** |  | 
+ **frontPortTemplateCountGt** | **[]int64** |  | 
+ **frontPortTemplateCountGte** | **[]int64** |  | 
+ **frontPortTemplateCountLt** | **[]int64** |  | 
+ **frontPortTemplateCountLte** | **[]int64** |  | 
+ **frontPortTemplateCountN** | **[]int64** |  | 
  **hasFrontImage** | **bool** | Has a front image | 
  **hasRearImage** | **bool** | Has a rear image | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **interfaceTemplateCount** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
+ **interfaceTemplateCount** | **[]int64** |  | 
  **interfaceTemplateCountEmpty** | **bool** |  | 
- **interfaceTemplateCountGt** | **[]int32** |  | 
- **interfaceTemplateCountGte** | **[]int32** |  | 
- **interfaceTemplateCountLt** | **[]int32** |  | 
- **interfaceTemplateCountLte** | **[]int32** |  | 
- **interfaceTemplateCountN** | **[]int32** |  | 
+ **interfaceTemplateCountGt** | **[]int64** |  | 
+ **interfaceTemplateCountGte** | **[]int64** |  | 
+ **interfaceTemplateCountLt** | **[]int64** |  | 
+ **interfaceTemplateCountLte** | **[]int64** |  | 
+ **interfaceTemplateCountN** | **[]int64** |  | 
  **interfaces** | **bool** | Has interfaces | 
- **inventoryItemTemplateCount** | **[]int32** |  | 
+ **inventoryItemTemplateCount** | **[]int64** |  | 
  **inventoryItemTemplateCountEmpty** | **bool** |  | 
- **inventoryItemTemplateCountGt** | **[]int32** |  | 
- **inventoryItemTemplateCountGte** | **[]int32** |  | 
- **inventoryItemTemplateCountLt** | **[]int32** |  | 
- **inventoryItemTemplateCountLte** | **[]int32** |  | 
- **inventoryItemTemplateCountN** | **[]int32** |  | 
+ **inventoryItemTemplateCountGt** | **[]int64** |  | 
+ **inventoryItemTemplateCountGte** | **[]int64** |  | 
+ **inventoryItemTemplateCountLt** | **[]int64** |  | 
+ **inventoryItemTemplateCountLte** | **[]int64** |  | 
+ **inventoryItemTemplateCountN** | **[]int64** |  | 
  **inventoryItems** | **bool** | Has inventory items | 
  **isFullDepth** | **bool** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
@@ -8365,11 +8365,11 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
  **model** | **[]string** |  | 
  **modelEmpty** | **bool** |  | 
  **modelIc** | **[]string** |  | 
@@ -8382,15 +8382,15 @@ Name | Type | Description  | Notes
  **modelNiew** | **[]string** |  | 
  **modelNisw** | **[]string** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleBayTemplateCount** | **[]int32** |  | 
+ **moduleBayTemplateCount** | **[]int64** |  | 
  **moduleBayTemplateCountEmpty** | **bool** |  | 
- **moduleBayTemplateCountGt** | **[]int32** |  | 
- **moduleBayTemplateCountGte** | **[]int32** |  | 
- **moduleBayTemplateCountLt** | **[]int32** |  | 
- **moduleBayTemplateCountLte** | **[]int32** |  | 
- **moduleBayTemplateCountN** | **[]int32** |  | 
+ **moduleBayTemplateCountGt** | **[]int64** |  | 
+ **moduleBayTemplateCountGte** | **[]int64** |  | 
+ **moduleBayTemplateCountLt** | **[]int64** |  | 
+ **moduleBayTemplateCountLte** | **[]int64** |  | 
+ **moduleBayTemplateCountN** | **[]int64** |  | 
  **moduleBays** | **bool** | Has module bays | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **partNumber** | **[]string** |  | 
  **partNumberEmpty** | **bool** |  | 
@@ -8404,30 +8404,30 @@ Name | Type | Description  | Notes
  **partNumberNiew** | **[]string** |  | 
  **partNumberNisw** | **[]string** |  | 
  **passThroughPorts** | **bool** | Has pass-through ports | 
- **powerOutletTemplateCount** | **[]int32** |  | 
+ **powerOutletTemplateCount** | **[]int64** |  | 
  **powerOutletTemplateCountEmpty** | **bool** |  | 
- **powerOutletTemplateCountGt** | **[]int32** |  | 
- **powerOutletTemplateCountGte** | **[]int32** |  | 
- **powerOutletTemplateCountLt** | **[]int32** |  | 
- **powerOutletTemplateCountLte** | **[]int32** |  | 
- **powerOutletTemplateCountN** | **[]int32** |  | 
+ **powerOutletTemplateCountGt** | **[]int64** |  | 
+ **powerOutletTemplateCountGte** | **[]int64** |  | 
+ **powerOutletTemplateCountLt** | **[]int64** |  | 
+ **powerOutletTemplateCountLte** | **[]int64** |  | 
+ **powerOutletTemplateCountN** | **[]int64** |  | 
  **powerOutlets** | **bool** | Has power outlets | 
- **powerPortTemplateCount** | **[]int32** |  | 
+ **powerPortTemplateCount** | **[]int64** |  | 
  **powerPortTemplateCountEmpty** | **bool** |  | 
- **powerPortTemplateCountGt** | **[]int32** |  | 
- **powerPortTemplateCountGte** | **[]int32** |  | 
- **powerPortTemplateCountLt** | **[]int32** |  | 
- **powerPortTemplateCountLte** | **[]int32** |  | 
- **powerPortTemplateCountN** | **[]int32** |  | 
+ **powerPortTemplateCountGt** | **[]int64** |  | 
+ **powerPortTemplateCountGte** | **[]int64** |  | 
+ **powerPortTemplateCountLt** | **[]int64** |  | 
+ **powerPortTemplateCountLte** | **[]int64** |  | 
+ **powerPortTemplateCountN** | **[]int64** |  | 
  **powerPorts** | **bool** | Has power ports | 
  **q** | **string** | Search | 
- **rearPortTemplateCount** | **[]int32** |  | 
+ **rearPortTemplateCount** | **[]int64** |  | 
  **rearPortTemplateCountEmpty** | **bool** |  | 
- **rearPortTemplateCountGt** | **[]int32** |  | 
- **rearPortTemplateCountGte** | **[]int32** |  | 
- **rearPortTemplateCountLt** | **[]int32** |  | 
- **rearPortTemplateCountLte** | **[]int32** |  | 
- **rearPortTemplateCountN** | **[]int32** |  | 
+ **rearPortTemplateCountGt** | **[]int64** |  | 
+ **rearPortTemplateCountGte** | **[]int64** |  | 
+ **rearPortTemplateCountLt** | **[]int64** |  | 
+ **rearPortTemplateCountLte** | **[]int64** |  | 
+ **rearPortTemplateCountN** | **[]int64** |  | 
  **slug** | **[]string** |  | 
  **slugEmpty** | **bool** |  | 
  **slugIc** | **[]string** |  | 
@@ -8498,7 +8498,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device type.
+	id := int64(56) // int64 | A unique integer value identifying this device type.
 	patchedWritableDeviceTypeRequest := *openapiclient.NewPatchedWritableDeviceTypeRequest() // PatchedWritableDeviceTypeRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -8519,7 +8519,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device type. | 
+**id** | **int64** | A unique integer value identifying this device type. | 
 
 ### Other Parameters
 
@@ -8570,7 +8570,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device type.
+	id := int64(56) // int64 | A unique integer value identifying this device type.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -8590,7 +8590,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device type. | 
+**id** | **int64** | A unique integer value identifying this device type. | 
 
 ### Other Parameters
 
@@ -8640,7 +8640,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device type.
+	id := int64(56) // int64 | A unique integer value identifying this device type.
 	writableDeviceTypeRequest := *openapiclient.NewWritableDeviceTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example", "Slug_example") // WritableDeviceTypeRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -8661,7 +8661,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device type. | 
+**id** | **int64** | A unique integer value identifying this device type. | 
 
 ### Other Parameters
 
@@ -8974,7 +8974,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device.
+	id := int64(56) // int64 | A unique integer value identifying this device.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -8992,7 +8992,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device. | 
+**id** | **int64** | A unique integer value identifying this device. | 
 
 ### Other Parameters
 
@@ -9057,34 +9057,34 @@ func main() {
 	assetTagNisw := []string{"Inner_example"} // []string |  (optional)
 	clusterGroup := []string{"Inner_example"} // []string | Cluster group (slug) (optional)
 	clusterGroupN := []string{"Inner_example"} // []string | Cluster group (slug) (optional)
-	clusterGroupId := []int32{int32(123)} // []int32 | Cluster group (ID) (optional)
-	clusterGroupIdN := []int32{int32(123)} // []int32 | Cluster group (ID) (optional)
-	clusterId := []*int32{int32(123)} // []*int32 | VM cluster (ID) (optional)
-	clusterIdN := []*int32{int32(123)} // []*int32 | VM cluster (ID) (optional)
-	configTemplateId := []*int32{int32(123)} // []*int32 | Config template (ID) (optional)
-	configTemplateIdN := []*int32{int32(123)} // []*int32 | Config template (ID) (optional)
-	consolePortCount := []int32{int32(123)} // []int32 |  (optional)
+	clusterGroupId := []int64{int64(123)} // []int64 | Cluster group (ID) (optional)
+	clusterGroupIdN := []int64{int64(123)} // []int64 | Cluster group (ID) (optional)
+	clusterId := []*int64{int64(123)} // []*int64 | VM cluster (ID) (optional)
+	clusterIdN := []*int64{int64(123)} // []*int64 | VM cluster (ID) (optional)
+	configTemplateId := []*int64{int64(123)} // []*int64 | Config template (ID) (optional)
+	configTemplateIdN := []*int64{int64(123)} // []*int64 | Config template (ID) (optional)
+	consolePortCount := []int64{int64(123)} // []int64 |  (optional)
 	consolePortCountEmpty := true // bool |  (optional)
-	consolePortCountGt := []int32{int32(123)} // []int32 |  (optional)
-	consolePortCountGte := []int32{int32(123)} // []int32 |  (optional)
-	consolePortCountLt := []int32{int32(123)} // []int32 |  (optional)
-	consolePortCountLte := []int32{int32(123)} // []int32 |  (optional)
-	consolePortCountN := []int32{int32(123)} // []int32 |  (optional)
+	consolePortCountGt := []int64{int64(123)} // []int64 |  (optional)
+	consolePortCountGte := []int64{int64(123)} // []int64 |  (optional)
+	consolePortCountLt := []int64{int64(123)} // []int64 |  (optional)
+	consolePortCountLte := []int64{int64(123)} // []int64 |  (optional)
+	consolePortCountN := []int64{int64(123)} // []int64 |  (optional)
 	consolePorts := true // bool | Has console ports (optional)
-	consoleServerPortCount := []int32{int32(123)} // []int32 |  (optional)
+	consoleServerPortCount := []int64{int64(123)} // []int64 |  (optional)
 	consoleServerPortCountEmpty := true // bool |  (optional)
-	consoleServerPortCountGt := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortCountGte := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortCountLt := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortCountLte := []int32{int32(123)} // []int32 |  (optional)
-	consoleServerPortCountN := []int32{int32(123)} // []int32 |  (optional)
+	consoleServerPortCountGt := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortCountGte := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortCountLt := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortCountLte := []int64{int64(123)} // []int64 |  (optional)
+	consoleServerPortCountN := []int64{int64(123)} // []int64 |  (optional)
 	consoleServerPorts := true // bool | Has console server ports (optional)
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -9104,51 +9104,51 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceBayCount := []int32{int32(123)} // []int32 |  (optional)
+	deviceBayCount := []int64{int64(123)} // []int64 |  (optional)
 	deviceBayCountEmpty := true // bool |  (optional)
-	deviceBayCountGt := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayCountGte := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayCountLt := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayCountLte := []int32{int32(123)} // []int32 |  (optional)
-	deviceBayCountN := []int32{int32(123)} // []int32 |  (optional)
+	deviceBayCountGt := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayCountGte := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayCountLt := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayCountLte := []int64{int64(123)} // []int64 |  (optional)
+	deviceBayCountN := []int64{int64(123)} // []int64 |  (optional)
 	deviceBays := true // bool | Has device bays (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (slug) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (slug) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
 	face := openapiclient.Rack_face("front") // RackFace | * `front` - Front * `rear` - Rear (optional)
-	frontPortCount := []int32{int32(123)} // []int32 |  (optional)
+	frontPortCount := []int64{int64(123)} // []int64 |  (optional)
 	frontPortCountEmpty := true // bool |  (optional)
-	frontPortCountGt := []int32{int32(123)} // []int32 |  (optional)
-	frontPortCountGte := []int32{int32(123)} // []int32 |  (optional)
-	frontPortCountLt := []int32{int32(123)} // []int32 |  (optional)
-	frontPortCountLte := []int32{int32(123)} // []int32 |  (optional)
-	frontPortCountN := []int32{int32(123)} // []int32 |  (optional)
+	frontPortCountGt := []int64{int64(123)} // []int64 |  (optional)
+	frontPortCountGte := []int64{int64(123)} // []int64 |  (optional)
+	frontPortCountLt := []int64{int64(123)} // []int64 |  (optional)
+	frontPortCountLte := []int64{int64(123)} // []int64 |  (optional)
+	frontPortCountN := []int64{int64(123)} // []int64 |  (optional)
 	hasOobIp := true // bool | Has an out-of-band IP (optional)
 	hasPrimaryIp := true // bool | Has a primary IP (optional)
 	hasVirtualDeviceContext := true // bool | Has virtual device context (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceCount := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
+	interfaceCount := []int64{int64(123)} // []int64 |  (optional)
 	interfaceCountEmpty := true // bool |  (optional)
-	interfaceCountGt := []int32{int32(123)} // []int32 |  (optional)
-	interfaceCountGte := []int32{int32(123)} // []int32 |  (optional)
-	interfaceCountLt := []int32{int32(123)} // []int32 |  (optional)
-	interfaceCountLte := []int32{int32(123)} // []int32 |  (optional)
-	interfaceCountN := []int32{int32(123)} // []int32 |  (optional)
+	interfaceCountGt := []int64{int64(123)} // []int64 |  (optional)
+	interfaceCountGte := []int64{int64(123)} // []int64 |  (optional)
+	interfaceCountLt := []int64{int64(123)} // []int64 |  (optional)
+	interfaceCountLte := []int64{int64(123)} // []int64 |  (optional)
+	interfaceCountN := []int64{int64(123)} // []int64 |  (optional)
 	interfaces := true // bool | Has interfaces (optional)
-	inventoryItemCount := []int32{int32(123)} // []int32 |  (optional)
+	inventoryItemCount := []int64{int64(123)} // []int64 |  (optional)
 	inventoryItemCountEmpty := true // bool |  (optional)
-	inventoryItemCountGt := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemCountGte := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemCountLt := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemCountLte := []int32{int32(123)} // []int32 |  (optional)
-	inventoryItemCountN := []int32{int32(123)} // []int32 |  (optional)
+	inventoryItemCountGt := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemCountGte := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemCountLt := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemCountLte := []int64{int64(123)} // []int64 |  (optional)
+	inventoryItemCountN := []int64{int64(123)} // []int64 |  (optional)
 	isFullDepth := true // bool | Is full depth (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -9164,7 +9164,7 @@ func main() {
 	latitudeLt := []float64{float64(123)} // []float64 |  (optional)
 	latitudeLte := []float64{float64(123)} // []float64 |  (optional)
 	latitudeN := []float64{float64(123)} // []float64 |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	localContextData := true // bool | Has local config context data (optional)
 	locationId := []string{"Inner_example"} // []string |  (optional)
 	locationIdN := []string{"Inner_example"} // []string |  (optional)
@@ -9187,18 +9187,18 @@ func main() {
 	macAddressNisw := []string{"Inner_example"} // []string |  (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
+	manufacturerId := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
 	model := []string{"Inner_example"} // []string | Device model (slug) (optional)
 	modelN := []string{"Inner_example"} // []string | Device model (slug) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleBayCount := []int32{int32(123)} // []int32 |  (optional)
+	moduleBayCount := []int64{int64(123)} // []int64 |  (optional)
 	moduleBayCountEmpty := true // bool |  (optional)
-	moduleBayCountGt := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayCountGte := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayCountLt := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayCountLte := []int32{int32(123)} // []int32 |  (optional)
-	moduleBayCountN := []int32{int32(123)} // []int32 |  (optional)
+	moduleBayCountGt := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayCountGte := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayCountLt := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayCountLte := []int64{int64(123)} // []int64 |  (optional)
+	moduleBayCountN := []int64{int64(123)} // []int64 |  (optional)
 	moduleBays := true // bool | Has module bays (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -9211,19 +9211,19 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
-	oobIpId := []int32{int32(123)} // []int32 | OOB IP (ID) (optional)
-	oobIpIdN := []int32{int32(123)} // []int32 | OOB IP (ID) (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
+	oobIpId := []int64{int64(123)} // []int64 | OOB IP (ID) (optional)
+	oobIpIdN := []int64{int64(123)} // []int64 | OOB IP (ID) (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	parentBayId := []int32{int32(123)} // []int32 | Parent bay (ID) (optional)
-	parentBayIdN := []int32{int32(123)} // []int32 | Parent bay (ID) (optional)
-	parentDeviceId := []int32{int32(123)} // []int32 | Parent Device (ID) (optional)
-	parentDeviceIdN := []int32{int32(123)} // []int32 | Parent Device (ID) (optional)
+	parentBayId := []int64{int64(123)} // []int64 | Parent bay (ID) (optional)
+	parentBayIdN := []int64{int64(123)} // []int64 | Parent bay (ID) (optional)
+	parentDeviceId := []int64{int64(123)} // []int64 | Parent Device (ID) (optional)
+	parentDeviceIdN := []int64{int64(123)} // []int64 | Parent Device (ID) (optional)
 	passThroughPorts := true // bool | Has pass-through ports (optional)
 	platform := []string{"Inner_example"} // []string | Platform (slug) (optional)
 	platformN := []string{"Inner_example"} // []string | Platform (slug) (optional)
-	platformId := []*int32{int32(123)} // []*int32 | Platform (ID) (optional)
-	platformIdN := []*int32{int32(123)} // []*int32 | Platform (ID) (optional)
+	platformId := []*int64{int64(123)} // []*int64 | Platform (ID) (optional)
+	platformIdN := []*int64{int64(123)} // []*int64 | Platform (ID) (optional)
 	position := []float64{float64(123)} // []float64 |  (optional)
 	positionEmpty := true // bool |  (optional)
 	positionGt := []float64{float64(123)} // []float64 |  (optional)
@@ -9231,44 +9231,44 @@ func main() {
 	positionLt := []float64{float64(123)} // []float64 |  (optional)
 	positionLte := []float64{float64(123)} // []float64 |  (optional)
 	positionN := []float64{float64(123)} // []float64 |  (optional)
-	powerOutletCount := []int32{int32(123)} // []int32 |  (optional)
+	powerOutletCount := []int64{int64(123)} // []int64 |  (optional)
 	powerOutletCountEmpty := true // bool |  (optional)
-	powerOutletCountGt := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletCountGte := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletCountLt := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletCountLte := []int32{int32(123)} // []int32 |  (optional)
-	powerOutletCountN := []int32{int32(123)} // []int32 |  (optional)
+	powerOutletCountGt := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletCountGte := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletCountLt := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletCountLte := []int64{int64(123)} // []int64 |  (optional)
+	powerOutletCountN := []int64{int64(123)} // []int64 |  (optional)
 	powerOutlets := true // bool | Has power outlets (optional)
-	powerPortCount := []int32{int32(123)} // []int32 |  (optional)
+	powerPortCount := []int64{int64(123)} // []int64 |  (optional)
 	powerPortCountEmpty := true // bool |  (optional)
-	powerPortCountGt := []int32{int32(123)} // []int32 |  (optional)
-	powerPortCountGte := []int32{int32(123)} // []int32 |  (optional)
-	powerPortCountLt := []int32{int32(123)} // []int32 |  (optional)
-	powerPortCountLte := []int32{int32(123)} // []int32 |  (optional)
-	powerPortCountN := []int32{int32(123)} // []int32 |  (optional)
+	powerPortCountGt := []int64{int64(123)} // []int64 |  (optional)
+	powerPortCountGte := []int64{int64(123)} // []int64 |  (optional)
+	powerPortCountLt := []int64{int64(123)} // []int64 |  (optional)
+	powerPortCountLte := []int64{int64(123)} // []int64 |  (optional)
+	powerPortCountN := []int64{int64(123)} // []int64 |  (optional)
 	powerPorts := true // bool | Has power ports (optional)
-	primaryIp4Id := []int32{int32(123)} // []int32 | Primary IPv4 (ID) (optional)
-	primaryIp4IdN := []int32{int32(123)} // []int32 | Primary IPv4 (ID) (optional)
-	primaryIp6Id := []int32{int32(123)} // []int32 | Primary IPv6 (ID) (optional)
-	primaryIp6IdN := []int32{int32(123)} // []int32 | Primary IPv6 (ID) (optional)
+	primaryIp4Id := []int64{int64(123)} // []int64 | Primary IPv4 (ID) (optional)
+	primaryIp4IdN := []int64{int64(123)} // []int64 | Primary IPv4 (ID) (optional)
+	primaryIp6Id := []int64{int64(123)} // []int64 | Primary IPv6 (ID) (optional)
+	primaryIp6IdN := []int64{int64(123)} // []int64 | Primary IPv6 (ID) (optional)
 	q := "q_example" // string | Search (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rearPortCount := []int32{int32(123)} // []int32 |  (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rearPortCount := []int64{int64(123)} // []int64 |  (optional)
 	rearPortCountEmpty := true // bool |  (optional)
-	rearPortCountGt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortCountGte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortCountLt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortCountLte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortCountN := []int32{int32(123)} // []int32 |  (optional)
+	rearPortCountGt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortCountGte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortCountLt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortCountLte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortCountN := []int64{int64(123)} // []int64 |  (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
 	regionIdN := []string{"Inner_example"} // []string |  (optional)
 	role := []string{"Inner_example"} // []string | Role (slug) (optional)
 	roleN := []string{"Inner_example"} // []string | Role (slug) (optional)
-	roleId := []int32{int32(123)} // []int32 | Role (ID) (optional)
-	roleIdN := []int32{int32(123)} // []int32 | Role (ID) (optional)
+	roleId := []int64{int64(123)} // []int64 | Role (ID) (optional)
+	roleIdN := []int64{int64(123)} // []int64 | Role (ID) (optional)
 	serial := []string{"Inner_example"} // []string |  (optional)
 	serialEmpty := true // bool |  (optional)
 	serialIc := []string{"Inner_example"} // []string |  (optional)
@@ -9286,8 +9286,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
 	statusEmpty := true // bool |  (optional)
 	statusIc := []string{"Inner_example"} // []string |  (optional)
@@ -9307,25 +9307,25 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	vcPosition := []int32{int32(123)} // []int32 |  (optional)
+	vcPosition := []int64{int64(123)} // []int64 |  (optional)
 	vcPositionEmpty := true // bool |  (optional)
-	vcPositionGt := []int32{int32(123)} // []int32 |  (optional)
-	vcPositionGte := []int32{int32(123)} // []int32 |  (optional)
-	vcPositionLt := []int32{int32(123)} // []int32 |  (optional)
-	vcPositionLte := []int32{int32(123)} // []int32 |  (optional)
-	vcPositionN := []int32{int32(123)} // []int32 |  (optional)
-	vcPriority := []int32{int32(123)} // []int32 |  (optional)
+	vcPositionGt := []int64{int64(123)} // []int64 |  (optional)
+	vcPositionGte := []int64{int64(123)} // []int64 |  (optional)
+	vcPositionLt := []int64{int64(123)} // []int64 |  (optional)
+	vcPositionLte := []int64{int64(123)} // []int64 |  (optional)
+	vcPositionN := []int64{int64(123)} // []int64 |  (optional)
+	vcPriority := []int64{int64(123)} // []int64 |  (optional)
 	vcPriorityEmpty := true // bool |  (optional)
-	vcPriorityGt := []int32{int32(123)} // []int32 |  (optional)
-	vcPriorityGte := []int32{int32(123)} // []int32 |  (optional)
-	vcPriorityLt := []int32{int32(123)} // []int32 |  (optional)
-	vcPriorityLte := []int32{int32(123)} // []int32 |  (optional)
-	vcPriorityN := []int32{int32(123)} // []int32 |  (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual chassis (ID) (optional)
+	vcPriorityGt := []int64{int64(123)} // []int64 |  (optional)
+	vcPriorityGte := []int64{int64(123)} // []int64 |  (optional)
+	vcPriorityLt := []int64{int64(123)} // []int64 |  (optional)
+	vcPriorityLte := []int64{int64(123)} // []int64 |  (optional)
+	vcPriorityN := []int64{int64(123)} // []int64 |  (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual chassis (ID) (optional)
 	virtualChassisMember := true // bool | Is a virtual chassis member (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -9365,34 +9365,34 @@ Name | Type | Description  | Notes
  **assetTagNisw** | **[]string** |  | 
  **clusterGroup** | **[]string** | Cluster group (slug) | 
  **clusterGroupN** | **[]string** | Cluster group (slug) | 
- **clusterGroupId** | **[]int32** | Cluster group (ID) | 
- **clusterGroupIdN** | **[]int32** | Cluster group (ID) | 
- **clusterId** | **[]int32** | VM cluster (ID) | 
- **clusterIdN** | **[]int32** | VM cluster (ID) | 
- **configTemplateId** | **[]int32** | Config template (ID) | 
- **configTemplateIdN** | **[]int32** | Config template (ID) | 
- **consolePortCount** | **[]int32** |  | 
+ **clusterGroupId** | **[]int64** | Cluster group (ID) | 
+ **clusterGroupIdN** | **[]int64** | Cluster group (ID) | 
+ **clusterId** | **[]int64** | VM cluster (ID) | 
+ **clusterIdN** | **[]int64** | VM cluster (ID) | 
+ **configTemplateId** | **[]int64** | Config template (ID) | 
+ **configTemplateIdN** | **[]int64** | Config template (ID) | 
+ **consolePortCount** | **[]int64** |  | 
  **consolePortCountEmpty** | **bool** |  | 
- **consolePortCountGt** | **[]int32** |  | 
- **consolePortCountGte** | **[]int32** |  | 
- **consolePortCountLt** | **[]int32** |  | 
- **consolePortCountLte** | **[]int32** |  | 
- **consolePortCountN** | **[]int32** |  | 
+ **consolePortCountGt** | **[]int64** |  | 
+ **consolePortCountGte** | **[]int64** |  | 
+ **consolePortCountLt** | **[]int64** |  | 
+ **consolePortCountLte** | **[]int64** |  | 
+ **consolePortCountN** | **[]int64** |  | 
  **consolePorts** | **bool** | Has console ports | 
- **consoleServerPortCount** | **[]int32** |  | 
+ **consoleServerPortCount** | **[]int64** |  | 
  **consoleServerPortCountEmpty** | **bool** |  | 
- **consoleServerPortCountGt** | **[]int32** |  | 
- **consoleServerPortCountGte** | **[]int32** |  | 
- **consoleServerPortCountLt** | **[]int32** |  | 
- **consoleServerPortCountLte** | **[]int32** |  | 
- **consoleServerPortCountN** | **[]int32** |  | 
+ **consoleServerPortCountGt** | **[]int64** |  | 
+ **consoleServerPortCountGte** | **[]int64** |  | 
+ **consoleServerPortCountLt** | **[]int64** |  | 
+ **consoleServerPortCountLte** | **[]int64** |  | 
+ **consoleServerPortCountN** | **[]int64** |  | 
  **consoleServerPorts** | **bool** | Has console server ports | 
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -9412,51 +9412,51 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceBayCount** | **[]int32** |  | 
+ **deviceBayCount** | **[]int64** |  | 
  **deviceBayCountEmpty** | **bool** |  | 
- **deviceBayCountGt** | **[]int32** |  | 
- **deviceBayCountGte** | **[]int32** |  | 
- **deviceBayCountLt** | **[]int32** |  | 
- **deviceBayCountLte** | **[]int32** |  | 
- **deviceBayCountN** | **[]int32** |  | 
+ **deviceBayCountGt** | **[]int64** |  | 
+ **deviceBayCountGte** | **[]int64** |  | 
+ **deviceBayCountLt** | **[]int64** |  | 
+ **deviceBayCountLte** | **[]int64** |  | 
+ **deviceBayCountN** | **[]int64** |  | 
  **deviceBays** | **bool** | Has device bays | 
  **deviceType** | **[]string** | Device type (slug) | 
  **deviceTypeN** | **[]string** | Device type (slug) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
  **face** | [**RackFace**](RackFace.md) | * &#x60;front&#x60; - Front * &#x60;rear&#x60; - Rear | 
- **frontPortCount** | **[]int32** |  | 
+ **frontPortCount** | **[]int64** |  | 
  **frontPortCountEmpty** | **bool** |  | 
- **frontPortCountGt** | **[]int32** |  | 
- **frontPortCountGte** | **[]int32** |  | 
- **frontPortCountLt** | **[]int32** |  | 
- **frontPortCountLte** | **[]int32** |  | 
- **frontPortCountN** | **[]int32** |  | 
+ **frontPortCountGt** | **[]int64** |  | 
+ **frontPortCountGte** | **[]int64** |  | 
+ **frontPortCountLt** | **[]int64** |  | 
+ **frontPortCountLte** | **[]int64** |  | 
+ **frontPortCountN** | **[]int64** |  | 
  **hasOobIp** | **bool** | Has an out-of-band IP | 
  **hasPrimaryIp** | **bool** | Has a primary IP | 
  **hasVirtualDeviceContext** | **bool** | Has virtual device context | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **interfaceCount** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
+ **interfaceCount** | **[]int64** |  | 
  **interfaceCountEmpty** | **bool** |  | 
- **interfaceCountGt** | **[]int32** |  | 
- **interfaceCountGte** | **[]int32** |  | 
- **interfaceCountLt** | **[]int32** |  | 
- **interfaceCountLte** | **[]int32** |  | 
- **interfaceCountN** | **[]int32** |  | 
+ **interfaceCountGt** | **[]int64** |  | 
+ **interfaceCountGte** | **[]int64** |  | 
+ **interfaceCountLt** | **[]int64** |  | 
+ **interfaceCountLte** | **[]int64** |  | 
+ **interfaceCountN** | **[]int64** |  | 
  **interfaces** | **bool** | Has interfaces | 
- **inventoryItemCount** | **[]int32** |  | 
+ **inventoryItemCount** | **[]int64** |  | 
  **inventoryItemCountEmpty** | **bool** |  | 
- **inventoryItemCountGt** | **[]int32** |  | 
- **inventoryItemCountGte** | **[]int32** |  | 
- **inventoryItemCountLt** | **[]int32** |  | 
- **inventoryItemCountLte** | **[]int32** |  | 
- **inventoryItemCountN** | **[]int32** |  | 
+ **inventoryItemCountGt** | **[]int64** |  | 
+ **inventoryItemCountGte** | **[]int64** |  | 
+ **inventoryItemCountLt** | **[]int64** |  | 
+ **inventoryItemCountLte** | **[]int64** |  | 
+ **inventoryItemCountN** | **[]int64** |  | 
  **isFullDepth** | **bool** | Is full depth | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
@@ -9472,7 +9472,7 @@ Name | Type | Description  | Notes
  **latitudeLt** | **[]float64** |  | 
  **latitudeLte** | **[]float64** |  | 
  **latitudeN** | **[]float64** |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **localContextData** | **bool** | Has local config context data | 
  **locationId** | **[]string** |  | 
  **locationIdN** | **[]string** |  | 
@@ -9495,18 +9495,18 @@ Name | Type | Description  | Notes
  **macAddressNisw** | **[]string** |  | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
  **model** | **[]string** | Device model (slug) | 
  **modelN** | **[]string** | Device model (slug) | 
  **modifiedByRequest** | **string** |  | 
- **moduleBayCount** | **[]int32** |  | 
+ **moduleBayCount** | **[]int64** |  | 
  **moduleBayCountEmpty** | **bool** |  | 
- **moduleBayCountGt** | **[]int32** |  | 
- **moduleBayCountGte** | **[]int32** |  | 
- **moduleBayCountLt** | **[]int32** |  | 
- **moduleBayCountLte** | **[]int32** |  | 
- **moduleBayCountN** | **[]int32** |  | 
+ **moduleBayCountGt** | **[]int64** |  | 
+ **moduleBayCountGte** | **[]int64** |  | 
+ **moduleBayCountLt** | **[]int64** |  | 
+ **moduleBayCountLte** | **[]int64** |  | 
+ **moduleBayCountN** | **[]int64** |  | 
  **moduleBays** | **bool** | Has module bays | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -9519,19 +9519,19 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
- **oobIpId** | **[]int32** | OOB IP (ID) | 
- **oobIpIdN** | **[]int32** | OOB IP (ID) | 
+ **offset** | **int64** | The initial index from which to return the results. | 
+ **oobIpId** | **[]int64** | OOB IP (ID) | 
+ **oobIpIdN** | **[]int64** | OOB IP (ID) | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **parentBayId** | **[]int32** | Parent bay (ID) | 
- **parentBayIdN** | **[]int32** | Parent bay (ID) | 
- **parentDeviceId** | **[]int32** | Parent Device (ID) | 
- **parentDeviceIdN** | **[]int32** | Parent Device (ID) | 
+ **parentBayId** | **[]int64** | Parent bay (ID) | 
+ **parentBayIdN** | **[]int64** | Parent bay (ID) | 
+ **parentDeviceId** | **[]int64** | Parent Device (ID) | 
+ **parentDeviceIdN** | **[]int64** | Parent Device (ID) | 
  **passThroughPorts** | **bool** | Has pass-through ports | 
  **platform** | **[]string** | Platform (slug) | 
  **platformN** | **[]string** | Platform (slug) | 
- **platformId** | **[]int32** | Platform (ID) | 
- **platformIdN** | **[]int32** | Platform (ID) | 
+ **platformId** | **[]int64** | Platform (ID) | 
+ **platformIdN** | **[]int64** | Platform (ID) | 
  **position** | **[]float64** |  | 
  **positionEmpty** | **bool** |  | 
  **positionGt** | **[]float64** |  | 
@@ -9539,44 +9539,44 @@ Name | Type | Description  | Notes
  **positionLt** | **[]float64** |  | 
  **positionLte** | **[]float64** |  | 
  **positionN** | **[]float64** |  | 
- **powerOutletCount** | **[]int32** |  | 
+ **powerOutletCount** | **[]int64** |  | 
  **powerOutletCountEmpty** | **bool** |  | 
- **powerOutletCountGt** | **[]int32** |  | 
- **powerOutletCountGte** | **[]int32** |  | 
- **powerOutletCountLt** | **[]int32** |  | 
- **powerOutletCountLte** | **[]int32** |  | 
- **powerOutletCountN** | **[]int32** |  | 
+ **powerOutletCountGt** | **[]int64** |  | 
+ **powerOutletCountGte** | **[]int64** |  | 
+ **powerOutletCountLt** | **[]int64** |  | 
+ **powerOutletCountLte** | **[]int64** |  | 
+ **powerOutletCountN** | **[]int64** |  | 
  **powerOutlets** | **bool** | Has power outlets | 
- **powerPortCount** | **[]int32** |  | 
+ **powerPortCount** | **[]int64** |  | 
  **powerPortCountEmpty** | **bool** |  | 
- **powerPortCountGt** | **[]int32** |  | 
- **powerPortCountGte** | **[]int32** |  | 
- **powerPortCountLt** | **[]int32** |  | 
- **powerPortCountLte** | **[]int32** |  | 
- **powerPortCountN** | **[]int32** |  | 
+ **powerPortCountGt** | **[]int64** |  | 
+ **powerPortCountGte** | **[]int64** |  | 
+ **powerPortCountLt** | **[]int64** |  | 
+ **powerPortCountLte** | **[]int64** |  | 
+ **powerPortCountN** | **[]int64** |  | 
  **powerPorts** | **bool** | Has power ports | 
- **primaryIp4Id** | **[]int32** | Primary IPv4 (ID) | 
- **primaryIp4IdN** | **[]int32** | Primary IPv4 (ID) | 
- **primaryIp6Id** | **[]int32** | Primary IPv6 (ID) | 
- **primaryIp6IdN** | **[]int32** | Primary IPv6 (ID) | 
+ **primaryIp4Id** | **[]int64** | Primary IPv4 (ID) | 
+ **primaryIp4IdN** | **[]int64** | Primary IPv4 (ID) | 
+ **primaryIp6Id** | **[]int64** | Primary IPv6 (ID) | 
+ **primaryIp6IdN** | **[]int64** | Primary IPv6 (ID) | 
  **q** | **string** | Search | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
- **rearPortCount** | **[]int32** |  | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
+ **rearPortCount** | **[]int64** |  | 
  **rearPortCountEmpty** | **bool** |  | 
- **rearPortCountGt** | **[]int32** |  | 
- **rearPortCountGte** | **[]int32** |  | 
- **rearPortCountLt** | **[]int32** |  | 
- **rearPortCountLte** | **[]int32** |  | 
- **rearPortCountN** | **[]int32** |  | 
+ **rearPortCountGt** | **[]int64** |  | 
+ **rearPortCountGte** | **[]int64** |  | 
+ **rearPortCountLt** | **[]int64** |  | 
+ **rearPortCountLte** | **[]int64** |  | 
+ **rearPortCountN** | **[]int64** |  | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
  **regionIdN** | **[]string** |  | 
  **role** | **[]string** | Role (slug) | 
  **roleN** | **[]string** | Role (slug) | 
- **roleId** | **[]int32** | Role (ID) | 
- **roleIdN** | **[]int32** | Role (ID) | 
+ **roleId** | **[]int64** | Role (ID) | 
+ **roleIdN** | **[]int64** | Role (ID) | 
  **serial** | **[]string** |  | 
  **serialEmpty** | **bool** |  | 
  **serialIc** | **[]string** |  | 
@@ -9594,8 +9594,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **status** | **[]string** |  | 
  **statusEmpty** | **bool** |  | 
  **statusIc** | **[]string** |  | 
@@ -9615,25 +9615,25 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **updatedByRequest** | **string** |  | 
- **vcPosition** | **[]int32** |  | 
+ **vcPosition** | **[]int64** |  | 
  **vcPositionEmpty** | **bool** |  | 
- **vcPositionGt** | **[]int32** |  | 
- **vcPositionGte** | **[]int32** |  | 
- **vcPositionLt** | **[]int32** |  | 
- **vcPositionLte** | **[]int32** |  | 
- **vcPositionN** | **[]int32** |  | 
- **vcPriority** | **[]int32** |  | 
+ **vcPositionGt** | **[]int64** |  | 
+ **vcPositionGte** | **[]int64** |  | 
+ **vcPositionLt** | **[]int64** |  | 
+ **vcPositionLte** | **[]int64** |  | 
+ **vcPositionN** | **[]int64** |  | 
+ **vcPriority** | **[]int64** |  | 
  **vcPriorityEmpty** | **bool** |  | 
- **vcPriorityGt** | **[]int32** |  | 
- **vcPriorityGte** | **[]int32** |  | 
- **vcPriorityLt** | **[]int32** |  | 
- **vcPriorityLte** | **[]int32** |  | 
- **vcPriorityN** | **[]int32** |  | 
- **virtualChassisId** | **[]int32** | Virtual chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual chassis (ID) | 
+ **vcPriorityGt** | **[]int64** |  | 
+ **vcPriorityGte** | **[]int64** |  | 
+ **vcPriorityLt** | **[]int64** |  | 
+ **vcPriorityLte** | **[]int64** |  | 
+ **vcPriorityN** | **[]int64** |  | 
+ **virtualChassisId** | **[]int64** | Virtual chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual chassis (ID) | 
  **virtualChassisMember** | **bool** | Is a virtual chassis member | 
 
 ### Return type
@@ -9675,7 +9675,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device.
+	id := int64(56) // int64 | A unique integer value identifying this device.
 	patchedWritableDeviceWithConfigContextRequest := *openapiclient.NewPatchedWritableDeviceWithConfigContextRequest() // PatchedWritableDeviceWithConfigContextRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -9696,7 +9696,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device. | 
+**id** | **int64** | A unique integer value identifying this device. | 
 
 ### Other Parameters
 
@@ -9747,7 +9747,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device.
+	id := int64(56) // int64 | A unique integer value identifying this device.
 	writableDeviceWithConfigContextRequest := *openapiclient.NewWritableDeviceWithConfigContextRequest(*openapiclient.NewBriefDeviceTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example", "Slug_example"), *openapiclient.NewBriefDeviceRoleRequest("Name_example", "Slug_example"), *openapiclient.NewBriefSiteRequest("Name_example", "Slug_example")) // WritableDeviceWithConfigContextRequest | 
 	format := openapiclient.dcim_devices_render_config_create_format_parameter("json") // DcimDevicesRenderConfigCreateFormatParameter |  (optional)
 
@@ -9769,7 +9769,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device. | 
+**id** | **int64** | A unique integer value identifying this device. | 
 
 ### Other Parameters
 
@@ -9821,7 +9821,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device.
+	id := int64(56) // int64 | A unique integer value identifying this device.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -9841,7 +9841,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device. | 
+**id** | **int64** | A unique integer value identifying this device. | 
 
 ### Other Parameters
 
@@ -9891,7 +9891,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this device.
+	id := int64(56) // int64 | A unique integer value identifying this device.
 	writableDeviceWithConfigContextRequest := *openapiclient.NewWritableDeviceWithConfigContextRequest(*openapiclient.NewBriefDeviceTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example", "Slug_example"), *openapiclient.NewBriefDeviceRoleRequest("Name_example", "Slug_example"), *openapiclient.NewBriefSiteRequest("Name_example", "Slug_example")) // WritableDeviceWithConfigContextRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -9912,7 +9912,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this device. | 
+**id** | **int64** | A unique integer value identifying this device. | 
 
 ### Other Parameters
 
@@ -10225,7 +10225,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port template.
+	id := int64(56) // int64 | A unique integer value identifying this front port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10243,7 +10243,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port template. | 
+**id** | **int64** | A unique integer value identifying this front port template. | 
 
 ### Other Parameters
 
@@ -10324,15 +10324,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -10351,10 +10351,10 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -10366,18 +10366,18 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
-	rearPortId := []int32{int32(123)} // []int32 |  (optional)
-	rearPortIdN := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPosition := []int32{int32(123)} // []int32 |  (optional)
+	rearPortId := []int64{int64(123)} // []int64 |  (optional)
+	rearPortIdN := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPosition := []int64{int64(123)} // []int64 |  (optional)
 	rearPortPositionEmpty := true // bool |  (optional)
-	rearPortPositionGt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionGte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionLt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionLte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionN := []int32{int32(123)} // []int32 |  (optional)
+	rearPortPositionGt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionGte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionLt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionLte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionN := []int64{int64(123)} // []int64 |  (optional)
 	type_ := []string{"Inner_example"} // []string |  (optional)
 	typeEmpty := true // bool |  (optional)
 	typeIc := []string{"Inner_example"} // []string |  (optional)
@@ -10444,15 +10444,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -10471,10 +10471,10 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -10486,18 +10486,18 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
- **rearPortId** | **[]int32** |  | 
- **rearPortIdN** | **[]int32** |  | 
- **rearPortPosition** | **[]int32** |  | 
+ **rearPortId** | **[]int64** |  | 
+ **rearPortIdN** | **[]int64** |  | 
+ **rearPortPosition** | **[]int64** |  | 
  **rearPortPositionEmpty** | **bool** |  | 
- **rearPortPositionGt** | **[]int32** |  | 
- **rearPortPositionGte** | **[]int32** |  | 
- **rearPortPositionLt** | **[]int32** |  | 
- **rearPortPositionLte** | **[]int32** |  | 
- **rearPortPositionN** | **[]int32** |  | 
+ **rearPortPositionGt** | **[]int64** |  | 
+ **rearPortPositionGte** | **[]int64** |  | 
+ **rearPortPositionLt** | **[]int64** |  | 
+ **rearPortPositionLte** | **[]int64** |  | 
+ **rearPortPositionN** | **[]int64** |  | 
  **type_** | **[]string** |  | 
  **typeEmpty** | **bool** |  | 
  **typeIc** | **[]string** |  | 
@@ -10550,7 +10550,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port template.
+	id := int64(56) // int64 | A unique integer value identifying this front port template.
 	patchedWritableFrontPortTemplateRequest := *openapiclient.NewPatchedWritableFrontPortTemplateRequest() // PatchedWritableFrontPortTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -10571,7 +10571,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port template. | 
+**id** | **int64** | A unique integer value identifying this front port template. | 
 
 ### Other Parameters
 
@@ -10622,7 +10622,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port template.
+	id := int64(56) // int64 | A unique integer value identifying this front port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10642,7 +10642,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port template. | 
+**id** | **int64** | A unique integer value identifying this front port template. | 
 
 ### Other Parameters
 
@@ -10692,7 +10692,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port template.
+	id := int64(56) // int64 | A unique integer value identifying this front port template.
 	writableFrontPortTemplateRequest := *openapiclient.NewWritableFrontPortTemplateRequest("Name_example", openapiclient.FrontPort_type_value("8p8c"), *openapiclient.NewBriefRearPortTemplateRequest("Name_example")) // WritableFrontPortTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -10713,7 +10713,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port template. | 
+**id** | **int64** | A unique integer value identifying this front port template. | 
 
 ### Other Parameters
 
@@ -10960,7 +10960,7 @@ import (
 )
 
 func main() {
-	writableFrontPortRequest := *openapiclient.NewWritableFrontPortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example", openapiclient.FrontPort_type_value("8p8c"), int32(123)) // WritableFrontPortRequest | 
+	writableFrontPortRequest := *openapiclient.NewWritableFrontPortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example", openapiclient.FrontPort_type_value("8p8c"), int64(123)) // WritableFrontPortRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11026,7 +11026,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port.
+	id := int64(56) // int64 | A unique integer value identifying this front port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11044,7 +11044,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port. | 
+**id** | **int64** | A unique integer value identifying this front port. | 
 
 ### Other Parameters
 
@@ -11096,8 +11096,8 @@ import (
 
 func main() {
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	color := []string{"Inner_example"} // []string |  (optional)
 	colorEmpty := true // bool |  (optional)
@@ -11131,12 +11131,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -11150,15 +11150,15 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -11177,15 +11177,15 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	markConnected := true // bool |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -11198,22 +11198,22 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rearPortId := []int32{int32(123)} // []int32 |  (optional)
-	rearPortIdN := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPosition := []int32{int32(123)} // []int32 |  (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rearPortId := []int64{int64(123)} // []int64 |  (optional)
+	rearPortIdN := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPosition := []int64{int64(123)} // []int64 |  (optional)
 	rearPortPositionEmpty := true // bool |  (optional)
-	rearPortPositionGt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionGte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionLt := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionLte := []int32{int32(123)} // []int32 |  (optional)
-	rearPortPositionN := []int32{int32(123)} // []int32 |  (optional)
+	rearPortPositionGt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionGte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionLt := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionLte := []int64{int64(123)} // []int64 |  (optional)
+	rearPortPositionN := []int64{int64(123)} // []int64 |  (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -11224,8 +11224,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	type_ := []string{"Inner_example"} // []string |  (optional)
@@ -11242,8 +11242,8 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11269,8 +11269,8 @@ Other parameters are passed through a pointer to a apiDcimFrontPortsListRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **color** | **[]string** |  | 
  **colorEmpty** | **bool** |  | 
@@ -11304,12 +11304,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -11323,15 +11323,15 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -11350,15 +11350,15 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **markConnected** | **bool** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -11371,22 +11371,22 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
- **rearPortId** | **[]int32** |  | 
- **rearPortIdN** | **[]int32** |  | 
- **rearPortPosition** | **[]int32** |  | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
+ **rearPortId** | **[]int64** |  | 
+ **rearPortIdN** | **[]int64** |  | 
+ **rearPortPosition** | **[]int64** |  | 
  **rearPortPositionEmpty** | **bool** |  | 
- **rearPortPositionGt** | **[]int32** |  | 
- **rearPortPositionGte** | **[]int32** |  | 
- **rearPortPositionLt** | **[]int32** |  | 
- **rearPortPositionLte** | **[]int32** |  | 
- **rearPortPositionN** | **[]int32** |  | 
+ **rearPortPositionGt** | **[]int64** |  | 
+ **rearPortPositionGte** | **[]int64** |  | 
+ **rearPortPositionLt** | **[]int64** |  | 
+ **rearPortPositionLte** | **[]int64** |  | 
+ **rearPortPositionN** | **[]int64** |  | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -11397,8 +11397,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **type_** | **[]string** |  | 
@@ -11415,8 +11415,8 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -11457,7 +11457,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port.
+	id := int64(56) // int64 | A unique integer value identifying this front port.
 	patchedWritableFrontPortRequest := *openapiclient.NewPatchedWritableFrontPortRequest() // PatchedWritableFrontPortRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -11478,7 +11478,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port. | 
+**id** | **int64** | A unique integer value identifying this front port. | 
 
 ### Other Parameters
 
@@ -11529,7 +11529,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port.
+	id := int64(56) // int64 | A unique integer value identifying this front port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11549,7 +11549,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port. | 
+**id** | **int64** | A unique integer value identifying this front port. | 
 
 ### Other Parameters
 
@@ -11599,7 +11599,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port.
+	id := int64(56) // int64 | A unique integer value identifying this front port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11619,7 +11619,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port. | 
+**id** | **int64** | A unique integer value identifying this front port. | 
 
 ### Other Parameters
 
@@ -11669,8 +11669,8 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this front port.
-	writableFrontPortRequest := *openapiclient.NewWritableFrontPortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example", openapiclient.FrontPort_type_value("8p8c"), int32(123)) // WritableFrontPortRequest | 
+	id := int64(56) // int64 | A unique integer value identifying this front port.
+	writableFrontPortRequest := *openapiclient.NewWritableFrontPortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example", openapiclient.FrontPort_type_value("8p8c"), int64(123)) // WritableFrontPortRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11690,7 +11690,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this front port. | 
+**id** | **int64** | A unique integer value identifying this front port. | 
 
 ### Other Parameters
 
@@ -12003,7 +12003,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface template.
+	id := int64(56) // int64 | A unique integer value identifying this interface template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -12021,7 +12021,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface template. | 
+**id** | **int64** | A unique integer value identifying this interface template. | 
 
 ### Other Parameters
 
@@ -12072,8 +12072,8 @@ import (
 )
 
 func main() {
-	bridgeId := []int32{int32(123)} // []int32 |  (optional)
-	bridgeIdN := []int32{int32(123)} // []int32 |  (optional)
+	bridgeId := []int64{int64(123)} // []int64 |  (optional)
+	bridgeIdN := []int64{int64(123)} // []int64 |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -12093,16 +12093,16 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
 	enabled := true // bool |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -12121,11 +12121,11 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	mgmtOnly := true // bool |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -12137,7 +12137,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	poeMode := []*string{"Inner_example"} // []*string |  (optional)
 	poeModeEmpty := true // bool |  (optional)
@@ -12209,8 +12209,8 @@ Other parameters are passed through a pointer to a apiDcimInterfaceTemplatesList
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bridgeId** | **[]int32** |  | 
- **bridgeIdN** | **[]int32** |  | 
+ **bridgeId** | **[]int64** |  | 
+ **bridgeIdN** | **[]int64** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -12230,16 +12230,16 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
  **enabled** | **bool** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -12258,11 +12258,11 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **mgmtOnly** | **bool** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -12274,7 +12274,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **poeMode** | **[]string** |  | 
  **poeModeEmpty** | **bool** |  | 
@@ -12362,7 +12362,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface template.
+	id := int64(56) // int64 | A unique integer value identifying this interface template.
 	patchedWritableInterfaceTemplateRequest := *openapiclient.NewPatchedWritableInterfaceTemplateRequest() // PatchedWritableInterfaceTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -12383,7 +12383,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface template. | 
+**id** | **int64** | A unique integer value identifying this interface template. | 
 
 ### Other Parameters
 
@@ -12434,7 +12434,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface template.
+	id := int64(56) // int64 | A unique integer value identifying this interface template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -12454,7 +12454,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface template. | 
+**id** | **int64** | A unique integer value identifying this interface template. | 
 
 ### Other Parameters
 
@@ -12504,7 +12504,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface template.
+	id := int64(56) // int64 | A unique integer value identifying this interface template.
 	writableInterfaceTemplateRequest := *openapiclient.NewWritableInterfaceTemplateRequest("Name_example", openapiclient.Interface_type_value("virtual")) // WritableInterfaceTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -12525,7 +12525,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface template. | 
+**id** | **int64** | A unique integer value identifying this interface template. | 
 
 ### Other Parameters
 
@@ -12838,7 +12838,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface.
+	id := int64(56) // int64 | A unique integer value identifying this interface.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -12856,7 +12856,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface. | 
+**id** | **int64** | A unique integer value identifying this interface. | 
 
 ### Other Parameters
 
@@ -12907,11 +12907,11 @@ import (
 )
 
 func main() {
-	bridgeId := []int32{int32(123)} // []int32 | Bridged interface (ID) (optional)
-	bridgeIdN := []int32{int32(123)} // []int32 | Bridged interface (ID) (optional)
+	bridgeId := []int64{int64(123)} // []int64 | Bridged interface (ID) (optional)
+	bridgeIdN := []int64{int64(123)} // []int64 | Bridged interface (ID) (optional)
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	connected := true // bool |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -12935,12 +12935,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -12954,8 +12954,8 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
 	duplex := []*string{"Inner_example"} // []*string |  (optional)
 	duplexEmpty := true // bool |  (optional)
 	duplexIc := []*string{"Inner_example"} // []*string |  (optional)
@@ -12968,18 +12968,18 @@ func main() {
 	duplexNiew := []*string{"Inner_example"} // []*string |  (optional)
 	duplexNisw := []*string{"Inner_example"} // []*string |  (optional)
 	enabled := true // bool |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	kind := "kind_example" // string | Kind of interface (optional)
 	l2vpn := []*int64{int64(123)} // []*int64 | L2VPN (optional)
 	l2vpnN := []*int64{int64(123)} // []*int64 | L2VPN (optional)
-	l2vpnId := []int32{int32(123)} // []int32 | L2VPN (ID) (optional)
-	l2vpnIdN := []int32{int32(123)} // []int32 | L2VPN (ID) (optional)
+	l2vpnId := []int64{int64(123)} // []int64 | L2VPN (ID) (optional)
+	l2vpnIdN := []int64{int64(123)} // []int64 | L2VPN (ID) (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -12991,8 +12991,8 @@ func main() {
 	labelNie := []string{"Inner_example"} // []string |  (optional)
 	labelNiew := []string{"Inner_example"} // []string |  (optional)
 	labelNisw := []string{"Inner_example"} // []string |  (optional)
-	lagId := []int32{int32(123)} // []int32 | LAG interface (ID) (optional)
-	lagIdN := []int32{int32(123)} // []int32 | LAG interface (ID) (optional)
+	lagId := []int64{int64(123)} // []int64 | LAG interface (ID) (optional)
+	lagIdN := []int64{int64(123)} // []int64 | LAG interface (ID) (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -13000,11 +13000,11 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	macAddress := []string{"Inner_example"} // []string |  (optional)
 	macAddressIc := []string{"Inner_example"} // []string |  (optional)
 	macAddressIe := []string{"Inner_example"} // []string |  (optional)
@@ -13019,15 +13019,15 @@ func main() {
 	mgmtOnly := true // bool |  (optional)
 	mode := openapiclient.dcim_interfaces_list_mode_parameter("access") // DcimInterfacesListModeParameter | IEEE 802.1Q tagging strategy  * `access` - Access * `tagged` - Tagged * `tagged-all` - Tagged (All) * `q-in-q` - Q-in-Q (802.1ad) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	mtu := []int32{int32(123)} // []int32 |  (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	mtu := []int64{int64(123)} // []int64 |  (optional)
 	mtuEmpty := true // bool |  (optional)
-	mtuGt := []int32{int32(123)} // []int32 |  (optional)
-	mtuGte := []int32{int32(123)} // []int32 |  (optional)
-	mtuLt := []int32{int32(123)} // []int32 |  (optional)
-	mtuLte := []int32{int32(123)} // []int32 |  (optional)
-	mtuN := []int32{int32(123)} // []int32 |  (optional)
+	mtuGt := []int64{int64(123)} // []int64 |  (optional)
+	mtuGte := []int64{int64(123)} // []int64 |  (optional)
+	mtuLt := []int64{int64(123)} // []int64 |  (optional)
+	mtuLte := []int64{int64(123)} // []int64 |  (optional)
+	mtuN := []int64{int64(123)} // []int64 |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -13040,10 +13040,10 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	parentId := []int32{int32(123)} // []int32 | Parent interface (ID) (optional)
-	parentIdN := []int32{int32(123)} // []int32 | Parent interface (ID) (optional)
+	parentId := []int64{int64(123)} // []int64 | Parent interface (ID) (optional)
+	parentIdN := []int64{int64(123)} // []int64 | Parent interface (ID) (optional)
 	poeMode := []*string{"Inner_example"} // []*string |  (optional)
 	poeModeEmpty := true // bool |  (optional)
 	poeModeIc := []*string{"Inner_example"} // []*string |  (optional)
@@ -13068,13 +13068,13 @@ func main() {
 	poeTypeNisw := []*string{"Inner_example"} // []*string |  (optional)
 	primaryMacAddress := []string{"Inner_example"} // []string | Primary MAC address (optional)
 	primaryMacAddressN := []string{"Inner_example"} // []string | Primary MAC address (optional)
-	primaryMacAddressId := []int32{int32(123)} // []int32 | Primary MAC address (ID) (optional)
-	primaryMacAddressIdN := []int32{int32(123)} // []int32 | Primary MAC address (ID) (optional)
+	primaryMacAddressId := []int64{int64(123)} // []int64 | Primary MAC address (ID) (optional)
+	primaryMacAddressIdN := []int64{int64(123)} // []int64 | Primary MAC address (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -13121,24 +13121,24 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	speed := []int32{int32(123)} // []int32 |  (optional)
-	speedEmpty := []int32{int32(123)} // []int32 |  (optional)
-	speedGt := []int32{int32(123)} // []int32 |  (optional)
-	speedGte := []int32{int32(123)} // []int32 |  (optional)
-	speedLt := []int32{int32(123)} // []int32 |  (optional)
-	speedLte := []int32{int32(123)} // []int32 |  (optional)
-	speedN := []int32{int32(123)} // []int32 |  (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	speed := []int64{int64(123)} // []int64 |  (optional)
+	speedEmpty := []int64{int64(123)} // []int64 |  (optional)
+	speedGt := []int64{int64(123)} // []int64 |  (optional)
+	speedGte := []int64{int64(123)} // []int64 |  (optional)
+	speedLt := []int64{int64(123)} // []int64 |  (optional)
+	speedLte := []int64{int64(123)} // []int64 |  (optional)
+	speedN := []int64{int64(123)} // []int64 |  (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
-	txPower := []int32{int32(123)} // []int32 |  (optional)
+	txPower := []int64{int64(123)} // []int64 |  (optional)
 	txPowerEmpty := true // bool |  (optional)
-	txPowerGt := []int32{int32(123)} // []int32 |  (optional)
-	txPowerGte := []int32{int32(123)} // []int32 |  (optional)
-	txPowerLt := []int32{int32(123)} // []int32 |  (optional)
-	txPowerLte := []int32{int32(123)} // []int32 |  (optional)
-	txPowerN := []int32{int32(123)} // []int32 |  (optional)
+	txPowerGt := []int64{int64(123)} // []int64 |  (optional)
+	txPowerGte := []int64{int64(123)} // []int64 |  (optional)
+	txPowerLt := []int64{int64(123)} // []int64 |  (optional)
+	txPowerLte := []int64{int64(123)} // []int64 |  (optional)
+	txPowerN := []int64{int64(123)} // []int64 |  (optional)
 	type_ := []string{"Inner_example"} // []string |  (optional)
 	typeEmpty := true // bool |  (optional)
 	typeIc := []string{"Inner_example"} // []string |  (optional)
@@ -13153,34 +13153,34 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	vdc := []string{"Inner_example"} // []string | Virtual Device Context (optional)
 	vdcN := []string{"Inner_example"} // []string | Virtual Device Context (optional)
-	vdcId := []int32{int32(123)} // []int32 | Virtual Device Context (optional)
-	vdcIdN := []int32{int32(123)} // []int32 | Virtual Device Context (optional)
-	vdcIdentifier := []*int32{int32(123)} // []*int32 | Virtual Device Context (Identifier) (optional)
-	vdcIdentifierN := []*int32{int32(123)} // []*int32 | Virtual Device Context (Identifier) (optional)
+	vdcId := []int64{int64(123)} // []int64 | Virtual Device Context (optional)
+	vdcIdN := []int64{int64(123)} // []int64 | Virtual Device Context (optional)
+	vdcIdentifier := []*int64{int64(123)} // []*int64 | Virtual Device Context (Identifier) (optional)
+	vdcIdentifierN := []*int64{int64(123)} // []*int64 | Virtual Device Context (Identifier) (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 	virtualChassisMember := []string{"Inner_example"} // []string |  (optional)
-	virtualChassisMemberId := []int32{int32(123)} // []int32 |  (optional)
-	virtualCircuitId := []int32{int32(123)} // []int32 | Virtual circuit (ID) (optional)
-	virtualCircuitIdN := []int32{int32(123)} // []int32 | Virtual circuit (ID) (optional)
-	virtualCircuitTerminationId := []int32{int32(123)} // []int32 | Virtual circuit termination (ID) (optional)
-	virtualCircuitTerminationIdN := []int32{int32(123)} // []int32 | Virtual circuit termination (ID) (optional)
+	virtualChassisMemberId := []int64{int64(123)} // []int64 |  (optional)
+	virtualCircuitId := []int64{int64(123)} // []int64 | Virtual circuit (ID) (optional)
+	virtualCircuitIdN := []int64{int64(123)} // []int64 | Virtual circuit (ID) (optional)
+	virtualCircuitTerminationId := []int64{int64(123)} // []int64 | Virtual circuit termination (ID) (optional)
+	virtualCircuitTerminationIdN := []int64{int64(123)} // []int64 | Virtual circuit termination (ID) (optional)
 	vlan := "vlan_example" // string | Assigned VID (optional)
 	vlanId := "vlanId_example" // string | Assigned VLAN (optional)
 	vlanTranslationPolicy := []string{"Inner_example"} // []string | VLAN Translation Policy (optional)
 	vlanTranslationPolicyN := []string{"Inner_example"} // []string | VLAN Translation Policy (optional)
-	vlanTranslationPolicyId := []int32{int32(123)} // []int32 | VLAN Translation Policy (ID) (optional)
-	vlanTranslationPolicyIdN := []int32{int32(123)} // []int32 | VLAN Translation Policy (ID) (optional)
+	vlanTranslationPolicyId := []int64{int64(123)} // []int64 | VLAN Translation Policy (ID) (optional)
+	vlanTranslationPolicyIdN := []int64{int64(123)} // []int64 | VLAN Translation Policy (ID) (optional)
 	vrf := []*string{"Inner_example"} // []*string | VRF (RD) (optional)
 	vrfN := []*string{"Inner_example"} // []*string | VRF (RD) (optional)
-	vrfId := []int32{int32(123)} // []int32 | VRF (optional)
-	vrfIdN := []int32{int32(123)} // []int32 | VRF (optional)
-	wirelessLanId := []int32{int32(123)} // []int32 | Wireless LAN (optional)
-	wirelessLanIdN := []int32{int32(123)} // []int32 | Wireless LAN (optional)
-	wirelessLinkId := []*int32{int32(123)} // []*int32 | Wireless link (optional)
-	wirelessLinkIdN := []*int32{int32(123)} // []*int32 | Wireless link (optional)
+	vrfId := []int64{int64(123)} // []int64 | VRF (optional)
+	vrfIdN := []int64{int64(123)} // []int64 | VRF (optional)
+	wirelessLanId := []int64{int64(123)} // []int64 | Wireless LAN (optional)
+	wirelessLanIdN := []int64{int64(123)} // []int64 | Wireless LAN (optional)
+	wirelessLinkId := []*int64{int64(123)} // []*int64 | Wireless link (optional)
+	wirelessLinkIdN := []*int64{int64(123)} // []*int64 | Wireless link (optional)
 	wwn := []string{"Inner_example"} // []string |  (optional)
 	wwnIc := []string{"Inner_example"} // []string |  (optional)
 	wwnIe := []string{"Inner_example"} // []string |  (optional)
@@ -13215,11 +13215,11 @@ Other parameters are passed through a pointer to a apiDcimInterfacesListRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bridgeId** | **[]int32** | Bridged interface (ID) | 
- **bridgeIdN** | **[]int32** | Bridged interface (ID) | 
+ **bridgeId** | **[]int64** | Bridged interface (ID) | 
+ **bridgeIdN** | **[]int64** | Bridged interface (ID) | 
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **connected** | **bool** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -13243,12 +13243,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -13262,8 +13262,8 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
  **duplex** | **[]string** |  | 
  **duplexEmpty** | **bool** |  | 
  **duplexIc** | **[]string** |  | 
@@ -13276,18 +13276,18 @@ Name | Type | Description  | Notes
  **duplexNiew** | **[]string** |  | 
  **duplexNisw** | **[]string** |  | 
  **enabled** | **bool** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **kind** | **string** | Kind of interface | 
  **l2vpn** | **[]int64** | L2VPN | 
  **l2vpnN** | **[]int64** | L2VPN | 
- **l2vpnId** | **[]int32** | L2VPN (ID) | 
- **l2vpnIdN** | **[]int32** | L2VPN (ID) | 
+ **l2vpnId** | **[]int64** | L2VPN (ID) | 
+ **l2vpnIdN** | **[]int64** | L2VPN (ID) | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -13299,8 +13299,8 @@ Name | Type | Description  | Notes
  **labelNie** | **[]string** |  | 
  **labelNiew** | **[]string** |  | 
  **labelNisw** | **[]string** |  | 
- **lagId** | **[]int32** | LAG interface (ID) | 
- **lagIdN** | **[]int32** | LAG interface (ID) | 
+ **lagId** | **[]int64** | LAG interface (ID) | 
+ **lagIdN** | **[]int64** | LAG interface (ID) | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -13308,11 +13308,11 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **macAddress** | **[]string** |  | 
  **macAddressIc** | **[]string** |  | 
  **macAddressIe** | **[]string** |  | 
@@ -13327,15 +13327,15 @@ Name | Type | Description  | Notes
  **mgmtOnly** | **bool** |  | 
  **mode** | [**DcimInterfacesListModeParameter**](DcimInterfacesListModeParameter.md) | IEEE 802.1Q tagging strategy  * &#x60;access&#x60; - Access * &#x60;tagged&#x60; - Tagged * &#x60;tagged-all&#x60; - Tagged (All) * &#x60;q-in-q&#x60; - Q-in-Q (802.1ad) | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
- **mtu** | **[]int32** |  | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
+ **mtu** | **[]int64** |  | 
  **mtuEmpty** | **bool** |  | 
- **mtuGt** | **[]int32** |  | 
- **mtuGte** | **[]int32** |  | 
- **mtuLt** | **[]int32** |  | 
- **mtuLte** | **[]int32** |  | 
- **mtuN** | **[]int32** |  | 
+ **mtuGt** | **[]int64** |  | 
+ **mtuGte** | **[]int64** |  | 
+ **mtuLt** | **[]int64** |  | 
+ **mtuLte** | **[]int64** |  | 
+ **mtuN** | **[]int64** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -13348,10 +13348,10 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **parentId** | **[]int32** | Parent interface (ID) | 
- **parentIdN** | **[]int32** | Parent interface (ID) | 
+ **parentId** | **[]int64** | Parent interface (ID) | 
+ **parentIdN** | **[]int64** | Parent interface (ID) | 
  **poeMode** | **[]string** |  | 
  **poeModeEmpty** | **bool** |  | 
  **poeModeIc** | **[]string** |  | 
@@ -13376,13 +13376,13 @@ Name | Type | Description  | Notes
  **poeTypeNisw** | **[]string** |  | 
  **primaryMacAddress** | **[]string** | Primary MAC address | 
  **primaryMacAddressN** | **[]string** | Primary MAC address | 
- **primaryMacAddressId** | **[]int32** | Primary MAC address (ID) | 
- **primaryMacAddressIdN** | **[]int32** | Primary MAC address (ID) | 
+ **primaryMacAddressId** | **[]int64** | Primary MAC address (ID) | 
+ **primaryMacAddressIdN** | **[]int64** | Primary MAC address (ID) | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -13429,24 +13429,24 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
- **speed** | **[]int32** |  | 
- **speedEmpty** | **[]int32** |  | 
- **speedGt** | **[]int32** |  | 
- **speedGte** | **[]int32** |  | 
- **speedLt** | **[]int32** |  | 
- **speedLte** | **[]int32** |  | 
- **speedN** | **[]int32** |  | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
+ **speed** | **[]int64** |  | 
+ **speedEmpty** | **[]int64** |  | 
+ **speedGt** | **[]int64** |  | 
+ **speedGte** | **[]int64** |  | 
+ **speedLt** | **[]int64** |  | 
+ **speedLte** | **[]int64** |  | 
+ **speedN** | **[]int64** |  | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
- **txPower** | **[]int32** |  | 
+ **txPower** | **[]int64** |  | 
  **txPowerEmpty** | **bool** |  | 
- **txPowerGt** | **[]int32** |  | 
- **txPowerGte** | **[]int32** |  | 
- **txPowerLt** | **[]int32** |  | 
- **txPowerLte** | **[]int32** |  | 
- **txPowerN** | **[]int32** |  | 
+ **txPowerGt** | **[]int64** |  | 
+ **txPowerGte** | **[]int64** |  | 
+ **txPowerLt** | **[]int64** |  | 
+ **txPowerLte** | **[]int64** |  | 
+ **txPowerN** | **[]int64** |  | 
  **type_** | **[]string** |  | 
  **typeEmpty** | **bool** |  | 
  **typeIc** | **[]string** |  | 
@@ -13461,34 +13461,34 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **vdc** | **[]string** | Virtual Device Context | 
  **vdcN** | **[]string** | Virtual Device Context | 
- **vdcId** | **[]int32** | Virtual Device Context | 
- **vdcIdN** | **[]int32** | Virtual Device Context | 
- **vdcIdentifier** | **[]int32** | Virtual Device Context (Identifier) | 
- **vdcIdentifierN** | **[]int32** | Virtual Device Context (Identifier) | 
+ **vdcId** | **[]int64** | Virtual Device Context | 
+ **vdcIdN** | **[]int64** | Virtual Device Context | 
+ **vdcIdentifier** | **[]int64** | Virtual Device Context (Identifier) | 
+ **vdcIdentifierN** | **[]int64** | Virtual Device Context (Identifier) | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
  **virtualChassisMember** | **[]string** |  | 
- **virtualChassisMemberId** | **[]int32** |  | 
- **virtualCircuitId** | **[]int32** | Virtual circuit (ID) | 
- **virtualCircuitIdN** | **[]int32** | Virtual circuit (ID) | 
- **virtualCircuitTerminationId** | **[]int32** | Virtual circuit termination (ID) | 
- **virtualCircuitTerminationIdN** | **[]int32** | Virtual circuit termination (ID) | 
+ **virtualChassisMemberId** | **[]int64** |  | 
+ **virtualCircuitId** | **[]int64** | Virtual circuit (ID) | 
+ **virtualCircuitIdN** | **[]int64** | Virtual circuit (ID) | 
+ **virtualCircuitTerminationId** | **[]int64** | Virtual circuit termination (ID) | 
+ **virtualCircuitTerminationIdN** | **[]int64** | Virtual circuit termination (ID) | 
  **vlan** | **string** | Assigned VID | 
  **vlanId** | **string** | Assigned VLAN | 
  **vlanTranslationPolicy** | **[]string** | VLAN Translation Policy | 
  **vlanTranslationPolicyN** | **[]string** | VLAN Translation Policy | 
- **vlanTranslationPolicyId** | **[]int32** | VLAN Translation Policy (ID) | 
- **vlanTranslationPolicyIdN** | **[]int32** | VLAN Translation Policy (ID) | 
+ **vlanTranslationPolicyId** | **[]int64** | VLAN Translation Policy (ID) | 
+ **vlanTranslationPolicyIdN** | **[]int64** | VLAN Translation Policy (ID) | 
  **vrf** | **[]string** | VRF (RD) | 
  **vrfN** | **[]string** | VRF (RD) | 
- **vrfId** | **[]int32** | VRF | 
- **vrfIdN** | **[]int32** | VRF | 
- **wirelessLanId** | **[]int32** | Wireless LAN | 
- **wirelessLanIdN** | **[]int32** | Wireless LAN | 
- **wirelessLinkId** | **[]int32** | Wireless link | 
- **wirelessLinkIdN** | **[]int32** | Wireless link | 
+ **vrfId** | **[]int64** | VRF | 
+ **vrfIdN** | **[]int64** | VRF | 
+ **wirelessLanId** | **[]int64** | Wireless LAN | 
+ **wirelessLanIdN** | **[]int64** | Wireless LAN | 
+ **wirelessLinkId** | **[]int64** | Wireless link | 
+ **wirelessLinkIdN** | **[]int64** | Wireless link | 
  **wwn** | **[]string** |  | 
  **wwnIc** | **[]string** |  | 
  **wwnIe** | **[]string** |  | 
@@ -13539,7 +13539,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface.
+	id := int64(56) // int64 | A unique integer value identifying this interface.
 	patchedWritableInterfaceRequest := *openapiclient.NewPatchedWritableInterfaceRequest() // PatchedWritableInterfaceRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -13560,7 +13560,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface. | 
+**id** | **int64** | A unique integer value identifying this interface. | 
 
 ### Other Parameters
 
@@ -13611,7 +13611,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface.
+	id := int64(56) // int64 | A unique integer value identifying this interface.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -13631,7 +13631,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface. | 
+**id** | **int64** | A unique integer value identifying this interface. | 
 
 ### Other Parameters
 
@@ -13681,7 +13681,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface.
+	id := int64(56) // int64 | A unique integer value identifying this interface.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -13701,7 +13701,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface. | 
+**id** | **int64** | A unique integer value identifying this interface. | 
 
 ### Other Parameters
 
@@ -13751,7 +13751,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this interface.
+	id := int64(56) // int64 | A unique integer value identifying this interface.
 	writableInterfaceRequest := *openapiclient.NewWritableInterfaceRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example", openapiclient.Interface_type_value("virtual")) // WritableInterfaceRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -13772,7 +13772,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this interface. | 
+**id** | **int64** | A unique integer value identifying this interface. | 
 
 ### Other Parameters
 
@@ -14085,7 +14085,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item role.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item role.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -14103,7 +14103,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item role. | 
+**id** | **int64** | A unique integer value identifying this inventory item role. | 
 
 ### Other Parameters
 
@@ -14184,13 +14184,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -14198,7 +14198,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -14211,7 +14211,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
@@ -14282,13 +14282,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -14296,7 +14296,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -14309,7 +14309,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
@@ -14366,7 +14366,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item role.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item role.
 	patchedInventoryItemRoleRequest := *openapiclient.NewPatchedInventoryItemRoleRequest() // PatchedInventoryItemRoleRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -14387,7 +14387,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item role. | 
+**id** | **int64** | A unique integer value identifying this inventory item role. | 
 
 ### Other Parameters
 
@@ -14438,7 +14438,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item role.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item role.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -14458,7 +14458,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item role. | 
+**id** | **int64** | A unique integer value identifying this inventory item role. | 
 
 ### Other Parameters
 
@@ -14508,7 +14508,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item role.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item role.
 	inventoryItemRoleRequest := *openapiclient.NewInventoryItemRoleRequest("Name_example", "Slug_example") // InventoryItemRoleRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -14529,7 +14529,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item role. | 
+**id** | **int64** | A unique integer value identifying this inventory item role. | 
 
 ### Other Parameters
 
@@ -14842,7 +14842,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item template.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -14860,7 +14860,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item template. | 
+**id** | **int64** | A unique integer value identifying this inventory item template. | 
 
 ### Other Parameters
 
@@ -14911,13 +14911,13 @@ import (
 )
 
 func main() {
-	componentId := []int32{int32(123)} // []int32 |  (optional)
-	componentIdEmpty := []int32{int32(123)} // []int32 |  (optional)
-	componentIdGt := []int32{int32(123)} // []int32 |  (optional)
-	componentIdGte := []int32{int32(123)} // []int32 |  (optional)
-	componentIdLt := []int32{int32(123)} // []int32 |  (optional)
-	componentIdLte := []int32{int32(123)} // []int32 |  (optional)
-	componentIdN := []int32{int32(123)} // []int32 |  (optional)
+	componentId := []int64{int64(123)} // []int64 |  (optional)
+	componentIdEmpty := []int64{int64(123)} // []int64 |  (optional)
+	componentIdGt := []int64{int64(123)} // []int64 |  (optional)
+	componentIdGte := []int64{int64(123)} // []int64 |  (optional)
+	componentIdLt := []int64{int64(123)} // []int64 |  (optional)
+	componentIdLte := []int64{int64(123)} // []int64 |  (optional)
+	componentIdN := []int64{int64(123)} // []int64 |  (optional)
 	componentType := "componentType_example" // string |  (optional)
 	componentTypeN := "componentTypeN_example" // string |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -14939,15 +14939,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -14966,11 +14966,11 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []*int32{int32(123)} // []*int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []*int32{int32(123)} // []*int32 | Manufacturer (ID) (optional)
+	manufacturerId := []*int64{int64(123)} // []*int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []*int64{int64(123)} // []*int64 | Manufacturer (ID) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -14983,10 +14983,10 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	parentId := []*int32{int32(123)} // []*int32 | Parent inventory item (ID) (optional)
-	parentIdN := []*int32{int32(123)} // []*int32 | Parent inventory item (ID) (optional)
+	parentId := []*int64{int64(123)} // []*int64 | Parent inventory item (ID) (optional)
+	parentIdN := []*int64{int64(123)} // []*int64 | Parent inventory item (ID) (optional)
 	partId := []string{"Inner_example"} // []string |  (optional)
 	partIdEmpty := true // bool |  (optional)
 	partIdIc := []string{"Inner_example"} // []string |  (optional)
@@ -15001,8 +15001,8 @@ func main() {
 	q := "q_example" // string | Search (optional)
 	role := []string{"Inner_example"} // []string | Role (slug) (optional)
 	roleN := []string{"Inner_example"} // []string | Role (slug) (optional)
-	roleId := []*int32{int32(123)} // []*int32 | Role (ID) (optional)
-	roleIdN := []*int32{int32(123)} // []*int32 | Role (ID) (optional)
+	roleId := []*int64{int64(123)} // []*int64 | Role (ID) (optional)
+	roleIdN := []*int64{int64(123)} // []*int64 | Role (ID) (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -15028,13 +15028,13 @@ Other parameters are passed through a pointer to a apiDcimInventoryItemTemplates
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **componentId** | **[]int32** |  | 
- **componentIdEmpty** | **[]int32** |  | 
- **componentIdGt** | **[]int32** |  | 
- **componentIdGte** | **[]int32** |  | 
- **componentIdLt** | **[]int32** |  | 
- **componentIdLte** | **[]int32** |  | 
- **componentIdN** | **[]int32** |  | 
+ **componentId** | **[]int64** |  | 
+ **componentIdEmpty** | **[]int64** |  | 
+ **componentIdGt** | **[]int64** |  | 
+ **componentIdGte** | **[]int64** |  | 
+ **componentIdLt** | **[]int64** |  | 
+ **componentIdLte** | **[]int64** |  | 
+ **componentIdN** | **[]int64** |  | 
  **componentType** | **string** |  | 
  **componentTypeN** | **string** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -15056,15 +15056,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -15083,11 +15083,11 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -15100,10 +15100,10 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **parentId** | **[]int32** | Parent inventory item (ID) | 
- **parentIdN** | **[]int32** | Parent inventory item (ID) | 
+ **parentId** | **[]int64** | Parent inventory item (ID) | 
+ **parentIdN** | **[]int64** | Parent inventory item (ID) | 
  **partId** | **[]string** |  | 
  **partIdEmpty** | **bool** |  | 
  **partIdIc** | **[]string** |  | 
@@ -15118,8 +15118,8 @@ Name | Type | Description  | Notes
  **q** | **string** | Search | 
  **role** | **[]string** | Role (slug) | 
  **roleN** | **[]string** | Role (slug) | 
- **roleId** | **[]int32** | Role (ID) | 
- **roleIdN** | **[]int32** | Role (ID) | 
+ **roleId** | **[]int64** | Role (ID) | 
+ **roleIdN** | **[]int64** | Role (ID) | 
  **updatedByRequest** | **string** |  | 
 
 ### Return type
@@ -15161,7 +15161,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item template.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item template.
 	patchedInventoryItemTemplateRequest := *openapiclient.NewPatchedInventoryItemTemplateRequest() // PatchedInventoryItemTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -15182,7 +15182,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item template. | 
+**id** | **int64** | A unique integer value identifying this inventory item template. | 
 
 ### Other Parameters
 
@@ -15233,7 +15233,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item template.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -15253,7 +15253,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item template. | 
+**id** | **int64** | A unique integer value identifying this inventory item template. | 
 
 ### Other Parameters
 
@@ -15303,7 +15303,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item template.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item template.
 	inventoryItemTemplateRequest := *openapiclient.NewInventoryItemTemplateRequest(*openapiclient.NewBriefDeviceTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example", "Slug_example"), "Name_example") // InventoryItemTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -15324,7 +15324,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item template. | 
+**id** | **int64** | A unique integer value identifying this inventory item template. | 
 
 ### Other Parameters
 
@@ -15637,7 +15637,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -15655,7 +15655,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item. | 
+**id** | **int64** | A unique integer value identifying this inventory item. | 
 
 ### Other Parameters
 
@@ -15717,13 +15717,13 @@ func main() {
 	assetTagNie := []string{"Inner_example"} // []string |  (optional)
 	assetTagNiew := []string{"Inner_example"} // []string |  (optional)
 	assetTagNisw := []string{"Inner_example"} // []string |  (optional)
-	componentId := []int32{int32(123)} // []int32 |  (optional)
-	componentIdEmpty := []int32{int32(123)} // []int32 |  (optional)
-	componentIdGt := []int32{int32(123)} // []int32 |  (optional)
-	componentIdGte := []int32{int32(123)} // []int32 |  (optional)
-	componentIdLt := []int32{int32(123)} // []int32 |  (optional)
-	componentIdLte := []int32{int32(123)} // []int32 |  (optional)
-	componentIdN := []int32{int32(123)} // []int32 |  (optional)
+	componentId := []int64{int64(123)} // []int64 |  (optional)
+	componentIdEmpty := []int64{int64(123)} // []int64 |  (optional)
+	componentIdGt := []int64{int64(123)} // []int64 |  (optional)
+	componentIdGte := []int64{int64(123)} // []int64 |  (optional)
+	componentIdLt := []int64{int64(123)} // []int64 |  (optional)
+	componentIdLte := []int64{int64(123)} // []int64 |  (optional)
+	componentIdN := []int64{int64(123)} // []int64 |  (optional)
 	componentType := "componentType_example" // string |  (optional)
 	componentTypeN := "componentTypeN_example" // string |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -15747,12 +15747,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -15766,16 +15766,16 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
 	discovered := true // bool |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -15794,15 +15794,15 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []*int32{int32(123)} // []*int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []*int32{int32(123)} // []*int32 | Manufacturer (ID) (optional)
+	manufacturerId := []*int64{int64(123)} // []*int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []*int64{int64(123)} // []*int64 | Manufacturer (ID) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -15815,10 +15815,10 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	parentId := []*int32{int32(123)} // []*int32 | Parent inventory item (ID) (optional)
-	parentIdN := []*int32{int32(123)} // []*int32 | Parent inventory item (ID) (optional)
+	parentId := []*int64{int64(123)} // []*int64 | Parent inventory item (ID) (optional)
+	parentIdN := []*int64{int64(123)} // []*int64 | Parent inventory item (ID) (optional)
 	partId := []string{"Inner_example"} // []string |  (optional)
 	partIdEmpty := true // bool |  (optional)
 	partIdIc := []string{"Inner_example"} // []string |  (optional)
@@ -15833,16 +15833,16 @@ func main() {
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
 	regionIdN := []string{"Inner_example"} // []string |  (optional)
 	role := []string{"Inner_example"} // []string | Role (slug) (optional)
 	roleN := []string{"Inner_example"} // []string | Role (slug) (optional)
-	roleId := []*int32{int32(123)} // []*int32 | Role (ID) (optional)
-	roleIdN := []*int32{int32(123)} // []*int32 | Role (ID) (optional)
+	roleId := []*int64{int64(123)} // []*int64 | Role (ID) (optional)
+	roleIdN := []*int64{int64(123)} // []*int64 | Role (ID) (optional)
 	serial := []string{"Inner_example"} // []string |  (optional)
 	serialEmpty := true // bool |  (optional)
 	serialIc := []string{"Inner_example"} // []string |  (optional)
@@ -15860,8 +15860,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
 	statusEmpty := true // bool |  (optional)
 	statusIc := []string{"Inner_example"} // []string |  (optional)
@@ -15878,8 +15878,8 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -15915,13 +15915,13 @@ Name | Type | Description  | Notes
  **assetTagNie** | **[]string** |  | 
  **assetTagNiew** | **[]string** |  | 
  **assetTagNisw** | **[]string** |  | 
- **componentId** | **[]int32** |  | 
- **componentIdEmpty** | **[]int32** |  | 
- **componentIdGt** | **[]int32** |  | 
- **componentIdGte** | **[]int32** |  | 
- **componentIdLt** | **[]int32** |  | 
- **componentIdLte** | **[]int32** |  | 
- **componentIdN** | **[]int32** |  | 
+ **componentId** | **[]int64** |  | 
+ **componentIdEmpty** | **[]int64** |  | 
+ **componentIdGt** | **[]int64** |  | 
+ **componentIdGte** | **[]int64** |  | 
+ **componentIdLt** | **[]int64** |  | 
+ **componentIdLte** | **[]int64** |  | 
+ **componentIdN** | **[]int64** |  | 
  **componentType** | **string** |  | 
  **componentTypeN** | **string** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -15945,12 +15945,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -15964,16 +15964,16 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
  **discovered** | **bool** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -15992,15 +15992,15 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -16013,10 +16013,10 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **parentId** | **[]int32** | Parent inventory item (ID) | 
- **parentIdN** | **[]int32** | Parent inventory item (ID) | 
+ **parentId** | **[]int64** | Parent inventory item (ID) | 
+ **parentIdN** | **[]int64** | Parent inventory item (ID) | 
  **partId** | **[]string** |  | 
  **partIdEmpty** | **bool** |  | 
  **partIdIc** | **[]string** |  | 
@@ -16031,16 +16031,16 @@ Name | Type | Description  | Notes
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
  **regionIdN** | **[]string** |  | 
  **role** | **[]string** | Role (slug) | 
  **roleN** | **[]string** | Role (slug) | 
- **roleId** | **[]int32** | Role (ID) | 
- **roleIdN** | **[]int32** | Role (ID) | 
+ **roleId** | **[]int64** | Role (ID) | 
+ **roleIdN** | **[]int64** | Role (ID) | 
  **serial** | **[]string** |  | 
  **serialEmpty** | **bool** |  | 
  **serialIc** | **[]string** |  | 
@@ -16058,8 +16058,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **status** | **[]string** |  | 
  **statusEmpty** | **bool** |  | 
  **statusIc** | **[]string** |  | 
@@ -16076,8 +16076,8 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -16118,7 +16118,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item.
 	patchedWritableInventoryItemRequest := *openapiclient.NewPatchedWritableInventoryItemRequest() // PatchedWritableInventoryItemRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -16139,7 +16139,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item. | 
+**id** | **int64** | A unique integer value identifying this inventory item. | 
 
 ### Other Parameters
 
@@ -16190,7 +16190,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -16210,7 +16210,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item. | 
+**id** | **int64** | A unique integer value identifying this inventory item. | 
 
 ### Other Parameters
 
@@ -16260,7 +16260,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this inventory item.
+	id := int64(56) // int64 | A unique integer value identifying this inventory item.
 	writableInventoryItemRequest := *openapiclient.NewWritableInventoryItemRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example") // WritableInventoryItemRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -16281,7 +16281,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this inventory item. | 
+**id** | **int64** | A unique integer value identifying this inventory item. | 
 
 ### Other Parameters
 
@@ -16594,7 +16594,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this location.
+	id := int64(56) // int64 | A unique integer value identifying this location.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -16612,7 +16612,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this location. | 
+**id** | **int64** | A unique integer value identifying this location. | 
 
 ### Other Parameters
 
@@ -16667,12 +16667,12 @@ func main() {
 	ancestorN := []string{"Inner_example"} // []string |  (optional)
 	ancestorId := []string{"Inner_example"} // []string |  (optional)
 	ancestorIdN := []string{"Inner_example"} // []string |  (optional)
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -16703,13 +16703,13 @@ func main() {
 	facilityNie := []string{"Inner_example"} // []string |  (optional)
 	facilityNiew := []string{"Inner_example"} // []string |  (optional)
 	facilityNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -16717,7 +16717,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -16730,12 +16730,12 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	parent := []string{"Inner_example"} // []string | Parent location (slug) (optional)
 	parentN := []string{"Inner_example"} // []string | Parent location (slug) (optional)
-	parentId := []*int32{int32(123)} // []*int32 | Parent location (ID) (optional)
-	parentIdN := []*int32{int32(123)} // []*int32 | Parent location (ID) (optional)
+	parentId := []*int64{int64(123)} // []*int64 | Parent location (ID) (optional)
+	parentIdN := []*int64{int64(123)} // []*int64 | Parent location (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
@@ -16747,8 +16747,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
 	slugEmpty := true // bool |  (optional)
 	slugIc := []string{"Inner_example"} // []string |  (optional)
@@ -16779,8 +16779,8 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -16810,12 +16810,12 @@ Name | Type | Description  | Notes
  **ancestorN** | **[]string** |  | 
  **ancestorId** | **[]string** |  | 
  **ancestorIdN** | **[]string** |  | 
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -16846,13 +16846,13 @@ Name | Type | Description  | Notes
  **facilityNie** | **[]string** |  | 
  **facilityNiew** | **[]string** |  | 
  **facilityNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -16860,7 +16860,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -16873,12 +16873,12 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **parent** | **[]string** | Parent location (slug) | 
  **parentN** | **[]string** | Parent location (slug) | 
- **parentId** | **[]int32** | Parent location (ID) | 
- **parentIdN** | **[]int32** | Parent location (ID) | 
+ **parentId** | **[]int64** | Parent location (ID) | 
+ **parentIdN** | **[]int64** | Parent location (ID) | 
  **q** | **string** | Search | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
@@ -16890,8 +16890,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **slug** | **[]string** |  | 
  **slugEmpty** | **bool** |  | 
  **slugIc** | **[]string** |  | 
@@ -16922,8 +16922,8 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **updatedByRequest** | **string** |  | 
 
 ### Return type
@@ -16965,7 +16965,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this location.
+	id := int64(56) // int64 | A unique integer value identifying this location.
 	patchedWritableLocationRequest := *openapiclient.NewPatchedWritableLocationRequest() // PatchedWritableLocationRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -16986,7 +16986,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this location. | 
+**id** | **int64** | A unique integer value identifying this location. | 
 
 ### Other Parameters
 
@@ -17037,7 +17037,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this location.
+	id := int64(56) // int64 | A unique integer value identifying this location.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -17057,7 +17057,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this location. | 
+**id** | **int64** | A unique integer value identifying this location. | 
 
 ### Other Parameters
 
@@ -17107,7 +17107,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this location.
+	id := int64(56) // int64 | A unique integer value identifying this location.
 	writableLocationRequest := *openapiclient.NewWritableLocationRequest("Name_example", "Slug_example", *openapiclient.NewBriefSiteRequest("Name_example", "Slug_example")) // WritableLocationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -17128,7 +17128,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this location. | 
+**id** | **int64** | A unique integer value identifying this location. | 
 
 ### Other Parameters
 
@@ -17441,7 +17441,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this MAC address.
+	id := int64(56) // int64 | A unique integer value identifying this MAC address.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -17459,7 +17459,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this MAC address. | 
+**id** | **int64** | A unique integer value identifying this MAC address. | 
 
 ### Other Parameters
 
@@ -17510,15 +17510,15 @@ import (
 )
 
 func main() {
-	assignedObjectId := []int32{int32(123)} // []int32 |  (optional)
+	assignedObjectId := []int64{int64(123)} // []int64 |  (optional)
 	assignedObjectIdEmpty := true // bool |  (optional)
-	assignedObjectIdGt := []int32{int32(123)} // []int32 |  (optional)
-	assignedObjectIdGte := []int32{int32(123)} // []int32 |  (optional)
-	assignedObjectIdLt := []int32{int32(123)} // []int32 |  (optional)
-	assignedObjectIdLte := []int32{int32(123)} // []int32 |  (optional)
-	assignedObjectIdN := []int32{int32(123)} // []int32 |  (optional)
-	assignedObjectType := int32(56) // int32 |  (optional)
-	assignedObjectTypeN := int32(56) // int32 |  (optional)
+	assignedObjectIdGt := []int64{int64(123)} // []int64 |  (optional)
+	assignedObjectIdGte := []int64{int64(123)} // []int64 |  (optional)
+	assignedObjectIdLt := []int64{int64(123)} // []int64 |  (optional)
+	assignedObjectIdLte := []int64{int64(123)} // []int64 |  (optional)
+	assignedObjectIdN := []int64{int64(123)} // []int64 |  (optional)
+	assignedObjectType := int64(56) // int64 |  (optional)
+	assignedObjectTypeN := int64(56) // int64 |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -17539,18 +17539,18 @@ func main() {
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []string{"Inner_example"} // []string |  (optional)
-	deviceId := []int32{int32(123)} // []int32 |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceId := []int64{int64(123)} // []int64 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	interface_ := []string{"Inner_example"} // []string | Interface (name) (optional)
 	interfaceN := []string{"Inner_example"} // []string | Interface (name) (optional)
-	interfaceId := []int32{int32(123)} // []int32 | Interface (ID) (optional)
-	interfaceIdN := []int32{int32(123)} // []int32 | Interface (ID) (optional)
+	interfaceId := []int64{int64(123)} // []int64 | Interface (ID) (optional)
+	interfaceIdN := []int64{int64(123)} // []int64 | Interface (ID) (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -17558,7 +17558,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	macAddress := []string{"Inner_example"} // []string |  (optional)
 	macAddressIc := []string{"Inner_example"} // []string |  (optional)
 	macAddressIe := []string{"Inner_example"} // []string |  (optional)
@@ -17570,18 +17570,18 @@ func main() {
 	macAddressNiew := []string{"Inner_example"} // []string |  (optional)
 	macAddressNisw := []string{"Inner_example"} // []string |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualMachine := []string{"Inner_example"} // []string |  (optional)
-	virtualMachineId := []int32{int32(123)} // []int32 |  (optional)
+	virtualMachineId := []int64{int64(123)} // []int64 |  (optional)
 	vminterface := []string{"Inner_example"} // []string | VM interface (name) (optional)
 	vminterfaceN := []string{"Inner_example"} // []string | VM interface (name) (optional)
-	vminterfaceId := []int32{int32(123)} // []int32 | VM interface (ID) (optional)
-	vminterfaceIdN := []int32{int32(123)} // []int32 | VM interface (ID) (optional)
+	vminterfaceId := []int64{int64(123)} // []int64 | VM interface (ID) (optional)
+	vminterfaceIdN := []int64{int64(123)} // []int64 | VM interface (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -17606,15 +17606,15 @@ Other parameters are passed through a pointer to a apiDcimMacAddressesListReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assignedObjectId** | **[]int32** |  | 
+ **assignedObjectId** | **[]int64** |  | 
  **assignedObjectIdEmpty** | **bool** |  | 
- **assignedObjectIdGt** | **[]int32** |  | 
- **assignedObjectIdGte** | **[]int32** |  | 
- **assignedObjectIdLt** | **[]int32** |  | 
- **assignedObjectIdLte** | **[]int32** |  | 
- **assignedObjectIdN** | **[]int32** |  | 
- **assignedObjectType** | **int32** |  | 
- **assignedObjectTypeN** | **int32** |  | 
+ **assignedObjectIdGt** | **[]int64** |  | 
+ **assignedObjectIdGte** | **[]int64** |  | 
+ **assignedObjectIdLt** | **[]int64** |  | 
+ **assignedObjectIdLte** | **[]int64** |  | 
+ **assignedObjectIdN** | **[]int64** |  | 
+ **assignedObjectType** | **int64** |  | 
+ **assignedObjectTypeN** | **int64** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -17635,18 +17635,18 @@ Name | Type | Description  | Notes
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** |  | 
- **deviceId** | **[]int32** |  | 
- **id** | **[]int32** |  | 
+ **deviceId** | **[]int64** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **interface_** | **[]string** | Interface (name) | 
  **interfaceN** | **[]string** | Interface (name) | 
- **interfaceId** | **[]int32** | Interface (ID) | 
- **interfaceIdN** | **[]int32** | Interface (ID) | 
+ **interfaceId** | **[]int64** | Interface (ID) | 
+ **interfaceIdN** | **[]int64** | Interface (ID) | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -17654,7 +17654,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **macAddress** | **[]string** |  | 
  **macAddressIc** | **[]string** |  | 
  **macAddressIe** | **[]string** |  | 
@@ -17666,18 +17666,18 @@ Name | Type | Description  | Notes
  **macAddressNiew** | **[]string** |  | 
  **macAddressNisw** | **[]string** |  | 
  **modifiedByRequest** | **string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **updatedByRequest** | **string** |  | 
  **virtualMachine** | **[]string** |  | 
- **virtualMachineId** | **[]int32** |  | 
+ **virtualMachineId** | **[]int64** |  | 
  **vminterface** | **[]string** | VM interface (name) | 
  **vminterfaceN** | **[]string** | VM interface (name) | 
- **vminterfaceId** | **[]int32** | VM interface (ID) | 
- **vminterfaceIdN** | **[]int32** | VM interface (ID) | 
+ **vminterfaceId** | **[]int64** | VM interface (ID) | 
+ **vminterfaceIdN** | **[]int64** | VM interface (ID) | 
 
 ### Return type
 
@@ -17718,7 +17718,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this MAC address.
+	id := int64(56) // int64 | A unique integer value identifying this MAC address.
 	patchedMACAddressRequest := *openapiclient.NewPatchedMACAddressRequest() // PatchedMACAddressRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -17739,7 +17739,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this MAC address. | 
+**id** | **int64** | A unique integer value identifying this MAC address. | 
 
 ### Other Parameters
 
@@ -17790,7 +17790,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this MAC address.
+	id := int64(56) // int64 | A unique integer value identifying this MAC address.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -17810,7 +17810,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this MAC address. | 
+**id** | **int64** | A unique integer value identifying this MAC address. | 
 
 ### Other Parameters
 
@@ -17860,7 +17860,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this MAC address.
+	id := int64(56) // int64 | A unique integer value identifying this MAC address.
 	mACAddressRequest := *openapiclient.NewMACAddressRequest("MacAddress_example") // MACAddressRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -17881,7 +17881,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this MAC address. | 
+**id** | **int64** | A unique integer value identifying this MAC address. | 
 
 ### Other Parameters
 
@@ -18194,7 +18194,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this manufacturer.
+	id := int64(56) // int64 | A unique integer value identifying this manufacturer.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -18212,7 +18212,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this manufacturer. | 
+**id** | **int64** | A unique integer value identifying this manufacturer. | 
 
 ### Other Parameters
 
@@ -18263,12 +18263,12 @@ import (
 )
 
 func main() {
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -18288,13 +18288,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -18302,7 +18302,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -18315,7 +18315,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
@@ -18356,12 +18356,12 @@ Other parameters are passed through a pointer to a apiDcimManufacturersListReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -18381,13 +18381,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -18395,7 +18395,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -18408,7 +18408,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
@@ -18465,7 +18465,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this manufacturer.
+	id := int64(56) // int64 | A unique integer value identifying this manufacturer.
 	patchedManufacturerRequest := *openapiclient.NewPatchedManufacturerRequest() // PatchedManufacturerRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -18486,7 +18486,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this manufacturer. | 
+**id** | **int64** | A unique integer value identifying this manufacturer. | 
 
 ### Other Parameters
 
@@ -18537,7 +18537,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this manufacturer.
+	id := int64(56) // int64 | A unique integer value identifying this manufacturer.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -18557,7 +18557,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this manufacturer. | 
+**id** | **int64** | A unique integer value identifying this manufacturer. | 
 
 ### Other Parameters
 
@@ -18607,7 +18607,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this manufacturer.
+	id := int64(56) // int64 | A unique integer value identifying this manufacturer.
 	manufacturerRequest := *openapiclient.NewManufacturerRequest("Name_example", "Slug_example") // ManufacturerRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -18628,7 +18628,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this manufacturer. | 
+**id** | **int64** | A unique integer value identifying this manufacturer. | 
 
 ### Other Parameters
 
@@ -18941,7 +18941,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay template.
+	id := int64(56) // int64 | A unique integer value identifying this module bay template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -18959,7 +18959,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay template. | 
+**id** | **int64** | A unique integer value identifying this module bay template. | 
 
 ### Other Parameters
 
@@ -19029,15 +19029,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -19056,10 +19056,10 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -19071,7 +19071,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	position := []string{"Inner_example"} // []string |  (optional)
 	positionEmpty := true // bool |  (optional)
@@ -19129,15 +19129,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -19156,10 +19156,10 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -19171,7 +19171,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **position** | **[]string** |  | 
  **positionEmpty** | **bool** |  | 
@@ -19226,7 +19226,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay template.
+	id := int64(56) // int64 | A unique integer value identifying this module bay template.
 	patchedModuleBayTemplateRequest := *openapiclient.NewPatchedModuleBayTemplateRequest() // PatchedModuleBayTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -19247,7 +19247,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay template. | 
+**id** | **int64** | A unique integer value identifying this module bay template. | 
 
 ### Other Parameters
 
@@ -19298,7 +19298,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay template.
+	id := int64(56) // int64 | A unique integer value identifying this module bay template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -19318,7 +19318,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay template. | 
+**id** | **int64** | A unique integer value identifying this module bay template. | 
 
 ### Other Parameters
 
@@ -19368,7 +19368,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay template.
+	id := int64(56) // int64 | A unique integer value identifying this module bay template.
 	moduleBayTemplateRequest := *openapiclient.NewModuleBayTemplateRequest("Name_example") // ModuleBayTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -19389,7 +19389,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay template. | 
+**id** | **int64** | A unique integer value identifying this module bay template. | 
 
 ### Other Parameters
 
@@ -19702,7 +19702,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay.
+	id := int64(56) // int64 | A unique integer value identifying this module bay.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -19720,7 +19720,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay. | 
+**id** | **int64** | A unique integer value identifying this module bay. | 
 
 ### Other Parameters
 
@@ -19792,12 +19792,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -19811,17 +19811,17 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	installedModuleId := []int32{int32(123)} // []int32 | Installed module (ID) (optional)
-	installedModuleIdN := []int32{int32(123)} // []int32 | Installed module (ID) (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
+	installedModuleId := []int64{int64(123)} // []int64 | Installed module (ID) (optional)
+	installedModuleIdN := []int64{int64(123)} // []int64 | Installed module (ID) (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -19840,14 +19840,14 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -19859,10 +19859,10 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	parentId := []*int32{int32(123)} // []*int32 | Parent module bay (ID) (optional)
-	parentIdN := []*int32{int32(123)} // []*int32 | Parent module bay (ID) (optional)
+	parentId := []*int64{int64(123)} // []*int64 | Parent module bay (ID) (optional)
+	parentIdN := []*int64{int64(123)} // []*int64 | Parent module bay (ID) (optional)
 	position := []string{"Inner_example"} // []string |  (optional)
 	positionEmpty := true // bool |  (optional)
 	positionIc := []string{"Inner_example"} // []string |  (optional)
@@ -19877,8 +19877,8 @@ func main() {
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -19889,15 +19889,15 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -19943,12 +19943,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -19962,17 +19962,17 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **installedModuleId** | **[]int32** | Installed module (ID) | 
- **installedModuleIdN** | **[]int32** | Installed module (ID) | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
+ **installedModuleId** | **[]int64** | Installed module (ID) | 
+ **installedModuleIdN** | **[]int64** | Installed module (ID) | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -19991,14 +19991,14 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -20010,10 +20010,10 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **parentId** | **[]int32** | Parent module bay (ID) | 
- **parentIdN** | **[]int32** | Parent module bay (ID) | 
+ **parentId** | **[]int64** | Parent module bay (ID) | 
+ **parentIdN** | **[]int64** | Parent module bay (ID) | 
  **position** | **[]string** |  | 
  **positionEmpty** | **bool** |  | 
  **positionIc** | **[]string** |  | 
@@ -20028,8 +20028,8 @@ Name | Type | Description  | Notes
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -20040,15 +20040,15 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -20089,7 +20089,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay.
+	id := int64(56) // int64 | A unique integer value identifying this module bay.
 	patchedModuleBayRequest := *openapiclient.NewPatchedModuleBayRequest() // PatchedModuleBayRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -20110,7 +20110,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay. | 
+**id** | **int64** | A unique integer value identifying this module bay. | 
 
 ### Other Parameters
 
@@ -20161,7 +20161,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay.
+	id := int64(56) // int64 | A unique integer value identifying this module bay.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -20181,7 +20181,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay. | 
+**id** | **int64** | A unique integer value identifying this module bay. | 
 
 ### Other Parameters
 
@@ -20231,7 +20231,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module bay.
+	id := int64(56) // int64 | A unique integer value identifying this module bay.
 	moduleBayRequest := *openapiclient.NewModuleBayRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example") // ModuleBayRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -20252,7 +20252,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module bay. | 
+**id** | **int64** | A unique integer value identifying this module bay. | 
 
 ### Other Parameters
 
@@ -20565,7 +20565,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module type.
+	id := int64(56) // int64 | A unique integer value identifying this module type.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -20583,7 +20583,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module type. | 
+**id** | **int64** | A unique integer value identifying this module type. | 
 
 ### Other Parameters
 
@@ -20656,13 +20656,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	interfaces := true // bool | Has interfaces (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -20671,11 +20671,11 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
+	manufacturerId := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
 	model := []string{"Inner_example"} // []string |  (optional)
 	modelEmpty := true // bool |  (optional)
 	modelIc := []string{"Inner_example"} // []string |  (optional)
@@ -20688,7 +20688,7 @@ func main() {
 	modelNiew := []string{"Inner_example"} // []string |  (optional)
 	modelNisw := []string{"Inner_example"} // []string |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	partNumber := []string{"Inner_example"} // []string |  (optional)
 	partNumberEmpty := true // bool |  (optional)
@@ -20762,13 +20762,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **interfaces** | **bool** | Has interfaces | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
@@ -20777,11 +20777,11 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
  **model** | **[]string** |  | 
  **modelEmpty** | **bool** |  | 
  **modelIc** | **[]string** |  | 
@@ -20794,7 +20794,7 @@ Name | Type | Description  | Notes
  **modelNiew** | **[]string** |  | 
  **modelNisw** | **[]string** |  | 
  **modifiedByRequest** | **string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **partNumber** | **[]string** |  | 
  **partNumberEmpty** | **bool** |  | 
@@ -20862,7 +20862,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module type.
+	id := int64(56) // int64 | A unique integer value identifying this module type.
 	patchedWritableModuleTypeRequest := *openapiclient.NewPatchedWritableModuleTypeRequest() // PatchedWritableModuleTypeRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -20883,7 +20883,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module type. | 
+**id** | **int64** | A unique integer value identifying this module type. | 
 
 ### Other Parameters
 
@@ -20934,7 +20934,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module type.
+	id := int64(56) // int64 | A unique integer value identifying this module type.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -20954,7 +20954,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module type. | 
+**id** | **int64** | A unique integer value identifying this module type. | 
 
 ### Other Parameters
 
@@ -21004,7 +21004,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module type.
+	id := int64(56) // int64 | A unique integer value identifying this module type.
 	writableModuleTypeRequest := *openapiclient.NewWritableModuleTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example") // WritableModuleTypeRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -21025,7 +21025,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module type. | 
+**id** | **int64** | A unique integer value identifying this module type. | 
 
 ### Other Parameters
 
@@ -21272,7 +21272,7 @@ import (
 )
 
 func main() {
-	writableModuleRequest := *openapiclient.NewWritableModuleRequest(*openapiclient.NewBriefDeviceRequest(), int32(123), *openapiclient.NewBriefModuleTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example")) // WritableModuleRequest | 
+	writableModuleRequest := *openapiclient.NewWritableModuleRequest(*openapiclient.NewBriefDeviceRequest(), int64(123), *openapiclient.NewBriefModuleTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example")) // WritableModuleRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -21338,7 +21338,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module.
+	id := int64(56) // int64 | A unique integer value identifying this module.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -21356,7 +21356,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module. | 
+**id** | **int64** | A unique integer value identifying this module. | 
 
 ### Other Parameters
 
@@ -21437,15 +21437,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -21453,19 +21453,19 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
+	manufacturerId := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	moduleBayId := []string{"Inner_example"} // []string |  (optional)
 	moduleBayIdN := []string{"Inner_example"} // []string |  (optional)
 	moduleType := []string{"Inner_example"} // []string | Module type (model) (optional)
 	moduleTypeN := []string{"Inner_example"} // []string | Module type (model) (optional)
-	moduleTypeId := []int32{int32(123)} // []int32 | Module type (ID) (optional)
-	moduleTypeIdN := []int32{int32(123)} // []int32 | Module type (ID) (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	moduleTypeId := []int64{int64(123)} // []int64 | Module type (ID) (optional)
+	moduleTypeIdN := []int64{int64(123)} // []int64 | Module type (ID) (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	serial := []string{"Inner_example"} // []string |  (optional)
@@ -21547,15 +21547,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
- **id** | **[]int32** |  | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -21563,19 +21563,19 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
  **modifiedByRequest** | **string** |  | 
  **moduleBayId** | **[]string** |  | 
  **moduleBayIdN** | **[]string** |  | 
  **moduleType** | **[]string** | Module type (model) | 
  **moduleTypeN** | **[]string** | Module type (model) | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **serial** | **[]string** |  | 
@@ -21643,7 +21643,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module.
+	id := int64(56) // int64 | A unique integer value identifying this module.
 	patchedWritableModuleRequest := *openapiclient.NewPatchedWritableModuleRequest() // PatchedWritableModuleRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -21664,7 +21664,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module. | 
+**id** | **int64** | A unique integer value identifying this module. | 
 
 ### Other Parameters
 
@@ -21715,7 +21715,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module.
+	id := int64(56) // int64 | A unique integer value identifying this module.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -21735,7 +21735,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module. | 
+**id** | **int64** | A unique integer value identifying this module. | 
 
 ### Other Parameters
 
@@ -21785,8 +21785,8 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this module.
-	writableModuleRequest := *openapiclient.NewWritableModuleRequest(*openapiclient.NewBriefDeviceRequest(), int32(123), *openapiclient.NewBriefModuleTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example")) // WritableModuleRequest | 
+	id := int64(56) // int64 | A unique integer value identifying this module.
+	writableModuleRequest := *openapiclient.NewWritableModuleRequest(*openapiclient.NewBriefDeviceRequest(), int64(123), *openapiclient.NewBriefModuleTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example")) // WritableModuleRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -21806,7 +21806,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this module. | 
+**id** | **int64** | A unique integer value identifying this module. | 
 
 ### Other Parameters
 
@@ -22119,7 +22119,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this platform.
+	id := int64(56) // int64 | A unique integer value identifying this platform.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -22137,7 +22137,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this platform. | 
+**id** | **int64** | A unique integer value identifying this platform. | 
 
 ### Other Parameters
 
@@ -22189,8 +22189,8 @@ import (
 
 func main() {
 	availableForDeviceType := "availableForDeviceType_example" // string |  (optional)
-	configTemplateId := []*int32{int32(123)} // []*int32 | Config template (ID) (optional)
-	configTemplateIdN := []*int32{int32(123)} // []*int32 | Config template (ID) (optional)
+	configTemplateId := []*int64{int64(123)} // []*int64 | Config template (ID) (optional)
+	configTemplateIdN := []*int64{int64(123)} // []*int64 | Config template (ID) (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -22210,13 +22210,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -22224,11 +22224,11 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
+	manufacturerId := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -22241,7 +22241,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
@@ -22283,8 +22283,8 @@ Other parameters are passed through a pointer to a apiDcimPlatformsListRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **availableForDeviceType** | **string** |  | 
- **configTemplateId** | **[]int32** | Config template (ID) | 
- **configTemplateIdN** | **[]int32** | Config template (ID) | 
+ **configTemplateId** | **[]int64** | Config template (ID) | 
+ **configTemplateIdN** | **[]int64** | Config template (ID) | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -22304,13 +22304,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -22318,11 +22318,11 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -22335,7 +22335,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
@@ -22392,7 +22392,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this platform.
+	id := int64(56) // int64 | A unique integer value identifying this platform.
 	patchedPlatformRequest := *openapiclient.NewPatchedPlatformRequest() // PatchedPlatformRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -22413,7 +22413,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this platform. | 
+**id** | **int64** | A unique integer value identifying this platform. | 
 
 ### Other Parameters
 
@@ -22464,7 +22464,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this platform.
+	id := int64(56) // int64 | A unique integer value identifying this platform.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -22484,7 +22484,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this platform. | 
+**id** | **int64** | A unique integer value identifying this platform. | 
 
 ### Other Parameters
 
@@ -22534,7 +22534,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this platform.
+	id := int64(56) // int64 | A unique integer value identifying this platform.
 	platformRequest := *openapiclient.NewPlatformRequest("Name_example", "Slug_example") // PlatformRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -22555,7 +22555,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this platform. | 
+**id** | **int64** | A unique integer value identifying this platform. | 
 
 ### Other Parameters
 
@@ -22868,7 +22868,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power feed.
+	id := int64(56) // int64 | A unique integer value identifying this power feed.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -22886,7 +22886,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power feed. | 
+**id** | **int64** | A unique integer value identifying this power feed. | 
 
 ### Other Parameters
 
@@ -22937,23 +22937,23 @@ import (
 )
 
 func main() {
-	amperage := []int32{int32(123)} // []int32 |  (optional)
+	amperage := []int64{int64(123)} // []int64 |  (optional)
 	amperageEmpty := true // bool |  (optional)
-	amperageGt := []int32{int32(123)} // []int32 |  (optional)
-	amperageGte := []int32{int32(123)} // []int32 |  (optional)
-	amperageLt := []int32{int32(123)} // []int32 |  (optional)
-	amperageLte := []int32{int32(123)} // []int32 |  (optional)
-	amperageN := []int32{int32(123)} // []int32 |  (optional)
-	availablePower := []int32{int32(123)} // []int32 |  (optional)
+	amperageGt := []int64{int64(123)} // []int64 |  (optional)
+	amperageGte := []int64{int64(123)} // []int64 |  (optional)
+	amperageLt := []int64{int64(123)} // []int64 |  (optional)
+	amperageLte := []int64{int64(123)} // []int64 |  (optional)
+	amperageN := []int64{int64(123)} // []int64 |  (optional)
+	availablePower := []int64{int64(123)} // []int64 |  (optional)
 	availablePowerEmpty := true // bool |  (optional)
-	availablePowerGt := []int32{int32(123)} // []int32 |  (optional)
-	availablePowerGte := []int32{int32(123)} // []int32 |  (optional)
-	availablePowerLt := []int32{int32(123)} // []int32 |  (optional)
-	availablePowerLte := []int32{int32(123)} // []int32 |  (optional)
-	availablePowerN := []int32{int32(123)} // []int32 |  (optional)
+	availablePowerGt := []int64{int64(123)} // []int64 |  (optional)
+	availablePowerGte := []int64{int64(123)} // []int64 |  (optional)
+	availablePowerLt := []int64{int64(123)} // []int64 |  (optional)
+	availablePowerLte := []int64{int64(123)} // []int64 |  (optional)
+	availablePowerN := []int64{int64(123)} // []int64 |  (optional)
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	connected := true // bool |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -22975,13 +22975,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -22989,15 +22989,15 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	markConnected := true // bool |  (optional)
-	maxUtilization := []int32{int32(123)} // []int32 |  (optional)
+	maxUtilization := []int64{int64(123)} // []int64 |  (optional)
 	maxUtilizationEmpty := true // bool |  (optional)
-	maxUtilizationGt := []int32{int32(123)} // []int32 |  (optional)
-	maxUtilizationGte := []int32{int32(123)} // []int32 |  (optional)
-	maxUtilizationLt := []int32{int32(123)} // []int32 |  (optional)
-	maxUtilizationLte := []int32{int32(123)} // []int32 |  (optional)
-	maxUtilizationN := []int32{int32(123)} // []int32 |  (optional)
+	maxUtilizationGt := []int64{int64(123)} // []int64 |  (optional)
+	maxUtilizationGte := []int64{int64(123)} // []int64 |  (optional)
+	maxUtilizationLt := []int64{int64(123)} // []int64 |  (optional)
+	maxUtilizationLte := []int64{int64(123)} // []int64 |  (optional)
+	maxUtilizationN := []int64{int64(123)} // []int64 |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -23011,14 +23011,14 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	phase := openapiclient.dcim_power_feeds_list_phase_parameter("single-phase") // DcimPowerFeedsListPhaseParameter | * `single-phase` - Single phase * `three-phase` - Three-phase (optional)
-	powerPanelId := []int32{int32(123)} // []int32 | Power panel (ID) (optional)
-	powerPanelIdN := []int32{int32(123)} // []int32 | Power panel (ID) (optional)
+	powerPanelId := []int64{int64(123)} // []int64 | Power panel (ID) (optional)
+	powerPanelIdN := []int64{int64(123)} // []int64 | Power panel (ID) (optional)
 	q := "q_example" // string | Search (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -23029,8 +23029,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
 	statusEmpty := true // bool |  (optional)
 	statusIc := []string{"Inner_example"} // []string |  (optional)
@@ -23051,17 +23051,17 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	type_ := openapiclient.dcim_power_feeds_list_type_parameter("primary") // DcimPowerFeedsListTypeParameter | * `primary` - Primary * `redundant` - Redundant (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	voltage := []int32{int32(123)} // []int32 |  (optional)
+	voltage := []int64{int64(123)} // []int64 |  (optional)
 	voltageEmpty := true // bool |  (optional)
-	voltageGt := []int32{int32(123)} // []int32 |  (optional)
-	voltageGte := []int32{int32(123)} // []int32 |  (optional)
-	voltageLt := []int32{int32(123)} // []int32 |  (optional)
-	voltageLte := []int32{int32(123)} // []int32 |  (optional)
-	voltageN := []int32{int32(123)} // []int32 |  (optional)
+	voltageGt := []int64{int64(123)} // []int64 |  (optional)
+	voltageGte := []int64{int64(123)} // []int64 |  (optional)
+	voltageLt := []int64{int64(123)} // []int64 |  (optional)
+	voltageLte := []int64{int64(123)} // []int64 |  (optional)
+	voltageN := []int64{int64(123)} // []int64 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -23086,23 +23086,23 @@ Other parameters are passed through a pointer to a apiDcimPowerFeedsListRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **amperage** | **[]int32** |  | 
+ **amperage** | **[]int64** |  | 
  **amperageEmpty** | **bool** |  | 
- **amperageGt** | **[]int32** |  | 
- **amperageGte** | **[]int32** |  | 
- **amperageLt** | **[]int32** |  | 
- **amperageLte** | **[]int32** |  | 
- **amperageN** | **[]int32** |  | 
- **availablePower** | **[]int32** |  | 
+ **amperageGt** | **[]int64** |  | 
+ **amperageGte** | **[]int64** |  | 
+ **amperageLt** | **[]int64** |  | 
+ **amperageLte** | **[]int64** |  | 
+ **amperageN** | **[]int64** |  | 
+ **availablePower** | **[]int64** |  | 
  **availablePowerEmpty** | **bool** |  | 
- **availablePowerGt** | **[]int32** |  | 
- **availablePowerGte** | **[]int32** |  | 
- **availablePowerLt** | **[]int32** |  | 
- **availablePowerLte** | **[]int32** |  | 
- **availablePowerN** | **[]int32** |  | 
+ **availablePowerGt** | **[]int64** |  | 
+ **availablePowerGte** | **[]int64** |  | 
+ **availablePowerLt** | **[]int64** |  | 
+ **availablePowerLte** | **[]int64** |  | 
+ **availablePowerN** | **[]int64** |  | 
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **connected** | **bool** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -23124,13 +23124,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -23138,15 +23138,15 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **markConnected** | **bool** |  | 
- **maxUtilization** | **[]int32** |  | 
+ **maxUtilization** | **[]int64** |  | 
  **maxUtilizationEmpty** | **bool** |  | 
- **maxUtilizationGt** | **[]int32** |  | 
- **maxUtilizationGte** | **[]int32** |  | 
- **maxUtilizationLt** | **[]int32** |  | 
- **maxUtilizationLte** | **[]int32** |  | 
- **maxUtilizationN** | **[]int32** |  | 
+ **maxUtilizationGt** | **[]int64** |  | 
+ **maxUtilizationGte** | **[]int64** |  | 
+ **maxUtilizationLt** | **[]int64** |  | 
+ **maxUtilizationLte** | **[]int64** |  | 
+ **maxUtilizationN** | **[]int64** |  | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -23160,14 +23160,14 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **phase** | [**DcimPowerFeedsListPhaseParameter**](DcimPowerFeedsListPhaseParameter.md) | * &#x60;single-phase&#x60; - Single phase * &#x60;three-phase&#x60; - Three-phase | 
- **powerPanelId** | **[]int32** | Power panel (ID) | 
- **powerPanelIdN** | **[]int32** | Power panel (ID) | 
+ **powerPanelId** | **[]int64** | Power panel (ID) | 
+ **powerPanelIdN** | **[]int64** | Power panel (ID) | 
  **q** | **string** | Search | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -23178,8 +23178,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **status** | **[]string** |  | 
  **statusEmpty** | **bool** |  | 
  **statusIc** | **[]string** |  | 
@@ -23200,17 +23200,17 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **type_** | [**DcimPowerFeedsListTypeParameter**](DcimPowerFeedsListTypeParameter.md) | * &#x60;primary&#x60; - Primary * &#x60;redundant&#x60; - Redundant | 
  **updatedByRequest** | **string** |  | 
- **voltage** | **[]int32** |  | 
+ **voltage** | **[]int64** |  | 
  **voltageEmpty** | **bool** |  | 
- **voltageGt** | **[]int32** |  | 
- **voltageGte** | **[]int32** |  | 
- **voltageLt** | **[]int32** |  | 
- **voltageLte** | **[]int32** |  | 
- **voltageN** | **[]int32** |  | 
+ **voltageGt** | **[]int64** |  | 
+ **voltageGte** | **[]int64** |  | 
+ **voltageLt** | **[]int64** |  | 
+ **voltageLte** | **[]int64** |  | 
+ **voltageN** | **[]int64** |  | 
 
 ### Return type
 
@@ -23251,7 +23251,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power feed.
+	id := int64(56) // int64 | A unique integer value identifying this power feed.
 	patchedWritablePowerFeedRequest := *openapiclient.NewPatchedWritablePowerFeedRequest() // PatchedWritablePowerFeedRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -23272,7 +23272,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power feed. | 
+**id** | **int64** | A unique integer value identifying this power feed. | 
 
 ### Other Parameters
 
@@ -23323,7 +23323,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power feed.
+	id := int64(56) // int64 | A unique integer value identifying this power feed.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -23343,7 +23343,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power feed. | 
+**id** | **int64** | A unique integer value identifying this power feed. | 
 
 ### Other Parameters
 
@@ -23393,7 +23393,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power feed.
+	id := int64(56) // int64 | A unique integer value identifying this power feed.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -23413,7 +23413,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power feed. | 
+**id** | **int64** | A unique integer value identifying this power feed. | 
 
 ### Other Parameters
 
@@ -23463,7 +23463,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power feed.
+	id := int64(56) // int64 | A unique integer value identifying this power feed.
 	writablePowerFeedRequest := *openapiclient.NewWritablePowerFeedRequest(*openapiclient.NewBriefPowerPanelRequest("Name_example"), "Name_example") // WritablePowerFeedRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -23484,7 +23484,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power feed. | 
+**id** | **int64** | A unique integer value identifying this power feed. | 
 
 ### Other Parameters
 
@@ -23797,7 +23797,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet template.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -23815,7 +23815,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet template. | 
+**id** | **int64** | A unique integer value identifying this power outlet template. | 
 
 ### Other Parameters
 
@@ -23885,8 +23885,8 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
 	feedLeg := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
 	feedLegEmpty := true // bool |  (optional)
 	feedLegIc := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
@@ -23898,13 +23898,13 @@ func main() {
 	feedLegNie := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
 	feedLegNiew := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
 	feedLegNisw := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -23923,10 +23923,10 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -23938,10 +23938,10 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	powerPortId := []*int32{int32(123)} // []*int32 | Power port (ID) (optional)
-	powerPortIdN := []*int32{int32(123)} // []*int32 | Power port (ID) (optional)
+	powerPortId := []*int64{int64(123)} // []*int64 | Power port (ID) (optional)
+	powerPortIdN := []*int64{int64(123)} // []*int64 | Power port (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	type_ := openapiclient.dcim_power_outlet_templates_list_type_parameter("California Style") // DcimPowerOutletTemplatesListTypeParameter | * `IEC 60320` - [('iec-60320-c5', 'C5'), ('iec-60320-c7', 'C7'), ('iec-60320-c13', 'C13'), ('iec-60320-c15', 'C15'), ('iec-60320-c19', 'C19'), ('iec-60320-c21', 'C21')] * `IEC 60309` - [('iec-60309-p-n-e-4h', 'P+N+E 4H'), ('iec-60309-p-n-e-6h', 'P+N+E 6H'), ('iec-60309-p-n-e-9h', 'P+N+E 9H'), ('iec-60309-2p-e-4h', '2P+E 4H'), ('iec-60309-2p-e-6h', '2P+E 6H'), ('iec-60309-2p-e-9h', '2P+E 9H'), ('iec-60309-3p-e-4h', '3P+E 4H'), ('iec-60309-3p-e-6h', '3P+E 6H'), ('iec-60309-3p-e-9h', '3P+E 9H'), ('iec-60309-3p-n-e-4h', '3P+N+E 4H'), ('iec-60309-3p-n-e-6h', '3P+N+E 6H'), ('iec-60309-3p-n-e-9h', '3P+N+E 9H')] * `IEC 60906-1` - [('iec-60906-1', 'IEC 60906-1'), ('nbr-14136-10a', '2P+T 10A (NBR 14136)'), ('nbr-14136-20a', '2P+T 20A (NBR 14136)')] * `NEMA (Non-locking)` - [('nema-1-15r', 'NEMA 1-15R'), ('nema-5-15r', 'NEMA 5-15R'), ('nema-5-20r', 'NEMA 5-20R'), ('nema-5-30r', 'NEMA 5-30R'), ('nema-5-50r', 'NEMA 5-50R'), ('nema-6-15r', 'NEMA 6-15R'), ('nema-6-20r', 'NEMA 6-20R'), ('nema-6-30r', 'NEMA 6-30R'), ('nema-6-50r', 'NEMA 6-50R'), ('nema-10-30r', 'NEMA 10-30R'), ('nema-10-50r', 'NEMA 10-50R'), ('nema-14-20r', 'NEMA 14-20R'), ('nema-14-30r', 'NEMA 14-30R'), ('nema-14-50r', 'NEMA 14-50R'), ('nema-14-60r', 'NEMA 14-60R'), ('nema-15-15r', 'NEMA 15-15R'), ('nema-15-20r', 'NEMA 15-20R'), ('nema-15-30r', 'NEMA 15-30R'), ('nema-15-50r', 'NEMA 15-50R'), ('nema-15-60r', 'NEMA 15-60R')] * `NEMA (Locking)` - [('nema-l1-15r', 'NEMA L1-15R'), ('nema-l5-15r', 'NEMA L5-15R'), ('nema-l5-20r', 'NEMA L5-20R'), ('nema-l5-30r', 'NEMA L5-30R'), ('nema-l5-50r', 'NEMA L5-50R'), ('nema-l6-15r', 'NEMA L6-15R'), ('nema-l6-20r', 'NEMA L6-20R'), ('nema-l6-30r', 'NEMA L6-30R'), ('nema-l6-50r', 'NEMA L6-50R'), ('nema-l10-30r', 'NEMA L10-30R'), ('nema-l14-20r', 'NEMA L14-20R'), ('nema-l14-30r', 'NEMA L14-30R'), ('nema-l14-50r', 'NEMA L14-50R'), ('nema-l14-60r', 'NEMA L14-60R'), ('nema-l15-20r', 'NEMA L15-20R'), ('nema-l15-30r', 'NEMA L15-30R'), ('nema-l15-50r', 'NEMA L15-50R'), ('nema-l15-60r', 'NEMA L15-60R'), ('nema-l21-20r', 'NEMA L21-20R'), ('nema-l21-30r', 'NEMA L21-30R'), ('nema-l22-20r', 'NEMA L22-20R'), ('nema-l22-30r', 'NEMA L22-30R')] * `California Style` - [('CS6360C', 'CS6360C'), ('CS6364C', 'CS6364C'), ('CS8164C', 'CS8164C'), ('CS8264C', 'CS8264C'), ('CS8364C', 'CS8364C'), ('CS8464C', 'CS8464C')] * `ITA/International` - [('ita-e', 'ITA Type E (CEE 7/5)'), ('ita-f', 'ITA Type F (CEE 7/3)'), ('ita-g', 'ITA Type G (BS 1363)'), ('ita-h', 'ITA Type H'), ('ita-i', 'ITA Type I'), ('ita-j', 'ITA Type J'), ('ita-k', 'ITA Type K'), ('ita-l', 'ITA Type L (CEI 23-50)'), ('ita-m', 'ITA Type M (BS 546)'), ('ita-n', 'ITA Type N'), ('ita-o', 'ITA Type O'), ('ita-multistandard', 'ITA Multistandard')] * `USB` - [('usb-a', 'USB Type A'), ('usb-micro-b', 'USB Micro B'), ('usb-c', 'USB Type C')] * `Molex` - [('molex-micro-fit-1x2', 'Molex Micro-Fit 1x2'), ('molex-micro-fit-2x2', 'Molex Micro-Fit 2x2'), ('molex-micro-fit-2x4', 'Molex Micro-Fit 2x4')] * `DC` - [('dc-terminal', 'DC Terminal')] * `Proprietary` - [('eaton-c39', 'Eaton C39'), ('hdot-cx', 'HDOT Cx'), ('saf-d-grid', 'Saf-D-Grid'), ('neutrik-powercon-20a', 'Neutrik powerCON (20A)'), ('neutrik-powercon-32a', 'Neutrik powerCON (32A)'), ('neutrik-powercon-true1', 'Neutrik powerCON TRUE1'), ('neutrik-powercon-true1-top', 'Neutrik powerCON TRUE1 TOP'), ('ubiquiti-smartpower', 'Ubiquiti SmartPower')] * `Other` - [('hardwired', 'Hardwired'), ('other', 'Other')] (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
@@ -23988,8 +23988,8 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
  **feedLeg** | **[]string** | Phase (for three-phase feeds) | 
  **feedLegEmpty** | **bool** |  | 
  **feedLegIc** | **[]string** | Phase (for three-phase feeds) | 
@@ -24001,13 +24001,13 @@ Name | Type | Description  | Notes
  **feedLegNie** | **[]string** | Phase (for three-phase feeds) | 
  **feedLegNiew** | **[]string** | Phase (for three-phase feeds) | 
  **feedLegNisw** | **[]string** | Phase (for three-phase feeds) | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -24026,10 +24026,10 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -24041,10 +24041,10 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **powerPortId** | **[]int32** | Power port (ID) | 
- **powerPortIdN** | **[]int32** | Power port (ID) | 
+ **powerPortId** | **[]int64** | Power port (ID) | 
+ **powerPortIdN** | **[]int64** | Power port (ID) | 
  **q** | **string** | Search | 
  **type_** | [**DcimPowerOutletTemplatesListTypeParameter**](DcimPowerOutletTemplatesListTypeParameter.md) | * &#x60;IEC 60320&#x60; - [(&#39;iec-60320-c5&#39;, &#39;C5&#39;), (&#39;iec-60320-c7&#39;, &#39;C7&#39;), (&#39;iec-60320-c13&#39;, &#39;C13&#39;), (&#39;iec-60320-c15&#39;, &#39;C15&#39;), (&#39;iec-60320-c19&#39;, &#39;C19&#39;), (&#39;iec-60320-c21&#39;, &#39;C21&#39;)] * &#x60;IEC 60309&#x60; - [(&#39;iec-60309-p-n-e-4h&#39;, &#39;P+N+E 4H&#39;), (&#39;iec-60309-p-n-e-6h&#39;, &#39;P+N+E 6H&#39;), (&#39;iec-60309-p-n-e-9h&#39;, &#39;P+N+E 9H&#39;), (&#39;iec-60309-2p-e-4h&#39;, &#39;2P+E 4H&#39;), (&#39;iec-60309-2p-e-6h&#39;, &#39;2P+E 6H&#39;), (&#39;iec-60309-2p-e-9h&#39;, &#39;2P+E 9H&#39;), (&#39;iec-60309-3p-e-4h&#39;, &#39;3P+E 4H&#39;), (&#39;iec-60309-3p-e-6h&#39;, &#39;3P+E 6H&#39;), (&#39;iec-60309-3p-e-9h&#39;, &#39;3P+E 9H&#39;), (&#39;iec-60309-3p-n-e-4h&#39;, &#39;3P+N+E 4H&#39;), (&#39;iec-60309-3p-n-e-6h&#39;, &#39;3P+N+E 6H&#39;), (&#39;iec-60309-3p-n-e-9h&#39;, &#39;3P+N+E 9H&#39;)] * &#x60;IEC 60906-1&#x60; - [(&#39;iec-60906-1&#39;, &#39;IEC 60906-1&#39;), (&#39;nbr-14136-10a&#39;, &#39;2P+T 10A (NBR 14136)&#39;), (&#39;nbr-14136-20a&#39;, &#39;2P+T 20A (NBR 14136)&#39;)] * &#x60;NEMA (Non-locking)&#x60; - [(&#39;nema-1-15r&#39;, &#39;NEMA 1-15R&#39;), (&#39;nema-5-15r&#39;, &#39;NEMA 5-15R&#39;), (&#39;nema-5-20r&#39;, &#39;NEMA 5-20R&#39;), (&#39;nema-5-30r&#39;, &#39;NEMA 5-30R&#39;), (&#39;nema-5-50r&#39;, &#39;NEMA 5-50R&#39;), (&#39;nema-6-15r&#39;, &#39;NEMA 6-15R&#39;), (&#39;nema-6-20r&#39;, &#39;NEMA 6-20R&#39;), (&#39;nema-6-30r&#39;, &#39;NEMA 6-30R&#39;), (&#39;nema-6-50r&#39;, &#39;NEMA 6-50R&#39;), (&#39;nema-10-30r&#39;, &#39;NEMA 10-30R&#39;), (&#39;nema-10-50r&#39;, &#39;NEMA 10-50R&#39;), (&#39;nema-14-20r&#39;, &#39;NEMA 14-20R&#39;), (&#39;nema-14-30r&#39;, &#39;NEMA 14-30R&#39;), (&#39;nema-14-50r&#39;, &#39;NEMA 14-50R&#39;), (&#39;nema-14-60r&#39;, &#39;NEMA 14-60R&#39;), (&#39;nema-15-15r&#39;, &#39;NEMA 15-15R&#39;), (&#39;nema-15-20r&#39;, &#39;NEMA 15-20R&#39;), (&#39;nema-15-30r&#39;, &#39;NEMA 15-30R&#39;), (&#39;nema-15-50r&#39;, &#39;NEMA 15-50R&#39;), (&#39;nema-15-60r&#39;, &#39;NEMA 15-60R&#39;)] * &#x60;NEMA (Locking)&#x60; - [(&#39;nema-l1-15r&#39;, &#39;NEMA L1-15R&#39;), (&#39;nema-l5-15r&#39;, &#39;NEMA L5-15R&#39;), (&#39;nema-l5-20r&#39;, &#39;NEMA L5-20R&#39;), (&#39;nema-l5-30r&#39;, &#39;NEMA L5-30R&#39;), (&#39;nema-l5-50r&#39;, &#39;NEMA L5-50R&#39;), (&#39;nema-l6-15r&#39;, &#39;NEMA L6-15R&#39;), (&#39;nema-l6-20r&#39;, &#39;NEMA L6-20R&#39;), (&#39;nema-l6-30r&#39;, &#39;NEMA L6-30R&#39;), (&#39;nema-l6-50r&#39;, &#39;NEMA L6-50R&#39;), (&#39;nema-l10-30r&#39;, &#39;NEMA L10-30R&#39;), (&#39;nema-l14-20r&#39;, &#39;NEMA L14-20R&#39;), (&#39;nema-l14-30r&#39;, &#39;NEMA L14-30R&#39;), (&#39;nema-l14-50r&#39;, &#39;NEMA L14-50R&#39;), (&#39;nema-l14-60r&#39;, &#39;NEMA L14-60R&#39;), (&#39;nema-l15-20r&#39;, &#39;NEMA L15-20R&#39;), (&#39;nema-l15-30r&#39;, &#39;NEMA L15-30R&#39;), (&#39;nema-l15-50r&#39;, &#39;NEMA L15-50R&#39;), (&#39;nema-l15-60r&#39;, &#39;NEMA L15-60R&#39;), (&#39;nema-l21-20r&#39;, &#39;NEMA L21-20R&#39;), (&#39;nema-l21-30r&#39;, &#39;NEMA L21-30R&#39;), (&#39;nema-l22-20r&#39;, &#39;NEMA L22-20R&#39;), (&#39;nema-l22-30r&#39;, &#39;NEMA L22-30R&#39;)] * &#x60;California Style&#x60; - [(&#39;CS6360C&#39;, &#39;CS6360C&#39;), (&#39;CS6364C&#39;, &#39;CS6364C&#39;), (&#39;CS8164C&#39;, &#39;CS8164C&#39;), (&#39;CS8264C&#39;, &#39;CS8264C&#39;), (&#39;CS8364C&#39;, &#39;CS8364C&#39;), (&#39;CS8464C&#39;, &#39;CS8464C&#39;)] * &#x60;ITA/International&#x60; - [(&#39;ita-e&#39;, &#39;ITA Type E (CEE 7/5)&#39;), (&#39;ita-f&#39;, &#39;ITA Type F (CEE 7/3)&#39;), (&#39;ita-g&#39;, &#39;ITA Type G (BS 1363)&#39;), (&#39;ita-h&#39;, &#39;ITA Type H&#39;), (&#39;ita-i&#39;, &#39;ITA Type I&#39;), (&#39;ita-j&#39;, &#39;ITA Type J&#39;), (&#39;ita-k&#39;, &#39;ITA Type K&#39;), (&#39;ita-l&#39;, &#39;ITA Type L (CEI 23-50)&#39;), (&#39;ita-m&#39;, &#39;ITA Type M (BS 546)&#39;), (&#39;ita-n&#39;, &#39;ITA Type N&#39;), (&#39;ita-o&#39;, &#39;ITA Type O&#39;), (&#39;ita-multistandard&#39;, &#39;ITA Multistandard&#39;)] * &#x60;USB&#x60; - [(&#39;usb-a&#39;, &#39;USB Type A&#39;), (&#39;usb-micro-b&#39;, &#39;USB Micro B&#39;), (&#39;usb-c&#39;, &#39;USB Type C&#39;)] * &#x60;Molex&#x60; - [(&#39;molex-micro-fit-1x2&#39;, &#39;Molex Micro-Fit 1x2&#39;), (&#39;molex-micro-fit-2x2&#39;, &#39;Molex Micro-Fit 2x2&#39;), (&#39;molex-micro-fit-2x4&#39;, &#39;Molex Micro-Fit 2x4&#39;)] * &#x60;DC&#x60; - [(&#39;dc-terminal&#39;, &#39;DC Terminal&#39;)] * &#x60;Proprietary&#x60; - [(&#39;eaton-c39&#39;, &#39;Eaton C39&#39;), (&#39;hdot-cx&#39;, &#39;HDOT Cx&#39;), (&#39;saf-d-grid&#39;, &#39;Saf-D-Grid&#39;), (&#39;neutrik-powercon-20a&#39;, &#39;Neutrik powerCON (20A)&#39;), (&#39;neutrik-powercon-32a&#39;, &#39;Neutrik powerCON (32A)&#39;), (&#39;neutrik-powercon-true1&#39;, &#39;Neutrik powerCON TRUE1&#39;), (&#39;neutrik-powercon-true1-top&#39;, &#39;Neutrik powerCON TRUE1 TOP&#39;), (&#39;ubiquiti-smartpower&#39;, &#39;Ubiquiti SmartPower&#39;)] * &#x60;Other&#x60; - [(&#39;hardwired&#39;, &#39;Hardwired&#39;), (&#39;other&#39;, &#39;Other&#39;)] | 
  **updatedByRequest** | **string** |  | 
@@ -24088,7 +24088,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet template.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet template.
 	patchedWritablePowerOutletTemplateRequest := *openapiclient.NewPatchedWritablePowerOutletTemplateRequest() // PatchedWritablePowerOutletTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -24109,7 +24109,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet template. | 
+**id** | **int64** | A unique integer value identifying this power outlet template. | 
 
 ### Other Parameters
 
@@ -24160,7 +24160,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet template.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -24180,7 +24180,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet template. | 
+**id** | **int64** | A unique integer value identifying this power outlet template. | 
 
 ### Other Parameters
 
@@ -24230,7 +24230,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet template.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet template.
 	writablePowerOutletTemplateRequest := *openapiclient.NewWritablePowerOutletTemplateRequest("Name_example") // WritablePowerOutletTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -24251,7 +24251,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet template. | 
+**id** | **int64** | A unique integer value identifying this power outlet template. | 
 
 ### Other Parameters
 
@@ -24564,7 +24564,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -24582,7 +24582,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet. | 
+**id** | **int64** | A unique integer value identifying this power outlet. | 
 
 ### Other Parameters
 
@@ -24634,8 +24634,8 @@ import (
 
 func main() {
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	color := []string{"Inner_example"} // []string |  (optional)
 	colorEmpty := true // bool |  (optional)
@@ -24670,12 +24670,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -24689,8 +24689,8 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
 	feedLeg := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
 	feedLegEmpty := true // bool |  (optional)
 	feedLegIc := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
@@ -24702,13 +24702,13 @@ func main() {
 	feedLegNie := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
 	feedLegNiew := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
 	feedLegNisw := []*string{"Inner_example"} // []*string | Phase (for three-phase feeds) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -24727,15 +24727,15 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	markConnected := true // bool |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -24748,15 +24748,15 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	powerPortId := []*int32{int32(123)} // []*int32 | Power port (ID) (optional)
-	powerPortIdN := []*int32{int32(123)} // []*int32 | Power port (ID) (optional)
+	powerPortId := []*int64{int64(123)} // []*int64 | Power port (ID) (optional)
+	powerPortIdN := []*int64{int64(123)} // []*int64 | Power port (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -24767,8 +24767,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	type_ := []*string{"Inner_example"} // []*string | Physical port type (optional)
@@ -24785,8 +24785,8 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -24812,8 +24812,8 @@ Other parameters are passed through a pointer to a apiDcimPowerOutletsListReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **color** | **[]string** |  | 
  **colorEmpty** | **bool** |  | 
@@ -24848,12 +24848,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -24867,8 +24867,8 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
  **feedLeg** | **[]string** | Phase (for three-phase feeds) | 
  **feedLegEmpty** | **bool** |  | 
  **feedLegIc** | **[]string** | Phase (for three-phase feeds) | 
@@ -24880,13 +24880,13 @@ Name | Type | Description  | Notes
  **feedLegNie** | **[]string** | Phase (for three-phase feeds) | 
  **feedLegNiew** | **[]string** | Phase (for three-phase feeds) | 
  **feedLegNisw** | **[]string** | Phase (for three-phase feeds) | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -24905,15 +24905,15 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **markConnected** | **bool** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -24926,15 +24926,15 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **powerPortId** | **[]int32** | Power port (ID) | 
- **powerPortIdN** | **[]int32** | Power port (ID) | 
+ **powerPortId** | **[]int64** | Power port (ID) | 
+ **powerPortIdN** | **[]int64** | Power port (ID) | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -24945,8 +24945,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **type_** | **[]string** | Physical port type | 
@@ -24963,8 +24963,8 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -25005,7 +25005,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet.
 	patchedWritablePowerOutletRequest := *openapiclient.NewPatchedWritablePowerOutletRequest() // PatchedWritablePowerOutletRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -25026,7 +25026,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet. | 
+**id** | **int64** | A unique integer value identifying this power outlet. | 
 
 ### Other Parameters
 
@@ -25077,7 +25077,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -25097,7 +25097,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet. | 
+**id** | **int64** | A unique integer value identifying this power outlet. | 
 
 ### Other Parameters
 
@@ -25147,7 +25147,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -25167,7 +25167,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet. | 
+**id** | **int64** | A unique integer value identifying this power outlet. | 
 
 ### Other Parameters
 
@@ -25217,7 +25217,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power outlet.
+	id := int64(56) // int64 | A unique integer value identifying this power outlet.
 	writablePowerOutletRequest := *openapiclient.NewWritablePowerOutletRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example") // WritablePowerOutletRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -25238,7 +25238,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power outlet. | 
+**id** | **int64** | A unique integer value identifying this power outlet. | 
 
 ### Other Parameters
 
@@ -25551,7 +25551,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power panel.
+	id := int64(56) // int64 | A unique integer value identifying this power panel.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -25569,7 +25569,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power panel. | 
+**id** | **int64** | A unique integer value identifying this power panel. | 
 
 ### Other Parameters
 
@@ -25620,12 +25620,12 @@ import (
 )
 
 func main() {
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -25645,13 +25645,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -25659,7 +25659,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	locationId := []string{"Inner_example"} // []string |  (optional)
 	locationIdN := []string{"Inner_example"} // []string |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
@@ -25674,7 +25674,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
@@ -25687,8 +25687,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
@@ -25716,12 +25716,12 @@ Other parameters are passed through a pointer to a apiDcimPowerPanelsListRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -25741,13 +25741,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -25755,7 +25755,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **locationId** | **[]string** |  | 
  **locationIdN** | **[]string** |  | 
  **modifiedByRequest** | **string** |  | 
@@ -25770,7 +25770,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **region** | **[]string** |  | 
@@ -25783,8 +25783,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **updatedByRequest** | **string** |  | 
@@ -25828,7 +25828,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power panel.
+	id := int64(56) // int64 | A unique integer value identifying this power panel.
 	patchedPowerPanelRequest := *openapiclient.NewPatchedPowerPanelRequest() // PatchedPowerPanelRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -25849,7 +25849,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power panel. | 
+**id** | **int64** | A unique integer value identifying this power panel. | 
 
 ### Other Parameters
 
@@ -25900,7 +25900,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power panel.
+	id := int64(56) // int64 | A unique integer value identifying this power panel.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -25920,7 +25920,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power panel. | 
+**id** | **int64** | A unique integer value identifying this power panel. | 
 
 ### Other Parameters
 
@@ -25970,7 +25970,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power panel.
+	id := int64(56) // int64 | A unique integer value identifying this power panel.
 	powerPanelRequest := *openapiclient.NewPowerPanelRequest(*openapiclient.NewBriefSiteRequest("Name_example", "Slug_example"), "Name_example") // PowerPanelRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -25991,7 +25991,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power panel. | 
+**id** | **int64** | A unique integer value identifying this power panel. | 
 
 ### Other Parameters
 
@@ -26304,7 +26304,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port template.
+	id := int64(56) // int64 | A unique integer value identifying this power port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -26322,7 +26322,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port template. | 
+**id** | **int64** | A unique integer value identifying this power port template. | 
 
 ### Other Parameters
 
@@ -26373,13 +26373,13 @@ import (
 )
 
 func main() {
-	allocatedDraw := []int32{int32(123)} // []int32 |  (optional)
+	allocatedDraw := []int64{int64(123)} // []int64 |  (optional)
 	allocatedDrawEmpty := true // bool |  (optional)
-	allocatedDrawGt := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawGte := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawLt := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawLte := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawN := []int32{int32(123)} // []int32 |  (optional)
+	allocatedDrawGt := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawGte := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawLt := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawLte := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawN := []int64{int64(123)} // []int64 |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -26399,15 +26399,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -26426,17 +26426,17 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
-	maximumDraw := []int32{int32(123)} // []int32 |  (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
+	maximumDraw := []int64{int64(123)} // []int64 |  (optional)
 	maximumDrawEmpty := true // bool |  (optional)
-	maximumDrawGt := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawGte := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawLt := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawLte := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawN := []int32{int32(123)} // []int32 |  (optional)
+	maximumDrawGt := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawGte := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawLt := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawLte := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawN := []int64{int64(123)} // []int64 |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -26448,7 +26448,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	type_ := openapiclient.dcim_power_port_templates_list_type_parameter("California Style") // DcimPowerPortTemplatesListTypeParameter | * `IEC 60320` - [('iec-60320-c6', 'C6'), ('iec-60320-c8', 'C8'), ('iec-60320-c14', 'C14'), ('iec-60320-c16', 'C16'), ('iec-60320-c20', 'C20'), ('iec-60320-c22', 'C22')] * `IEC 60309` - [('iec-60309-p-n-e-4h', 'P+N+E 4H'), ('iec-60309-p-n-e-6h', 'P+N+E 6H'), ('iec-60309-p-n-e-9h', 'P+N+E 9H'), ('iec-60309-2p-e-4h', '2P+E 4H'), ('iec-60309-2p-e-6h', '2P+E 6H'), ('iec-60309-2p-e-9h', '2P+E 9H'), ('iec-60309-3p-e-4h', '3P+E 4H'), ('iec-60309-3p-e-6h', '3P+E 6H'), ('iec-60309-3p-e-9h', '3P+E 9H'), ('iec-60309-3p-n-e-4h', '3P+N+E 4H'), ('iec-60309-3p-n-e-6h', '3P+N+E 6H'), ('iec-60309-3p-n-e-9h', '3P+N+E 9H')] * `IEC 60906-1` - [('iec-60906-1', 'IEC 60906-1'), ('nbr-14136-10a', '2P+T 10A (NBR 14136)'), ('nbr-14136-20a', '2P+T 20A (NBR 14136)')] * `NEMA (Non-locking)` - [('nema-1-15p', 'NEMA 1-15P'), ('nema-5-15p', 'NEMA 5-15P'), ('nema-5-20p', 'NEMA 5-20P'), ('nema-5-30p', 'NEMA 5-30P'), ('nema-5-50p', 'NEMA 5-50P'), ('nema-6-15p', 'NEMA 6-15P'), ('nema-6-20p', 'NEMA 6-20P'), ('nema-6-30p', 'NEMA 6-30P'), ('nema-6-50p', 'NEMA 6-50P'), ('nema-10-30p', 'NEMA 10-30P'), ('nema-10-50p', 'NEMA 10-50P'), ('nema-14-20p', 'NEMA 14-20P'), ('nema-14-30p', 'NEMA 14-30P'), ('nema-14-50p', 'NEMA 14-50P'), ('nema-14-60p', 'NEMA 14-60P'), ('nema-15-15p', 'NEMA 15-15P'), ('nema-15-20p', 'NEMA 15-20P'), ('nema-15-30p', 'NEMA 15-30P'), ('nema-15-50p', 'NEMA 15-50P'), ('nema-15-60p', 'NEMA 15-60P')] * `NEMA (Locking)` - [('nema-l1-15p', 'NEMA L1-15P'), ('nema-l5-15p', 'NEMA L5-15P'), ('nema-l5-20p', 'NEMA L5-20P'), ('nema-l5-30p', 'NEMA L5-30P'), ('nema-l5-50p', 'NEMA L5-50P'), ('nema-l6-15p', 'NEMA L6-15P'), ('nema-l6-20p', 'NEMA L6-20P'), ('nema-l6-30p', 'NEMA L6-30P'), ('nema-l6-50p', 'NEMA L6-50P'), ('nema-l10-30p', 'NEMA L10-30P'), ('nema-l14-20p', 'NEMA L14-20P'), ('nema-l14-30p', 'NEMA L14-30P'), ('nema-l14-50p', 'NEMA L14-50P'), ('nema-l14-60p', 'NEMA L14-60P'), ('nema-l15-20p', 'NEMA L15-20P'), ('nema-l15-30p', 'NEMA L15-30P'), ('nema-l15-50p', 'NEMA L15-50P'), ('nema-l15-60p', 'NEMA L15-60P'), ('nema-l21-20p', 'NEMA L21-20P'), ('nema-l21-30p', 'NEMA L21-30P'), ('nema-l22-20p', 'NEMA L22-20P'), ('nema-l22-30p', 'NEMA L22-30P')] * `California Style` - [('cs6361c', 'CS6361C'), ('cs6365c', 'CS6365C'), ('cs8165c', 'CS8165C'), ('cs8265c', 'CS8265C'), ('cs8365c', 'CS8365C'), ('cs8465c', 'CS8465C')] * `International/ITA` - [('ita-c', 'ITA Type C (CEE 7/16)'), ('ita-e', 'ITA Type E (CEE 7/6)'), ('ita-f', 'ITA Type F (CEE 7/4)'), ('ita-ef', 'ITA Type E/F (CEE 7/7)'), ('ita-g', 'ITA Type G (BS 1363)'), ('ita-h', 'ITA Type H'), ('ita-i', 'ITA Type I'), ('ita-j', 'ITA Type J'), ('ita-k', 'ITA Type K'), ('ita-l', 'ITA Type L (CEI 23-50)'), ('ita-m', 'ITA Type M (BS 546)'), ('ita-n', 'ITA Type N'), ('ita-o', 'ITA Type O')] * `USB` - [('usb-a', 'USB Type A'), ('usb-b', 'USB Type B'), ('usb-c', 'USB Type C'), ('usb-mini-a', 'USB Mini A'), ('usb-mini-b', 'USB Mini B'), ('usb-micro-a', 'USB Micro A'), ('usb-micro-b', 'USB Micro B'), ('usb-micro-ab', 'USB Micro AB'), ('usb-3-b', 'USB 3.0 Type B'), ('usb-3-micro-b', 'USB 3.0 Micro B')] * `Molex` - [('molex-micro-fit-1x2', 'Molex Micro-Fit 1x2'), ('molex-micro-fit-2x2', 'Molex Micro-Fit 2x2'), ('molex-micro-fit-2x4', 'Molex Micro-Fit 2x4')] * `DC` - [('dc-terminal', 'DC Terminal')] * `Proprietary` - [('saf-d-grid', 'Saf-D-Grid'), ('neutrik-powercon-20', 'Neutrik powerCON (20A)'), ('neutrik-powercon-32', 'Neutrik powerCON (32A)'), ('neutrik-powercon-true1', 'Neutrik powerCON TRUE1'), ('neutrik-powercon-true1-top', 'Neutrik powerCON TRUE1 TOP'), ('ubiquiti-smartpower', 'Ubiquiti SmartPower')] * `Other` - [('hardwired', 'Hardwired'), ('other', 'Other')] (optional)
@@ -26477,13 +26477,13 @@ Other parameters are passed through a pointer to a apiDcimPowerPortTemplatesList
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **allocatedDraw** | **[]int32** |  | 
+ **allocatedDraw** | **[]int64** |  | 
  **allocatedDrawEmpty** | **bool** |  | 
- **allocatedDrawGt** | **[]int32** |  | 
- **allocatedDrawGte** | **[]int32** |  | 
- **allocatedDrawLt** | **[]int32** |  | 
- **allocatedDrawLte** | **[]int32** |  | 
- **allocatedDrawN** | **[]int32** |  | 
+ **allocatedDrawGt** | **[]int64** |  | 
+ **allocatedDrawGte** | **[]int64** |  | 
+ **allocatedDrawLt** | **[]int64** |  | 
+ **allocatedDrawLte** | **[]int64** |  | 
+ **allocatedDrawN** | **[]int64** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -26503,15 +26503,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -26530,17 +26530,17 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
- **maximumDraw** | **[]int32** |  | 
+ **limit** | **int64** | Number of results to return per page. | 
+ **maximumDraw** | **[]int64** |  | 
  **maximumDrawEmpty** | **bool** |  | 
- **maximumDrawGt** | **[]int32** |  | 
- **maximumDrawGte** | **[]int32** |  | 
- **maximumDrawLt** | **[]int32** |  | 
- **maximumDrawLte** | **[]int32** |  | 
- **maximumDrawN** | **[]int32** |  | 
+ **maximumDrawGt** | **[]int64** |  | 
+ **maximumDrawGte** | **[]int64** |  | 
+ **maximumDrawLt** | **[]int64** |  | 
+ **maximumDrawLte** | **[]int64** |  | 
+ **maximumDrawN** | **[]int64** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -26552,7 +26552,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **type_** | [**DcimPowerPortTemplatesListTypeParameter**](DcimPowerPortTemplatesListTypeParameter.md) | * &#x60;IEC 60320&#x60; - [(&#39;iec-60320-c6&#39;, &#39;C6&#39;), (&#39;iec-60320-c8&#39;, &#39;C8&#39;), (&#39;iec-60320-c14&#39;, &#39;C14&#39;), (&#39;iec-60320-c16&#39;, &#39;C16&#39;), (&#39;iec-60320-c20&#39;, &#39;C20&#39;), (&#39;iec-60320-c22&#39;, &#39;C22&#39;)] * &#x60;IEC 60309&#x60; - [(&#39;iec-60309-p-n-e-4h&#39;, &#39;P+N+E 4H&#39;), (&#39;iec-60309-p-n-e-6h&#39;, &#39;P+N+E 6H&#39;), (&#39;iec-60309-p-n-e-9h&#39;, &#39;P+N+E 9H&#39;), (&#39;iec-60309-2p-e-4h&#39;, &#39;2P+E 4H&#39;), (&#39;iec-60309-2p-e-6h&#39;, &#39;2P+E 6H&#39;), (&#39;iec-60309-2p-e-9h&#39;, &#39;2P+E 9H&#39;), (&#39;iec-60309-3p-e-4h&#39;, &#39;3P+E 4H&#39;), (&#39;iec-60309-3p-e-6h&#39;, &#39;3P+E 6H&#39;), (&#39;iec-60309-3p-e-9h&#39;, &#39;3P+E 9H&#39;), (&#39;iec-60309-3p-n-e-4h&#39;, &#39;3P+N+E 4H&#39;), (&#39;iec-60309-3p-n-e-6h&#39;, &#39;3P+N+E 6H&#39;), (&#39;iec-60309-3p-n-e-9h&#39;, &#39;3P+N+E 9H&#39;)] * &#x60;IEC 60906-1&#x60; - [(&#39;iec-60906-1&#39;, &#39;IEC 60906-1&#39;), (&#39;nbr-14136-10a&#39;, &#39;2P+T 10A (NBR 14136)&#39;), (&#39;nbr-14136-20a&#39;, &#39;2P+T 20A (NBR 14136)&#39;)] * &#x60;NEMA (Non-locking)&#x60; - [(&#39;nema-1-15p&#39;, &#39;NEMA 1-15P&#39;), (&#39;nema-5-15p&#39;, &#39;NEMA 5-15P&#39;), (&#39;nema-5-20p&#39;, &#39;NEMA 5-20P&#39;), (&#39;nema-5-30p&#39;, &#39;NEMA 5-30P&#39;), (&#39;nema-5-50p&#39;, &#39;NEMA 5-50P&#39;), (&#39;nema-6-15p&#39;, &#39;NEMA 6-15P&#39;), (&#39;nema-6-20p&#39;, &#39;NEMA 6-20P&#39;), (&#39;nema-6-30p&#39;, &#39;NEMA 6-30P&#39;), (&#39;nema-6-50p&#39;, &#39;NEMA 6-50P&#39;), (&#39;nema-10-30p&#39;, &#39;NEMA 10-30P&#39;), (&#39;nema-10-50p&#39;, &#39;NEMA 10-50P&#39;), (&#39;nema-14-20p&#39;, &#39;NEMA 14-20P&#39;), (&#39;nema-14-30p&#39;, &#39;NEMA 14-30P&#39;), (&#39;nema-14-50p&#39;, &#39;NEMA 14-50P&#39;), (&#39;nema-14-60p&#39;, &#39;NEMA 14-60P&#39;), (&#39;nema-15-15p&#39;, &#39;NEMA 15-15P&#39;), (&#39;nema-15-20p&#39;, &#39;NEMA 15-20P&#39;), (&#39;nema-15-30p&#39;, &#39;NEMA 15-30P&#39;), (&#39;nema-15-50p&#39;, &#39;NEMA 15-50P&#39;), (&#39;nema-15-60p&#39;, &#39;NEMA 15-60P&#39;)] * &#x60;NEMA (Locking)&#x60; - [(&#39;nema-l1-15p&#39;, &#39;NEMA L1-15P&#39;), (&#39;nema-l5-15p&#39;, &#39;NEMA L5-15P&#39;), (&#39;nema-l5-20p&#39;, &#39;NEMA L5-20P&#39;), (&#39;nema-l5-30p&#39;, &#39;NEMA L5-30P&#39;), (&#39;nema-l5-50p&#39;, &#39;NEMA L5-50P&#39;), (&#39;nema-l6-15p&#39;, &#39;NEMA L6-15P&#39;), (&#39;nema-l6-20p&#39;, &#39;NEMA L6-20P&#39;), (&#39;nema-l6-30p&#39;, &#39;NEMA L6-30P&#39;), (&#39;nema-l6-50p&#39;, &#39;NEMA L6-50P&#39;), (&#39;nema-l10-30p&#39;, &#39;NEMA L10-30P&#39;), (&#39;nema-l14-20p&#39;, &#39;NEMA L14-20P&#39;), (&#39;nema-l14-30p&#39;, &#39;NEMA L14-30P&#39;), (&#39;nema-l14-50p&#39;, &#39;NEMA L14-50P&#39;), (&#39;nema-l14-60p&#39;, &#39;NEMA L14-60P&#39;), (&#39;nema-l15-20p&#39;, &#39;NEMA L15-20P&#39;), (&#39;nema-l15-30p&#39;, &#39;NEMA L15-30P&#39;), (&#39;nema-l15-50p&#39;, &#39;NEMA L15-50P&#39;), (&#39;nema-l15-60p&#39;, &#39;NEMA L15-60P&#39;), (&#39;nema-l21-20p&#39;, &#39;NEMA L21-20P&#39;), (&#39;nema-l21-30p&#39;, &#39;NEMA L21-30P&#39;), (&#39;nema-l22-20p&#39;, &#39;NEMA L22-20P&#39;), (&#39;nema-l22-30p&#39;, &#39;NEMA L22-30P&#39;)] * &#x60;California Style&#x60; - [(&#39;cs6361c&#39;, &#39;CS6361C&#39;), (&#39;cs6365c&#39;, &#39;CS6365C&#39;), (&#39;cs8165c&#39;, &#39;CS8165C&#39;), (&#39;cs8265c&#39;, &#39;CS8265C&#39;), (&#39;cs8365c&#39;, &#39;CS8365C&#39;), (&#39;cs8465c&#39;, &#39;CS8465C&#39;)] * &#x60;International/ITA&#x60; - [(&#39;ita-c&#39;, &#39;ITA Type C (CEE 7/16)&#39;), (&#39;ita-e&#39;, &#39;ITA Type E (CEE 7/6)&#39;), (&#39;ita-f&#39;, &#39;ITA Type F (CEE 7/4)&#39;), (&#39;ita-ef&#39;, &#39;ITA Type E/F (CEE 7/7)&#39;), (&#39;ita-g&#39;, &#39;ITA Type G (BS 1363)&#39;), (&#39;ita-h&#39;, &#39;ITA Type H&#39;), (&#39;ita-i&#39;, &#39;ITA Type I&#39;), (&#39;ita-j&#39;, &#39;ITA Type J&#39;), (&#39;ita-k&#39;, &#39;ITA Type K&#39;), (&#39;ita-l&#39;, &#39;ITA Type L (CEI 23-50)&#39;), (&#39;ita-m&#39;, &#39;ITA Type M (BS 546)&#39;), (&#39;ita-n&#39;, &#39;ITA Type N&#39;), (&#39;ita-o&#39;, &#39;ITA Type O&#39;)] * &#x60;USB&#x60; - [(&#39;usb-a&#39;, &#39;USB Type A&#39;), (&#39;usb-b&#39;, &#39;USB Type B&#39;), (&#39;usb-c&#39;, &#39;USB Type C&#39;), (&#39;usb-mini-a&#39;, &#39;USB Mini A&#39;), (&#39;usb-mini-b&#39;, &#39;USB Mini B&#39;), (&#39;usb-micro-a&#39;, &#39;USB Micro A&#39;), (&#39;usb-micro-b&#39;, &#39;USB Micro B&#39;), (&#39;usb-micro-ab&#39;, &#39;USB Micro AB&#39;), (&#39;usb-3-b&#39;, &#39;USB 3.0 Type B&#39;), (&#39;usb-3-micro-b&#39;, &#39;USB 3.0 Micro B&#39;)] * &#x60;Molex&#x60; - [(&#39;molex-micro-fit-1x2&#39;, &#39;Molex Micro-Fit 1x2&#39;), (&#39;molex-micro-fit-2x2&#39;, &#39;Molex Micro-Fit 2x2&#39;), (&#39;molex-micro-fit-2x4&#39;, &#39;Molex Micro-Fit 2x4&#39;)] * &#x60;DC&#x60; - [(&#39;dc-terminal&#39;, &#39;DC Terminal&#39;)] * &#x60;Proprietary&#x60; - [(&#39;saf-d-grid&#39;, &#39;Saf-D-Grid&#39;), (&#39;neutrik-powercon-20&#39;, &#39;Neutrik powerCON (20A)&#39;), (&#39;neutrik-powercon-32&#39;, &#39;Neutrik powerCON (32A)&#39;), (&#39;neutrik-powercon-true1&#39;, &#39;Neutrik powerCON TRUE1&#39;), (&#39;neutrik-powercon-true1-top&#39;, &#39;Neutrik powerCON TRUE1 TOP&#39;), (&#39;ubiquiti-smartpower&#39;, &#39;Ubiquiti SmartPower&#39;)] * &#x60;Other&#x60; - [(&#39;hardwired&#39;, &#39;Hardwired&#39;), (&#39;other&#39;, &#39;Other&#39;)] | 
@@ -26597,7 +26597,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port template.
+	id := int64(56) // int64 | A unique integer value identifying this power port template.
 	patchedWritablePowerPortTemplateRequest := *openapiclient.NewPatchedWritablePowerPortTemplateRequest() // PatchedWritablePowerPortTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -26618,7 +26618,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port template. | 
+**id** | **int64** | A unique integer value identifying this power port template. | 
 
 ### Other Parameters
 
@@ -26669,7 +26669,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port template.
+	id := int64(56) // int64 | A unique integer value identifying this power port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -26689,7 +26689,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port template. | 
+**id** | **int64** | A unique integer value identifying this power port template. | 
 
 ### Other Parameters
 
@@ -26739,7 +26739,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port template.
+	id := int64(56) // int64 | A unique integer value identifying this power port template.
 	writablePowerPortTemplateRequest := *openapiclient.NewWritablePowerPortTemplateRequest("Name_example") // WritablePowerPortTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -26760,7 +26760,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port template. | 
+**id** | **int64** | A unique integer value identifying this power port template. | 
 
 ### Other Parameters
 
@@ -27073,7 +27073,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port.
+	id := int64(56) // int64 | A unique integer value identifying this power port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27091,7 +27091,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port. | 
+**id** | **int64** | A unique integer value identifying this power port. | 
 
 ### Other Parameters
 
@@ -27142,16 +27142,16 @@ import (
 )
 
 func main() {
-	allocatedDraw := []int32{int32(123)} // []int32 |  (optional)
+	allocatedDraw := []int64{int64(123)} // []int64 |  (optional)
 	allocatedDrawEmpty := true // bool |  (optional)
-	allocatedDrawGt := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawGte := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawLt := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawLte := []int32{int32(123)} // []int32 |  (optional)
-	allocatedDrawN := []int32{int32(123)} // []int32 |  (optional)
+	allocatedDrawGt := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawGte := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawLt := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawLte := []int64{int64(123)} // []int64 |  (optional)
+	allocatedDrawN := []int64{int64(123)} // []int64 |  (optional)
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	connected := true // bool |  (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -27175,12 +27175,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -27194,15 +27194,15 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -27221,22 +27221,22 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	markConnected := true // bool |  (optional)
-	maximumDraw := []int32{int32(123)} // []int32 |  (optional)
+	maximumDraw := []int64{int64(123)} // []int64 |  (optional)
 	maximumDrawEmpty := true // bool |  (optional)
-	maximumDrawGt := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawGte := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawLt := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawLte := []int32{int32(123)} // []int32 |  (optional)
-	maximumDrawN := []int32{int32(123)} // []int32 |  (optional)
+	maximumDrawGt := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawGte := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawLt := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawLte := []int64{int64(123)} // []int64 |  (optional)
+	maximumDrawN := []int64{int64(123)} // []int64 |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -27249,13 +27249,13 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -27266,8 +27266,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	type_ := []*string{"Inner_example"} // []*string | Physical port type (optional)
@@ -27284,8 +27284,8 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27310,16 +27310,16 @@ Other parameters are passed through a pointer to a apiDcimPowerPortsListRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **allocatedDraw** | **[]int32** |  | 
+ **allocatedDraw** | **[]int64** |  | 
  **allocatedDrawEmpty** | **bool** |  | 
- **allocatedDrawGt** | **[]int32** |  | 
- **allocatedDrawGte** | **[]int32** |  | 
- **allocatedDrawLt** | **[]int32** |  | 
- **allocatedDrawLte** | **[]int32** |  | 
- **allocatedDrawN** | **[]int32** |  | 
+ **allocatedDrawGt** | **[]int64** |  | 
+ **allocatedDrawGte** | **[]int64** |  | 
+ **allocatedDrawLt** | **[]int64** |  | 
+ **allocatedDrawLte** | **[]int64** |  | 
+ **allocatedDrawN** | **[]int64** |  | 
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **connected** | **bool** |  | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
@@ -27343,12 +27343,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -27362,15 +27362,15 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -27389,22 +27389,22 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **markConnected** | **bool** |  | 
- **maximumDraw** | **[]int32** |  | 
+ **maximumDraw** | **[]int64** |  | 
  **maximumDrawEmpty** | **bool** |  | 
- **maximumDrawGt** | **[]int32** |  | 
- **maximumDrawGte** | **[]int32** |  | 
- **maximumDrawLt** | **[]int32** |  | 
- **maximumDrawLte** | **[]int32** |  | 
- **maximumDrawN** | **[]int32** |  | 
+ **maximumDrawGt** | **[]int64** |  | 
+ **maximumDrawGte** | **[]int64** |  | 
+ **maximumDrawLt** | **[]int64** |  | 
+ **maximumDrawLte** | **[]int64** |  | 
+ **maximumDrawN** | **[]int64** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -27417,13 +27417,13 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -27434,8 +27434,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **type_** | **[]string** | Physical port type | 
@@ -27452,8 +27452,8 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -27494,7 +27494,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port.
+	id := int64(56) // int64 | A unique integer value identifying this power port.
 	patchedWritablePowerPortRequest := *openapiclient.NewPatchedWritablePowerPortRequest() // PatchedWritablePowerPortRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -27515,7 +27515,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port. | 
+**id** | **int64** | A unique integer value identifying this power port. | 
 
 ### Other Parameters
 
@@ -27566,7 +27566,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port.
+	id := int64(56) // int64 | A unique integer value identifying this power port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27586,7 +27586,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port. | 
+**id** | **int64** | A unique integer value identifying this power port. | 
 
 ### Other Parameters
 
@@ -27636,7 +27636,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port.
+	id := int64(56) // int64 | A unique integer value identifying this power port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27656,7 +27656,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port. | 
+**id** | **int64** | A unique integer value identifying this power port. | 
 
 ### Other Parameters
 
@@ -27706,7 +27706,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this power port.
+	id := int64(56) // int64 | A unique integer value identifying this power port.
 	writablePowerPortRequest := *openapiclient.NewWritablePowerPortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example") // WritablePowerPortRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -27727,7 +27727,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this power port. | 
+**id** | **int64** | A unique integer value identifying this power port. | 
 
 ### Other Parameters
 
@@ -27778,7 +27778,7 @@ import (
 )
 
 func main() {
-	rackReservationRequest := []openapiclient.RackReservationRequest{*openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int32{int32(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example")} // []RackReservationRequest | 
+	rackReservationRequest := []openapiclient.RackReservationRequest{*openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int64{int64(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example")} // []RackReservationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27842,7 +27842,7 @@ import (
 )
 
 func main() {
-	rackReservationRequest := []openapiclient.RackReservationRequest{*openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int32{int32(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example")} // []RackReservationRequest | 
+	rackReservationRequest := []openapiclient.RackReservationRequest{*openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int64{int64(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example")} // []RackReservationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27908,7 +27908,7 @@ import (
 )
 
 func main() {
-	rackReservationRequest := []openapiclient.RackReservationRequest{*openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int32{int32(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example")} // []RackReservationRequest | 
+	rackReservationRequest := []openapiclient.RackReservationRequest{*openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int64{int64(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example")} // []RackReservationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27974,7 +27974,7 @@ import (
 )
 
 func main() {
-	rackReservationRequest := *openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int32{int32(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example") // RackReservationRequest | 
+	rackReservationRequest := *openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int64{int64(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example") // RackReservationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -28040,7 +28040,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack reservation.
+	id := int64(56) // int64 | A unique integer value identifying this rack reservation.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -28058,7 +28058,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack reservation. | 
+**id** | **int64** | A unique integer value identifying this rack reservation. | 
 
 ### Other Parameters
 
@@ -28128,13 +28128,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -28142,17 +28142,17 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string |  (optional)
 	locationN := []string{"Inner_example"} // []string |  (optional)
 	locationId := []string{"Inner_example"} // []string |  (optional)
 	locationIdN := []string{"Inner_example"} // []string |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -28163,8 +28163,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	tenant := []string{"Inner_example"} // []string | Tenant (slug) (optional)
@@ -28173,14 +28173,14 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	unit := float32(8.14) // float32 |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	user := []string{"Inner_example"} // []string | User (name) (optional)
 	userN := []string{"Inner_example"} // []string | User (name) (optional)
-	userId := []int32{int32(123)} // []int32 | User (ID) (optional)
-	userIdN := []int32{int32(123)} // []int32 | User (ID) (optional)
+	userId := []int64{int64(123)} // []int64 | User (ID) (optional)
+	userIdN := []int64{int64(123)} // []int64 | User (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -28224,13 +28224,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -28238,17 +28238,17 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** |  | 
  **locationN** | **[]string** |  | 
  **locationId** | **[]string** |  | 
  **locationIdN** | **[]string** |  | 
  **modifiedByRequest** | **string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -28259,8 +28259,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **tenant** | **[]string** | Tenant (slug) | 
@@ -28269,14 +28269,14 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **unit** | **float32** |  | 
  **updatedByRequest** | **string** |  | 
  **user** | **[]string** | User (name) | 
  **userN** | **[]string** | User (name) | 
- **userId** | **[]int32** | User (ID) | 
- **userIdN** | **[]int32** | User (ID) | 
+ **userId** | **[]int64** | User (ID) | 
+ **userIdN** | **[]int64** | User (ID) | 
 
 ### Return type
 
@@ -28317,7 +28317,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack reservation.
+	id := int64(56) // int64 | A unique integer value identifying this rack reservation.
 	patchedRackReservationRequest := *openapiclient.NewPatchedRackReservationRequest() // PatchedRackReservationRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -28338,7 +28338,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack reservation. | 
+**id** | **int64** | A unique integer value identifying this rack reservation. | 
 
 ### Other Parameters
 
@@ -28389,7 +28389,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack reservation.
+	id := int64(56) // int64 | A unique integer value identifying this rack reservation.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -28409,7 +28409,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack reservation. | 
+**id** | **int64** | A unique integer value identifying this rack reservation. | 
 
 ### Other Parameters
 
@@ -28459,8 +28459,8 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack reservation.
-	rackReservationRequest := *openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int32{int32(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example") // RackReservationRequest | 
+	id := int64(56) // int64 | A unique integer value identifying this rack reservation.
+	rackReservationRequest := *openapiclient.NewRackReservationRequest(*openapiclient.NewBriefRackRequest("Name_example"), []int64{int64(123)}, *openapiclient.NewBriefUserRequest("Username_example"), "Description_example") // RackReservationRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -28480,7 +28480,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack reservation. | 
+**id** | **int64** | A unique integer value identifying this rack reservation. | 
 
 ### Other Parameters
 
@@ -28793,7 +28793,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack role.
+	id := int64(56) // int64 | A unique integer value identifying this rack role.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -28811,7 +28811,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack role. | 
+**id** | **int64** | A unique integer value identifying this rack role. | 
 
 ### Other Parameters
 
@@ -28892,13 +28892,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -28906,7 +28906,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -28919,7 +28919,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
@@ -28990,13 +28990,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -29004,7 +29004,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -29017,7 +29017,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
@@ -29074,7 +29074,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack role.
+	id := int64(56) // int64 | A unique integer value identifying this rack role.
 	patchedRackRoleRequest := *openapiclient.NewPatchedRackRoleRequest() // PatchedRackRoleRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -29095,7 +29095,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack role. | 
+**id** | **int64** | A unique integer value identifying this rack role. | 
 
 ### Other Parameters
 
@@ -29146,7 +29146,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack role.
+	id := int64(56) // int64 | A unique integer value identifying this rack role.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -29166,7 +29166,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack role. | 
+**id** | **int64** | A unique integer value identifying this rack role. | 
 
 ### Other Parameters
 
@@ -29216,7 +29216,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack role.
+	id := int64(56) // int64 | A unique integer value identifying this rack role.
 	rackRoleRequest := *openapiclient.NewRackRoleRequest("Name_example", "Slug_example") // RackRoleRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -29237,7 +29237,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack role. | 
+**id** | **int64** | A unique integer value identifying this rack role. | 
 
 ### Other Parameters
 
@@ -29550,7 +29550,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack type.
+	id := int64(56) // int64 | A unique integer value identifying this rack type.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -29568,7 +29568,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack type. | 
+**id** | **int64** | A unique integer value identifying this rack type. | 
 
 ### Other Parameters
 
@@ -29650,13 +29650,13 @@ func main() {
 	formFactorNie := []string{"Inner_example"} // []string |  (optional)
 	formFactorNiew := []string{"Inner_example"} // []string |  (optional)
 	formFactorNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -29664,18 +29664,18 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	maxWeight := []int32{int32(123)} // []int32 |  (optional)
+	manufacturerId := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	maxWeight := []int64{int64(123)} // []int64 |  (optional)
 	maxWeightEmpty := true // bool |  (optional)
-	maxWeightGt := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightGte := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightLt := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightLte := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightN := []int32{int32(123)} // []int32 |  (optional)
+	maxWeightGt := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightGte := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightLt := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightLte := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightN := []int64{int64(123)} // []int64 |  (optional)
 	model := []string{"Inner_example"} // []string |  (optional)
 	modelEmpty := true // bool |  (optional)
 	modelIc := []string{"Inner_example"} // []string |  (optional)
@@ -29688,30 +29688,30 @@ func main() {
 	modelNiew := []string{"Inner_example"} // []string |  (optional)
 	modelNisw := []string{"Inner_example"} // []string |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	mountingDepth := []int32{int32(123)} // []int32 |  (optional)
+	mountingDepth := []int64{int64(123)} // []int64 |  (optional)
 	mountingDepthEmpty := true // bool |  (optional)
-	mountingDepthGt := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthGte := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthLt := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthLte := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthN := []int32{int32(123)} // []int32 |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	mountingDepthGt := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthGte := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthLt := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthLte := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthN := []int64{int64(123)} // []int64 |  (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	outerDepth := []int32{int32(123)} // []int32 |  (optional)
+	outerDepth := []int64{int64(123)} // []int64 |  (optional)
 	outerDepthEmpty := true // bool |  (optional)
-	outerDepthGt := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthGte := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthLt := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthLte := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthN := []int32{int32(123)} // []int32 |  (optional)
+	outerDepthGt := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthGte := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthLt := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthLte := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthN := []int64{int64(123)} // []int64 |  (optional)
 	outerUnit := openapiclient.dcim_rack_types_list_outer_unit_parameter("in") // DcimRackTypesListOuterUnitParameter | * `mm` - Millimeters * `in` - Inches (optional)
-	outerWidth := []int32{int32(123)} // []int32 |  (optional)
+	outerWidth := []int64{int64(123)} // []int64 |  (optional)
 	outerWidthEmpty := true // bool |  (optional)
-	outerWidthGt := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthGte := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthLt := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthLte := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthN := []int32{int32(123)} // []int32 |  (optional)
+	outerWidthGt := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthGte := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthLt := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthLte := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthN := []int64{int64(123)} // []int64 |  (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
 	slugEmpty := true // bool |  (optional)
@@ -29724,22 +29724,22 @@ func main() {
 	slugNie := []string{"Inner_example"} // []string |  (optional)
 	slugNiew := []string{"Inner_example"} // []string |  (optional)
 	slugNisw := []string{"Inner_example"} // []string |  (optional)
-	startingUnit := []int32{int32(123)} // []int32 |  (optional)
+	startingUnit := []int64{int64(123)} // []int64 |  (optional)
 	startingUnitEmpty := true // bool |  (optional)
-	startingUnitGt := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitGte := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitLt := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitLte := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitN := []int32{int32(123)} // []int32 |  (optional)
+	startingUnitGt := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitGte := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitLt := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitLte := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitN := []int64{int64(123)} // []int64 |  (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
-	uHeight := []int32{int32(123)} // []int32 |  (optional)
+	uHeight := []int64{int64(123)} // []int64 |  (optional)
 	uHeightEmpty := true // bool |  (optional)
-	uHeightGt := []int32{int32(123)} // []int32 |  (optional)
-	uHeightGte := []int32{int32(123)} // []int32 |  (optional)
-	uHeightLt := []int32{int32(123)} // []int32 |  (optional)
-	uHeightLte := []int32{int32(123)} // []int32 |  (optional)
-	uHeightN := []int32{int32(123)} // []int32 |  (optional)
+	uHeightGt := []int64{int64(123)} // []int64 |  (optional)
+	uHeightGte := []int64{int64(123)} // []int64 |  (optional)
+	uHeightLt := []int64{int64(123)} // []int64 |  (optional)
+	uHeightLte := []int64{int64(123)} // []int64 |  (optional)
+	uHeightN := []int64{int64(123)} // []int64 |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	weight := []float64{float64(123)} // []float64 |  (optional)
 	weightEmpty := true // bool |  (optional)
@@ -29749,16 +29749,16 @@ func main() {
 	weightLte := []float64{float64(123)} // []float64 |  (optional)
 	weightN := []float64{float64(123)} // []float64 |  (optional)
 	weightUnit := openapiclient.dcim_device_types_list_weight_unit_parameter("g") // DcimDeviceTypesListWeightUnitParameter | * `kg` - Kilograms * `g` - Grams * `lb` - Pounds * `oz` - Ounces (optional)
-	width := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIc := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIe := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIew := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIsw := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthN := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNic := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNie := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNiew := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNisw := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
+	width := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIc := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIe := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIew := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIsw := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthN := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNic := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNie := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNiew := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNisw := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -29814,13 +29814,13 @@ Name | Type | Description  | Notes
  **formFactorNie** | **[]string** |  | 
  **formFactorNiew** | **[]string** |  | 
  **formFactorNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -29828,18 +29828,18 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
- **maxWeight** | **[]int32** |  | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
+ **maxWeight** | **[]int64** |  | 
  **maxWeightEmpty** | **bool** |  | 
- **maxWeightGt** | **[]int32** |  | 
- **maxWeightGte** | **[]int32** |  | 
- **maxWeightLt** | **[]int32** |  | 
- **maxWeightLte** | **[]int32** |  | 
- **maxWeightN** | **[]int32** |  | 
+ **maxWeightGt** | **[]int64** |  | 
+ **maxWeightGte** | **[]int64** |  | 
+ **maxWeightLt** | **[]int64** |  | 
+ **maxWeightLte** | **[]int64** |  | 
+ **maxWeightN** | **[]int64** |  | 
  **model** | **[]string** |  | 
  **modelEmpty** | **bool** |  | 
  **modelIc** | **[]string** |  | 
@@ -29852,30 +29852,30 @@ Name | Type | Description  | Notes
  **modelNiew** | **[]string** |  | 
  **modelNisw** | **[]string** |  | 
  **modifiedByRequest** | **string** |  | 
- **mountingDepth** | **[]int32** |  | 
+ **mountingDepth** | **[]int64** |  | 
  **mountingDepthEmpty** | **bool** |  | 
- **mountingDepthGt** | **[]int32** |  | 
- **mountingDepthGte** | **[]int32** |  | 
- **mountingDepthLt** | **[]int32** |  | 
- **mountingDepthLte** | **[]int32** |  | 
- **mountingDepthN** | **[]int32** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **mountingDepthGt** | **[]int64** |  | 
+ **mountingDepthGte** | **[]int64** |  | 
+ **mountingDepthLt** | **[]int64** |  | 
+ **mountingDepthLte** | **[]int64** |  | 
+ **mountingDepthN** | **[]int64** |  | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **outerDepth** | **[]int32** |  | 
+ **outerDepth** | **[]int64** |  | 
  **outerDepthEmpty** | **bool** |  | 
- **outerDepthGt** | **[]int32** |  | 
- **outerDepthGte** | **[]int32** |  | 
- **outerDepthLt** | **[]int32** |  | 
- **outerDepthLte** | **[]int32** |  | 
- **outerDepthN** | **[]int32** |  | 
+ **outerDepthGt** | **[]int64** |  | 
+ **outerDepthGte** | **[]int64** |  | 
+ **outerDepthLt** | **[]int64** |  | 
+ **outerDepthLte** | **[]int64** |  | 
+ **outerDepthN** | **[]int64** |  | 
  **outerUnit** | [**DcimRackTypesListOuterUnitParameter**](DcimRackTypesListOuterUnitParameter.md) | * &#x60;mm&#x60; - Millimeters * &#x60;in&#x60; - Inches | 
- **outerWidth** | **[]int32** |  | 
+ **outerWidth** | **[]int64** |  | 
  **outerWidthEmpty** | **bool** |  | 
- **outerWidthGt** | **[]int32** |  | 
- **outerWidthGte** | **[]int32** |  | 
- **outerWidthLt** | **[]int32** |  | 
- **outerWidthLte** | **[]int32** |  | 
- **outerWidthN** | **[]int32** |  | 
+ **outerWidthGt** | **[]int64** |  | 
+ **outerWidthGte** | **[]int64** |  | 
+ **outerWidthLt** | **[]int64** |  | 
+ **outerWidthLte** | **[]int64** |  | 
+ **outerWidthN** | **[]int64** |  | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
  **slugEmpty** | **bool** |  | 
@@ -29888,22 +29888,22 @@ Name | Type | Description  | Notes
  **slugNie** | **[]string** |  | 
  **slugNiew** | **[]string** |  | 
  **slugNisw** | **[]string** |  | 
- **startingUnit** | **[]int32** |  | 
+ **startingUnit** | **[]int64** |  | 
  **startingUnitEmpty** | **bool** |  | 
- **startingUnitGt** | **[]int32** |  | 
- **startingUnitGte** | **[]int32** |  | 
- **startingUnitLt** | **[]int32** |  | 
- **startingUnitLte** | **[]int32** |  | 
- **startingUnitN** | **[]int32** |  | 
+ **startingUnitGt** | **[]int64** |  | 
+ **startingUnitGte** | **[]int64** |  | 
+ **startingUnitLt** | **[]int64** |  | 
+ **startingUnitLte** | **[]int64** |  | 
+ **startingUnitN** | **[]int64** |  | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
- **uHeight** | **[]int32** |  | 
+ **uHeight** | **[]int64** |  | 
  **uHeightEmpty** | **bool** |  | 
- **uHeightGt** | **[]int32** |  | 
- **uHeightGte** | **[]int32** |  | 
- **uHeightLt** | **[]int32** |  | 
- **uHeightLte** | **[]int32** |  | 
- **uHeightN** | **[]int32** |  | 
+ **uHeightGt** | **[]int64** |  | 
+ **uHeightGte** | **[]int64** |  | 
+ **uHeightLt** | **[]int64** |  | 
+ **uHeightLte** | **[]int64** |  | 
+ **uHeightN** | **[]int64** |  | 
  **updatedByRequest** | **string** |  | 
  **weight** | **[]float64** |  | 
  **weightEmpty** | **bool** |  | 
@@ -29913,16 +29913,16 @@ Name | Type | Description  | Notes
  **weightLte** | **[]float64** |  | 
  **weightN** | **[]float64** |  | 
  **weightUnit** | [**DcimDeviceTypesListWeightUnitParameter**](DcimDeviceTypesListWeightUnitParameter.md) | * &#x60;kg&#x60; - Kilograms * &#x60;g&#x60; - Grams * &#x60;lb&#x60; - Pounds * &#x60;oz&#x60; - Ounces | 
- **width** | **[]int32** | Rail-to-rail width | 
- **widthIc** | **[]int32** | Rail-to-rail width | 
- **widthIe** | **[]int32** | Rail-to-rail width | 
- **widthIew** | **[]int32** | Rail-to-rail width | 
- **widthIsw** | **[]int32** | Rail-to-rail width | 
- **widthN** | **[]int32** | Rail-to-rail width | 
- **widthNic** | **[]int32** | Rail-to-rail width | 
- **widthNie** | **[]int32** | Rail-to-rail width | 
- **widthNiew** | **[]int32** | Rail-to-rail width | 
- **widthNisw** | **[]int32** | Rail-to-rail width | 
+ **width** | **[]int64** | Rail-to-rail width | 
+ **widthIc** | **[]int64** | Rail-to-rail width | 
+ **widthIe** | **[]int64** | Rail-to-rail width | 
+ **widthIew** | **[]int64** | Rail-to-rail width | 
+ **widthIsw** | **[]int64** | Rail-to-rail width | 
+ **widthN** | **[]int64** | Rail-to-rail width | 
+ **widthNic** | **[]int64** | Rail-to-rail width | 
+ **widthNie** | **[]int64** | Rail-to-rail width | 
+ **widthNiew** | **[]int64** | Rail-to-rail width | 
+ **widthNisw** | **[]int64** | Rail-to-rail width | 
 
 ### Return type
 
@@ -29963,7 +29963,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack type.
+	id := int64(56) // int64 | A unique integer value identifying this rack type.
 	patchedWritableRackTypeRequest := *openapiclient.NewPatchedWritableRackTypeRequest() // PatchedWritableRackTypeRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -29984,7 +29984,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack type. | 
+**id** | **int64** | A unique integer value identifying this rack type. | 
 
 ### Other Parameters
 
@@ -30035,7 +30035,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack type.
+	id := int64(56) // int64 | A unique integer value identifying this rack type.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -30055,7 +30055,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack type. | 
+**id** | **int64** | A unique integer value identifying this rack type. | 
 
 ### Other Parameters
 
@@ -30105,7 +30105,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack type.
+	id := int64(56) // int64 | A unique integer value identifying this rack type.
 	writableRackTypeRequest := *openapiclient.NewWritableRackTypeRequest(*openapiclient.NewBriefManufacturerRequest("Name_example", "Slug_example"), "Model_example", "Slug_example", openapiclient.PatchedWritableRackTypeRequest_form_factor("2-post-frame")) // WritableRackTypeRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -30126,7 +30126,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack type. | 
+**id** | **int64** | A unique integer value identifying this rack type. | 
 
 ### Other Parameters
 
@@ -30439,7 +30439,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack.
+	id := int64(56) // int64 | A unique integer value identifying this rack.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -30457,7 +30457,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack. | 
+**id** | **int64** | A unique integer value identifying this rack. | 
 
 ### Other Parameters
 
@@ -30507,19 +30507,19 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack.
-	exclude := int32(56) // int32 |  (optional)
+	id := int64(56) // int64 | A unique integer value identifying this rack.
+	exclude := int64(56) // int64 |  (optional)
 	expandDevices := true // bool |  (optional) (default to true)
 	face := openapiclient.dcim_racks_elevation_retrieve_face_parameter("front") // DcimRacksElevationRetrieveFaceParameter | * `front` - Front * `rear` - Rear (optional) (default to "front")
 	includeImages := true // bool |  (optional) (default to true)
-	legendWidth := int32(56) // int32 |  (optional) (default to 30)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
-	marginWidth := int32(56) // int32 |  (optional) (default to 15)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	legendWidth := int64(56) // int64 |  (optional) (default to 30)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
+	marginWidth := int64(56) // int64 |  (optional) (default to 15)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	q := "q_example" // string |  (optional)
 	render := openapiclient.dcim_racks_elevation_retrieve_render_parameter("json") // DcimRacksElevationRetrieveRenderParameter | * `json` - json * `svg` - svg (optional) (default to "json")
-	unitHeight := int32(56) // int32 |  (optional)
-	unitWidth := int32(56) // int32 |  (optional)
+	unitHeight := int64(56) // int64 |  (optional)
+	unitWidth := int64(56) // int64 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -30539,7 +30539,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack. | 
+**id** | **int64** | A unique integer value identifying this rack. | 
 
 ### Other Parameters
 
@@ -30549,18 +30549,18 @@ Other parameters are passed through a pointer to a apiDcimRacksElevationRetrieve
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **exclude** | **int32** |  | 
+ **exclude** | **int64** |  | 
  **expandDevices** | **bool** |  | [default to true]
  **face** | [**DcimRacksElevationRetrieveFaceParameter**](DcimRacksElevationRetrieveFaceParameter.md) | * &#x60;front&#x60; - Front * &#x60;rear&#x60; - Rear | [default to &quot;front&quot;]
  **includeImages** | **bool** |  | [default to true]
- **legendWidth** | **int32** |  | [default to 30]
- **limit** | **int32** | Number of results to return per page. | 
- **marginWidth** | **int32** |  | [default to 15]
- **offset** | **int32** | The initial index from which to return the results. | 
+ **legendWidth** | **int64** |  | [default to 30]
+ **limit** | **int64** | Number of results to return per page. | 
+ **marginWidth** | **int64** |  | [default to 15]
+ **offset** | **int64** | The initial index from which to return the results. | 
  **q** | **string** |  | 
  **render** | [**DcimRacksElevationRetrieveRenderParameter**](DcimRacksElevationRetrieveRenderParameter.md) | * &#x60;json&#x60; - json * &#x60;svg&#x60; - svg | [default to &quot;json&quot;]
- **unitHeight** | **int32** |  | 
- **unitWidth** | **int32** |  | 
+ **unitHeight** | **int64** |  | 
+ **unitWidth** | **int64** |  | 
 
 ### Return type
 
@@ -30614,12 +30614,12 @@ func main() {
 	assetTagNie := []string{"Inner_example"} // []string |  (optional)
 	assetTagNiew := []string{"Inner_example"} // []string |  (optional)
 	assetTagNisw := []string{"Inner_example"} // []string |  (optional)
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -30662,13 +30662,13 @@ func main() {
 	formFactorNie := []*string{"Inner_example"} // []*string |  (optional)
 	formFactorNiew := []*string{"Inner_example"} // []*string |  (optional)
 	formFactorNisw := []*string{"Inner_example"} // []*string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -30676,30 +30676,30 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string |  (optional)
 	locationN := []string{"Inner_example"} // []string |  (optional)
 	locationId := []string{"Inner_example"} // []string |  (optional)
 	locationIdN := []string{"Inner_example"} // []string |  (optional)
 	manufacturer := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
 	manufacturerN := []string{"Inner_example"} // []string | Manufacturer (slug) (optional)
-	manufacturerId := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	manufacturerIdN := []int32{int32(123)} // []int32 | Manufacturer (ID) (optional)
-	maxWeight := []int32{int32(123)} // []int32 |  (optional)
+	manufacturerId := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	manufacturerIdN := []int64{int64(123)} // []int64 | Manufacturer (ID) (optional)
+	maxWeight := []int64{int64(123)} // []int64 |  (optional)
 	maxWeightEmpty := true // bool |  (optional)
-	maxWeightGt := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightGte := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightLt := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightLte := []int32{int32(123)} // []int32 |  (optional)
-	maxWeightN := []int32{int32(123)} // []int32 |  (optional)
+	maxWeightGt := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightGte := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightLt := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightLte := []int64{int64(123)} // []int64 |  (optional)
+	maxWeightN := []int64{int64(123)} // []int64 |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	mountingDepth := []int32{int32(123)} // []int32 |  (optional)
+	mountingDepth := []int64{int64(123)} // []int64 |  (optional)
 	mountingDepthEmpty := true // bool |  (optional)
-	mountingDepthGt := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthGte := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthLt := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthLte := []int32{int32(123)} // []int32 |  (optional)
-	mountingDepthN := []int32{int32(123)} // []int32 |  (optional)
+	mountingDepthGt := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthGte := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthLt := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthLte := []int64{int64(123)} // []int64 |  (optional)
+	mountingDepthN := []int64{int64(123)} // []int64 |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -30711,36 +30711,36 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	outerDepth := []int32{int32(123)} // []int32 |  (optional)
+	outerDepth := []int64{int64(123)} // []int64 |  (optional)
 	outerDepthEmpty := true // bool |  (optional)
-	outerDepthGt := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthGte := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthLt := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthLte := []int32{int32(123)} // []int32 |  (optional)
-	outerDepthN := []int32{int32(123)} // []int32 |  (optional)
+	outerDepthGt := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthGte := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthLt := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthLte := []int64{int64(123)} // []int64 |  (optional)
+	outerDepthN := []int64{int64(123)} // []int64 |  (optional)
 	outerUnit := openapiclient.dcim_rack_types_list_outer_unit_parameter("in") // DcimRackTypesListOuterUnitParameter | * `mm` - Millimeters * `in` - Inches (optional)
-	outerWidth := []int32{int32(123)} // []int32 |  (optional)
+	outerWidth := []int64{int64(123)} // []int64 |  (optional)
 	outerWidthEmpty := true // bool |  (optional)
-	outerWidthGt := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthGte := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthLt := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthLte := []int32{int32(123)} // []int32 |  (optional)
-	outerWidthN := []int32{int32(123)} // []int32 |  (optional)
+	outerWidthGt := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthGte := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthLt := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthLte := []int64{int64(123)} // []int64 |  (optional)
+	outerWidthN := []int64{int64(123)} // []int64 |  (optional)
 	q := "q_example" // string | Search (optional)
 	rackType := []string{"Inner_example"} // []string | Rack type (slug) (optional)
 	rackTypeN := []string{"Inner_example"} // []string | Rack type (slug) (optional)
-	rackTypeId := []*int32{int32(123)} // []*int32 | Rack type (ID) (optional)
-	rackTypeIdN := []*int32{int32(123)} // []*int32 | Rack type (ID) (optional)
+	rackTypeId := []*int64{int64(123)} // []*int64 | Rack type (ID) (optional)
+	rackTypeIdN := []*int64{int64(123)} // []*int64 | Rack type (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
 	regionIdN := []string{"Inner_example"} // []string |  (optional)
 	role := []string{"Inner_example"} // []string | Role (slug) (optional)
 	roleN := []string{"Inner_example"} // []string | Role (slug) (optional)
-	roleId := []*int32{int32(123)} // []*int32 | Role (ID) (optional)
-	roleIdN := []*int32{int32(123)} // []*int32 | Role (ID) (optional)
+	roleId := []*int64{int64(123)} // []*int64 | Role (ID) (optional)
+	roleIdN := []*int64{int64(123)} // []*int64 | Role (ID) (optional)
 	serial := []string{"Inner_example"} // []string |  (optional)
 	serialEmpty := true // bool |  (optional)
 	serialIc := []string{"Inner_example"} // []string |  (optional)
@@ -30758,15 +30758,15 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	startingUnit := []int32{int32(123)} // []int32 |  (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	startingUnit := []int64{int64(123)} // []int64 |  (optional)
 	startingUnitEmpty := true // bool |  (optional)
-	startingUnitGt := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitGte := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitLt := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitLte := []int32{int32(123)} // []int32 |  (optional)
-	startingUnitN := []int32{int32(123)} // []int32 |  (optional)
+	startingUnitGt := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitGte := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitLt := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitLte := []int64{int64(123)} // []int64 |  (optional)
+	startingUnitN := []int64{int64(123)} // []int64 |  (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
 	statusEmpty := true // bool |  (optional)
 	statusIc := []string{"Inner_example"} // []string |  (optional)
@@ -30786,15 +30786,15 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	uHeight := []int32{int32(123)} // []int32 |  (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	uHeight := []int64{int64(123)} // []int64 |  (optional)
 	uHeightEmpty := true // bool |  (optional)
-	uHeightGt := []int32{int32(123)} // []int32 |  (optional)
-	uHeightGte := []int32{int32(123)} // []int32 |  (optional)
-	uHeightLt := []int32{int32(123)} // []int32 |  (optional)
-	uHeightLte := []int32{int32(123)} // []int32 |  (optional)
-	uHeightN := []int32{int32(123)} // []int32 |  (optional)
+	uHeightGt := []int64{int64(123)} // []int64 |  (optional)
+	uHeightGte := []int64{int64(123)} // []int64 |  (optional)
+	uHeightLt := []int64{int64(123)} // []int64 |  (optional)
+	uHeightLte := []int64{int64(123)} // []int64 |  (optional)
+	uHeightN := []int64{int64(123)} // []int64 |  (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	weight := []float64{float64(123)} // []float64 |  (optional)
 	weightEmpty := true // bool |  (optional)
@@ -30804,16 +30804,16 @@ func main() {
 	weightLte := []float64{float64(123)} // []float64 |  (optional)
 	weightN := []float64{float64(123)} // []float64 |  (optional)
 	weightUnit := openapiclient.dcim_device_types_list_weight_unit_parameter("g") // DcimDeviceTypesListWeightUnitParameter | * `kg` - Kilograms * `g` - Grams * `lb` - Pounds * `oz` - Ounces (optional)
-	width := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIc := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIe := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIew := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthIsw := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthN := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNic := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNie := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNiew := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
-	widthNisw := []int32{int32(123)} // []int32 | Rail-to-rail width (optional)
+	width := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIc := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIe := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIew := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthIsw := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthN := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNic := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNie := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNiew := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
+	widthNisw := []int64{int64(123)} // []int64 | Rail-to-rail width (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -30850,12 +30850,12 @@ Name | Type | Description  | Notes
  **assetTagNie** | **[]string** |  | 
  **assetTagNiew** | **[]string** |  | 
  **assetTagNisw** | **[]string** |  | 
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -30898,13 +30898,13 @@ Name | Type | Description  | Notes
  **formFactorNie** | **[]string** |  | 
  **formFactorNiew** | **[]string** |  | 
  **formFactorNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -30912,30 +30912,30 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** |  | 
  **locationN** | **[]string** |  | 
  **locationId** | **[]string** |  | 
  **locationIdN** | **[]string** |  | 
  **manufacturer** | **[]string** | Manufacturer (slug) | 
  **manufacturerN** | **[]string** | Manufacturer (slug) | 
- **manufacturerId** | **[]int32** | Manufacturer (ID) | 
- **manufacturerIdN** | **[]int32** | Manufacturer (ID) | 
- **maxWeight** | **[]int32** |  | 
+ **manufacturerId** | **[]int64** | Manufacturer (ID) | 
+ **manufacturerIdN** | **[]int64** | Manufacturer (ID) | 
+ **maxWeight** | **[]int64** |  | 
  **maxWeightEmpty** | **bool** |  | 
- **maxWeightGt** | **[]int32** |  | 
- **maxWeightGte** | **[]int32** |  | 
- **maxWeightLt** | **[]int32** |  | 
- **maxWeightLte** | **[]int32** |  | 
- **maxWeightN** | **[]int32** |  | 
+ **maxWeightGt** | **[]int64** |  | 
+ **maxWeightGte** | **[]int64** |  | 
+ **maxWeightLt** | **[]int64** |  | 
+ **maxWeightLte** | **[]int64** |  | 
+ **maxWeightN** | **[]int64** |  | 
  **modifiedByRequest** | **string** |  | 
- **mountingDepth** | **[]int32** |  | 
+ **mountingDepth** | **[]int64** |  | 
  **mountingDepthEmpty** | **bool** |  | 
- **mountingDepthGt** | **[]int32** |  | 
- **mountingDepthGte** | **[]int32** |  | 
- **mountingDepthLt** | **[]int32** |  | 
- **mountingDepthLte** | **[]int32** |  | 
- **mountingDepthN** | **[]int32** |  | 
+ **mountingDepthGt** | **[]int64** |  | 
+ **mountingDepthGte** | **[]int64** |  | 
+ **mountingDepthLt** | **[]int64** |  | 
+ **mountingDepthLte** | **[]int64** |  | 
+ **mountingDepthN** | **[]int64** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -30947,36 +30947,36 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **outerDepth** | **[]int32** |  | 
+ **outerDepth** | **[]int64** |  | 
  **outerDepthEmpty** | **bool** |  | 
- **outerDepthGt** | **[]int32** |  | 
- **outerDepthGte** | **[]int32** |  | 
- **outerDepthLt** | **[]int32** |  | 
- **outerDepthLte** | **[]int32** |  | 
- **outerDepthN** | **[]int32** |  | 
+ **outerDepthGt** | **[]int64** |  | 
+ **outerDepthGte** | **[]int64** |  | 
+ **outerDepthLt** | **[]int64** |  | 
+ **outerDepthLte** | **[]int64** |  | 
+ **outerDepthN** | **[]int64** |  | 
  **outerUnit** | [**DcimRackTypesListOuterUnitParameter**](DcimRackTypesListOuterUnitParameter.md) | * &#x60;mm&#x60; - Millimeters * &#x60;in&#x60; - Inches | 
- **outerWidth** | **[]int32** |  | 
+ **outerWidth** | **[]int64** |  | 
  **outerWidthEmpty** | **bool** |  | 
- **outerWidthGt** | **[]int32** |  | 
- **outerWidthGte** | **[]int32** |  | 
- **outerWidthLt** | **[]int32** |  | 
- **outerWidthLte** | **[]int32** |  | 
- **outerWidthN** | **[]int32** |  | 
+ **outerWidthGt** | **[]int64** |  | 
+ **outerWidthGte** | **[]int64** |  | 
+ **outerWidthLt** | **[]int64** |  | 
+ **outerWidthLte** | **[]int64** |  | 
+ **outerWidthN** | **[]int64** |  | 
  **q** | **string** | Search | 
  **rackType** | **[]string** | Rack type (slug) | 
  **rackTypeN** | **[]string** | Rack type (slug) | 
- **rackTypeId** | **[]int32** | Rack type (ID) | 
- **rackTypeIdN** | **[]int32** | Rack type (ID) | 
+ **rackTypeId** | **[]int64** | Rack type (ID) | 
+ **rackTypeIdN** | **[]int64** | Rack type (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
  **regionIdN** | **[]string** |  | 
  **role** | **[]string** | Role (slug) | 
  **roleN** | **[]string** | Role (slug) | 
- **roleId** | **[]int32** | Role (ID) | 
- **roleIdN** | **[]int32** | Role (ID) | 
+ **roleId** | **[]int64** | Role (ID) | 
+ **roleIdN** | **[]int64** | Role (ID) | 
  **serial** | **[]string** |  | 
  **serialEmpty** | **bool** |  | 
  **serialIc** | **[]string** |  | 
@@ -30994,15 +30994,15 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
- **startingUnit** | **[]int32** |  | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
+ **startingUnit** | **[]int64** |  | 
  **startingUnitEmpty** | **bool** |  | 
- **startingUnitGt** | **[]int32** |  | 
- **startingUnitGte** | **[]int32** |  | 
- **startingUnitLt** | **[]int32** |  | 
- **startingUnitLte** | **[]int32** |  | 
- **startingUnitN** | **[]int32** |  | 
+ **startingUnitGt** | **[]int64** |  | 
+ **startingUnitGte** | **[]int64** |  | 
+ **startingUnitLt** | **[]int64** |  | 
+ **startingUnitLte** | **[]int64** |  | 
+ **startingUnitN** | **[]int64** |  | 
  **status** | **[]string** |  | 
  **statusEmpty** | **bool** |  | 
  **statusIc** | **[]string** |  | 
@@ -31022,15 +31022,15 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
- **uHeight** | **[]int32** |  | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
+ **uHeight** | **[]int64** |  | 
  **uHeightEmpty** | **bool** |  | 
- **uHeightGt** | **[]int32** |  | 
- **uHeightGte** | **[]int32** |  | 
- **uHeightLt** | **[]int32** |  | 
- **uHeightLte** | **[]int32** |  | 
- **uHeightN** | **[]int32** |  | 
+ **uHeightGt** | **[]int64** |  | 
+ **uHeightGte** | **[]int64** |  | 
+ **uHeightLt** | **[]int64** |  | 
+ **uHeightLte** | **[]int64** |  | 
+ **uHeightN** | **[]int64** |  | 
  **updatedByRequest** | **string** |  | 
  **weight** | **[]float64** |  | 
  **weightEmpty** | **bool** |  | 
@@ -31040,16 +31040,16 @@ Name | Type | Description  | Notes
  **weightLte** | **[]float64** |  | 
  **weightN** | **[]float64** |  | 
  **weightUnit** | [**DcimDeviceTypesListWeightUnitParameter**](DcimDeviceTypesListWeightUnitParameter.md) | * &#x60;kg&#x60; - Kilograms * &#x60;g&#x60; - Grams * &#x60;lb&#x60; - Pounds * &#x60;oz&#x60; - Ounces | 
- **width** | **[]int32** | Rail-to-rail width | 
- **widthIc** | **[]int32** | Rail-to-rail width | 
- **widthIe** | **[]int32** | Rail-to-rail width | 
- **widthIew** | **[]int32** | Rail-to-rail width | 
- **widthIsw** | **[]int32** | Rail-to-rail width | 
- **widthN** | **[]int32** | Rail-to-rail width | 
- **widthNic** | **[]int32** | Rail-to-rail width | 
- **widthNie** | **[]int32** | Rail-to-rail width | 
- **widthNiew** | **[]int32** | Rail-to-rail width | 
- **widthNisw** | **[]int32** | Rail-to-rail width | 
+ **width** | **[]int64** | Rail-to-rail width | 
+ **widthIc** | **[]int64** | Rail-to-rail width | 
+ **widthIe** | **[]int64** | Rail-to-rail width | 
+ **widthIew** | **[]int64** | Rail-to-rail width | 
+ **widthIsw** | **[]int64** | Rail-to-rail width | 
+ **widthN** | **[]int64** | Rail-to-rail width | 
+ **widthNic** | **[]int64** | Rail-to-rail width | 
+ **widthNie** | **[]int64** | Rail-to-rail width | 
+ **widthNiew** | **[]int64** | Rail-to-rail width | 
+ **widthNisw** | **[]int64** | Rail-to-rail width | 
 
 ### Return type
 
@@ -31090,7 +31090,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack.
+	id := int64(56) // int64 | A unique integer value identifying this rack.
 	patchedWritableRackRequest := *openapiclient.NewPatchedWritableRackRequest() // PatchedWritableRackRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -31111,7 +31111,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack. | 
+**id** | **int64** | A unique integer value identifying this rack. | 
 
 ### Other Parameters
 
@@ -31162,7 +31162,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack.
+	id := int64(56) // int64 | A unique integer value identifying this rack.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -31182,7 +31182,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack. | 
+**id** | **int64** | A unique integer value identifying this rack. | 
 
 ### Other Parameters
 
@@ -31232,7 +31232,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rack.
+	id := int64(56) // int64 | A unique integer value identifying this rack.
 	writableRackRequest := *openapiclient.NewWritableRackRequest("Name_example", *openapiclient.NewBriefSiteRequest("Name_example", "Slug_example")) // WritableRackRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -31253,7 +31253,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rack. | 
+**id** | **int64** | A unique integer value identifying this rack. | 
 
 ### Other Parameters
 
@@ -31566,7 +31566,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port template.
+	id := int64(56) // int64 | A unique integer value identifying this rear port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -31584,7 +31584,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port template. | 
+**id** | **int64** | A unique integer value identifying this rear port template. | 
 
 ### Other Parameters
 
@@ -31665,15 +31665,15 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	deviceTypeId := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	deviceTypeIdN := []*int32{int32(123)} // []*int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	deviceTypeIdN := []*int64{int64(123)} // []*int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -31692,10 +31692,10 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleTypeId := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
-	moduleTypeIdN := []*int32{int32(123)} // []*int32 | Module type (ID) (optional)
+	moduleTypeId := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
+	moduleTypeIdN := []*int64{int64(123)} // []*int64 | Module type (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -31707,15 +31707,15 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	positions := []int32{int32(123)} // []int32 |  (optional)
+	positions := []int64{int64(123)} // []int64 |  (optional)
 	positionsEmpty := true // bool |  (optional)
-	positionsGt := []int32{int32(123)} // []int32 |  (optional)
-	positionsGte := []int32{int32(123)} // []int32 |  (optional)
-	positionsLt := []int32{int32(123)} // []int32 |  (optional)
-	positionsLte := []int32{int32(123)} // []int32 |  (optional)
-	positionsN := []int32{int32(123)} // []int32 |  (optional)
+	positionsGt := []int64{int64(123)} // []int64 |  (optional)
+	positionsGte := []int64{int64(123)} // []int64 |  (optional)
+	positionsLt := []int64{int64(123)} // []int64 |  (optional)
+	positionsLte := []int64{int64(123)} // []int64 |  (optional)
+	positionsN := []int64{int64(123)} // []int64 |  (optional)
 	q := "q_example" // string | Search (optional)
 	type_ := []string{"Inner_example"} // []string |  (optional)
 	typeEmpty := true // bool |  (optional)
@@ -31783,15 +31783,15 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -31810,10 +31810,10 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **moduleTypeId** | **[]int32** | Module type (ID) | 
- **moduleTypeIdN** | **[]int32** | Module type (ID) | 
+ **moduleTypeId** | **[]int64** | Module type (ID) | 
+ **moduleTypeIdN** | **[]int64** | Module type (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -31825,15 +31825,15 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **positions** | **[]int32** |  | 
+ **positions** | **[]int64** |  | 
  **positionsEmpty** | **bool** |  | 
- **positionsGt** | **[]int32** |  | 
- **positionsGte** | **[]int32** |  | 
- **positionsLt** | **[]int32** |  | 
- **positionsLte** | **[]int32** |  | 
- **positionsN** | **[]int32** |  | 
+ **positionsGt** | **[]int64** |  | 
+ **positionsGte** | **[]int64** |  | 
+ **positionsLt** | **[]int64** |  | 
+ **positionsLte** | **[]int64** |  | 
+ **positionsN** | **[]int64** |  | 
  **q** | **string** | Search | 
  **type_** | **[]string** |  | 
  **typeEmpty** | **bool** |  | 
@@ -31887,7 +31887,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port template.
+	id := int64(56) // int64 | A unique integer value identifying this rear port template.
 	patchedWritableRearPortTemplateRequest := *openapiclient.NewPatchedWritableRearPortTemplateRequest() // PatchedWritableRearPortTemplateRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -31908,7 +31908,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port template. | 
+**id** | **int64** | A unique integer value identifying this rear port template. | 
 
 ### Other Parameters
 
@@ -31959,7 +31959,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port template.
+	id := int64(56) // int64 | A unique integer value identifying this rear port template.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -31979,7 +31979,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port template. | 
+**id** | **int64** | A unique integer value identifying this rear port template. | 
 
 ### Other Parameters
 
@@ -32029,7 +32029,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port template.
+	id := int64(56) // int64 | A unique integer value identifying this rear port template.
 	writableRearPortTemplateRequest := *openapiclient.NewWritableRearPortTemplateRequest("Name_example", openapiclient.FrontPort_type_value("8p8c")) // WritableRearPortTemplateRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -32050,7 +32050,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port template. | 
+**id** | **int64** | A unique integer value identifying this rear port template. | 
 
 ### Other Parameters
 
@@ -32363,7 +32363,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port.
+	id := int64(56) // int64 | A unique integer value identifying this rear port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -32381,7 +32381,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port. | 
+**id** | **int64** | A unique integer value identifying this rear port. | 
 
 ### Other Parameters
 
@@ -32433,8 +32433,8 @@ import (
 
 func main() {
 	cableEnd := openapiclient.circuits_circuit_terminations_list_cable_end_parameter("A") // CircuitsCircuitTerminationsListCableEndParameter | * `A` - A * `B` - B (optional)
-	cableId := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
-	cableIdN := []*int32{int32(123)} // []*int32 | Cable (ID) (optional)
+	cableId := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
+	cableIdN := []*int64{int64(123)} // []*int64 | Cable (ID) (optional)
 	cabled := true // bool |  (optional)
 	color := []string{"Inner_example"} // []string |  (optional)
 	colorEmpty := true // bool |  (optional)
@@ -32468,12 +32468,12 @@ func main() {
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
 	device := []*string{"Inner_example"} // []*string | Device (name) (optional)
 	deviceN := []*string{"Inner_example"} // []*string | Device (name) (optional)
-	deviceId := []int32{int32(123)} // []int32 | Device (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | Device (ID) (optional)
+	deviceId := []int64{int64(123)} // []int64 | Device (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | Device (ID) (optional)
 	deviceRole := []string{"Inner_example"} // []string | Device role (slug) (optional)
 	deviceRoleN := []string{"Inner_example"} // []string | Device role (slug) (optional)
-	deviceRoleId := []int32{int32(123)} // []int32 | Device role (ID) (optional)
-	deviceRoleIdN := []int32{int32(123)} // []int32 | Device role (ID) (optional)
+	deviceRoleId := []int64{int64(123)} // []int64 | Device role (ID) (optional)
+	deviceRoleIdN := []int64{int64(123)} // []int64 | Device role (ID) (optional)
 	deviceStatus := []string{"Inner_example"} // []string |  (optional)
 	deviceStatusEmpty := true // bool |  (optional)
 	deviceStatusIc := []string{"Inner_example"} // []string |  (optional)
@@ -32487,15 +32487,15 @@ func main() {
 	deviceStatusNisw := []string{"Inner_example"} // []string |  (optional)
 	deviceType := []string{"Inner_example"} // []string | Device type (model) (optional)
 	deviceTypeN := []string{"Inner_example"} // []string | Device type (model) (optional)
-	deviceTypeId := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	deviceTypeIdN := []int32{int32(123)} // []int32 | Device type (ID) (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	deviceTypeId := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	deviceTypeIdN := []int64{int64(123)} // []int64 | Device type (ID) (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	label := []string{"Inner_example"} // []string |  (optional)
 	labelEmpty := true // bool |  (optional)
 	labelIc := []string{"Inner_example"} // []string |  (optional)
@@ -32514,15 +32514,15 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string | Location (slug) (optional)
 	locationN := []string{"Inner_example"} // []string | Location (slug) (optional)
-	locationId := []int32{int32(123)} // []int32 | Location (ID) (optional)
-	locationIdN := []int32{int32(123)} // []int32 | Location (ID) (optional)
+	locationId := []int64{int64(123)} // []int64 | Location (ID) (optional)
+	locationIdN := []int64{int64(123)} // []int64 | Location (ID) (optional)
 	markConnected := true // bool |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	moduleId := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
-	moduleIdN := []*int32{int32(123)} // []*int32 | Module (ID) (optional)
+	moduleId := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
+	moduleIdN := []*int64{int64(123)} // []*int64 | Module (ID) (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
 	nameIc := []string{"Inner_example"} // []string |  (optional)
@@ -32535,20 +32535,20 @@ func main() {
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
 	occupied := true // bool |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	positions := []int32{int32(123)} // []int32 |  (optional)
+	positions := []int64{int64(123)} // []int64 |  (optional)
 	positionsEmpty := true // bool |  (optional)
-	positionsGt := []int32{int32(123)} // []int32 |  (optional)
-	positionsGte := []int32{int32(123)} // []int32 |  (optional)
-	positionsLt := []int32{int32(123)} // []int32 |  (optional)
-	positionsLte := []int32{int32(123)} // []int32 |  (optional)
-	positionsN := []int32{int32(123)} // []int32 |  (optional)
+	positionsGt := []int64{int64(123)} // []int64 |  (optional)
+	positionsGte := []int64{int64(123)} // []int64 |  (optional)
+	positionsLt := []int64{int64(123)} // []int64 |  (optional)
+	positionsLte := []int64{int64(123)} // []int64 |  (optional)
+	positionsN := []int64{int64(123)} // []int64 |  (optional)
 	q := "q_example" // string | Search (optional)
 	rack := []string{"Inner_example"} // []string | Rack (name) (optional)
 	rackN := []string{"Inner_example"} // []string | Rack (name) (optional)
-	rackId := []int32{int32(123)} // []int32 | Rack (ID) (optional)
-	rackIdN := []int32{int32(123)} // []int32 | Rack (ID) (optional)
+	rackId := []int64{int64(123)} // []int64 | Rack (ID) (optional)
+	rackIdN := []int64{int64(123)} // []int64 | Rack (ID) (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
@@ -32559,8 +32559,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	type_ := []string{"Inner_example"} // []string |  (optional)
@@ -32577,8 +32577,8 @@ func main() {
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	virtualChassis := []string{"Inner_example"} // []string | Virtual Chassis (optional)
 	virtualChassisN := []string{"Inner_example"} // []string | Virtual Chassis (optional)
-	virtualChassisId := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
-	virtualChassisIdN := []int32{int32(123)} // []int32 | Virtual Chassis (ID) (optional)
+	virtualChassisId := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
+	virtualChassisIdN := []int64{int64(123)} // []int64 | Virtual Chassis (ID) (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -32604,8 +32604,8 @@ Other parameters are passed through a pointer to a apiDcimRearPortsListRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cableEnd** | [**CircuitsCircuitTerminationsListCableEndParameter**](CircuitsCircuitTerminationsListCableEndParameter.md) | * &#x60;A&#x60; - A * &#x60;B&#x60; - B | 
- **cableId** | **[]int32** | Cable (ID) | 
- **cableIdN** | **[]int32** | Cable (ID) | 
+ **cableId** | **[]int64** | Cable (ID) | 
+ **cableIdN** | **[]int64** | Cable (ID) | 
  **cabled** | **bool** |  | 
  **color** | **[]string** |  | 
  **colorEmpty** | **bool** |  | 
@@ -32639,12 +32639,12 @@ Name | Type | Description  | Notes
  **descriptionNisw** | **[]string** |  | 
  **device** | **[]string** | Device (name) | 
  **deviceN** | **[]string** | Device (name) | 
- **deviceId** | **[]int32** | Device (ID) | 
- **deviceIdN** | **[]int32** | Device (ID) | 
+ **deviceId** | **[]int64** | Device (ID) | 
+ **deviceIdN** | **[]int64** | Device (ID) | 
  **deviceRole** | **[]string** | Device role (slug) | 
  **deviceRoleN** | **[]string** | Device role (slug) | 
- **deviceRoleId** | **[]int32** | Device role (ID) | 
- **deviceRoleIdN** | **[]int32** | Device role (ID) | 
+ **deviceRoleId** | **[]int64** | Device role (ID) | 
+ **deviceRoleIdN** | **[]int64** | Device role (ID) | 
  **deviceStatus** | **[]string** |  | 
  **deviceStatusEmpty** | **bool** |  | 
  **deviceStatusIc** | **[]string** |  | 
@@ -32658,15 +32658,15 @@ Name | Type | Description  | Notes
  **deviceStatusNisw** | **[]string** |  | 
  **deviceType** | **[]string** | Device type (model) | 
  **deviceTypeN** | **[]string** | Device type (model) | 
- **deviceTypeId** | **[]int32** | Device type (ID) | 
- **deviceTypeIdN** | **[]int32** | Device type (ID) | 
- **id** | **[]int32** |  | 
+ **deviceTypeId** | **[]int64** | Device type (ID) | 
+ **deviceTypeIdN** | **[]int64** | Device type (ID) | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **label** | **[]string** |  | 
  **labelEmpty** | **bool** |  | 
  **labelIc** | **[]string** |  | 
@@ -32685,15 +32685,15 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** | Location (slug) | 
  **locationN** | **[]string** | Location (slug) | 
- **locationId** | **[]int32** | Location (ID) | 
- **locationIdN** | **[]int32** | Location (ID) | 
+ **locationId** | **[]int64** | Location (ID) | 
+ **locationIdN** | **[]int64** | Location (ID) | 
  **markConnected** | **bool** |  | 
  **modifiedByRequest** | **string** |  | 
- **moduleId** | **[]int32** | Module (ID) | 
- **moduleIdN** | **[]int32** | Module (ID) | 
+ **moduleId** | **[]int64** | Module (ID) | 
+ **moduleIdN** | **[]int64** | Module (ID) | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
  **nameIc** | **[]string** |  | 
@@ -32706,20 +32706,20 @@ Name | Type | Description  | Notes
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
  **occupied** | **bool** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **positions** | **[]int32** |  | 
+ **positions** | **[]int64** |  | 
  **positionsEmpty** | **bool** |  | 
- **positionsGt** | **[]int32** |  | 
- **positionsGte** | **[]int32** |  | 
- **positionsLt** | **[]int32** |  | 
- **positionsLte** | **[]int32** |  | 
- **positionsN** | **[]int32** |  | 
+ **positionsGt** | **[]int64** |  | 
+ **positionsGte** | **[]int64** |  | 
+ **positionsLt** | **[]int64** |  | 
+ **positionsLte** | **[]int64** |  | 
+ **positionsN** | **[]int64** |  | 
  **q** | **string** | Search | 
  **rack** | **[]string** | Rack (name) | 
  **rackN** | **[]string** | Rack (name) | 
- **rackId** | **[]int32** | Rack (ID) | 
- **rackIdN** | **[]int32** | Rack (ID) | 
+ **rackId** | **[]int64** | Rack (ID) | 
+ **rackIdN** | **[]int64** | Rack (ID) | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
@@ -32730,8 +32730,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **type_** | **[]string** |  | 
@@ -32748,8 +32748,8 @@ Name | Type | Description  | Notes
  **updatedByRequest** | **string** |  | 
  **virtualChassis** | **[]string** | Virtual Chassis | 
  **virtualChassisN** | **[]string** | Virtual Chassis | 
- **virtualChassisId** | **[]int32** | Virtual Chassis (ID) | 
- **virtualChassisIdN** | **[]int32** | Virtual Chassis (ID) | 
+ **virtualChassisId** | **[]int64** | Virtual Chassis (ID) | 
+ **virtualChassisIdN** | **[]int64** | Virtual Chassis (ID) | 
 
 ### Return type
 
@@ -32790,7 +32790,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port.
+	id := int64(56) // int64 | A unique integer value identifying this rear port.
 	patchedWritableRearPortRequest := *openapiclient.NewPatchedWritableRearPortRequest() // PatchedWritableRearPortRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -32811,7 +32811,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port. | 
+**id** | **int64** | A unique integer value identifying this rear port. | 
 
 ### Other Parameters
 
@@ -32862,7 +32862,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port.
+	id := int64(56) // int64 | A unique integer value identifying this rear port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -32882,7 +32882,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port. | 
+**id** | **int64** | A unique integer value identifying this rear port. | 
 
 ### Other Parameters
 
@@ -32932,7 +32932,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port.
+	id := int64(56) // int64 | A unique integer value identifying this rear port.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -32952,7 +32952,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port. | 
+**id** | **int64** | A unique integer value identifying this rear port. | 
 
 ### Other Parameters
 
@@ -33002,7 +33002,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this rear port.
+	id := int64(56) // int64 | A unique integer value identifying this rear port.
 	writableRearPortRequest := *openapiclient.NewWritableRearPortRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example", openapiclient.FrontPort_type_value("8p8c")) // WritableRearPortRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -33023,7 +33023,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this rear port. | 
+**id** | **int64** | A unique integer value identifying this rear port. | 
 
 ### Other Parameters
 
@@ -33336,7 +33336,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this region.
+	id := int64(56) // int64 | A unique integer value identifying this region.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -33354,7 +33354,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this region. | 
+**id** | **int64** | A unique integer value identifying this region. | 
 
 ### Other Parameters
 
@@ -33409,12 +33409,12 @@ func main() {
 	ancestorN := []string{"Inner_example"} // []string |  (optional)
 	ancestorId := []string{"Inner_example"} // []string |  (optional)
 	ancestorIdN := []string{"Inner_example"} // []string |  (optional)
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -33434,13 +33434,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -33448,7 +33448,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -33461,12 +33461,12 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	parent := []string{"Inner_example"} // []string | Parent region (slug) (optional)
 	parentN := []string{"Inner_example"} // []string | Parent region (slug) (optional)
-	parentId := []*int32{int32(123)} // []*int32 | Parent region (ID) (optional)
-	parentIdN := []*int32{int32(123)} // []*int32 | Parent region (ID) (optional)
+	parentId := []*int64{int64(123)} // []*int64 | Parent region (ID) (optional)
+	parentIdN := []*int64{int64(123)} // []*int64 | Parent region (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
 	slugEmpty := true // bool |  (optional)
@@ -33510,12 +33510,12 @@ Name | Type | Description  | Notes
  **ancestorN** | **[]string** |  | 
  **ancestorId** | **[]string** |  | 
  **ancestorIdN** | **[]string** |  | 
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -33535,13 +33535,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -33549,7 +33549,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -33562,12 +33562,12 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **parent** | **[]string** | Parent region (slug) | 
  **parentN** | **[]string** | Parent region (slug) | 
- **parentId** | **[]int32** | Parent region (ID) | 
- **parentIdN** | **[]int32** | Parent region (ID) | 
+ **parentId** | **[]int64** | Parent region (ID) | 
+ **parentIdN** | **[]int64** | Parent region (ID) | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
  **slugEmpty** | **bool** |  | 
@@ -33623,7 +33623,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this region.
+	id := int64(56) // int64 | A unique integer value identifying this region.
 	patchedWritableRegionRequest := *openapiclient.NewPatchedWritableRegionRequest() // PatchedWritableRegionRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -33644,7 +33644,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this region. | 
+**id** | **int64** | A unique integer value identifying this region. | 
 
 ### Other Parameters
 
@@ -33695,7 +33695,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this region.
+	id := int64(56) // int64 | A unique integer value identifying this region.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -33715,7 +33715,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this region. | 
+**id** | **int64** | A unique integer value identifying this region. | 
 
 ### Other Parameters
 
@@ -33765,7 +33765,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this region.
+	id := int64(56) // int64 | A unique integer value identifying this region.
 	writableRegionRequest := *openapiclient.NewWritableRegionRequest("Name_example", "Slug_example") // WritableRegionRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -33786,7 +33786,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this region. | 
+**id** | **int64** | A unique integer value identifying this region. | 
 
 ### Other Parameters
 
@@ -34099,7 +34099,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site group.
+	id := int64(56) // int64 | A unique integer value identifying this site group.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -34117,7 +34117,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site group. | 
+**id** | **int64** | A unique integer value identifying this site group. | 
 
 ### Other Parameters
 
@@ -34172,12 +34172,12 @@ func main() {
 	ancestorN := []string{"Inner_example"} // []string |  (optional)
 	ancestorId := []string{"Inner_example"} // []string |  (optional)
 	ancestorIdN := []string{"Inner_example"} // []string |  (optional)
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -34197,13 +34197,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -34211,7 +34211,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -34224,12 +34224,12 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	parent := []string{"Inner_example"} // []string | Parent site group (slug) (optional)
 	parentN := []string{"Inner_example"} // []string | Parent site group (slug) (optional)
-	parentId := []*int32{int32(123)} // []*int32 | Parent site group (ID) (optional)
-	parentIdN := []*int32{int32(123)} // []*int32 | Parent site group (ID) (optional)
+	parentId := []*int64{int64(123)} // []*int64 | Parent site group (ID) (optional)
+	parentIdN := []*int64{int64(123)} // []*int64 | Parent site group (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
 	slugEmpty := true // bool |  (optional)
@@ -34273,12 +34273,12 @@ Name | Type | Description  | Notes
  **ancestorN** | **[]string** |  | 
  **ancestorId** | **[]string** |  | 
  **ancestorIdN** | **[]string** |  | 
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -34298,13 +34298,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -34312,7 +34312,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -34325,12 +34325,12 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **parent** | **[]string** | Parent site group (slug) | 
  **parentN** | **[]string** | Parent site group (slug) | 
- **parentId** | **[]int32** | Parent site group (ID) | 
- **parentIdN** | **[]int32** | Parent site group (ID) | 
+ **parentId** | **[]int64** | Parent site group (ID) | 
+ **parentIdN** | **[]int64** | Parent site group (ID) | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
  **slugEmpty** | **bool** |  | 
@@ -34386,7 +34386,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site group.
+	id := int64(56) // int64 | A unique integer value identifying this site group.
 	patchedWritableSiteGroupRequest := *openapiclient.NewPatchedWritableSiteGroupRequest() // PatchedWritableSiteGroupRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -34407,7 +34407,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site group. | 
+**id** | **int64** | A unique integer value identifying this site group. | 
 
 ### Other Parameters
 
@@ -34458,7 +34458,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site group.
+	id := int64(56) // int64 | A unique integer value identifying this site group.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -34478,7 +34478,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site group. | 
+**id** | **int64** | A unique integer value identifying this site group. | 
 
 ### Other Parameters
 
@@ -34528,7 +34528,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site group.
+	id := int64(56) // int64 | A unique integer value identifying this site group.
 	writableSiteGroupRequest := *openapiclient.NewWritableSiteGroupRequest("Name_example", "Slug_example") // WritableSiteGroupRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -34549,7 +34549,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site group. | 
+**id** | **int64** | A unique integer value identifying this site group. | 
 
 ### Other Parameters
 
@@ -34862,7 +34862,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site.
+	id := int64(56) // int64 | A unique integer value identifying this site.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -34880,7 +34880,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site. | 
+**id** | **int64** | A unique integer value identifying this site. | 
 
 ### Other Parameters
 
@@ -34933,14 +34933,14 @@ import (
 func main() {
 	asn := []int64{int64(123)} // []int64 | AS (ID) (optional)
 	asnN := []int64{int64(123)} // []int64 | AS (ID) (optional)
-	asnId := []int32{int32(123)} // []int32 | AS (ID) (optional)
-	asnIdN := []int32{int32(123)} // []int32 | AS (ID) (optional)
-	contact := []int32{int32(123)} // []int32 | Contact (optional)
-	contactN := []int32{int32(123)} // []int32 | Contact (optional)
+	asnId := []int64{int64(123)} // []int64 | AS (ID) (optional)
+	asnIdN := []int64{int64(123)} // []int64 | AS (ID) (optional)
+	contact := []int64{int64(123)} // []int64 | Contact (optional)
+	contactN := []int64{int64(123)} // []int64 | Contact (optional)
 	contactGroup := []string{"Inner_example"} // []string |  (optional)
 	contactGroupN := []string{"Inner_example"} // []string |  (optional)
-	contactRole := []int32{int32(123)} // []int32 | Contact Role (optional)
-	contactRoleN := []int32{int32(123)} // []int32 | Contact Role (optional)
+	contactRole := []int64{int64(123)} // []int64 | Contact Role (optional)
+	contactRoleN := []int64{int64(123)} // []int64 | Contact Role (optional)
 	created := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	createdGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -34975,13 +34975,13 @@ func main() {
 	groupN := []string{"Inner_example"} // []string |  (optional)
 	groupId := []string{"Inner_example"} // []string |  (optional)
 	groupIdN := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -34996,7 +34996,7 @@ func main() {
 	latitudeLt := []float64{float64(123)} // []float64 |  (optional)
 	latitudeLte := []float64{float64(123)} // []float64 |  (optional)
 	latitudeN := []float64{float64(123)} // []float64 |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	longitude := []float64{float64(123)} // []float64 |  (optional)
 	longitudeEmpty := true // bool |  (optional)
 	longitudeGt := []float64{float64(123)} // []float64 |  (optional)
@@ -35016,7 +35016,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
@@ -35053,8 +35053,8 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	timeZone := []string{"Inner_example"} // []string |  (optional)
 	timeZoneIc := []string{"Inner_example"} // []string |  (optional)
 	timeZoneIe := []string{"Inner_example"} // []string |  (optional)
@@ -35092,14 +35092,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asn** | **[]int64** | AS (ID) | 
  **asnN** | **[]int64** | AS (ID) | 
- **asnId** | **[]int32** | AS (ID) | 
- **asnIdN** | **[]int32** | AS (ID) | 
- **contact** | **[]int32** | Contact | 
- **contactN** | **[]int32** | Contact | 
+ **asnId** | **[]int64** | AS (ID) | 
+ **asnIdN** | **[]int64** | AS (ID) | 
+ **contact** | **[]int64** | Contact | 
+ **contactN** | **[]int64** | Contact | 
  **contactGroup** | **[]string** |  | 
  **contactGroupN** | **[]string** |  | 
- **contactRole** | **[]int32** | Contact Role | 
- **contactRoleN** | **[]int32** | Contact Role | 
+ **contactRole** | **[]int64** | Contact Role | 
+ **contactRoleN** | **[]int64** | Contact Role | 
  **created** | [**[]time.Time**](time.Time.md) |  | 
  **createdEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **createdGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -35134,13 +35134,13 @@ Name | Type | Description  | Notes
  **groupN** | **[]string** |  | 
  **groupId** | **[]string** |  | 
  **groupIdN** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -35155,7 +35155,7 @@ Name | Type | Description  | Notes
  **latitudeLt** | **[]float64** |  | 
  **latitudeLte** | **[]float64** |  | 
  **latitudeN** | **[]float64** |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **longitude** | **[]float64** |  | 
  **longitudeEmpty** | **bool** |  | 
  **longitudeGt** | **[]float64** |  | 
@@ -35175,7 +35175,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **region** | **[]string** |  | 
@@ -35212,8 +35212,8 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **timeZone** | **[]string** |  | 
  **timeZoneIc** | **[]string** |  | 
  **timeZoneIe** | **[]string** |  | 
@@ -35265,7 +35265,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site.
+	id := int64(56) // int64 | A unique integer value identifying this site.
 	patchedWritableSiteRequest := *openapiclient.NewPatchedWritableSiteRequest() // PatchedWritableSiteRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -35286,7 +35286,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site. | 
+**id** | **int64** | A unique integer value identifying this site. | 
 
 ### Other Parameters
 
@@ -35337,7 +35337,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site.
+	id := int64(56) // int64 | A unique integer value identifying this site.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -35357,7 +35357,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site. | 
+**id** | **int64** | A unique integer value identifying this site. | 
 
 ### Other Parameters
 
@@ -35407,7 +35407,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this site.
+	id := int64(56) // int64 | A unique integer value identifying this site.
 	writableSiteRequest := *openapiclient.NewWritableSiteRequest("Name_example", "Slug_example") // WritableSiteRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -35428,7 +35428,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this site. | 
+**id** | **int64** | A unique integer value identifying this site. | 
 
 ### Other Parameters
 
@@ -35741,7 +35741,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual chassis.
+	id := int64(56) // int64 | A unique integer value identifying this virtual chassis.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -35759,7 +35759,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual chassis. | 
+**id** | **int64** | A unique integer value identifying this virtual chassis. | 
 
 ### Other Parameters
 
@@ -35840,13 +35840,13 @@ func main() {
 	domainNie := []string{"Inner_example"} // []string |  (optional)
 	domainNiew := []string{"Inner_example"} // []string |  (optional)
 	domainNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -35854,18 +35854,18 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	master := []*string{"Inner_example"} // []*string | Master (name) (optional)
 	masterN := []*string{"Inner_example"} // []*string | Master (name) (optional)
-	masterId := []*int32{int32(123)} // []*int32 | Master (ID) (optional)
-	masterIdN := []*int32{int32(123)} // []*int32 | Master (ID) (optional)
-	memberCount := []int32{int32(123)} // []int32 |  (optional)
+	masterId := []*int64{int64(123)} // []*int64 | Master (ID) (optional)
+	masterIdN := []*int64{int64(123)} // []*int64 | Master (ID) (optional)
+	memberCount := []int64{int64(123)} // []int64 |  (optional)
 	memberCountEmpty := true // bool |  (optional)
-	memberCountGt := []int32{int32(123)} // []int32 |  (optional)
-	memberCountGte := []int32{int32(123)} // []int32 |  (optional)
-	memberCountLt := []int32{int32(123)} // []int32 |  (optional)
-	memberCountLte := []int32{int32(123)} // []int32 |  (optional)
-	memberCountN := []int32{int32(123)} // []int32 |  (optional)
+	memberCountGt := []int64{int64(123)} // []int64 |  (optional)
+	memberCountGte := []int64{int64(123)} // []int64 |  (optional)
+	memberCountLt := []int64{int64(123)} // []int64 |  (optional)
+	memberCountLte := []int64{int64(123)} // []int64 |  (optional)
+	memberCountN := []int64{int64(123)} // []int64 |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -35878,7 +35878,7 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
@@ -35891,14 +35891,14 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	tag := []string{"Inner_example"} // []string |  (optional)
 	tagN := []string{"Inner_example"} // []string |  (optional)
 	tenant := []string{"Inner_example"} // []string | Tenant (slug) (optional)
 	tenantN := []string{"Inner_example"} // []string | Tenant (slug) (optional)
-	tenantId := []int32{int32(123)} // []int32 | Tenant (ID) (optional)
-	tenantIdN := []int32{int32(123)} // []int32 | Tenant (ID) (optional)
+	tenantId := []int64{int64(123)} // []int64 | Tenant (ID) (optional)
+	tenantIdN := []int64{int64(123)} // []int64 | Tenant (ID) (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -35954,13 +35954,13 @@ Name | Type | Description  | Notes
  **domainNie** | **[]string** |  | 
  **domainNiew** | **[]string** |  | 
  **domainNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -35968,18 +35968,18 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **master** | **[]string** | Master (name) | 
  **masterN** | **[]string** | Master (name) | 
- **masterId** | **[]int32** | Master (ID) | 
- **masterIdN** | **[]int32** | Master (ID) | 
- **memberCount** | **[]int32** |  | 
+ **masterId** | **[]int64** | Master (ID) | 
+ **masterIdN** | **[]int64** | Master (ID) | 
+ **memberCount** | **[]int64** |  | 
  **memberCountEmpty** | **bool** |  | 
- **memberCountGt** | **[]int32** |  | 
- **memberCountGte** | **[]int32** |  | 
- **memberCountLt** | **[]int32** |  | 
- **memberCountLte** | **[]int32** |  | 
- **memberCountN** | **[]int32** |  | 
+ **memberCountGt** | **[]int64** |  | 
+ **memberCountGte** | **[]int64** |  | 
+ **memberCountLt** | **[]int64** |  | 
+ **memberCountLte** | **[]int64** |  | 
+ **memberCountN** | **[]int64** |  | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -35992,7 +35992,7 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **region** | **[]string** |  | 
@@ -36005,14 +36005,14 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **tag** | **[]string** |  | 
  **tagN** | **[]string** |  | 
  **tenant** | **[]string** | Tenant (slug) | 
  **tenantN** | **[]string** | Tenant (slug) | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **updatedByRequest** | **string** |  | 
 
 ### Return type
@@ -36054,7 +36054,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual chassis.
+	id := int64(56) // int64 | A unique integer value identifying this virtual chassis.
 	patchedWritableVirtualChassisRequest := *openapiclient.NewPatchedWritableVirtualChassisRequest() // PatchedWritableVirtualChassisRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -36075,7 +36075,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual chassis. | 
+**id** | **int64** | A unique integer value identifying this virtual chassis. | 
 
 ### Other Parameters
 
@@ -36126,7 +36126,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual chassis.
+	id := int64(56) // int64 | A unique integer value identifying this virtual chassis.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -36146,7 +36146,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual chassis. | 
+**id** | **int64** | A unique integer value identifying this virtual chassis. | 
 
 ### Other Parameters
 
@@ -36196,7 +36196,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual chassis.
+	id := int64(56) // int64 | A unique integer value identifying this virtual chassis.
 	writableVirtualChassisRequest := *openapiclient.NewWritableVirtualChassisRequest("Name_example") // WritableVirtualChassisRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -36217,7 +36217,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual chassis. | 
+**id** | **int64** | A unique integer value identifying this virtual chassis. | 
 
 ### Other Parameters
 
@@ -36530,7 +36530,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual device context.
+	id := int64(56) // int64 | A unique integer value identifying this virtual device context.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -36548,7 +36548,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual device context. | 
+**id** | **int64** | A unique integer value identifying this virtual device context. | 
 
 ### Other Parameters
 
@@ -36618,27 +36618,27 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	device := []int32{int32(123)} // []int32 | Device model (optional)
-	deviceN := []int32{int32(123)} // []int32 | Device model (optional)
-	deviceId := []int32{int32(123)} // []int32 | VDC (ID) (optional)
-	deviceIdN := []int32{int32(123)} // []int32 | VDC (ID) (optional)
+	device := []int64{int64(123)} // []int64 | Device model (optional)
+	deviceN := []int64{int64(123)} // []int64 | Device model (optional)
+	deviceId := []int64{int64(123)} // []int64 | VDC (ID) (optional)
+	deviceIdN := []int64{int64(123)} // []int64 | VDC (ID) (optional)
 	hasPrimaryIp := true // bool | Has a primary IP (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	identifier := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
+	identifier := []int64{int64(123)} // []int64 |  (optional)
 	identifierEmpty := true // bool |  (optional)
-	identifierGt := []int32{int32(123)} // []int32 |  (optional)
-	identifierGte := []int32{int32(123)} // []int32 |  (optional)
-	identifierLt := []int32{int32(123)} // []int32 |  (optional)
-	identifierLte := []int32{int32(123)} // []int32 |  (optional)
-	identifierN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceId := []int32{int32(123)} // []int32 | Interface (ID) (optional)
-	interfaceIdN := []int32{int32(123)} // []int32 | Interface (ID) (optional)
+	identifierGt := []int64{int64(123)} // []int64 |  (optional)
+	identifierGte := []int64{int64(123)} // []int64 |  (optional)
+	identifierLt := []int64{int64(123)} // []int64 |  (optional)
+	identifierLte := []int64{int64(123)} // []int64 |  (optional)
+	identifierN := []int64{int64(123)} // []int64 |  (optional)
+	interfaceId := []int64{int64(123)} // []int64 | Interface (ID) (optional)
+	interfaceIdN := []int64{int64(123)} // []int64 | Interface (ID) (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -36646,7 +36646,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -36659,12 +36659,12 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
-	primaryIp4Id := []int32{int32(123)} // []int32 | Primary IPv4 (ID) (optional)
-	primaryIp4IdN := []int32{int32(123)} // []int32 | Primary IPv4 (ID) (optional)
-	primaryIp6Id := []int32{int32(123)} // []int32 | Primary IPv6 (ID) (optional)
-	primaryIp6IdN := []int32{int32(123)} // []int32 | Primary IPv6 (ID) (optional)
+	primaryIp4Id := []int64{int64(123)} // []int64 | Primary IPv4 (ID) (optional)
+	primaryIp4IdN := []int64{int64(123)} // []int64 | Primary IPv4 (ID) (optional)
+	primaryIp6Id := []int64{int64(123)} // []int64 | Primary IPv6 (ID) (optional)
+	primaryIp6IdN := []int64{int64(123)} // []int64 | Primary IPv6 (ID) (optional)
 	q := "q_example" // string | Search (optional)
 	status := []string{"Inner_example"} // []string |  (optional)
 	statusEmpty := true // bool |  (optional)
@@ -36685,8 +36685,8 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -36731,27 +36731,27 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **device** | **[]int32** | Device model | 
- **deviceN** | **[]int32** | Device model | 
- **deviceId** | **[]int32** | VDC (ID) | 
- **deviceIdN** | **[]int32** | VDC (ID) | 
+ **device** | **[]int64** | Device model | 
+ **deviceN** | **[]int64** | Device model | 
+ **deviceId** | **[]int64** | VDC (ID) | 
+ **deviceIdN** | **[]int64** | VDC (ID) | 
  **hasPrimaryIp** | **bool** | Has a primary IP | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **identifier** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
+ **identifier** | **[]int64** |  | 
  **identifierEmpty** | **bool** |  | 
- **identifierGt** | **[]int32** |  | 
- **identifierGte** | **[]int32** |  | 
- **identifierLt** | **[]int32** |  | 
- **identifierLte** | **[]int32** |  | 
- **identifierN** | **[]int32** |  | 
- **interfaceId** | **[]int32** | Interface (ID) | 
- **interfaceIdN** | **[]int32** | Interface (ID) | 
+ **identifierGt** | **[]int64** |  | 
+ **identifierGte** | **[]int64** |  | 
+ **identifierLt** | **[]int64** |  | 
+ **identifierLte** | **[]int64** |  | 
+ **identifierN** | **[]int64** |  | 
+ **interfaceId** | **[]int64** | Interface (ID) | 
+ **interfaceIdN** | **[]int64** | Interface (ID) | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -36759,7 +36759,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -36772,12 +36772,12 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
- **primaryIp4Id** | **[]int32** | Primary IPv4 (ID) | 
- **primaryIp4IdN** | **[]int32** | Primary IPv4 (ID) | 
- **primaryIp6Id** | **[]int32** | Primary IPv6 (ID) | 
- **primaryIp6IdN** | **[]int32** | Primary IPv6 (ID) | 
+ **primaryIp4Id** | **[]int64** | Primary IPv4 (ID) | 
+ **primaryIp4IdN** | **[]int64** | Primary IPv4 (ID) | 
+ **primaryIp6Id** | **[]int64** | Primary IPv6 (ID) | 
+ **primaryIp6IdN** | **[]int64** | Primary IPv6 (ID) | 
  **q** | **string** | Search | 
  **status** | **[]string** |  | 
  **statusEmpty** | **bool** |  | 
@@ -36798,8 +36798,8 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **updatedByRequest** | **string** |  | 
 
 ### Return type
@@ -36841,7 +36841,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual device context.
+	id := int64(56) // int64 | A unique integer value identifying this virtual device context.
 	patchedWritableVirtualDeviceContextRequest := *openapiclient.NewPatchedWritableVirtualDeviceContextRequest() // PatchedWritableVirtualDeviceContextRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -36862,7 +36862,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual device context. | 
+**id** | **int64** | A unique integer value identifying this virtual device context. | 
 
 ### Other Parameters
 
@@ -36913,7 +36913,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual device context.
+	id := int64(56) // int64 | A unique integer value identifying this virtual device context.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -36933,7 +36933,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual device context. | 
+**id** | **int64** | A unique integer value identifying this virtual device context. | 
 
 ### Other Parameters
 
@@ -36983,7 +36983,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this virtual device context.
+	id := int64(56) // int64 | A unique integer value identifying this virtual device context.
 	writableVirtualDeviceContextRequest := *openapiclient.NewWritableVirtualDeviceContextRequest("Name_example", *openapiclient.NewBriefDeviceRequest(), openapiclient.PatchedWritableVirtualDeviceContextRequest_status("active")) // WritableVirtualDeviceContextRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -37004,7 +37004,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this virtual device context. | 
+**id** | **int64** | A unique integer value identifying this virtual device context. | 
 
 ### Other Parameters
 

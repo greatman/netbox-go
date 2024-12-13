@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Slug** | Pointer to **string** |  | [optional] 
-**Weight** | Pointer to **int32** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -82,20 +82,20 @@ HasSlug returns a boolean if a field has been set.
 
 ### GetWeight
 
-`func (o *PatchedRoleRequest) GetWeight() int32`
+`func (o *PatchedRoleRequest) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *PatchedRoleRequest) GetWeightOk() (*int32, bool)`
+`func (o *PatchedRoleRequest) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *PatchedRoleRequest) SetWeight(v int32)`
+`func (o *PatchedRoleRequest) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

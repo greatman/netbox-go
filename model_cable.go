@@ -21,7 +21,7 @@ var _ MappedNullable = &Cable{}
 
 // Cable Adds support for custom fields and tags.
 type Cable struct {
-	Id                   int32                   `json:"id"`
+	Id                   int64                   `json:"id"`
 	Url                  string                  `json:"url"`
 	DisplayUrl           string                  `json:"display_url"`
 	Display              string                  `json:"display"`
@@ -49,7 +49,7 @@ type _Cable Cable
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCable(id int32, url string, displayUrl string, display string, created NullableTime, lastUpdated NullableTime) *Cable {
+func NewCable(id int64, url string, displayUrl string, display string, created NullableTime, lastUpdated NullableTime) *Cable {
 	this := Cable{}
 	this.Id = id
 	this.Url = url
@@ -69,9 +69,9 @@ func NewCableWithDefaults() *Cable {
 }
 
 // GetId returns the Id field value
-func (o *Cable) GetId() int32 {
+func (o *Cable) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -80,7 +80,7 @@ func (o *Cable) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Cable) GetIdOk() (*int32, bool) {
+func (o *Cable) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -88,7 +88,7 @@ func (o *Cable) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Cable) SetId(v int32) {
+func (o *Cable) SetId(v int64) {
 	o.Id = v
 }
 

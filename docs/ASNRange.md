@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -19,13 +19,13 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**AsnCount** | **int32** |  | [readonly] 
+**AsnCount** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewASNRange
 
-`func NewASNRange(id int32, url string, displayUrl string, display string, name string, slug string, rir BriefRIR, start int64, end int64, created NullableTime, lastUpdated NullableTime, asnCount int32, ) *ASNRange`
+`func NewASNRange(id int64, url string, displayUrl string, display string, name string, slug string, rir BriefRIR, start int64, end int64, created NullableTime, lastUpdated NullableTime, asnCount int64, ) *ASNRange`
 
 NewASNRange instantiates a new ASNRange object
 This constructor will assign default values to properties that have it defined,
@@ -42,20 +42,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ASNRange) GetId() int32`
+`func (o *ASNRange) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ASNRange) GetIdOk() (*int32, bool)`
+`func (o *ASNRange) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ASNRange) SetId(v int32)`
+`func (o *ASNRange) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -392,20 +392,20 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetAsnCount
 
-`func (o *ASNRange) GetAsnCount() int32`
+`func (o *ASNRange) GetAsnCount() int64`
 
 GetAsnCount returns the AsnCount field if non-nil, zero value otherwise.
 
 ### GetAsnCountOk
 
-`func (o *ASNRange) GetAsnCountOk() (*int32, bool)`
+`func (o *ASNRange) GetAsnCountOk() (*int64, bool)`
 
 GetAsnCountOk returns a tuple with the AsnCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAsnCount
 
-`func (o *ASNRange) SetAsnCount(v int32)`
+`func (o *ASNRange) SetAsnCount(v int64)`
 
 SetAsnCount sets AsnCount field to given value.
 

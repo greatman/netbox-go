@@ -21,13 +21,13 @@ var _ MappedNullable = &VirtualDeviceContext{}
 
 // VirtualDeviceContext Adds support for custom fields and tags.
 type VirtualDeviceContext struct {
-	Id                   int32                      `json:"id"`
+	Id                   int64                      `json:"id"`
 	Url                  string                     `json:"url"`
 	DisplayUrl           string                     `json:"display_url"`
 	Display              string                     `json:"display"`
 	Name                 string                     `json:"name"`
 	Device               BriefDevice                `json:"device"`
-	Identifier           NullableInt32              `json:"identifier,omitempty"`
+	Identifier           NullableInt64              `json:"identifier,omitempty"`
 	Tenant               NullableBriefTenant        `json:"tenant,omitempty"`
 	PrimaryIp            NullableBriefIPAddress     `json:"primary_ip"`
 	PrimaryIp4           NullableBriefIPAddress     `json:"primary_ip4,omitempty"`
@@ -49,7 +49,7 @@ type _VirtualDeviceContext VirtualDeviceContext
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVirtualDeviceContext(id int32, url string, displayUrl string, display string, name string, device BriefDevice, primaryIp NullableBriefIPAddress, status VirtualDeviceContextStatus, created NullableTime, lastUpdated NullableTime, interfaceCount int64) *VirtualDeviceContext {
+func NewVirtualDeviceContext(id int64, url string, displayUrl string, display string, name string, device BriefDevice, primaryIp NullableBriefIPAddress, status VirtualDeviceContextStatus, created NullableTime, lastUpdated NullableTime, interfaceCount int64) *VirtualDeviceContext {
 	this := VirtualDeviceContext{}
 	this.Id = id
 	this.Url = url
@@ -74,9 +74,9 @@ func NewVirtualDeviceContextWithDefaults() *VirtualDeviceContext {
 }
 
 // GetId returns the Id field value
-func (o *VirtualDeviceContext) GetId() int32 {
+func (o *VirtualDeviceContext) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -85,7 +85,7 @@ func (o *VirtualDeviceContext) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *VirtualDeviceContext) GetIdOk() (*int32, bool) {
+func (o *VirtualDeviceContext) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -93,7 +93,7 @@ func (o *VirtualDeviceContext) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *VirtualDeviceContext) SetId(v int32) {
+func (o *VirtualDeviceContext) SetId(v int64) {
 	o.Id = v
 }
 
@@ -218,9 +218,9 @@ func (o *VirtualDeviceContext) SetDevice(v BriefDevice) {
 }
 
 // GetIdentifier returns the Identifier field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *VirtualDeviceContext) GetIdentifier() int32 {
+func (o *VirtualDeviceContext) GetIdentifier() int64 {
 	if o == nil || IsNil(o.Identifier.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Identifier.Get()
@@ -229,7 +229,7 @@ func (o *VirtualDeviceContext) GetIdentifier() int32 {
 // GetIdentifierOk returns a tuple with the Identifier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *VirtualDeviceContext) GetIdentifierOk() (*int32, bool) {
+func (o *VirtualDeviceContext) GetIdentifierOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -245,8 +245,8 @@ func (o *VirtualDeviceContext) HasIdentifier() bool {
 	return false
 }
 
-// SetIdentifier gets a reference to the given NullableInt32 and assigns it to the Identifier field.
-func (o *VirtualDeviceContext) SetIdentifier(v int32) {
+// SetIdentifier gets a reference to the given NullableInt64 and assigns it to the Identifier field.
+func (o *VirtualDeviceContext) SetIdentifier(v int64) {
 	o.Identifier.Set(&v)
 }
 

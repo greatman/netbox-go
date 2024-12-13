@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
-**Depth** | **int32** |  | [readonly] 
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewNestedLocation
 
-`func NewNestedLocation(id int32, url string, displayUrl string, display string, name string, slug string, depth int32, ) *NestedLocation`
+`func NewNestedLocation(id int64, url string, displayUrl string, display string, name string, slug string, depth int64, ) *NestedLocation`
 
 NewNestedLocation instantiates a new NestedLocation object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedLocation) GetId() int32`
+`func (o *NestedLocation) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedLocation) GetIdOk() (*int32, bool)`
+`func (o *NestedLocation) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedLocation) SetId(v int32)`
+`func (o *NestedLocation) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -153,20 +153,20 @@ SetSlug sets Slug field to given value.
 
 ### GetDepth
 
-`func (o *NestedLocation) GetDepth() int32`
+`func (o *NestedLocation) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *NestedLocation) GetDepthOk() (*int32, bool)`
+`func (o *NestedLocation) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *NestedLocation) SetDepth(v int32)`
+`func (o *NestedLocation) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

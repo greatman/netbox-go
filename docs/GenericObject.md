@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | **string** |  | 
-**ObjectId** | **int32** |  | 
+**ObjectId** | **int64** |  | 
 **Object** | **interface{}** |  | [readonly] 
 
 ## Methods
 
 ### NewGenericObject
 
-`func NewGenericObject(objectType string, objectId int32, object interface{}, ) *GenericObject`
+`func NewGenericObject(objectType string, objectId int64, object interface{}, ) *GenericObject`
 
 NewGenericObject instantiates a new GenericObject object
 This constructor will assign default values to properties that have it defined,
@@ -49,20 +49,20 @@ SetObjectType sets ObjectType field to given value.
 
 ### GetObjectId
 
-`func (o *GenericObject) GetObjectId() int32`
+`func (o *GenericObject) GetObjectId() int64`
 
 GetObjectId returns the ObjectId field if non-nil, zero value otherwise.
 
 ### GetObjectIdOk
 
-`func (o *GenericObject) GetObjectIdOk() (*int32, bool)`
+`func (o *GenericObject) GetObjectIdOk() (*int64, bool)`
 
 GetObjectIdOk returns a tuple with the ObjectId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetObjectId
 
-`func (o *GenericObject) SetObjectId(v int32)`
+`func (o *GenericObject) SetObjectId(v int64)`
 
 SetObjectId sets ObjectId field to given value.
 

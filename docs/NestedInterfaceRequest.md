@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
-**Cable** | Pointer to **NullableInt32** |  | [optional] 
+**Cable** | Pointer to **NullableInt64** |  | [optional] 
 
 ## Methods
 
@@ -48,20 +48,20 @@ SetName sets Name field to given value.
 
 ### GetCable
 
-`func (o *NestedInterfaceRequest) GetCable() int32`
+`func (o *NestedInterfaceRequest) GetCable() int64`
 
 GetCable returns the Cable field if non-nil, zero value otherwise.
 
 ### GetCableOk
 
-`func (o *NestedInterfaceRequest) GetCableOk() (*int32, bool)`
+`func (o *NestedInterfaceRequest) GetCableOk() (*int64, bool)`
 
 GetCableOk returns a tuple with the Cable field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCable
 
-`func (o *NestedInterfaceRequest) SetCable(v int32)`
+`func (o *NestedInterfaceRequest) SetCable(v int64)`
 
 SetCable sets Cable field to given value.
 

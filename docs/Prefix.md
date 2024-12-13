@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Prefix** | **string** |  | 
 **Vrf** | Pointer to [**NullableBriefVRF**](BriefVRF.md) |  | [optional] 
 **ScopeType** | Pointer to **NullableString** |  | [optional] 
-**ScopeId** | Pointer to **NullableInt32** |  | [optional] 
+**ScopeId** | Pointer to **NullableInt64** |  | [optional] 
 **Scope** | **interface{}** |  | [readonly] 
 **Tenant** | Pointer to [**NullableBriefTenant**](BriefTenant.md) |  | [optional] 
 **Vlan** | Pointer to [**NullableBriefVLAN**](BriefVLAN.md) |  | [optional] 
@@ -26,14 +26,14 @@ Name | Type | Description | Notes
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
-**Children** | **int32** |  | [readonly] 
-**Depth** | **int32** |  | [readonly] 
+**Children** | **int64** |  | [readonly] 
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewPrefix
 
-`func NewPrefix(id int32, url string, displayUrl string, display string, family AggregateFamily, prefix string, scope interface{}, created NullableTime, lastUpdated NullableTime, children int32, depth int32, ) *Prefix`
+`func NewPrefix(id int64, url string, displayUrl string, display string, family AggregateFamily, prefix string, scope interface{}, created NullableTime, lastUpdated NullableTime, children int64, depth int64, ) *Prefix`
 
 NewPrefix instantiates a new Prefix object
 This constructor will assign default values to properties that have it defined,
@@ -50,20 +50,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Prefix) GetId() int32`
+`func (o *Prefix) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Prefix) GetIdOk() (*int32, bool)`
+`func (o *Prefix) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Prefix) SetId(v int32)`
+`func (o *Prefix) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -240,20 +240,20 @@ HasScopeType returns a boolean if a field has been set.
 UnsetScopeType ensures that no value is present for ScopeType, not even an explicit nil
 ### GetScopeId
 
-`func (o *Prefix) GetScopeId() int32`
+`func (o *Prefix) GetScopeId() int64`
 
 GetScopeId returns the ScopeId field if non-nil, zero value otherwise.
 
 ### GetScopeIdOk
 
-`func (o *Prefix) GetScopeIdOk() (*int32, bool)`
+`func (o *Prefix) GetScopeIdOk() (*int64, bool)`
 
 GetScopeIdOk returns a tuple with the ScopeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopeId
 
-`func (o *Prefix) SetScopeId(v int32)`
+`func (o *Prefix) SetScopeId(v int64)`
 
 SetScopeId sets ScopeId field to given value.
 
@@ -645,40 +645,40 @@ SetLastUpdated sets LastUpdated field to given value.
 UnsetLastUpdated ensures that no value is present for LastUpdated, not even an explicit nil
 ### GetChildren
 
-`func (o *Prefix) GetChildren() int32`
+`func (o *Prefix) GetChildren() int64`
 
 GetChildren returns the Children field if non-nil, zero value otherwise.
 
 ### GetChildrenOk
 
-`func (o *Prefix) GetChildrenOk() (*int32, bool)`
+`func (o *Prefix) GetChildrenOk() (*int64, bool)`
 
 GetChildrenOk returns a tuple with the Children field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetChildren
 
-`func (o *Prefix) SetChildren(v int32)`
+`func (o *Prefix) SetChildren(v int64)`
 
 SetChildren sets Children field to given value.
 
 
 ### GetDepth
 
-`func (o *Prefix) GetDepth() int32`
+`func (o *Prefix) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *Prefix) GetDepthOk() (*int32, bool)`
+`func (o *Prefix) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *Prefix) SetDepth(v int32)`
+`func (o *Prefix) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

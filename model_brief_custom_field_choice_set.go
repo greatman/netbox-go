@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefCustomFieldChoiceSet{}
 
 // BriefCustomFieldChoiceSet Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type BriefCustomFieldChoiceSet struct {
-	Id                   int32   `json:"id"`
+	Id                   int64   `json:"id"`
 	Url                  string  `json:"url"`
 	Display              string  `json:"display"`
 	Name                 string  `json:"name"`
@@ -35,7 +35,7 @@ type _BriefCustomFieldChoiceSet BriefCustomFieldChoiceSet
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefCustomFieldChoiceSet(id int32, url string, display string, name string, choicesCount string) *BriefCustomFieldChoiceSet {
+func NewBriefCustomFieldChoiceSet(id int64, url string, display string, name string, choicesCount string) *BriefCustomFieldChoiceSet {
 	this := BriefCustomFieldChoiceSet{}
 	this.Id = id
 	this.Url = url
@@ -54,9 +54,9 @@ func NewBriefCustomFieldChoiceSetWithDefaults() *BriefCustomFieldChoiceSet {
 }
 
 // GetId returns the Id field value
-func (o *BriefCustomFieldChoiceSet) GetId() int32 {
+func (o *BriefCustomFieldChoiceSet) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -65,7 +65,7 @@ func (o *BriefCustomFieldChoiceSet) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefCustomFieldChoiceSet) GetIdOk() (*int32, bool) {
+func (o *BriefCustomFieldChoiceSet) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -73,7 +73,7 @@ func (o *BriefCustomFieldChoiceSet) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefCustomFieldChoiceSet) SetId(v int32) {
+func (o *BriefCustomFieldChoiceSet) SetId(v int64) {
 	o.Id = v
 }
 

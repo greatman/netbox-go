@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **EncryptionAlgorithm** | [**IKEProposalEncryptionAlgorithm**](IKEProposalEncryptionAlgorithm.md) |  | 
 **AuthenticationAlgorithm** | Pointer to [**IKEProposalAuthenticationAlgorithm**](IKEProposalAuthenticationAlgorithm.md) |  | [optional] 
 **Group** | [**IKEProposalGroup**](IKEProposalGroup.md) |  | 
-**SaLifetime** | Pointer to **NullableInt32** | Security association lifetime (in seconds) | [optional] 
+**SaLifetime** | Pointer to **NullableInt64** | Security association lifetime (in seconds) | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTag**](NestedTag.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 ### NewIKEProposal
 
-`func NewIKEProposal(id int32, url string, displayUrl string, display string, name string, authenticationMethod IKEProposalAuthenticationMethod, encryptionAlgorithm IKEProposalEncryptionAlgorithm, group IKEProposalGroup, created NullableTime, lastUpdated NullableTime, ) *IKEProposal`
+`func NewIKEProposal(id int64, url string, displayUrl string, display string, name string, authenticationMethod IKEProposalAuthenticationMethod, encryptionAlgorithm IKEProposalEncryptionAlgorithm, group IKEProposalGroup, created NullableTime, lastUpdated NullableTime, ) *IKEProposal`
 
 NewIKEProposal instantiates a new IKEProposal object
 This constructor will assign default values to properties that have it defined,
@@ -42,20 +42,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *IKEProposal) GetId() int32`
+`func (o *IKEProposal) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *IKEProposal) GetIdOk() (*int32, bool)`
+`func (o *IKEProposal) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *IKEProposal) SetId(v int32)`
+`func (o *IKEProposal) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -252,20 +252,20 @@ SetGroup sets Group field to given value.
 
 ### GetSaLifetime
 
-`func (o *IKEProposal) GetSaLifetime() int32`
+`func (o *IKEProposal) GetSaLifetime() int64`
 
 GetSaLifetime returns the SaLifetime field if non-nil, zero value otherwise.
 
 ### GetSaLifetimeOk
 
-`func (o *IKEProposal) GetSaLifetimeOk() (*int32, bool)`
+`func (o *IKEProposal) GetSaLifetimeOk() (*int64, bool)`
 
 GetSaLifetimeOk returns a tuple with the SaLifetime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSaLifetime
 
-`func (o *IKEProposal) SetSaLifetime(v int32)`
+`func (o *IKEProposal) SetSaLifetime(v int64)`
 
 SetSaLifetime sets SaLifetime field to given value.
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Status** | Pointer to [**ClusterStatusValue**](ClusterStatusValue.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **ScopeType** | Pointer to **NullableString** |  | [optional] 
-**ScopeId** | Pointer to **NullableInt32** |  | [optional] 
+**ScopeId** | Pointer to **NullableInt64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -207,20 +207,20 @@ HasScopeType returns a boolean if a field has been set.
 UnsetScopeType ensures that no value is present for ScopeType, not even an explicit nil
 ### GetScopeId
 
-`func (o *WritableClusterRequest) GetScopeId() int32`
+`func (o *WritableClusterRequest) GetScopeId() int64`
 
 GetScopeId returns the ScopeId field if non-nil, zero value otherwise.
 
 ### GetScopeIdOk
 
-`func (o *WritableClusterRequest) GetScopeIdOk() (*int32, bool)`
+`func (o *WritableClusterRequest) GetScopeIdOk() (*int64, bool)`
 
 GetScopeIdOk returns a tuple with the ScopeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopeId
 
-`func (o *WritableClusterRequest) SetScopeId(v int32)`
+`func (o *WritableClusterRequest) SetScopeId(v int64)`
 
 SetScopeId sets ScopeId field to given value.
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **VirtualMachine** | [**BriefVirtualMachine**](BriefVirtualMachine.md) |  | 
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**Size** | **int32** |  | 
+**Size** | **int64** |  | 
 **Tags** | Pointer to [**[]NestedTag**](NestedTag.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewVirtualDisk
 
-`func NewVirtualDisk(id int32, url string, displayUrl string, display string, virtualMachine BriefVirtualMachine, name string, size int32, created NullableTime, lastUpdated NullableTime, ) *VirtualDisk`
+`func NewVirtualDisk(id int64, url string, displayUrl string, display string, virtualMachine BriefVirtualMachine, name string, size int64, created NullableTime, lastUpdated NullableTime, ) *VirtualDisk`
 
 NewVirtualDisk instantiates a new VirtualDisk object
 This constructor will assign default values to properties that have it defined,
@@ -38,20 +38,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *VirtualDisk) GetId() int32`
+`func (o *VirtualDisk) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *VirtualDisk) GetIdOk() (*int32, bool)`
+`func (o *VirtualDisk) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *VirtualDisk) SetId(v int32)`
+`func (o *VirtualDisk) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -183,20 +183,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetSize
 
-`func (o *VirtualDisk) GetSize() int32`
+`func (o *VirtualDisk) GetSize() int64`
 
 GetSize returns the Size field if non-nil, zero value otherwise.
 
 ### GetSizeOk
 
-`func (o *VirtualDisk) GetSizeOk() (*int32, bool)`
+`func (o *VirtualDisk) GetSizeOk() (*int64, bool)`
 
 GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSize
 
-`func (o *VirtualDisk) SetSize(v int32)`
+`func (o *VirtualDisk) SetSize(v int64)`
 
 SetSize sets Size field to given value.
 

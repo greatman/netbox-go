@@ -21,7 +21,7 @@ var _ MappedNullable = &BriefVLANRequest{}
 // BriefVLANRequest Adds support for custom fields and tags.
 type BriefVLANRequest struct {
 	// Numeric VLAN ID (1-4094)
-	Vid                  int32   `json:"vid"`
+	Vid                  int64   `json:"vid"`
 	Name                 string  `json:"name"`
 	Description          *string `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -33,7 +33,7 @@ type _BriefVLANRequest BriefVLANRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefVLANRequest(vid int32, name string) *BriefVLANRequest {
+func NewBriefVLANRequest(vid int64, name string) *BriefVLANRequest {
 	this := BriefVLANRequest{}
 	this.Vid = vid
 	this.Name = name
@@ -49,9 +49,9 @@ func NewBriefVLANRequestWithDefaults() *BriefVLANRequest {
 }
 
 // GetVid returns the Vid field value
-func (o *BriefVLANRequest) GetVid() int32 {
+func (o *BriefVLANRequest) GetVid() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *BriefVLANRequest) GetVid() int32 {
 
 // GetVidOk returns a tuple with the Vid field value
 // and a boolean to check if the value has been set.
-func (o *BriefVLANRequest) GetVidOk() (*int32, bool) {
+func (o *BriefVLANRequest) GetVidOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *BriefVLANRequest) GetVidOk() (*int32, bool) {
 }
 
 // SetVid sets field value
-func (o *BriefVLANRequest) SetVid(v int32) {
+func (o *BriefVLANRequest) SetVid(v int64) {
 	o.Vid = v
 }
 

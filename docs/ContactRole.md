@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 
 ### NewContactRole
 
-`func NewContactRole(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, ) *ContactRole`
+`func NewContactRole(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, ) *ContactRole`
 
 NewContactRole instantiates a new ContactRole object
 This constructor will assign default values to properties that have it defined,
@@ -37,20 +37,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ContactRole) GetId() int32`
+`func (o *ContactRole) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ContactRole) GetIdOk() (*int32, bool)`
+`func (o *ContactRole) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ContactRole) SetId(v int32)`
+`func (o *ContactRole) SetId(v int64)`
 
 SetId sets Id field to given value.
 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **InstallDate** | Pointer to **NullableString** |  | [optional] 
 **TerminationDate** | Pointer to **NullableString** |  | [optional] 
-**CommitRate** | Pointer to **NullableInt32** | Committed rate | [optional] 
+**CommitRate** | Pointer to **NullableInt64** | Committed rate | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Distance** | Pointer to **NullableFloat64** |  | [optional] 
 **DistanceUnit** | Pointer to [**NullableCircuitRequestDistanceUnit**](CircuitRequestDistanceUnit.md) |  | [optional] 
@@ -267,20 +267,20 @@ HasTerminationDate returns a boolean if a field has been set.
 UnsetTerminationDate ensures that no value is present for TerminationDate, not even an explicit nil
 ### GetCommitRate
 
-`func (o *WritableCircuitRequest) GetCommitRate() int32`
+`func (o *WritableCircuitRequest) GetCommitRate() int64`
 
 GetCommitRate returns the CommitRate field if non-nil, zero value otherwise.
 
 ### GetCommitRateOk
 
-`func (o *WritableCircuitRequest) GetCommitRateOk() (*int32, bool)`
+`func (o *WritableCircuitRequest) GetCommitRateOk() (*int64, bool)`
 
 GetCommitRateOk returns a tuple with the CommitRate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCommitRate
 
-`func (o *WritableCircuitRequest) SetCommitRate(v int32)`
+`func (o *WritableCircuitRequest) SetCommitRate(v int64)`
 
 SetCommitRate sets CommitRate field to given value.
 

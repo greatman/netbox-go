@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**ContactCount** | **int32** |  | [readonly] [default to 0]
-**Depth** | **int32** |  | [readonly] 
+**ContactCount** | **int64** |  | [readonly] [default to 0]
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewBriefContactGroup
 
-`func NewBriefContactGroup(id int32, url string, display string, name string, slug string, contactCount int32, depth int32, ) *BriefContactGroup`
+`func NewBriefContactGroup(id int64, url string, display string, name string, slug string, contactCount int64, depth int64, ) *BriefContactGroup`
 
 NewBriefContactGroup instantiates a new BriefContactGroup object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefContactGroup) GetId() int32`
+`func (o *BriefContactGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefContactGroup) GetIdOk() (*int32, bool)`
+`func (o *BriefContactGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefContactGroup) SetId(v int32)`
+`func (o *BriefContactGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -159,40 +159,40 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetContactCount
 
-`func (o *BriefContactGroup) GetContactCount() int32`
+`func (o *BriefContactGroup) GetContactCount() int64`
 
 GetContactCount returns the ContactCount field if non-nil, zero value otherwise.
 
 ### GetContactCountOk
 
-`func (o *BriefContactGroup) GetContactCountOk() (*int32, bool)`
+`func (o *BriefContactGroup) GetContactCountOk() (*int64, bool)`
 
 GetContactCountOk returns a tuple with the ContactCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetContactCount
 
-`func (o *BriefContactGroup) SetContactCount(v int32)`
+`func (o *BriefContactGroup) SetContactCount(v int64)`
 
 SetContactCount sets ContactCount field to given value.
 
 
 ### GetDepth
 
-`func (o *BriefContactGroup) GetDepth() int32`
+`func (o *BriefContactGroup) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *BriefContactGroup) GetDepthOk() (*int32, bool)`
+`func (o *BriefContactGroup) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *BriefContactGroup) SetDepth(v int32)`
+`func (o *BriefContactGroup) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

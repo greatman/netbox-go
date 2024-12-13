@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewIPSecProfile
 
-`func NewIPSecProfile(id int32, url string, displayUrl string, display string, name string, mode IPSecProfileMode, ikePolicy BriefIKEPolicy, ipsecPolicy BriefIPSecPolicy, created NullableTime, lastUpdated NullableTime, ) *IPSecProfile`
+`func NewIPSecProfile(id int64, url string, displayUrl string, display string, name string, mode IPSecProfileMode, ikePolicy BriefIKEPolicy, ipsecPolicy BriefIPSecPolicy, created NullableTime, lastUpdated NullableTime, ) *IPSecProfile`
 
 NewIPSecProfile instantiates a new IPSecProfile object
 This constructor will assign default values to properties that have it defined,
@@ -40,20 +40,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *IPSecProfile) GetId() int32`
+`func (o *IPSecProfile) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *IPSecProfile) GetIdOk() (*int32, bool)`
+`func (o *IPSecProfile) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *IPSecProfile) SetId(v int32)`
+`func (o *IPSecProfile) SetId(v int64)`
 
 SetId sets Id field to given value.
 

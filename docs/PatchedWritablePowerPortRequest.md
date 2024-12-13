@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** |  | [optional] 
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Type** | Pointer to [**NullablePatchedWritablePowerPortRequestType**](PatchedWritablePowerPortRequestType.md) |  | [optional] 
-**MaximumDraw** | Pointer to **NullableInt32** | Maximum power draw (watts) | [optional] 
-**AllocatedDraw** | Pointer to **NullableInt32** | Allocated power draw (watts) | [optional] 
+**MaximumDraw** | Pointer to **NullableInt64** | Maximum power draw (watts) | [optional] 
+**AllocatedDraw** | Pointer to **NullableInt64** | Allocated power draw (watts) | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -182,20 +182,20 @@ HasType returns a boolean if a field has been set.
 UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetMaximumDraw
 
-`func (o *PatchedWritablePowerPortRequest) GetMaximumDraw() int32`
+`func (o *PatchedWritablePowerPortRequest) GetMaximumDraw() int64`
 
 GetMaximumDraw returns the MaximumDraw field if non-nil, zero value otherwise.
 
 ### GetMaximumDrawOk
 
-`func (o *PatchedWritablePowerPortRequest) GetMaximumDrawOk() (*int32, bool)`
+`func (o *PatchedWritablePowerPortRequest) GetMaximumDrawOk() (*int64, bool)`
 
 GetMaximumDrawOk returns a tuple with the MaximumDraw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaximumDraw
 
-`func (o *PatchedWritablePowerPortRequest) SetMaximumDraw(v int32)`
+`func (o *PatchedWritablePowerPortRequest) SetMaximumDraw(v int64)`
 
 SetMaximumDraw sets MaximumDraw field to given value.
 
@@ -217,20 +217,20 @@ HasMaximumDraw returns a boolean if a field has been set.
 UnsetMaximumDraw ensures that no value is present for MaximumDraw, not even an explicit nil
 ### GetAllocatedDraw
 
-`func (o *PatchedWritablePowerPortRequest) GetAllocatedDraw() int32`
+`func (o *PatchedWritablePowerPortRequest) GetAllocatedDraw() int64`
 
 GetAllocatedDraw returns the AllocatedDraw field if non-nil, zero value otherwise.
 
 ### GetAllocatedDrawOk
 
-`func (o *PatchedWritablePowerPortRequest) GetAllocatedDrawOk() (*int32, bool)`
+`func (o *PatchedWritablePowerPortRequest) GetAllocatedDrawOk() (*int64, bool)`
 
 GetAllocatedDrawOk returns a tuple with the AllocatedDraw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedDraw
 
-`func (o *PatchedWritablePowerPortRequest) SetAllocatedDraw(v int32)`
+`func (o *PatchedWritablePowerPortRequest) SetAllocatedDraw(v int64)`
 
 SetAllocatedDraw sets AllocatedDraw field to given value.
 

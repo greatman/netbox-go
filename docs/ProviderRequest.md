@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | Full name of the provider | 
 **Slug** | **string** |  | 
-**Accounts** | Pointer to **[]int32** |  | [optional] 
+**Accounts** | Pointer to **[]int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
-**Asns** | Pointer to **[]int32** |  | [optional] 
+**Asns** | Pointer to **[]int64** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
 
@@ -74,20 +74,20 @@ SetSlug sets Slug field to given value.
 
 ### GetAccounts
 
-`func (o *ProviderRequest) GetAccounts() []int32`
+`func (o *ProviderRequest) GetAccounts() []int64`
 
 GetAccounts returns the Accounts field if non-nil, zero value otherwise.
 
 ### GetAccountsOk
 
-`func (o *ProviderRequest) GetAccountsOk() (*[]int32, bool)`
+`func (o *ProviderRequest) GetAccountsOk() (*[]int64, bool)`
 
 GetAccountsOk returns a tuple with the Accounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAccounts
 
-`func (o *ProviderRequest) SetAccounts(v []int32)`
+`func (o *ProviderRequest) SetAccounts(v []int64)`
 
 SetAccounts sets Accounts field to given value.
 
@@ -149,20 +149,20 @@ HasComments returns a boolean if a field has been set.
 
 ### GetAsns
 
-`func (o *ProviderRequest) GetAsns() []int32`
+`func (o *ProviderRequest) GetAsns() []int64`
 
 GetAsns returns the Asns field if non-nil, zero value otherwise.
 
 ### GetAsnsOk
 
-`func (o *ProviderRequest) GetAsnsOk() (*[]int32, bool)`
+`func (o *ProviderRequest) GetAsnsOk() (*[]int64, bool)`
 
 GetAsnsOk returns a tuple with the Asns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAsns
 
-`func (o *ProviderRequest) SetAsns(v []int32)`
+`func (o *ProviderRequest) SetAsns(v []int64)`
 
 SetAsns sets Asns field to given value.
 

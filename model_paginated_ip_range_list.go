@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedIPRangeList{}
 
 // PaginatedIPRangeList struct for PaginatedIPRangeList
 type PaginatedIPRangeList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []IPRange      `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedIPRangeList PaginatedIPRangeList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedIPRangeList(count int32, results []IPRange) *PaginatedIPRangeList {
+func NewPaginatedIPRangeList(count int64, results []IPRange) *PaginatedIPRangeList {
 	this := PaginatedIPRangeList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedIPRangeListWithDefaults() *PaginatedIPRangeList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedIPRangeList) GetCount() int32 {
+func (o *PaginatedIPRangeList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedIPRangeList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedIPRangeList) GetCountOk() (*int32, bool) {
+func (o *PaginatedIPRangeList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedIPRangeList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedIPRangeList) SetCount(v int32) {
+func (o *PaginatedIPRangeList) SetCount(v int64) {
 	o.Count = v
 }
 

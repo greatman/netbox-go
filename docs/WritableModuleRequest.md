@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Device** | [**BriefDeviceRequest**](BriefDeviceRequest.md) |  | 
-**ModuleBay** | **int32** |  | 
+**ModuleBay** | **int64** |  | 
 **ModuleType** | [**BriefModuleTypeRequest**](BriefModuleTypeRequest.md) |  | 
 **Status** | Pointer to [**InventoryItemStatusValue**](InventoryItemStatusValue.md) |  | [optional] 
 **Serial** | Pointer to **string** |  | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewWritableModuleRequest
 
-`func NewWritableModuleRequest(device BriefDeviceRequest, moduleBay int32, moduleType BriefModuleTypeRequest, ) *WritableModuleRequest`
+`func NewWritableModuleRequest(device BriefDeviceRequest, moduleBay int64, moduleType BriefModuleTypeRequest, ) *WritableModuleRequest`
 
 NewWritableModuleRequest instantiates a new WritableModuleRequest object
 This constructor will assign default values to properties that have it defined,
@@ -56,20 +56,20 @@ SetDevice sets Device field to given value.
 
 ### GetModuleBay
 
-`func (o *WritableModuleRequest) GetModuleBay() int32`
+`func (o *WritableModuleRequest) GetModuleBay() int64`
 
 GetModuleBay returns the ModuleBay field if non-nil, zero value otherwise.
 
 ### GetModuleBayOk
 
-`func (o *WritableModuleRequest) GetModuleBayOk() (*int32, bool)`
+`func (o *WritableModuleRequest) GetModuleBayOk() (*int64, bool)`
 
 GetModuleBayOk returns a tuple with the ModuleBay field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetModuleBay
 
-`func (o *WritableModuleRequest) SetModuleBay(v int32)`
+`func (o *WritableModuleRequest) SetModuleBay(v int64)`
 
 SetModuleBay sets ModuleBay field to given value.
 

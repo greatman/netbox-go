@@ -21,7 +21,7 @@ var _ MappedNullable = &RackReservationRequest{}
 // RackReservationRequest Adds support for custom fields and tags.
 type RackReservationRequest struct {
 	Rack                 BriefRackRequest           `json:"rack"`
-	Units                []int32                    `json:"units"`
+	Units                []int64                    `json:"units"`
 	User                 BriefUserRequest           `json:"user"`
 	Tenant               NullableBriefTenantRequest `json:"tenant,omitempty"`
 	Description          string                     `json:"description"`
@@ -37,7 +37,7 @@ type _RackReservationRequest RackReservationRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRackReservationRequest(rack BriefRackRequest, units []int32, user BriefUserRequest, description string) *RackReservationRequest {
+func NewRackReservationRequest(rack BriefRackRequest, units []int64, user BriefUserRequest, description string) *RackReservationRequest {
 	this := RackReservationRequest{}
 	this.Rack = rack
 	this.Units = units
@@ -79,9 +79,9 @@ func (o *RackReservationRequest) SetRack(v BriefRackRequest) {
 }
 
 // GetUnits returns the Units field value
-func (o *RackReservationRequest) GetUnits() []int32 {
+func (o *RackReservationRequest) GetUnits() []int64 {
 	if o == nil {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 
@@ -90,7 +90,7 @@ func (o *RackReservationRequest) GetUnits() []int32 {
 
 // GetUnitsOk returns a tuple with the Units field value
 // and a boolean to check if the value has been set.
-func (o *RackReservationRequest) GetUnitsOk() ([]int32, bool) {
+func (o *RackReservationRequest) GetUnitsOk() ([]int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -98,7 +98,7 @@ func (o *RackReservationRequest) GetUnitsOk() ([]int32, bool) {
 }
 
 // SetUnits sets field value
-func (o *RackReservationRequest) SetUnits(v []int32) {
+func (o *RackReservationRequest) SetUnits(v []int64) {
 	o.Units = v
 }
 

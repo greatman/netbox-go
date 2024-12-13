@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedL2VPNTerminationList{}
 
 // PaginatedL2VPNTerminationList struct for PaginatedL2VPNTerminationList
 type PaginatedL2VPNTerminationList struct {
-	Count                int32              `json:"count"`
+	Count                int64              `json:"count"`
 	Next                 NullableString     `json:"next,omitempty"`
 	Previous             NullableString     `json:"previous,omitempty"`
 	Results              []L2VPNTermination `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedL2VPNTerminationList PaginatedL2VPNTerminationList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedL2VPNTerminationList(count int32, results []L2VPNTermination) *PaginatedL2VPNTerminationList {
+func NewPaginatedL2VPNTerminationList(count int64, results []L2VPNTermination) *PaginatedL2VPNTerminationList {
 	this := PaginatedL2VPNTerminationList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedL2VPNTerminationListWithDefaults() *PaginatedL2VPNTerminationLi
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedL2VPNTerminationList) GetCount() int32 {
+func (o *PaginatedL2VPNTerminationList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedL2VPNTerminationList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedL2VPNTerminationList) GetCountOk() (*int32, bool) {
+func (o *PaginatedL2VPNTerminationList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedL2VPNTerminationList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedL2VPNTerminationList) SetCount(v int32) {
+func (o *PaginatedL2VPNTerminationList) SetCount(v int64) {
 	o.Count = v
 }
 

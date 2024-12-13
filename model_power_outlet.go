@@ -21,7 +21,7 @@ var _ MappedNullable = &PowerOutlet{}
 
 // PowerOutlet Adds support for custom fields and tags.
 type PowerOutlet struct {
-	Id         int32               `json:"id"`
+	Id         int64               `json:"id"`
 	Url        string              `json:"url"`
 	DisplayUrl string              `json:"display_url"`
 	Display    string              `json:"display"`
@@ -59,7 +59,7 @@ type _PowerOutlet PowerOutlet
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPowerOutlet(id int32, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool) *PowerOutlet {
+func NewPowerOutlet(id int64, url string, displayUrl string, display string, device BriefDevice, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool) *PowerOutlet {
 	this := PowerOutlet{}
 	this.Id = id
 	this.Url = url
@@ -89,9 +89,9 @@ func NewPowerOutletWithDefaults() *PowerOutlet {
 }
 
 // GetId returns the Id field value
-func (o *PowerOutlet) GetId() int32 {
+func (o *PowerOutlet) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -100,7 +100,7 @@ func (o *PowerOutlet) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PowerOutlet) GetIdOk() (*int32, bool) {
+func (o *PowerOutlet) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -108,7 +108,7 @@ func (o *PowerOutlet) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *PowerOutlet) SetId(v int32) {
+func (o *PowerOutlet) SetId(v int64) {
 	o.Id = v
 }
 

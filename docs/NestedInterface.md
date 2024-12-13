@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Device** | [**NestedDevice**](NestedDevice.md) |  | [readonly] 
 **Name** | **string** |  | 
-**Cable** | Pointer to **NullableInt32** |  | [optional] 
+**Cable** | Pointer to **NullableInt64** |  | [optional] 
 **Occupied** | **bool** |  | [readonly] 
 
 ## Methods
 
 ### NewNestedInterface
 
-`func NewNestedInterface(id int32, url string, displayUrl string, display string, device NestedDevice, name string, occupied bool, ) *NestedInterface`
+`func NewNestedInterface(id int64, url string, displayUrl string, display string, device NestedDevice, name string, occupied bool, ) *NestedInterface`
 
 NewNestedInterface instantiates a new NestedInterface object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NestedInterface) GetId() int32`
+`func (o *NestedInterface) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NestedInterface) GetIdOk() (*int32, bool)`
+`func (o *NestedInterface) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NestedInterface) SetId(v int32)`
+`func (o *NestedInterface) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -154,20 +154,20 @@ SetName sets Name field to given value.
 
 ### GetCable
 
-`func (o *NestedInterface) GetCable() int32`
+`func (o *NestedInterface) GetCable() int64`
 
 GetCable returns the Cable field if non-nil, zero value otherwise.
 
 ### GetCableOk
 
-`func (o *NestedInterface) GetCableOk() (*int32, bool)`
+`func (o *NestedInterface) GetCableOk() (*int64, bool)`
 
 GetCableOk returns a tuple with the Cable field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCable
 
-`func (o *NestedInterface) SetCable(v int32)`
+`func (o *NestedInterface) SetCable(v int64)`
 
 SetCable sets Cable field to given value.
 

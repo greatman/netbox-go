@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | **int32** |  | 
+**Count** | **int64** |  | 
 **Next** | Pointer to **NullableString** |  | [optional] 
 **Previous** | Pointer to **NullableString** |  | [optional] 
 **Results** | [**[]Service**](Service.md) |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewPaginatedServiceList
 
-`func NewPaginatedServiceList(count int32, results []Service, ) *PaginatedServiceList`
+`func NewPaginatedServiceList(count int64, results []Service, ) *PaginatedServiceList`
 
 NewPaginatedServiceList instantiates a new PaginatedServiceList object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCount
 
-`func (o *PaginatedServiceList) GetCount() int32`
+`func (o *PaginatedServiceList) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *PaginatedServiceList) GetCountOk() (*int32, bool)`
+`func (o *PaginatedServiceList) GetCountOk() (*int64, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *PaginatedServiceList) SetCount(v int32)`
+`func (o *PaginatedServiceList) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

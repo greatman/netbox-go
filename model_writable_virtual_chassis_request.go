@@ -22,7 +22,7 @@ var _ MappedNullable = &WritableVirtualChassisRequest{}
 type WritableVirtualChassisRequest struct {
 	Name                 string                 `json:"name"`
 	Domain               *string                `json:"domain,omitempty"`
-	Master               NullableInt32          `json:"master,omitempty"`
+	Master               NullableInt64          `json:"master,omitempty"`
 	Description          *string                `json:"description,omitempty"`
 	Comments             *string                `json:"comments,omitempty"`
 	Tags                 []NestedTagRequest     `json:"tags,omitempty"`
@@ -107,9 +107,9 @@ func (o *WritableVirtualChassisRequest) SetDomain(v string) {
 }
 
 // GetMaster returns the Master field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableVirtualChassisRequest) GetMaster() int32 {
+func (o *WritableVirtualChassisRequest) GetMaster() int64 {
 	if o == nil || IsNil(o.Master.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Master.Get()
@@ -118,7 +118,7 @@ func (o *WritableVirtualChassisRequest) GetMaster() int32 {
 // GetMasterOk returns a tuple with the Master field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableVirtualChassisRequest) GetMasterOk() (*int32, bool) {
+func (o *WritableVirtualChassisRequest) GetMasterOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -134,8 +134,8 @@ func (o *WritableVirtualChassisRequest) HasMaster() bool {
 	return false
 }
 
-// SetMaster gets a reference to the given NullableInt32 and assigns it to the Master field.
-func (o *WritableVirtualChassisRequest) SetMaster(v int32) {
+// SetMaster gets a reference to the given NullableInt64 and assigns it to the Master field.
+func (o *WritableVirtualChassisRequest) SetMaster(v int64) {
 	o.Master.Set(&v)
 }
 

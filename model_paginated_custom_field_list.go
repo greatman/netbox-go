@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedCustomFieldList{}
 
 // PaginatedCustomFieldList struct for PaginatedCustomFieldList
 type PaginatedCustomFieldList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []CustomField  `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedCustomFieldList PaginatedCustomFieldList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedCustomFieldList(count int32, results []CustomField) *PaginatedCustomFieldList {
+func NewPaginatedCustomFieldList(count int64, results []CustomField) *PaginatedCustomFieldList {
 	this := PaginatedCustomFieldList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedCustomFieldListWithDefaults() *PaginatedCustomFieldList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedCustomFieldList) GetCount() int32 {
+func (o *PaginatedCustomFieldList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedCustomFieldList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedCustomFieldList) GetCountOk() (*int32, bool) {
+func (o *PaginatedCustomFieldList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedCustomFieldList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedCustomFieldList) SetCount(v int32) {
+func (o *PaginatedCustomFieldList) SetCount(v int64) {
 	o.Count = v
 }
 

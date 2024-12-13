@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Device** | Pointer to [**BriefDeviceRequest**](BriefDeviceRequest.md) |  | [optional] 
-**ModuleBay** | Pointer to **int32** |  | [optional] 
+**ModuleBay** | Pointer to **int64** |  | [optional] 
 **ModuleType** | Pointer to [**BriefModuleTypeRequest**](BriefModuleTypeRequest.md) |  | [optional] 
 **Status** | Pointer to [**InventoryItemStatusValue**](InventoryItemStatusValue.md) |  | [optional] 
 **Serial** | Pointer to **string** |  | [optional] 
@@ -61,20 +61,20 @@ HasDevice returns a boolean if a field has been set.
 
 ### GetModuleBay
 
-`func (o *PatchedWritableModuleRequest) GetModuleBay() int32`
+`func (o *PatchedWritableModuleRequest) GetModuleBay() int64`
 
 GetModuleBay returns the ModuleBay field if non-nil, zero value otherwise.
 
 ### GetModuleBayOk
 
-`func (o *PatchedWritableModuleRequest) GetModuleBayOk() (*int32, bool)`
+`func (o *PatchedWritableModuleRequest) GetModuleBayOk() (*int64, bool)`
 
 GetModuleBayOk returns a tuple with the ModuleBay field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetModuleBay
 
-`func (o *PatchedWritableModuleRequest) SetModuleBay(v int32)`
+`func (o *PatchedWritableModuleRequest) SetModuleBay(v int64)`
 
 SetModuleBay sets ModuleBay field to given value.
 

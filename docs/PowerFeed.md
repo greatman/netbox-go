@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **Type** | Pointer to [**PowerFeedType**](PowerFeedType.md) |  | [optional] 
 **Supply** | Pointer to [**PowerFeedSupply**](PowerFeedSupply.md) |  | [optional] 
 **Phase** | Pointer to [**PowerFeedPhase**](PowerFeedPhase.md) |  | [optional] 
-**Voltage** | Pointer to **int32** |  | [optional] 
-**Amperage** | Pointer to **int32** |  | [optional] 
-**MaxUtilization** | Pointer to **int32** | Maximum permissible draw (percentage) | [optional] 
+**Voltage** | Pointer to **int64** |  | [optional] 
+**Amperage** | Pointer to **int64** |  | [optional] 
+**MaxUtilization** | Pointer to **int64** | Maximum permissible draw (percentage) | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Cable** | [**NullableBriefCable**](BriefCable.md) |  | [readonly] 
 **CableEnd** | **string** |  | [readonly] 
@@ -39,7 +39,7 @@ Name | Type | Description | Notes
 
 ### NewPowerFeed
 
-`func NewPowerFeed(id int32, url string, displayUrl string, display string, powerPanel BriefPowerPanel, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool, ) *PowerFeed`
+`func NewPowerFeed(id int64, url string, displayUrl string, display string, powerPanel BriefPowerPanel, name string, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, connectedEndpoints []interface{}, connectedEndpointsType NullableString, connectedEndpointsReachable bool, created NullableTime, lastUpdated NullableTime, occupied bool, ) *PowerFeed`
 
 NewPowerFeed instantiates a new PowerFeed object
 This constructor will assign default values to properties that have it defined,
@@ -56,20 +56,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PowerFeed) GetId() int32`
+`func (o *PowerFeed) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PowerFeed) GetIdOk() (*int32, bool)`
+`func (o *PowerFeed) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PowerFeed) SetId(v int32)`
+`func (o *PowerFeed) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -311,20 +311,20 @@ HasPhase returns a boolean if a field has been set.
 
 ### GetVoltage
 
-`func (o *PowerFeed) GetVoltage() int32`
+`func (o *PowerFeed) GetVoltage() int64`
 
 GetVoltage returns the Voltage field if non-nil, zero value otherwise.
 
 ### GetVoltageOk
 
-`func (o *PowerFeed) GetVoltageOk() (*int32, bool)`
+`func (o *PowerFeed) GetVoltageOk() (*int64, bool)`
 
 GetVoltageOk returns a tuple with the Voltage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVoltage
 
-`func (o *PowerFeed) SetVoltage(v int32)`
+`func (o *PowerFeed) SetVoltage(v int64)`
 
 SetVoltage sets Voltage field to given value.
 
@@ -336,20 +336,20 @@ HasVoltage returns a boolean if a field has been set.
 
 ### GetAmperage
 
-`func (o *PowerFeed) GetAmperage() int32`
+`func (o *PowerFeed) GetAmperage() int64`
 
 GetAmperage returns the Amperage field if non-nil, zero value otherwise.
 
 ### GetAmperageOk
 
-`func (o *PowerFeed) GetAmperageOk() (*int32, bool)`
+`func (o *PowerFeed) GetAmperageOk() (*int64, bool)`
 
 GetAmperageOk returns a tuple with the Amperage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAmperage
 
-`func (o *PowerFeed) SetAmperage(v int32)`
+`func (o *PowerFeed) SetAmperage(v int64)`
 
 SetAmperage sets Amperage field to given value.
 
@@ -361,20 +361,20 @@ HasAmperage returns a boolean if a field has been set.
 
 ### GetMaxUtilization
 
-`func (o *PowerFeed) GetMaxUtilization() int32`
+`func (o *PowerFeed) GetMaxUtilization() int64`
 
 GetMaxUtilization returns the MaxUtilization field if non-nil, zero value otherwise.
 
 ### GetMaxUtilizationOk
 
-`func (o *PowerFeed) GetMaxUtilizationOk() (*int32, bool)`
+`func (o *PowerFeed) GetMaxUtilizationOk() (*int64, bool)`
 
 GetMaxUtilizationOk returns a tuple with the MaxUtilization field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaxUtilization
 
-`func (o *PowerFeed) SetMaxUtilization(v int32)`
+`func (o *PowerFeed) SetMaxUtilization(v int64)`
 
 SetMaxUtilization sets MaxUtilization field to given value.
 

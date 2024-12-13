@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Rack** | Pointer to [**BriefRackRequest**](BriefRackRequest.md) |  | [optional] 
-**Units** | Pointer to **[]int32** |  | [optional] 
+**Units** | Pointer to **[]int64** |  | [optional] 
 **User** | Pointer to [**BriefUserRequest**](BriefUserRequest.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenantRequest**](BriefTenantRequest.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -59,20 +59,20 @@ HasRack returns a boolean if a field has been set.
 
 ### GetUnits
 
-`func (o *PatchedRackReservationRequest) GetUnits() []int32`
+`func (o *PatchedRackReservationRequest) GetUnits() []int64`
 
 GetUnits returns the Units field if non-nil, zero value otherwise.
 
 ### GetUnitsOk
 
-`func (o *PatchedRackReservationRequest) GetUnitsOk() (*[]int32, bool)`
+`func (o *PatchedRackReservationRequest) GetUnitsOk() (*[]int64, bool)`
 
 GetUnitsOk returns a tuple with the Units field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUnits
 
-`func (o *PatchedRackReservationRequest) SetUnits(v []int32)`
+`func (o *PatchedRackReservationRequest) SetUnits(v []int64)`
 
 SetUnits sets Units field to given value.
 

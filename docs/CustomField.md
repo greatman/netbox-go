@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -18,14 +18,14 @@ Name | Type | Description | Notes
 **Description** | Pointer to **string** |  | [optional] 
 **Required** | Pointer to **bool** | This field is required when creating new objects or editing an existing object. | [optional] 
 **Unique** | Pointer to **bool** | The value of this field must be unique for the assigned object | [optional] 
-**SearchWeight** | Pointer to **int32** | Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored. | [optional] 
+**SearchWeight** | Pointer to **int64** | Weighting for search. Lower values are considered more important. Fields with a search weight of zero will be ignored. | [optional] 
 **FilterLogic** | Pointer to [**CustomFieldFilterLogic**](CustomFieldFilterLogic.md) |  | [optional] 
 **UiVisible** | Pointer to [**CustomFieldUiVisible**](CustomFieldUiVisible.md) |  | [optional] 
 **UiEditable** | Pointer to [**CustomFieldUiEditable**](CustomFieldUiEditable.md) |  | [optional] 
 **IsCloneable** | Pointer to **bool** | Replicate this value when cloning objects | [optional] 
 **Default** | Pointer to **interface{}** | Default value for the field (must be a JSON value). Encapsulate strings with double quotes (e.g. \&quot;Foo\&quot;). | [optional] 
 **RelatedObjectFilter** | Pointer to **interface{}** | Filter the object selection choices using a query_params dict (must be a JSON value).Encapsulate strings with double quotes (e.g. \&quot;Foo\&quot;). | [optional] 
-**Weight** | Pointer to **int32** | Fields with higher weights appear lower in a form. | [optional] 
+**Weight** | Pointer to **int64** | Fields with higher weights appear lower in a form. | [optional] 
 **ValidationMinimum** | Pointer to **NullableInt64** | Minimum allowed value (for numeric fields) | [optional] 
 **ValidationMaximum** | Pointer to **NullableInt64** | Maximum allowed value (for numeric fields) | [optional] 
 **ValidationRegex** | Pointer to **string** | Regular expression to enforce on text field values. Use ^ and $ to force matching of entire string. For example, &lt;code&gt;^[A-Z]{3}$&lt;/code&gt; will limit values to exactly three uppercase letters. | [optional] 
@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 
 ### NewCustomField
 
-`func NewCustomField(id int32, url string, displayUrl string, display string, objectTypes []string, type_ CustomFieldType, dataType string, name string, created NullableTime, lastUpdated NullableTime, ) *CustomField`
+`func NewCustomField(id int64, url string, displayUrl string, display string, objectTypes []string, type_ CustomFieldType, dataType string, name string, created NullableTime, lastUpdated NullableTime, ) *CustomField`
 
 NewCustomField instantiates a new CustomField object
 This constructor will assign default values to properties that have it defined,
@@ -55,20 +55,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *CustomField) GetId() int32`
+`func (o *CustomField) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *CustomField) GetIdOk() (*int32, bool)`
+`func (o *CustomField) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *CustomField) SetId(v int32)`
+`func (o *CustomField) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -375,20 +375,20 @@ HasUnique returns a boolean if a field has been set.
 
 ### GetSearchWeight
 
-`func (o *CustomField) GetSearchWeight() int32`
+`func (o *CustomField) GetSearchWeight() int64`
 
 GetSearchWeight returns the SearchWeight field if non-nil, zero value otherwise.
 
 ### GetSearchWeightOk
 
-`func (o *CustomField) GetSearchWeightOk() (*int32, bool)`
+`func (o *CustomField) GetSearchWeightOk() (*int64, bool)`
 
 GetSearchWeightOk returns a tuple with the SearchWeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSearchWeight
 
-`func (o *CustomField) SetSearchWeight(v int32)`
+`func (o *CustomField) SetSearchWeight(v int64)`
 
 SetSearchWeight sets SearchWeight field to given value.
 
@@ -570,20 +570,20 @@ HasRelatedObjectFilter returns a boolean if a field has been set.
 UnsetRelatedObjectFilter ensures that no value is present for RelatedObjectFilter, not even an explicit nil
 ### GetWeight
 
-`func (o *CustomField) GetWeight() int32`
+`func (o *CustomField) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *CustomField) GetWeightOk() (*int32, bool)`
+`func (o *CustomField) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *CustomField) SetWeight(v int32)`
+`func (o *CustomField) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

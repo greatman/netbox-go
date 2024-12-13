@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **ObjectType** | **string** |  | 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewContactAssignment
 
-`func NewContactAssignment(id int32, url string, display string, objectType string, objectId int64, object map[string]interface{}, contact BriefContact, created NullableTime, lastUpdated NullableTime, ) *ContactAssignment`
+`func NewContactAssignment(id int64, url string, display string, objectType string, objectId int64, object map[string]interface{}, contact BriefContact, created NullableTime, lastUpdated NullableTime, ) *ContactAssignment`
 
 NewContactAssignment instantiates a new ContactAssignment object
 This constructor will assign default values to properties that have it defined,
@@ -39,20 +39,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ContactAssignment) GetId() int32`
+`func (o *ContactAssignment) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ContactAssignment) GetIdOk() (*int32, bool)`
+`func (o *ContactAssignment) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ContactAssignment) SetId(v int32)`
+`func (o *ContactAssignment) SetId(v int64)`
 
 SetId sets Id field to given value.
 

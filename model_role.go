@@ -21,13 +21,13 @@ var _ MappedNullable = &Role{}
 
 // Role Adds support for custom fields and tags.
 type Role struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
 	Name                 string                 `json:"name"`
 	Slug                 string                 `json:"slug" validate:"regexp=^[-a-zA-Z0-9_]+$"`
-	Weight               *int32                 `json:"weight,omitempty"`
+	Weight               *int64                 `json:"weight,omitempty"`
 	Description          *string                `json:"description,omitempty"`
 	Tags                 []NestedTag            `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
@@ -44,7 +44,7 @@ type _Role Role
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRole(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, prefixCount int64, vlanCount int64) *Role {
+func NewRole(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, prefixCount int64, vlanCount int64) *Role {
 	this := Role{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewRoleWithDefaults() *Role {
 }
 
 // GetId returns the Id field value
-func (o *Role) GetId() int32 {
+func (o *Role) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *Role) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Role) GetIdOk() (*int32, bool) {
+func (o *Role) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *Role) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Role) SetId(v int32) {
+func (o *Role) SetId(v int64) {
 	o.Id = v
 }
 
@@ -212,9 +212,9 @@ func (o *Role) SetSlug(v string) {
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *Role) GetWeight() int32 {
+func (o *Role) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -222,7 +222,7 @@ func (o *Role) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Role) GetWeightOk() (*int32, bool) {
+func (o *Role) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -238,8 +238,8 @@ func (o *Role) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *Role) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *Role) SetWeight(v int64) {
 	o.Weight = &v
 }
 

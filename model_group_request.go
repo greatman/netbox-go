@@ -22,7 +22,7 @@ var _ MappedNullable = &GroupRequest{}
 type GroupRequest struct {
 	Name                 string  `json:"name"`
 	Description          *string `json:"description,omitempty"`
-	Permissions          []int32 `json:"permissions,omitempty"`
+	Permissions          []int64 `json:"permissions,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -103,9 +103,9 @@ func (o *GroupRequest) SetDescription(v string) {
 }
 
 // GetPermissions returns the Permissions field value if set, zero value otherwise.
-func (o *GroupRequest) GetPermissions() []int32 {
+func (o *GroupRequest) GetPermissions() []int64 {
 	if o == nil || IsNil(o.Permissions) {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 	return o.Permissions
@@ -113,7 +113,7 @@ func (o *GroupRequest) GetPermissions() []int32 {
 
 // GetPermissionsOk returns a tuple with the Permissions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GroupRequest) GetPermissionsOk() ([]int32, bool) {
+func (o *GroupRequest) GetPermissionsOk() ([]int64, bool) {
 	if o == nil || IsNil(o.Permissions) {
 		return nil, false
 	}
@@ -129,8 +129,8 @@ func (o *GroupRequest) HasPermissions() bool {
 	return false
 }
 
-// SetPermissions gets a reference to the given []int32 and assigns it to the Permissions field.
-func (o *GroupRequest) SetPermissions(v []int32) {
+// SetPermissions gets a reference to the given []int64 and assigns it to the Permissions field.
+func (o *GroupRequest) SetPermissions(v []int64) {
 	o.Permissions = v
 }
 

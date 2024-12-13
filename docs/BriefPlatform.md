@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewBriefPlatform
 
-`func NewBriefPlatform(id int32, url string, display string, name string, slug string, deviceCount int64, virtualmachineCount int64, ) *BriefPlatform`
+`func NewBriefPlatform(id int64, url string, display string, name string, slug string, deviceCount int64, virtualmachineCount int64, ) *BriefPlatform`
 
 NewBriefPlatform instantiates a new BriefPlatform object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefPlatform) GetId() int32`
+`func (o *BriefPlatform) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefPlatform) GetIdOk() (*int32, bool)`
+`func (o *BriefPlatform) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefPlatform) SetId(v int32)`
+`func (o *BriefPlatform) SetId(v int64)`
 
 SetId sets Id field to given value.
 

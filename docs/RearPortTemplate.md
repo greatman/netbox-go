@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **DeviceType** | Pointer to [**NullableBriefDeviceType**](BriefDeviceType.md) |  | [optional] 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Type** | [**FrontPortType**](FrontPortType.md) |  | 
 **Color** | Pointer to **string** |  | [optional] 
-**Positions** | Pointer to **int32** |  | [optional] 
+**Positions** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Created** | **NullableTime** |  | [readonly] 
 **LastUpdated** | **NullableTime** |  | [readonly] 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewRearPortTemplate
 
-`func NewRearPortTemplate(id int32, url string, display string, name string, type_ FrontPortType, created NullableTime, lastUpdated NullableTime, ) *RearPortTemplate`
+`func NewRearPortTemplate(id int64, url string, display string, name string, type_ FrontPortType, created NullableTime, lastUpdated NullableTime, ) *RearPortTemplate`
 
 NewRearPortTemplate instantiates a new RearPortTemplate object
 This constructor will assign default values to properties that have it defined,
@@ -39,20 +39,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *RearPortTemplate) GetId() int32`
+`func (o *RearPortTemplate) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *RearPortTemplate) GetIdOk() (*int32, bool)`
+`func (o *RearPortTemplate) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *RearPortTemplate) SetId(v int32)`
+`func (o *RearPortTemplate) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -259,20 +259,20 @@ HasColor returns a boolean if a field has been set.
 
 ### GetPositions
 
-`func (o *RearPortTemplate) GetPositions() int32`
+`func (o *RearPortTemplate) GetPositions() int64`
 
 GetPositions returns the Positions field if non-nil, zero value otherwise.
 
 ### GetPositionsOk
 
-`func (o *RearPortTemplate) GetPositionsOk() (*int32, bool)`
+`func (o *RearPortTemplate) GetPositionsOk() (*int64, bool)`
 
 GetPositionsOk returns a tuple with the Positions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPositions
 
-`func (o *RearPortTemplate) SetPositions(v int32)`
+`func (o *RearPortTemplate) SetPositions(v int64)`
 
 SetPositions sets Positions field to given value.
 

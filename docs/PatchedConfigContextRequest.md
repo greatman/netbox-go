@@ -5,21 +5,21 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
-**Weight** | Pointer to **int32** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **IsActive** | Pointer to **bool** |  | [optional] 
-**Regions** | Pointer to **[]int32** |  | [optional] 
-**SiteGroups** | Pointer to **[]int32** |  | [optional] 
-**Sites** | Pointer to **[]int32** |  | [optional] 
-**Locations** | Pointer to **[]int32** |  | [optional] 
-**DeviceTypes** | Pointer to **[]int32** |  | [optional] 
-**Roles** | Pointer to **[]int32** |  | [optional] 
-**Platforms** | Pointer to **[]int32** |  | [optional] 
-**ClusterTypes** | Pointer to **[]int32** |  | [optional] 
-**ClusterGroups** | Pointer to **[]int32** |  | [optional] 
-**Clusters** | Pointer to **[]int32** |  | [optional] 
-**TenantGroups** | Pointer to **[]int32** |  | [optional] 
-**Tenants** | Pointer to **[]int32** |  | [optional] 
+**Regions** | Pointer to **[]int64** |  | [optional] 
+**SiteGroups** | Pointer to **[]int64** |  | [optional] 
+**Sites** | Pointer to **[]int64** |  | [optional] 
+**Locations** | Pointer to **[]int64** |  | [optional] 
+**DeviceTypes** | Pointer to **[]int64** |  | [optional] 
+**Roles** | Pointer to **[]int64** |  | [optional] 
+**Platforms** | Pointer to **[]int64** |  | [optional] 
+**ClusterTypes** | Pointer to **[]int64** |  | [optional] 
+**ClusterGroups** | Pointer to **[]int64** |  | [optional] 
+**Clusters** | Pointer to **[]int64** |  | [optional] 
+**TenantGroups** | Pointer to **[]int64** |  | [optional] 
+**Tenants** | Pointer to **[]int64** |  | [optional] 
 **Tags** | Pointer to **[]string** |  | [optional] 
 **DataSource** | Pointer to [**BriefDataSourceRequest**](BriefDataSourceRequest.md) |  | [optional] 
 **Data** | Pointer to **interface{}** |  | [optional] 
@@ -70,20 +70,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetWeight
 
-`func (o *PatchedConfigContextRequest) GetWeight() int32`
+`func (o *PatchedConfigContextRequest) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *PatchedConfigContextRequest) GetWeightOk() (*int32, bool)`
+`func (o *PatchedConfigContextRequest) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *PatchedConfigContextRequest) SetWeight(v int32)`
+`func (o *PatchedConfigContextRequest) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 
@@ -145,20 +145,20 @@ HasIsActive returns a boolean if a field has been set.
 
 ### GetRegions
 
-`func (o *PatchedConfigContextRequest) GetRegions() []int32`
+`func (o *PatchedConfigContextRequest) GetRegions() []int64`
 
 GetRegions returns the Regions field if non-nil, zero value otherwise.
 
 ### GetRegionsOk
 
-`func (o *PatchedConfigContextRequest) GetRegionsOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetRegionsOk() (*[]int64, bool)`
 
 GetRegionsOk returns a tuple with the Regions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRegions
 
-`func (o *PatchedConfigContextRequest) SetRegions(v []int32)`
+`func (o *PatchedConfigContextRequest) SetRegions(v []int64)`
 
 SetRegions sets Regions field to given value.
 
@@ -170,20 +170,20 @@ HasRegions returns a boolean if a field has been set.
 
 ### GetSiteGroups
 
-`func (o *PatchedConfigContextRequest) GetSiteGroups() []int32`
+`func (o *PatchedConfigContextRequest) GetSiteGroups() []int64`
 
 GetSiteGroups returns the SiteGroups field if non-nil, zero value otherwise.
 
 ### GetSiteGroupsOk
 
-`func (o *PatchedConfigContextRequest) GetSiteGroupsOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetSiteGroupsOk() (*[]int64, bool)`
 
 GetSiteGroupsOk returns a tuple with the SiteGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSiteGroups
 
-`func (o *PatchedConfigContextRequest) SetSiteGroups(v []int32)`
+`func (o *PatchedConfigContextRequest) SetSiteGroups(v []int64)`
 
 SetSiteGroups sets SiteGroups field to given value.
 
@@ -195,20 +195,20 @@ HasSiteGroups returns a boolean if a field has been set.
 
 ### GetSites
 
-`func (o *PatchedConfigContextRequest) GetSites() []int32`
+`func (o *PatchedConfigContextRequest) GetSites() []int64`
 
 GetSites returns the Sites field if non-nil, zero value otherwise.
 
 ### GetSitesOk
 
-`func (o *PatchedConfigContextRequest) GetSitesOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetSitesOk() (*[]int64, bool)`
 
 GetSitesOk returns a tuple with the Sites field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSites
 
-`func (o *PatchedConfigContextRequest) SetSites(v []int32)`
+`func (o *PatchedConfigContextRequest) SetSites(v []int64)`
 
 SetSites sets Sites field to given value.
 
@@ -220,20 +220,20 @@ HasSites returns a boolean if a field has been set.
 
 ### GetLocations
 
-`func (o *PatchedConfigContextRequest) GetLocations() []int32`
+`func (o *PatchedConfigContextRequest) GetLocations() []int64`
 
 GetLocations returns the Locations field if non-nil, zero value otherwise.
 
 ### GetLocationsOk
 
-`func (o *PatchedConfigContextRequest) GetLocationsOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetLocationsOk() (*[]int64, bool)`
 
 GetLocationsOk returns a tuple with the Locations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocations
 
-`func (o *PatchedConfigContextRequest) SetLocations(v []int32)`
+`func (o *PatchedConfigContextRequest) SetLocations(v []int64)`
 
 SetLocations sets Locations field to given value.
 
@@ -245,20 +245,20 @@ HasLocations returns a boolean if a field has been set.
 
 ### GetDeviceTypes
 
-`func (o *PatchedConfigContextRequest) GetDeviceTypes() []int32`
+`func (o *PatchedConfigContextRequest) GetDeviceTypes() []int64`
 
 GetDeviceTypes returns the DeviceTypes field if non-nil, zero value otherwise.
 
 ### GetDeviceTypesOk
 
-`func (o *PatchedConfigContextRequest) GetDeviceTypesOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetDeviceTypesOk() (*[]int64, bool)`
 
 GetDeviceTypesOk returns a tuple with the DeviceTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeviceTypes
 
-`func (o *PatchedConfigContextRequest) SetDeviceTypes(v []int32)`
+`func (o *PatchedConfigContextRequest) SetDeviceTypes(v []int64)`
 
 SetDeviceTypes sets DeviceTypes field to given value.
 
@@ -270,20 +270,20 @@ HasDeviceTypes returns a boolean if a field has been set.
 
 ### GetRoles
 
-`func (o *PatchedConfigContextRequest) GetRoles() []int32`
+`func (o *PatchedConfigContextRequest) GetRoles() []int64`
 
 GetRoles returns the Roles field if non-nil, zero value otherwise.
 
 ### GetRolesOk
 
-`func (o *PatchedConfigContextRequest) GetRolesOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetRolesOk() (*[]int64, bool)`
 
 GetRolesOk returns a tuple with the Roles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRoles
 
-`func (o *PatchedConfigContextRequest) SetRoles(v []int32)`
+`func (o *PatchedConfigContextRequest) SetRoles(v []int64)`
 
 SetRoles sets Roles field to given value.
 
@@ -295,20 +295,20 @@ HasRoles returns a boolean if a field has been set.
 
 ### GetPlatforms
 
-`func (o *PatchedConfigContextRequest) GetPlatforms() []int32`
+`func (o *PatchedConfigContextRequest) GetPlatforms() []int64`
 
 GetPlatforms returns the Platforms field if non-nil, zero value otherwise.
 
 ### GetPlatformsOk
 
-`func (o *PatchedConfigContextRequest) GetPlatformsOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetPlatformsOk() (*[]int64, bool)`
 
 GetPlatformsOk returns a tuple with the Platforms field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlatforms
 
-`func (o *PatchedConfigContextRequest) SetPlatforms(v []int32)`
+`func (o *PatchedConfigContextRequest) SetPlatforms(v []int64)`
 
 SetPlatforms sets Platforms field to given value.
 
@@ -320,20 +320,20 @@ HasPlatforms returns a boolean if a field has been set.
 
 ### GetClusterTypes
 
-`func (o *PatchedConfigContextRequest) GetClusterTypes() []int32`
+`func (o *PatchedConfigContextRequest) GetClusterTypes() []int64`
 
 GetClusterTypes returns the ClusterTypes field if non-nil, zero value otherwise.
 
 ### GetClusterTypesOk
 
-`func (o *PatchedConfigContextRequest) GetClusterTypesOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetClusterTypesOk() (*[]int64, bool)`
 
 GetClusterTypesOk returns a tuple with the ClusterTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetClusterTypes
 
-`func (o *PatchedConfigContextRequest) SetClusterTypes(v []int32)`
+`func (o *PatchedConfigContextRequest) SetClusterTypes(v []int64)`
 
 SetClusterTypes sets ClusterTypes field to given value.
 
@@ -345,20 +345,20 @@ HasClusterTypes returns a boolean if a field has been set.
 
 ### GetClusterGroups
 
-`func (o *PatchedConfigContextRequest) GetClusterGroups() []int32`
+`func (o *PatchedConfigContextRequest) GetClusterGroups() []int64`
 
 GetClusterGroups returns the ClusterGroups field if non-nil, zero value otherwise.
 
 ### GetClusterGroupsOk
 
-`func (o *PatchedConfigContextRequest) GetClusterGroupsOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetClusterGroupsOk() (*[]int64, bool)`
 
 GetClusterGroupsOk returns a tuple with the ClusterGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetClusterGroups
 
-`func (o *PatchedConfigContextRequest) SetClusterGroups(v []int32)`
+`func (o *PatchedConfigContextRequest) SetClusterGroups(v []int64)`
 
 SetClusterGroups sets ClusterGroups field to given value.
 
@@ -370,20 +370,20 @@ HasClusterGroups returns a boolean if a field has been set.
 
 ### GetClusters
 
-`func (o *PatchedConfigContextRequest) GetClusters() []int32`
+`func (o *PatchedConfigContextRequest) GetClusters() []int64`
 
 GetClusters returns the Clusters field if non-nil, zero value otherwise.
 
 ### GetClustersOk
 
-`func (o *PatchedConfigContextRequest) GetClustersOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetClustersOk() (*[]int64, bool)`
 
 GetClustersOk returns a tuple with the Clusters field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetClusters
 
-`func (o *PatchedConfigContextRequest) SetClusters(v []int32)`
+`func (o *PatchedConfigContextRequest) SetClusters(v []int64)`
 
 SetClusters sets Clusters field to given value.
 
@@ -395,20 +395,20 @@ HasClusters returns a boolean if a field has been set.
 
 ### GetTenantGroups
 
-`func (o *PatchedConfigContextRequest) GetTenantGroups() []int32`
+`func (o *PatchedConfigContextRequest) GetTenantGroups() []int64`
 
 GetTenantGroups returns the TenantGroups field if non-nil, zero value otherwise.
 
 ### GetTenantGroupsOk
 
-`func (o *PatchedConfigContextRequest) GetTenantGroupsOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetTenantGroupsOk() (*[]int64, bool)`
 
 GetTenantGroupsOk returns a tuple with the TenantGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTenantGroups
 
-`func (o *PatchedConfigContextRequest) SetTenantGroups(v []int32)`
+`func (o *PatchedConfigContextRequest) SetTenantGroups(v []int64)`
 
 SetTenantGroups sets TenantGroups field to given value.
 
@@ -420,20 +420,20 @@ HasTenantGroups returns a boolean if a field has been set.
 
 ### GetTenants
 
-`func (o *PatchedConfigContextRequest) GetTenants() []int32`
+`func (o *PatchedConfigContextRequest) GetTenants() []int64`
 
 GetTenants returns the Tenants field if non-nil, zero value otherwise.
 
 ### GetTenantsOk
 
-`func (o *PatchedConfigContextRequest) GetTenantsOk() (*[]int32, bool)`
+`func (o *PatchedConfigContextRequest) GetTenantsOk() (*[]int64, bool)`
 
 GetTenantsOk returns a tuple with the Tenants field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTenants
 
-`func (o *PatchedConfigContextRequest) SetTenants(v []int32)`
+`func (o *PatchedConfigContextRequest) SetTenants(v []int64)`
 
 SetTenants sets Tenants field to given value.
 

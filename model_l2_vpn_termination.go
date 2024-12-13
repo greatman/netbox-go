@@ -21,7 +21,7 @@ var _ MappedNullable = &L2VPNTermination{}
 
 // L2VPNTermination Adds support for custom fields and tags.
 type L2VPNTermination struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
@@ -42,7 +42,7 @@ type _L2VPNTermination L2VPNTermination
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewL2VPNTermination(id int32, url string, displayUrl string, display string, l2vpn BriefL2VPN, assignedObjectType string, assignedObjectId int64, assignedObject interface{}, created NullableTime, lastUpdated NullableTime) *L2VPNTermination {
+func NewL2VPNTermination(id int64, url string, displayUrl string, display string, l2vpn BriefL2VPN, assignedObjectType string, assignedObjectId int64, assignedObject interface{}, created NullableTime, lastUpdated NullableTime) *L2VPNTermination {
 	this := L2VPNTermination{}
 	this.Id = id
 	this.Url = url
@@ -66,9 +66,9 @@ func NewL2VPNTerminationWithDefaults() *L2VPNTermination {
 }
 
 // GetId returns the Id field value
-func (o *L2VPNTermination) GetId() int32 {
+func (o *L2VPNTermination) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -77,7 +77,7 @@ func (o *L2VPNTermination) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *L2VPNTermination) GetIdOk() (*int32, bool) {
+func (o *L2VPNTermination) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -85,7 +85,7 @@ func (o *L2VPNTermination) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *L2VPNTermination) SetId(v int32) {
+func (o *L2VPNTermination) SetId(v int64) {
 	o.Id = v
 }
 

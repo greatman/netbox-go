@@ -23,8 +23,8 @@ type PatchedSavedFilterRequest struct {
 	Name                 *string       `json:"name,omitempty"`
 	Slug                 *string       `json:"slug,omitempty" validate:"regexp=^[-a-zA-Z0-9_]+$"`
 	Description          *string       `json:"description,omitempty"`
-	User                 NullableInt32 `json:"user,omitempty"`
-	Weight               *int32        `json:"weight,omitempty"`
+	User                 NullableInt64 `json:"user,omitempty"`
+	Weight               *int64        `json:"weight,omitempty"`
 	Enabled              *bool         `json:"enabled,omitempty"`
 	Shared               *bool         `json:"shared,omitempty"`
 	Parameters           interface{}   `json:"parameters,omitempty"`
@@ -179,9 +179,9 @@ func (o *PatchedSavedFilterRequest) SetDescription(v string) {
 }
 
 // GetUser returns the User field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedSavedFilterRequest) GetUser() int32 {
+func (o *PatchedSavedFilterRequest) GetUser() int64 {
 	if o == nil || IsNil(o.User.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.User.Get()
@@ -190,7 +190,7 @@ func (o *PatchedSavedFilterRequest) GetUser() int32 {
 // GetUserOk returns a tuple with the User field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedSavedFilterRequest) GetUserOk() (*int32, bool) {
+func (o *PatchedSavedFilterRequest) GetUserOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -206,8 +206,8 @@ func (o *PatchedSavedFilterRequest) HasUser() bool {
 	return false
 }
 
-// SetUser gets a reference to the given NullableInt32 and assigns it to the User field.
-func (o *PatchedSavedFilterRequest) SetUser(v int32) {
+// SetUser gets a reference to the given NullableInt64 and assigns it to the User field.
+func (o *PatchedSavedFilterRequest) SetUser(v int64) {
 	o.User.Set(&v)
 }
 
@@ -222,9 +222,9 @@ func (o *PatchedSavedFilterRequest) UnsetUser() {
 }
 
 // GetWeight returns the Weight field value if set, zero value otherwise.
-func (o *PatchedSavedFilterRequest) GetWeight() int32 {
+func (o *PatchedSavedFilterRequest) GetWeight() int64 {
 	if o == nil || IsNil(o.Weight) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Weight
@@ -232,7 +232,7 @@ func (o *PatchedSavedFilterRequest) GetWeight() int32 {
 
 // GetWeightOk returns a tuple with the Weight field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedSavedFilterRequest) GetWeightOk() (*int32, bool) {
+func (o *PatchedSavedFilterRequest) GetWeightOk() (*int64, bool) {
 	if o == nil || IsNil(o.Weight) {
 		return nil, false
 	}
@@ -248,8 +248,8 @@ func (o *PatchedSavedFilterRequest) HasWeight() bool {
 	return false
 }
 
-// SetWeight gets a reference to the given int32 and assigns it to the Weight field.
-func (o *PatchedSavedFilterRequest) SetWeight(v int32) {
+// SetWeight gets a reference to the given int64 and assigns it to the Weight field.
+func (o *PatchedSavedFilterRequest) SetWeight(v int64) {
 	o.Weight = &v
 }
 

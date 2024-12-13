@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
-**SiteCount** | **int32** |  | [readonly] [default to 0]
-**Depth** | **int32** |  | [readonly] 
+**SiteCount** | **int64** |  | [readonly] [default to 0]
+**Depth** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewBriefRegion
 
-`func NewBriefRegion(id int32, url string, display string, name string, slug string, siteCount int32, depth int32, ) *BriefRegion`
+`func NewBriefRegion(id int64, url string, display string, name string, slug string, siteCount int64, depth int64, ) *BriefRegion`
 
 NewBriefRegion instantiates a new BriefRegion object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefRegion) GetId() int32`
+`func (o *BriefRegion) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefRegion) GetIdOk() (*int32, bool)`
+`func (o *BriefRegion) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefRegion) SetId(v int32)`
+`func (o *BriefRegion) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -159,40 +159,40 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetSiteCount
 
-`func (o *BriefRegion) GetSiteCount() int32`
+`func (o *BriefRegion) GetSiteCount() int64`
 
 GetSiteCount returns the SiteCount field if non-nil, zero value otherwise.
 
 ### GetSiteCountOk
 
-`func (o *BriefRegion) GetSiteCountOk() (*int32, bool)`
+`func (o *BriefRegion) GetSiteCountOk() (*int64, bool)`
 
 GetSiteCountOk returns a tuple with the SiteCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSiteCount
 
-`func (o *BriefRegion) SetSiteCount(v int32)`
+`func (o *BriefRegion) SetSiteCount(v int64)`
 
 SetSiteCount sets SiteCount field to given value.
 
 
 ### GetDepth
 
-`func (o *BriefRegion) GetDepth() int32`
+`func (o *BriefRegion) GetDepth() int64`
 
 GetDepth returns the Depth field if non-nil, zero value otherwise.
 
 ### GetDepthOk
 
-`func (o *BriefRegion) GetDepthOk() (*int32, bool)`
+`func (o *BriefRegion) GetDepthOk() (*int64, bool)`
 
 GetDepthOk returns a tuple with the Depth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDepth
 
-`func (o *BriefRegion) SetDepth(v int32)`
+`func (o *BriefRegion) SetDepth(v int64)`
 
 SetDepth sets Depth field to given value.
 

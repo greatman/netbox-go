@@ -19,7 +19,7 @@ var _ MappedNullable = &PatchedCableTerminationRequest{}
 
 // PatchedCableTerminationRequest Adds support for custom fields and tags.
 type PatchedCableTerminationRequest struct {
-	Cable                *int32  `json:"cable,omitempty"`
+	Cable                *int64  `json:"cable,omitempty"`
 	CableEnd             *End1   `json:"cable_end,omitempty"`
 	TerminationType      *string `json:"termination_type,omitempty"`
 	TerminationId        *int64  `json:"termination_id,omitempty"`
@@ -46,9 +46,9 @@ func NewPatchedCableTerminationRequestWithDefaults() *PatchedCableTerminationReq
 }
 
 // GetCable returns the Cable field value if set, zero value otherwise.
-func (o *PatchedCableTerminationRequest) GetCable() int32 {
+func (o *PatchedCableTerminationRequest) GetCable() int64 {
 	if o == nil || IsNil(o.Cable) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Cable
@@ -56,7 +56,7 @@ func (o *PatchedCableTerminationRequest) GetCable() int32 {
 
 // GetCableOk returns a tuple with the Cable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedCableTerminationRequest) GetCableOk() (*int32, bool) {
+func (o *PatchedCableTerminationRequest) GetCableOk() (*int64, bool) {
 	if o == nil || IsNil(o.Cable) {
 		return nil, false
 	}
@@ -72,8 +72,8 @@ func (o *PatchedCableTerminationRequest) HasCable() bool {
 	return false
 }
 
-// SetCable gets a reference to the given int32 and assigns it to the Cable field.
-func (o *PatchedCableTerminationRequest) SetCable(v int32) {
+// SetCable gets a reference to the given int64 and assigns it to the Cable field.
+func (o *PatchedCableTerminationRequest) SetCable(v int64) {
 	o.Cable = &v
 }
 

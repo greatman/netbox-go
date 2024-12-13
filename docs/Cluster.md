@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **Status** | Pointer to [**ClusterStatus**](ClusterStatus.md) |  | [optional] 
 **Tenant** | Pointer to [**NullableBriefTenant**](BriefTenant.md) |  | [optional] 
 **ScopeType** | Pointer to **NullableString** |  | [optional] 
-**ScopeId** | Pointer to **NullableInt32** |  | [optional] 
+**ScopeId** | Pointer to **NullableInt64** |  | [optional] 
 **Scope** | **interface{}** |  | [readonly] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
@@ -25,14 +25,14 @@ Name | Type | Description | Notes
 **DeviceCount** | **int64** |  | [readonly] 
 **VirtualmachineCount** | **int64** |  | [readonly] 
 **AllocatedVcpus** | **float64** |  | [readonly] 
-**AllocatedMemory** | **int32** |  | [readonly] 
-**AllocatedDisk** | **int32** |  | [readonly] 
+**AllocatedMemory** | **int64** |  | [readonly] 
+**AllocatedDisk** | **int64** |  | [readonly] 
 
 ## Methods
 
 ### NewCluster
 
-`func NewCluster(id int32, url string, displayUrl string, display string, name string, type_ BriefClusterType, scope interface{}, created NullableTime, lastUpdated NullableTime, deviceCount int64, virtualmachineCount int64, allocatedVcpus float64, allocatedMemory int32, allocatedDisk int32, ) *Cluster`
+`func NewCluster(id int64, url string, displayUrl string, display string, name string, type_ BriefClusterType, scope interface{}, created NullableTime, lastUpdated NullableTime, deviceCount int64, virtualmachineCount int64, allocatedVcpus float64, allocatedMemory int64, allocatedDisk int64, ) *Cluster`
 
 NewCluster instantiates a new Cluster object
 This constructor will assign default values to properties that have it defined,
@@ -49,20 +49,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Cluster) GetId() int32`
+`func (o *Cluster) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Cluster) GetIdOk() (*int32, bool)`
+`func (o *Cluster) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Cluster) SetId(v int32)`
+`func (o *Cluster) SetId(v int64)`
 
 SetId sets Id field to given value.
 
@@ -299,20 +299,20 @@ HasScopeType returns a boolean if a field has been set.
 UnsetScopeType ensures that no value is present for ScopeType, not even an explicit nil
 ### GetScopeId
 
-`func (o *Cluster) GetScopeId() int32`
+`func (o *Cluster) GetScopeId() int64`
 
 GetScopeId returns the ScopeId field if non-nil, zero value otherwise.
 
 ### GetScopeIdOk
 
-`func (o *Cluster) GetScopeIdOk() (*int32, bool)`
+`func (o *Cluster) GetScopeIdOk() (*int64, bool)`
 
 GetScopeIdOk returns a tuple with the ScopeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScopeId
 
-`func (o *Cluster) SetScopeId(v int32)`
+`func (o *Cluster) SetScopeId(v int64)`
 
 SetScopeId sets ScopeId field to given value.
 
@@ -584,40 +584,40 @@ SetAllocatedVcpus sets AllocatedVcpus field to given value.
 
 ### GetAllocatedMemory
 
-`func (o *Cluster) GetAllocatedMemory() int32`
+`func (o *Cluster) GetAllocatedMemory() int64`
 
 GetAllocatedMemory returns the AllocatedMemory field if non-nil, zero value otherwise.
 
 ### GetAllocatedMemoryOk
 
-`func (o *Cluster) GetAllocatedMemoryOk() (*int32, bool)`
+`func (o *Cluster) GetAllocatedMemoryOk() (*int64, bool)`
 
 GetAllocatedMemoryOk returns a tuple with the AllocatedMemory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedMemory
 
-`func (o *Cluster) SetAllocatedMemory(v int32)`
+`func (o *Cluster) SetAllocatedMemory(v int64)`
 
 SetAllocatedMemory sets AllocatedMemory field to given value.
 
 
 ### GetAllocatedDisk
 
-`func (o *Cluster) GetAllocatedDisk() int32`
+`func (o *Cluster) GetAllocatedDisk() int64`
 
 GetAllocatedDisk returns the AllocatedDisk field if non-nil, zero value otherwise.
 
 ### GetAllocatedDiskOk
 
-`func (o *Cluster) GetAllocatedDiskOk() (*int32, bool)`
+`func (o *Cluster) GetAllocatedDiskOk() (*int64, bool)`
 
 GetAllocatedDiskOk returns a tuple with the AllocatedDisk field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocatedDisk
 
-`func (o *Cluster) SetAllocatedDisk(v int32)`
+`func (o *Cluster) SetAllocatedDisk(v int64)`
 
 SetAllocatedDisk sets AllocatedDisk field to given value.
 

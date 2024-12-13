@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vid** | **int32** | Numeric VLAN ID (1-4094) | 
+**Vid** | **int64** | Numeric VLAN ID (1-4094) | 
 **Name** | **string** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewBriefVLANRequest
 
-`func NewBriefVLANRequest(vid int32, name string, ) *BriefVLANRequest`
+`func NewBriefVLANRequest(vid int64, name string, ) *BriefVLANRequest`
 
 NewBriefVLANRequest instantiates a new BriefVLANRequest object
 This constructor will assign default values to properties that have it defined,
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetVid
 
-`func (o *BriefVLANRequest) GetVid() int32`
+`func (o *BriefVLANRequest) GetVid() int64`
 
 GetVid returns the Vid field if non-nil, zero value otherwise.
 
 ### GetVidOk
 
-`func (o *BriefVLANRequest) GetVidOk() (*int32, bool)`
+`func (o *BriefVLANRequest) GetVidOk() (*int64, bool)`
 
 GetVidOk returns a tuple with the Vid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVid
 
-`func (o *BriefVLANRequest) SetVid(v int32)`
+`func (o *BriefVLANRequest) SetVid(v int64)`
 
 SetVid sets Vid field to given value.
 

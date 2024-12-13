@@ -22,7 +22,7 @@ var _ MappedNullable = &ServiceTemplateRequest{}
 type ServiceTemplateRequest struct {
 	Name                 string                                 `json:"name"`
 	Protocol             *PatchedWritableServiceRequestProtocol `json:"protocol,omitempty"`
-	Ports                []int32                                `json:"ports"`
+	Ports                []int64                                `json:"ports"`
 	Description          *string                                `json:"description,omitempty"`
 	Comments             *string                                `json:"comments,omitempty"`
 	Tags                 []NestedTagRequest                     `json:"tags,omitempty"`
@@ -36,7 +36,7 @@ type _ServiceTemplateRequest ServiceTemplateRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewServiceTemplateRequest(name string, ports []int32) *ServiceTemplateRequest {
+func NewServiceTemplateRequest(name string, ports []int64) *ServiceTemplateRequest {
 	this := ServiceTemplateRequest{}
 	this.Name = name
 	this.Ports = ports
@@ -108,9 +108,9 @@ func (o *ServiceTemplateRequest) SetProtocol(v PatchedWritableServiceRequestProt
 }
 
 // GetPorts returns the Ports field value
-func (o *ServiceTemplateRequest) GetPorts() []int32 {
+func (o *ServiceTemplateRequest) GetPorts() []int64 {
 	if o == nil {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 
@@ -119,7 +119,7 @@ func (o *ServiceTemplateRequest) GetPorts() []int32 {
 
 // GetPortsOk returns a tuple with the Ports field value
 // and a boolean to check if the value has been set.
-func (o *ServiceTemplateRequest) GetPortsOk() ([]int32, bool) {
+func (o *ServiceTemplateRequest) GetPortsOk() ([]int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -127,7 +127,7 @@ func (o *ServiceTemplateRequest) GetPortsOk() ([]int32, bool) {
 }
 
 // SetPorts sets field value
-func (o *ServiceTemplateRequest) SetPorts(v []int32) {
+func (o *ServiceTemplateRequest) SetPorts(v []int64) {
 	o.Ports = v
 }
 

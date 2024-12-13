@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Data** | **interface{}** |  | 
 **Commit** | **bool** |  | 
 **ScheduleAt** | Pointer to **NullableTime** |  | [optional] 
-**Interval** | Pointer to **NullableInt32** |  | [optional] 
+**Interval** | Pointer to **NullableInt64** |  | [optional] 
 
 ## Methods
 
@@ -115,20 +115,20 @@ HasScheduleAt returns a boolean if a field has been set.
 UnsetScheduleAt ensures that no value is present for ScheduleAt, not even an explicit nil
 ### GetInterval
 
-`func (o *ScriptInputRequest) GetInterval() int32`
+`func (o *ScriptInputRequest) GetInterval() int64`
 
 GetInterval returns the Interval field if non-nil, zero value otherwise.
 
 ### GetIntervalOk
 
-`func (o *ScriptInputRequest) GetIntervalOk() (*int32, bool)`
+`func (o *ScriptInputRequest) GetIntervalOk() (*int64, bool)`
 
 GetIntervalOk returns a tuple with the Interval field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterval
 
-`func (o *ScriptInputRequest) SetInterval(v int32)`
+`func (o *ScriptInputRequest) SetInterval(v int64)`
 
 SetInterval sets Interval field to given value.
 

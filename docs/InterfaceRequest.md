@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Device** | [**BriefDeviceRequest**](BriefDeviceRequest.md) |  | 
-**Vdcs** | Pointer to **[]int32** |  | [optional] 
+**Vdcs** | Pointer to **[]int64** |  | [optional] 
 **Module** | Pointer to [**NullableBriefModuleRequest**](BriefModuleRequest.md) |  | [optional] 
 **Name** | **string** |  | 
 **Label** | Pointer to **string** | Physical label | [optional] 
@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 **Parent** | Pointer to [**NullableNestedInterfaceRequest**](NestedInterfaceRequest.md) |  | [optional] 
 **Bridge** | Pointer to [**NullableNestedInterfaceRequest**](NestedInterfaceRequest.md) |  | [optional] 
 **Lag** | Pointer to [**NullableNestedInterfaceRequest**](NestedInterfaceRequest.md) |  | [optional] 
-**Mtu** | Pointer to **NullableInt32** |  | [optional] 
+**Mtu** | Pointer to **NullableInt64** |  | [optional] 
 **PrimaryMacAddress** | Pointer to [**NullableBriefMACAddressRequest**](BriefMACAddressRequest.md) |  | [optional] 
-**Speed** | Pointer to **NullableInt32** |  | [optional] 
+**Speed** | Pointer to **NullableInt64** |  | [optional] 
 **Duplex** | Pointer to [**NullableInterfaceRequestDuplex**](InterfaceRequestDuplex.md) |  | [optional] 
 **Wwn** | Pointer to **NullableString** |  | [optional] 
 **MgmtOnly** | Pointer to **bool** | This interface is used only for out-of-band management | [optional] 
@@ -28,13 +28,13 @@ Name | Type | Description | Notes
 **PoeType** | Pointer to [**InterfacePoeTypeValue**](InterfacePoeTypeValue.md) |  | [optional] 
 **RfChannelFrequency** | Pointer to **NullableFloat64** | Populated by selected channel (if set) | [optional] 
 **RfChannelWidth** | Pointer to **NullableFloat64** | Populated by selected channel (if set) | [optional] 
-**TxPower** | Pointer to **NullableInt32** |  | [optional] 
+**TxPower** | Pointer to **NullableInt64** |  | [optional] 
 **UntaggedVlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
-**TaggedVlans** | Pointer to **[]int32** |  | [optional] 
+**TaggedVlans** | Pointer to **[]int64** |  | [optional] 
 **QinqSvlan** | Pointer to [**NullableBriefVLANRequest**](BriefVLANRequest.md) |  | [optional] 
 **VlanTranslationPolicy** | Pointer to [**NullableBriefVLANTranslationPolicyRequest**](BriefVLANTranslationPolicyRequest.md) |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
-**WirelessLans** | Pointer to **[]int32** |  | [optional] 
+**WirelessLans** | Pointer to **[]int64** |  | [optional] 
 **Vrf** | Pointer to [**NullableBriefVRFRequest**](BriefVRFRequest.md) |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -80,20 +80,20 @@ SetDevice sets Device field to given value.
 
 ### GetVdcs
 
-`func (o *InterfaceRequest) GetVdcs() []int32`
+`func (o *InterfaceRequest) GetVdcs() []int64`
 
 GetVdcs returns the Vdcs field if non-nil, zero value otherwise.
 
 ### GetVdcsOk
 
-`func (o *InterfaceRequest) GetVdcsOk() (*[]int32, bool)`
+`func (o *InterfaceRequest) GetVdcsOk() (*[]int64, bool)`
 
 GetVdcsOk returns a tuple with the Vdcs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVdcs
 
-`func (o *InterfaceRequest) SetVdcs(v []int32)`
+`func (o *InterfaceRequest) SetVdcs(v []int64)`
 
 SetVdcs sets Vdcs field to given value.
 
@@ -335,20 +335,20 @@ HasLag returns a boolean if a field has been set.
 UnsetLag ensures that no value is present for Lag, not even an explicit nil
 ### GetMtu
 
-`func (o *InterfaceRequest) GetMtu() int32`
+`func (o *InterfaceRequest) GetMtu() int64`
 
 GetMtu returns the Mtu field if non-nil, zero value otherwise.
 
 ### GetMtuOk
 
-`func (o *InterfaceRequest) GetMtuOk() (*int32, bool)`
+`func (o *InterfaceRequest) GetMtuOk() (*int64, bool)`
 
 GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMtu
 
-`func (o *InterfaceRequest) SetMtu(v int32)`
+`func (o *InterfaceRequest) SetMtu(v int64)`
 
 SetMtu sets Mtu field to given value.
 
@@ -405,20 +405,20 @@ HasPrimaryMacAddress returns a boolean if a field has been set.
 UnsetPrimaryMacAddress ensures that no value is present for PrimaryMacAddress, not even an explicit nil
 ### GetSpeed
 
-`func (o *InterfaceRequest) GetSpeed() int32`
+`func (o *InterfaceRequest) GetSpeed() int64`
 
 GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
 ### GetSpeedOk
 
-`func (o *InterfaceRequest) GetSpeedOk() (*int32, bool)`
+`func (o *InterfaceRequest) GetSpeedOk() (*int64, bool)`
 
 GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSpeed
 
-`func (o *InterfaceRequest) SetSpeed(v int32)`
+`func (o *InterfaceRequest) SetSpeed(v int64)`
 
 SetSpeed sets Speed field to given value.
 
@@ -755,20 +755,20 @@ HasRfChannelWidth returns a boolean if a field has been set.
 UnsetRfChannelWidth ensures that no value is present for RfChannelWidth, not even an explicit nil
 ### GetTxPower
 
-`func (o *InterfaceRequest) GetTxPower() int32`
+`func (o *InterfaceRequest) GetTxPower() int64`
 
 GetTxPower returns the TxPower field if non-nil, zero value otherwise.
 
 ### GetTxPowerOk
 
-`func (o *InterfaceRequest) GetTxPowerOk() (*int32, bool)`
+`func (o *InterfaceRequest) GetTxPowerOk() (*int64, bool)`
 
 GetTxPowerOk returns a tuple with the TxPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTxPower
 
-`func (o *InterfaceRequest) SetTxPower(v int32)`
+`func (o *InterfaceRequest) SetTxPower(v int64)`
 
 SetTxPower sets TxPower field to given value.
 
@@ -825,20 +825,20 @@ HasUntaggedVlan returns a boolean if a field has been set.
 UnsetUntaggedVlan ensures that no value is present for UntaggedVlan, not even an explicit nil
 ### GetTaggedVlans
 
-`func (o *InterfaceRequest) GetTaggedVlans() []int32`
+`func (o *InterfaceRequest) GetTaggedVlans() []int64`
 
 GetTaggedVlans returns the TaggedVlans field if non-nil, zero value otherwise.
 
 ### GetTaggedVlansOk
 
-`func (o *InterfaceRequest) GetTaggedVlansOk() (*[]int32, bool)`
+`func (o *InterfaceRequest) GetTaggedVlansOk() (*[]int64, bool)`
 
 GetTaggedVlansOk returns a tuple with the TaggedVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTaggedVlans
 
-`func (o *InterfaceRequest) SetTaggedVlans(v []int32)`
+`func (o *InterfaceRequest) SetTaggedVlans(v []int64)`
 
 SetTaggedVlans sets TaggedVlans field to given value.
 
@@ -945,20 +945,20 @@ HasMarkConnected returns a boolean if a field has been set.
 
 ### GetWirelessLans
 
-`func (o *InterfaceRequest) GetWirelessLans() []int32`
+`func (o *InterfaceRequest) GetWirelessLans() []int64`
 
 GetWirelessLans returns the WirelessLans field if non-nil, zero value otherwise.
 
 ### GetWirelessLansOk
 
-`func (o *InterfaceRequest) GetWirelessLansOk() (*[]int32, bool)`
+`func (o *InterfaceRequest) GetWirelessLansOk() (*[]int64, bool)`
 
 GetWirelessLansOk returns a tuple with the WirelessLans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWirelessLans
 
-`func (o *InterfaceRequest) SetWirelessLans(v []int32)`
+`func (o *InterfaceRequest) SetWirelessLans(v []int64)`
 
 SetWirelessLans sets WirelessLans field to given value.
 

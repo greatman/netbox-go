@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefVirtualCircuit{}
 
 // BriefVirtualCircuit Adds support for custom fields and tags.
 type BriefVirtualCircuit struct {
-	Id      int32  `json:"id"`
+	Id      int64  `json:"id"`
 	Url     string `json:"url"`
 	Display string `json:"display"`
 	// Unique circuit ID
@@ -36,7 +36,7 @@ type _BriefVirtualCircuit BriefVirtualCircuit
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefVirtualCircuit(id int32, url string, display string, cid string, providerNetwork BriefProviderNetwork) *BriefVirtualCircuit {
+func NewBriefVirtualCircuit(id int64, url string, display string, cid string, providerNetwork BriefProviderNetwork) *BriefVirtualCircuit {
 	this := BriefVirtualCircuit{}
 	this.Id = id
 	this.Url = url
@@ -55,9 +55,9 @@ func NewBriefVirtualCircuitWithDefaults() *BriefVirtualCircuit {
 }
 
 // GetId returns the Id field value
-func (o *BriefVirtualCircuit) GetId() int32 {
+func (o *BriefVirtualCircuit) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -66,7 +66,7 @@ func (o *BriefVirtualCircuit) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefVirtualCircuit) GetIdOk() (*int32, bool) {
+func (o *BriefVirtualCircuit) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -74,7 +74,7 @@ func (o *BriefVirtualCircuit) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefVirtualCircuit) SetId(v int32) {
+func (o *BriefVirtualCircuit) SetId(v int64) {
 	o.Id = v
 }
 

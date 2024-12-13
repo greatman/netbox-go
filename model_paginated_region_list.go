@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedRegionList{}
 
 // PaginatedRegionList struct for PaginatedRegionList
 type PaginatedRegionList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []Region       `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedRegionList PaginatedRegionList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedRegionList(count int32, results []Region) *PaginatedRegionList {
+func NewPaginatedRegionList(count int64, results []Region) *PaginatedRegionList {
 	this := PaginatedRegionList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedRegionListWithDefaults() *PaginatedRegionList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedRegionList) GetCount() int32 {
+func (o *PaginatedRegionList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedRegionList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedRegionList) GetCountOk() (*int32, bool) {
+func (o *PaginatedRegionList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedRegionList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedRegionList) SetCount(v int32) {
+func (o *PaginatedRegionList) SetCount(v int64) {
 	o.Count = v
 }
 

@@ -21,12 +21,12 @@ var _ MappedNullable = &RackReservation{}
 
 // RackReservation Adds support for custom fields and tags.
 type RackReservation struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
 	Rack                 BriefRack              `json:"rack"`
-	Units                []int32                `json:"units"`
+	Units                []int64                `json:"units"`
 	Created              NullableTime           `json:"created"`
 	LastUpdated          NullableTime           `json:"last_updated"`
 	User                 BriefUser              `json:"user"`
@@ -44,7 +44,7 @@ type _RackReservation RackReservation
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRackReservation(id int32, url string, displayUrl string, display string, rack BriefRack, units []int32, created NullableTime, lastUpdated NullableTime, user BriefUser, description string) *RackReservation {
+func NewRackReservation(id int64, url string, displayUrl string, display string, rack BriefRack, units []int64, created NullableTime, lastUpdated NullableTime, user BriefUser, description string) *RackReservation {
 	this := RackReservation{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewRackReservationWithDefaults() *RackReservation {
 }
 
 // GetId returns the Id field value
-func (o *RackReservation) GetId() int32 {
+func (o *RackReservation) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *RackReservation) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *RackReservation) GetIdOk() (*int32, bool) {
+func (o *RackReservation) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *RackReservation) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *RackReservation) SetId(v int32) {
+func (o *RackReservation) SetId(v int64) {
 	o.Id = v
 }
 
@@ -188,9 +188,9 @@ func (o *RackReservation) SetRack(v BriefRack) {
 }
 
 // GetUnits returns the Units field value
-func (o *RackReservation) GetUnits() []int32 {
+func (o *RackReservation) GetUnits() []int64 {
 	if o == nil {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 
@@ -199,7 +199,7 @@ func (o *RackReservation) GetUnits() []int32 {
 
 // GetUnitsOk returns a tuple with the Units field value
 // and a boolean to check if the value has been set.
-func (o *RackReservation) GetUnitsOk() ([]int32, bool) {
+func (o *RackReservation) GetUnitsOk() ([]int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -207,7 +207,7 @@ func (o *RackReservation) GetUnitsOk() ([]int32, bool) {
 }
 
 // SetUnits sets field value
-func (o *RackReservation) SetUnits(v []int32) {
+func (o *RackReservation) SetUnits(v []int64) {
 	o.Units = v
 }
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
 **Protocol** | Pointer to [**PatchedWritableServiceRequestProtocol**](PatchedWritableServiceRequestProtocol.md) |  | [optional] 
-**Ports** | **[]int32** |  | 
+**Ports** | **[]int64** |  | 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewServiceTemplateRequest
 
-`func NewServiceTemplateRequest(name string, ports []int32, ) *ServiceTemplateRequest`
+`func NewServiceTemplateRequest(name string, ports []int64, ) *ServiceTemplateRequest`
 
 NewServiceTemplateRequest instantiates a new ServiceTemplateRequest object
 This constructor will assign default values to properties that have it defined,
@@ -78,20 +78,20 @@ HasProtocol returns a boolean if a field has been set.
 
 ### GetPorts
 
-`func (o *ServiceTemplateRequest) GetPorts() []int32`
+`func (o *ServiceTemplateRequest) GetPorts() []int64`
 
 GetPorts returns the Ports field if non-nil, zero value otherwise.
 
 ### GetPortsOk
 
-`func (o *ServiceTemplateRequest) GetPortsOk() (*[]int32, bool)`
+`func (o *ServiceTemplateRequest) GetPortsOk() (*[]int64, bool)`
 
 GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPorts
 
-`func (o *ServiceTemplateRequest) SetPorts(v []int32)`
+`func (o *ServiceTemplateRequest) SetPorts(v []int64)`
 
 SetPorts sets Ports field to given value.
 

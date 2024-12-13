@@ -30,7 +30,7 @@ type WritableCircuitRequest struct {
 	InstallDate     NullableString                      `json:"install_date,omitempty"`
 	TerminationDate NullableString                      `json:"termination_date,omitempty"`
 	// Committed rate
-	CommitRate           NullableInt32                                  `json:"commit_rate,omitempty"`
+	CommitRate           NullableInt64                                  `json:"commit_rate,omitempty"`
 	Description          *string                                        `json:"description,omitempty"`
 	Distance             NullableFloat64                                `json:"distance,omitempty"`
 	DistanceUnit         NullableCircuitRequestDistanceUnit             `json:"distance_unit,omitempty"`
@@ -340,9 +340,9 @@ func (o *WritableCircuitRequest) UnsetTerminationDate() {
 }
 
 // GetCommitRate returns the CommitRate field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableCircuitRequest) GetCommitRate() int32 {
+func (o *WritableCircuitRequest) GetCommitRate() int64 {
 	if o == nil || IsNil(o.CommitRate.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CommitRate.Get()
@@ -351,7 +351,7 @@ func (o *WritableCircuitRequest) GetCommitRate() int32 {
 // GetCommitRateOk returns a tuple with the CommitRate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableCircuitRequest) GetCommitRateOk() (*int32, bool) {
+func (o *WritableCircuitRequest) GetCommitRateOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -367,8 +367,8 @@ func (o *WritableCircuitRequest) HasCommitRate() bool {
 	return false
 }
 
-// SetCommitRate gets a reference to the given NullableInt32 and assigns it to the CommitRate field.
-func (o *WritableCircuitRequest) SetCommitRate(v int32) {
+// SetCommitRate gets a reference to the given NullableInt64 and assigns it to the CommitRate field.
+func (o *WritableCircuitRequest) SetCommitRate(v int64) {
 	o.CommitRate.Set(&v)
 }
 

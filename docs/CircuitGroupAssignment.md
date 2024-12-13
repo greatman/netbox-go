@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **DisplayUrl** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewCircuitGroupAssignment
 
-`func NewCircuitGroupAssignment(id int32, url string, displayUrl string, display string, group BriefCircuitGroup, circuit BriefCircuit, created NullableTime, lastUpdated NullableTime, ) *CircuitGroupAssignment`
+`func NewCircuitGroupAssignment(id int64, url string, displayUrl string, display string, group BriefCircuitGroup, circuit BriefCircuit, created NullableTime, lastUpdated NullableTime, ) *CircuitGroupAssignment`
 
 NewCircuitGroupAssignment instantiates a new CircuitGroupAssignment object
 This constructor will assign default values to properties that have it defined,
@@ -36,20 +36,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *CircuitGroupAssignment) GetId() int32`
+`func (o *CircuitGroupAssignment) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *CircuitGroupAssignment) GetIdOk() (*int32, bool)`
+`func (o *CircuitGroupAssignment) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *CircuitGroupAssignment) SetId(v int32)`
+`func (o *CircuitGroupAssignment) SetId(v int64)`
 
 SetId sets Id field to given value.
 

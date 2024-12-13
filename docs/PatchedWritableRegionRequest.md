@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Slug** | Pointer to **string** |  | [optional] 
-**Parent** | Pointer to **NullableInt32** |  | [optional] 
+**Parent** | Pointer to **NullableInt64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -82,20 +82,20 @@ HasSlug returns a boolean if a field has been set.
 
 ### GetParent
 
-`func (o *PatchedWritableRegionRequest) GetParent() int32`
+`func (o *PatchedWritableRegionRequest) GetParent() int64`
 
 GetParent returns the Parent field if non-nil, zero value otherwise.
 
 ### GetParentOk
 
-`func (o *PatchedWritableRegionRequest) GetParentOk() (*int32, bool)`
+`func (o *PatchedWritableRegionRequest) GetParentOk() (*int64, bool)`
 
 GetParentOk returns a tuple with the Parent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParent
 
-`func (o *PatchedWritableRegionRequest) SetParent(v int32)`
+`func (o *PatchedWritableRegionRequest) SetParent(v int64)`
 
 SetParent sets Parent field to given value.
 

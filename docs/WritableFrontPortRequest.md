@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **Label** | Pointer to **string** | Physical label | [optional] 
 **Type** | [**FrontPortTypeValue**](FrontPortTypeValue.md) |  | 
 **Color** | Pointer to **string** |  | [optional] 
-**RearPort** | **int32** |  | 
-**RearPortPosition** | Pointer to **int32** | Mapped position on corresponding rear port | [optional] 
+**RearPort** | **int64** |  | 
+**RearPortPosition** | Pointer to **int64** | Mapped position on corresponding rear port | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **MarkConnected** | Pointer to **bool** | Treat as if a cable is connected | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewWritableFrontPortRequest
 
-`func NewWritableFrontPortRequest(device BriefDeviceRequest, name string, type_ FrontPortTypeValue, rearPort int32, ) *WritableFrontPortRequest`
+`func NewWritableFrontPortRequest(device BriefDeviceRequest, name string, type_ FrontPortTypeValue, rearPort int64, ) *WritableFrontPortRequest`
 
 NewWritableFrontPortRequest instantiates a new WritableFrontPortRequest object
 This constructor will assign default values to properties that have it defined,
@@ -183,40 +183,40 @@ HasColor returns a boolean if a field has been set.
 
 ### GetRearPort
 
-`func (o *WritableFrontPortRequest) GetRearPort() int32`
+`func (o *WritableFrontPortRequest) GetRearPort() int64`
 
 GetRearPort returns the RearPort field if non-nil, zero value otherwise.
 
 ### GetRearPortOk
 
-`func (o *WritableFrontPortRequest) GetRearPortOk() (*int32, bool)`
+`func (o *WritableFrontPortRequest) GetRearPortOk() (*int64, bool)`
 
 GetRearPortOk returns a tuple with the RearPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRearPort
 
-`func (o *WritableFrontPortRequest) SetRearPort(v int32)`
+`func (o *WritableFrontPortRequest) SetRearPort(v int64)`
 
 SetRearPort sets RearPort field to given value.
 
 
 ### GetRearPortPosition
 
-`func (o *WritableFrontPortRequest) GetRearPortPosition() int32`
+`func (o *WritableFrontPortRequest) GetRearPortPosition() int64`
 
 GetRearPortPosition returns the RearPortPosition field if non-nil, zero value otherwise.
 
 ### GetRearPortPositionOk
 
-`func (o *WritableFrontPortRequest) GetRearPortPositionOk() (*int32, bool)`
+`func (o *WritableFrontPortRequest) GetRearPortPositionOk() (*int64, bool)`
 
 GetRearPortPositionOk returns a tuple with the RearPortPosition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRearPortPosition
 
-`func (o *WritableFrontPortRequest) SetRearPortPosition(v int32)`
+`func (o *WritableFrontPortRequest) SetRearPortPosition(v int64)`
 
 SetRearPortPosition sets RearPortPosition field to given value.
 

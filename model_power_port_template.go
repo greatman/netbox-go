@@ -21,7 +21,7 @@ var _ MappedNullable = &PowerPortTemplate{}
 
 // PowerPortTemplate Extends the built-in ModelSerializer to enforce calling full_clean() on a copy of the associated instance during validation. (DRF does not do this by default; see https://github.com/encode/django-rest-framework/issues/3144)
 type PowerPortTemplate struct {
-	Id         int32                   `json:"id"`
+	Id         int64                   `json:"id"`
 	Url        string                  `json:"url"`
 	Display    string                  `json:"display"`
 	DeviceType NullableBriefDeviceType `json:"device_type,omitempty"`
@@ -32,9 +32,9 @@ type PowerPortTemplate struct {
 	Label *string               `json:"label,omitempty"`
 	Type  NullablePowerPortType `json:"type,omitempty"`
 	// Maximum power draw (watts)
-	MaximumDraw NullableInt32 `json:"maximum_draw,omitempty"`
+	MaximumDraw NullableInt64 `json:"maximum_draw,omitempty"`
 	// Allocated power draw (watts)
-	AllocatedDraw        NullableInt32 `json:"allocated_draw,omitempty"`
+	AllocatedDraw        NullableInt64 `json:"allocated_draw,omitempty"`
 	Description          *string       `json:"description,omitempty"`
 	Created              NullableTime  `json:"created"`
 	LastUpdated          NullableTime  `json:"last_updated"`
@@ -47,7 +47,7 @@ type _PowerPortTemplate PowerPortTemplate
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPowerPortTemplate(id int32, url string, display string, name string, created NullableTime, lastUpdated NullableTime) *PowerPortTemplate {
+func NewPowerPortTemplate(id int64, url string, display string, name string, created NullableTime, lastUpdated NullableTime) *PowerPortTemplate {
 	this := PowerPortTemplate{}
 	this.Id = id
 	this.Url = url
@@ -67,9 +67,9 @@ func NewPowerPortTemplateWithDefaults() *PowerPortTemplate {
 }
 
 // GetId returns the Id field value
-func (o *PowerPortTemplate) GetId() int32 {
+func (o *PowerPortTemplate) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -78,7 +78,7 @@ func (o *PowerPortTemplate) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PowerPortTemplate) GetIdOk() (*int32, bool) {
+func (o *PowerPortTemplate) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -86,7 +86,7 @@ func (o *PowerPortTemplate) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *PowerPortTemplate) SetId(v int32) {
+func (o *PowerPortTemplate) SetId(v int64) {
 	o.Id = v
 }
 
@@ -324,9 +324,9 @@ func (o *PowerPortTemplate) UnsetType() {
 }
 
 // GetMaximumDraw returns the MaximumDraw field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PowerPortTemplate) GetMaximumDraw() int32 {
+func (o *PowerPortTemplate) GetMaximumDraw() int64 {
 	if o == nil || IsNil(o.MaximumDraw.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.MaximumDraw.Get()
@@ -335,7 +335,7 @@ func (o *PowerPortTemplate) GetMaximumDraw() int32 {
 // GetMaximumDrawOk returns a tuple with the MaximumDraw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PowerPortTemplate) GetMaximumDrawOk() (*int32, bool) {
+func (o *PowerPortTemplate) GetMaximumDrawOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -351,8 +351,8 @@ func (o *PowerPortTemplate) HasMaximumDraw() bool {
 	return false
 }
 
-// SetMaximumDraw gets a reference to the given NullableInt32 and assigns it to the MaximumDraw field.
-func (o *PowerPortTemplate) SetMaximumDraw(v int32) {
+// SetMaximumDraw gets a reference to the given NullableInt64 and assigns it to the MaximumDraw field.
+func (o *PowerPortTemplate) SetMaximumDraw(v int64) {
 	o.MaximumDraw.Set(&v)
 }
 
@@ -367,9 +367,9 @@ func (o *PowerPortTemplate) UnsetMaximumDraw() {
 }
 
 // GetAllocatedDraw returns the AllocatedDraw field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PowerPortTemplate) GetAllocatedDraw() int32 {
+func (o *PowerPortTemplate) GetAllocatedDraw() int64 {
 	if o == nil || IsNil(o.AllocatedDraw.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.AllocatedDraw.Get()
@@ -378,7 +378,7 @@ func (o *PowerPortTemplate) GetAllocatedDraw() int32 {
 // GetAllocatedDrawOk returns a tuple with the AllocatedDraw field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PowerPortTemplate) GetAllocatedDrawOk() (*int32, bool) {
+func (o *PowerPortTemplate) GetAllocatedDrawOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -394,8 +394,8 @@ func (o *PowerPortTemplate) HasAllocatedDraw() bool {
 	return false
 }
 
-// SetAllocatedDraw gets a reference to the given NullableInt32 and assigns it to the AllocatedDraw field.
-func (o *PowerPortTemplate) SetAllocatedDraw(v int32) {
+// SetAllocatedDraw gets a reference to the given NullableInt64 and assigns it to the AllocatedDraw field.
+func (o *PowerPortTemplate) SetAllocatedDraw(v int64) {
 	o.AllocatedDraw.Set(&v)
 }
 

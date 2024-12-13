@@ -21,7 +21,7 @@ var _ MappedNullable = &Tenant{}
 
 // Tenant Adds support for custom fields and tags.
 type Tenant struct {
-	Id                   int32                    `json:"id"`
+	Id                   int64                    `json:"id"`
 	Url                  string                   `json:"url"`
 	DisplayUrl           string                   `json:"display_url"`
 	Display              string                   `json:"display"`
@@ -53,7 +53,7 @@ type _Tenant Tenant
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTenant(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, circuitCount int64, deviceCount int64, ipaddressCount int64, prefixCount int64, rackCount int64, siteCount int64, virtualmachineCount int64, vlanCount int64, vrfCount int64, clusterCount int64) *Tenant {
+func NewTenant(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, circuitCount int64, deviceCount int64, ipaddressCount int64, prefixCount int64, rackCount int64, siteCount int64, virtualmachineCount int64, vlanCount int64, vrfCount int64, clusterCount int64) *Tenant {
 	this := Tenant{}
 	this.Id = id
 	this.Url = url
@@ -85,9 +85,9 @@ func NewTenantWithDefaults() *Tenant {
 }
 
 // GetId returns the Id field value
-func (o *Tenant) GetId() int32 {
+func (o *Tenant) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -96,7 +96,7 @@ func (o *Tenant) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Tenant) GetIdOk() (*int32, bool) {
+func (o *Tenant) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -104,7 +104,7 @@ func (o *Tenant) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Tenant) SetId(v int32) {
+func (o *Tenant) SetId(v int64) {
 	o.Id = v
 }
 

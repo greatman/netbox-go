@@ -317,7 +317,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN group.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN group.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -335,7 +335,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN group. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN group. | 
 
 ### Other Parameters
 
@@ -409,13 +409,13 @@ func main() {
 	descriptionNie := []string{"Inner_example"} // []string |  (optional)
 	descriptionNiew := []string{"Inner_example"} // []string |  (optional)
 	descriptionNisw := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -423,7 +423,7 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 	name := []string{"Inner_example"} // []string |  (optional)
 	nameEmpty := true // bool |  (optional)
@@ -436,12 +436,12 @@ func main() {
 	nameNie := []string{"Inner_example"} // []string |  (optional)
 	nameNiew := []string{"Inner_example"} // []string |  (optional)
 	nameNisw := []string{"Inner_example"} // []string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	parent := []string{"Inner_example"} // []string |  (optional)
 	parentN := []string{"Inner_example"} // []string |  (optional)
-	parentId := []*int32{int32(123)} // []*int32 |  (optional)
-	parentIdN := []*int32{int32(123)} // []*int32 |  (optional)
+	parentId := []*int64{int64(123)} // []*int64 |  (optional)
+	parentIdN := []*int64{int64(123)} // []*int64 |  (optional)
 	q := "q_example" // string | Search (optional)
 	slug := []string{"Inner_example"} // []string |  (optional)
 	slugEmpty := true // bool |  (optional)
@@ -504,13 +504,13 @@ Name | Type | Description  | Notes
  **descriptionNie** | **[]string** |  | 
  **descriptionNiew** | **[]string** |  | 
  **descriptionNisw** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
  **name** | **[]string** |  | 
  **nameEmpty** | **bool** |  | 
@@ -531,12 +531,12 @@ Name | Type | Description  | Notes
  **nameNie** | **[]string** |  | 
  **nameNiew** | **[]string** |  | 
  **nameNisw** | **[]string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **parent** | **[]string** |  | 
  **parentN** | **[]string** |  | 
- **parentId** | **[]int32** |  | 
- **parentIdN** | **[]int32** |  | 
+ **parentId** | **[]int64** |  | 
+ **parentIdN** | **[]int64** |  | 
  **q** | **string** | Search | 
  **slug** | **[]string** |  | 
  **slugEmpty** | **bool** |  | 
@@ -592,7 +592,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN group.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN group.
 	patchedWritableWirelessLANGroupRequest := *openapiclient.NewPatchedWritableWirelessLANGroupRequest() // PatchedWritableWirelessLANGroupRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -613,7 +613,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN group. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN group. | 
 
 ### Other Parameters
 
@@ -664,7 +664,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN group.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN group.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -684,7 +684,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN group. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN group. | 
 
 ### Other Parameters
 
@@ -734,7 +734,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN group.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN group.
 	writableWirelessLANGroupRequest := *openapiclient.NewWritableWirelessLANGroupRequest("Name_example", "Slug_example") // WritableWirelessLANGroupRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -755,7 +755,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN group. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN group. | 
 
 ### Other Parameters
 
@@ -1068,7 +1068,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1086,7 +1086,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN. | 
 
 ### Other Parameters
 
@@ -1193,15 +1193,15 @@ func main() {
 	groupN := []string{"Inner_example"} // []string |  (optional)
 	groupId := []string{"Inner_example"} // []string |  (optional)
 	groupIdN := []string{"Inner_example"} // []string |  (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceId := []int32{int32(123)} // []int32 |  (optional)
-	interfaceIdN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
+	interfaceId := []int64{int64(123)} // []int64 |  (optional)
+	interfaceIdN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -1209,26 +1209,26 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	location := []string{"Inner_example"} // []string |  (optional)
 	locationN := []string{"Inner_example"} // []string |  (optional)
 	locationId := []string{"Inner_example"} // []string |  (optional)
 	locationIdN := []string{"Inner_example"} // []string |  (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	region := []string{"Inner_example"} // []string |  (optional)
 	regionN := []string{"Inner_example"} // []string |  (optional)
 	regionId := []string{"Inner_example"} // []string |  (optional)
 	regionIdN := []string{"Inner_example"} // []string |  (optional)
-	scopeId := []int32{int32(123)} // []int32 |  (optional)
+	scopeId := []int64{int64(123)} // []int64 |  (optional)
 	scopeIdEmpty := true // bool |  (optional)
-	scopeIdGt := []int32{int32(123)} // []int32 |  (optional)
-	scopeIdGte := []int32{int32(123)} // []int32 |  (optional)
-	scopeIdLt := []int32{int32(123)} // []int32 |  (optional)
-	scopeIdLte := []int32{int32(123)} // []int32 |  (optional)
-	scopeIdN := []int32{int32(123)} // []int32 |  (optional)
+	scopeIdGt := []int64{int64(123)} // []int64 |  (optional)
+	scopeIdGte := []int64{int64(123)} // []int64 |  (optional)
+	scopeIdLt := []int64{int64(123)} // []int64 |  (optional)
+	scopeIdLte := []int64{int64(123)} // []int64 |  (optional)
+	scopeIdN := []int64{int64(123)} // []int64 |  (optional)
 	scopeType := "scopeType_example" // string |  (optional)
 	scopeTypeN := "scopeTypeN_example" // string |  (optional)
 	site := []string{"Inner_example"} // []string | Site (slug) (optional)
@@ -1237,8 +1237,8 @@ func main() {
 	siteGroupN := []string{"Inner_example"} // []string |  (optional)
 	siteGroupId := []string{"Inner_example"} // []string |  (optional)
 	siteGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	siteId := []int32{int32(123)} // []int32 | Site (ID) (optional)
-	siteIdN := []int32{int32(123)} // []int32 | Site (ID) (optional)
+	siteId := []int64{int64(123)} // []int64 | Site (ID) (optional)
+	siteIdN := []int64{int64(123)} // []int64 | Site (ID) (optional)
 	ssid := []string{"Inner_example"} // []string |  (optional)
 	ssidEmpty := true // bool |  (optional)
 	ssidIc := []string{"Inner_example"} // []string |  (optional)
@@ -1269,11 +1269,11 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	vlanId := []*int32{int32(123)} // []*int32 |  (optional)
-	vlanIdN := []*int32{int32(123)} // []*int32 |  (optional)
+	vlanId := []*int64{int64(123)} // []*int64 |  (optional)
+	vlanIdN := []*int64{int64(123)} // []*int64 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1354,15 +1354,15 @@ Name | Type | Description  | Notes
  **groupN** | **[]string** |  | 
  **groupId** | **[]string** |  | 
  **groupIdN** | **[]string** |  | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **interfaceId** | **[]int32** |  | 
- **interfaceIdN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
+ **interfaceId** | **[]int64** |  | 
+ **interfaceIdN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -1370,26 +1370,26 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **location** | **[]string** |  | 
  **locationN** | **[]string** |  | 
  **locationId** | **[]string** |  | 
  **locationIdN** | **[]string** |  | 
  **modifiedByRequest** | **string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **region** | **[]string** |  | 
  **regionN** | **[]string** |  | 
  **regionId** | **[]string** |  | 
  **regionIdN** | **[]string** |  | 
- **scopeId** | **[]int32** |  | 
+ **scopeId** | **[]int64** |  | 
  **scopeIdEmpty** | **bool** |  | 
- **scopeIdGt** | **[]int32** |  | 
- **scopeIdGte** | **[]int32** |  | 
- **scopeIdLt** | **[]int32** |  | 
- **scopeIdLte** | **[]int32** |  | 
- **scopeIdN** | **[]int32** |  | 
+ **scopeIdGt** | **[]int64** |  | 
+ **scopeIdGte** | **[]int64** |  | 
+ **scopeIdLt** | **[]int64** |  | 
+ **scopeIdLte** | **[]int64** |  | 
+ **scopeIdN** | **[]int64** |  | 
  **scopeType** | **string** |  | 
  **scopeTypeN** | **string** |  | 
  **site** | **[]string** | Site (slug) | 
@@ -1398,8 +1398,8 @@ Name | Type | Description  | Notes
  **siteGroupN** | **[]string** |  | 
  **siteGroupId** | **[]string** |  | 
  **siteGroupIdN** | **[]string** |  | 
- **siteId** | **[]int32** | Site (ID) | 
- **siteIdN** | **[]int32** | Site (ID) | 
+ **siteId** | **[]int64** | Site (ID) | 
+ **siteIdN** | **[]int64** | Site (ID) | 
  **ssid** | **[]string** |  | 
  **ssidEmpty** | **bool** |  | 
  **ssidIc** | **[]string** |  | 
@@ -1430,11 +1430,11 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **updatedByRequest** | **string** |  | 
- **vlanId** | **[]int32** |  | 
- **vlanIdN** | **[]int32** |  | 
+ **vlanId** | **[]int64** |  | 
+ **vlanIdN** | **[]int64** |  | 
 
 ### Return type
 
@@ -1475,7 +1475,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN.
 	patchedWritableWirelessLANRequest := *openapiclient.NewPatchedWritableWirelessLANRequest() // PatchedWritableWirelessLANRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1496,7 +1496,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN. | 
 
 ### Other Parameters
 
@@ -1547,7 +1547,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1567,7 +1567,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN. | 
 
 ### Other Parameters
 
@@ -1617,7 +1617,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless LAN.
+	id := int64(56) // int64 | A unique integer value identifying this wireless LAN.
 	writableWirelessLANRequest := *openapiclient.NewWritableWirelessLANRequest("Ssid_example") // WritableWirelessLANRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -1638,7 +1638,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless LAN. | 
+**id** | **int64** | A unique integer value identifying this wireless LAN. | 
 
 ### Other Parameters
 
@@ -1951,7 +1951,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless link.
+	id := int64(56) // int64 | A unique integer value identifying this wireless link.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1969,7 +1969,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless link. | 
+**id** | **int64** | A unique integer value identifying this wireless link. | 
 
 ### Other Parameters
 
@@ -2080,17 +2080,17 @@ func main() {
 	distanceLte := []float64{float64(123)} // []float64 |  (optional)
 	distanceN := []float64{float64(123)} // []float64 |  (optional)
 	distanceUnit := openapiclient.circuits_circuits_list_distance_unit_parameter("ft") // CircuitsCircuitsListDistanceUnitParameter | * `km` - Kilometers * `m` - Meters * `mi` - Miles * `ft` - Feet (optional)
-	id := []int32{int32(123)} // []int32 |  (optional)
+	id := []int64{int64(123)} // []int64 |  (optional)
 	idEmpty := true // bool |  (optional)
-	idGt := []int32{int32(123)} // []int32 |  (optional)
-	idGte := []int32{int32(123)} // []int32 |  (optional)
-	idLt := []int32{int32(123)} // []int32 |  (optional)
-	idLte := []int32{int32(123)} // []int32 |  (optional)
-	idN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceAId := []int32{int32(123)} // []int32 |  (optional)
-	interfaceAIdN := []int32{int32(123)} // []int32 |  (optional)
-	interfaceBId := []int32{int32(123)} // []int32 |  (optional)
-	interfaceBIdN := []int32{int32(123)} // []int32 |  (optional)
+	idGt := []int64{int64(123)} // []int64 |  (optional)
+	idGte := []int64{int64(123)} // []int64 |  (optional)
+	idLt := []int64{int64(123)} // []int64 |  (optional)
+	idLte := []int64{int64(123)} // []int64 |  (optional)
+	idN := []int64{int64(123)} // []int64 |  (optional)
+	interfaceAId := []int64{int64(123)} // []int64 |  (optional)
+	interfaceAIdN := []int64{int64(123)} // []int64 |  (optional)
+	interfaceBId := []int64{int64(123)} // []int64 |  (optional)
+	interfaceBIdN := []int64{int64(123)} // []int64 |  (optional)
 	lastUpdated := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedEmpty := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedGt := []time.Time{time.Now()} // []time.Time |  (optional)
@@ -2098,9 +2098,9 @@ func main() {
 	lastUpdatedLt := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedLte := []time.Time{time.Now()} // []time.Time |  (optional)
 	lastUpdatedN := []time.Time{time.Now()} // []time.Time |  (optional)
-	limit := int32(56) // int32 | Number of results to return per page. (optional)
+	limit := int64(56) // int64 | Number of results to return per page. (optional)
 	modifiedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
-	offset := int32(56) // int32 | The initial index from which to return the results. (optional)
+	offset := int64(56) // int64 | The initial index from which to return the results. (optional)
 	ordering := "ordering_example" // string | Which field to use when ordering the results. (optional)
 	q := "q_example" // string | Search (optional)
 	ssid := []string{"Inner_example"} // []string |  (optional)
@@ -2133,8 +2133,8 @@ func main() {
 	tenantGroupN := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupId := []string{"Inner_example"} // []string |  (optional)
 	tenantGroupIdN := []string{"Inner_example"} // []string |  (optional)
-	tenantId := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
-	tenantIdN := []*int32{int32(123)} // []*int32 | Tenant (ID) (optional)
+	tenantId := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
+	tenantIdN := []*int64{int64(123)} // []*int64 | Tenant (ID) (optional)
 	updatedByRequest := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -2220,17 +2220,17 @@ Name | Type | Description  | Notes
  **distanceLte** | **[]float64** |  | 
  **distanceN** | **[]float64** |  | 
  **distanceUnit** | [**CircuitsCircuitsListDistanceUnitParameter**](CircuitsCircuitsListDistanceUnitParameter.md) | * &#x60;km&#x60; - Kilometers * &#x60;m&#x60; - Meters * &#x60;mi&#x60; - Miles * &#x60;ft&#x60; - Feet | 
- **id** | **[]int32** |  | 
+ **id** | **[]int64** |  | 
  **idEmpty** | **bool** |  | 
- **idGt** | **[]int32** |  | 
- **idGte** | **[]int32** |  | 
- **idLt** | **[]int32** |  | 
- **idLte** | **[]int32** |  | 
- **idN** | **[]int32** |  | 
- **interfaceAId** | **[]int32** |  | 
- **interfaceAIdN** | **[]int32** |  | 
- **interfaceBId** | **[]int32** |  | 
- **interfaceBIdN** | **[]int32** |  | 
+ **idGt** | **[]int64** |  | 
+ **idGte** | **[]int64** |  | 
+ **idLt** | **[]int64** |  | 
+ **idLte** | **[]int64** |  | 
+ **idN** | **[]int64** |  | 
+ **interfaceAId** | **[]int64** |  | 
+ **interfaceAIdN** | **[]int64** |  | 
+ **interfaceBId** | **[]int64** |  | 
+ **interfaceBIdN** | **[]int64** |  | 
  **lastUpdated** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedEmpty** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedGt** | [**[]time.Time**](time.Time.md) |  | 
@@ -2238,9 +2238,9 @@ Name | Type | Description  | Notes
  **lastUpdatedLt** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedLte** | [**[]time.Time**](time.Time.md) |  | 
  **lastUpdatedN** | [**[]time.Time**](time.Time.md) |  | 
- **limit** | **int32** | Number of results to return per page. | 
+ **limit** | **int64** | Number of results to return per page. | 
  **modifiedByRequest** | **string** |  | 
- **offset** | **int32** | The initial index from which to return the results. | 
+ **offset** | **int64** | The initial index from which to return the results. | 
  **ordering** | **string** | Which field to use when ordering the results. | 
  **q** | **string** | Search | 
  **ssid** | **[]string** |  | 
@@ -2273,8 +2273,8 @@ Name | Type | Description  | Notes
  **tenantGroupN** | **[]string** |  | 
  **tenantGroupId** | **[]string** |  | 
  **tenantGroupIdN** | **[]string** |  | 
- **tenantId** | **[]int32** | Tenant (ID) | 
- **tenantIdN** | **[]int32** | Tenant (ID) | 
+ **tenantId** | **[]int64** | Tenant (ID) | 
+ **tenantIdN** | **[]int64** | Tenant (ID) | 
  **updatedByRequest** | **string** |  | 
 
 ### Return type
@@ -2316,7 +2316,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless link.
+	id := int64(56) // int64 | A unique integer value identifying this wireless link.
 	patchedWritableWirelessLinkRequest := *openapiclient.NewPatchedWritableWirelessLinkRequest() // PatchedWritableWirelessLinkRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -2337,7 +2337,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless link. | 
+**id** | **int64** | A unique integer value identifying this wireless link. | 
 
 ### Other Parameters
 
@@ -2388,7 +2388,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless link.
+	id := int64(56) // int64 | A unique integer value identifying this wireless link.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2408,7 +2408,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless link. | 
+**id** | **int64** | A unique integer value identifying this wireless link. | 
 
 ### Other Parameters
 
@@ -2458,7 +2458,7 @@ import (
 )
 
 func main() {
-	id := int32(56) // int32 | A unique integer value identifying this wireless link.
+	id := int64(56) // int64 | A unique integer value identifying this wireless link.
 	writableWirelessLinkRequest := *openapiclient.NewWritableWirelessLinkRequest(*openapiclient.NewBriefInterfaceRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example"), *openapiclient.NewBriefInterfaceRequest(*openapiclient.NewBriefDeviceRequest(), "Name_example")) // WritableWirelessLinkRequest | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -2479,7 +2479,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **int32** | A unique integer value identifying this wireless link. | 
+**id** | **int64** | A unique integer value identifying this wireless link. | 
 
 ### Other Parameters
 

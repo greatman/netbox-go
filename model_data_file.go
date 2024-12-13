@@ -21,7 +21,7 @@ var _ MappedNullable = &DataFile{}
 
 // DataFile Adds support for custom fields and tags.
 type DataFile struct {
-	Id         int32           `json:"id"`
+	Id         int64           `json:"id"`
 	Url        string          `json:"url"`
 	DisplayUrl string          `json:"display_url"`
 	Display    string          `json:"display"`
@@ -29,7 +29,7 @@ type DataFile struct {
 	// File path relative to the data source's root
 	Path        string    `json:"path"`
 	LastUpdated time.Time `json:"last_updated"`
-	Size        int32     `json:"size"`
+	Size        int64     `json:"size"`
 	// SHA256 hash of the file data
 	Hash                 string `json:"hash"`
 	AdditionalProperties map[string]interface{}
@@ -41,7 +41,7 @@ type _DataFile DataFile
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewDataFile(id int32, url string, displayUrl string, display string, source BriefDataSource, path string, lastUpdated time.Time, size int32, hash string) *DataFile {
+func NewDataFile(id int64, url string, displayUrl string, display string, source BriefDataSource, path string, lastUpdated time.Time, size int64, hash string) *DataFile {
 	this := DataFile{}
 	this.Id = id
 	this.Url = url
@@ -64,9 +64,9 @@ func NewDataFileWithDefaults() *DataFile {
 }
 
 // GetId returns the Id field value
-func (o *DataFile) GetId() int32 {
+func (o *DataFile) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -75,7 +75,7 @@ func (o *DataFile) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *DataFile) GetIdOk() (*int32, bool) {
+func (o *DataFile) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -83,7 +83,7 @@ func (o *DataFile) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *DataFile) SetId(v int32) {
+func (o *DataFile) SetId(v int64) {
 	o.Id = v
 }
 
@@ -232,9 +232,9 @@ func (o *DataFile) SetLastUpdated(v time.Time) {
 }
 
 // GetSize returns the Size field value
-func (o *DataFile) GetSize() int32 {
+func (o *DataFile) GetSize() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -243,7 +243,7 @@ func (o *DataFile) GetSize() int32 {
 
 // GetSizeOk returns a tuple with the Size field value
 // and a boolean to check if the value has been set.
-func (o *DataFile) GetSizeOk() (*int32, bool) {
+func (o *DataFile) GetSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -251,7 +251,7 @@ func (o *DataFile) GetSizeOk() (*int32, bool) {
 }
 
 // SetSize sets field value
-func (o *DataFile) SetSize(v int32) {
+func (o *DataFile) SetSize(v int64) {
 	o.Size = v
 }
 

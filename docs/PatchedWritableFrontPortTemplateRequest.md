@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Type** | Pointer to [**FrontPortTypeValue**](FrontPortTypeValue.md) |  | [optional] 
 **Color** | Pointer to **string** |  | [optional] 
 **RearPort** | Pointer to [**BriefRearPortTemplateRequest**](BriefRearPortTemplateRequest.md) |  | [optional] 
-**RearPortPosition** | Pointer to **int32** |  | [optional] 
+**RearPortPosition** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -230,20 +230,20 @@ HasRearPort returns a boolean if a field has been set.
 
 ### GetRearPortPosition
 
-`func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPosition() int32`
+`func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPosition() int64`
 
 GetRearPortPosition returns the RearPortPosition field if non-nil, zero value otherwise.
 
 ### GetRearPortPositionOk
 
-`func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPositionOk() (*int32, bool)`
+`func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPositionOk() (*int64, bool)`
 
 GetRearPortPositionOk returns a tuple with the RearPortPosition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRearPortPosition
 
-`func (o *PatchedWritableFrontPortTemplateRequest) SetRearPortPosition(v int32)`
+`func (o *PatchedWritableFrontPortTemplateRequest) SetRearPortPosition(v int64)`
 
 SetRearPortPosition sets RearPortPosition field to given value.
 

@@ -28,7 +28,7 @@ type PatchedWritableFrontPortTemplateRequest struct {
 	Type                 *FrontPortTypeValue           `json:"type,omitempty"`
 	Color                *string                       `json:"color,omitempty" validate:"regexp=^[0-9a-f]{6}$"`
 	RearPort             *BriefRearPortTemplateRequest `json:"rear_port,omitempty"`
-	RearPortPosition     *int32                        `json:"rear_port_position,omitempty"`
+	RearPortPosition     *int64                        `json:"rear_port_position,omitempty"`
 	Description          *string                       `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -299,9 +299,9 @@ func (o *PatchedWritableFrontPortTemplateRequest) SetRearPort(v BriefRearPortTem
 }
 
 // GetRearPortPosition returns the RearPortPosition field value if set, zero value otherwise.
-func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPosition() int32 {
+func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPosition() int64 {
 	if o == nil || IsNil(o.RearPortPosition) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.RearPortPosition
@@ -309,7 +309,7 @@ func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPosition() int32 {
 
 // GetRearPortPositionOk returns a tuple with the RearPortPosition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPositionOk() (*int32, bool) {
+func (o *PatchedWritableFrontPortTemplateRequest) GetRearPortPositionOk() (*int64, bool) {
 	if o == nil || IsNil(o.RearPortPosition) {
 		return nil, false
 	}
@@ -325,8 +325,8 @@ func (o *PatchedWritableFrontPortTemplateRequest) HasRearPortPosition() bool {
 	return false
 }
 
-// SetRearPortPosition gets a reference to the given int32 and assigns it to the RearPortPosition field.
-func (o *PatchedWritableFrontPortTemplateRequest) SetRearPortPosition(v int32) {
+// SetRearPortPosition gets a reference to the given int64 and assigns it to the RearPortPosition field.
+func (o *PatchedWritableFrontPortTemplateRequest) SetRearPortPosition(v int64) {
 	o.RearPortPosition = &v
 }
 

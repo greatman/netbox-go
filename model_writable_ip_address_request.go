@@ -28,7 +28,7 @@ type WritableIPAddressRequest struct {
 	AssignedObjectType NullableString                              `json:"assigned_object_type,omitempty"`
 	AssignedObjectId   NullableInt64                               `json:"assigned_object_id,omitempty"`
 	// The IP for which this address is the \"outside\" IP
-	NatInside NullableInt32 `json:"nat_inside,omitempty"`
+	NatInside NullableInt64 `json:"nat_inside,omitempty"`
 	// Hostname or FQDN (not case-sensitive)
 	DnsName              *string                `json:"dns_name,omitempty" validate:"regexp=^([0-9A-Za-z_-]+|\\\\*)(\\\\.[0-9A-Za-z_-]+)*\\\\.?$"`
 	Description          *string                `json:"description,omitempty"`
@@ -330,9 +330,9 @@ func (o *WritableIPAddressRequest) UnsetAssignedObjectId() {
 }
 
 // GetNatInside returns the NatInside field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *WritableIPAddressRequest) GetNatInside() int32 {
+func (o *WritableIPAddressRequest) GetNatInside() int64 {
 	if o == nil || IsNil(o.NatInside.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.NatInside.Get()
@@ -341,7 +341,7 @@ func (o *WritableIPAddressRequest) GetNatInside() int32 {
 // GetNatInsideOk returns a tuple with the NatInside field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *WritableIPAddressRequest) GetNatInsideOk() (*int32, bool) {
+func (o *WritableIPAddressRequest) GetNatInsideOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -357,8 +357,8 @@ func (o *WritableIPAddressRequest) HasNatInside() bool {
 	return false
 }
 
-// SetNatInside gets a reference to the given NullableInt32 and assigns it to the NatInside field.
-func (o *WritableIPAddressRequest) SetNatInside(v int32) {
+// SetNatInside gets a reference to the given NullableInt64 and assigns it to the NatInside field.
+func (o *WritableIPAddressRequest) SetNatInside(v int64) {
 	o.NatInside.Set(&v)
 }
 

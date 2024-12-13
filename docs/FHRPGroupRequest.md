@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** |  | [optional] 
 **Protocol** | [**BriefFHRPGroupProtocol**](BriefFHRPGroupProtocol.md) |  | 
-**GroupId** | **int32** |  | 
+**GroupId** | **int64** |  | 
 **AuthType** | Pointer to [**NullableAuthenticationType**](AuthenticationType.md) |  | [optional] 
 **AuthKey** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewFHRPGroupRequest
 
-`func NewFHRPGroupRequest(protocol BriefFHRPGroupProtocol, groupId int32, ) *FHRPGroupRequest`
+`func NewFHRPGroupRequest(protocol BriefFHRPGroupProtocol, groupId int64, ) *FHRPGroupRequest`
 
 NewFHRPGroupRequest instantiates a new FHRPGroupRequest object
 This constructor will assign default values to properties that have it defined,
@@ -80,20 +80,20 @@ SetProtocol sets Protocol field to given value.
 
 ### GetGroupId
 
-`func (o *FHRPGroupRequest) GetGroupId() int32`
+`func (o *FHRPGroupRequest) GetGroupId() int64`
 
 GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
 ### GetGroupIdOk
 
-`func (o *FHRPGroupRequest) GetGroupIdOk() (*int32, bool)`
+`func (o *FHRPGroupRequest) GetGroupIdOk() (*int64, bool)`
 
 GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGroupId
 
-`func (o *FHRPGroupRequest) SetGroupId(v int32)`
+`func (o *FHRPGroupRequest) SetGroupId(v int64)`
 
 SetGroupId sets GroupId field to given value.
 

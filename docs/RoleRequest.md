@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
 **Slug** | **string** |  | 
-**Weight** | Pointer to **int32** |  | [optional] 
+**Weight** | Pointer to **int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
 **CustomFields** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -72,20 +72,20 @@ SetSlug sets Slug field to given value.
 
 ### GetWeight
 
-`func (o *RoleRequest) GetWeight() int32`
+`func (o *RoleRequest) GetWeight() int64`
 
 GetWeight returns the Weight field if non-nil, zero value otherwise.
 
 ### GetWeightOk
 
-`func (o *RoleRequest) GetWeightOk() (*int32, bool)`
+`func (o *RoleRequest) GetWeightOk() (*int64, bool)`
 
 GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWeight
 
-`func (o *RoleRequest) SetWeight(v int32)`
+`func (o *RoleRequest) SetWeight(v int64)`
 
 SetWeight sets Weight field to given value.
 

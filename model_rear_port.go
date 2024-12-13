@@ -21,7 +21,7 @@ var _ MappedNullable = &RearPort{}
 
 // RearPort Adds support for custom fields and tags.
 type RearPort struct {
-	Id         int32               `json:"id"`
+	Id         int64               `json:"id"`
 	Url        string              `json:"url"`
 	DisplayUrl string              `json:"display_url"`
 	Display    string              `json:"display"`
@@ -33,7 +33,7 @@ type RearPort struct {
 	Type  FrontPortType `json:"type"`
 	Color *string       `json:"color,omitempty" validate:"regexp=^[0-9a-f]{6}$"`
 	// Number of front ports which may be mapped
-	Positions   *int32  `json:"positions,omitempty"`
+	Positions   *int64  `json:"positions,omitempty"`
 	Description *string `json:"description,omitempty"`
 	// Treat as if a cable is connected
 	MarkConnected *bool              `json:"mark_connected,omitempty"`
@@ -56,7 +56,7 @@ type _RearPort RearPort
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRearPort(id int32, url string, displayUrl string, display string, device BriefDevice, name string, type_ FrontPortType, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, created NullableTime, lastUpdated NullableTime, occupied bool) *RearPort {
+func NewRearPort(id int64, url string, displayUrl string, display string, device BriefDevice, name string, type_ FrontPortType, cable NullableBriefCable, cableEnd string, linkPeers []interface{}, linkPeersType NullableString, created NullableTime, lastUpdated NullableTime, occupied bool) *RearPort {
 	this := RearPort{}
 	this.Id = id
 	this.Url = url
@@ -84,9 +84,9 @@ func NewRearPortWithDefaults() *RearPort {
 }
 
 // GetId returns the Id field value
-func (o *RearPort) GetId() int32 {
+func (o *RearPort) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -95,7 +95,7 @@ func (o *RearPort) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *RearPort) GetIdOk() (*int32, bool) {
+func (o *RearPort) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *RearPort) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *RearPort) SetId(v int32) {
+func (o *RearPort) SetId(v int64) {
 	o.Id = v
 }
 
@@ -359,9 +359,9 @@ func (o *RearPort) SetColor(v string) {
 }
 
 // GetPositions returns the Positions field value if set, zero value otherwise.
-func (o *RearPort) GetPositions() int32 {
+func (o *RearPort) GetPositions() int64 {
 	if o == nil || IsNil(o.Positions) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Positions
@@ -369,7 +369,7 @@ func (o *RearPort) GetPositions() int32 {
 
 // GetPositionsOk returns a tuple with the Positions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *RearPort) GetPositionsOk() (*int32, bool) {
+func (o *RearPort) GetPositionsOk() (*int64, bool) {
 	if o == nil || IsNil(o.Positions) {
 		return nil, false
 	}
@@ -385,8 +385,8 @@ func (o *RearPort) HasPositions() bool {
 	return false
 }
 
-// SetPositions gets a reference to the given int32 and assigns it to the Positions field.
-func (o *RearPort) SetPositions(v int32) {
+// SetPositions gets a reference to the given int64 and assigns it to the Positions field.
+func (o *RearPort) SetPositions(v int64) {
 	o.Positions = &v
 }
 

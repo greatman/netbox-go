@@ -16,16 +16,16 @@ Name | Type | Description | Notes
 **RackType** | Pointer to [**NullableBriefRackTypeRequest**](BriefRackTypeRequest.md) |  | [optional] 
 **FormFactor** | Pointer to [**NullablePatchedWritableRackRequestFormFactor**](PatchedWritableRackRequestFormFactor.md) |  | [optional] 
 **Width** | Pointer to [**PatchedWritableRackRequestWidth**](PatchedWritableRackRequestWidth.md) |  | [optional] 
-**UHeight** | Pointer to **int32** | Height in rack units | [optional] 
-**StartingUnit** | Pointer to **int32** | Starting unit for rack | [optional] 
+**UHeight** | Pointer to **int64** | Height in rack units | [optional] 
+**StartingUnit** | Pointer to **int64** | Starting unit for rack | [optional] 
 **Weight** | Pointer to **NullableFloat64** |  | [optional] 
-**MaxWeight** | Pointer to **NullableInt32** | Maximum load capacity for the rack | [optional] 
+**MaxWeight** | Pointer to **NullableInt64** | Maximum load capacity for the rack | [optional] 
 **WeightUnit** | Pointer to [**NullableDeviceTypeRequestWeightUnit**](DeviceTypeRequestWeightUnit.md) |  | [optional] 
 **DescUnits** | Pointer to **bool** | Units are numbered top-to-bottom | [optional] 
-**OuterWidth** | Pointer to **NullableInt32** | Outer dimension of rack (width) | [optional] 
-**OuterDepth** | Pointer to **NullableInt32** | Outer dimension of rack (depth) | [optional] 
+**OuterWidth** | Pointer to **NullableInt64** | Outer dimension of rack (width) | [optional] 
+**OuterDepth** | Pointer to **NullableInt64** | Outer dimension of rack (depth) | [optional] 
 **OuterUnit** | Pointer to [**NullablePatchedWritableRackRequestOuterUnit**](PatchedWritableRackRequestOuterUnit.md) |  | [optional] 
-**MountingDepth** | Pointer to **NullableInt32** | Maximum depth of a mounted device, in millimeters. For four-post racks, this is the distance between the front and rear rails. | [optional] 
+**MountingDepth** | Pointer to **NullableInt64** | Maximum depth of a mounted device, in millimeters. For four-post racks, this is the distance between the front and rear rails. | [optional] 
 **Airflow** | Pointer to [**NullablePatchedWritableRackRequestAirflow**](PatchedWritableRackRequestAirflow.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
@@ -413,20 +413,20 @@ HasWidth returns a boolean if a field has been set.
 
 ### GetUHeight
 
-`func (o *WritableRackRequest) GetUHeight() int32`
+`func (o *WritableRackRequest) GetUHeight() int64`
 
 GetUHeight returns the UHeight field if non-nil, zero value otherwise.
 
 ### GetUHeightOk
 
-`func (o *WritableRackRequest) GetUHeightOk() (*int32, bool)`
+`func (o *WritableRackRequest) GetUHeightOk() (*int64, bool)`
 
 GetUHeightOk returns a tuple with the UHeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUHeight
 
-`func (o *WritableRackRequest) SetUHeight(v int32)`
+`func (o *WritableRackRequest) SetUHeight(v int64)`
 
 SetUHeight sets UHeight field to given value.
 
@@ -438,20 +438,20 @@ HasUHeight returns a boolean if a field has been set.
 
 ### GetStartingUnit
 
-`func (o *WritableRackRequest) GetStartingUnit() int32`
+`func (o *WritableRackRequest) GetStartingUnit() int64`
 
 GetStartingUnit returns the StartingUnit field if non-nil, zero value otherwise.
 
 ### GetStartingUnitOk
 
-`func (o *WritableRackRequest) GetStartingUnitOk() (*int32, bool)`
+`func (o *WritableRackRequest) GetStartingUnitOk() (*int64, bool)`
 
 GetStartingUnitOk returns a tuple with the StartingUnit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStartingUnit
 
-`func (o *WritableRackRequest) SetStartingUnit(v int32)`
+`func (o *WritableRackRequest) SetStartingUnit(v int64)`
 
 SetStartingUnit sets StartingUnit field to given value.
 
@@ -498,20 +498,20 @@ HasWeight returns a boolean if a field has been set.
 UnsetWeight ensures that no value is present for Weight, not even an explicit nil
 ### GetMaxWeight
 
-`func (o *WritableRackRequest) GetMaxWeight() int32`
+`func (o *WritableRackRequest) GetMaxWeight() int64`
 
 GetMaxWeight returns the MaxWeight field if non-nil, zero value otherwise.
 
 ### GetMaxWeightOk
 
-`func (o *WritableRackRequest) GetMaxWeightOk() (*int32, bool)`
+`func (o *WritableRackRequest) GetMaxWeightOk() (*int64, bool)`
 
 GetMaxWeightOk returns a tuple with the MaxWeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaxWeight
 
-`func (o *WritableRackRequest) SetMaxWeight(v int32)`
+`func (o *WritableRackRequest) SetMaxWeight(v int64)`
 
 SetMaxWeight sets MaxWeight field to given value.
 
@@ -593,20 +593,20 @@ HasDescUnits returns a boolean if a field has been set.
 
 ### GetOuterWidth
 
-`func (o *WritableRackRequest) GetOuterWidth() int32`
+`func (o *WritableRackRequest) GetOuterWidth() int64`
 
 GetOuterWidth returns the OuterWidth field if non-nil, zero value otherwise.
 
 ### GetOuterWidthOk
 
-`func (o *WritableRackRequest) GetOuterWidthOk() (*int32, bool)`
+`func (o *WritableRackRequest) GetOuterWidthOk() (*int64, bool)`
 
 GetOuterWidthOk returns a tuple with the OuterWidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOuterWidth
 
-`func (o *WritableRackRequest) SetOuterWidth(v int32)`
+`func (o *WritableRackRequest) SetOuterWidth(v int64)`
 
 SetOuterWidth sets OuterWidth field to given value.
 
@@ -628,20 +628,20 @@ HasOuterWidth returns a boolean if a field has been set.
 UnsetOuterWidth ensures that no value is present for OuterWidth, not even an explicit nil
 ### GetOuterDepth
 
-`func (o *WritableRackRequest) GetOuterDepth() int32`
+`func (o *WritableRackRequest) GetOuterDepth() int64`
 
 GetOuterDepth returns the OuterDepth field if non-nil, zero value otherwise.
 
 ### GetOuterDepthOk
 
-`func (o *WritableRackRequest) GetOuterDepthOk() (*int32, bool)`
+`func (o *WritableRackRequest) GetOuterDepthOk() (*int64, bool)`
 
 GetOuterDepthOk returns a tuple with the OuterDepth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOuterDepth
 
-`func (o *WritableRackRequest) SetOuterDepth(v int32)`
+`func (o *WritableRackRequest) SetOuterDepth(v int64)`
 
 SetOuterDepth sets OuterDepth field to given value.
 
@@ -698,20 +698,20 @@ HasOuterUnit returns a boolean if a field has been set.
 UnsetOuterUnit ensures that no value is present for OuterUnit, not even an explicit nil
 ### GetMountingDepth
 
-`func (o *WritableRackRequest) GetMountingDepth() int32`
+`func (o *WritableRackRequest) GetMountingDepth() int64`
 
 GetMountingDepth returns the MountingDepth field if non-nil, zero value otherwise.
 
 ### GetMountingDepthOk
 
-`func (o *WritableRackRequest) GetMountingDepthOk() (*int32, bool)`
+`func (o *WritableRackRequest) GetMountingDepthOk() (*int64, bool)`
 
 GetMountingDepthOk returns a tuple with the MountingDepth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMountingDepth
 
-`func (o *WritableRackRequest) SetMountingDepth(v int32)`
+`func (o *WritableRackRequest) SetMountingDepth(v int64)`
 
 SetMountingDepth sets MountingDepth field to given value.
 

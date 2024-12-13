@@ -21,7 +21,7 @@ var _ MappedNullable = &InventoryItemRole{}
 
 // InventoryItemRole Adds support for custom fields and tags.
 type InventoryItemRole struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
@@ -43,7 +43,7 @@ type _InventoryItemRole InventoryItemRole
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInventoryItemRole(id int32, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, inventoryitemCount int64) *InventoryItemRole {
+func NewInventoryItemRole(id int64, url string, displayUrl string, display string, name string, slug string, created NullableTime, lastUpdated NullableTime, inventoryitemCount int64) *InventoryItemRole {
 	this := InventoryItemRole{}
 	this.Id = id
 	this.Url = url
@@ -66,9 +66,9 @@ func NewInventoryItemRoleWithDefaults() *InventoryItemRole {
 }
 
 // GetId returns the Id field value
-func (o *InventoryItemRole) GetId() int32 {
+func (o *InventoryItemRole) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -77,7 +77,7 @@ func (o *InventoryItemRole) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *InventoryItemRole) GetIdOk() (*int32, bool) {
+func (o *InventoryItemRole) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -85,7 +85,7 @@ func (o *InventoryItemRole) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *InventoryItemRole) SetId(v int32) {
+func (o *InventoryItemRole) SetId(v int64) {
 	o.Id = v
 }
 

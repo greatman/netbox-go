@@ -21,7 +21,7 @@ var _ MappedNullable = &Service{}
 
 // Service Adds support for custom fields and tags.
 type Service struct {
-	Id                   int32                       `json:"id"`
+	Id                   int64                       `json:"id"`
 	Url                  string                      `json:"url"`
 	DisplayUrl           string                      `json:"display_url"`
 	Display              string                      `json:"display"`
@@ -29,7 +29,7 @@ type Service struct {
 	VirtualMachine       NullableBriefVirtualMachine `json:"virtual_machine,omitempty"`
 	Name                 string                      `json:"name"`
 	Protocol             *ServiceProtocol            `json:"protocol,omitempty"`
-	Ports                []int32                     `json:"ports"`
+	Ports                []int64                     `json:"ports"`
 	Ipaddresses          []IPAddress                 `json:"ipaddresses,omitempty"`
 	Description          *string                     `json:"description,omitempty"`
 	Comments             *string                     `json:"comments,omitempty"`
@@ -46,7 +46,7 @@ type _Service Service
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewService(id int32, url string, displayUrl string, display string, name string, ports []int32, created NullableTime, lastUpdated NullableTime) *Service {
+func NewService(id int64, url string, displayUrl string, display string, name string, ports []int64, created NullableTime, lastUpdated NullableTime) *Service {
 	this := Service{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewServiceWithDefaults() *Service {
 }
 
 // GetId returns the Id field value
-func (o *Service) GetId() int32 {
+func (o *Service) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *Service) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Service) GetIdOk() (*int32, bool) {
+func (o *Service) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *Service) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Service) SetId(v int32) {
+func (o *Service) SetId(v int64) {
 	o.Id = v
 }
 
@@ -306,9 +306,9 @@ func (o *Service) SetProtocol(v ServiceProtocol) {
 }
 
 // GetPorts returns the Ports field value
-func (o *Service) GetPorts() []int32 {
+func (o *Service) GetPorts() []int64 {
 	if o == nil {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 
@@ -317,7 +317,7 @@ func (o *Service) GetPorts() []int32 {
 
 // GetPortsOk returns a tuple with the Ports field value
 // and a boolean to check if the value has been set.
-func (o *Service) GetPortsOk() ([]int32, bool) {
+func (o *Service) GetPortsOk() ([]int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -325,7 +325,7 @@ func (o *Service) GetPortsOk() ([]int32, bool) {
 }
 
 // SetPorts sets field value
-func (o *Service) SetPorts(v []int32) {
+func (o *Service) SetPorts(v []int64) {
 	o.Ports = v
 }
 

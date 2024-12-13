@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [readonly] 
+**Id** | **int64** |  | [readonly] 
 **Url** | **string** |  | [readonly] 
 **Display** | **string** |  | [readonly] 
 **Name** | **string** |  | 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewBriefVLANGroup
 
-`func NewBriefVLANGroup(id int32, url string, display string, name string, slug string, vlanCount int64, ) *BriefVLANGroup`
+`func NewBriefVLANGroup(id int64, url string, display string, name string, slug string, vlanCount int64, ) *BriefVLANGroup`
 
 NewBriefVLANGroup instantiates a new BriefVLANGroup object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BriefVLANGroup) GetId() int32`
+`func (o *BriefVLANGroup) GetId() int64`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BriefVLANGroup) GetIdOk() (*int32, bool)`
+`func (o *BriefVLANGroup) GetIdOk() (*int64, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BriefVLANGroup) SetId(v int32)`
+`func (o *BriefVLANGroup) SetId(v int64)`
 
 SetId sets Id field to given value.
 

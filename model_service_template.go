@@ -21,13 +21,13 @@ var _ MappedNullable = &ServiceTemplate{}
 
 // ServiceTemplate Adds support for custom fields and tags.
 type ServiceTemplate struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
 	Name                 string                 `json:"name"`
 	Protocol             *ServiceProtocol       `json:"protocol,omitempty"`
-	Ports                []int32                `json:"ports"`
+	Ports                []int64                `json:"ports"`
 	Description          *string                `json:"description,omitempty"`
 	Comments             *string                `json:"comments,omitempty"`
 	Tags                 []NestedTag            `json:"tags,omitempty"`
@@ -43,7 +43,7 @@ type _ServiceTemplate ServiceTemplate
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewServiceTemplate(id int32, url string, displayUrl string, display string, name string, ports []int32, created NullableTime, lastUpdated NullableTime) *ServiceTemplate {
+func NewServiceTemplate(id int64, url string, displayUrl string, display string, name string, ports []int64, created NullableTime, lastUpdated NullableTime) *ServiceTemplate {
 	this := ServiceTemplate{}
 	this.Id = id
 	this.Url = url
@@ -65,9 +65,9 @@ func NewServiceTemplateWithDefaults() *ServiceTemplate {
 }
 
 // GetId returns the Id field value
-func (o *ServiceTemplate) GetId() int32 {
+func (o *ServiceTemplate) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -76,7 +76,7 @@ func (o *ServiceTemplate) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ServiceTemplate) GetIdOk() (*int32, bool) {
+func (o *ServiceTemplate) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -84,7 +84,7 @@ func (o *ServiceTemplate) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ServiceTemplate) SetId(v int32) {
+func (o *ServiceTemplate) SetId(v int64) {
 	o.Id = v
 }
 
@@ -217,9 +217,9 @@ func (o *ServiceTemplate) SetProtocol(v ServiceProtocol) {
 }
 
 // GetPorts returns the Ports field value
-func (o *ServiceTemplate) GetPorts() []int32 {
+func (o *ServiceTemplate) GetPorts() []int64 {
 	if o == nil {
-		var ret []int32
+		var ret []int64
 		return ret
 	}
 
@@ -228,7 +228,7 @@ func (o *ServiceTemplate) GetPorts() []int32 {
 
 // GetPortsOk returns a tuple with the Ports field value
 // and a boolean to check if the value has been set.
-func (o *ServiceTemplate) GetPortsOk() ([]int32, bool) {
+func (o *ServiceTemplate) GetPortsOk() ([]int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -236,7 +236,7 @@ func (o *ServiceTemplate) GetPortsOk() ([]int32, bool) {
 }
 
 // SetPorts sets field value
-func (o *ServiceTemplate) SetPorts(v []int32) {
+func (o *ServiceTemplate) SetPorts(v []int64) {
 	o.Ports = v
 }
 

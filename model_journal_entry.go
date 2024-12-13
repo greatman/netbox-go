@@ -21,7 +21,7 @@ var _ MappedNullable = &JournalEntry{}
 
 // JournalEntry Adds support for custom fields and tags.
 type JournalEntry struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
@@ -29,7 +29,7 @@ type JournalEntry struct {
 	AssignedObjectId     int64                  `json:"assigned_object_id"`
 	AssignedObject       interface{}            `json:"assigned_object"`
 	Created              NullableTime           `json:"created"`
-	CreatedBy            NullableInt32          `json:"created_by,omitempty"`
+	CreatedBy            NullableInt64          `json:"created_by,omitempty"`
 	Kind                 *JournalEntryKind      `json:"kind,omitempty"`
 	Comments             string                 `json:"comments"`
 	Tags                 []NestedTag            `json:"tags,omitempty"`
@@ -44,7 +44,7 @@ type _JournalEntry JournalEntry
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewJournalEntry(id int32, url string, displayUrl string, display string, assignedObjectType string, assignedObjectId int64, assignedObject interface{}, created NullableTime, comments string, lastUpdated NullableTime) *JournalEntry {
+func NewJournalEntry(id int64, url string, displayUrl string, display string, assignedObjectType string, assignedObjectId int64, assignedObject interface{}, created NullableTime, comments string, lastUpdated NullableTime) *JournalEntry {
 	this := JournalEntry{}
 	this.Id = id
 	this.Url = url
@@ -68,9 +68,9 @@ func NewJournalEntryWithDefaults() *JournalEntry {
 }
 
 // GetId returns the Id field value
-func (o *JournalEntry) GetId() int32 {
+func (o *JournalEntry) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *JournalEntry) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *JournalEntry) GetIdOk() (*int32, bool) {
+func (o *JournalEntry) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *JournalEntry) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *JournalEntry) SetId(v int32) {
+func (o *JournalEntry) SetId(v int64) {
 	o.Id = v
 }
 
@@ -264,9 +264,9 @@ func (o *JournalEntry) SetCreated(v time.Time) {
 }
 
 // GetCreatedBy returns the CreatedBy field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *JournalEntry) GetCreatedBy() int32 {
+func (o *JournalEntry) GetCreatedBy() int64 {
 	if o == nil || IsNil(o.CreatedBy.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.CreatedBy.Get()
@@ -275,7 +275,7 @@ func (o *JournalEntry) GetCreatedBy() int32 {
 // GetCreatedByOk returns a tuple with the CreatedBy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *JournalEntry) GetCreatedByOk() (*int32, bool) {
+func (o *JournalEntry) GetCreatedByOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -291,8 +291,8 @@ func (o *JournalEntry) HasCreatedBy() bool {
 	return false
 }
 
-// SetCreatedBy gets a reference to the given NullableInt32 and assigns it to the CreatedBy field.
-func (o *JournalEntry) SetCreatedBy(v int32) {
+// SetCreatedBy gets a reference to the given NullableInt64 and assigns it to the CreatedBy field.
+func (o *JournalEntry) SetCreatedBy(v int64) {
 	o.CreatedBy.Set(&v)
 }
 

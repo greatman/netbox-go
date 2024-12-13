@@ -21,7 +21,7 @@ var _ MappedNullable = &Job{}
 
 // Job struct for Job
 type Job struct {
-	Id         int32          `json:"id"`
+	Id         int64          `json:"id"`
 	Url        string         `json:"url"`
 	DisplayUrl string         `json:"display_url"`
 	Display    string         `json:"display"`
@@ -32,7 +32,7 @@ type Job struct {
 	Created    time.Time      `json:"created"`
 	Scheduled  NullableTime   `json:"scheduled,omitempty"`
 	// Recurrence interval (in minutes)
-	Interval             NullableInt32 `json:"interval,omitempty"`
+	Interval             NullableInt64 `json:"interval,omitempty"`
 	Started              NullableTime  `json:"started,omitempty"`
 	Completed            NullableTime  `json:"completed,omitempty"`
 	User                 BriefUser     `json:"user"`
@@ -48,7 +48,7 @@ type _Job Job
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewJob(id int32, url string, displayUrl string, display string, objectType string, name string, status BriefJobStatus, created time.Time, user BriefUser, error_ string, jobId string) *Job {
+func NewJob(id int64, url string, displayUrl string, display string, objectType string, name string, status BriefJobStatus, created time.Time, user BriefUser, error_ string, jobId string) *Job {
 	this := Job{}
 	this.Id = id
 	this.Url = url
@@ -73,9 +73,9 @@ func NewJobWithDefaults() *Job {
 }
 
 // GetId returns the Id field value
-func (o *Job) GetId() int32 {
+func (o *Job) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -84,7 +84,7 @@ func (o *Job) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Job) GetIdOk() (*int32, bool) {
+func (o *Job) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -92,7 +92,7 @@ func (o *Job) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *Job) SetId(v int32) {
+func (o *Job) SetId(v int64) {
 	o.Id = v
 }
 
@@ -351,9 +351,9 @@ func (o *Job) UnsetScheduled() {
 }
 
 // GetInterval returns the Interval field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *Job) GetInterval() int32 {
+func (o *Job) GetInterval() int64 {
 	if o == nil || IsNil(o.Interval.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Interval.Get()
@@ -362,7 +362,7 @@ func (o *Job) GetInterval() int32 {
 // GetIntervalOk returns a tuple with the Interval field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Job) GetIntervalOk() (*int32, bool) {
+func (o *Job) GetIntervalOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -378,8 +378,8 @@ func (o *Job) HasInterval() bool {
 	return false
 }
 
-// SetInterval gets a reference to the given NullableInt32 and assigns it to the Interval field.
-func (o *Job) SetInterval(v int32) {
+// SetInterval gets a reference to the given NullableInt64 and assigns it to the Interval field.
+func (o *Job) SetInterval(v int64) {
 	o.Interval.Set(&v)
 }
 

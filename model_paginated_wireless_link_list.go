@@ -20,7 +20,7 @@ var _ MappedNullable = &PaginatedWirelessLinkList{}
 
 // PaginatedWirelessLinkList struct for PaginatedWirelessLinkList
 type PaginatedWirelessLinkList struct {
-	Count                int32          `json:"count"`
+	Count                int64          `json:"count"`
 	Next                 NullableString `json:"next,omitempty"`
 	Previous             NullableString `json:"previous,omitempty"`
 	Results              []WirelessLink `json:"results"`
@@ -33,7 +33,7 @@ type _PaginatedWirelessLinkList PaginatedWirelessLinkList
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPaginatedWirelessLinkList(count int32, results []WirelessLink) *PaginatedWirelessLinkList {
+func NewPaginatedWirelessLinkList(count int64, results []WirelessLink) *PaginatedWirelessLinkList {
 	this := PaginatedWirelessLinkList{}
 	this.Count = count
 	this.Results = results
@@ -49,9 +49,9 @@ func NewPaginatedWirelessLinkListWithDefaults() *PaginatedWirelessLinkList {
 }
 
 // GetCount returns the Count field value
-func (o *PaginatedWirelessLinkList) GetCount() int32 {
+func (o *PaginatedWirelessLinkList) GetCount() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PaginatedWirelessLinkList) GetCount() int32 {
 
 // GetCountOk returns a tuple with the Count field value
 // and a boolean to check if the value has been set.
-func (o *PaginatedWirelessLinkList) GetCountOk() (*int32, bool) {
+func (o *PaginatedWirelessLinkList) GetCountOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,7 +68,7 @@ func (o *PaginatedWirelessLinkList) GetCountOk() (*int32, bool) {
 }
 
 // SetCount sets field value
-func (o *PaginatedWirelessLinkList) SetCount(v int32) {
+func (o *PaginatedWirelessLinkList) SetCount(v int64) {
 	o.Count = v
 }
 

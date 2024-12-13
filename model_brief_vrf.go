@@ -20,7 +20,7 @@ var _ MappedNullable = &BriefVRF{}
 
 // BriefVRF Adds support for custom fields and tags.
 type BriefVRF struct {
-	Id      int32  `json:"id"`
+	Id      int64  `json:"id"`
 	Url     string `json:"url"`
 	Display string `json:"display"`
 	Name    string `json:"name"`
@@ -37,7 +37,7 @@ type _BriefVRF BriefVRF
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBriefVRF(id int32, url string, display string, name string, prefixCount int64) *BriefVRF {
+func NewBriefVRF(id int64, url string, display string, name string, prefixCount int64) *BriefVRF {
 	this := BriefVRF{}
 	this.Id = id
 	this.Url = url
@@ -56,9 +56,9 @@ func NewBriefVRFWithDefaults() *BriefVRF {
 }
 
 // GetId returns the Id field value
-func (o *BriefVRF) GetId() int32 {
+func (o *BriefVRF) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -67,7 +67,7 @@ func (o *BriefVRF) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *BriefVRF) GetIdOk() (*int32, bool) {
+func (o *BriefVRF) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -75,7 +75,7 @@ func (o *BriefVRF) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *BriefVRF) SetId(v int32) {
+func (o *BriefVRF) SetId(v int64) {
 	o.Id = v
 }
 

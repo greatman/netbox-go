@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **VirtualMachine** | Pointer to [**NullableBriefVirtualMachineRequest**](BriefVirtualMachineRequest.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Protocol** | Pointer to [**PatchedWritableServiceRequestProtocol**](PatchedWritableServiceRequestProtocol.md) |  | [optional] 
-**Ports** | Pointer to **[]int32** |  | [optional] 
-**Ipaddresses** | Pointer to **[]int32** |  | [optional] 
+**Ports** | Pointer to **[]int64** |  | [optional] 
+**Ipaddresses** | Pointer to **[]int64** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Comments** | Pointer to **string** |  | [optional] 
 **Tags** | Pointer to [**[]NestedTagRequest**](NestedTagRequest.md) |  | [optional] 
@@ -156,20 +156,20 @@ HasProtocol returns a boolean if a field has been set.
 
 ### GetPorts
 
-`func (o *PatchedWritableServiceRequest) GetPorts() []int32`
+`func (o *PatchedWritableServiceRequest) GetPorts() []int64`
 
 GetPorts returns the Ports field if non-nil, zero value otherwise.
 
 ### GetPortsOk
 
-`func (o *PatchedWritableServiceRequest) GetPortsOk() (*[]int32, bool)`
+`func (o *PatchedWritableServiceRequest) GetPortsOk() (*[]int64, bool)`
 
 GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPorts
 
-`func (o *PatchedWritableServiceRequest) SetPorts(v []int32)`
+`func (o *PatchedWritableServiceRequest) SetPorts(v []int64)`
 
 SetPorts sets Ports field to given value.
 
@@ -181,20 +181,20 @@ HasPorts returns a boolean if a field has been set.
 
 ### GetIpaddresses
 
-`func (o *PatchedWritableServiceRequest) GetIpaddresses() []int32`
+`func (o *PatchedWritableServiceRequest) GetIpaddresses() []int64`
 
 GetIpaddresses returns the Ipaddresses field if non-nil, zero value otherwise.
 
 ### GetIpaddressesOk
 
-`func (o *PatchedWritableServiceRequest) GetIpaddressesOk() (*[]int32, bool)`
+`func (o *PatchedWritableServiceRequest) GetIpaddressesOk() (*[]int64, bool)`
 
 GetIpaddressesOk returns a tuple with the Ipaddresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpaddresses
 
-`func (o *PatchedWritableServiceRequest) SetIpaddresses(v []int32)`
+`func (o *PatchedWritableServiceRequest) SetIpaddresses(v []int64)`
 
 SetIpaddresses sets Ipaddresses field to given value.
 

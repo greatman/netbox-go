@@ -21,7 +21,7 @@ var _ MappedNullable = &ASN{}
 
 // ASN Adds support for custom fields and tags.
 type ASN struct {
-	Id         int32  `json:"id"`
+	Id         int64  `json:"id"`
 	Url        string `json:"url"`
 	DisplayUrl string `json:"display_url"`
 	Display    string `json:"display"`
@@ -46,7 +46,7 @@ type _ASN ASN
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewASN(id int32, url string, displayUrl string, display string, asn int64, created NullableTime, lastUpdated NullableTime, siteCount int64, providerCount int64) *ASN {
+func NewASN(id int64, url string, displayUrl string, display string, asn int64, created NullableTime, lastUpdated NullableTime, siteCount int64, providerCount int64) *ASN {
 	this := ASN{}
 	this.Id = id
 	this.Url = url
@@ -69,9 +69,9 @@ func NewASNWithDefaults() *ASN {
 }
 
 // GetId returns the Id field value
-func (o *ASN) GetId() int32 {
+func (o *ASN) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -80,7 +80,7 @@ func (o *ASN) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *ASN) GetIdOk() (*int32, bool) {
+func (o *ASN) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -88,7 +88,7 @@ func (o *ASN) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *ASN) SetId(v int32) {
+func (o *ASN) SetId(v int64) {
 	o.Id = v
 }
 

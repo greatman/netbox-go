@@ -20,7 +20,7 @@ var _ MappedNullable = &AvailableASN{}
 
 // AvailableASN Representation of an ASN which does not exist in the database.
 type AvailableASN struct {
-	Asn                  int32   `json:"asn"`
+	Asn                  int64   `json:"asn"`
 	Description          *string `json:"description,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -31,7 +31,7 @@ type _AvailableASN AvailableASN
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAvailableASN(asn int32) *AvailableASN {
+func NewAvailableASN(asn int64) *AvailableASN {
 	this := AvailableASN{}
 	this.Asn = asn
 	return &this
@@ -46,9 +46,9 @@ func NewAvailableASNWithDefaults() *AvailableASN {
 }
 
 // GetAsn returns the Asn field value
-func (o *AvailableASN) GetAsn() int32 {
+func (o *AvailableASN) GetAsn() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -57,7 +57,7 @@ func (o *AvailableASN) GetAsn() int32 {
 
 // GetAsnOk returns a tuple with the Asn field value
 // and a boolean to check if the value has been set.
-func (o *AvailableASN) GetAsnOk() (*int32, bool) {
+func (o *AvailableASN) GetAsnOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -65,7 +65,7 @@ func (o *AvailableASN) GetAsnOk() (*int32, bool) {
 }
 
 // SetAsn sets field value
-func (o *AvailableASN) SetAsn(v int32) {
+func (o *AvailableASN) SetAsn(v int64) {
 	o.Asn = v
 }
 

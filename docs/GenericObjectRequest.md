@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | **string** |  | 
-**ObjectId** | **int32** |  | 
+**ObjectId** | **int64** |  | 
 
 ## Methods
 
 ### NewGenericObjectRequest
 
-`func NewGenericObjectRequest(objectType string, objectId int32, ) *GenericObjectRequest`
+`func NewGenericObjectRequest(objectType string, objectId int64, ) *GenericObjectRequest`
 
 NewGenericObjectRequest instantiates a new GenericObjectRequest object
 This constructor will assign default values to properties that have it defined,
@@ -48,20 +48,20 @@ SetObjectType sets ObjectType field to given value.
 
 ### GetObjectId
 
-`func (o *GenericObjectRequest) GetObjectId() int32`
+`func (o *GenericObjectRequest) GetObjectId() int64`
 
 GetObjectId returns the ObjectId field if non-nil, zero value otherwise.
 
 ### GetObjectIdOk
 
-`func (o *GenericObjectRequest) GetObjectIdOk() (*int32, bool)`
+`func (o *GenericObjectRequest) GetObjectIdOk() (*int64, bool)`
 
 GetObjectIdOk returns a tuple with the ObjectId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetObjectId
 
-`func (o *GenericObjectRequest) SetObjectId(v int32)`
+`func (o *GenericObjectRequest) SetObjectId(v int64)`
 
 SetObjectId sets ObjectId field to given value.
 

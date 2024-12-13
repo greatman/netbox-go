@@ -21,14 +21,14 @@ var _ MappedNullable = &VirtualDisk{}
 
 // VirtualDisk Adds support for custom fields and tags.
 type VirtualDisk struct {
-	Id                   int32                  `json:"id"`
+	Id                   int64                  `json:"id"`
 	Url                  string                 `json:"url"`
 	DisplayUrl           string                 `json:"display_url"`
 	Display              string                 `json:"display"`
 	VirtualMachine       BriefVirtualMachine    `json:"virtual_machine"`
 	Name                 string                 `json:"name"`
 	Description          *string                `json:"description,omitempty"`
-	Size                 int32                  `json:"size"`
+	Size                 int64                  `json:"size"`
 	Tags                 []NestedTag            `json:"tags,omitempty"`
 	CustomFields         map[string]interface{} `json:"custom_fields,omitempty"`
 	Created              NullableTime           `json:"created"`
@@ -42,7 +42,7 @@ type _VirtualDisk VirtualDisk
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewVirtualDisk(id int32, url string, displayUrl string, display string, virtualMachine BriefVirtualMachine, name string, size int32, created NullableTime, lastUpdated NullableTime) *VirtualDisk {
+func NewVirtualDisk(id int64, url string, displayUrl string, display string, virtualMachine BriefVirtualMachine, name string, size int64, created NullableTime, lastUpdated NullableTime) *VirtualDisk {
 	this := VirtualDisk{}
 	this.Id = id
 	this.Url = url
@@ -65,9 +65,9 @@ func NewVirtualDiskWithDefaults() *VirtualDisk {
 }
 
 // GetId returns the Id field value
-func (o *VirtualDisk) GetId() int32 {
+func (o *VirtualDisk) GetId() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -76,7 +76,7 @@ func (o *VirtualDisk) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *VirtualDisk) GetIdOk() (*int32, bool) {
+func (o *VirtualDisk) GetIdOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -84,7 +84,7 @@ func (o *VirtualDisk) GetIdOk() (*int32, bool) {
 }
 
 // SetId sets field value
-func (o *VirtualDisk) SetId(v int32) {
+func (o *VirtualDisk) SetId(v int64) {
 	o.Id = v
 }
 
@@ -241,9 +241,9 @@ func (o *VirtualDisk) SetDescription(v string) {
 }
 
 // GetSize returns the Size field value
-func (o *VirtualDisk) GetSize() int32 {
+func (o *VirtualDisk) GetSize() int64 {
 	if o == nil {
-		var ret int32
+		var ret int64
 		return ret
 	}
 
@@ -252,7 +252,7 @@ func (o *VirtualDisk) GetSize() int32 {
 
 // GetSizeOk returns a tuple with the Size field value
 // and a boolean to check if the value has been set.
-func (o *VirtualDisk) GetSizeOk() (*int32, bool) {
+func (o *VirtualDisk) GetSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -260,7 +260,7 @@ func (o *VirtualDisk) GetSizeOk() (*int32, bool) {
 }
 
 // SetSize sets field value
-func (o *VirtualDisk) SetSize(v int32) {
+func (o *VirtualDisk) SetSize(v int64) {
 	o.Size = v
 }
 

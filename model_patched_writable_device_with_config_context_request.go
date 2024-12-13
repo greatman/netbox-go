@@ -44,9 +44,9 @@ type PatchedWritableDeviceWithConfigContextRequest struct {
 	OobIp          NullableBriefIPAddressRequest      `json:"oob_ip,omitempty"`
 	Cluster        NullableBriefClusterRequest        `json:"cluster,omitempty"`
 	VirtualChassis NullableBriefVirtualChassisRequest `json:"virtual_chassis,omitempty"`
-	VcPosition     NullableInt32                      `json:"vc_position,omitempty"`
+	VcPosition     NullableInt64                      `json:"vc_position,omitempty"`
 	// Virtual chassis master election priority
-	VcPriority     NullableInt32                      `json:"vc_priority,omitempty"`
+	VcPriority     NullableInt64                      `json:"vc_priority,omitempty"`
 	Description    *string                            `json:"description,omitempty"`
 	Comments       *string                            `json:"comments,omitempty"`
 	ConfigTemplate NullableBriefConfigTemplateRequest `json:"config_template,omitempty"`
@@ -925,9 +925,9 @@ func (o *PatchedWritableDeviceWithConfigContextRequest) UnsetVirtualChassis() {
 }
 
 // GetVcPosition returns the VcPosition field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPosition() int32 {
+func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPosition() int64 {
 	if o == nil || IsNil(o.VcPosition.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.VcPosition.Get()
@@ -936,7 +936,7 @@ func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPosition() int32 {
 // GetVcPositionOk returns a tuple with the VcPosition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPositionOk() (*int32, bool) {
+func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPositionOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -952,8 +952,8 @@ func (o *PatchedWritableDeviceWithConfigContextRequest) HasVcPosition() bool {
 	return false
 }
 
-// SetVcPosition gets a reference to the given NullableInt32 and assigns it to the VcPosition field.
-func (o *PatchedWritableDeviceWithConfigContextRequest) SetVcPosition(v int32) {
+// SetVcPosition gets a reference to the given NullableInt64 and assigns it to the VcPosition field.
+func (o *PatchedWritableDeviceWithConfigContextRequest) SetVcPosition(v int64) {
 	o.VcPosition.Set(&v)
 }
 
@@ -968,9 +968,9 @@ func (o *PatchedWritableDeviceWithConfigContextRequest) UnsetVcPosition() {
 }
 
 // GetVcPriority returns the VcPriority field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPriority() int32 {
+func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPriority() int64 {
 	if o == nil || IsNil(o.VcPriority.Get()) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.VcPriority.Get()
@@ -979,7 +979,7 @@ func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPriority() int32 {
 // GetVcPriorityOk returns a tuple with the VcPriority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPriorityOk() (*int32, bool) {
+func (o *PatchedWritableDeviceWithConfigContextRequest) GetVcPriorityOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -995,8 +995,8 @@ func (o *PatchedWritableDeviceWithConfigContextRequest) HasVcPriority() bool {
 	return false
 }
 
-// SetVcPriority gets a reference to the given NullableInt32 and assigns it to the VcPriority field.
-func (o *PatchedWritableDeviceWithConfigContextRequest) SetVcPriority(v int32) {
+// SetVcPriority gets a reference to the given NullableInt64 and assigns it to the VcPriority field.
+func (o *PatchedWritableDeviceWithConfigContextRequest) SetVcPriority(v int64) {
 	o.VcPriority.Set(&v)
 }
 
